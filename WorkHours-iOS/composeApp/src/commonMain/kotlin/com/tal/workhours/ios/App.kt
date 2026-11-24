@@ -28,7 +28,7 @@ fun App() {
     // Changing the language rebuilds the whole tree, like an activity restart on Android.
     var languageVersion by remember { mutableIntStateOf(0) }
     DisposableEffect(Unit) {
-        val listener = { languageVersion++ }
+        val listener: () -> Unit = { languageVersion++ }
         AppText.addListener(listener)
         onDispose { AppText.removeListener(listener) }
     }

@@ -53,3 +53,8 @@ compose.resources {
     packageOfResClass = "com.tal.workhours.res"
     generateResClass = always
 }
+
+// Unit tests write their data files under build/ instead of the user's home folder.
+tasks.withType<Test>().configureEach {
+    systemProperty("workhours.dataDir", layout.buildDirectory.dir("test-data").get().asFile.path)
+}

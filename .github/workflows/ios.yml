@@ -64,7 +64,7 @@ jobs:
 
       - name: Unit tests (JVM)
         working-directory: ${{ matrix.app.dir }}
-        run: ./gradlew :composeApp:jvmTest --stacktrace -Dworkhours.dataDir="$RUNNER_TEMP/shifthours"
+        run: ./gradlew :composeApp:jvmTest --stacktrace
 
       - name: Compile Kotlin for iOS
         working-directory: ${{ matrix.app.dir }}
