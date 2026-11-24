@@ -185,7 +185,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
     }
     private fun readAccounts(): MutableList<Store.Account>? {
         var out: MutableList<Store.Account>? = ArrayList<Store.Account>()
-        (readableDatabase!!.rawQuery("SELECT * FROM accounts ORDER BY id", null)).use { c ->
+        (this.readableDatabase!!.rawQuery("SELECT * FROM accounts ORDER BY id", null)).use { c ->
             while ((c!!.moveToNext())) {
                 var a: Store.Account? = Store.Account()
                 a!!.id = num(c, "id")
@@ -254,10 +254,10 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
         v!!.put("fx_fee", a!!.fxFee)
         remember("accounts", a!!.id)
         if (((a!!.id) == 0L)) {
-            a!!.id = writableDatabase!!.insertOrThrow("accounts", null, v!!)
+            a!!.id = this.writableDatabase!!.insertOrThrow("accounts", null, v!!)
             rememberNew("accounts", a!!.id)
         } else {
-            writableDatabase!!.update("accounts", v!!, "id=?", arrayOf<String>(("" + a!!.id)!!))
+            this.writableDatabase!!.update("accounts", v!!, "id=?", arrayOf<String>(("" + a!!.id)!!))
         }
         dirty()
     }
@@ -278,7 +278,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
             remember("accounts", a!!.id)
             var value: android.content.ContentValues? = android.content.ContentValues()
             value!!.put("billing_history", history)
-            writableDatabase!!.update("accounts", value!!, "id=?", arrayOf<String>(("" + a!!.id)!!))
+            this.writableDatabase!!.update("accounts", value!!, "id=?", arrayOf<String>(("" + a!!.id)!!))
             a!!.billingHistory = history
             dirty()
         } catch (e: org.json.JSONException) {
@@ -298,7 +298,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
     }
     private fun readTransactions(): MutableList<Store.Tx>? {
         var out: MutableList<Store.Tx>? = ArrayList<Store.Tx>()
-        (readableDatabase!!.rawQuery("SELECT * FROM transactions WHERE status<>2 ORDER BY date DESC,id DESC", null)).use { c ->
+        (this.readableDatabase!!.rawQuery("SELECT * FROM transactions WHERE status<>2 ORDER BY date DESC,id DESC", null)).use { c ->
             while ((c!!.moveToNext())) {
                 var t: Store.Tx? = Store.Tx()
                 t!!.id = num(c, "id")
@@ -379,10 +379,10 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
         }
         remember("transactions", t!!.id)
         if (((t!!.id) == 0L)) {
-            t!!.id = writableDatabase!!.insertOrThrow("transactions", null, v!!)
+            t!!.id = this.writableDatabase!!.insertOrThrow("transactions", null, v!!)
             rememberNew("transactions", t!!.id)
         } else {
-            writableDatabase!!.update("transactions", v!!, "id=?", arrayOf<String>(("" + t!!.id)!!))
+            this.writableDatabase!!.update("transactions", v!!, "id=?", arrayOf<String>(("" + t!!.id)!!))
         }
         dirty()
     }
@@ -396,9 +396,9 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
         if (((t!!.rule) > 0)) {
             var v: android.content.ContentValues? = android.content.ContentValues()
             v!!.put("status", 2)
-            writableDatabase!!.update("transactions", v!!, "id=?", arrayOf<String>(("" + t!!.id)!!))
+            this.writableDatabase!!.update("transactions", v!!, "id=?", arrayOf<String>(("" + t!!.id)!!))
         } else {
-            writableDatabase!!.delete("transactions", "id=?", arrayOf<String>(("" + t!!.id)!!))
+            this.writableDatabase!!.delete("transactions", "id=?", arrayOf<String>(("" + t!!.id)!!))
         }
         dirty()
     }
@@ -415,7 +415,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
     }
     private fun readRules(): MutableList<Store.Rule>? {
         var out: MutableList<Store.Rule>? = ArrayList<Store.Rule>()
-        (readableDatabase!!.rawQuery("SELECT * FROM rules ORDER BY active DESC,name", null)).use { c ->
+        (this.readableDatabase!!.rawQuery("SELECT * FROM rules ORDER BY active DESC,name", null)).use { c ->
             while ((c!!.moveToNext())) {
                 var r: Store.Rule? = Store.Rule()
                 r!!.id = num(c, "id")
@@ -488,10 +488,10 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
         v!!.put("fx_source", r!!.fxSource)
         remember("rules", r!!.id)
         if (((r!!.id) == 0L)) {
-            r!!.id = writableDatabase!!.insertOrThrow("rules", null, v!!)
+            r!!.id = this.writableDatabase!!.insertOrThrow("rules", null, v!!)
             rememberNew("rules", r!!.id)
         } else {
-            writableDatabase!!.update("rules", v!!, "id=?", arrayOf<String>(("" + r!!.id)!!))
+            this.writableDatabase!!.update("rules", v!!, "id=?", arrayOf<String>(("" + r!!.id)!!))
         }
         dirty()
     }
@@ -508,7 +508,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
         if (((rule!!.id) <= 0)) {
             throw (IllegalArgumentException("הוראת הקבע אינה קיימת"))
         }
-        var d: android.database.sqlite.SQLiteDatabase? = writableDatabase
+        var d: android.database.sqlite.SQLiteDatabase? = this.writableDatabase
         d!!.beginTransaction()
         try {
             var through: compat.time.YearMonth? = visibleMonth
@@ -531,7 +531,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
         }
     }
     fun setRuleActive(r: Store.Rule?, active: Boolean) {
-        var d: android.database.sqlite.SQLiteDatabase? = writableDatabase
+        var d: android.database.sqlite.SQLiteDatabase? = this.writableDatabase
         d!!.beginTransaction()
         try {
             r!!.active = (if (active) 1 else 0)
@@ -551,7 +551,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
         if ((compat.j.Objects.equals(ensured!!.get(month!!), GEN!!.get()))) {
             return
         }
-        var d: android.database.sqlite.SQLiteDatabase? = writableDatabase
+        var d: android.database.sqlite.SQLiteDatabase? = this.writableDatabase
         d!!.beginTransaction()
         try {
             for (r in rules()!!) {
@@ -1217,7 +1217,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
         }
     }
     fun backup(): org.json.JSONObject? {
-        var snapshot: android.database.sqlite.SQLiteDatabase? = writableDatabase
+        var snapshot: android.database.sqlite.SQLiteDatabase? = this.writableDatabase
         snapshot!!.beginTransactionNonExclusive()
         try {
             var root: org.json.JSONObject? = org.json.JSONObject()
@@ -1228,7 +1228,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
             root!!.put("settings", ((((((((org.json.JSONObject().put("income", prefs!!.getBoolean("income", false)))!!.put("lastAccount", prefs!!.getLong("lastAccount", 0L)))!!.put("appearance", prefs!!.getString("appearance", "SYSTEM")))!!.put("homeChart", prefs!!.getInt("homeChart", 0)))!!.put("homeChartSecond", prefs!!.getInt("homeChartSecond", 0)))!!.put("trendCategory", prefs!!.getString("trendCategory", "")))!!.put("chartAccount", prefs!!.getLong("chartAccount", 0L)))!!.put(LauncherLayout.PREFERENCE!!, prefs!!.getString(LauncherLayout.PREFERENCE!!, "")))!!.put("tools", Tools.read(context)))
             for (table in (arrayOf<String>("accounts", "rules", "transactions"))) {
                 var rows: org.json.JSONArray? = org.json.JSONArray()
-                (readableDatabase!!.rawQuery(("SELECT * FROM " + table + " ORDER BY id")!!, null)).use { c ->
+                (this.readableDatabase!!.rawQuery(("SELECT * FROM " + table + " ORDER BY id")!!, null)).use { c ->
                     while ((c!!.moveToNext())) {
                         var row: org.json.JSONObject? = org.json.JSONObject()
                         run {
@@ -1273,7 +1273,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
         if ((homeChartSecond < 0 || homeChartSecond >= (ChartCatalog.LABELS!!.size))) {
             throw (IllegalArgumentException("בחירת הגרף השני אינה תקינה בגיבוי"))
         }
-        var d: android.database.sqlite.SQLiteDatabase? = writableDatabase
+        var d: android.database.sqlite.SQLiteDatabase? = this.writableDatabase
         d!!.beginTransaction()
         try {
             d!!.delete("transactions", null, null)
@@ -1522,7 +1522,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
             change!!.run()
             return
         }
-        var d: android.database.sqlite.SQLiteDatabase? = writableDatabase
+        var d: android.database.sqlite.SQLiteDatabase? = this.writableDatabase
         var toolsBefore: String? = (Tools.read(context))!!.toString()
         d!!.beginTransaction()
         undoRows = LinkedHashMap<String, org.json.JSONObject>()
@@ -1566,7 +1566,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
         if ((undoRows == null || id == 0L || undoRows!!.containsKey((table + ":" + id)!!))) {
             return
         }
-        (readableDatabase!!.rawQuery(("SELECT * FROM " + table + " WHERE id=?")!!, arrayOf<String>(("" + id)!!))).use { c ->
+        (this.readableDatabase!!.rawQuery(("SELECT * FROM " + table + " WHERE id=?")!!, arrayOf<String>(("" + id)!!))).use { c ->
             try {
                 undoRows!!.put((table + ":" + id)!!, (((org.json.JSONObject().put("table", table))!!.put("id", id))!!.put("before", (if (c!!.moveToFirst()) row(c) else org.json.JSONObject.NULL)))!!)
             } catch (e: Exception) {
@@ -1588,14 +1588,14 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
         if ((undoRows == null)) {
             return
         }
-        (readableDatabase!!.query(table!!, arrayOf<String>("id"), where, args, null, null, null)).use { c ->
+        (this.readableDatabase!!.query(table!!, arrayOf<String>("id"), where, args, null, null, null)).use { c ->
             while ((c!!.moveToNext())) {
                 remember(table, c!!.getLong(0))
             }
         }
     }
     internal fun undoLabel(): String? {
-        (readableDatabase!!.rawQuery("SELECT payload FROM undo_action WHERE id=1", null)).use { c ->
+        (this.readableDatabase!!.rawQuery("SELECT payload FROM undo_action WHERE id=1", null)).use { c ->
             try {
                 return (if (c!!.moveToFirst()) (org.json.JSONObject((c!!.getString(0))!!)).getString("label") else "")
             } catch (e: Exception) {
@@ -1604,7 +1604,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
         }
     }
     internal fun undo() {
-        var d: android.database.sqlite.SQLiteDatabase? = writableDatabase
+        var d: android.database.sqlite.SQLiteDatabase? = this.writableDatabase
         d!!.beginTransaction()
         try {
             var payload: org.json.JSONObject?

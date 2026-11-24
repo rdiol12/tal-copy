@@ -83,3 +83,21 @@ actual fun platformObserveForeground(onForeground: () -> Unit, onBackground: () 
     center.addObserverForName(UIApplicationDidBecomeActiveNotification, `object` = null, queue = NSOperationQueue.mainQueue) { _ -> onForeground() }
     center.addObserverForName(UIApplicationDidEnterBackgroundNotification, `object` = null, queue = NSOperationQueue.mainQueue) { _ -> onBackground() }
 }
+
+actual fun platformHaptic() {
+    platform.UIKit.UIImpactFeedbackGenerator(platform.UIKit.UIImpactFeedbackStyle.UIImpactFeedbackStyleLight).impactOccurred()
+}
+actual fun platformOpenUrl(url: String): Boolean {
+    val target = NSURL.URLWithString(url) ?: return false
+    UIApplication.sharedApplication.openURL(target, emptyMap<Any?, Any>(), null)
+    return true
+}
+
+actual fun platformDeviceSecure(): Boolean =
+    platform.LocalAuthentication.LAContext().canEvaluatePolicy(platform.LocalAuthentication.LAPolicyDeviceOwnerAuthentication, null)
+
+actual fun platformAuthenticate(reason: String, onResult: (Boolean) -> Unit) {
+    platform.LocalAuthentication.LAContext().evaluatePolicy(platform.LocalAuthentication.LAPolicyDeviceOwnerAuthentication, reason) { success, _ ->
+        platform.darwin.dispatch_async(platform.darwin.dispatch_get_main_queue()) { onResult(success) }
+    }
+}

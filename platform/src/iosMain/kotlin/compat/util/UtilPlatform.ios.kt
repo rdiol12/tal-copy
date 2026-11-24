@@ -21,3 +21,12 @@ actual fun platformCurrencySymbol(currencyCode: String, languageTag: String): St
     locale(languageTag).displayNameForKey(NSLocaleCurrencySymbol, value = currencyCode) ?: currencyCode
 
 actual fun platformNanoTime(): Long = (NSProcessInfo.processInfo.systemUptime * 1_000_000_000.0).toLong()
+
+actual class PlatformLock actual constructor() {
+    private val lock = platform.Foundation.NSRecursiveLock()
+    actual fun lock() = lock.lock()
+    actual fun unlock() = lock.unlock()
+}
+actual fun platformRunInBackground(name: String, block: () -> Unit) {
+    platform.darwin.dispatch_async(platform.darwin.dispatch_get_global_queue(platform.darwin.DISPATCH_QUEUE_PRIORITY_DEFAULT.toLong(), 0u)) { block() }
+}

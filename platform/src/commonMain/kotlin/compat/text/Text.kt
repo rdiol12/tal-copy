@@ -151,8 +151,9 @@ object Normalizer {
     fun normalize(value: CharSequence, form: Form): String = platformNormalize(value.toString(), form.name)
 }
 
-class Collator private constructor(private val locale: Locale) {
+class Collator private constructor(private val locale: Locale) : Comparator<Any?> {
     fun compare(a: String, b: String): Int = platformCollate(a, b, locale.toLanguageTag())
+    override fun compare(a: Any?, b: Any?): Int = platformCollate(a.toString(), b.toString(), locale.toLanguageTag())
 
     companion object {
         fun getInstance(locale: Locale): Collator = Collator(locale)

@@ -147,6 +147,19 @@ object Math {
     fun abs(a: Int): Int = kotlin.math.abs(a)
     fun abs(a: Long): Long = kotlin.math.abs(a)
     fun abs(a: Double): Double = kotlin.math.abs(a)
+    fun abs(a: Float): Float = kotlin.math.abs(a)
+    fun max(a: Float, b: Float): Float = maxOf(a, b)
+    fun min(a: Float, b: Float): Float = minOf(a, b)
+    fun signum(a: Float): Float = if (a > 0f) 1f else if (a < 0f) -1f else a
+    fun copySign(magnitude: Float, sign: Float): Float = if ((sign < 0f) != (magnitude < 0f)) -magnitude else magnitude
+    fun copySign(magnitude: Double, sign: Double): Double = if ((sign < 0.0) != (magnitude < 0.0)) -magnitude else magnitude
+    fun toDegrees(radians: Double): Double = radians * 180.0 / kotlin.math.PI
+    fun toRadians(degrees: Double): Double = degrees * kotlin.math.PI / 180.0
+    fun atan2(y: Double, x: Double): Double = kotlin.math.atan2(y, x)
+    fun sin(a: Double): Double = kotlin.math.sin(a)
+    fun cos(a: Double): Double = kotlin.math.cos(a)
+    fun hypot(x: Double, y: Double): Double = kotlin.math.hypot(x, y)
+    fun multiplyExact(a: Long, b: Int): Long = multiplyExact(a, b.toLong())
     fun max(a: Int, b: Int): Int = maxOf(a, b)
     fun max(a: Long, b: Long): Long = maxOf(a, b)
     fun max(a: Double, b: Double): Double = maxOf(a, b)
@@ -193,3 +206,12 @@ fun <K : Comparable<K>, V> Map<out K, V>.toSortedMap(): Map<K, V> {
     for ((key, value) in entries.sortedBy { it.key }) result[key] = value
     return result
 }
+
+/** A real mutual-exclusion lock for the few places that are reached from background threads. */
+expect class PlatformLock() {
+    fun lock()
+    fun unlock()
+}
+inline fun <R> PlatformLock.locked(block: () -> R): R { lock(); try { return block() } finally { unlock() } }
+/** Runs [block] on a background thread. */
+expect fun platformRunInBackground(name: String, block: () -> Unit)

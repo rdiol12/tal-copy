@@ -6,3 +6,7 @@ actual fun platformExportFile(name: String, mime: String, bytes: ByteArray) {
 actual fun platformImportFile(mimeTypes: List<String>, onResult: (ByteArray?) -> Unit) = onResult(null)
 actual fun platformExcludeFromBackup(directory: String) { java.io.File(directory).mkdirs() }
 actual fun platformObserveForeground(onForeground: () -> Unit, onBackground: () -> Unit) {}
+actual fun platformHaptic() {}
+actual fun platformOpenUrl(url: String): Boolean = false
+actual fun platformDeviceSecure(): Boolean = false
+actual fun platformAuthenticate(reason: String, onResult: (Boolean) -> Unit) = onResult(false)

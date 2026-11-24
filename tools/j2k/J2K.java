@@ -47,6 +47,7 @@ public class J2K {
         trees = Trees.instance(task); types = task.getTypes(); elements = task.getElements();
         int errors = 0;
         for (Diagnostic<? extends JavaFileObject> d : diagnostics.getDiagnostics()) if (d.getKind() == Diagnostic.Kind.ERROR) {
+            if ("compiler.err.except.never.thrown.in.try".equals(d.getCode())) continue;   // the Kotlin look-alikes declare no checked exceptions
             if (errors++ < 60) System.err.println("javac: " + (d.getSource() == null ? "" : new File(d.getSource().getName()).getName()) + ":" + d.getLineNumber() + " " + d.getMessage(Locale.ROOT).replace('\n', ' '));
         }
         if (errors > 0) System.err.println("javac reported " + errors + " errors; output may be incomplete");
@@ -221,7 +222,7 @@ public class J2K {
             {"java.util.List#subList/2", "$r.subList($0, $1)"},
             {"java.util.Collection#stream/0", "$r.javaStream()"}, {"java.util.Comparator#thenComparing/1", "$r.javaThenComparing($0)"},
             {"java.util.Comparator#reversed/0", "$r.reversed()"},
-            {"java.lang.Throwable#getMessage/0", "$r.message"}, {"java.lang.Throwable#getCause/0", "$r.cause"}, {"java.lang.Throwable#printStackTrace/0", "$r.printStackTrace()"},
+            {"java.nio.charset.Charset#name/0", "$r.name"}, {"java.util.Iterator#forEachRemaining/1", "$r.javaForEachRemaining($0)"}, {"java.lang.Throwable#getMessage/0", "$r.message"}, {"java.lang.Throwable#getCause/0", "$r.cause"}, {"java.lang.Throwable#printStackTrace/0", "$r.printStackTrace()"},
             {"java.lang.Object#getClass/0", "$r::class"}, {"java.lang.Enum#name/0", "$r.name"}, {"java.lang.Enum#ordinal/0", "$r.ordinal"},
             {"java.lang.Integer#intValue/0", "$r"}, {"java.lang.Long#longValue/0", "$r"}, {"java.lang.Long#intValue/0", "$r.toInt()"}, {"java.lang.Integer#longValue/0", "$r.toLong()"},
             {"java.lang.Double#doubleValue/0", "$r"}, {"java.lang.Number#intValue/0", "$r.toInt()"}, {"java.lang.Number#longValue/0", "$r.toLong()"}, {"java.lang.Number#doubleValue/0", "$r.toDouble()"},
@@ -390,6 +391,7 @@ public class J2K {
             ExecutableElement e = (ExecutableElement) elementOf(p);
             Set<Modifier> mods = m.getModifiers().getFlags();
             boolean nestedOwner = e.getEnclosingElement().getEnclosingElement() instanceof TypeElement;
+            if (m.getName().contentEquals("<init>") && ((TypeElement) e.getEnclosingElement()).getNestingKind() == NestingKind.ANONYMOUS) return;   // javac's synthetic constructor
             if (m.getName().contentEquals("<init>")) {
                 List<? extends StatementTree> body = m.getBody().getStatements(); String delegate = "";
                 int skip = 0;
@@ -637,10 +639,28 @@ public class J2K {
         /** Expression statement: assignments and increments are statements in Kotlin. */
         String statementExpr(TreePath p) {
             Tree t = p.getLeaf();
-            if (t instanceof AssignmentTree) { AssignmentTree a = (AssignmentTree) t; return target(child(p, a.getVariable())) + " = " + exprAs(child(p, a.getExpression()), typeOf(child(p, a.getVariable()))); }
+            if (t instanceof AssignmentTree) { AssignmentTree a = (AssignmentTree) t; String element = elementAssignment(p, a); if (element != null) return element;
+                return target(child(p, a.getVariable())) + " = " + exprAs(child(p, a.getExpression()), typeOf(child(p, a.getVariable()))); }
             if (t instanceof CompoundAssignmentTree) return compound(p, (CompoundAssignmentTree) t);
             if (t instanceof ParenthesizedTree) return statementExpr(child(p, ((ParenthesizedTree) t).getExpression()));
             return expr(p);
+        }
+        /**
+         * Storing into an array of references. Array components are non-null in the Kotlin output, so a stored
+         * value is asserted non-null, and storing null goes through a view of the array with nullable components.
+         */
+        String elementAssignment(TreePath p, AssignmentTree a) {
+            Tree variable = a.getVariable();
+            while (variable instanceof ParenthesizedTree) variable = ((ParenthesizedTree) variable).getExpression();
+            if (!(variable instanceof ArrayAccessTree)) return null;
+            TreePath vp = child(p, a.getVariable()); while (vp.getLeaf() != variable) vp = child(vp, ((ParenthesizedTree) vp.getLeaf()).getExpression());
+            TypeMirror component = typeOf(vp);
+            if (component == null || isPrimitive(component)) return null;
+            ArrayAccessTree access = (ArrayAccessTree) variable;
+            String array = receiver(child(vp, access.getExpression())), index = exprAs(child(vp, access.getIndex()), types.getPrimitiveType(TypeKind.INT));
+            TreePath ep = child(p, a.getExpression());
+            if (isNullLiteral(ep.getLeaf())) return "(" + array + " as Array<" + typeNN(component) + "?>)[" + index + "] = null";
+            return array + "[" + index + "] = " + receiver(ep);
         }
         /** Assignment target: no "!!" on the variable itself, only on its qualifier. */
         String target(TreePath p) {
@@ -686,10 +706,13 @@ public class J2K {
                 case NEW_ARRAY: return newArray(p, (NewArrayTree) t);
                 case ARRAY_ACCESS: { ArrayAccessTree a = (ArrayAccessTree) t; return receiver(child(p, a.getExpression())) + "[" + exprAs(child(p, a.getIndex()), types.getPrimitiveType(TypeKind.INT)) + "]"; }
                 case ASSIGNMENT: { AssignmentTree a = (AssignmentTree) t; TreePath vp = child(p, a.getVariable());
+                    if (elementAssignment(p, a) != null) return "run { " + elementAssignment(p, a) + "; " + expr(vp) + " }";
                     return "(" + exprAs(child(p, a.getExpression()), typeOf(vp)) + ").also { " + target(vp) + " = it }"; }
                 case CONDITIONAL_EXPRESSION: { ConditionalExpressionTree c = (ConditionalExpressionTree) t; TypeMirror type = typeOf(p);
                     return "(if (" + condition(child(p, c.getCondition())) + ") " + exprAs(child(p, c.getTrueExpression()), type) + " else " + exprAs(child(p, c.getFalseExpression()), type) + ")"; }
-                case INSTANCE_OF: { InstanceOfTree i = (InstanceOfTree) t; return "(" + expr(child(p, i.getExpression())) + " is " + typeNN(typeOf(child(p, i.getType()))) + ")"; }
+                case INSTANCE_OF: { InstanceOfTree i = (InstanceOfTree) t; TypeMirror tested = typeOf(child(p, i.getType()));
+                    String testedName = tested != null && tested.getKind() == TypeKind.ARRAY && !((ArrayType) tested).getComponentType().getKind().isPrimitive() ? "Array<*>" : typeNN(tested);
+                    return "(" + expr(child(p, i.getExpression())) + " is " + testedName + ")"; }
                 case TYPE_CAST: return cast(p, (TypeCastTree) t);
                 case LAMBDA_EXPRESSION: return lambda(p, (LambdaExpressionTree) t);
                 case MEMBER_REFERENCE: return memberReference(p, (MemberReferenceTree) t);
@@ -867,18 +890,52 @@ public class J2K {
             String template = memberTemplate(m);
             if (template != null) return fill(template, receiver == null ? "this" : receiver, args);
             String prefix = receiver == null ? "" : receiver + ".";
+            if (!m.getTypeParameters().isEmpty() && m.getReturnType().getKind() == TypeKind.TYPEVAR) {
+                // A type parameter that only appears as the result cannot be inferred by Kotlin from a bare call.
+                boolean inParameters = false;
+                for (VariableElement v : m.getParameters()) if (v.asType().toString().contains(m.getReturnType().toString())) inParameters = true;
+                TypeMirror inferred = typeOf(p);
+                if (!inParameters && inferred != null && inferred.getKind() == TypeKind.DECLARED) typeArgs = "<" + typeNN(inferred) + ">";
+            }
             if (isKotlinClass(owner) && !isStatic) {
+                String propertyPrefix = receiver == null ? implicitThis(p, owner) + "." : prefix;
                 boolean getter = args.isEmpty() && ((name.startsWith("get") && name.length() > 3 && Character.isUpperCase(name.charAt(3))) || (name.startsWith("is") && name.length() > 2 && Character.isUpperCase(name.charAt(2)) && m.getReturnType().getKind() == TypeKind.BOOLEAN));
-                if (getter) return prefix + id(propertyName(name));
+                if (getter && !keepCall(owner, m)) return propertyPrefix + id(propertyName(name));
                 if (args.size() == 1 && name.startsWith("set") && name.length() > 3 && Character.isUpperCase(name.charAt(3)) && m.getReturnType().getKind() == TypeKind.VOID) {
-                    String property = hasGetter(owner, name.substring(3)) ? propertyName("get" + name.substring(3)) : null;
-                    if (property != null) return "run { " + prefix + id(property.startsWith("is") ? property : property) + " = " + args.get(0) + " }";
+                    String property = keepCall(owner, m) ? null : hasGetter(owner, "get" + name.substring(3)) ? propertyName("get" + name.substring(3)) : hasGetter(owner, "is" + name.substring(3)) ? "is" + name.substring(3) : null;
+                    if (property != null) return "run { " + propertyPrefix + id(property) + " = " + args.get(0) + " }";
                 }
             }
             return prefix + id(name) + typeArgs + "(" + String.join(", ", args) + ")";
         }
-        static boolean hasGetter(TypeElement owner, String suffix) {
-            for (Element e : elements.getAllMembers(owner)) if (e instanceof ExecutableElement && ((ExecutableElement) e).getParameters().isEmpty() && (e.getSimpleName().contentEquals("get" + suffix))) return true;
+        /** "this", or "this@Outer" when the member belongs to an enclosing class rather than the innermost one. */
+        String implicitThis(TreePath p, TypeElement owner) {
+            boolean innermost = true;
+            for (TreePath q = p; q != null; q = q.getParentPath()) {
+                if (!(q.getLeaf() instanceof ClassTree)) continue;
+                Element c = trees.getElement(q);
+                if (c instanceof TypeElement && types.isSubtype(types.erasure(c.asType()), types.erasure(owner.asType()))) return innermost ? "this" : "this@" + c.getSimpleName();
+                innermost = false;
+            }
+            return "this";
+        }
+        static boolean hasGetter(TypeElement owner, String getter) {
+            for (Element e : elements.getAllMembers(owner)) if (e instanceof ExecutableElement && ((ExecutableElement) e).getParameters().isEmpty() && e.getSimpleName().contentEquals(getter)
+                    && !annotated(e, "Fun") && (!getter.startsWith("is") || ((ExecutableElement) e).getReturnType().getKind() == TypeKind.BOOLEAN)) return true;
+            return false;
+        }
+        /** True when the method, or the one it overrides somewhere up the hierarchy, is marked @Fun (a real function that only looks like an accessor). */
+        static boolean keepCall(TypeElement owner, ExecutableElement m) {
+            if (annotated(m, "Fun")) return true;
+            java.util.ArrayDeque<TypeMirror> queue = new java.util.ArrayDeque<>(types.directSupertypes(owner.asType()));
+            java.util.HashSet<String> seen = new java.util.HashSet<>();
+            while (!queue.isEmpty()) {
+                TypeMirror t = queue.poll(); Element te = types.asElement(t);
+                if (!(te instanceof TypeElement) || !seen.add(te.toString())) continue;
+                for (Element e : te.getEnclosedElements()) if (e instanceof ExecutableElement && e.getSimpleName().contentEquals(m.getSimpleName())
+                        && ((ExecutableElement) e).getParameters().size() == m.getParameters().size() && annotated(e, "Fun")) return true;
+                queue.addAll(types.directSupertypes(t));
+            }
             return false;
         }
         /** Receiver text for a static member of the given class. */
@@ -905,6 +962,11 @@ public class J2K {
                 return text;
             }
             String name = typeNN(type);
+            if (type.getKind() == TypeKind.DECLARED) {
+                TypeElement created = (TypeElement) ((DeclaredType) type).asElement();
+                // An inner (non-static) class is created through the enclosing instance, which is implicit here.
+                if (created.getNestingKind() == NestingKind.MEMBER && !created.getModifiers().contains(Modifier.STATIC) && created.getKind() == ElementKind.CLASS && isSource(created) && t.getEnclosingExpression() == null) name = created.getSimpleName().toString();
+            }
             if (t.getEnclosingExpression() != null) return receiver(child(p, t.getEnclosingExpression())) + "." + ((TypeElement) ((DeclaredType) type).asElement()).getSimpleName() + "(" + args + ")";
             return name + "(" + args + ")";
         }
@@ -913,6 +975,8 @@ public class J2K {
             if (t.getInitializers() != null) {
                 String items = t.getInitializers().stream().map(i -> exprAs(child(p, i), component)).collect(Collectors.joining(", "));
                 if (component.getKind().isPrimitive()) return primitiveName(component).toLowerCase(Locale.ROOT).replace("int", "int") + "ArrayOf(" + items + ")";
+                if (t.getInitializers().stream().anyMatch(i -> isNullLiteral(i)))     // slots that start empty
+                    return "(arrayOf<" + typeNN(component) + "?>(" + t.getInitializers().stream().map(i -> expr(child(p, i))).collect(Collectors.joining(", ")) + ") as Array<" + typeNN(component) + ">)";
                 return "arrayOf<" + typeNN(component) + ">(" + t.getInitializers().stream().map(i -> isPrimitive(typeOf(child(p, i))) || isLiteralLike(i) ? exprAs(child(p, i), component) : receiver(child(p, i))).collect(Collectors.joining(", ")) + ")";
             }
             String size = exprAs(child(p, t.getDimensions().get(0)), types.getPrimitiveType(TypeKind.INT));

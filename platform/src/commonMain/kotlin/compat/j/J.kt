@@ -71,6 +71,7 @@ fun <K, V> MutableMap<K, V>.javaMerge(key: K, value: V, remapping: BiFunction<V,
 }
 fun <K, V> Map<K, V>.javaForEach(action: BiConsumer<K, V>) { for ((key, value) in this) action.accept(key, value) }
 fun <T> Iterable<T>.javaForEach(action: Consumer<T>) { for (item in this) action.accept(item) }
+fun <T> Iterator<T>.javaForEachRemaining(action: Consumer<T>) { while (hasNext()) action.accept(next()) }
 fun <T> MutableList<T>.javaSort(comparator: Comparator<in T>?) { if (comparator != null) sortWith(comparator) else @Suppress("UNCHECKED_CAST") (this as MutableList<Comparable<Any>>).sort() }
 fun <T> MutableCollection<T>.javaRemoveIf(filter: Predicate<T>): Boolean {
     var removed = false
@@ -298,3 +299,27 @@ class IntStream(private val items: List<Int>) {
     fun max(): Int? = items.maxOrNull()
     fun min(): Int? = items.minOrNull()
 }
+
+/** java.lang.Thread for fire-and-forget background work. */
+open class Thread(private val task: Runnable?, val name: String) {
+    constructor(task: Runnable?) : this(task, "background")
+    constructor() : this(null, "background")
+    var isDaemon: Boolean = false
+    var priority: Int = 5
+    open fun run() { task?.run() }
+    fun start() { compat.util.platformRunInBackground(name) { run() } }
+    fun interrupt() {}
+    val isInterrupted: Boolean get() = false
+    companion object {
+        fun sleep(millis: Long) {}
+        fun currentThread(): Thread = Thread()
+    }
+}
+
+/**
+ * Marks a getX()/setX(v) function that is a real function, not a property accessor,
+ * so the Java-to-Kotlin converter keeps the call instead of writing a property access.
+ */
+@Retention(AnnotationRetention.BINARY)
+@Target(AnnotationTarget.FUNCTION)
+annotation class Fun

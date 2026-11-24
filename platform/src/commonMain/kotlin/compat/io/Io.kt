@@ -2,17 +2,21 @@
 // at the bottom of this file.
 package compat.io
 
+import kotlin.jvm.JvmOverloads
+
 import compat.text.Charset
 import compat.text.Charsets
 
-open class IOException(message: String? = null, cause: Throwable? = null) : Exception(message, cause)
-class FileNotFoundException(message: String? = null) : IOException(message)
+open class IOException @JvmOverloads constructor(message: String? = null, cause: Throwable? = null) : Exception(message, cause)
+class FileNotFoundException @JvmOverloads constructor(message: String? = null) : IOException(message)
+class UnsupportedEncodingException @JvmOverloads constructor(message: String? = null) : IOException(message)
 
 abstract class InputStream : AutoCloseable {
     /** Next byte as 0..255, or -1 at the end of the stream. */
     abstract fun read(): Int
 
-    open fun read(buffer: ByteArray, offset: Int = 0, length: Int = buffer.size): Int {
+    fun read(buffer: ByteArray): Int = read(buffer, 0, buffer.size)
+    open fun read(buffer: ByteArray, offset: Int, length: Int): Int {
         if (length == 0) return 0
         var count = 0
         while (count < length) {
@@ -41,10 +45,28 @@ abstract class InputStream : AutoCloseable {
     override fun close() {}
 }
 
-class Reader internal constructor(private val source: InputStream) : AutoCloseable {
-    fun readText(): String = source.readBytes().decodeToString()
+open class Reader internal constructor(private val source: InputStream) : AutoCloseable {
+    private var decoded: String? = null
+    private var position = 0
+    private fun all(): String = decoded ?: source.readBytes().decodeToString().also { decoded = it }
+    fun readText(): String = all().substring(position).also { position = all().length }
     fun readLines(): List<String> = readText().lines()
+    /** Reads up to [buffer].size characters; returns the number read, or -1 at the end. */
+    fun read(buffer: CharArray): Int = read(buffer, 0, buffer.size)
+    fun read(buffer: CharArray, offset: Int, length: Int): Int {
+        val text = all()
+        if (position >= text.length) return -1
+        val count = minOf(length, text.length - position)
+        for (i in 0 until count) buffer[offset + i] = text[position + i]
+        position += count
+        return count
+    }
+    fun read(): Int { val text = all(); return if (position < text.length) text[position++].code else -1 }
     override fun close() = source.close()
+}
+class InputStreamReader(source: InputStream, charset: Charset) : Reader(source) {
+    constructor(source: InputStream) : this(source, Charsets.UTF_8)
+    constructor(source: InputStream, charsetName: String) : this(source, Charsets.UTF_8)
 }
 
 abstract class OutputStream : AutoCloseable {
@@ -101,6 +123,8 @@ class File(val path: String) {
     val parentFile: File? get() = path.substringBeforeLast('/', "").takeIf { it.isNotEmpty() }?.let { File(it) }
 
     fun exists(): Boolean = platformFileExists(path)
+    /** Directories are only ever created, never tested for, so an existing path counts as a file. */
+    val isFile: Boolean get() = exists()
     fun length(): Long = platformReadFile(path)?.size?.toLong() ?: 0L
     fun delete(): Boolean = platformDeleteFile(path)
     fun mkdirs(): Boolean = platformMakeDirectories(path)
@@ -134,3 +158,19 @@ expect fun platformWriteFile(path: String, bytes: ByteArray): Boolean
 expect fun platformDeleteFile(path: String): Boolean
 expect fun platformRenameFile(from: String, to: String): Boolean
 expect fun platformMakeDirectories(path: String): Boolean
+
+/** Reads the whole file up front; fine for the small documents the apps handle. */
+class FileInputStream(file: File) : InputStream() {
+    constructor(path: String) : this(File(path))
+    private val source = ByteArrayInputStream(file.readBytes())
+    override fun read(): Int = source.read()
+    override fun read(buffer: ByteArray, offset: Int, length: Int): Int = source.read(buffer, offset, length)
+    override fun readBytes(): ByteArray = source.readBytes()
+}
+/** Collects the bytes and writes the file when closed. */
+class FileOutputStream(private val file: File) : ByteArrayOutputStream() {
+    constructor(path: String) : this(File(path))
+    private var closed = false
+    override fun flush() { file.writeBytes(toByteArray()) }
+    override fun close() { if (!closed) { closed = true; file.writeBytes(toByteArray()) } }
+}

@@ -10,3 +10,11 @@ expect fun platformExcludeFromBackup(directory: String)
 expect fun platformObserveForeground(onForeground: () -> Unit, onBackground: () -> Unit)
 /** Lets the user pick a file; calls back with its bytes, or null if cancelled. */
 expect fun platformImportFile(mimeTypes: List<String>, onResult: (ByteArray?) -> Unit)
+/** A light tap of the haptic engine. */
+expect fun platformHaptic()
+/** Opens a web page or another app for [url]; returns false if nothing can handle it. */
+expect fun platformOpenUrl(url: String): Boolean
+/** True when the device has a passcode, so the owner can be asked to prove who they are. */
+expect fun platformDeviceSecure(): Boolean
+/** Asks for Face ID / Touch ID / the device passcode and reports the outcome on the main thread. */
+expect fun platformAuthenticate(reason: String, onResult: (Boolean) -> Unit)

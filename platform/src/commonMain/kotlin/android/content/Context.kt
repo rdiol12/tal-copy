@@ -29,6 +29,8 @@ open class Context protected constructor() {
     val contentResolver: ContentResolver get() = resolver
     fun getDatabasePath(name: String): File = File(File(filesDir, "databases").also { it.mkdirs() }, name)
     val packageName: String get() = applicationId
+    val resources: android.content.res.Resources get() = android.content.res.Resources.system
+    val mainLooper: android.os.Looper get() = android.os.Looper.getMainLooper()
 
     fun getSharedPreferences(name: String, mode: Int): SharedPreferences =
         preferences.getOrPut(name) { SharedPreferences(File(filesDir, "prefs-$name.json")) }
