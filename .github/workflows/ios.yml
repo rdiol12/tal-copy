@@ -142,6 +142,18 @@ jobs:
           ls -lh out/*.ipa
           du -sh "$APP_PATH"
 
+      - name: Inspect bundle
+        working-directory: ${{ matrix.app.dir }}
+        continue-on-error: true
+        run: |
+          APP_PATH=$(find out/Payload -maxdepth 1 -name '*.app' | head -n 1)
+          for key in CFBundleIdentifier CFBundleDisplayName CFBundleShortVersionString CFBundleVersion MinimumOSVersion; do
+            echo "$key = $(/usr/libexec/PlistBuddy -c "Print :$key" "$APP_PATH/Info.plist")"
+          done
+          echo "Icon files:";       ls "$APP_PATH" | grep -i -E 'icon|Assets.car' || echo "  (none)"
+          echo "Compose resources:"; find "$APP_PATH" -path '*compose-resources*' -type f | wc -l
+          lipo -info "$APP_PATH/$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$APP_PATH/Info.plist")"
+
       - name: Upload .ipa
         uses: actions/upload-artifact@v4
         with:

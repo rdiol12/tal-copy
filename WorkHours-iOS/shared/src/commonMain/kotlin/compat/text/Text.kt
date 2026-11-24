@@ -17,6 +17,7 @@ object Charsets {
 fun String.toByteArray(charset: Charset = Charsets.UTF_8): ByteArray = encodeToByteArray()
 fun ByteArray.toString(charset: Charset): String = decodeToString()
 fun String(bytes: ByteArray, charset: Charset = Charsets.UTF_8): String = bytes.decodeToString()
+fun String(bytes: ByteArray, offset: Int, length: Int, charset: Charset = Charsets.UTF_8): String = bytes.decodeToString(offset, offset + length)
 
 fun String.lowercase(locale: Locale): String = lowercase()
 fun String.uppercase(locale: Locale): String = uppercase()

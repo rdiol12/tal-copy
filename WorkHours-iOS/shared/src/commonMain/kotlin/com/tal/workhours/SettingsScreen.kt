@@ -50,6 +50,8 @@ fun SettingSwitch(title: String, checked: Boolean, enabled: Boolean = true, onCh
 
 @Composable
 fun SettingsScreen(settings: AppSettings, busy: Boolean, initialSetup: Boolean, onSave: (AppSettings) -> Unit) {
+    var homeSyncOpen by remember { mutableStateOf(false) }
+    if (homeSyncOpen) HomeSyncDialog { homeSyncOpen = false }
     var section by rememberSaveable { mutableStateOf(0) }
     var appearance by remember(settings) { mutableStateOf(settings.appearance) }
     var overtimeMode by remember(settings) { mutableStateOf(settings.overtimeMode) }
@@ -139,6 +141,7 @@ fun SettingsScreen(settings: AppSettings, busy: Boolean, initialSetup: Boolean, 
                 Text(tr(R.string.text_ab4dfe20aa), style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
                 Button(onClick = ::save, enabled = !busy) { Text(if (busy) tr(R.string.text_0bf5310554) else tr(R.string.text_54d36ad080)) }
             }
+            OutlinedButton(onClick = { homeSyncOpen = true }) { Text(tr(R.string.home_sync_title)) }
             error?.let { Text(it, color = MaterialTheme.colorScheme.error) }
             Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 listOf(tr(R.string.ui_settings_hours),tr(R.string.ui_settings_pay),tr(R.string.ui_settings_tax),tr(R.string.ui_settings_display)).forEachIndexed { i, title ->

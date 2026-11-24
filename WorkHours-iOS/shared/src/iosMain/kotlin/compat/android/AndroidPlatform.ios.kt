@@ -3,11 +3,18 @@ package compat.android
 import compat.toByteArray
 import compat.toNSData
 import platform.Foundation.NSData
+import platform.Foundation.NSFileManager
+import platform.Foundation.NSNotificationCenter
+import platform.Foundation.NSNumber
+import platform.Foundation.NSOperationQueue
+import platform.Foundation.NSURLIsExcludedFromBackupKey
 import platform.Foundation.NSTemporaryDirectory
 import platform.Foundation.NSURL
 import platform.Foundation.dataWithContentsOfURL
 import platform.Foundation.writeToFile
 import platform.UIKit.UIApplication
+import platform.UIKit.UIApplicationDidBecomeActiveNotification
+import platform.UIKit.UIApplicationDidEnterBackgroundNotification
 import platform.UIKit.UIDocumentPickerDelegateProtocol
 import platform.UIKit.UIDocumentPickerViewController
 import platform.UIKit.UIViewController
@@ -64,4 +71,15 @@ actual fun platformImportFile(mimeTypes: List<String>, onResult: (ByteArray?) ->
         picker.delegate = delegate
         presenter.presentViewController(picker, animated = true, completion = null)
     }
+}
+
+actual fun platformExcludeFromBackup(directory: String) {
+    NSFileManager.defaultManager.createDirectoryAtPath(directory, withIntermediateDirectories = true, attributes = null, error = null)
+    NSURL.fileURLWithPath(directory, isDirectory = true).setResourceValue(NSNumber(bool = true), forKey = NSURLIsExcludedFromBackupKey, error = null)
+}
+
+actual fun platformObserveForeground(onForeground: () -> Unit, onBackground: () -> Unit) {
+    val center = NSNotificationCenter.defaultCenter
+    center.addObserverForName(UIApplicationDidBecomeActiveNotification, `object` = null, queue = NSOperationQueue.mainQueue) { _ -> onForeground() }
+    center.addObserverForName(UIApplicationDidEnterBackgroundNotification, `object` = null, queue = NSOperationQueue.mainQueue) { _ -> onBackground() }
 }

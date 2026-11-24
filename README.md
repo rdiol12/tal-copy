@@ -49,10 +49,12 @@ git add -A && git commit -m "Update WorkHours to <version>" && git push
 
 If a patch no longer applies, the script names it; adjust the patch and rerun.
 
-### Not ported yet
+### Differences from the Android app
 
-Android-only features with no iOS implementation: home-screen widgets, Google
-Drive backup (manual backup to a file works), and home-server sync.
+- **Home-server sync** works, but only while the app is open (Android also
+  syncs every 15 minutes in the background).
+- **Not ported yet:** home-screen widgets and Google Drive backup. Manual
+  backup to a file works.
 
 ## Layout
 

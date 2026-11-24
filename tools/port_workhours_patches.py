@@ -44,9 +44,30 @@ PATCHES = {
         ("android.text.TextUtils.getLayoutDirectionFromLocale(appLocale)==android.view.View.LAYOUT_DIRECTION_RTL", "AppText.isRightToLeft"),
     ],
     "SettingsScreen.kt": [
-        # Entry point of the Android-only home-server sync screen.
-        ("    val syncContext = androidx.compose.ui.platform.LocalContext.current\n", ""),
-        ("            OutlinedButton(onClick = { syncContext.startActivity(android.content.Intent(syncContext, HomeSyncActivity::class.java)) }) { Text(tr(R.string.home_sync_title)) }\n", ""),
+        # The home-server sync screen is a separate Activity on Android; here it opens as a full-screen dialog.
+        ("    val syncContext = androidx.compose.ui.platform.LocalContext.current\n",
+         "    var homeSyncOpen by remember { mutableStateOf(false) }\n    if (homeSyncOpen) HomeSyncDialog { homeSyncOpen = false }\n"),
+        ("OutlinedButton(onClick = { syncContext.startActivity(android.content.Intent(syncContext, HomeSyncActivity::class.java)) })",
+         "OutlinedButton(onClick = { homeSyncOpen = true })"),
+    ],
+    "HomeSync.kt": [
+        ("import android.util.Base64\n", ""),
+        ("import androidx.work.*\n", ""),
+        ("import java.util.concurrent.TimeUnit\n", ""),
+        ("re", r"import javax\.crypto\.Cipher\nimport javax\.crypto\.KeyGenerator\nimport javax\.crypto\.SecretKey\nimport javax\.crypto\.spec\.GCMParameterSpec\n", ""),
+        ("re", r"import android\.security\.keystore\.KeyGenParameterSpec\nimport android\.security\.keystore\.KeyProperties\n", ""),
+        # Android wraps the server key with an Android Keystore AES key. On iOS the state file sits in a
+        # backup-excluded folder and is encrypted at rest by iOS data protection, so the key is stored as-is.
+        ("re", r"    private fun key\(\): SecretKey \{\n.*?\n    \}\n    private fun encrypted\(token: String\): String \{\n.*?\n    \}\n    private fun token\(c: Context\): String \{\n.*?\n    \}\n",
+         "    private fun encrypted(token: String): String = token\n"
+         "    private fun token(c: Context): String {\n"
+         "        cachedToken?.let { return it }\n"
+         "        return state(c).getString(\"token\").also { cachedToken=it }\n"
+         "    }\n"),
+        # No WorkManager: sync runs while the app is open (see ios/App.kt).
+        ("re", r"            WorkManager\.getInstance\(c\)\.enqueueUniquePeriodicWork\([^\n]*\n[^\n]*\.build\(\)\)\n", ""),
+        ("        WorkManager.getInstance(c).cancelUniqueWork(\"shifthours-home-sync\")\n", ""),
+        ("re", r"class HomeSyncWorker\(context:Context,params:WorkerParameters\):CoroutineWorker\(context,params\)\{\n.*?\n\}\n", ""),
     ],
 }
 

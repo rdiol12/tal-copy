@@ -18,6 +18,8 @@ class Context private constructor() {
     val baseContext: Context get() = this
     val filesDir: File get() = File(platformFilesDirectory())
     val cacheDir: File get() = File(platformCacheDirectory())
+    /** Kept out of device backups (used for credentials and sync bookkeeping). */
+    val noBackupFilesDir: File get() = File(filesDir, "no-backup").also { platformExcludeFromBackup(it.path) }
     val contentResolver: ContentResolver = ContentResolver()
     val packageName: String get() = "com.tal.workhours"
 
@@ -126,5 +128,9 @@ annotation class DrawableRes
 // ---- Platform hooks ----
 /** Shows the system sheet for saving [bytes] as a file named [name]. */
 expect fun platformExportFile(name: String, mime: String, bytes: ByteArray)
+/** Creates the directory if needed and marks it as not to be included in device backups. */
+expect fun platformExcludeFromBackup(directory: String)
+/** Calls back whenever the app comes to the foreground / goes to the background. */
+expect fun platformObserveForeground(onForeground: () -> Unit, onBackground: () -> Unit)
 /** Lets the user pick a file; calls back with its bytes, or null if cancelled. */
 expect fun platformImportFile(mimeTypes: List<String>, onResult: (ByteArray?) -> Unit)
