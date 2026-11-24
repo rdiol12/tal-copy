@@ -1,5 +1,7 @@
 package android.util
 
+import kotlin.jvm.JvmStatic
+
 import compat.io.ByteArrayInputStream
 import compat.io.ByteArrayOutputStream
 import compat.io.File

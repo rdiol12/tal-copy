@@ -1,5 +1,8 @@
 package android.content
 
+import kotlin.jvm.JvmField
+import kotlin.jvm.JvmOverloads
+
 import compat.android.platformExportFile
 import compat.io.ByteArrayInputStream
 import compat.io.ByteArrayOutputStream

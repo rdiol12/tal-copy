@@ -2,6 +2,10 @@
 // names, same coercion rules, insertion-ordered keys, same number output).
 package org.json
 
+import kotlin.jvm.JvmField
+import kotlin.jvm.JvmStatic
+import kotlin.jvm.JvmOverloads
+
 class JSONException(message: String) : RuntimeException(message)
 
 private fun numberToString(number: Number): String {
