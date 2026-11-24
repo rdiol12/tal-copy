@@ -105,10 +105,22 @@ class Currency private constructor(val currencyCode: String) {
     }
 }
 
+class PrintStream internal constructor() {
+    fun println(value: Any?) = kotlin.io.println(value)
+    fun println() = kotlin.io.println()
+    fun print(value: Any?) = kotlin.io.print(value)
+}
+
 object System {
+    val out: PrintStream = PrintStream()
+    val err: PrintStream = PrintStream()
     fun currentTimeMillis(): Long = platformCurrentTimeMillis()
     fun nanoTime(): Long = platformNanoTime()
     fun lineSeparator(): String = "\n"
+    fun <T> arraycopy(source: Array<T>, sourceIndex: Int, target: Array<T>, targetIndex: Int, length: Int) { source.copyInto(target, targetIndex, sourceIndex, sourceIndex + length) }
+    fun arraycopy(source: IntArray, sourceIndex: Int, target: IntArray, targetIndex: Int, length: Int) { source.copyInto(target, targetIndex, sourceIndex, sourceIndex + length) }
+    fun arraycopy(source: ByteArray, sourceIndex: Int, target: ByteArray, targetIndex: Int, length: Int) { source.copyInto(target, targetIndex, sourceIndex, sourceIndex + length) }
+    fun identityHashCode(value: Any?): Int = value.hashCode()
 }
 
 /** Single-threaded stand-in for the JVM intrinsic; callers here run on the main thread. */
@@ -145,6 +157,18 @@ object Math {
     fun ceil(a: Double): Double = kotlin.math.ceil(a)
     fun sqrt(a: Double): Double = kotlin.math.sqrt(a)
     fun pow(a: Double, b: Double): Double = powOf(a, b)
+    fun addExact(a: Long, b: Long): Long { val r = a + b; if (((a xor r) and (b xor r)) < 0) throw ArithmeticException("long overflow"); return r }
+    fun addExact(a: Int, b: Int): Int { val r = a.toLong() + b; if (r < Int.MIN_VALUE || r > Int.MAX_VALUE) throw ArithmeticException("integer overflow"); return r.toInt() }
+    fun subtractExact(a: Long, b: Long): Long { val r = a - b; if (((a xor b) and (a xor r)) < 0) throw ArithmeticException("long overflow"); return r }
+    fun multiplyExact(a: Long, b: Long): Long {
+        if (a == 0L || b == 0L) return 0L
+        val r = a * b
+        if (r / b != a || (a == -1L && b == Long.MIN_VALUE) || (b == -1L && a == Long.MIN_VALUE)) throw ArithmeticException("long overflow")
+        return r
+    }
+    fun toIntExact(value: Long): Int { if (value < Int.MIN_VALUE || value > Int.MAX_VALUE) throw ArithmeticException("integer overflow"); return value.toInt() }
+    fun round(a: Float): Int = if (a.isNaN()) 0 else kotlin.math.floor(a + 0.5f).toInt()
+    fun signum(a: Double): Double = kotlin.math.sign(a)
     /** Math.round: floor(x + 0.5), with NaN -> 0. */
     fun round(a: Double): Long = if (a.isNaN()) 0L else kotlin.math.floor(a + 0.5).toLong()
 }

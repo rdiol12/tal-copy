@@ -21,6 +21,7 @@ class Context private constructor() {
     /** Kept out of device backups (used for credentials and sync bookkeeping). */
     val noBackupFilesDir: File get() = File(filesDir, "no-backup").also { platformExcludeFromBackup(it.path) }
     val contentResolver: ContentResolver = ContentResolver()
+    fun getDatabasePath(name: String): File = File(File(filesDir, "databases").also { it.mkdirs() }, name)
     val packageName: String get() = "com.tal.workhours"
 
     fun getSharedPreferences(name: String, mode: Int): SharedPreferences =

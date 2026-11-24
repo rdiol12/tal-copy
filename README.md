@@ -5,7 +5,7 @@ iOS ports of Tal Azulay's Android apps, built on GitHub Actions.
 | App | Android original | iOS status |
 | --- | --- | --- |
 | ShiftHours / WorkHours | Kotlin + Jetpack Compose | Ported (`WorkHours-iOS/`), builds to an unsigned `.ipa` |
-| PocketFlow | Java + Android Views + SQLite | Not started - needs a rewrite |
+| PocketFlow | Java + Android Views + SQLite | In progress (`PocketFlow-iOS/`): data layer converted and tested; screens not yet |
 
 ## Getting the app onto an iPhone
 
@@ -56,6 +56,21 @@ If a patch no longer applies, the script names it; adjust the patch and rerun.
 - **Not ported yet:** home-screen widgets and Google Drive backup. Manual
   backup to a file works.
 
+## How the PocketFlow port works (in progress)
+
+PocketFlow is Java, which cannot be compiled for iOS, so `tools/j2k` converts
+it to Kotlin. The converter runs the real Java compiler for parsing and type
+information and prints Kotlin that keeps Java's behaviour literally (nullable
+everything, explicit numeric conversions). `tools/port_pocketflow.sh`
+regenerates `PocketFlow-iOS/shared/src/commonMain/kotlin/com/tal/pocketflow`
+from `upstream/PocketFlow-Android`. Android and JSON classes are described to
+the converter by small API stubs in `tools/j2k/stubs`; their implementations
+are the same `compat` look-alikes the WorkHours port uses (SQLite goes through
+the engine bundled with `androidx.sqlite`).
+
+Converted so far: `Store` (database), finance rules, analytics, tools.
+Not yet: `MainActivity` and the custom views, widgets, Drive backup, app lock.
+
 ## Layout
 
 ```
@@ -63,6 +78,7 @@ If a patch no longer applies, the script names it; adjust the patch and rerun.
 WorkHours-iOS/shared/       All app code (Kotlin Multiplatform: iOS + a JVM target for the tests)
 WorkHours-iOS/composeApp/   Thin module that links the iOS framework
 WorkHours-iOS/iosApp/       XcodeGen spec, Swift entry point, app icon
-upstream/                   Unmodified Android sources the port is generated from
-tools/                      Port script and its patch list
+PocketFlow-iOS/shared/      PocketFlow code converted from Java (data layer so far)
+upstream/                   Unmodified Android sources the ports are generated from
+tools/                      Port scripts, WorkHours patch list, Java-to-Kotlin converter (j2k)
 ```

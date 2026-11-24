@@ -46,7 +46,9 @@ jobs:
       fail-fast: false
       matrix:
         app:
-          - { name: WorkHours, dir: WorkHours-iOS }
+          - { name: WorkHours, dir: WorkHours-iOS, iosTask: ":composeApp:compileKotlinIosArm64" }
+          # PocketFlow: data layer only so far, so there is no .ipa job for it yet.
+          - { name: PocketFlow, dir: PocketFlow-iOS, iosTask: ":shared:compileKotlinIosArm64" }
     steps:
       - uses: actions/checkout@v5
 
@@ -90,7 +92,7 @@ jobs:
 
       - name: Compile Kotlin for iOS
         working-directory: ${{ matrix.app.dir }}
-        run: ./gradlew :composeApp:compileKotlinIosArm64 --stacktrace
+        run: ./gradlew ${{ matrix.app.iosTask }} --stacktrace
 
       - name: Upload test reports
         if: failure()

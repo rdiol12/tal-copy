@@ -106,7 +106,7 @@ class JSONObject() {
     fun length(): Int = map.size
     fun has(name: String): Boolean = map.containsKey(name)
     fun isNull(name: String): Boolean = map[name].let { it == null || it === NULL }
-    fun keys(): Iterator<String> = map.keys.toList().iterator()
+    fun keys(): MutableIterator<String> = map.keys.toMutableList().iterator()
     fun keySet(): Set<String> = map.keys
     fun names(): JSONArray? = if (map.isEmpty()) null else JSONArray().also { a -> map.keys.forEach { a.put(it) } }
     fun remove(name: String): Any? = map.remove(name)

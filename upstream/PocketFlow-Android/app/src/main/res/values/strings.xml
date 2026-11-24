@@ -1,0 +1,14 @@
+<resources>
+    <string name="currency_preview">סכום בשקלים: %1$s</string>
+    <string name="widget_add_label">הוספת תנועה</string>
+    <string name="widget_add_text">הוספת\nתנועה</string>
+    <string name="widget_rule_label">הוראת קבע</string>
+    <string name="widget_account_label">חשבון/כרטיס</string>
+    <string name="widget_add_description">הוספת תנועה בלחיצה · 1×1</string>
+    <string name="widget_actions_name">PocketFlow · פעולות מהירות</string>
+    <string name="widget_add_name">PocketFlow · הוספת תנועה</string>
+    <string name="widget_actions_description">שלושה דפי פעולות עם חיצי מעלה ומטה · 2×2</string>
+    <string name="widget_page_number">דף %1$d מתוך 3</string>
+    <string name="widget_up">הדף שמעל</string>
+    <string name="widget_down">הדף שמתחת</string>
+</resources>

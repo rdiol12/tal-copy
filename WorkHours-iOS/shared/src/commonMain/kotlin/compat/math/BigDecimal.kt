@@ -137,6 +137,17 @@ class BigDecimal private constructor(
     fun toDouble(): Double = toString().toDouble()
     fun toLong(): Long = setScale(0, RoundingMode.DOWN).toPlainString().toLong()
     fun toInt(): Int = toLong().toInt()
+    // java.lang.Number names, for code converted from Java.
+    fun doubleValue(): Double = toDouble()
+    fun longValue(): Long = toLong()
+    fun intValue(): Int = toInt()
+    fun longValueExact(): Long {
+        val whole = try { setScale(0, RoundingMode.UNNECESSARY) } catch (e: ArithmeticException) { throw ArithmeticException("Rounding necessary") }
+        return whole.toPlainString().toLongOrNull() ?: throw ArithmeticException("Overflow")
+    }
+    fun intValueExact(): Int = longValueExact().let { if (it < Int.MIN_VALUE || it > Int.MAX_VALUE) throw ArithmeticException("Overflow") else it.toInt() }
+    fun pow(n: Int): BigDecimal { if (n < 0) throw ArithmeticException("Invalid operation"); var result = ONE; repeat(n) { result = result.multiply(this) }; return result }
+    fun remainder(other: BigDecimal): BigDecimal = subtract(divide(other, 0, RoundingMode.DOWN).multiply(other))
 
     operator fun plus(other: BigDecimal): BigDecimal = add(other)
     operator fun minus(other: BigDecimal): BigDecimal = subtract(other)
