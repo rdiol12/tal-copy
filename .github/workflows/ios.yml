@@ -7,6 +7,8 @@ name: iOS build
 # Two stages, to keep the expensive macOS minutes to a minimum:
 #   1. check (Linux): unit tests + compiles the Kotlin code for iOS.
 #   2. ipa (macOS):   xcodebuild (which links the Kotlin framework), uploads the .ipa.
+#   3. release:       publishes the .ipa files on the Releases page ("ios-latest"),
+#                     so they can be downloaded directly, without unpacking an artifact.
 
 on:
   push:
@@ -166,6 +168,8 @@ jobs:
           (cd out && zip -qry "${{ matrix.app.name }}-unsigned.ipa" Payload)
           ls -lh out/*.ipa
           du -sh "$APP_PATH"
+          # Make sure the archive can be read back before anything is published.
+          unzip -tq out/*.ipa
 
       - name: Inspect bundle
         working-directory: ${{ matrix.app.dir }}
@@ -194,3 +198,42 @@ jobs:
           name: ${{ matrix.app.name }}-xcodebuild-log
           path: ${{ matrix.app.dir }}/xcodebuild.log
           if-no-files-found: ignore
+
+  release:
+    name: Publish .ipa files
+    needs: ipa
+    if: ${{ !cancelled() && !inputs.skip_ipa }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      TAG: ios-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: "*-unsigned-ipa"
+          merge-multiple: true
+          path: ipa
+
+      - name: Check the files
+        run: |
+          shopt -s nullglob
+          files=(ipa/*.ipa)
+          if [ ${#files[@]} -eq 0 ]; then echo "No .ipa was built in this run."; exit 1; fi
+          for f in "${files[@]}"; do unzip -tq "$f"; ls -lh "$f"; sha256sum "$f"; done
+
+      # One rolling pre-release: each successful build replaces the files of the same name.
+      - name: Publish
+        run: |
+          notes="Unsigned iOS builds - sign them yourself before installing (see README).
+          Built from ${GITHUB_SHA::7} on $(date -u +'%Y-%m-%d %H:%M UTC'), run ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}."
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --prerelease --target "$GITHUB_SHA" --title "iOS builds (latest)" --notes "$notes"
+          fi
+          gh release upload "$TAG" ipa/*.ipa --clobber
+          gh release edit "$TAG" --notes "$notes"
+          gh release view "$TAG" --json assets --jq '.assets[] | "\(.name)  \(.size) bytes  \(.url)"'
+

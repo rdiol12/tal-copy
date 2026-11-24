@@ -9,8 +9,11 @@ iOS ports of Tal Azulay's Android apps, built on GitHub Actions.
 
 ## Getting the app onto an iPhone
 
-1. Open the **Actions** tab, pick the latest green **iOS build** run.
-2. Download the `WorkHours-unsigned-ipa` and/or `PocketFlow-unsigned-ipa` artifact and unzip it.
+1. Open **Releases** and pick **iOS builds (latest)**
+   (`https://github.com/rdiol12/tal-copy/releases/tag/ios-latest`).
+2. Download `WorkHours-unsigned.ipa` and/or `PocketFlow-unsigned.ipa`. Every
+   successful build replaces them. (The same files are also attached to each
+   run on the Actions tab, zipped.)
 3. Sign and install the `.ipa` yourself. It is built **without** a signature, so
    it will not install as-is. Use whatever you normally sign with (Sideloadly,
    AltStore, or `codesign` with your own certificate and provisioning profile).
