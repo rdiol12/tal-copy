@@ -48,8 +48,7 @@ jobs:
       matrix:
         app:
           - { name: WorkHours, dir: WorkHours-iOS, iosTask: ":composeApp:compileKotlinIosArm64" }
-          # PocketFlow: data layer only so far, so there is no .ipa job for it yet.
-          - { name: PocketFlow, dir: PocketFlow-iOS, iosTask: ":shared:compileKotlinIosArm64" }
+          - { name: PocketFlow, dir: PocketFlow-iOS, iosTask: ":composeApp:compileKotlinIosArm64" }
     steps:
       - uses: actions/checkout@v5
 
@@ -114,6 +113,7 @@ jobs:
       matrix:
         app:
           - { name: WorkHours, dir: WorkHours-iOS }
+          - { name: PocketFlow, dir: PocketFlow-iOS }
     steps:
       - uses: actions/checkout@v5
 
