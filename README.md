@@ -5,12 +5,12 @@ iOS ports of Tal Azulay's Android apps, built on GitHub Actions.
 | App | Android original | iOS status |
 | --- | --- | --- |
 | ShiftHours / WorkHours | Kotlin + Jetpack Compose | Ported (`WorkHours-iOS/`), builds to an unsigned `.ipa` |
-| PocketFlow | Java + Android Views + SQLite | In progress (`PocketFlow-iOS/`): data layer converted and tested; screens not yet |
+| PocketFlow | Java + Android Views + SQLite | Ported (`PocketFlow-iOS/`), builds to an unsigned `.ipa` |
 
 ## Getting the app onto an iPhone
 
 1. Open the **Actions** tab, pick the latest green **iOS build** run.
-2. Download the `WorkHours-unsigned-ipa` artifact and unzip it.
+2. Download the `WorkHours-unsigned-ipa` and/or `PocketFlow-unsigned-ipa` artifact and unzip it.
 3. Sign and install the `.ipa` yourself. It is built **without** a signature, so
    it will not install as-is. Use whatever you normally sign with (Sideloadly,
    AltStore, or `codesign` with your own certificate and provisioning profile).
@@ -56,20 +56,48 @@ If a patch no longer applies, the script names it; adjust the patch and rerun.
 - **Not ported yet:** home-screen widgets and Google Drive backup. Manual
   backup to a file works.
 
-## How the PocketFlow port works (in progress)
+## How the PocketFlow port works
 
-PocketFlow is Java, which cannot be compiled for iOS, so `tools/j2k` converts
-it to Kotlin. The converter runs the real Java compiler for parsing and type
-information and prints Kotlin that keeps Java's behaviour literally (nullable
-everything, explicit numeric conversions). `tools/port_pocketflow.sh`
-regenerates `PocketFlow-iOS/shared/src/commonMain/kotlin/com/tal/pocketflow`
-from `upstream/PocketFlow-Android`. Android and JSON classes are described to
-the converter by small API stubs in `tools/j2k/stubs`; their implementations
-are the same `compat` look-alikes the WorkHours port uses (SQLite goes through
-the engine bundled with `androidx.sqlite`).
+PocketFlow is Java with classic Android views, neither of which exists on iOS.
 
-Converted so far: `Store` (database), finance rules, analytics, tools.
-Not yet: `MainActivity` and the custom views, widgets, Drive backup, app lock.
+1. `tools/j2k` converts the Java to Kotlin. It runs the real Java compiler for
+   parsing and type information and prints Kotlin that keeps Java's behaviour
+   literally (nullable everything, explicit numeric conversions).
+   `tools/port_pocketflow.sh` regenerates
+   `PocketFlow-iOS/shared/src/commonMain/kotlin/com/tal/pocketflow` from
+   `upstream/PocketFlow-Android`; `tools/pocketflow/patch_sources.py` lists the
+   few edits made to the Java first.
+2. The converted code runs on a small model of `android.view`, `android.widget`
+   and `android.app` in `platform/src/commonMain/kotlin/android` (views are
+   plain objects that store what the app sets).
+3. `platform/.../compat/android/compose/ViewRenderer.kt` draws that view tree
+   with Compose, and `ActivityHost.kt` runs the Activity (lifecycle, dialogs,
+   date pickers, toasts). SQLite is the engine bundled with `androidx.sqlite`.
+
+The JVM test `screenshots/ScreenshotTest` drives the app through its screens
+and CI prints the pictures into the job log.
+
+### Differences from the Android app
+
+- **App lock** uses Face ID / Touch ID / the device passcode.
+- **Not ported:** Google Drive backup (manual backup to a file works), the
+  daily reminder notification, home-screen widgets.
+
+## Additions that are not in the Android apps
+
+- **Salary to PocketFlow.** The ShiftHours snapshot screen has a button that
+  sends the period's salary to PocketFlow as an income entry. The amount can be
+  changed first, and PocketFlow asks for confirmation. While the period is open
+  it is sent as an *expected* income; sending again at month end updates it.
+- **Cost in work hours.** Once ShiftHours has sent a salary, PocketFlow also
+  shows expenses as hours of work.
+- **Apple Pay capture.** PocketFlow adds an action to the Shortcuts app
+  ("Add movement to PocketFlow"). iOS does not let apps create automations, so
+  it is switched on once per card: Shortcuts -> Automation -> New -> Wallet
+  (Transaction) -> pick the card -> Run Immediately -> add the PocketFlow action
+  -> set Amount, Merchant and Card from "Shortcut Input". After a payment
+  PocketFlow opens with the movement filled in, ready to confirm.
+- Both use `pocketflow://` links, see `PocketFlow-iOS/.../ios/Links.kt`.
 
 ## Layout
 
@@ -79,7 +107,7 @@ platform/                   Kotlin look-alikes of the JDK and Android APIs, shar
 WorkHours-iOS/shared/       All app code (Kotlin Multiplatform: iOS + a JVM target for the tests)
 WorkHours-iOS/composeApp/   Thin module that links the iOS framework
 WorkHours-iOS/iosApp/       XcodeGen spec, Swift entry point, app icon
-PocketFlow-iOS/shared/      PocketFlow code converted from Java (data layer so far)
+PocketFlow-iOS/             Same layout; shared/ holds the code converted from Java
 upstream/                   Unmodified Android sources the ports are generated from
-tools/                      Port scripts, WorkHours patch list, Java-to-Kotlin converter (j2k)
+tools/                      Port scripts, patch lists, Java-to-Kotlin converter (j2k)
 ```
