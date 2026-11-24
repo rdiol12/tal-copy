@@ -66,6 +66,28 @@ jobs:
         working-directory: ${{ matrix.app.dir }}
         run: ./gradlew :shared:jvmTest --stacktrace
 
+      # Off-screen renders of the UI (see shared/src/jvmTest/kotlin/screenshots).
+      - name: Screenshots
+        if: always()
+        working-directory: ${{ matrix.app.dir }}
+        run: |
+          shopt -s nullglob
+          for f in shared/build/screenshots/*.png; do
+            echo "::group::$(basename "$f")"
+            echo "@@SHOT-BEGIN $(basename "$f")"
+            base64 -w 120 "$f"
+            echo "@@SHOT-END"
+            echo "::endgroup::"
+          done
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.app.name }}-screenshots
+          path: ${{ matrix.app.dir }}/shared/build/screenshots
+          if-no-files-found: ignore
+
       - name: Compile Kotlin for iOS
         working-directory: ${{ matrix.app.dir }}
         run: ./gradlew :composeApp:compileKotlinIosArm64 --stacktrace
