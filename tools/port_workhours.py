@@ -109,7 +109,10 @@ def port_source(text, name, rewrites, patches):
     match = re.search(r"^package [\w.]+\s*$", text, re.M)
     if not match:
         sys.exit(f"{name}: no package line")
-    return HEADER + text[:match.end()] + "\n\n" + EXTRA_IMPORTS + text[match.end():]
+    extra = EXTRA_IMPORTS
+    if "Dispatchers.IO" in text:
+        extra += "import kotlinx.coroutines.IO\n"   # an extension property outside the JVM
+    return HEADER + text[:match.end()] + "\n\n" + extra + text[match.end():]
 
 
 # ---------------------------------------------------------------- strings ---

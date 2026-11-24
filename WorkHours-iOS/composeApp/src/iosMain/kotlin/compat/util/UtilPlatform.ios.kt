@@ -3,6 +3,8 @@ package compat.util
 import platform.Foundation.NSLocale
 import platform.Foundation.NSLocaleCurrencySymbol
 import platform.Foundation.NSProcessInfo
+import platform.Foundation.localizedStringForCountryCode
+import platform.Foundation.localizedStringForLanguageCode
 import platform.Foundation.preferredLanguages
 
 private fun locale(tag: String): NSLocale = NSLocale(localeIdentifier = if (tag.isEmpty() || tag == "und") "en_US_POSIX" else tag)
