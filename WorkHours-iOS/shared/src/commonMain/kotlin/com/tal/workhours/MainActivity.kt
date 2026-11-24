@@ -431,6 +431,7 @@ fun DashboardScreen(data: AppData, now: Long, onManual: () -> Unit, onEditActive
             item { PeriodChooser(period,data.settings.periodStartDay,periodFor(today,data.settings.periodStartDay)) { monthString=YearMonth.from(it.from).toString() } }
             item { Text(overtimeRuleDescription(data.settings),style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant) }
             item { OutlinedButton(onClick={orderOpen=true},modifier=Modifier.fillMaxWidth()) { Text(tr(R.string.snapshot_arrange)) } }
+            item { PocketFlowSalaryButton(sum, today) }
         }
         (widgetCards ?: normalizeSnapshotCardOrder(cardOrder)).forEachIndexed { slot, card ->
             if (widgetCards != null) item(key = "widget_slot_$slot") {

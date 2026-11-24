@@ -9,11 +9,13 @@ import android.view.View
 import androidx.compose.ui.ImageComposeScene
 import androidx.compose.ui.unit.Density
 import com.tal.pocketflow.App
+import com.tal.pocketflow.IncomingLinks
 import com.tal.pocketflow.Store
 import com.tal.pocketflow.initializeApp
 import compat.android.compose.disableViewAnimations
 import compat.time.LocalDate
 import org.jetbrains.skia.EncodedImageFormat
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -85,6 +87,22 @@ class ScreenshotTest {
             tap("launcher-app-1")
             tap("menu-toggle")
             shot("14-drawer")
+            home()
+
+            // Links: a Wallet tap passed on by Shortcuts, then a salary sent by ShiftHours.
+            assertEquals(4590L, IncomingLinks.parseCents("₪45.90")); assertEquals(150400L, IncomingLinks.parseCents("1,504.00"))
+            assertEquals(4590L, IncomingLinks.parseCents("45,9")); assertEquals(1200L, IncomingLinks.parseCents("ILS 12")); assertEquals(0L, IncomingLinks.parseCents(""))
+            assertEquals("קפה נמל", IncomingLinks.parseQuery("merchant=%D7%A7%D7%A4%D7%94%20%D7%A0%D7%9E%D7%9C")["merchant"])
+            IncomingLinks.handle("pocketflow://expense?amount=%E2%82%AA45.90&merchant=%D7%A7%D7%A4%D7%94&card=%D7%95%D7%99%D7%96%D7%94")
+            shot("15-wallet-tap")
+            assertEquals(1, Screen.dialogs.size)
+            home()
+            IncomingLinks.handle("pocketflow://income?amount=8450.00&month=2026-11&date=2026-12-01&done=0&wage=5512")
+            shot("16-salary-from-shifthours")
+            assertEquals(1, Screen.dialogs.size)
+            home()
+            tap("launcher-app-1")
+            shot("17-movements-in-work-hours")
         } finally {
             scene.close()
         }

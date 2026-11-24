@@ -44,6 +44,11 @@ targets:
           - UIInterfaceOrientationLandscapeLeft
           - UIInterfaceOrientationLandscapeRight
         UIFileSharingEnabled: true
+        # pocketflow://... links: salary from ShiftHours, Wallet taps passed on by Shortcuts.
+        CFBundleURLTypes:
+          - CFBundleURLName: com.tal.pocketflow
+            CFBundleURLSchemes: [pocketflow]
+        LSApplicationQueriesSchemes: [shortcuts]
         LSSupportsOpeningDocumentsInPlace: true
     settings:
       base:

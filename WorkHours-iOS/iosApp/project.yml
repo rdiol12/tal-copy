@@ -43,6 +43,8 @@ targets:
           - UIInterfaceOrientationLandscapeLeft
           - UIInterfaceOrientationLandscapeRight
         UIFileSharingEnabled: true
+        # Lets the app check that PocketFlow is installed before sending the salary to it.
+        LSApplicationQueriesSchemes: [pocketflow]
         LSSupportsOpeningDocumentsInPlace: true
     settings:
       base:

@@ -17,6 +17,9 @@ PATCHES = {
          "    SideEffect { compat.android.compose.platformApplyAppearance(appearance) }\n"),
     ],
     "MainActivity.kt": [
+        # iOS addition: hand the period's salary to the PocketFlow app (ios/PocketFlowLink.kt).
+        ("            item { OutlinedButton(onClick={orderOpen=true},modifier=Modifier.fillMaxWidth()) { Text(tr(R.string.snapshot_arrange)) } }\n",
+         "            item { OutlinedButton(onClick={orderOpen=true},modifier=Modifier.fillMaxWidth()) { Text(tr(R.string.snapshot_arrange)) } }\n            item { PocketFlowSalaryButton(sum, today) }\n"),
         ("import android.os.Bundle\n", ""),
         ("import androidx.appcompat.app.AppCompatActivity\n", ""),
         ("import androidx.activity.compose.setContent\n", ""),

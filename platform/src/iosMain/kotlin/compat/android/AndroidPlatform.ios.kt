@@ -89,6 +89,7 @@ actual fun platformHaptic() {
 }
 actual fun platformOpenUrl(url: String): Boolean {
     val target = NSURL.URLWithString(url) ?: return false
+    if (!UIApplication.sharedApplication.canOpenURL(target)) return false
     UIApplication.sharedApplication.openURL(target, emptyMap<Any?, Any>(), null)
     return true
 }

@@ -55,6 +55,8 @@ fun App() {
     initializeApp()
     ActivityHost(ActivityHostOptions(confirmLabel = "אישור", dismissLabel = "ביטול", darkTheme = { AppTheme.dark(Context.app) })) {
         applyTheme()
+        // A link that launched the app is handed over once the screen exists.
+        android.os.Handler.main.post { IncomingLinks.deliver() }
         MainActivity()
     }
 }

@@ -7,6 +7,7 @@ struct iOSApp: App {
     var body: some Scene {
         WindowGroup {
             ComposeView().ignoresSafeArea()
+                .onOpenURL { url in MainViewControllerKt.handleLink(url: url.absoluteString) }
         }
     }
 }

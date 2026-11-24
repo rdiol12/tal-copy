@@ -164,13 +164,107 @@ open class MainActivity : android.app.Activity {
             widgetAction = action
         }
     }
+    private var linkedDraft: Store.Tx? = null
+    internal open fun openLinkedMovement(kind: String?, cents: Long, date: String?, merchant: String?, note: String?, card: String?, marker: String?, done: Boolean) {
+        var draft: Store.Tx? = Store.Tx()
+        if ((!(marker!!.isEmpty()))) {
+            for (old in (store!!.transactions())!!) {
+                if (((old!!.kind)!!.equals(kind) && (old!!.note)!!.contains(marker!!))) {
+                    draft!!.id = old!!.id
+                    draft!!.account = old!!.account
+                    draft!!.category = old!!.category
+                    draft!!.tag = old!!.tag
+                    draft!!.rule = old!!.rule
+                    break
+                }
+            }
+        }
+        draft!!.kind = kind
+        draft!!.amount = cents
+        draft!!.originalAmount = cents
+        draft!!.date = date
+        draft!!.merchant = merchant
+        draft!!.note = note
+        draft!!.count = 1
+        draft!!.status = (if (done) 1 else 0)
+        if ((draft!!.tag == null)) {
+            draft!!.tag = ""
+        }
+        if ((draft!!.category == null)) {
+            draft!!.category = (if (kind!!.equals("income")) "משכורת" else "")
+            if ((!((merchant!!.javaTrim())!!.isEmpty()))) {
+                for (old in (store!!.transactions())!!) {
+                    if (((old!!.merchant)!!.equals(merchant!!, ignoreCase = true))) {
+                        draft!!.category = old!!.category
+                        break
+                    }
+                }
+            }
+        }
+        if (((draft!!.account) == 0L)) {
+            var accounts: MutableList<Store.Account>? = paymentAccounts()
+            var chosen: Long = 0L
+            var wanted: String? = (card!!.javaTrim())!!.lowercase()
+            for (a in accounts!!) {
+                var credit: Boolean = (a!!.type)!!.equals("credit") || (a!!.type)!!.equals("fixed")
+                var name: String? = ((a!!.name)!!.javaTrim())!!.lowercase()
+                if (((if (kind!!.equals("income")) !credit else (!(wanted!!.isEmpty()) && !(name!!.isEmpty()) && (name!!.contains(wanted!!) || wanted!!.contains(name!!)))))) {
+                    chosen = a!!.id
+                    break
+                }
+            }
+            if ((chosen == 0L && !(kind!!.equals("income")))) {
+                var last: Long = prefs!!.getLong("lastAccount", 0L)
+                for (a in accounts!!) {
+                    if (((a!!.id) == last)) {
+                        chosen = last
+                    }
+                }
+            }
+            if ((chosen == 0L && !(accounts!!.isEmpty()))) {
+                chosen = (accounts!!.get(0))!!.id
+            }
+            draft!!.account = chosen
+        }
+        if ((kind!!.equals("income"))) {
+            ((prefs!!.edit())!!.putBoolean("income", true))!!.apply()
+        }
+        linkedDraft = draft
+        tab = 1
+        chargesMode = false
+        if ((started && page != null && (!(appLock!!.enabled()) || unlocked))) {
+            render()
+        }
+    }
+    private fun openLinkedDraft() {
+        if ((linkedDraft == null || !started || (appLock!!.enabled() && !unlocked) || page == null)) {
+            return
+        }
+        var draft: Store.Tx? = linkedDraft
+        linkedDraft = null
+        (android.os.Handler(android.os.Looper.getMainLooper())).post(compat.j.Runnable l1@{
+            for (dialog in (ArrayList<android.app.Dialog>(openDialogs!!))) {
+                if ((dialog!!.isShowing)) {
+                    dialog!!.dismiss()
+                }
+            }
+            if ((drawer != null)) {
+                drawer!!.dismiss()
+            }
+            transactionDialog(draft)
+        })
+    }
+    private fun workHours(cents: Long): String? {
+        var wage: Long = (getSharedPreferences("shifthours", MODE_PRIVATE))!!.getLong("wage", 0L)
+        return (if (wage <= 0) "" else "≈ " + String.format(compat.util.Locale.US!!, "%.1f", cents / wage.toDouble()) + " שעות עבודה")
+    }
     private fun openWidgetAction() {
         if ((widgetAction!!.isEmpty() || !started || (appLock!!.enabled() && !unlocked) || page == null)) {
             return
         }
-        (android.os.Handler(android.os.Looper.getMainLooper())).post(compat.j.Runnable l1@{
+        (android.os.Handler(android.os.Looper.getMainLooper())).post(compat.j.Runnable l2@{
             if ((widgetAction!!.isEmpty() || !started || (appLock!!.enabled() && !unlocked))) {
-                return@l1
+                return@l2
             }
             var action: String? = widgetAction
             widgetAction = ""
@@ -341,11 +435,11 @@ open class MainActivity : android.app.Activity {
             return
         }
         unlockRetry = false
-        appLock!!.authenticate(compat.j.Runnable l2@{
+        appLock!!.authenticate(compat.j.Runnable l3@{
             unlockRetry = false
             unlocked = true
             render()
-        }, compat.j.Runnable l3@{
+        }, compat.j.Runnable l4@{
             unlockRetry = true
             if ((started)) {
                 showLockedScreen()
@@ -387,7 +481,7 @@ open class MainActivity : android.app.Activity {
             space(locked, 12)
         }
         if ((!(appLock!!.secure()))) {
-            var settings: android.widget.TextView? = button("הגדרות נעילת המכשיר", false, compat.j.Runnable l4@{ startActivity(android.content.Intent(android.provider.Settings.ACTION_SECURITY_SETTINGS)) })
+            var settings: android.widget.TextView? = button("הגדרות נעילת המכשיר", false, compat.j.Runnable l5@{ startActivity(android.content.Intent(android.provider.Settings.ACTION_SECURITY_SETTINGS)) })
             locked!!.addView(settings)
         }
         shell = null
@@ -402,13 +496,13 @@ open class MainActivity : android.app.Activity {
             return
         }
         var enable: Boolean = !(appLock!!.enabled())
-        appLock!!.authenticate(compat.j.Runnable l5@{
+        appLock!!.authenticate(compat.j.Runnable l6@{
             appLock!!.enabled(enable)
             unlocked = true
             updateSecureWindow()
             render()
             toast((if (enable) "הגנת הכניסה הופעלה" else "הגנת הכניסה בוטלה"))
-        }, compat.j.Runnable l6@{ toast("האימות בוטל. הגדרת ההגנה לא השתנתה") })
+        }, compat.j.Runnable l7@{ toast("האימות בוטל. הגדרת ההגנה לא השתנתה") })
     }
     protected override fun onSaveInstanceState(b: android.os.Bundle?) {
         super.onSaveInstanceState(b)
@@ -465,12 +559,12 @@ open class MainActivity : android.app.Activity {
         run { e!!.backgroundTintList = null }
         run { e!!.background = outlineShape(SURFACE, 12, OUTLINE) }
         e!!.setPadding(dp(14f), dp(8f), dp(14f), dp(8f))
-        run { e!!.onFocusChangeListener = android.view.View.OnFocusChangeListener l7@{ v, focused -> run { e!!.background = outlineShape(SURFACE, 12, (if (focused) PRIMARY else OUTLINE)) } } }
+        run { e!!.onFocusChangeListener = android.view.View.OnFocusChangeListener l8@{ v, focused -> run { e!!.background = outlineShape(SURFACE, 12, (if (focused) PRIMARY else OUTLINE)) } } }
     }
     private fun <T : android.app.Dialog> trackDialog(dialog: T?): T? {
         exitBackAt = -1L
         openDialogs!!.add(dialog!!)
-        dialog!!.setOnDismissListener(android.content.DialogInterface.OnDismissListener l8@{ d -> openDialogs!!.remove(dialog!!) })
+        dialog!!.setOnDismissListener(android.content.DialogInterface.OnDismissListener l9@{ d -> openDialogs!!.remove(dialog!!) })
         if ((appLock!!.enabled() && dialog!!.window != null)) {
             (dialog!!.window)!!.addFlags(android.view.WindowManager.LayoutParams.FLAG_SECURE)
         }
@@ -479,7 +573,7 @@ open class MainActivity : android.app.Activity {
     private fun styleDialog(dialog: android.app.AlertDialog?) {
         exitBackAt = -1L
         openDialogs!!.add(dialog!!)
-        dialog!!.setOnDismissListener(android.content.DialogInterface.OnDismissListener l9@{ d -> openDialogs!!.remove(dialog!!) })
+        dialog!!.setOnDismissListener(android.content.DialogInterface.OnDismissListener l10@{ d -> openDialogs!!.remove(dialog!!) })
         if ((appLock!!.enabled() && dialog!!.window != null)) {
             (dialog!!.window)!!.addFlags(android.view.WindowManager.LayoutParams.FLAG_SECURE)
         }
@@ -527,7 +621,7 @@ open class MainActivity : android.app.Activity {
         b!!.setPadding(dp(13f), dp(11f), dp(13f), dp(11f))
         run { b!!.minHeight = dp(48f) }
         run { b!!.background = android.graphics.drawable.RippleDrawable(android.content.res.ColorStateList.valueOf((PRIMARY and 16777215) or 570425344), outlineShape((if (fill) PRIMARY else SURFACE), 24, (if (fill) PRIMARY else OUTLINE)), shape(android.graphics.Color.WHITE, 24)) }
-        b!!.setOnClickListener(android.view.View.OnClickListener l10@{ v ->
+        b!!.setOnClickListener(android.view.View.OnClickListener l11@{ v ->
             action!!.run()
         })
         run { b!!.isFocusable = true }
@@ -603,9 +697,9 @@ open class MainActivity : android.app.Activity {
         run { page!!.layoutDirection = android.view.View.LAYOUT_DIRECTION_RTL }
         page!!.setBackgroundColor(BG)
         attachPage(previousPage, opening, closing)
-        page!!.setOnApplyWindowInsetsListener(android.view.View.OnApplyWindowInsetsListener l11@{ v, `in` ->
+        page!!.setOnApplyWindowInsetsListener(android.view.View.OnApplyWindowInsetsListener l12@{ v, `in` ->
             v!!.setPadding(`in`!!.systemWindowInsetLeft, `in`!!.systemWindowInsetTop, `in`!!.systemWindowInsetRight, `in`!!.systemWindowInsetBottom)
-            return@l11 (`in`!!.consumeSystemWindowInsets())!!
+            return@l12 (`in`!!.consumeSystemWindowInsets())!!
         })
         if ((tab != HOME)) {
             renderSectionHeader()
@@ -666,6 +760,7 @@ open class MainActivity : android.app.Activity {
             }
         }
         openWidgetAction()
+        openLinkedDraft()
         if ((pendingRestore)) {
             showRestorePreview()
         }
@@ -684,7 +779,7 @@ open class MainActivity : android.app.Activity {
         var home: android.widget.ImageView? = icon(com.tal.pocketflow.R.drawable.nav_home, INK)
         run { home!!.contentDescription = "חזרה למסך הבית" }
         home!!.setPadding(dp(12f), dp(12f), dp(12f), dp(12f))
-        home!!.setOnClickListener(android.view.View.OnClickListener l12@{ v ->
+        home!!.setOnClickListener(android.view.View.OnClickListener l13@{ v ->
             tab = HOME
             render()
         })
@@ -693,7 +788,7 @@ open class MainActivity : android.app.Activity {
         run { menu!!.tag = "menu-toggle" }
         run { menu!!.contentDescription = "פתיחת תפריט" }
         menu!!.setPadding(dp(12f), dp(12f), dp(12f), dp(12f))
-        menu!!.setOnClickListener(android.view.View.OnClickListener l13@{ v -> showDrawer() })
+        menu!!.setOnClickListener(android.view.View.OnClickListener l14@{ v -> showDrawer() })
         header!!.addView(menu, android.widget.LinearLayout.LayoutParams(dp(48f), dp(48f)))
         var branding: android.widget.LinearLayout? = column()
         branding!!.addView(bold(tabs!![tab], 21, INK))
@@ -713,7 +808,7 @@ open class MainActivity : android.app.Activity {
             var undoBar: android.widget.LinearLayout? = row()
             undoBar!!.setPadding(dp(16f), 0, dp(16f), dp(4f))
             undoBar!!.addView(text("פעולה אחרונה: " + undo, 12, MUTED), android.widget.LinearLayout.LayoutParams(0, -2, 1f))
-            var undoButton: android.widget.TextView? = button("ביטול פעולה אחרונה", false, compat.j.Runnable l14@{
+            var undoButton: android.widget.TextView? = button("ביטול פעולה אחרונה", false, compat.j.Runnable l15@{
                 try {
                     var beforeDay: Int = (store!!.reporting())!!.day
                     store!!.undo()
@@ -760,7 +855,7 @@ open class MainActivity : android.app.Activity {
                     run { destination!!.scaleY = 0.27f }
                     run { destination!!.translationX = shift!![0] }
                     run { destination!!.translationY = shift!![1] }
-                    (((((((((destination!!.animate())!!.alpha(1f))!!.scaleX(1f))!!.scaleY(1f))!!.translationX(0f))!!.translationY(0f))!!.setDuration(340L))!!.setInterpolator(android.view.animation.PathInterpolator(0.17f, 0.86f, 0.24f, 1.0f)))!!.withEndAction(compat.j.Runnable l15@{
+                    (((((((((destination!!.animate())!!.alpha(1f))!!.scaleX(1f))!!.scaleY(1f))!!.translationX(0f))!!.translationY(0f))!!.setDuration(340L))!!.setInterpolator(android.view.animation.PathInterpolator(0.17f, 0.86f, 0.24f, 1.0f)))!!.withEndAction(compat.j.Runnable l16@{
                         host!!.removeView(previous)
                         host!!.removeView(touchShield)
                     }))!!.start()
@@ -786,7 +881,7 @@ open class MainActivity : android.app.Activity {
                         return
                     }
                     var shift: FloatArray? = anchorShift(destination, anchor)
-                    (((((((((previous!!.animate())!!.alpha(0f))!!.scaleX(0.25f))!!.scaleY(0.25f))!!.translationX(shift!![0]))!!.translationY(shift!![1]))!!.setDuration(290L))!!.setInterpolator(android.view.animation.PathInterpolator(0.28f, 0.05f, 0.47f, 1.0f)))!!.withEndAction(compat.j.Runnable l16@{ (host!!.overlay)!!.remove(previous) }))!!.start()
+                    (((((((((previous!!.animate())!!.alpha(0f))!!.scaleX(0.25f))!!.scaleY(0.25f))!!.translationX(shift!![0]))!!.translationY(shift!![1]))!!.setDuration(290L))!!.setInterpolator(android.view.animation.PathInterpolator(0.28f, 0.05f, 0.47f, 1.0f)))!!.withEndAction(compat.j.Runnable l17@{ (host!!.overlay)!!.remove(previous) }))!!.start()
                 }
             })
         }
@@ -816,7 +911,7 @@ open class MainActivity : android.app.Activity {
         render()
     }
     private fun createAddButton(): android.widget.TextView? {
-        var add: android.widget.TextView? = button("＋  " + ((if (tab == 3) "הוראת קבע" else (if (tab == 4) "חשבון / כרטיס" else "הוספת תנועה"))), true, compat.j.Runnable l17@{
+        var add: android.widget.TextView? = button("＋  " + ((if (tab == 3) "הוראת קבע" else (if (tab == 4) "חשבון / כרטיס" else "הוספת תנועה"))), true, compat.j.Runnable l18@{
             if ((tab == 3)) {
                 ruleDialog()
             } else {
@@ -845,7 +940,7 @@ open class MainActivity : android.app.Activity {
         var muted: Int = -3418897
         var indicators: MutableList<android.widget.TextView>? = ArrayList<android.widget.TextView>()
         var mountWidget: Array<compat.j.Runnable>? = (arrayOfNulls<compat.j.Runnable>(HOME_PAGES!!.size) as Array<compat.j.Runnable>)
-        var pager: LauncherPager? = LauncherPager(this, homePage, compat.j.IntConsumer l18@{ index ->
+        var pager: LauncherPager? = LauncherPager(this, homePage, compat.j.IntConsumer l19@{ index ->
             homePage = index
             exitBackAt = -1L
             stylePageIndicators(indicators)
@@ -855,7 +950,7 @@ open class MainActivity : android.app.Activity {
         })
         run { pager!!.tag = "launcher-pager" }
         wallpaper!!.addView(pager, android.widget.LinearLayout.LayoutParams(-1, 0, 1f))
-        var grid: LauncherGrid? = LauncherGrid(wallpaper, pager, prefs!!.getString(LauncherLayout.PREFERENCE!!, ""), compat.j.BiFunction<Int, Int, android.view.View> l19@{ target, position -> (launcherApp(target!!, position!!, white))!! }, compat.j.Consumer<String> l20@{ order -> ((prefs!!.edit())!!.putString(LauncherLayout.PREFERENCE!!, order))!!.apply() }, outlineShape(150994943, 18, 903145727), outlineShape(903145727, 18, -2823937), dp(52f))
+        var grid: LauncherGrid? = LauncherGrid(wallpaper, pager, prefs!!.getString(LauncherLayout.PREFERENCE!!, ""), compat.j.BiFunction<Int, Int, android.view.View> l20@{ target, position -> (launcherApp(target!!, position!!, white))!! }, compat.j.Consumer<String> l21@{ order -> ((prefs!!.edit())!!.putString(LauncherLayout.PREFERENCE!!, order))!!.apply() }, outlineShape(150994943, 18, 903145727), outlineShape(903145727, 18, -2823937), dp(52f))
         var launcherRoot: android.widget.LinearLayout? = page
         run {
             var index: Int = 0
@@ -880,7 +975,7 @@ open class MainActivity : android.app.Activity {
                 }
                 if ((index == HOME)) {
                     var widget: android.widget.LinearLayout? = chargeSummary(content, store!!.overview(month), true)
-                    widget!!.setOnClickListener(android.view.View.OnClickListener l21@{ v -> openHomeApp(SNAPSHOT, widget) })
+                    widget!!.setOnClickListener(android.view.View.OnClickListener l22@{ v -> openHomeApp(SNAPSHOT, widget) })
                     run { widget!!.isFocusable = true }
                 }
                 if ((index < LauncherLayout.APP_PAGES)) {
@@ -891,9 +986,9 @@ open class MainActivity : android.app.Activity {
                     content!!.addView(widget)
                     var placeholder: android.widget.TextView? = text("הנתונים יוצגו בפתיחת הדף", 14, muted)
                     widget!!.addView(placeholder)
-                    mountWidget!![index] = (compat.j.Runnable l22@{
+                    mountWidget!![index] = (compat.j.Runnable l23@{
                         if ((page !== launcherRoot || homePage != number || !(widget!!.isAttachedToWindow) || placeholder!!.parent !== widget)) {
-                            return@l22
+                            return@l23
                         }
                         var savedPosition: Int = homeScroll!![number]
                         widget!!.removeView(placeholder)
@@ -915,7 +1010,7 @@ open class MainActivity : android.app.Activity {
                         if ((number < LauncherLayout.APP_PAGES)) {
                             scroll!!.scrollTo(0, savedScroll)
                         }
-                        scroll!!.setOnScrollChangeListener(android.view.View.OnScrollChangeListener l23@{ view, x, y, oldX, oldY ->
+                        scroll!!.setOnScrollChangeListener(android.view.View.OnScrollChangeListener l24@{ view, x, y, oldX, oldY ->
                             if ((number < LauncherLayout.APP_PAGES || mountWidget!![number] == null)) {
                                 homeScroll!![number] = y
                             }
@@ -936,7 +1031,7 @@ open class MainActivity : android.app.Activity {
             var index: Int = 0
             while (index < (HOME_PAGES!!.size)) {
                 var target: Int = index
-                var indicator: android.widget.TextView? = textAction(HOME_PAGES!![index], compat.j.Runnable l24@{ pager!!.showPage(target) })
+                var indicator: android.widget.TextView? = textAction(HOME_PAGES!![index], compat.j.Runnable l25@{ pager!!.showPage(target) })
                 run { indicator!!.tag = "launcher-page-" + index }
                 indicator!!.setTextColor(muted)
                 indicator!!.setTextSize(12f)
@@ -992,9 +1087,9 @@ open class MainActivity : android.app.Activity {
         var widget: android.widget.LinearLayout? = card(host)
         run { widget!!.tag = (if (first) "launcher-graph-widget" else "launcher-second-graph-widget") }
         chartPicker(widget, store!!.overview(month), (if (first) "launcher-chart-selector" else "launcher-second-chart-selector"), (if (first) "homeChart" else "homeChartSecond"))
-        var open: android.widget.TextView? = button("כל הגרפים", false, compat.j.Runnable l25@{
+        var open: android.widget.TextView? = button("כל הגרפים", false, compat.j.Runnable l26@{
         })
-        open!!.setOnClickListener(android.view.View.OnClickListener l26@{ v -> openHomeApp(GRAPHS, open) })
+        open!!.setOnClickListener(android.view.View.OnClickListener l27@{ v -> openHomeApp(GRAPHS, open) })
         widget!!.addView(open)
     }
     private fun stylePageIndicators(indicators: MutableList<android.widget.TextView>?) {
@@ -1030,7 +1125,7 @@ open class MainActivity : android.app.Activity {
         app!!.addView(label)
         run { app!!.contentDescription = tabs!![target] }
         run { app!!.isFocusable = true }
-        app!!.setOnClickListener(android.view.View.OnClickListener l27@{ v -> openHomeApp(target, glyph) })
+        app!!.setOnClickListener(android.view.View.OnClickListener l28@{ v -> openHomeApp(target, glyph) })
         return app
     }
     private fun icon(resource: Int, color: Int): android.widget.ImageView? {
@@ -1085,7 +1180,7 @@ open class MainActivity : android.app.Activity {
                 var lp: android.widget.LinearLayout.LayoutParams? = android.widget.LinearLayout.LayoutParams(-1, dp(56f))
                 lp!!.bottomMargin = dp(6f)
                 items!!.addView(item, lp)
-                item!!.setOnClickListener(android.view.View.OnClickListener l28@{ v ->
+                item!!.setOnClickListener(android.view.View.OnClickListener l29@{ v ->
                     drawer!!.dismiss()
                     tab = selected
                     render()
@@ -1123,14 +1218,14 @@ open class MainActivity : android.app.Activity {
         var box: android.widget.LinearLayout? = card(host)
         box!!.setPadding(dp(8f), dp(5f), dp(8f), dp(8f))
         var controls: android.widget.LinearLayout? = row()
-        var previous: android.widget.TextView? = textAction("הקודמת", compat.j.Runnable l29@{ changeMonth(-1) })
+        var previous: android.widget.TextView? = textAction("הקודמת", compat.j.Runnable l30@{ changeMonth(-1) })
         run { previous!!.tag = "period-previous" }
         run { previous!!.isEnabled = month!!.isAfter((compat.time.YearMonth.of(1900, 1))!!) }
         controls!!.addView(previous)
         var selected: android.widget.TextView? = textAction(monthNames!![(month!!.monthValue) - 1] + " " + month!!.year + "  ⌄", compat.j.Runnable { this.pickMonth() })
         run { selected!!.tag = "period-picker" }
         controls!!.addView(selected, android.widget.LinearLayout.LayoutParams(0, -2, 1f))
-        var next: android.widget.TextView? = textAction("הבאה", compat.j.Runnable l30@{ changeMonth(1) })
+        var next: android.widget.TextView? = textAction("הבאה", compat.j.Runnable l31@{ changeMonth(1) })
         run { next!!.tag = "period-next" }
         run { next!!.isEnabled = month!!.isBefore((compat.time.YearMonth.of(2100, 12))!!) }
         controls!!.addView(next)
@@ -1140,7 +1235,7 @@ open class MainActivity : android.app.Activity {
         run { dates!!.textDirection = android.view.View.TEXT_DIRECTION_LTR }
         box!!.addView(dates)
         if ((!(month!!.equals(((store!!.reporting())!!.label(compat.time.LocalDate.now()))!!)))) {
-            var current: android.widget.TextView? = textAction("התקופה הנוכחית", compat.j.Runnable l31@{
+            var current: android.widget.TextView? = textAction("התקופה הנוכחית", compat.j.Runnable l32@{
                 month = (store!!.reporting())!!.label(compat.time.LocalDate.now())
                 render()
             })
@@ -1170,7 +1265,7 @@ open class MainActivity : android.app.Activity {
         run { preview!!.gravity = android.view.Gravity.CENTER }
         run { preview!!.textDirection = android.view.View.TEXT_DIRECTION_LTR }
         var active: Array<android.app.AlertDialog>? = (arrayOf<android.app.AlertDialog?>(null) as Array<android.app.AlertDialog>)
-        var update: compat.j.Runnable? = compat.j.Runnable l32@{
+        var update: compat.j.Runnable? = compat.j.Runnable l33@{
             var y: Int = 0
             try {
                 y = Int.parseInt(((year!!.getText())!!.toString())!!)
@@ -1201,7 +1296,7 @@ open class MainActivity : android.app.Activity {
                     var c: Int = 0
                     while (c < 3) {
                         var m: Int = ((r * 3) + c) + 1
-                        var chip: android.widget.TextView? = button(monthNames!![m - 1], false, compat.j.Runnable l33@{
+                        var chip: android.widget.TextView? = button(monthNames!![m - 1], false, compat.j.Runnable l34@{
                             selected!![0] = m
                             update!!.run()
                         })
@@ -1220,7 +1315,7 @@ open class MainActivity : android.app.Activity {
         }
         space(f, 10)
         f!!.addView(preview)
-        f!!.addView(textAction("התקופה הנוכחית", compat.j.Runnable l34@{
+        f!!.addView(textAction("התקופה הנוכחית", compat.j.Runnable l35@{
             month = (store!!.reporting())!!.label(compat.time.LocalDate.now())
             render()
             if ((active!![0] != null)) {
@@ -1228,7 +1323,7 @@ open class MainActivity : android.app.Activity {
             }
         }))
         year!!.addTextChangedListener(changed(update))
-        active!![0] = (dialog("בחירת חודש ושנה", f, MainActivity.Save l35@{
+        active!![0] = (dialog("בחירת חודש ושנה", f, MainActivity.Save l36@{
             var y: Int = Int.parseInt(((year!!.getText())!!.toString())!!)
             if ((y < 1900 || y > 2100)) {
                 throw (IllegalArgumentException("יש להזין שנה בין 1900 ל־2100"))
@@ -1255,7 +1350,7 @@ open class MainActivity : android.app.Activity {
         run { total!!.tag = "home-total" }
         summary!!.addView(total)
         if ((!widget)) {
-            total!!.setOnClickListener(android.view.View.OnClickListener l36@{ v ->
+            total!!.setOnClickListener(android.view.View.OnClickListener l37@{ v ->
                 tab = 1
                 chargesMode = false
                 categoryFilter = ""
@@ -1303,7 +1398,7 @@ open class MainActivity : android.app.Activity {
             }
             upcoming!!.addView(bold(money(totalCharges), 26, PRIMARY))
             hint(upcoming, "חיובים לאחר זיכויים ופחות הכנסות לפי מועד התשלום. מזומן ודיירקט כלולים. זו אינה יתרת הבנק.")
-            upcoming!!.addView(button("פתיחת לוח החיובים", false, compat.j.Runnable l37@{
+            upcoming!!.addView(button("פתיחת לוח החיובים", false, compat.j.Runnable l38@{
                 tab = 1
                 chargesMode = true
                 render()
@@ -1316,7 +1411,7 @@ open class MainActivity : android.app.Activity {
             var tx: MutableList<Store.Tx>? = store!!.month(month)
             if ((tx!!.isEmpty())) {
                 hint(recent, "מתחילים בקטן: הוסף הוצאה או הגדר את הכרטיסים שלך.")
-                recent!!.addView(button("הגדרת חשבונות וכרטיסים", false, compat.j.Runnable l38@{
+                recent!!.addView(button("הגדרת חשבונות וכרטיסים", false, compat.j.Runnable l39@{
                     tab = 4
                     render()
                 }))
@@ -1353,7 +1448,7 @@ open class MainActivity : android.app.Activity {
                 }
             }
             for (target in (intArrayOf(7, 8, 9, 10))) {
-                info!!.addView(button(tabs!![target], false, compat.j.Runnable l39@{
+                info!!.addView(button(tabs!![target], false, compat.j.Runnable l40@{
                     tab = target
                     render()
                 }))
@@ -1418,7 +1513,7 @@ open class MainActivity : android.app.Activity {
             r!!.addView(text(money((e!!.value)!!), 14, INK))
             r!!.setPadding(0, dp(6f), 0, dp(6f))
             if ((pick != null)) {
-                r!!.setOnClickListener(android.view.View.OnClickListener l40@{ v -> pick!!.select(e!!.key) })
+                r!!.setOnClickListener(android.view.View.OnClickListener l41@{ v -> pick!!.select(e!!.key) })
                 run { r!!.isFocusable = true }
             }
             run { r!!.contentDescription = e!!.key + ", " + money((e!!.value)!!) + ((if (pick == null) "" else ", לפתיחת התנועות")) }
@@ -1428,11 +1523,11 @@ open class MainActivity : android.app.Activity {
     private fun movements() {
         title(body, "התנועות שלך")
         var switches: android.widget.LinearLayout? = row()
-        switches!!.addView(button("עסקאות", !chargesMode, compat.j.Runnable l41@{
+        switches!!.addView(button("עסקאות", !chargesMode, compat.j.Runnable l42@{
             chargesMode = false
             render()
         }), android.widget.LinearLayout.LayoutParams(0, -2, 1f))
-        switches!!.addView(button("לוח חיובים", chargesMode, compat.j.Runnable l42@{
+        switches!!.addView(button("לוח חיובים", chargesMode, compat.j.Runnable l43@{
             chargesMode = true
             render()
         }), android.widget.LinearLayout.LayoutParams(0, -2, 1f))
@@ -1462,7 +1557,7 @@ open class MainActivity : android.app.Activity {
                 block!!.addView(bold(money(c!!.amount), 21, (if ((c!!.amount) < 0) PRIMARY else INK)))
                 hint(block, (c!!.date)!!.format(displayDate!!) + " · " + (store!!.account(c!!.account))!!.name + ((if (c!!.projected) " · צפוי" else " · לפי העסקאות שנרשמו")))
                 if (((c!!.tx) > 0)) {
-                    block!!.setOnClickListener(android.view.View.OnClickListener l43@{ v ->
+                    block!!.setOnClickListener(android.view.View.OnClickListener l44@{ v ->
                         for (t in (store!!.transactions())!!) {
                             if (((t!!.id) == (c!!.tx))) {
                                 transactionDialog(t)
@@ -1477,7 +1572,7 @@ open class MainActivity : android.app.Activity {
         var filters: android.widget.LinearLayout? = card(body)
         if ((!(merchantFilter!!.isEmpty()))) {
             hint(filters, "בית עסק: " + merchantFilter)
-            var clear: android.widget.TextView? = button("ניקוי סינון בית עסק", false, compat.j.Runnable l44@{
+            var clear: android.widget.TextView? = button("ניקוי סינון בית עסק", false, compat.j.Runnable l45@{
                 merchantFilter = ""
                 render()
             })
@@ -1526,7 +1621,7 @@ open class MainActivity : android.app.Activity {
             if ((!((advancedFilter!!.family)!!.isEmpty()))) {
                 hint(filters, "בן משפחה: " + advancedFilter!!.family)
             }
-            filters!!.addView(button("ניקוי כל הסינונים", false, compat.j.Runnable l45@{
+            filters!!.addView(button("ניקוי כל הסינונים", false, compat.j.Runnable l46@{
                 advancedFilter = MovementFilter()
                 categoryFilter = ""
                 merchantFilter = ""
@@ -1549,7 +1644,7 @@ open class MainActivity : android.app.Activity {
                 if ((pendingSearch != null)) {
                     searchHandler!!.removeCallbacks(pendingSearch)
                 }
-                pendingSearch = compat.j.Runnable l46@{
+                pendingSearch = compat.j.Runnable l47@{
                     if ((tab == 1 && !chargesMode)) {
                         refreshList()
                     }
@@ -1559,19 +1654,19 @@ open class MainActivity : android.app.Activity {
             override fun afterTextChanged(e: android.text.Editable?) {
             }
         })
-        run { category!!.onItemSelectedListener = selection(compat.j.Runnable l47@{
+        run { category!!.onItemSelectedListener = selection(compat.j.Runnable l48@{
             var next: String? = (if ((category!!.selectedItemPosition) == 0) "" else (category!!.selectedItem)!!.toString())
             if ((next!!.equals(categoryFilter))) {
-                return@l47
+                return@l48
             }
             categoryFilter = next
             movementLimit = 60
             refreshList()
         }) }
-        run { accounts!!.onItemSelectedListener = selection(compat.j.Runnable l48@{
+        run { accounts!!.onItemSelectedListener = selection(compat.j.Runnable l49@{
             var next: Long = (if ((accounts!!.selectedItemPosition) == 0) 0L else (ac!!.get((accounts!!.selectedItemPosition) - 1))!!.id)
             if ((next == accountFilter)) {
-                return@l48
+                return@l49
             }
             accountFilter = next
             movementLimit = 60
@@ -1623,6 +1718,9 @@ open class MainActivity : android.app.Activity {
         var total: android.widget.TextView? = bold(money(expense), 32, palette!!.onContainer)
         run { total!!.tag = "movements-total" }
         summary!!.addView(total)
+        if ((!((workHours(expense))!!.isEmpty()))) {
+            hint(summary, workHours(expense))
+        }
         hint(summary, (found!!.size).toString() + " תנועות · לפי טווח התאריכים והסינון הנבחרים")
         var expected: android.widget.TextView? = text("הוצאות צפויות: " + money(pendingExpense), 15, palette!!.onContainer)
         run { expected!!.tag = "movements-pending" }
@@ -1650,7 +1748,7 @@ open class MainActivity : android.app.Activity {
             }
         }
         if (((found!!.size) > movementLimit)) {
-            listHost!!.addView(button("הצגת תנועות נוספות (" + compat.util.Math.min(movementLimit, found!!.size) + " מתוך " + found!!.size + ")", false, compat.j.Runnable l49@{
+            listHost!!.addView(button("הצגת תנועות נוספות (" + compat.util.Math.min(movementLimit, found!!.size) + " מתוך " + found!!.size + ")", false, compat.j.Runnable l50@{
                 movementLimit = movementLimit + 60
                 refreshList()
             }))
@@ -1671,13 +1769,16 @@ open class MainActivity : android.app.Activity {
         if ((!((t!!.currency)!!.equals("ILS")))) {
             amount!!.addView(text(Finance.decimal(t!!.originalAmount) + " " + t!!.currency, 12, MUTED))
         }
+        if (((t!!.kind)!!.equals("expense") && !((workHours(t!!.amount))!!.isEmpty()))) {
+            amount!!.addView(text(workHours(t!!.amount), 12, MUTED))
+        }
         if (((t!!.status) == 0)) {
             amount!!.addView(text("צפוי · לאישור", 12, ((if (palette!!.dark) -2114953 else -7052013))))
         }
         r!!.addView(amount)
         host!!.addView(r)
         r!!.setPadding(0, dp(8f), 0, dp(8f))
-        r!!.setOnClickListener(android.view.View.OnClickListener l50@{ v -> transactionDialog(t) })
+        r!!.setOnClickListener(android.view.View.OnClickListener l51@{ v -> transactionDialog(t) })
         run { r!!.isFocusable = true }
     }
     private fun chartPicker(host: android.widget.LinearLayout?, overview: Store.Overview?, tag: String?, preferenceKey: String?) {
@@ -1691,10 +1792,10 @@ open class MainActivity : android.app.Activity {
         host!!.addView(content)
         drawHomeChart(content, initial, overview)
         var drawn: IntArray? = intArrayOf(initial)
-        run { picker!!.onItemSelectedListener = selection(compat.j.Runnable l51@{
+        run { picker!!.onItemSelectedListener = selection(compat.j.Runnable l52@{
             var selected: Int = picker!!.selectedItemPosition
             if ((selected < 0 || selected == (drawn!![0]))) {
-                return@l51
+                return@l52
             }
             drawn!![0] = selected
             exitBackAt = -1L
@@ -1720,9 +1821,9 @@ open class MainActivity : android.app.Activity {
             section!!.addView(content)
             pending!!.put(content!!, id)
         }
-        var drawVisible: compat.j.Runnable? = compat.j.Runnable l52@{
+        var drawVisible: compat.j.Runnable? = compat.j.Runnable l53@{
             if ((!(scroll!!.isAttachedToWindow) || (scroll!!.height) == 0)) {
-                return@l52
+                return@l53
             }
             var cutoff: Int = ((scroll!!.scrollY) + (scroll!!.height)) + (dp(180f))
             var entries: MutableIterator<MutableMap.MutableEntry<android.widget.LinearLayout, Int>>? = (pending!!.entries)!!.iterator()
@@ -1741,8 +1842,8 @@ open class MainActivity : android.app.Activity {
                 }
             }
         }
-        body!!.addOnLayoutChangeListener(android.view.View.OnLayoutChangeListener l53@{ v, l, t, r, b, oldL, oldT, oldR, oldB -> scroll!!.post(drawVisible) })
-        scroll!!.setOnScrollChangeListener(android.view.View.OnScrollChangeListener l54@{ v, x, y, oldX, oldY -> drawVisible!!.run() })
+        body!!.addOnLayoutChangeListener(android.view.View.OnLayoutChangeListener l54@{ v, l, t, r, b, oldL, oldT, oldR, oldB -> scroll!!.post(drawVisible) })
+        scroll!!.setOnScrollChangeListener(android.view.View.OnScrollChangeListener l55@{ v, x, y, oldX, oldY -> drawVisible!!.run() })
         scroll!!.post(drawVisible)
     }
     private fun chartOrderDialog() {
@@ -1752,13 +1853,13 @@ open class MainActivity : android.app.Activity {
         form!!.addView(rows)
         var order: MutableList<Int>? = ChartCatalog.order((Tools.read(this))!!.optString("chartOrder"))
         drawChartOrder(rows, order)
-        dialog("סדר הגרפים", form, MainActivity.Save l55@{
+        dialog("סדר הגרפים", form, MainActivity.Save l56@{
             var saved: compat.j.StringJoiner? = compat.j.StringJoiner(",")
             for (id in order!!) {
                 saved!!.add((String.valueOf(id))!!)
             }
             var data: org.json.JSONObject? = (Tools.read(this))!!.put("chartOrder", saved!!.toString())
-            edit("שינוי סדר הגרפים", Store.Change l56@{ Tools.write(this, data, true) })
+            edit("שינוי סדר הגרפים", Store.Change l57@{ Tools.write(this, data, true) })
             render()
         })
     }
@@ -1771,14 +1872,14 @@ open class MainActivity : android.app.Activity {
                 var name: String? = ChartCatalog.LABELS!!.get((order!!.get(index))!!)
                 var row: android.widget.LinearLayout? = row()
                 row!!.addView(text((index + 1).toString() + ". " + name, 15, INK), android.widget.LinearLayout.LayoutParams(0, -2, 1f))
-                var up: android.widget.TextView? = button("↑", false, compat.j.Runnable l57@{
+                var up: android.widget.TextView? = button("↑", false, compat.j.Runnable l58@{
                     ChartCatalog.move(order, position, -1)
                     drawChartOrder(rows, order)
                 })
                 run { up!!.tag = "graph-up-" + order!!.get(index) }
                 run { up!!.contentDescription = "העלאת " + name }
                 run { up!!.isEnabled = index > 0 }
-                var down: android.widget.TextView? = button("↓", false, compat.j.Runnable l58@{
+                var down: android.widget.TextView? = button("↓", false, compat.j.Runnable l59@{
                     ChartCatalog.move(order, position, 1)
                     drawChartOrder(rows, order)
                 })
@@ -1824,7 +1925,7 @@ open class MainActivity : android.app.Activity {
                     i--
                 }
             }
-            var chart: ChartView? = ChartView(this, values, false, ChartView.Pick l59@{ key ->
+            var chart: ChartView? = ChartView(this, values, false, ChartView.Pick l60@{ key ->
                 month = months!!.get(key!!)
                 tab = 1
                 categoryFilter = ""
@@ -1892,7 +1993,7 @@ open class MainActivity : android.app.Activity {
             category!!.setSelection(compat.util.Math.max(0, options!!.indexOf(saved!!)))
             var content: android.widget.LinearLayout? = column()
             host!!.addView(content)
-            var update: compat.j.Runnable? = compat.j.Runnable l60@{
+            var update: compat.j.Runnable? = compat.j.Runnable l61@{
                 var selected: String? = (category!!.selectedItem)!!.toString()
                 ((prefs!!.edit())!!.putString("trendCategory", selected))!!.apply()
                 content!!.removeAllViews()
@@ -1908,13 +2009,13 @@ open class MainActivity : android.app.Activity {
                         n--
                     }
                 }
-                var chart: ChartView? = ChartView(this, values, false, ChartView.Pick l61@{ key -> openAnalyticsMonth(periods!!.get(key!!), selected) })
+                var chart: ChartView? = ChartView(this, values, false, ChartView.Pick l62@{ key -> openAnalyticsMonth(periods!!.get(key!!), selected) })
                 run { chart!!.tag = "home-chart" }
                 content!!.addView(chart, android.widget.LinearLayout.LayoutParams(-1, dp(240f)))
                 hint(content, "חיובים שבוצעו וצפויים בקטגוריה, כולל הוראות קבע. לחיצה על חודש פותחת את הפירוט.")
                 for (entry in (values!!.entries)!!) {
                     var detail: android.widget.TextView? = text(entry!!.key + " · " + money((entry!!.value)!!), 14, INK)
-                    detail!!.setOnClickListener(android.view.View.OnClickListener l62@{ v -> openAnalyticsMonth(periods!!.get((entry!!.key)!!), selected) })
+                    detail!!.setOnClickListener(android.view.View.OnClickListener l63@{ v -> openAnalyticsMonth(periods!!.get((entry!!.key)!!), selected) })
                     run { detail!!.isFocusable = true }
                     content!!.addView(detail)
                 }
@@ -1942,7 +2043,7 @@ open class MainActivity : android.app.Activity {
             }
             if ((cards!!.isEmpty())) {
                 hint(host, "כדי להציג ניצול מסגרת, יש להגדיר כרטיס אשראי.")
-                host!!.addView(button("הגדרת כרטיסי אשראי", false, compat.j.Runnable l63@{
+                host!!.addView(button("הגדרת כרטיסי אשראי", false, compat.j.Runnable l64@{
                     tab = 4
                     render()
                 }))
@@ -1962,7 +2063,7 @@ open class MainActivity : android.app.Activity {
             }
             var content: android.widget.LinearLayout? = column()
             host!!.addView(content)
-            var update: compat.j.Runnable? = compat.j.Runnable l64@{
+            var update: compat.j.Runnable? = compat.j.Runnable l65@{
                 var card: Store.Account? = cards!!.get(picker!!.selectedItemPosition)
                 ((prefs!!.edit())!!.putLong("chartAccount", card!!.id))!!.apply()
                 content!!.removeAllViews()
@@ -1986,7 +2087,7 @@ open class MainActivity : android.app.Activity {
                     hint(content, "טרם הוגדרה מסגרת לכרטיס זה.")
                 }
                 hint(content, "האומדן מחושב מהנתונים שהוזנו ואינו מאומת מול חברת האשראי. חוב ישן באשראי רגיל מתעדכן ידנית כשהוא נפרע.")
-                var edit: android.widget.TextView? = button("עדכון מסגרת וניצול קודם", false, compat.j.Runnable l65@{ creditBalanceDialog(card) })
+                var edit: android.widget.TextView? = button("עדכון מסגרת וניצול קודם", false, compat.j.Runnable l66@{ creditBalanceDialog(card) })
                 run { edit!!.tag = "chart-credit-edit" }
                 content!!.addView(edit)
             }
@@ -2009,7 +2110,7 @@ open class MainActivity : android.app.Activity {
                     n++
                 }
             }
-            var chart: SeriesChartView? = SeriesChartView(this, data, false, ChartView.Pick l66@{ key -> openAnalyticsMonth(periods!!.get(key!!), "") })
+            var chart: SeriesChartView? = SeriesChartView(this, data, false, ChartView.Pick l67@{ key -> openAnalyticsMonth(periods!!.get(key!!), "") })
             run { chart!!.tag = "home-chart" }
             host!!.addView(chart, android.widget.LinearLayout.LayoutParams(-1, dp(260f)))
             var income: LongArray? = (data!!.series)!!.get("הכנסות")
@@ -2021,7 +2122,7 @@ open class MainActivity : android.app.Activity {
                     var net: Long = (income!![n]) - (expenses!![n])
                     var detail: android.widget.TextView? = text(label + " · הכנסות: " + money(income!![n]) + " · הוצאות: " + money(expenses!![n]) + "\nהכנסות פחות הוצאות: " + money(net), 14, (if (net < 0) RED else INK))
                     detail!!.setPadding(0, dp(8f), 0, dp(8f))
-                    detail!!.setOnClickListener(android.view.View.OnClickListener l67@{ v -> openAnalyticsMonth(periods!!.get(label!!), "") })
+                    detail!!.setOnClickListener(android.view.View.OnClickListener l68@{ v -> openAnalyticsMonth(periods!!.get(label!!), "") })
                     run { detail!!.isFocusable = true }
                     host!!.addView(detail)
                     n++
@@ -2102,14 +2203,14 @@ open class MainActivity : android.app.Activity {
             if (((paid!!.size) > 1 && ((paid!!.get(0))!!.amount) != ((paid!!.get(1))!!.amount))) {
                 hint(block, "שינוי בין שני חיובים שאושרו: " + money((paid!!.get(1))!!.amount) + " ← " + money((paid!!.get(0))!!.amount))
             }
-            var edit: android.widget.TextView? = button("עריכת הוראת הקבע", false, compat.j.Runnable l68@{ ruleDialog(r) })
+            var edit: android.widget.TextView? = button("עריכת הוראת הקבע", false, compat.j.Runnable l69@{ ruleDialog(r) })
             run { edit!!.tag = "edit-rule-" + r!!.id }
             block!!.addView(edit)
-            block!!.addView(button((if ((r!!.active) == 1) "השהיית הוראת הקבע" else "חידוש מהחודש הנבחר"), false, compat.j.Runnable l69@{
+            block!!.addView(button((if ((r!!.active) == 1) "השהיית הוראת הקבע" else "חידוש מהחודש הנבחר"), false, compat.j.Runnable l70@{
                 if (((r!!.active) == 1)) {
-                    (trackDialog((((((android.app.AlertDialog.Builder(this)).setTitle("השהיית " + r!!.name))!!.setMessage("תנועות צפויות מהיום והלאה יוסרו. חיובים שבוצעו יישמרו."))!!.setNegativeButton("ביטול", null))!!.setPositiveButton("השהיה", android.content.DialogInterface.OnClickListener l70@{ d, w ->
+                    (trackDialog((((((android.app.AlertDialog.Builder(this)).setTitle("השהיית " + r!!.name))!!.setMessage("תנועות צפויות מהיום והלאה יוסרו. חיובים שבוצעו יישמרו."))!!.setNegativeButton("ביטול", null))!!.setPositiveButton("השהיה", android.content.DialogInterface.OnClickListener l71@{ d, w ->
                         try {
-                            edit("השהיית הוראת קבע", Store.Change l71@{ store!!.setRuleActive(r, false) })
+                            edit("השהיית הוראת קבע", Store.Change l72@{ store!!.setRuleActive(r, false) })
                             render()
                         } catch (e: Exception) {
                             toast(e!!.message)
@@ -2123,9 +2224,9 @@ open class MainActivity : android.app.Activity {
                     r!!.start = resume!!.toString()
                     if ((!(((r!!.end)!!.javaTrim())!!.isEmpty()) && (compat.time.LocalDate.parse((r!!.end)!!))!!.isBefore((compat.time.LocalDate.parse((r!!.start)!!))!!))) {
                         toast("מועד הסיום עבר. יש ליצור הוראה חדשה.")
-                        return@l69
+                        return@l70
                     }
-                    edit("הפעלת הוראת קבע", Store.Change l72@{ store!!.setRuleActive(r, true) })
+                    edit("הפעלת הוראת קבע", Store.Change l73@{ store!!.setRuleActive(r, true) })
                     render()
                 }
             }))
@@ -2183,19 +2284,19 @@ open class MainActivity : android.app.Activity {
                 hint(block, "במועד זה צפויים להתפנות " + money(release) + " מהמסגרת לפי עסקאות שבוצעו בלבד")
                 var details: android.widget.LinearLayout? = column()
                 run { details!!.visibility = android.view.View.GONE }
-                block!!.addView(button("פרטים ופירוט החישוב", false, compat.j.Runnable l73@{ run { details!!.visibility = (if ((details!!.visibility) == android.view.View.VISIBLE) android.view.View.GONE else android.view.View.VISIBLE) } }))
+                block!!.addView(button("פרטים ופירוט החישוב", false, compat.j.Runnable l74@{ run { details!!.visibility = (if ((details!!.visibility) == android.view.View.VISIBLE) android.view.View.GONE else android.view.View.VISIBLE) } }))
                 block!!.addView(details)
                 hint(details, "יום סגירה: " + a!!.closing + " · יום חיוב: " + a!!.charge)
                 hint(details, "מחזור " + monthNames!![(month!!.monthValue) - 1] + ": " + (Finance.creditCycleStart(month, a!!.closing))!!.format(displayDate!!) + " עד " + (Finance.creditCycleEnd(month, a!!.closing))!!.format(displayDate!!))
-                var cycle: android.widget.TextView? = button("עסקאות במחזור האשראי", false, compat.j.Runnable l74@{ creditCycleDialog(a) })
+                var cycle: android.widget.TextView? = button("עסקאות במחזור האשראי", false, compat.j.Runnable l75@{ creditCycleDialog(a) })
                 run { cycle!!.tag = "credit-cycle-" + a!!.id }
                 details!!.addView(cycle)
                 hint(details, "חוב התחלתי מעסקאות שלא הוזנו: " + money(a!!.opening) + " · נכון ל־" + (compat.time.LocalDate.parse((a!!.start)!!))!!.format(displayDate!!))
                 hint(details, (if ((a!!.type)!!.equals("fixed")) "חיוב חודשי קבוע: " + money(a!!.payment) else "פירעון חודשי מתוך החוב ההתחלתי: " + money(a!!.openingPayment)))
                 hint(details, "החישוב מבוסס על הנתונים שהזנת ואינו אישור פירעון מהבנק. ריבית ועמלות נכללות רק אם הוזנו.")
-                details!!.addView(button("עדכון מסגרת וניצול קודם", false, compat.j.Runnable l75@{ creditBalanceDialog(a) }))
+                details!!.addView(button("עדכון מסגרת וניצול קודם", false, compat.j.Runnable l76@{ creditBalanceDialog(a) }))
                 if (((a!!.type)!!.equals("fixed") && (a!!.billingHistory)!!.equals("[]"))) {
-                    var repair: android.widget.TextView? = button("תיקון מועד המעבר לחיוב קבוע", false, compat.j.Runnable l76@{ repairFixedStart(a) })
+                    var repair: android.widget.TextView? = button("תיקון מועד המעבר לחיוב קבוע", false, compat.j.Runnable l77@{ repairFixedStart(a) })
                     run { repair!!.tag = "repair-fixed-" + a!!.id }
                     details!!.addView(repair)
                 }
@@ -2207,7 +2308,7 @@ open class MainActivity : android.app.Activity {
                 }
             }
             hint(block, "הוצאות שבוצעו בתקופה הנבחרת: " + money(actual))
-            block!!.addView(button("הצגת תנועות", false, compat.j.Runnable l77@{
+            block!!.addView(button("הצגת תנועות", false, compat.j.Runnable l78@{
                 accountFilter = a!!.id
                 categoryFilter = ""
                 merchantFilter = ""
@@ -2218,17 +2319,17 @@ open class MainActivity : android.app.Activity {
                 render()
             }))
             if ((!((a!!.type)!!.equals("cash")) && !((a!!.type)!!.equals("transfer")))) {
-                var edit: android.widget.TextView? = button("עריכת פרטים", false, compat.j.Runnable l78@{ accountDialog(a) })
+                var edit: android.widget.TextView? = button("עריכת פרטים", false, compat.j.Runnable l79@{ accountDialog(a) })
                 run { edit!!.tag = "edit-account-" + a!!.id }
                 block!!.addView(edit)
             }
             if ((!((a!!.type)!!.equals("transfer")))) {
-                block!!.addView(button("שינוי שם", false, compat.j.Runnable l79@{
+                block!!.addView(button("שינוי שם", false, compat.j.Runnable l80@{
                     var f: android.widget.LinearLayout? = form()
                     var name: android.widget.EditText? = field(f, "שם", a!!.name, false)
-                    dialog("שינוי שם", f, MainActivity.Save l80@{
+                    dialog("שינוי שם", f, MainActivity.Save l81@{
                         a!!.name = required(name, "שם")
-                        edit("עדכון חשבון / כרטיס", Store.Change l81@{ store!!.save(a) })
+                        edit("עדכון חשבון / כרטיס", Store.Change l82@{ store!!.save(a) })
                         render()
                     })
                 }))
@@ -2323,7 +2424,7 @@ open class MainActivity : android.app.Activity {
             run { calculation!!.visibility = android.view.View.GONE }
             form!!.addView(calculation)
             hint(form, "אפשר לחבר סכומים, למשל: =67+22+33+55")
-            amount!!.addTextChangedListener(changed(compat.j.Runnable l82@{
+            amount!!.addTextChangedListener(changed(compat.j.Runnable l83@{
                 var value: String? = (amount!!.getText())!!.toString()
                 var expression: Boolean = value!!.contains("+") || (value!!.javaTrim())!!.startsWith("=")
                 run { calculation!!.visibility = (if (expression) android.view.View.VISIBLE else android.view.View.GONE) }
@@ -2335,7 +2436,7 @@ open class MainActivity : android.app.Activity {
                     }
                 }
             }))
-            run { amount!!.onFocusChangeListener = android.view.View.OnFocusChangeListener l83@{ v, focused ->
+            run { amount!!.onFocusChangeListener = android.view.View.OnFocusChangeListener l84@{ v, focused ->
                 run { amount!!.background = outlineShape(SURFACE, 12, (if (focused) PRIMARY else OUTLINE)) }
                 if ((!focused)) {
                     var value: String? = (amount!!.getText())!!.toString()
@@ -2357,13 +2458,13 @@ open class MainActivity : android.app.Activity {
             conversion!!.addView(status)
             preview = bold("", 16, PRIMARY)
             conversion!!.addView(preview)
-            conversion!!.addView(button("עדכון שער מבנק ישראל", false, compat.j.Runnable l84@{ refresh() }))
+            conversion!!.addView(button("עדכון שער מבנק ישראל", false, compat.j.Runnable l85@{ refresh() }))
             hint(conversion, "השער היציג האחרון שפורסם. אינו בהכרח השער ביום העסקה או שער החיוב בכרטיס. אפשר לערוך ידנית.")
             if ((existing != null)) {
                 rateDate = existing!!.fxDate
                 source = existing!!.fxSource
             }
-            rate!!.addTextChangedListener(changed(compat.j.Runnable l85@{
+            rate!!.addTextChangedListener(changed(compat.j.Runnable l86@{
                 if ((!filling)) {
                     request++
                     rateDate = ""
@@ -2387,7 +2488,7 @@ open class MainActivity : android.app.Activity {
             }
             currency!!.setSelection(initial)
             var first: BooleanArray? = booleanArrayOf(true)
-            run { currency!!.onItemSelectedListener = selection(compat.j.Runnable l86@{
+            run { currency!!.onItemSelectedListener = selection(compat.j.Runnable l87@{
                 request++
                 var foreign: Boolean = !(code()!!.equals("ILS"))
                 run { conversion!!.visibility = (if (foreign) android.view.View.VISIBLE else android.view.View.GONE) }
@@ -2425,16 +2526,16 @@ open class MainActivity : android.app.Activity {
             var previous: String? = (rate!!.getText())!!.toString()
             var token: Long = ++request
             status!!.setText("מעדכן שער\u2026")
-            (compat.j.Thread(compat.j.Runnable l87@{
+            (compat.j.Thread(compat.j.Runnable l88@{
                 try {
                     var result: ExchangeRates.Rate? = (rates!!.fetch())!!.get(selected!!)
-                    runOnUiThread(compat.j.Runnable l88@{
+                    runOnUiThread(compat.j.Runnable l89@{
                         if ((!(this@MainActivity.isDestroyed) && token == request && selected!!.equals(code()) && ((rate!!.getText())!!.toString())!!.equals(previous))) {
                             setRate(result, false)
                         }
                     })
                 } catch (e: Exception) {
-                    runOnUiThread(compat.j.Runnable l89@{
+                    runOnUiThread(compat.j.Runnable l90@{
                         if ((!(this@MainActivity.isDestroyed) && token == request && selected!!.equals(code()) && ((rate!!.getText())!!.toString())!!.equals(previous))) {
                             status!!.setText((if (((rate!!.getText())!!.toString())!!.isEmpty()) "העדכון נכשל. נסה שוב או הזן שער ידנית." else "העדכון נכשל. נשמר השער המוצג · " + ((if (rateDate!!.isEmpty()) "ידני" else rateDate))))
                         }
@@ -2498,7 +2599,7 @@ open class MainActivity : android.app.Activity {
     private fun paymentAccounts(): MutableList<Store.Account>? {
         var accounts: MutableList<Store.Account>? = store!!.accounts()
         var order: compat.text.Collator? = compat.text.Collator.getInstance((compat.util.Locale.forLanguageTag("he-IL"))!!)
-        accounts!!.javaSort((Comparator<Store.Account> l90@{ a, b -> order!!.compare((a!!.name)!!, (b!!.name)!!) })!!)
+        accounts!!.javaSort((Comparator<Store.Account> l91@{ a, b -> order!!.compare((a!!.name)!!, (b!!.name)!!) })!!)
         return accounts
     }
     private fun categoryOptions(): MutableList<String>? {
@@ -2561,22 +2662,22 @@ open class MainActivity : android.app.Activity {
         input!!.setText(initial, false)
         run { input!!.dropDownAnchor = box!!.id }
         input!!.setDropDownBackgroundDrawable(shape(SURFACE, 12))
-        run { input!!.onFocusChangeListener = android.view.View.OnFocusChangeListener l91@{ v, focused -> run { box!!.background = outlineShape(SURFACE, 12, (if (focused) PRIMARY else OUTLINE)) } } }
+        run { input!!.onFocusChangeListener = android.view.View.OnFocusChangeListener l92@{ v, focused -> run { box!!.background = outlineShape(SURFACE, 12, (if (focused) PRIMARY else OUTLINE)) } } }
         box!!.addView(input, android.widget.LinearLayout.LayoutParams(0, dp(56f), 1f))
         var arrow: android.widget.TextView? = text("▾", 20, MUTED)
         run { arrow!!.tag = arrowTag }
         run { arrow!!.gravity = android.view.Gravity.CENTER }
         run { arrow!!.contentDescription = "פתיחת רשימת " + label }
         run { arrow!!.isFocusable = true }
-        arrow!!.setOnClickListener(android.view.View.OnClickListener l92@{ v ->
+        arrow!!.setOnClickListener(android.view.View.OnClickListener l93@{ v ->
             if ((input!!.isPopupShowing)) {
                 input!!.dismissDropDown()
-                return@l92
+                return@l93
             }
             input!!.requestFocus()
             if ((options!!.isEmpty())) {
                 toast("אין עדיין ערכים שמורים. אפשר להקליד ערך חדש")
-                return@l92
+                return@l93
             }
             input!!.setAdapter(dropdownAdapter(options))
             if (((box!!.width) > 0)) {
@@ -2631,11 +2732,11 @@ open class MainActivity : android.app.Activity {
     }
     private fun dateField(f: android.widget.LinearLayout?, label: String?, initial: String?): android.widget.TextView? {
         f!!.addView(text(label, 13, MUTED))
-        var b: android.widget.TextView? = button(initial, false, compat.j.Runnable l93@{
+        var b: android.widget.TextView? = button(initial, false, compat.j.Runnable l94@{
         })
-        b!!.setOnClickListener(android.view.View.OnClickListener l94@{ v ->
+        b!!.setOnClickListener(android.view.View.OnClickListener l95@{ v ->
             var date: compat.time.LocalDate? = compat.time.LocalDate.parse((b!!.getText())!!)
-            (trackDialog(android.app.DatePickerDialog(this, android.app.DatePickerDialog.OnDateSetListener l95@{ picker, y, m, d -> b!!.setText((compat.time.LocalDate.of(y, m + 1, d))!!.toString()) }, date!!.year, (date!!.monthValue) - 1, date!!.dayOfMonth)))!!.show()
+            (trackDialog(android.app.DatePickerDialog(this, android.app.DatePickerDialog.OnDateSetListener l96@{ picker, y, m, d -> b!!.setText((compat.time.LocalDate.of(y, m + 1, d))!!.toString()) }, date!!.year, (date!!.monthValue) - 1, date!!.dayOfMonth)))!!.show()
         })
         f!!.addView(b)
         space(f, 5)
@@ -2652,7 +2753,7 @@ open class MainActivity : android.app.Activity {
         run { heading!!.textAlignment = android.view.View.TEXT_ALIGNMENT_VIEW_START }
         heading!!.setPadding(dp(22f), dp(22f), dp(22f), dp(12f))
         var d: android.app.AlertDialog? = ((((((android.app.AlertDialog.Builder(this)).setTitle(title))!!.setCustomTitle(heading))!!.setView(scroll))!!.setNegativeButton("ביטול", null))!!.setPositiveButton("שמירה", null))!!.create()
-        d!!.setOnShowListener(android.content.DialogInterface.OnShowListener l96@{ v -> (d!!.getButton(android.app.AlertDialog.BUTTON_POSITIVE))!!.setOnClickListener(android.view.View.OnClickListener l97@{ w ->
+        d!!.setOnShowListener(android.content.DialogInterface.OnShowListener l97@{ v -> (d!!.getButton(android.app.AlertDialog.BUTTON_POSITIVE))!!.setOnClickListener(android.view.View.OnClickListener l98@{ w ->
             try {
                 save!!.run()
                 d!!.dismiss()
@@ -2714,7 +2815,7 @@ open class MainActivity : android.app.Activity {
         }
         var extra: android.widget.LinearLayout? = column()
         run { extra!!.visibility = android.view.View.GONE }
-        var expand: android.widget.TextView? = button("פרטים נוספים", false, compat.j.Runnable l98@{ run { extra!!.visibility = (if ((extra!!.visibility) == android.view.View.VISIBLE) android.view.View.GONE else android.view.View.VISIBLE) } })
+        var expand: android.widget.TextView? = button("פרטים נוספים", false, compat.j.Runnable l99@{ run { extra!!.visibility = (if ((extra!!.visibility) == android.view.View.VISIBLE) android.view.View.GONE else android.view.View.VISIBLE) } })
         run { expand!!.tag = "extra-details" }
         f!!.addView(expand)
         f!!.addView(extra)
@@ -2751,7 +2852,7 @@ open class MainActivity : android.app.Activity {
         installments!!.addView(chequeDate)
         var firstDue: android.widget.TextView? = dateField(chequeDate, "תאריך התשלום הראשון", (if (existing != null && !((t!!.firstDue)!!.isEmpty())) t!!.firstDue else (date!!.getText())!!.toString()))
         hint(chequeDate, "המחאה אחת לכל חודש. תאריך העסקה נשמר בנפרד ממועדי התשלום.")
-        var paymentVisibility: compat.j.Runnable? = compat.j.Runnable l99@{
+        var paymentVisibility: compat.j.Runnable? = compat.j.Runnable l100@{
             var selectedAccount: Store.Account? = ac!!.get(account!!.selectedItemPosition)
             fx!!.selectAccount(selectedAccount, existing, (kind!!.selectedItemPosition) == 0)
             var type: String? = selectedAccount!!.type
@@ -2767,17 +2868,17 @@ open class MainActivity : android.app.Activity {
             hint(f, "השינוי חל על החיוב הזה בלבד. שאר חודשי הוראת הקבע נשארים כפי שהוגדרו.")
         }
         if ((existing != null && (t!!.id) > 0)) {
-            var delete: android.widget.TextView? = button("מחיקת התנועה", false, compat.j.Runnable l100@{
+            var delete: android.widget.TextView? = button("מחיקת התנועה", false, compat.j.Runnable l101@{
             })
             f!!.addView(delete)
             delete!!.setTextColor(RED)
             run { delete!!.tag = "delete-tx" }
-            delete!!.setOnClickListener(android.view.View.OnClickListener l101@{ v -> (trackDialog((((((android.app.AlertDialog.Builder(this)).setTitle("מחיקת התנועה?"))!!.setMessage("הפעולה תמחק את התנועה שנבחרה בלבד."))!!.setNegativeButton("ביטול", null))!!.setPositiveButton("מחיקה", android.content.DialogInterface.OnClickListener l102@{ d, w ->
+            delete!!.setOnClickListener(android.view.View.OnClickListener l102@{ v -> (trackDialog((((((android.app.AlertDialog.Builder(this)).setTitle("מחיקת התנועה?"))!!.setMessage("הפעולה תמחק את התנועה שנבחרה בלבד."))!!.setNegativeButton("ביטול", null))!!.setPositiveButton("מחיקה", android.content.DialogInterface.OnClickListener l103@{ d, w ->
                 try {
-                    edit("מחיקת תנועה", Store.Change l103@{ store!!.remove(t) })
+                    edit("מחיקת תנועה", Store.Change l104@{ store!!.remove(t) })
                 } catch (e: Exception) {
                     toast(e!!.message)
-                    return@l102
+                    return@l103
                 }
                 if (((v!!.tag is android.app.AlertDialog))) {
                     (((v!!.tag) as android.app.AlertDialog?))!!.dismiss()
@@ -2787,7 +2888,7 @@ open class MainActivity : android.app.Activity {
         }
         if ((existing != null && (t!!.id) > 0)) {
             if (((t!!.kind)!!.equals("expense") && (t!!.status) == 1)) {
-                var refund: android.widget.TextView? = button("זיכוי / החזר לרכישה", false, compat.j.Runnable l104@{ refundDialog(t, null) })
+                var refund: android.widget.TextView? = button("זיכוי / החזר לרכישה", false, compat.j.Runnable l105@{ refundDialog(t, null) })
                 run { refund!!.tag = "add-refund" }
                 f!!.addView(refund)
                 var refunded: Long = store!!.refunded(t!!.id, 0L)
@@ -2795,10 +2896,10 @@ open class MainActivity : android.app.Activity {
                     hint(f, "זיכויים מקושרים: " + money(refunded) + " · הוצאה נטו: " + money((t!!.amount) - refunded))
                 }
             }
-            f!!.addView(button("שימוש חוזר בפרטים", false, compat.j.Runnable l105@{ transactionDialog(reusable(t)) }))
-            f!!.addView(button("שמירה כקיצור אישי", false, compat.j.Runnable l106@{ templateDialog(t) }))
+            f!!.addView(button("שימוש חוזר בפרטים", false, compat.j.Runnable l106@{ transactionDialog(reusable(t)) }))
+            f!!.addView(button("שמירה כקיצור אישי", false, compat.j.Runnable l107@{ templateDialog(t) }))
         }
-        var d: android.app.AlertDialog? = dialog((if (existing == null || (t!!.id) == 0L) "תנועה חדשה" else "עריכת תנועה"), f, MainActivity.Save l107@{
+        var d: android.app.AlertDialog? = dialog((if (existing == null || (t!!.id) == 0L) "תנועה חדשה" else "עריכת תנועה"), f, MainActivity.Save l108@{
             var saved: Store.Tx? = Store.Tx()
             saved!!.id = t!!.id
             saved!!.rule = t!!.rule
@@ -2817,7 +2918,7 @@ open class MainActivity : android.app.Activity {
             if (((saved!!.kind)!!.equals("income") && (((store!!.account(saved!!.account))!!.type)!!.equals("credit") || ((store!!.account(saved!!.account))!!.type)!!.equals("fixed")))) {
                 throw (IllegalArgumentException("הכנסה יש לשייך לבנק, דיירקט או מזומן. לזיכוי של רכישה יש להשתמש בכפתור זיכוי / החזר ברכישה המקורית."))
             }
-            edit("שמירת תנועה", Store.Change l108@{ store!!.save(saved) })
+            edit("שמירת תנועה", Store.Change l109@{ store!!.save(saved) })
             ((prefs!!.edit())!!.putLong("lastAccount", saved!!.account))!!.apply()
             render()
         })
@@ -2851,15 +2952,15 @@ open class MainActivity : android.app.Activity {
         var settlement: android.widget.TextView? = dateField(f, "מועד הזיכוי בלוח החיובים", (if (existing != null && !((existing!!.firstDue)!!.isEmpty())) existing!!.firstDue else (Finance.due(posting, a!!.type, a!!.closing, a!!.charge))!!.toString()))
         run { settlement!!.tag = "refund-settlement" }
         if ((existing == null)) {
-            date!!.addTextChangedListener(changed(compat.j.Runnable l109@{ settlement!!.setText((Finance.due(compat.time.LocalDate.parse((date!!.getText())!!), a!!.type, a!!.closing, a!!.charge))!!.toString()) }))
+            date!!.addTextChangedListener(changed(compat.j.Runnable l110@{ settlement!!.setText((Finance.due(compat.time.LocalDate.parse((date!!.getText())!!), a!!.type, a!!.closing, a!!.charge))!!.toString()) }))
         }
         hint(f, "באשראי המסגרת מתעדכנת בתאריך רישום הזיכוי שבוצע. הזיכוי בלוח החיובים מוצג במועד שבחרת. החזר אינו מבטל את יתרת לוח התשלומים של הרכישה; הוא מתקזז מולה.")
         var note: android.widget.EditText? = field(f, "תיאור", (if (existing == null) "" else existing!!.note), false)
         var actual: android.widget.CheckBox? = check(f, "הזיכוי התקבל בפועל", existing == null || (existing!!.status) == 1)
         if ((existing != null)) {
-            f!!.addView(button("מחיקת הזיכוי", false, compat.j.Runnable l110@{
+            f!!.addView(button("מחיקת הזיכוי", false, compat.j.Runnable l111@{
                 try {
-                    edit("מחיקת זיכוי", Store.Change l111@{ store!!.remove(existing) })
+                    edit("מחיקת זיכוי", Store.Change l112@{ store!!.remove(existing) })
                     if ((open!![0] != null)) {
                         (open!![0])!!.dismiss()
                     }
@@ -2870,7 +2971,7 @@ open class MainActivity : android.app.Activity {
                 }
             }))
         }
-        open!![0] = (dialog((if (existing == null) "זיכוי / החזר" else "עריכת זיכוי"), f, MainActivity.Save l112@{
+        open!![0] = (dialog((if (existing == null) "זיכוי / החזר" else "עריכת זיכוי"), f, MainActivity.Save l113@{
             var t: Store.Tx? = Store.Tx()
             t!!.id = (if (existing == null) 0L else existing!!.id)
             t!!.refundOf = original!!.id
@@ -2887,23 +2988,23 @@ open class MainActivity : android.app.Activity {
             t!!.date = (date!!.getText())!!.toString()
             t!!.firstDue = (settlement!!.getText())!!.toString()
             t!!.status = (if (actual!!.isChecked) 1 else 0)
-            edit("שמירת זיכוי", Store.Change l113@{ store!!.save(t) })
+            edit("שמירת זיכוי", Store.Change l114@{ store!!.save(t) })
             render()
         }))!!
     }
     private fun optionalDateField(f: android.widget.LinearLayout?, label: String?, value: String?): android.widget.TextView? {
         f!!.addView(text(label, 13, MUTED))
         var row: android.widget.LinearLayout? = row()
-        var date: android.widget.TextView? = button(value, false, compat.j.Runnable l114@{
+        var date: android.widget.TextView? = button(value, false, compat.j.Runnable l115@{
         })
         run { date!!.hint = "ללא הגבלה" }
         run { date!!.tag = label }
-        date!!.setOnClickListener(android.view.View.OnClickListener l115@{ v ->
+        date!!.setOnClickListener(android.view.View.OnClickListener l116@{ v ->
             var initial: compat.time.LocalDate? = (if (((date!!.getText())!!.length) == 0) compat.time.LocalDate.now() else compat.time.LocalDate.parse((date!!.getText())!!))
-            (trackDialog(android.app.DatePickerDialog(this, android.app.DatePickerDialog.OnDateSetListener l116@{ picker, y, m, d -> date!!.setText((compat.time.LocalDate.of(y, m + 1, d))!!.toString()) }, initial!!.year, (initial!!.monthValue) - 1, initial!!.dayOfMonth)))!!.show()
+            (trackDialog(android.app.DatePickerDialog(this, android.app.DatePickerDialog.OnDateSetListener l117@{ picker, y, m, d -> date!!.setText((compat.time.LocalDate.of(y, m + 1, d))!!.toString()) }, initial!!.year, (initial!!.monthValue) - 1, initial!!.dayOfMonth)))!!.show()
         })
         row!!.addView(date, android.widget.LinearLayout.LayoutParams(0, -2, 1f))
-        var clear: android.widget.TextView? = textAction("×", compat.j.Runnable l117@{ date!!.setText("") })
+        var clear: android.widget.TextView? = textAction("×", compat.j.Runnable l118@{ date!!.setText("") })
         run { clear!!.contentDescription = "ניקוי " + label }
         row!!.addView(clear)
         f!!.addView(row)
@@ -2928,7 +3029,7 @@ open class MainActivity : android.app.Activity {
         var preview: android.widget.TextView? = text("", 15, PRIMARY)
         run { preview!!.tag = "report-period-preview" }
         f!!.addView(preview)
-        var update: compat.j.Runnable? = compat.j.Runnable l118@{
+        var update: compat.j.Runnable? = compat.j.Runnable l119@{
             try {
                 var p: ReportPeriod? = ReportPeriod(Int.parseInt(((day!!.getText())!!.toString())!!))
                 var selected: compat.time.YearMonth? = p!!.label(compat.time.LocalDate.now())
@@ -2940,11 +3041,11 @@ open class MainActivity : android.app.Activity {
         day!!.addTextChangedListener(changed(update))
         update!!.run()
         hint(f, "ההגדרה משנה את הסיכומים, הגרפים, רשימות התנועות, התקציבים והייצוא. תאריכי העסקאות, הוראות הקבע וחיובי האשראי נשארים כפי שהוגדרו. ניתן לבטל את השינוי בכפתור ביטול פעולה אחרונה.")
-        dialog("תקופת המעקב", f, MainActivity.Save l119@{
+        dialog("תקופת המעקב", f, MainActivity.Save l120@{
             var start: Int = Int.parseInt(((day!!.getText())!!.toString())!!)
             ReportPeriod(start)
             var data: org.json.JSONObject? = (Tools.read(this))!!.put("periodStart", start)
-            edit("שינוי תקופת המעקב", Store.Change l120@{ Tools.write(this, data, true) })
+            edit("שינוי תקופת המעקב", Store.Change l121@{ Tools.write(this, data, true) })
             resetReportSelection()
             render()
             toast("תקופת המעקב עודכנה")
@@ -2963,7 +3064,7 @@ open class MainActivity : android.app.Activity {
         kind!!.setSelection((compat.j.Arrays.asList(*(kinds!!)))!!.indexOf((advancedFilter!!.kind)!!))
         var status: android.widget.Spinner? = spinner(f, "סטטוס לסינון", compat.j.Arrays.asList("הכל", "צפוי", "בוצע"))
         status!!.setSelection((advancedFilter!!.status) + 1)
-        dialog("סינון מתקדם", f, MainActivity.Save l121@{
+        dialog("סינון מתקדם", f, MainActivity.Save l122@{
             var next: MovementFilter? = MovementFilter()
             next!!.from = ((from!!.getText())!!.toString())!!.javaTrim()
             next!!.to = ((to!!.getText())!!.toString())!!.javaTrim()
@@ -2987,7 +3088,7 @@ open class MainActivity : android.app.Activity {
     private fun saveSearchDialog() {
         var f: android.widget.LinearLayout? = form()
         var name: android.widget.EditText? = field(f, "שם החיפוש", "", false)
-        dialog("שמירת חיפוש", f, MainActivity.Save l122@{
+        dialog("שמירת חיפוש", f, MainActivity.Save l123@{
             var data: org.json.JSONObject? = Tools.read(this)
             var all: org.json.JSONArray? = data!!.optJSONArray("searches")
             if ((all == null)) {
@@ -2998,7 +3099,7 @@ open class MainActivity : android.app.Activity {
             }
             all!!.put(searchData()!!.put("name", required(name, "שם")))
             data!!.put("searches", all)
-            edit("שמירת חיפוש", Store.Change l123@{ Tools.write(this, data, true) })
+            edit("שמירת חיפוש", Store.Change l124@{ Tools.write(this, data, true) })
             render()
         })
     }
@@ -3019,7 +3120,7 @@ open class MainActivity : android.app.Activity {
                         if ((item == null)) {
                             continue
                         }
-                        f!!.addView(button(item!!.optString("name"), false, compat.j.Runnable l124@{
+                        f!!.addView(button(item!!.optString("name"), false, compat.j.Runnable l125@{
                             try {
                                 advancedFilter = MovementFilter.from(item)
                                 query = item!!.optString("query", "")
@@ -3041,7 +3142,7 @@ open class MainActivity : android.app.Activity {
                                 toast(e!!.message)
                             }
                         }))
-                        f!!.addView(button("מחיקת החיפוש", false, compat.j.Runnable l125@{
+                        f!!.addView(button("מחיקת החיפוש", false, compat.j.Runnable l126@{
                             try {
                                 var updated: org.json.JSONArray? = org.json.JSONArray()
                                 run {
@@ -3054,7 +3155,7 @@ open class MainActivity : android.app.Activity {
                                     }
                                 }
                                 var next: org.json.JSONObject? = (Tools.read(this))!!.put("searches", updated)
-                                edit("מחיקת חיפוש", Store.Change l126@{ Tools.write(this, next, true) })
+                                edit("מחיקת חיפוש", Store.Change l127@{ Tools.write(this, next, true) })
                                 if ((searchMenu!![0] != null)) {
                                     (searchMenu!![0])!!.dismiss()
                                 }
@@ -3081,8 +3182,8 @@ open class MainActivity : android.app.Activity {
         run { date!!.tag = "fixed-change-date" }
         var closing: android.widget.EditText? = field(f, "יום סגירת המחזור לפני המעבר", Int.toString(a!!.closing), true)
         hint(f, "לדוגמה: אם הגדרת את הסכום ב־1 בנובמבר והחיוב ב־10 בחודש, בחר 1 בנובמבר. החיוב הקבוע הראשון יהיה ב־10 בנובמבר, והחיוב המלא יחול על המועדים הקודמים.")
-        dialog("תיקון מועד המעבר לחיוב קבוע", f, MainActivity.Save l127@{
-            edit("תיקון כרטיס", Store.Change l128@{ store!!.correctLegacyFixedStart(a, compat.time.LocalDate.parse((date!!.getText())!!), Int.parseInt(((closing!!.getText())!!.toString())!!)) })
+        dialog("תיקון מועד המעבר לחיוב קבוע", f, MainActivity.Save l128@{
+            edit("תיקון כרטיס", Store.Change l129@{ store!!.correctLegacyFixedStart(a, compat.time.LocalDate.parse((date!!.getText())!!), Int.parseInt(((closing!!.getText())!!.toString())!!)) })
             render()
         })
     }
@@ -3097,7 +3198,7 @@ open class MainActivity : android.app.Activity {
         run { prior!!.visibility = (if ((a!!.type)!!.equals("credit")) android.view.View.VISIBLE else android.view.View.GONE) }
         var priorPayment: android.widget.EditText? = field(prior, "פירעון חודשי של הניצול הקודם", Finance.decimal(a!!.openingPayment), true)
         hint(f, (if ((a!!.type)!!.equals("credit")) "הסכום יופחת מהניצול הקודם בכל מועד חיוב שלאחר תאריך היתרה, עד סילוקה. לפירעון מלא בחיוב הקרוב הזן את מלוא היתרה; 0 משאיר עדכון ידני. תשלומים ישנים עם סכומים משתנים יש לעדכן ידנית." else "שינוי יתרת הפתיחה מעדכן גם את תחזית החיוב הקבוע. היתרה היא מתחילת החודש; עסקאות מתועדות מאותו חודש מתווספות אליה."))
-        dialog("מסגרת וניצול קודם · " + a!!.name, f, MainActivity.Save l129@{
+        dialog("מסגרת וניצול קודם · " + a!!.name, f, MainActivity.Save l130@{
             var newLimit: Long = amount(limit)
             var newOpening: Long = amount(opening)
             var date: String? = (start!!.getText())!!.toString()
@@ -3108,7 +3209,7 @@ open class MainActivity : android.app.Activity {
             a!!.opening = newOpening
             a!!.openingPayment = (if ((a!!.type)!!.equals("credit")) amount(priorPayment) else a!!.openingPayment)
             a!!.start = date
-            edit("עדכון חשבון / כרטיס", Store.Change l130@{ store!!.save(a) })
+            edit("עדכון חשבון / כרטיס", Store.Change l131@{ store!!.save(a) })
             render()
         })
     }
@@ -3152,7 +3253,7 @@ open class MainActivity : android.app.Activity {
         var cyclePreview: android.widget.TextView? = text("", 14, INK)
         run { cyclePreview!!.tag = "credit-cycle-preview" }
         credit!!.addView(cyclePreview)
-        var preview: compat.j.Runnable? = compat.j.Runnable l131@{
+        var preview: compat.j.Runnable? = compat.j.Runnable l132@{
             try {
                 var close: Int = Int.parseInt(((closing!!.getText())!!.toString())!!)
                 var chargeDay: Int = Int.parseInt(((charge!!.getText())!!.toString())!!)
@@ -3173,7 +3274,7 @@ open class MainActivity : android.app.Activity {
         hint(credit, "למחזור מ־10 בחודש ועד 9 בחודש הבא הזן 9 ביום סגירת המחזור. יום החיוב הוא היום שבו הכסף יורד בפועל. ההגדרה נפרדת לכל כרטיס, גם בחיוב חודשי קבוע.")
         var initial: android.widget.LinearLayout? = column()
         run { initial!!.visibility = android.view.View.GONE }
-        var initialToggle: android.widget.TextView? = button("מצב התחלתי · חוב מלפני תחילת המעקב", false, compat.j.Runnable l132@{ run { initial!!.visibility = (if ((initial!!.visibility) == android.view.View.VISIBLE) android.view.View.GONE else android.view.View.VISIBLE) } })
+        var initialToggle: android.widget.TextView? = button("מצב התחלתי · חוב מלפני תחילת המעקב", false, compat.j.Runnable l133@{ run { initial!!.visibility = (if ((initial!!.visibility) == android.view.View.VISIBLE) android.view.View.GONE else android.view.View.VISIBLE) } })
         credit!!.addView(initialToggle)
         credit!!.addView(initial)
         hint(initial, "החוב שהיה בכרטיס לפני שהתחלת להזין עסקאות. לדוגמה: אם היו תפוסים 4,000 ₪ מעסקאות שלא הוזנו, מזינים כאן 4,000. זו אינה הוצאה חדשה.")
@@ -3189,7 +3290,7 @@ open class MainActivity : android.app.Activity {
         credit!!.addView(fixed, compat.util.Math.min(3, credit!!.childCount))
         var payment: android.widget.EditText? = field(fixed, "סכום החיוב החודשי הקבוע", (if (existing == null) "" else Finance.decimal(existing!!.payment)), true)
         hint(fixed, "הסכום שקבעת לתשלום בכל חודש. המסגרת מתעדכנת ביום החיוב בלבד; האומדן אינו כולל ריבית ועמלות שלא הוזנו.")
-        var visibility: compat.j.Runnable? = compat.j.Runnable l133@{
+        var visibility: compat.j.Runnable? = compat.j.Runnable l134@{
             var p: Int = (compat.j.Arrays.asList(*(typeNames!!)))!!.indexOf(((type!!.selectedItem)!!.toString())!!)
             run { credit!!.visibility = (if (p == 2 || p == 3) android.view.View.VISIBLE else android.view.View.GONE) }
             run { (credit!!.getChildAt(2))!!.visibility = (if (p == 2 || p == 3) android.view.View.VISIBLE else android.view.View.GONE) }
@@ -3204,7 +3305,7 @@ open class MainActivity : android.app.Activity {
             }
         }
         run { type!!.onItemSelectedListener = selection(visibility) }
-        run { billing!!.onItemSelectedListener = selection(compat.j.Runnable l134@{
+        run { billing!!.onItemSelectedListener = selection(compat.j.Runnable l135@{
             var p: Int = (compat.j.Arrays.asList(*(typeNames!!)))!!.indexOf(((type!!.selectedItem)!!.toString())!!)
             if ((p == 2 || p == 3)) {
                 var target: Int = (alphabetic(compat.j.Arrays.asList(*(typeNames!!))))!!.indexOf((typeNames!![(if ((billing!!.selectedItemPosition) == 1) 3 else 2)])!!)
@@ -3215,7 +3316,7 @@ open class MainActivity : android.app.Activity {
             }
         }) }
         visibility!!.run()
-        dialog((if (existing == null) "חשבון / כרטיס חדש" else "עריכת חשבון / כרטיס"), f, MainActivity.Save l135@{
+        dialog((if (existing == null) "חשבון / כרטיס חדש" else "עריכת חשבון / כרטיס"), f, MainActivity.Save l136@{
             var a: Store.Account? = Store.Account()
             a!!.id = (if (existing == null) 0L else existing!!.id)
             a!!.name = required(name, "שם")
@@ -3244,7 +3345,7 @@ open class MainActivity : android.app.Activity {
             if ((p == 3 && (a!!.payment) == 0L)) {
                 throw (IllegalArgumentException("החיוב הקבוע חייב להיות גדול מאפס"))
             }
-            edit("עדכון חשבון / כרטיס", Store.Change l136@{ store!!.save(a) })
+            edit("עדכון חשבון / כרטיס", Store.Change l137@{ store!!.save(a) })
             render()
         })
     }
@@ -3282,7 +3383,7 @@ open class MainActivity : android.app.Activity {
                 }
             }
         }
-        var feePreview: compat.j.Runnable? = compat.j.Runnable l137@{ fx!!.selectAccount(ac!!.get(account!!.selectedItemPosition), null, true) }
+        var feePreview: compat.j.Runnable? = compat.j.Runnable l138@{ fx!!.selectAccount(ac!!.get(account!!.selectedItemPosition), null, true) }
         run { account!!.onItemSelectedListener = selection(feePreview) }
         feePreview!!.run()
         hint(f, "הסכום והשער נשמרים בהוראה. לחיובים חדשים מתווספת עמלת הכרטיס שהוגדרה בעת יצירת החיוב. אפשר לעדכן שער בהוראה או בחיוב בודד.")
@@ -3299,7 +3400,7 @@ open class MainActivity : android.app.Activity {
                 hint(f, "הוראת הקבע מושהית. עריכת הפרטים לא תחדש אותה.")
             }
         }
-        dialog((if (existing == null) "הוראת קבע חדשה" else "עריכת הוראת קבע"), f, MainActivity.Save l138@{
+        dialog((if (existing == null) "הוראת קבע חדשה" else "עריכת הוראת קבע"), f, MainActivity.Save l139@{
             var r: Store.Rule? = Store.Rule()
             r!!.id = (if (existing == null) 0L else existing!!.id)
             r!!.name = required(name, "שם")
@@ -3321,7 +3422,7 @@ open class MainActivity : android.app.Activity {
             r!!.interval = (intArrayOf(1, 3, 12))[frequency!!.selectedItemPosition]
             r!!.reminderDays = Int.parseInt(((reminder!!.getText())!!.toString())!!)
             r!!.renewal = ((renewal!!.getText())!!.toString())!!.javaTrim()
-            edit("שמירת הוראת קבע", Store.Change l139@{
+            edit("שמירת הוראת קבע", Store.Change l140@{
                 if ((existing == null)) {
                     store!!.save(r)
                     store!!.ensureReportPeriod(month)
@@ -3355,7 +3456,7 @@ open class MainActivity : android.app.Activity {
             hint(f, i!!.detail)
             for (t in (analytics()!!.actual(month, analytics()!!.cutoff(month, compat.time.LocalDate.now())))!!) {
                 if ((((i!!.category)!!.isEmpty() || (i!!.category)!!.equals(t!!.category)) && ((i!!.merchant)!!.isEmpty() || (i!!.merchant)!!.equals(t!!.merchant)))) {
-                    f!!.addView(button(((if ((t!!.merchant)!!.isEmpty()) t!!.category else t!!.merchant)) + " · " + t!!.date + " · " + money(t!!.amount), false, compat.j.Runnable l140@{ transactionDialog(t) }))
+                    f!!.addView(button(((if ((t!!.merchant)!!.isEmpty()) t!!.category else t!!.merchant)) + " · " + t!!.date + " · " + money(t!!.amount), false, compat.j.Runnable l141@{ transactionDialog(t) }))
                 }
             }
             var scroll: android.widget.ScrollView? = android.widget.ScrollView(this)
@@ -3401,7 +3502,7 @@ open class MainActivity : android.app.Activity {
             var c: android.widget.LinearLayout? = card(body)
             title(c, i!!.title)
             hint(c, i!!.detail)
-            c!!.addView(button("פתיחת הנתונים", false, compat.j.Runnable l141@{ insightAction(i) }))
+            c!!.addView(button("פתיחת הנתונים", false, compat.j.Runnable l142@{ insightAction(i) }))
         }
         var reminders: android.widget.LinearLayout? = card(body)
         title(reminders, "תזכורות ותקציבים")
@@ -3423,8 +3524,8 @@ open class MainActivity : android.app.Activity {
                 var issue: Analytics.Issue? = issues!!.get(n)
                 title(quality, issue!!.title)
                 hint(quality, issue!!.detail)
-                quality!!.addView(button("פתיחת התנועה", false, compat.j.Runnable l142@{ transactionDialog(issue!!.tx) }))
-                quality!!.addView(button("בדקתי, להשאיר כך", false, compat.j.Runnable l143@{
+                quality!!.addView(button("פתיחת התנועה", false, compat.j.Runnable l143@{ transactionDialog(issue!!.tx) }))
+                quality!!.addView(button("בדקתי, להשאיר כך", false, compat.j.Runnable l144@{
                     Tools.dismiss(this, issue!!.key)
                     render()
                 }))
@@ -3472,7 +3573,7 @@ open class MainActivity : android.app.Activity {
                     }
                 }
                 hint(c, "מסגרות לפי עסקאות שבוצעו ונתוני פתיחה; אינן כוללות רכישות עתידיות שלא בוצעו.")
-                c!!.addView(button("פירוט החיובים", false, compat.j.Runnable l144@{
+                c!!.addView(button("פירוט החיובים", false, compat.j.Runnable l145@{
                     month = m
                     tab = 1
                     chargesMode = true
@@ -3489,7 +3590,7 @@ open class MainActivity : android.app.Activity {
     private fun budgetsPage() {
         title(body, "התקציבים שלך")
         hint(body, "יעדים חודשיים גמישים · החישוב כולל הוצאות שבוצעו וצפויות, כמו בתמונת המצב")
-        body!!.addView(button("הוספת תקציב", true, compat.j.Runnable l145@{ budgetDialog(null) }))
+        body!!.addView(button("הוספת תקציב", true, compat.j.Runnable l146@{ budgetDialog(null) }))
         var budgets: org.json.JSONObject? = Tools.budgets(this)
         var keys: MutableList<String>? = ArrayList<String>()
         (budgets!!.keys())!!.javaForEachRemaining((compat.j.Consumer<String> { a0 -> keys!!.add(a0) })!!)
@@ -3511,17 +3612,17 @@ open class MainActivity : android.app.Activity {
             if ((month!!.equals(((store!!.reporting())!!.label(compat.time.LocalDate.now()))!!))) {
                 hint(c, "עוד " + compat.time.temporal.ChronoUnit.DAYS!!.between(compat.time.LocalDate.now()!!, ((store!!.reporting())!!.end(month))!!) + " ימים לסוף התקופה")
             }
-            c!!.addView(button("עריכת התקציב", false, compat.j.Runnable l146@{ budgetDialog(key) }))
+            c!!.addView(button("עריכת התקציב", false, compat.j.Runnable l147@{ budgetDialog(key) }))
             if ((!(key!!.isEmpty()))) {
-                c!!.addView(button("פתיחת התנועות", false, compat.j.Runnable l147@{ showCategory(key) }))
+                c!!.addView(button("פתיחת התנועות", false, compat.j.Runnable l148@{ showCategory(key) }))
             }
-            c!!.addView(button("הסרת התקציב", false, compat.j.Runnable l148@{
+            c!!.addView(button("הסרת התקציב", false, compat.j.Runnable l149@{
                 try {
                     var d: org.json.JSONObject? = Tools.read(this)
                     var b: org.json.JSONObject? = Tools.budgets(this)
                     b!!.remove(key!!)
                     d!!.put("budgets", b)
-                    edit("עדכון העדפות", Store.Change l149@{ Tools.write(this, d, true) })
+                    edit("עדכון העדפות", Store.Change l150@{ Tools.write(this, d, true) })
                     render()
                 } catch (e: Exception) {
                     toast(e!!.message)
@@ -3536,7 +3637,7 @@ open class MainActivity : android.app.Activity {
         type!!.setSelection((if (previous != null && !(previous!!.isEmpty())) 1 else 0))
         var category: android.widget.AutoCompleteTextView? = categoryField(f, (if (previous == null) "" else previous))
         var limit: android.widget.EditText? = field(f, "תקציב חודשי", (if (previous == null) "" else Finance.decimal((Tools.budgets(this))!!.optLong(previous!!))), true)
-        dialog("תקציב חודשי", f, MainActivity.Save l150@{
+        dialog("תקציב חודשי", f, MainActivity.Save l151@{
             var key: String? = (if ((type!!.selectedItemPosition) == 0) "" else required(category, "קטגוריה"))
             var value: Long = amount(limit)
             if ((value == 0L)) {
@@ -3549,7 +3650,7 @@ open class MainActivity : android.app.Activity {
             }
             b!!.put(key!!, value)
             d!!.put("budgets", b)
-            edit("עדכון העדפות", Store.Change l151@{ Tools.write(this, d, true) })
+            edit("עדכון העדפות", Store.Change l152@{ Tools.write(this, d, true) })
             render()
         })
     }
@@ -3589,7 +3690,7 @@ open class MainActivity : android.app.Activity {
                     var c: android.widget.LinearLayout? = card(body)
                     title(c, item!!.optString("name"))
                     hint(c, item!!.optString("category") + " · " + item!!.optString("merchant"))
-                    c!!.addView(button("פתיחת תנועה מהקיצור", true, compat.j.Runnable l152@{
+                    c!!.addView(button("פתיחת תנועה מהקיצור", true, compat.j.Runnable l153@{
                         var t: Store.Tx? = Store.Tx()
                         t!!.amount = item!!.optLong("amount")
                         t!!.originalAmount = t!!.amount
@@ -3611,13 +3712,13 @@ open class MainActivity : android.app.Activity {
                         t!!.date = compat.time.LocalDate.now()!!.toString()
                         transactionDialog(t)
                     }))
-                    c!!.addView(button("הסרת הקיצור", false, compat.j.Runnable l153@{
+                    c!!.addView(button("הסרת הקיצור", false, compat.j.Runnable l154@{
                         try {
                             var all: org.json.JSONArray? = Tools.templates(this)
                             all!!.remove(index)
                             var d: org.json.JSONObject? = Tools.read(this)
                             d!!.put("templates", all)
-                            edit("עדכון העדפות", Store.Change l154@{ Tools.write(this, d, true) })
+                            edit("עדכון העדפות", Store.Change l155@{ Tools.write(this, d, true) })
                             render()
                         } catch (e: Exception) {
                             toast(e!!.message)
@@ -3636,8 +3737,8 @@ open class MainActivity : android.app.Activity {
                 var t: Store.Tx? = recent!!.get(n)
                 var c: android.widget.LinearLayout? = card(body)
                 title(c, ((if ((t!!.merchant)!!.isEmpty()) t!!.category else t!!.merchant)) + " · " + money(t!!.amount))
-                c!!.addView(button("שימוש חוזר בפרטים", false, compat.j.Runnable l155@{ transactionDialog(reusable(t)) }))
-                c!!.addView(button("שמירה כקיצור אישי", false, compat.j.Runnable l156@{ templateDialog(t) }))
+                c!!.addView(button("שימוש חוזר בפרטים", false, compat.j.Runnable l156@{ transactionDialog(reusable(t)) }))
+                c!!.addView(button("שמירה כקיצור אישי", false, compat.j.Runnable l157@{ templateDialog(t) }))
                 n++
             }
         }
@@ -3645,12 +3746,12 @@ open class MainActivity : android.app.Activity {
     private fun templateDialog(t: Store.Tx?) {
         var f: android.widget.LinearLayout? = form()
         var name: android.widget.EditText? = field(f, "שם הקיצור", (if ((t!!.merchant)!!.isEmpty()) t!!.category else t!!.merchant), false)
-        dialog("קיצור אישי", f, MainActivity.Save l157@{
+        dialog("קיצור אישי", f, MainActivity.Save l158@{
             var d: org.json.JSONObject? = Tools.read(this)
             var all: org.json.JSONArray? = Tools.templates(this)
             all!!.put(((((((((org.json.JSONObject().put("id", compat.util.UUID.randomUUID()!!.toString()))!!.put("name", required(name, "שם")))!!.put("category", t!!.category))!!.put("merchant", t!!.merchant))!!.put("tag", t!!.tag))!!.put("note", t!!.note))!!.put("account", (store!!.account(t!!.account))!!.name))!!.put("amount", t!!.amount))!!.put("kind", t!!.kind))
             d!!.put("templates", all)
-            edit("עדכון העדפות", Store.Change l158@{ Tools.write(this, d, true) })
+            edit("עדכון העדפות", Store.Change l159@{ Tools.write(this, d, true) })
             render()
             toast("הקיצור נשמר")
         })
@@ -3689,7 +3790,7 @@ open class MainActivity : android.app.Activity {
             }
         }
         var draw: Array<compat.j.Runnable>? = (arrayOfNulls<compat.j.Runnable>(1) as Array<compat.j.Runnable>)
-        draw!![0] = (compat.j.Runnable l159@{
+        draw!![0] = (compat.j.Runnable l160@{
             list!!.removeAllViews()
             run {
                 var n: Int = 0
@@ -3698,7 +3799,7 @@ open class MainActivity : android.app.Activity {
                     var index: Int = n
                     var cb: android.widget.CheckBox? = check(list, sectionName(key), enabled!!.contains(key!!))
                     run { cb!!.isEnabled = !(key!!.equals("summary")) }
-                    cb!!.setOnCheckedChangeListener(android.widget.CompoundButton.OnCheckedChangeListener l160@{ b, on ->
+                    cb!!.setOnCheckedChangeListener(android.widget.CompoundButton.OnCheckedChangeListener l161@{ b, on ->
                         if ((on)) {
                             enabled!!.add(key!!)
                         } else {
@@ -3706,13 +3807,13 @@ open class MainActivity : android.app.Activity {
                         }
                     })
                     var actions: android.widget.LinearLayout? = row()
-                    actions!!.addView(button("↑", false, compat.j.Runnable l161@{
+                    actions!!.addView(button("↑", false, compat.j.Runnable l162@{
                         if ((index > 0)) {
                             compat.j.Collections.swap(order!!, index, index - 1)
                             (draw!![0])!!.run()
                         }
                     }))
-                    actions!!.addView(button("↓", false, compat.j.Runnable l162@{
+                    actions!!.addView(button("↓", false, compat.j.Runnable l163@{
                         if ((index < ((order!!.size) - 1))) {
                             compat.j.Collections.swap(order!!, index, index + 1)
                             (draw!![0])!!.run()
@@ -3724,7 +3825,7 @@ open class MainActivity : android.app.Activity {
             }
         })!!
         (draw!![0])!!.run()
-        dialog("התאמת תמונת המצב", f, MainActivity.Save l163@{
+        dialog("התאמת תמונת המצב", f, MainActivity.Save l164@{
             var cards: org.json.JSONArray? = org.json.JSONArray()
             for (key in order!!) {
                 if ((enabled!!.contains(key!!))) {
@@ -3733,7 +3834,7 @@ open class MainActivity : android.app.Activity {
             }
             var d: org.json.JSONObject? = Tools.read(this)
             d!!.put("homeCards", cards)
-            edit("עדכון העדפות", Store.Change l164@{ Tools.write(this, d, true) })
+            edit("עדכון העדפות", Store.Change l165@{ Tools.write(this, d, true) })
             render()
         })
     }
@@ -3754,11 +3855,11 @@ open class MainActivity : android.app.Activity {
             title(local, "קובץ גיבוי ידני")
             hint(local, "אפשר לשמור ולשחזר גם מהטלפון או מספק קבצים אחר. הגיבוי כולל תנועות, הוראות קבע, חשבונות והעדפות תצוגה. הגנת הכניסה נשארת אישית למכשיר.")
             space(local, 10)
-            var localSave: android.widget.TextView? = button("שמירת גיבוי מלא", false, compat.j.Runnable l165@{ exportBackup(true) })
+            var localSave: android.widget.TextView? = button("שמירת גיבוי מלא", false, compat.j.Runnable l166@{ exportBackup(true) })
             run { localSave!!.tag = "drive-backup" }
             local!!.addView(localSave)
             space(local, 10)
-            var localRestore: android.widget.TextView? = button("שחזור מקובץ גיבוי", false, compat.j.Runnable l166@{ chooseRestore(true) })
+            var localRestore: android.widget.TextView? = button("שחזור מקובץ גיבוי", false, compat.j.Runnable l167@{ chooseRestore(true) })
             run { localRestore!!.tag = "drive-restore" }
             local!!.addView(localRestore)
             var lastManual: Long = (getSharedPreferences("backup-history", MODE_PRIVATE))!!.getLong("savedAt", 0L)
@@ -3770,14 +3871,28 @@ open class MainActivity : android.app.Activity {
             hint(local, "קובץ הגיבוי מכיל נתונים אישיים ואינו מוצפן. יש לבחור תיקייה פרטית בחשבון שלך.")
             return
         }
+        var wallet: android.widget.LinearLayout? = card(body)
+        title(wallet, "רישום אוטומטי מ־Apple Pay")
+        hint(wallet, "אחרי תשלום ב־Apple Pay אפשר לפתוח את PocketFlow עם תנועה מוכנה לאישור: סכום, בית עסק וכרטיס. שום דבר לא נשמר בלי אישור שלך.")
+        hint(wallet, "הגדרה חד־פעמית לכל כרטיס באפליקציית קיצורי דרך: אוטומציה חדשה ← Wallet (עסקה) ← בחירת הכרטיס ← הפעלה מיידית ← הפעולה Add movement to PocketFlow ← בשדות Amount, Merchant ו־Card בוחרים קלט הקיצור.")
+        wallet!!.addView(button("פתיחת קיצורי דרך", false, compat.j.Runnable l168@{
+            try {
+                startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse("shortcuts://create-automation")))
+            } catch (e: Exception) {
+                toast("לא ניתן לפתוח את קיצורי דרך. יש לפתוח את האפליקציה ידנית.")
+            }
+        }))
+        if ((((getSharedPreferences("shifthours", MODE_PRIVATE))!!.getLong("wage", 0L)) > 0)) {
+            hint(wallet, "ShiftHours מחובר: הוצאות מוצגות גם בשעות עבודה.")
+        }
         var planning: android.widget.LinearLayout? = card(body)
         title(planning, "תזכורות ותכנון")
         planning!!.addView(button("התאמת תמונת המצב", false, compat.j.Runnable { this.personalizeHome() }))
-        planning!!.addView(button("תקציבים וקיצורי הזנה", false, compat.j.Runnable l167@{
+        planning!!.addView(button("תקציבים וקיצורי הזנה", false, compat.j.Runnable l169@{
             tab = 9
             render()
         }))
-        planning!!.addView(button("הפעלת תזכורות במכשיר", false, compat.j.Runnable l168@{
+        planning!!.addView(button("הפעלת תזכורות במכשיר", false, compat.j.Runnable l170@{
             (((getSharedPreferences("reminder-local", 0))!!.edit())!!.putBoolean("enabled", true))!!.apply()
             if ((android.os.Build.VERSION.SDK_INT >= 33 && (checkSelfPermission("android.permission.POST_NOTIFICATIONS")) != android.content.pm.PackageManager.PERMISSION_GRANTED)) {
                 requestPermissions(arrayOf<String>("android.permission.POST_NOTIFICATIONS"), 702)
@@ -3785,7 +3900,7 @@ open class MainActivity : android.app.Activity {
             com.tal.pocketflow.ReminderJob.schedule(this)
             toast("תזכורות פעילות. נדרשת הרשאת התראות; התזמון נתון להגבלות Android.")
         }))
-        planning!!.addView(button("ביטול תזכורות במכשיר", false, compat.j.Runnable l169@{
+        planning!!.addView(button("ביטול תזכורות במכשיר", false, compat.j.Runnable l171@{
             (((getSharedPreferences("reminder-local", 0))!!.edit())!!.putBoolean("enabled", false))!!.apply()
             com.tal.pocketflow.ReminderJob.cancel(this)
         }))
@@ -3816,7 +3931,7 @@ open class MainActivity : android.app.Activity {
                 modes!!.addView(option)
                 run { option!!.isChecked = (keys!![i])!!.equals(current) }
                 var choice: String? = keys!![i]
-                option!!.setOnClickListener(android.view.View.OnClickListener l170@{ v ->
+                option!!.setOnClickListener(android.view.View.OnClickListener l172@{ v ->
                     if ((!(choice!!.equals(prefs!!.getString("appearance", "SYSTEM"))))) {
                         ((prefs!!.edit())!!.putString("appearance", choice))!!.apply()
                         recreate()
@@ -3837,14 +3952,14 @@ open class MainActivity : android.app.Activity {
         var tracking: android.widget.LinearLayout? = card(body)
         title(tracking, "העדפות מעקב")
         var income: android.widget.CheckBox? = check(tracking, "הפעלת מעקב הכנסות", incomes())
-        income!!.setOnCheckedChangeListener(android.widget.CompoundButton.OnCheckedChangeListener l171@{ b, on ->
+        income!!.setOnCheckedChangeListener(android.widget.CompoundButton.OnCheckedChangeListener l173@{ b, on ->
             ((prefs!!.edit())!!.putBoolean("income", on))!!.apply()
         })
         hint(tracking, "אפשר לעקוב אחר הוצאות בלבד. הנתונים הקיימים נשמרים גם כשמשנים את התצוגה.")
         var about: android.widget.LinearLayout? = card(body)
         title(about, "PocketFlow · גרסה 0.15.1")
         hint(about, "הנתונים נשמרים במכשיר. גיבוי ושחזור מקומי ו-Google Drive זמינים במסך הגיבויים.")
-        about!!.addView(button("גיבוי ושחזור", false, compat.j.Runnable l172@{
+        about!!.addView(button("גיבוי ושחזור", false, compat.j.Runnable l174@{
             tab = 6
             render()
         }))
@@ -3858,7 +3973,7 @@ open class MainActivity : android.app.Activity {
         title(card, "Google Drive · גיבוי אוטומטי")
         if ((!(cloud!!.connected()))) {
             hint(card, "חבר את חשבון Google שלך לגיבוי ישיר בענן ולשחזור במכשיר אחר. נשמרים תנועות, הוראות קבע, חשבונות והעדפות תצוגה.")
-            var connect: android.widget.TextView? = button("חיבור ל־Google וגיבוי ראשון", true, compat.j.Runnable l173@{ startDrive(com.tal.pocketflow.DriveTask.CONNECT, "") })
+            var connect: android.widget.TextView? = button("חיבור ל־Google וגיבוי ראשון", true, compat.j.Runnable l175@{ startDrive(com.tal.pocketflow.DriveTask.CONNECT, "") })
             run { connect!!.tag = "google-connect" }
             card!!.addView(connect)
             hint(card, "נדרשת הגדרה חד־פעמית של PocketFlow ב־Google Cloud. לאחר אישור החיבור יופעל גיבוי יומי; אפשר לשנות או לבטל אותו כאן.")
@@ -3869,13 +3984,13 @@ open class MainActivity : android.app.Activity {
         card!!.addView(account)
         if (((cloud!!.prefs)!!.getBoolean("needsAuth", false))) {
             hint(card, "נדרש אישור מחדש של הגישה ל־Google Drive.")
-            card!!.addView(button("חיבור מחדש", true, compat.j.Runnable l174@{ startDrive(com.tal.pocketflow.DriveTask.CONNECT, "") }))
+            card!!.addView(button("חיבור מחדש", true, compat.j.Runnable l176@{ startDrive(com.tal.pocketflow.DriveTask.CONNECT, "") }))
         }
-        var save: android.widget.TextView? = button("גיבוי עכשיו", true, compat.j.Runnable l175@{ startDrive(com.tal.pocketflow.DriveTask.UPLOAD, "") })
+        var save: android.widget.TextView? = button("גיבוי עכשיו", true, compat.j.Runnable l177@{ startDrive(com.tal.pocketflow.DriveTask.UPLOAD, "") })
         run { save!!.tag = "google-backup" }
         card!!.addView(save)
         space(card, 8)
-        var restore: android.widget.TextView? = button("בחירת גיבוי לשחזור", false, compat.j.Runnable l176@{ startDrive(com.tal.pocketflow.DriveTask.LIST, "") })
+        var restore: android.widget.TextView? = button("בחירת גיבוי לשחזור", false, compat.j.Runnable l178@{ startDrive(com.tal.pocketflow.DriveTask.LIST, "") })
         run { restore!!.tag = "google-restore" }
         card!!.addView(restore)
         var auto: android.widget.CheckBox? = check(card, "גיבוי אוטומטי", cloud!!.automatic())
@@ -3884,7 +3999,7 @@ open class MainActivity : android.app.Activity {
         run { frequency!!.tag = "google-frequency" }
         frequency!!.setSelection((if ((cloud!!.days()) == 7) 1 else 0))
         run { frequency!!.isEnabled = cloud!!.automatic() }
-        auto!!.setOnCheckedChangeListener(android.widget.CompoundButton.OnCheckedChangeListener l177@{ b, on ->
+        auto!!.setOnCheckedChangeListener(android.widget.CompoundButton.OnCheckedChangeListener l179@{ b, on ->
             cloud!!.automatic(on, cloud!!.days())
             run { frequency!!.isEnabled = on }
         })
@@ -3908,8 +4023,8 @@ open class MainActivity : android.app.Activity {
             hint(card, failure)
         }
         hint(card, "הגיבויים נשמרים באזור פרטי של PocketFlow בדרייב ואינם מופיעים ברשימת הקבצים הרגילה. הגישה מוגבלת לנתוני האפליקציה. מוצגים עד 50 הגיבויים האחרונים, ואין מחיקה אוטומטית.")
-        var disconnect: android.widget.TextView? = button("ניתוק חשבון Google", false, compat.j.Runnable l178@{
-            var confirm: android.app.AlertDialog? = (((((android.app.AlertDialog.Builder(this)).setTitle("ניתוק Google Drive"))!!.setMessage("הגיבוי האוטומטי יופסק והגישה לחשבון תבוטל. הגיבויים שכבר נשמרו לא יימחקו."))!!.setNegativeButton("ביטול", null))!!.setPositiveButton("ניתוק", android.content.DialogInterface.OnClickListener l179@{ d, w -> startDrive(com.tal.pocketflow.DriveTask.REVOKE, "") }))!!.create()
+        var disconnect: android.widget.TextView? = button("ניתוק חשבון Google", false, compat.j.Runnable l180@{
+            var confirm: android.app.AlertDialog? = (((((android.app.AlertDialog.Builder(this)).setTitle("ניתוק Google Drive"))!!.setMessage("הגיבוי האוטומטי יופסק והגישה לחשבון תבוטל. הגיבויים שכבר נשמרו לא יימחקו."))!!.setNegativeButton("ביטול", null))!!.setPositiveButton("ניתוק", android.content.DialogInterface.OnClickListener l181@{ d, w -> startDrive(com.tal.pocketflow.DriveTask.REVOKE, "") }))!!.create()
             confirm!!.show()
             styleDialog(confirm)
         })
@@ -4016,7 +4131,7 @@ open class MainActivity : android.app.Activity {
                 i++
             }
         }
-        var dialog: android.app.AlertDialog? = ((((android.app.AlertDialog.Builder(this)).setTitle("בחירת גיבוי מ־Google Drive"))!!.setItems(labels!!, android.content.DialogInterface.OnClickListener l180@{ d, index -> startDrive(com.tal.pocketflow.DriveTask.DOWNLOAD, (choices!!.get(index))!!.id) }))!!.setNegativeButton("ביטול", null))!!.create()
+        var dialog: android.app.AlertDialog? = ((((android.app.AlertDialog.Builder(this)).setTitle("בחירת גיבוי מ־Google Drive"))!!.setItems(labels!!, android.content.DialogInterface.OnClickListener l182@{ d, index -> startDrive(com.tal.pocketflow.DriveTask.DOWNLOAD, (choices!!.get(index))!!.id) }))!!.setNegativeButton("ביטול", null))!!.create()
         dialog!!.show()
         styleDialog(dialog)
     }
@@ -4100,7 +4215,7 @@ open class MainActivity : android.app.Activity {
                 backup = BackupFiles.read(`in`)
             }
             var details: String? = BackupFiles.description(backup)
-            restoreDialog = (((((android.app.AlertDialog.Builder(this)).setTitle("אישור שחזור גיבוי"))!!.setMessage(details + "\n\nהשחזור יחליף את כל הנתונים הנוכחיים במכשיר. מומלץ לשמור גיבוי לפני ההחלפה."))!!.setNegativeButton("ביטול", android.content.DialogInterface.OnClickListener l182@{ d, w -> clearRestore() }))!!.setPositiveButton("שחזור והחלפת הנתונים", android.content.DialogInterface.OnClickListener l181@{ d, w ->
+            restoreDialog = (((((android.app.AlertDialog.Builder(this)).setTitle("אישור שחזור גיבוי"))!!.setMessage(details + "\n\nהשחזור יחליף את כל הנתונים הנוכחיים במכשיר. מומלץ לשמור גיבוי לפני ההחלפה."))!!.setNegativeButton("ביטול", android.content.DialogInterface.OnClickListener l184@{ d, w -> clearRestore() }))!!.setPositiveButton("שחזור והחלפת הנתונים", android.content.DialogInterface.OnClickListener l183@{ d, w ->
                 try {
                     store!!.restore(backup)
                     resetReportSelection()
@@ -4122,7 +4237,7 @@ open class MainActivity : android.app.Activity {
                     toast("השחזור נכשל. הנתונים הקודמים נשמרו.")
                 }
             }))!!.create()
-            restoreDialog!!.setOnCancelListener(android.content.DialogInterface.OnCancelListener l183@{ d -> clearRestore() })
+            restoreDialog!!.setOnCancelListener(android.content.DialogInterface.OnCancelListener l185@{ d -> clearRestore() })
             restoreDialog!!.show()
             styleDialog(restoreDialog)
         } catch (e: Exception) {
