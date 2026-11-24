@@ -40,7 +40,7 @@ class ExchangeRates {
                 var b: CharArray? = CharArray(4096)
                 var n: Int
                 while ((((`in`!!.read(b!!)).also { n = it }) != (-1))) {
-                    json!!.append(b!!, 0, n)
+                    json!!.appendRange(b!!, 0, 0 + n)
                     if (((json!!.length) > 1000000)) {
                         throw (compat.io.IOException("Unexpected response"))
                     }

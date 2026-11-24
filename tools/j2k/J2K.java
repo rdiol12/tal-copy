@@ -222,7 +222,7 @@ public class J2K {
             {"java.util.List#subList/2", "$r.subList($0, $1)"},
             {"java.util.Collection#stream/0", "$r.javaStream()"}, {"java.util.Comparator#thenComparing/1", "$r.javaThenComparing($0)"},
             {"java.util.Comparator#reversed/0", "$r.reversed()"},
-            {"java.nio.charset.Charset#name/0", "$r.name"}, {"java.util.Iterator#forEachRemaining/1", "$r.javaForEachRemaining($0)"}, {"java.lang.Throwable#getMessage/0", "$r.message"}, {"java.lang.Throwable#getCause/0", "$r.cause"}, {"java.lang.Throwable#printStackTrace/0", "$r.printStackTrace()"},
+            {"java.nio.charset.Charset#name/0", "$r.name"}, {"java.lang.StringBuilder#append/3", "$r.appendRange($0, $1, $1 + $2)"}, {"java.util.Iterator#forEachRemaining/1", "$r.javaForEachRemaining($0)"}, {"java.lang.Throwable#getMessage/0", "$r.message"}, {"java.lang.Throwable#getCause/0", "$r.cause"}, {"java.lang.Throwable#printStackTrace/0", "$r.printStackTrace()"},
             {"java.lang.Object#getClass/0", "$r::class"}, {"java.lang.Enum#name/0", "$r.name"}, {"java.lang.Enum#ordinal/0", "$r.ordinal"},
             {"java.lang.Integer#intValue/0", "$r"}, {"java.lang.Long#longValue/0", "$r"}, {"java.lang.Long#intValue/0", "$r.toInt()"}, {"java.lang.Integer#longValue/0", "$r.toLong()"},
             {"java.lang.Double#doubleValue/0", "$r"}, {"java.lang.Number#intValue/0", "$r.toInt()"}, {"java.lang.Number#longValue/0", "$r.toLong()"}, {"java.lang.Number#doubleValue/0", "$r.toDouble()"},
