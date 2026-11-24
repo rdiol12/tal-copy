@@ -1,3 +1,6 @@
+// Thin module that produces the iOS framework. All app code lives in :shared;
+// keeping it out of this module keeps it out of the generated Objective-C
+// header, which only needs MainViewController().
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.composeMultiplatform)
@@ -5,9 +8,6 @@ plugins {
 }
 
 kotlin {
-    // JVM target: runs the shared unit tests on a Linux CI runner.
-    jvm()
-
     listOf(iosArm64(), iosSimulatorArm64()).forEach { target ->
         target.binaries.framework {
             baseName = "ComposeApp"
@@ -16,45 +16,11 @@ kotlin {
     }
 
     sourceSets {
-        all {
-            languageSettings.optIn("kotlin.uuid.ExperimentalUuidApi")
-            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
-            languageSettings.optIn("kotlinx.cinterop.BetaInteropApi")
-            languageSettings.optIn("androidx.compose.material3.ExperimentalMaterial3Api")
-            languageSettings.optIn("androidx.compose.foundation.ExperimentalFoundationApi")
-            languageSettings.optIn("org.jetbrains.compose.resources.ExperimentalResourceApi")
-        }
-        commonMain.dependencies {
+        iosMain.dependencies {
+            implementation(project(":shared"))
             implementation(compose.runtime)
             implementation(compose.foundation)
-            implementation(compose.material3)
             implementation(compose.ui)
-            implementation(compose.components.resources)
-            implementation(libs.compose.ui.backhandler)
-            implementation(libs.kotlinx.coroutines.core)
-        }
-        commonTest.dependencies {
-            implementation(kotlin("test"))
-            implementation(libs.kotlinx.coroutines.test)
-        }
-        jvmTest.dependencies {
-            // The unit tests are the Android project's JUnit 4 tests, ported as-is.
-            implementation(libs.junit)
-        }
-        jvmMain.dependencies {
-            implementation(compose.desktop.currentOs)
-            implementation(libs.kotlinx.coroutines.swing)
         }
     }
-}
-
-compose.resources {
-    publicResClass = true
-    packageOfResClass = "com.tal.workhours.res"
-    generateResClass = always
-}
-
-// Unit tests write their data files under build/ instead of the user's home folder.
-tasks.withType<Test>().configureEach {
-    systemProperty("workhours.dataDir", layout.buildDirectory.dir("test-data").get().asFile.path)
 }

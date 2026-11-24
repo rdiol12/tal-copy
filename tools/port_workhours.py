@@ -4,10 +4,10 @@
 Usage:  python3 tools/port_workhours.py
 
 Reads   upstream/WorkHours-Android/app/src/{main,test}
-Writes  WorkHours-iOS/composeApp/src/commonMain/kotlin/com/tal/workhours/   (ported app code)
-        WorkHours-iOS/composeApp/src/commonMain/kotlin/com/tal/workhours/generated/  (R + string tables)
-        WorkHours-iOS/composeApp/src/commonMain/composeResources/drawable/  (icons)
-        WorkHours-iOS/composeApp/src/jvmTest/kotlin/com/tal/workhours/      (ported unit tests)
+Writes  WorkHours-iOS/shared/src/commonMain/kotlin/com/tal/workhours/   (ported app code)
+        WorkHours-iOS/shared/src/commonMain/kotlin/com/tal/workhours/generated/  (R + string tables)
+        WorkHours-iOS/shared/src/commonMain/composeResources/drawable/  (icons)
+        WorkHours-iOS/shared/src/jvmTest/kotlin/com/tal/workhours/      (ported unit tests)
 
 The Android code is kept as-is wherever possible: JDK and Android APIs are
 redirected to the look-alikes in the `compat` package by rewriting imports,
@@ -26,7 +26,7 @@ SRC = ROOT / "upstream/WorkHours-Android/app/src"
 MAIN = SRC / "main/java/com/tal/workhours"
 TEST = SRC / "test/java/com/tal/workhours"
 RES = SRC / "main/res"
-OUT = ROOT / "WorkHours-iOS/composeApp/src"
+OUT = ROOT / "WorkHours-iOS/shared/src"
 OUT_MAIN = OUT / "commonMain/kotlin/com/tal/workhours"
 OUT_GEN = OUT_MAIN / "generated"
 OUT_TEST = OUT / "jvmTest/kotlin/com/tal/workhours"

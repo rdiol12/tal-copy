@@ -64,7 +64,7 @@ jobs:
 
       - name: Unit tests (JVM)
         working-directory: ${{ matrix.app.dir }}
-        run: ./gradlew :composeApp:jvmTest --stacktrace
+        run: ./gradlew :shared:jvmTest --stacktrace
 
       - name: Compile Kotlin for iOS
         working-directory: ${{ matrix.app.dir }}
@@ -75,7 +75,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.app.name }}-test-reports
-          path: ${{ matrix.app.dir }}/composeApp/build/reports
+          path: ${{ matrix.app.dir }}/shared/build/reports
           if-no-files-found: ignore
 
   ipa:

@@ -48,6 +48,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.tal.workhours
         PRODUCT_NAME: ShiftHours
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         TARGETED_DEVICE_FAMILY: "1,2"
         GENERATE_INFOPLIST_FILE: "NO"
         FRAMEWORK_SEARCH_PATHS:
