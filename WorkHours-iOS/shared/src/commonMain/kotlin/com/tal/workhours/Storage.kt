@@ -7,16 +7,16 @@ import compat.util.*
 import kotlin.concurrent.Volatile
 import kotlinx.coroutines.IO
 
-import compat.android.Context
-import compat.android.AtomicFile
+import android.content.Context
+import android.util.AtomicFile
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
-import compat.json.JSONArray
-import compat.json.JSONObject
+import org.json.JSONArray
+import org.json.JSONObject
 import compat.io.File
 import compat.security.MessageDigest
 

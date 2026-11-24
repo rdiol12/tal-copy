@@ -8,7 +8,7 @@ import kotlin.concurrent.Volatile
 
 import org.junit.Assert.*
 import org.junit.Test
-import compat.json.JSONObject
+import org.json.JSONObject
 
 class AsiaSpainTaxTest {
     private fun profile(country: String) = AppSettings(taxCountry = country, foreignProfileCountry = country,

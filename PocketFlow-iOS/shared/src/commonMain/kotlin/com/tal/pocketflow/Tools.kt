@@ -10,18 +10,18 @@ internal class Tools {
     internal constructor() : super() {
     }
     companion object {
-        internal fun read(c: compat.android.Context?): compat.json.JSONObject? {
+        internal fun read(c: android.content.Context?): org.json.JSONObject? {
             try {
-                return compat.json.JSONObject(((c!!.getSharedPreferences("prefs", 0))!!.getString("tools", "{}"))!!)
+                return org.json.JSONObject(((c!!.getSharedPreferences("prefs", 0))!!.getString("tools", "{}"))!!)
             } catch (e: Exception) {
-                return compat.json.JSONObject()
+                return org.json.JSONObject()
             }
         }
-        internal fun write(c: compat.android.Context?, data: compat.json.JSONObject?, notify: Boolean) {
+        internal fun write(c: android.content.Context?, data: org.json.JSONObject?, notify: Boolean) {
             validate(data)
             (((c!!.getSharedPreferences("prefs", 0))!!.edit())!!.putString("tools", data!!.toString()))!!.apply()
         }
-        internal fun validate(d: compat.json.JSONObject?) {
+        internal fun validate(d: org.json.JSONObject?) {
             if ((d!!.has("periodStart"))) {
                 var day: Any? = d!!.opt("periodStart")
                 if ((!((day is Number)) || (((day as Number?))!!.toDouble()) != (((day as Number?))!!.toInt()).toDouble() || (((day as Number?))!!.toInt()) < 1 || (((day as Number?))!!.toInt()) > 31)) {
@@ -31,7 +31,7 @@ internal class Tools {
             if ((((d!!.toString())!!.length) > 500000)) {
                 throw (IllegalArgumentException("העדפות גדולות מדי"))
             }
-            var budgets: compat.json.JSONObject? = d!!.optJSONObject("budgets")
+            var budgets: org.json.JSONObject? = d!!.optJSONObject("budgets")
             if ((budgets != null)) {
                 var keys: MutableIterator<String>? = budgets!!.keys()
                 while ((keys!!.hasNext())) {
@@ -41,7 +41,7 @@ internal class Tools {
                     }
                 }
             }
-            var searches: compat.json.JSONArray? = d!!.optJSONArray("searches")
+            var searches: org.json.JSONArray? = d!!.optJSONArray("searches")
             if ((searches != null)) {
                 if (((searches!!.length()) > 30)) {
                     throw (IllegalArgumentException("יותר מדי חיפושים"))
@@ -49,7 +49,7 @@ internal class Tools {
                 run {
                     var i: Int = 0
                     while (i < (searches!!.length())) {
-                        var q: compat.json.JSONObject? = searches!!.optJSONObject(i)
+                        var q: org.json.JSONObject? = searches!!.optJSONObject(i)
                         if ((q == null || ((q!!.optString("name"))!!.javaTrim())!!.isEmpty())) {
                             throw (IllegalArgumentException("חיפוש שמור לא תקין"))
                         }
@@ -58,7 +58,7 @@ internal class Tools {
                     }
                 }
             }
-            var templates: compat.json.JSONArray? = d!!.optJSONArray("templates")
+            var templates: org.json.JSONArray? = d!!.optJSONArray("templates")
             if ((templates != null)) {
                 if (((templates!!.length()) > 100)) {
                     throw (IllegalArgumentException("יותר מדי קיצורים"))
@@ -66,7 +66,7 @@ internal class Tools {
                 run {
                     var i: Int = 0
                     while (i < (templates!!.length())) {
-                        var t: compat.json.JSONObject? = templates!!.optJSONObject(i)
+                        var t: org.json.JSONObject? = templates!!.optJSONObject(i)
                         if ((t == null || (t!!.optString("name"))!!.isEmpty() || ((t!!.optString("name"))!!.length) > 500 || (t!!.optString("category"))!!.isEmpty() || (t!!.optLong("amount", -1L)) < 0)) {
                             throw (IllegalArgumentException("קיצור לא תקין"))
                         }
@@ -74,7 +74,7 @@ internal class Tools {
                     }
                 }
             }
-            var cards: compat.json.JSONArray? = d!!.optJSONArray("homeCards")
+            var cards: org.json.JSONArray? = d!!.optJSONArray("homeCards")
             if ((cards != null)) {
                 var seen: MutableSet<String>? = HashSet<String>()
                 run {
@@ -91,16 +91,16 @@ internal class Tools {
                 }
             }
         }
-        internal fun budgets(c: compat.android.Context?): compat.json.JSONObject? {
-            var b: compat.json.JSONObject? = (read(c))!!.optJSONObject("budgets")
-            return (if (b == null) compat.json.JSONObject() else b)
+        internal fun budgets(c: android.content.Context?): org.json.JSONObject? {
+            var b: org.json.JSONObject? = (read(c))!!.optJSONObject("budgets")
+            return (if (b == null) org.json.JSONObject() else b)
         }
-        internal fun templates(c: compat.android.Context?): compat.json.JSONArray? {
-            var a: compat.json.JSONArray? = (read(c))!!.optJSONArray("templates")
-            return (if (a == null) compat.json.JSONArray() else a)
+        internal fun templates(c: android.content.Context?): org.json.JSONArray? {
+            var a: org.json.JSONArray? = (read(c))!!.optJSONArray("templates")
+            return (if (a == null) org.json.JSONArray() else a)
         }
-        internal fun cards(c: compat.android.Context?): MutableList<String>? {
-            var a: compat.json.JSONArray? = (read(c))!!.optJSONArray("homeCards")
+        internal fun cards(c: android.content.Context?): MutableList<String>? {
+            var a: org.json.JSONArray? = (read(c))!!.optJSONArray("homeCards")
             var out: MutableList<String>? = ArrayList<String>()
             if ((a == null)) {
                 return ArrayList<String>((compat.j.Arrays.asList("summary", "insights", "graph", "charges", "recent", "export"))!!)
@@ -114,22 +114,22 @@ internal class Tools {
             }
             return out
         }
-        internal fun dismiss(c: compat.android.Context?, key: String?) {
+        internal fun dismiss(c: android.content.Context?, key: String?) {
             try {
-                var d: compat.json.JSONObject? = read(c)
-                var items: compat.json.JSONObject? = d!!.optJSONObject("dismissed")
+                var d: org.json.JSONObject? = read(c)
+                var items: org.json.JSONObject? = d!!.optJSONObject("dismissed")
                 if ((items == null)) {
-                    items = compat.json.JSONObject()
+                    items = org.json.JSONObject()
                 }
                 items!!.put(key!!, true)
                 d!!.put("dismissed", items)
                 write(c, d, true)
-            } catch (e: compat.json.JSONException) {
+            } catch (e: org.json.JSONException) {
                 throw (IllegalArgumentException(e!!))
             }
         }
-        internal fun dismissed(c: compat.android.Context?, key: String?): Boolean {
-            var d: compat.json.JSONObject? = (read(c))!!.optJSONObject("dismissed")
+        internal fun dismissed(c: android.content.Context?, key: String?): Boolean {
+            var d: org.json.JSONObject? = (read(c))!!.optJSONObject("dismissed")
             return d != null && d!!.optBoolean(key!!)
         }
     }

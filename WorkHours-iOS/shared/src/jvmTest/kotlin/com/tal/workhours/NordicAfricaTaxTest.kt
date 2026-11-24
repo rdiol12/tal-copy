@@ -8,7 +8,7 @@ import kotlin.concurrent.Volatile
 
 import org.junit.Assert.*
 import org.junit.Test
-import compat.json.JSONObject
+import org.json.JSONObject
 import compat.time.LocalDate
 
 class NordicAfricaTaxTest {

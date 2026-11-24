@@ -6,7 +6,7 @@ import compat.text.*
 import compat.util.*
 import kotlin.concurrent.Volatile
 
-import compat.json.JSONObject
+import org.json.JSONObject
 import org.junit.Assert.*
 import org.junit.Test
 

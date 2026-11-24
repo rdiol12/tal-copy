@@ -4,7 +4,7 @@
 package com.tal.workhours
 
 import com.tal.workhours.generated.STRING_TABLES
-import compat.android.Context
+import android.content.Context
 import compat.text.format
 import compat.util.Locale
 import compat.util.platformLanguageTag

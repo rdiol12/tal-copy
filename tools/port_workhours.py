@@ -50,7 +50,6 @@ SKIPPED_TESTS = set()
 REWRITES = [
     (r"\bjava\.time\.", "compat.time."),
     (r"\bjava\.math\.", "compat.math."),
-    (r"\borg\.json\.", "compat.json."),
     (r"\bjava\.util\.zip\.", "compat.zip."),
     (r"\bjava\.io\.", "compat.io."),
     (r"\bjava\.text\.", "compat.text."),
@@ -59,10 +58,6 @@ REWRITES = [
     (r"\bjavax\.net\.ssl\.SSLException\b", "compat.net.SSLException"),
     (r"\b(\w+)\.javaClass\.simpleName\b", r"\1::class.simpleName"),
     (r"\bjava\.util\.(UUID|Locale|Currency)\b", r"compat.util.\1"),
-    (r"(?<![\w.])android\.content\.Context\b", "compat.android.Context"),
-    (r"(?<![\w.])android\.util\.AtomicFile\b", "compat.android.AtomicFile"),
-    (r"(?<![\w.])android\.util\.Log\b", "compat.android.Log"),
-    (r"\bandroidx\.annotation\.(StringRes|DrawableRes)\b", r"compat.android.\1"),
     (r"\bandroidx\.compose\.ui\.platform\.LocalContext\b", "compat.android.compose.LocalContext"),
     (r"\bandroidx\.compose\.ui\.res\.painterResource\b", "compat.android.compose.painterResource"),
     (r"\bandroidx\.activity\.compose\.BackHandler\b", "compat.android.compose.BackHandler"),
@@ -75,7 +70,6 @@ REWRITES = [
 TEST_REWRITES = [
     (r"\bjava\.time\.", "compat.time."),
     (r"\bjava\.math\.", "compat.math."),
-    (r"\borg\.json\.", "compat.json."),
     (r"\bjava\.util\.(UUID|Locale|Currency)\b", r"compat.util.\1"),
 ]
 EXTRA_IMPORTS = "import compat.text.*\nimport compat.util.*\nimport kotlin.concurrent.Volatile\n"

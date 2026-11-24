@@ -8,7 +8,7 @@ import kotlin.concurrent.Volatile
 
 import org.junit.Assert.*
 import org.junit.Test
-import compat.json.JSONObject
+import org.json.JSONObject
 
 /** Dollar fixtures from official 2026 schedules, plus scope and real serializer regressions. */
 class UsFinalStatesTaxTest {

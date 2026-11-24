@@ -16,9 +16,9 @@ internal class MovementFilter {
     internal var min: Long = -1L
     internal var max: Long = -1L
     internal var status: Int = -1
-    internal fun json(): compat.json.JSONObject? {
+    internal fun json(): org.json.JSONObject? {
         try {
-            return ((((((compat.json.JSONObject().put("from", from))!!.put("to", to))!!.put("family", family))!!.put("kind", kind))!!.put("min", min))!!.put("max", max))!!.put("status", status)
+            return ((((((org.json.JSONObject().put("from", from))!!.put("to", to))!!.put("family", family))!!.put("kind", kind))!!.put("min", min))!!.put("max", max))!!.put("status", status)
         } catch (e: Exception) {
             throw (IllegalArgumentException(e!!))
         }
@@ -58,7 +58,7 @@ internal class MovementFilter {
         return true
     }
     companion object {
-        internal fun from(o: compat.json.JSONObject?): MovementFilter? {
+        internal fun from(o: org.json.JSONObject?): MovementFilter? {
             var f: MovementFilter? = MovementFilter()
             if ((o == null)) {
                 return f

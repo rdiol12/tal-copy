@@ -8,8 +8,8 @@ import compat.util.*
 
 internal class Analytics {
     internal var store: Store? = null
-    internal var context: compat.android.Context? = null
-    internal constructor(s: Store?, c: compat.android.Context?) : super() {
+    internal var context: android.content.Context? = null
+    internal constructor(s: Store?, c: android.content.Context?) : super() {
         store = s
         context = c
     }
@@ -196,7 +196,7 @@ internal class Analytics {
         for (i in (renewals(today))!!) {
             out!!.add((i!!.title + " · " + i!!.detail)!!)
         }
-        var b: compat.json.JSONObject? = Tools.budgets(context)
+        var b: org.json.JSONObject? = Tools.budgets(context)
         var keys: MutableIterator<String>? = b!!.keys()
         while ((keys!!.hasNext())) {
             var key: String? = keys!!.next()

@@ -90,7 +90,7 @@ public class J2K {
     // JDK packages that have Kotlin look-alikes with the same class and member names.
     static final String[][] PACKAGE_MAP = {
         {"java.time.", "compat.time."}, {"java.math.", "compat.math."}, {"java.util.zip.", "compat.zip."}, {"java.io.", "compat.io."},
-        {"java.net.", "compat.net."}, {"java.text.", "compat.text."}, {"org.json.", "compat.json."},
+        {"java.net.", "compat.net."}, {"java.text.", "compat.text."},
     };
     static final Map<String, String> CLASS_MAP = Map.of(
         "java.util.Locale", "compat.util.Locale", "java.util.UUID", "compat.util.UUID", "java.util.Currency", "compat.util.Currency",
@@ -99,11 +99,6 @@ public class J2K {
     static String compatName(String q) {
         String direct = CLASS_MAP.get(q); if (direct != null) return direct;
         for (String[] m : PACKAGE_MAP) if (q.startsWith(m[0])) return m[1] + q.substring(m[0].length());
-        if (q.startsWith("android.")) {          // android.database.sqlite.SQLiteDatabase -> compat.android.SQLiteDatabase (nested names kept)
-            int i = 0; String[] parts = q.split("\\.");
-            while (i < parts.length && !Character.isUpperCase(parts[i].charAt(0))) i++;
-            return "compat.android." + String.join(".", Arrays.copyOfRange(parts, i, parts.length));
-        }
         return null;
     }
     static String qualified(TypeElement e) {

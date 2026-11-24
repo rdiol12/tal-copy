@@ -7,14 +7,14 @@ import compat.util.*
 import kotlin.concurrent.Volatile
 import kotlinx.coroutines.IO
 
-import compat.android.Context
-import compat.android.AtomicFile
+import android.content.Context
+import android.util.AtomicFile
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import compat.json.JSONObject
+import org.json.JSONObject
 import compat.io.File
 import compat.net.HttpURLConnection
 import compat.net.URI

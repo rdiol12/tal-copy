@@ -31,8 +31,8 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.unit.dp
-import compat.android.Context
-import compat.android.Uri
+import android.content.Context
+import android.net.Uri
 import compat.android.platformImportFile
 import compat.time.LocalDate
 import kotlinx.coroutines.delay

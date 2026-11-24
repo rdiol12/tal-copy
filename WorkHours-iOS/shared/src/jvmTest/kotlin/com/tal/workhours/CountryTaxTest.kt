@@ -53,7 +53,7 @@ class CountryTaxTest {
     @Test fun countryProfileSurvivesBackupAndLegacyDefaultsStayIsraeli() {
         val original = AppData(settings = uk("SCT"))
         assertEquals(original, readBackup(backupText(original)))
-        val old = compat.json.JSONObject(encodeData(original)).put("version", 2)
+        val old = org.json.JSONObject(encodeData(original)).put("version", 2)
         val settings = old.getJSONObject("settings")
         listOf("taxCountry", "taxYear", "taxRegion", "ukStandardProfile").forEach { settings.remove(it) }
         val restored = decodeData(old.toString()).settings

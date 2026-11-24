@@ -8,7 +8,7 @@ import kotlin.concurrent.Volatile
 
 import org.junit.Assert.*
 import org.junit.Test
-import compat.json.JSONObject
+import org.json.JSONObject
 
 class NorthAmericaTaxTest {
     private fun us(region: String = "FL", filing: String = "SINGLE") = AppSettings(taxCountry = "US", taxRegion = region,

@@ -8,7 +8,7 @@ import kotlin.concurrent.Volatile
 
 import org.junit.Assert.*
 import org.junit.Test
-import compat.json.JSONObject
+import org.json.JSONObject
 import compat.time.LocalDate
 
 /** Independent published schedule examples and common-payload/scope regressions. */

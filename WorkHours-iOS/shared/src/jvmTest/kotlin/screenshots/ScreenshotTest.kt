@@ -18,7 +18,7 @@ import com.tal.workhours.Shift
 import com.tal.workhours.WorkRepository
 import com.tal.workhours.initializeApp
 import com.tal.workhours.timestamp
-import compat.android.Context
+import android.content.Context
 import compat.time.LocalDate
 import kotlinx.coroutines.runBlocking
 import org.jetbrains.skia.EncodedImageFormat

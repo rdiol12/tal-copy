@@ -25,7 +25,7 @@ The Android app is not rewritten. `tools/port_workhours.py` regenerates the
 shared code from the untouched Android sources in `upstream/WorkHours-Android`:
 
 - **Imports are redirected** from JDK/Android classes to look-alikes in
-  `WorkHours-iOS/shared/src/commonMain/kotlin/compat` (`java.time`,
+  `platform/src/commonMain/kotlin` (`java.time`,
   `BigDecimal`, `org.json`, zip, `String.format`, `Context`,
   `SharedPreferences`, date/time/file pickers, ...). These are plain Kotlin and
   were checked against the real JDK with randomized tests.
@@ -35,7 +35,7 @@ shared code from the untouched Android sources in `upstream/WorkHours-Android`:
 - **Strings** from all 10 `strings.xml` files become Kotlin tables, so the
   in-app language switch works without restarting.
 - **Hand-written iOS pieces** live in `.../com/tal/workhours/ios/` (app root,
-  localization, backup screen) and `shared/src/iosMain` (Foundation/UIKit
+  localization, backup screen) and `platform/src/iosMain` (Foundation/UIKit
   glue).
 - The Android **unit tests** are ported the same way and run on every push.
 
@@ -75,6 +75,7 @@ Not yet: `MainActivity` and the custom views, widgets, Drive backup, app lock.
 
 ```
 .github/workflows/ios.yml   Linux check (tests + iOS compile), then macOS .ipa build
+platform/                   Kotlin look-alikes of the JDK and Android APIs, shared by both ports
 WorkHours-iOS/shared/       All app code (Kotlin Multiplatform: iOS + a JVM target for the tests)
 WorkHours-iOS/composeApp/   Thin module that links the iOS framework
 WorkHours-iOS/iosApp/       XcodeGen spec, Swift entry point, app icon

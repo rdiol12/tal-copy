@@ -8,7 +8,7 @@ import kotlin.concurrent.Volatile
 
 import compat.math.BigDecimal
 import compat.time.LocalDate
-import compat.json.JSONObject
+import org.json.JSONObject
 import org.junit.Assert.*
 import org.junit.Test
 

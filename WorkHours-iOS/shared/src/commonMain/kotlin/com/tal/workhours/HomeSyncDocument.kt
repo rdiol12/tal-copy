@@ -6,8 +6,8 @@ import compat.text.*
 import compat.util.*
 import kotlin.concurrent.Volatile
 
-import compat.json.JSONArray
-import compat.json.JSONObject
+import org.json.JSONArray
+import org.json.JSONObject
 
 /** Stable wire entities. Settings and active shift are atomic; records use durable IDs. */
 internal object HomeSyncDocument {

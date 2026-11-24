@@ -5,7 +5,7 @@ plugins {
 }
 
 // The JDK/Android look-alikes are shared with the WorkHours port.
-val compat = "../../WorkHours-iOS/shared/src"
+val platform = "../../platform/src"
 
 kotlin {
     // JVM target: runs the unit tests on a Linux CI runner.
@@ -23,7 +23,7 @@ kotlin {
             languageSettings.optIn("org.jetbrains.compose.resources.ExperimentalResourceApi")
         }
         commonMain {
-            kotlin.srcDir("$compat/commonMain/kotlin/compat")
+            kotlin.srcDir("$platform/commonMain/kotlin")
             dependencies {
                 implementation(compose.runtime)
                 implementation(compose.foundation)
@@ -35,9 +35,9 @@ kotlin {
                 implementation(libs.androidx.sqlite.bundled)
             }
         }
-        iosMain { kotlin.srcDir("$compat/iosMain/kotlin/compat") }
+        iosMain { kotlin.srcDir("$platform/iosMain/kotlin") }
         jvmMain {
-            kotlin.srcDir("$compat/jvmMain/kotlin/compat")
+            kotlin.srcDir("$platform/jvmMain/kotlin")
             dependencies {
                 implementation(compose.desktop.currentOs)
                 implementation(libs.kotlinx.coroutines.swing)

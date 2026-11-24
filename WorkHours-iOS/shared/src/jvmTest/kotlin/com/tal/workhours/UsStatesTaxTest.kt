@@ -8,7 +8,7 @@ import kotlin.concurrent.Volatile
 
 import org.junit.Assert.*
 import org.junit.Test
-import compat.json.JSONObject
+import org.json.JSONObject
 
 /** Independent 2026 dollar fixtures, negative scope cases, and real backup serializer. */
 class UsStatesTaxTest {

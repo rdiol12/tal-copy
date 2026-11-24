@@ -9,7 +9,7 @@ import kotlin.concurrent.Volatile
 import org.junit.Assert.*
 import org.junit.Test
 import compat.time.LocalDate
-import compat.json.JSONObject
+import org.json.JSONObject
 
 class AdditionalCountryTaxTest {
     private fun profile(country: String, deductions: Double? = 0.0) = AppSettings(taxCountry = country,

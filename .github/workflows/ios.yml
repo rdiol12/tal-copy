@@ -14,6 +14,7 @@ on:
     paths:
       - "WorkHours-iOS/**"
       - "PocketFlow-iOS/**"
+      - "platform/**"
       - ".github/workflows/ios.yml"
   workflow_dispatch:
     inputs:

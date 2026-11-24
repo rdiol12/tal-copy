@@ -2,7 +2,7 @@
 // home-screen widgets. It keeps the shared code compiling and does nothing.
 package com.tal.workhours
 
-import compat.android.Context
+import android.content.Context
 
 object ShiftWidgetProvider {
     fun refresh(context: Context, data: AppData) {}

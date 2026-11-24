@@ -6,7 +6,7 @@ import compat.j.*
 import compat.text.*
 import compat.util.*
 
-class Store : compat.android.SQLiteOpenHelper {
+class Store : android.database.sqlite.SQLiteOpenHelper {
     open class Account {
         constructor() : super() {
         }
@@ -89,14 +89,14 @@ class Store : compat.android.SQLiteOpenHelper {
             projected = p
         }
     }
-    private var context: compat.android.Context? = null
-    constructor(c: compat.android.Context?) : super(c!!, "pocketflow.db", null, 9) {
+    private var context: android.content.Context? = null
+    constructor(c: android.content.Context?) : super(c, "pocketflow.db", null, 9) {
         context = c!!.applicationContext
     }
-    override fun onConfigure(db: compat.android.SQLiteDatabase?) {
+    override fun onConfigure(db: android.database.sqlite.SQLiteDatabase?) {
         db!!.setForeignKeyConstraintsEnabled(true)
     }
-    override fun onCreate(d: compat.android.SQLiteDatabase?) {
+    override fun onCreate(d: android.database.sqlite.SQLiteDatabase?) {
         d!!.execSQL("CREATE TABLE accounts(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL,type TEXT NOT NULL,closing INTEGER NOT NULL,charge INTEGER NOT NULL,credit_limit INTEGER NOT NULL,payment INTEGER NOT NULL,opening INTEGER NOT NULL,opening_payment INTEGER NOT NULL DEFAULT 0,billing_history TEXT NOT NULL DEFAULT '[]',cycle_configured INTEGER NOT NULL DEFAULT 0,start TEXT NOT NULL,fx_fee TEXT NOT NULL DEFAULT '0')")
         d!!.execSQL("CREATE TABLE rules(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL,amount INTEGER NOT NULL,account INTEGER NOT NULL REFERENCES accounts(id),category TEXT NOT NULL,start TEXT NOT NULL,end TEXT NOT NULL,active INTEGER NOT NULL DEFAULT 1,interval_months INTEGER NOT NULL DEFAULT 1,reminder_days INTEGER NOT NULL DEFAULT 7,renewal TEXT NOT NULL DEFAULT '',currency TEXT NOT NULL DEFAULT 'ILS',original_amount INTEGER NOT NULL DEFAULT 0,fx_rate TEXT NOT NULL DEFAULT '1',fx_fee TEXT NOT NULL DEFAULT '0',fx_date TEXT NOT NULL DEFAULT '',fx_source TEXT NOT NULL DEFAULT '')")
         d!!.execSQL("CREATE TABLE transactions(id INTEGER PRIMARY KEY AUTOINCREMENT,date TEXT NOT NULL,amount INTEGER NOT NULL CHECK(amount>0),category TEXT NOT NULL,merchant TEXT NOT NULL,note TEXT NOT NULL,tag TEXT NOT NULL,account INTEGER NOT NULL REFERENCES accounts(id),kind TEXT NOT NULL,count INTEGER NOT NULL CHECK(count BETWEEN 1 AND 120),status INTEGER NOT NULL,rule INTEGER REFERENCES rules(id),currency TEXT NOT NULL DEFAULT 'ILS',original_amount INTEGER NOT NULL DEFAULT 0,fx_rate TEXT NOT NULL DEFAULT '1',fx_date TEXT NOT NULL DEFAULT '',fx_source TEXT NOT NULL DEFAULT '',first_due TEXT NOT NULL DEFAULT '',refund_of INTEGER NOT NULL DEFAULT 0,fx_fee TEXT NOT NULL DEFAULT '0',UNIQUE(rule,date))")
@@ -104,16 +104,16 @@ class Store : compat.android.SQLiteOpenHelper {
         d!!.execSQL("CREATE TABLE undo_action(id INTEGER PRIMARY KEY CHECK(id=1),payload TEXT NOT NULL)")
         d!!.execSQL(("INSERT INTO accounts(name,type,closing,charge,credit_limit,payment,opening,start) VALUES('מזומן','cash',31,10,0,0,0,'" + compat.time.LocalDate.now()!!.withDayOfMonth(1) + "')")!!)
     }
-    override fun onOpen(db: compat.android.SQLiteDatabase?) {
-        super.onOpen(db!!)
+    override fun onOpen(db: android.database.sqlite.SQLiteDatabase?) {
+        super.onOpen(db)
         if ((!(db!!.isReadOnly))) {
             ensureBankTransfer(db)
         }
     }
-    private fun ensureBankTransfer(db: compat.android.SQLiteDatabase?) {
+    private fun ensureBankTransfer(db: android.database.sqlite.SQLiteDatabase?) {
         db!!.execSQL("INSERT INTO accounts(name,type,closing,charge,credit_limit,payment,opening,start) SELECT 'העברה בנקאית','transfer',31,1,0,0,0,? WHERE NOT EXISTS(SELECT 1 FROM accounts WHERE type='transfer')", arrayOf<Any>(((compat.time.LocalDate.now()!!.withDayOfMonth(1))!!.toString())!!))
     }
-    override fun onUpgrade(db: compat.android.SQLiteDatabase?, old: Int, next: Int) {
+    override fun onUpgrade(db: android.database.sqlite.SQLiteDatabase?, old: Int, next: Int) {
         if ((old < 9)) {
             db!!.execSQL("ALTER TABLE rules ADD COLUMN currency TEXT NOT NULL DEFAULT 'ILS'")
             db!!.execSQL("ALTER TABLE rules ADD COLUMN original_amount INTEGER NOT NULL DEFAULT 0")
@@ -228,18 +228,18 @@ class Store : compat.android.SQLiteOpenHelper {
             var policyChanged: Boolean = !((a!!.type)!!.equals(old!!.type)) || (a!!.payment) != (old!!.payment) || (a!!.openingPayment) != (old!!.openingPayment) || (a!!.charge) != (old!!.charge) || (a!!.closing) != (old!!.closing) || (a!!.cycleConfigured) != (old!!.cycleConfigured)
             if ((policyChanged && isCredit(a) && isCredit(old) && ((old!!.opening) > 0 || (transactions()!!.javaStream())!!.anyMatch((compat.j.Predicate<Store.Tx> l1@{ t -> (t!!.account) == (a!!.id) })!!)))) {
                 try {
-                    var history: compat.json.JSONArray? = compat.json.JSONArray((a!!.billingHistory)!!)
+                    var history: org.json.JSONArray? = org.json.JSONArray((a!!.billingHistory)!!)
                     if (((history!!.length()) > 0 && changedOn!!.isBefore((compat.time.LocalDate.parse(((history!!.getJSONObject((history!!.length()) - 1))!!.getString("until"))!!))!!))) {
                         throw (IllegalArgumentException("תאריך המכשיר קודם לשינוי החיוב האחרון"))
                     }
                     history!!.put(policySnapshot(old, changedOn))
                     a!!.billingHistory = history!!.toString()
-                } catch (e: compat.json.JSONException) {
+                } catch (e: org.json.JSONException) {
                     throw (IllegalArgumentException("היסטוריית חיוב לא תקינה", e!!))
                 }
             }
         }
-        var v: compat.android.ContentValues? = compat.android.ContentValues()
+        var v: android.content.ContentValues? = android.content.ContentValues()
         v!!.put("name", a!!.name)
         v!!.put("type", a!!.type)
         v!!.put("closing", a!!.closing)
@@ -274,14 +274,14 @@ class Store : compat.android.SQLiteOpenHelper {
             previous!!.type = "credit"
             previous!!.payment = 0L
             previous!!.closing = previousClosing
-            var history: String? = (compat.json.JSONArray().put(policySnapshot(previous, changedOn)))!!.toString()
+            var history: String? = (org.json.JSONArray().put(policySnapshot(previous, changedOn)))!!.toString()
             remember("accounts", a!!.id)
-            var value: compat.android.ContentValues? = compat.android.ContentValues()
+            var value: android.content.ContentValues? = android.content.ContentValues()
             value!!.put("billing_history", history)
             writableDatabase!!.update("accounts", value!!, "id=?", arrayOf<String>(("" + a!!.id)!!))
             a!!.billingHistory = history
             dirty()
-        } catch (e: compat.json.JSONException) {
+        } catch (e: org.json.JSONException) {
             throw (IllegalArgumentException(e!!))
         }
     }
@@ -353,7 +353,7 @@ class Store : compat.android.SQLiteOpenHelper {
         if ((!((compat.j.Arrays.asList("ILS", "USD", "EUR"))!!.contains((t!!.currency)!!)) || (t!!.originalAmount) <= 0 || (Finance.convert(t!!.originalAmount, t!!.fxRate, t!!.fxFee)) != (t!!.amount))) {
             throw (IllegalArgumentException("נתוני המרת המטבע אינם תקינים"))
         }
-        var v: compat.android.ContentValues? = compat.android.ContentValues()
+        var v: android.content.ContentValues? = android.content.ContentValues()
         v!!.put("refund_of", t!!.refundOf)
         v!!.put("date", t!!.date)
         v!!.put("amount", t!!.amount)
@@ -394,7 +394,7 @@ class Store : compat.android.SQLiteOpenHelper {
         }
         remember("transactions", t!!.id)
         if (((t!!.rule) > 0)) {
-            var v: compat.android.ContentValues? = compat.android.ContentValues()
+            var v: android.content.ContentValues? = android.content.ContentValues()
             v!!.put("status", 2)
             writableDatabase!!.update("transactions", v!!, "id=?", arrayOf<String>(("" + t!!.id)!!))
         } else {
@@ -469,7 +469,7 @@ class Store : compat.android.SQLiteOpenHelper {
         if (((a!!.type)!!.equals("fixed") && s!!.isBefore((compat.time.LocalDate.parse((a!!.start)!!))!!))) {
             throw (IllegalArgumentException("הוראת הקבע קודמת ליתרת הפתיחה של הכרטיס"))
         }
-        var v: compat.android.ContentValues? = compat.android.ContentValues()
+        var v: android.content.ContentValues? = android.content.ContentValues()
         v!!.put("name", r!!.name)
         v!!.put("amount", r!!.amount)
         v!!.put("account", r!!.account)
@@ -508,7 +508,7 @@ class Store : compat.android.SQLiteOpenHelper {
         if (((rule!!.id) <= 0)) {
             throw (IllegalArgumentException("הוראת הקבע אינה קיימת"))
         }
-        var d: compat.android.SQLiteDatabase? = writableDatabase
+        var d: android.database.sqlite.SQLiteDatabase? = writableDatabase
         d!!.beginTransaction()
         try {
             var through: compat.time.YearMonth? = visibleMonth
@@ -531,7 +531,7 @@ class Store : compat.android.SQLiteOpenHelper {
         }
     }
     fun setRuleActive(r: Store.Rule?, active: Boolean) {
-        var d: compat.android.SQLiteDatabase? = writableDatabase
+        var d: android.database.sqlite.SQLiteDatabase? = writableDatabase
         d!!.beginTransaction()
         try {
             r!!.active = (if (active) 1 else 0)
@@ -551,7 +551,7 @@ class Store : compat.android.SQLiteOpenHelper {
         if ((compat.j.Objects.equals(ensured!!.get(month!!), GEN!!.get()))) {
             return
         }
-        var d: compat.android.SQLiteDatabase? = writableDatabase
+        var d: android.database.sqlite.SQLiteDatabase? = writableDatabase
         d!!.beginTransaction()
         try {
             for (r in rules()!!) {
@@ -574,7 +574,7 @@ class Store : compat.android.SQLiteOpenHelper {
                                 if ((existingMonths!!.contains((instance!!.toString())!!))) {
                                     continue
                                 }
-                                var v: compat.android.ContentValues? = compat.android.ContentValues()
+                                var v: android.content.ContentValues? = android.content.ContentValues()
                                 v!!.put("date", date!!.toString())
                                 v!!.put("amount", expectedRuleAmount(r))
                                 v!!.put("original_amount", r!!.originalAmount)
@@ -592,7 +592,7 @@ class Store : compat.android.SQLiteOpenHelper {
                                 v!!.put("count", 1)
                                 v!!.put("status", 0)
                                 v!!.put("rule", r!!.id)
-                                var created: Long = d!!.insertWithOnConflict("transactions", null, v!!, compat.android.SQLiteDatabase.CONFLICT_IGNORE)
+                                var created: Long = d!!.insertWithOnConflict("transactions", null, v!!, android.database.sqlite.SQLiteDatabase.CONFLICT_IGNORE)
                                 if ((created > 0)) {
                                     rememberNew("transactions", created)
                                     dirty()
@@ -1024,10 +1024,10 @@ class Store : compat.android.SQLiteOpenHelper {
     private fun isCredit(a: Store.Account?): Boolean {
         return (a!!.type)!!.equals("credit") || (a!!.type)!!.equals("fixed")
     }
-    private fun policySnapshot(a: Store.Account?, until: compat.time.LocalDate?): compat.json.JSONObject? {
-        return ((((((compat.json.JSONObject().put("until", until!!.toString()))!!.put("type", a!!.type))!!.put("payment", a!!.payment))!!.put("openingPayment", a!!.openingPayment))!!.put("closing", a!!.closing))!!.put("charge", a!!.charge))!!.put("cycleConfigured", a!!.cycleConfigured)
+    private fun policySnapshot(a: Store.Account?, until: compat.time.LocalDate?): org.json.JSONObject? {
+        return ((((((org.json.JSONObject().put("until", until!!.toString()))!!.put("type", a!!.type))!!.put("payment", a!!.payment))!!.put("openingPayment", a!!.openingPayment))!!.put("closing", a!!.closing))!!.put("charge", a!!.charge))!!.put("cycleConfigured", a!!.cycleConfigured)
     }
-    private fun policy(a: Store.Account?, value: compat.json.JSONObject?): Store.Account? {
+    private fun policy(a: Store.Account?, value: org.json.JSONObject?): Store.Account? {
         var p: Store.Account? = Store.Account()
         p!!.id = a!!.id
         p!!.start = a!!.start
@@ -1041,15 +1041,15 @@ class Store : compat.android.SQLiteOpenHelper {
         p!!.cycleConfigured = value!!.optBoolean("cycleConfigured", false)
         return p
     }
-    private fun history(a: Store.Account?): compat.json.JSONArray? {
+    private fun history(a: Store.Account?): org.json.JSONArray? {
         try {
-            return compat.json.JSONArray((a!!.billingHistory)!!)
-        } catch (e: compat.json.JSONException) {
+            return org.json.JSONArray((a!!.billingHistory)!!)
+        } catch (e: org.json.JSONException) {
             throw (IllegalArgumentException("היסטוריית חיוב לא תקינה", e!!))
         }
     }
     private fun validateBillingHistory(a: Store.Account?) {
-        var h: compat.json.JSONArray? = history(a)
+        var h: org.json.JSONArray? = history(a)
         if ((!(isCredit(a)) && (h!!.length()) > 0)) {
             throw (IllegalArgumentException("היסטוריית אשראי בחשבון שאינו כרטיס"))
         }
@@ -1060,7 +1060,7 @@ class Store : compat.android.SQLiteOpenHelper {
         run {
             var i: Int = 0
             while (i < (h!!.length())) {
-                var row: compat.json.JSONObject? = h!!.getJSONObject(i)
+                var row: org.json.JSONObject? = h!!.getJSONObject(i)
                 var p: Store.Account? = policy(a, row)
                 var until: compat.time.LocalDate? = compat.time.LocalDate.parse((row!!.getString("until"))!!)
                 if ((!(isCredit(p)) || (p!!.payment) < 0 || (p!!.openingPayment) < 0 || (p!!.closing) < 1 || (p!!.closing) > 31 || (p!!.charge) < 1 || (p!!.charge) > 31 || (previous != null && until!!.isBefore(previous!!)))) {
@@ -1073,11 +1073,11 @@ class Store : compat.android.SQLiteOpenHelper {
     }
     private fun policyAt(a: Store.Account?, date: compat.time.LocalDate?): Store.Account? {
         try {
-            var h: compat.json.JSONArray? = history(a)
+            var h: org.json.JSONArray? = history(a)
             run {
                 var i: Int = 0
                 while (i < (h!!.length())) {
-                    var row: compat.json.JSONObject? = h!!.getJSONObject(i)
+                    var row: org.json.JSONObject? = h!!.getJSONObject(i)
                     if ((!(date!!.isAfter((compat.time.LocalDate.parse((row!!.getString("until"))!!))!!)))) {
                         return policy(a, row)
                     }
@@ -1085,7 +1085,7 @@ class Store : compat.android.SQLiteOpenHelper {
                 }
             }
             return a
-        } catch (e: compat.json.JSONException) {
+        } catch (e: org.json.JSONException) {
             throw (IllegalArgumentException(e!!))
         }
     }
@@ -1093,7 +1093,7 @@ class Store : compat.android.SQLiteOpenHelper {
         var days: compat.j.TreeSet<Int>? = compat.j.TreeSet<Int>()
         days!!.add(a!!.charge)
         try {
-            var h: compat.json.JSONArray? = history(a)
+            var h: org.json.JSONArray? = history(a)
             run {
                 var i: Int = 0
                 while (i < (h!!.length())) {
@@ -1101,7 +1101,7 @@ class Store : compat.android.SQLiteOpenHelper {
                     i++
                 }
             }
-        } catch (e: compat.json.JSONException) {
+        } catch (e: org.json.JSONException) {
             throw (IllegalArgumentException(e!!))
         }
         var dates: compat.j.SortedSet<compat.time.LocalDate>? = compat.j.TreeSet<compat.time.LocalDate>()
@@ -1131,8 +1131,8 @@ class Store : compat.android.SQLiteOpenHelper {
     }
     private fun creditState(a: Store.Account?, asOf: compat.time.LocalDate?, txs: MutableList<Store.Tx>?, forecast: Boolean): Store.CreditState? {
         try {
-            var h: compat.json.JSONArray? = history(a)
-            var first: compat.json.JSONObject? = h!!.getJSONObject(0)
+            var h: org.json.JSONArray? = history(a)
+            var first: org.json.JSONObject? = h!!.getJSONObject(0)
             var cutoff: compat.time.LocalDate? = compat.time.LocalDate.parse((first!!.getString("until"))!!)
             var initial: Store.Account? = policy(a, first)
             var state: Store.CreditState? = Store.CreditState()
@@ -1212,29 +1212,29 @@ class Store : compat.android.SQLiteOpenHelper {
                 }
             }
             return state
-        } catch (e: compat.json.JSONException) {
+        } catch (e: org.json.JSONException) {
             throw (IllegalArgumentException("היסטוריית חיוב לא תקינה", e!!))
         }
     }
-    fun backup(): compat.json.JSONObject? {
-        var snapshot: compat.android.SQLiteDatabase? = writableDatabase
+    fun backup(): org.json.JSONObject? {
+        var snapshot: android.database.sqlite.SQLiteDatabase? = writableDatabase
         snapshot!!.beginTransactionNonExclusive()
         try {
-            var root: compat.json.JSONObject? = compat.json.JSONObject()
+            var root: org.json.JSONObject? = org.json.JSONObject()
             root!!.put("format", "PocketFlow")
             root!!.put("version", 9)
             root!!.put("createdAt", compat.time.Instant.now()!!.toString())
-            var prefs: compat.android.SharedPreferences? = context!!.getSharedPreferences("prefs", compat.android.Context.MODE_PRIVATE)
-            root!!.put("settings", ((((((((compat.json.JSONObject().put("income", prefs!!.getBoolean("income", false)))!!.put("lastAccount", prefs!!.getLong("lastAccount", 0L)))!!.put("appearance", prefs!!.getString("appearance", "SYSTEM")))!!.put("homeChart", prefs!!.getInt("homeChart", 0)))!!.put("homeChartSecond", prefs!!.getInt("homeChartSecond", 0)))!!.put("trendCategory", prefs!!.getString("trendCategory", "")))!!.put("chartAccount", prefs!!.getLong("chartAccount", 0L)))!!.put(LauncherLayout.PREFERENCE!!, prefs!!.getString(LauncherLayout.PREFERENCE!!, "")))!!.put("tools", Tools.read(context)))
+            var prefs: android.content.SharedPreferences? = context!!.getSharedPreferences("prefs", android.content.Context.MODE_PRIVATE)
+            root!!.put("settings", ((((((((org.json.JSONObject().put("income", prefs!!.getBoolean("income", false)))!!.put("lastAccount", prefs!!.getLong("lastAccount", 0L)))!!.put("appearance", prefs!!.getString("appearance", "SYSTEM")))!!.put("homeChart", prefs!!.getInt("homeChart", 0)))!!.put("homeChartSecond", prefs!!.getInt("homeChartSecond", 0)))!!.put("trendCategory", prefs!!.getString("trendCategory", "")))!!.put("chartAccount", prefs!!.getLong("chartAccount", 0L)))!!.put(LauncherLayout.PREFERENCE!!, prefs!!.getString(LauncherLayout.PREFERENCE!!, "")))!!.put("tools", Tools.read(context)))
             for (table in (arrayOf<String>("accounts", "rules", "transactions"))) {
-                var rows: compat.json.JSONArray? = compat.json.JSONArray()
+                var rows: org.json.JSONArray? = org.json.JSONArray()
                 (readableDatabase!!.rawQuery(("SELECT * FROM " + table + " ORDER BY id")!!, null)).use { c ->
                     while ((c!!.moveToNext())) {
-                        var row: compat.json.JSONObject? = compat.json.JSONObject()
+                        var row: org.json.JSONObject? = org.json.JSONObject()
                         run {
                             var i: Int = 0
                             while (i < (c!!.columnCount)) {
-                                row!!.put((c!!.getColumnName(i))!!, (if (c!!.isNull(i)) compat.json.JSONObject.NULL else (if ((c!!.getType(i)) == compat.android.Cursor.FIELD_TYPE_INTEGER) c!!.getLong(i) else c!!.getString(i))))
+                                row!!.put((c!!.getColumnName(i))!!, (if (c!!.isNull(i)) org.json.JSONObject.NULL else (if ((c!!.getType(i)) == android.database.Cursor.FIELD_TYPE_INTEGER) c!!.getLong(i) else c!!.getString(i))))
                                 i++
                             }
                         }
@@ -1249,20 +1249,20 @@ class Store : compat.android.SQLiteOpenHelper {
             snapshot!!.endTransaction()
         }
     }
-    fun restore(root: compat.json.JSONObject?) {
+    fun restore(root: org.json.JSONObject?) {
         if ((!((root!!.getString("format"))!!.equals("PocketFlow")) || ((root!!.getInt("version")) < 1 || (root!!.getInt("version")) > 9))) {
             throw (IllegalArgumentException("קובץ הגיבוי אינו מתאים"))
         }
-        var settings: compat.json.JSONObject? = root!!.optJSONObject("settings")
+        var settings: org.json.JSONObject? = root!!.optJSONObject("settings")
         var income: Boolean = settings != null && settings!!.getBoolean("income")
         var lastAccount: Long = (if (settings == null) 0L else settings!!.getLong("lastAccount"))
         var appearance: String? = (if (settings == null) "SYSTEM" else settings!!.optString("appearance", "SYSTEM"))
         if ((!((compat.j.Arrays.asList("SYSTEM", "LIGHT", "DARK"))!!.contains(appearance!!)))) {
             throw (IllegalArgumentException("הגדרת מראה לא תקינה בגיבוי"))
         }
-        var toolSettings: compat.json.JSONObject? = (if (settings == null) compat.json.JSONObject() else settings!!.optJSONObject("tools"))
+        var toolSettings: org.json.JSONObject? = (if (settings == null) org.json.JSONObject() else settings!!.optJSONObject("tools"))
         if ((toolSettings == null)) {
-            toolSettings = compat.json.JSONObject()
+            toolSettings = org.json.JSONObject()
         }
         Tools.validate(toolSettings)
         var homeChart: Int = (if (settings == null) 0 else settings!!.optInt("homeChart", 0))
@@ -1273,7 +1273,7 @@ class Store : compat.android.SQLiteOpenHelper {
         if ((homeChartSecond < 0 || homeChartSecond >= (ChartCatalog.LABELS!!.size))) {
             throw (IllegalArgumentException("בחירת הגרף השני אינה תקינה בגיבוי"))
         }
-        var d: compat.android.SQLiteDatabase? = writableDatabase
+        var d: android.database.sqlite.SQLiteDatabase? = writableDatabase
         d!!.beginTransaction()
         try {
             d!!.delete("transactions", null, null)
@@ -1281,7 +1281,7 @@ class Store : compat.android.SQLiteOpenHelper {
             d!!.delete("accounts", null, null)
             dirty()
             for (table in (arrayOf<String>("accounts", "rules", "transactions"))) {
-                var rows: compat.json.JSONArray? = root!!.getJSONArray(table!!)
+                var rows: org.json.JSONArray? = root!!.getJSONArray(table!!)
                 if (((rows!!.length()) > 100000)) {
                     throw (IllegalArgumentException("הגיבוי גדול מדי"))
                 }
@@ -1292,7 +1292,7 @@ class Store : compat.android.SQLiteOpenHelper {
                 run {
                     var i: Int = 0
                     while (i < (rows!!.length())) {
-                        var row: compat.json.JSONObject? = rows!!.getJSONObject(i)
+                        var row: org.json.JSONObject? = rows!!.getJSONObject(i)
                         if ((table!!.equals("rules") && (root!!.getInt("version")) < 9)) {
                             row!!.put("currency", "ILS")
                             row!!.put("original_amount", row!!.getLong("amount"))
@@ -1335,7 +1335,7 @@ class Store : compat.android.SQLiteOpenHelper {
                         if (((row!!.length()) != (allowed!!.size))) {
                             throw (IllegalArgumentException("מבנה גיבוי לא תקין"))
                         }
-                        var v: compat.android.ContentValues? = compat.android.ContentValues()
+                        var v: android.content.ContentValues? = android.content.ContentValues()
                         var keys: MutableIterator<String>? = row!!.keys()
                         while ((keys!!.hasNext())) {
                             var key: String? = keys!!.next()
@@ -1343,7 +1343,7 @@ class Store : compat.android.SQLiteOpenHelper {
                                 throw (IllegalArgumentException("שדה לא מוכר"))
                             }
                             var value: Any? = row!!.get(key!!)
-                            if ((value === compat.json.JSONObject.NULL)) {
+                            if ((value === org.json.JSONObject.NULL)) {
                                 v!!.putNull(key!!)
                             } else {
                                 if (((value is Number))) {
@@ -1411,7 +1411,7 @@ class Store : compat.android.SQLiteOpenHelper {
         }
         dirty()
         Tools.write(context, toolSettings, false)
-        var preferences: compat.android.SharedPreferences.Editor? = ((((((((context!!.getSharedPreferences("prefs", compat.android.Context.MODE_PRIVATE))!!.edit())!!.putBoolean("income", income))!!.putLong("lastAccount", lastAccount))!!.putString("appearance", appearance))!!.putInt("homeChart", homeChart))!!.putInt("homeChartSecond", homeChartSecond))!!.putString("trendCategory", (if (settings == null) "" else settings!!.optString("trendCategory", ""))))!!.putLong("chartAccount", (if (settings == null) 0L else settings!!.optLong("chartAccount", 0L)))
+        var preferences: android.content.SharedPreferences.Editor? = ((((((((context!!.getSharedPreferences("prefs", android.content.Context.MODE_PRIVATE))!!.edit())!!.putBoolean("income", income))!!.putLong("lastAccount", lastAccount))!!.putString("appearance", appearance))!!.putInt("homeChart", homeChart))!!.putInt("homeChartSecond", homeChartSecond))!!.putString("trendCategory", (if (settings == null) "" else settings!!.optString("trendCategory", ""))))!!.putLong("chartAccount", (if (settings == null) 0L else settings!!.optLong("chartAccount", 0L)))
         if ((settings != null && settings!!.has(LauncherLayout.PREFERENCE!!))) {
             var layout: LauncherLayout? = LauncherLayout(settings!!.optString(LauncherLayout.PREFERENCE!!))
             preferences!!.putString(LauncherLayout.PREFERENCE!!, layout!!.encode())
@@ -1516,29 +1516,29 @@ class Store : compat.android.SQLiteOpenHelper {
     internal fun interface Change {
         fun run()
     }
-    private var undoRows: LinkedHashMap<String, compat.json.JSONObject>? = null
+    private var undoRows: LinkedHashMap<String, org.json.JSONObject>? = null
     internal fun edit(label: String?, change: Store.Change?) {
         if ((undoRows != null)) {
             change!!.run()
             return
         }
-        var d: compat.android.SQLiteDatabase? = writableDatabase
+        var d: android.database.sqlite.SQLiteDatabase? = writableDatabase
         var toolsBefore: String? = (Tools.read(context))!!.toString()
         d!!.beginTransaction()
-        undoRows = LinkedHashMap<String, compat.json.JSONObject>()
+        undoRows = LinkedHashMap<String, org.json.JSONObject>()
         var success: Boolean = false
         try {
             change!!.run()
             var prefsChanged: Boolean = !(toolsBefore!!.equals((Tools.read(context))!!.toString()))
             if ((!(undoRows!!.isEmpty()) || prefsChanged)) {
-                var payload: compat.json.JSONObject? = (compat.json.JSONObject().put("label", label))!!.put("rows", compat.json.JSONArray((undoRows!!.values)!!))
+                var payload: org.json.JSONObject? = (org.json.JSONObject().put("label", label))!!.put("rows", org.json.JSONArray((undoRows!!.values)!!))
                 if ((prefsChanged)) {
-                    payload!!.put("toolsBefore", compat.json.JSONObject(toolsBefore!!))
+                    payload!!.put("toolsBefore", org.json.JSONObject(toolsBefore!!))
                 }
-                var v: compat.android.ContentValues? = compat.android.ContentValues()
+                var v: android.content.ContentValues? = android.content.ContentValues()
                 v!!.put("id", 1)
                 v!!.put("payload", payload!!.toString())
-                d!!.insertWithOnConflict("undo_action", null, v!!, compat.android.SQLiteDatabase.CONFLICT_REPLACE)
+                d!!.insertWithOnConflict("undo_action", null, v!!, android.database.sqlite.SQLiteDatabase.CONFLICT_REPLACE)
             }
             d!!.setTransactionSuccessful()
             success = true
@@ -1547,16 +1547,16 @@ class Store : compat.android.SQLiteOpenHelper {
             d!!.endTransaction()
             dirty()
             if ((!success && !(toolsBefore!!.equals((Tools.read(context))!!.toString())))) {
-                Tools.write(context, compat.json.JSONObject(toolsBefore!!), false)
+                Tools.write(context, org.json.JSONObject(toolsBefore!!), false)
             }
         }
     }
-    private fun row(c: compat.android.Cursor?): compat.json.JSONObject? {
-        var o: compat.json.JSONObject? = compat.json.JSONObject()
+    private fun row(c: android.database.Cursor?): org.json.JSONObject? {
+        var o: org.json.JSONObject? = org.json.JSONObject()
         run {
             var n: Int = 0
             while (n < (c!!.columnCount)) {
-                o!!.put((c!!.getColumnName(n))!!, (if (c!!.isNull(n)) compat.json.JSONObject.NULL else (if ((c!!.getType(n)) == compat.android.Cursor.FIELD_TYPE_INTEGER) c!!.getLong(n) else c!!.getString(n))))
+                o!!.put((c!!.getColumnName(n))!!, (if (c!!.isNull(n)) org.json.JSONObject.NULL else (if ((c!!.getType(n)) == android.database.Cursor.FIELD_TYPE_INTEGER) c!!.getLong(n) else c!!.getString(n))))
                 n++
             }
         }
@@ -1568,7 +1568,7 @@ class Store : compat.android.SQLiteOpenHelper {
         }
         (readableDatabase!!.rawQuery(("SELECT * FROM " + table + " WHERE id=?")!!, arrayOf<String>(("" + id)!!))).use { c ->
             try {
-                undoRows!!.put((table + ":" + id)!!, (((compat.json.JSONObject().put("table", table))!!.put("id", id))!!.put("before", (if (c!!.moveToFirst()) row(c) else compat.json.JSONObject.NULL)))!!)
+                undoRows!!.put((table + ":" + id)!!, (((org.json.JSONObject().put("table", table))!!.put("id", id))!!.put("before", (if (c!!.moveToFirst()) row(c) else org.json.JSONObject.NULL)))!!)
             } catch (e: Exception) {
                 throw (IllegalArgumentException(e!!))
             }
@@ -1579,7 +1579,7 @@ class Store : compat.android.SQLiteOpenHelper {
             return
         }
         try {
-            undoRows!!.javaPutIfAbsent((table + ":" + id)!!, (((compat.json.JSONObject().put("table", table))!!.put("id", id))!!.put("before", compat.json.JSONObject.NULL))!!)
+            undoRows!!.javaPutIfAbsent((table + ":" + id)!!, (((org.json.JSONObject().put("table", table))!!.put("id", id))!!.put("before", org.json.JSONObject.NULL))!!)
         } catch (e: Exception) {
             throw (IllegalArgumentException(e!!))
         }
@@ -1597,29 +1597,29 @@ class Store : compat.android.SQLiteOpenHelper {
     internal fun undoLabel(): String? {
         (readableDatabase!!.rawQuery("SELECT payload FROM undo_action WHERE id=1", null)).use { c ->
             try {
-                return (if (c!!.moveToFirst()) (compat.json.JSONObject((c!!.getString(0))!!)).getString("label") else "")
+                return (if (c!!.moveToFirst()) (org.json.JSONObject((c!!.getString(0))!!)).getString("label") else "")
             } catch (e: Exception) {
                 return ""
             }
         }
     }
     internal fun undo() {
-        var d: compat.android.SQLiteDatabase? = writableDatabase
+        var d: android.database.sqlite.SQLiteDatabase? = writableDatabase
         d!!.beginTransaction()
         try {
-            var payload: compat.json.JSONObject?
+            var payload: org.json.JSONObject?
             (d!!.rawQuery("SELECT payload FROM undo_action WHERE id=1", null)).use { c ->
                 if ((!(c!!.moveToFirst()))) {
                     return
                 }
-                payload = compat.json.JSONObject((c!!.getString(0))!!)
+                payload = org.json.JSONObject((c!!.getString(0))!!)
             }
-            var rows: compat.json.JSONArray? = payload!!.getJSONArray("rows")
+            var rows: org.json.JSONArray? = payload!!.getJSONArray("rows")
             for (table in (arrayOf<String>("transactions", "rules", "accounts"))) {
                 run {
                     var i: Int = (rows!!.length()) - 1
                     while (i >= 0) {
-                        var item: compat.json.JSONObject? = rows!!.getJSONObject(i)
+                        var item: org.json.JSONObject? = rows!!.getJSONObject(i)
                         if ((table!!.equals(item!!.getString("table")) && item!!.isNull("before"))) {
                             if ((table!!.equals("rules"))) {
                                 d!!.delete("transactions", "rule=? AND status=0", arrayOf<String>(("" + item!!.getLong("id"))!!))
@@ -1634,15 +1634,15 @@ class Store : compat.android.SQLiteOpenHelper {
                 run {
                     var i: Int = 0
                     while (i < (rows!!.length())) {
-                        var item: compat.json.JSONObject? = rows!!.getJSONObject(i)
+                        var item: org.json.JSONObject? = rows!!.getJSONObject(i)
                         if ((table!!.equals(item!!.getString("table")) && !(item!!.isNull("before")))) {
-                            var old: compat.json.JSONObject? = item!!.getJSONObject("before")
-                            var v: compat.android.ContentValues? = compat.android.ContentValues()
+                            var old: org.json.JSONObject? = item!!.getJSONObject("before")
+                            var v: android.content.ContentValues? = android.content.ContentValues()
                             var keys: MutableIterator<String>? = old!!.keys()
                             while ((keys!!.hasNext())) {
                                 var key: String? = keys!!.next()
                                 var `val`: Any? = old!!.get(key!!)
-                                if ((`val` === compat.json.JSONObject.NULL)) {
+                                if ((`val` === org.json.JSONObject.NULL)) {
                                     v!!.putNull(key!!)
                                 } else {
                                     if (((`val` is Number))) {
@@ -1740,10 +1740,10 @@ class Store : compat.android.SQLiteOpenHelper {
         internal fun netExpense(t: Store.Tx?): Long {
             return (if ((t!!.kind)!!.equals("refund")) -(t!!.amount) else (if ((t!!.kind)!!.equals("expense")) t!!.amount else 0L))
         }
-        private fun str(c: compat.android.Cursor?, name: String?): String? {
+        private fun str(c: android.database.Cursor?, name: String?): String? {
             return c!!.getString(c!!.getColumnIndexOrThrow(name!!))
         }
-        private fun num(c: compat.android.Cursor?, name: String?): Long {
+        private fun num(c: android.database.Cursor?, name: String?): Long {
             return c!!.getLong(c!!.getColumnIndexOrThrow(name!!))
         }
     }

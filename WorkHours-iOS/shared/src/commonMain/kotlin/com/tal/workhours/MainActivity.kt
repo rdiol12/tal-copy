@@ -422,7 +422,7 @@ fun DashboardScreen(data: AppData, now: Long, onManual: () -> Unit, onEditActive
         currentSummary.days.find { it.day == today }
     } else null
     val context=LocalContext.current
-    val cardPrefs = remember(context) { context.getSharedPreferences("snapshot_layout", compat.android.Context.MODE_PRIVATE) }
+    val cardPrefs = remember(context) { context.getSharedPreferences("snapshot_layout", android.content.Context.MODE_PRIVATE) }
     var cardOrder by rememberSaveable { mutableStateOf(normalizeSnapshotCardOrder(cardPrefs.getString("order_v1", null)).joinToString(",")) }
     var orderOpen by rememberSaveable { mutableStateOf(false) }
     val cardTitles = snapshotCardTitles()

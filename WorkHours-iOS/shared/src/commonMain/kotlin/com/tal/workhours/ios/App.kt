@@ -13,7 +13,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
 import com.tal.workhours.generated.drawableResource
-import compat.android.Context
+import android.content.Context
 import compat.android.compose.CompatHost
 import compat.android.compose.CompatResources
 import compat.android.platformObserveForeground
@@ -21,6 +21,7 @@ import compat.android.platformObserveForeground
 /** Call once before the first composition. */
 fun initializeApp() {
     CompatResources.drawable = ::drawableResource
+    Context.applicationId = "com.tal.workhours"
     AppText.bind()
     // Home-server sync runs while the app is in the foreground (iOS has no counterpart of the Android background job).
     platformObserveForeground(

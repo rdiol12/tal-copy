@@ -6,7 +6,7 @@ import compat.text.*
 import compat.util.*
 import kotlin.concurrent.Volatile
 
-import compat.android.Context
+import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress

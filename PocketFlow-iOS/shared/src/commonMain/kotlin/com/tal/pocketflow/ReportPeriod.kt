@@ -59,7 +59,7 @@ internal class ReportPeriod {
         return dates
     }
     companion object {
-        internal fun of(c: compat.android.Context?): ReportPeriod? {
+        internal fun of(c: android.content.Context?): ReportPeriod? {
             return ReportPeriod((Tools.read(c))!!.optInt("periodStart", 1))
         }
     }

@@ -20,6 +20,10 @@ kotlin {
             languageSettings.optIn("androidx.compose.foundation.ExperimentalFoundationApi")
             languageSettings.optIn("org.jetbrains.compose.resources.ExperimentalResourceApi")
         }
+        // JDK/Android look-alikes shared by both ports.
+        commonMain { kotlin.srcDir("../../platform/src/commonMain/kotlin") }
+        iosMain { kotlin.srcDir("../../platform/src/iosMain/kotlin") }
+        jvmMain { kotlin.srcDir("../../platform/src/jvmMain/kotlin") }
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)

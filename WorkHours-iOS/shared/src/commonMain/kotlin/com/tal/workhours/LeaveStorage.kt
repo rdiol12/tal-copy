@@ -6,8 +6,8 @@ import compat.text.*
 import compat.util.*
 import kotlin.concurrent.Volatile
 
-import compat.json.JSONArray
-import compat.json.JSONObject
+import org.json.JSONArray
+import org.json.JSONObject
 
 private fun encodeSickTiers(tiers: List<SickTier>) = JSONArray().apply { tiers.forEach { t ->
     put(JSONObject().put("days",t.days ?: JSONObject.NULL).put("pay",t.payPercent).put("debit",t.debitPercent))

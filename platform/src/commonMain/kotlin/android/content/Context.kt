@@ -1,28 +1,31 @@
-// Tiny look-alikes of the Android classes the app touches outside of Compose:
-// Context, SharedPreferences, AtomicFile, ContentResolver/Uri, Log.
-// They let the Android sources compile unchanged apart from their imports.
-package compat.android
+package android.content
 
+import compat.android.platformExportFile
 import compat.io.ByteArrayInputStream
 import compat.io.ByteArrayOutputStream
 import compat.io.File
-import compat.io.FileNotFoundException
 import compat.io.InputStream
 import compat.io.OutputStream
 import compat.io.platformCacheDirectory
 import compat.io.platformFilesDirectory
-import compat.json.JSONObject
+import compat.android.platformExcludeFromBackup
+import android.net.Uri
+import org.json.JSONObject
 
-class Context private constructor() {
-    val applicationContext: Context get() = this
+/**
+ * android.content.Context. There is one application context ([app]); an
+ * Activity is also a Context and shares the same files and preferences.
+ */
+open class Context protected constructor() {
+    val applicationContext: Context get() = app
     val baseContext: Context get() = this
     val filesDir: File get() = File(platformFilesDirectory())
     val cacheDir: File get() = File(platformCacheDirectory())
     /** Kept out of device backups (used for credentials and sync bookkeeping). */
     val noBackupFilesDir: File get() = File(filesDir, "no-backup").also { platformExcludeFromBackup(it.path) }
-    val contentResolver: ContentResolver = ContentResolver()
+    val contentResolver: ContentResolver get() = resolver
     fun getDatabasePath(name: String): File = File(File(filesDir, "databases").also { it.mkdirs() }, name)
-    val packageName: String get() = "com.tal.workhours"
+    val packageName: String get() = applicationId
 
     fun getSharedPreferences(name: String, mode: Int): SharedPreferences =
         preferences.getOrPut(name) { SharedPreferences(File(filesDir, "prefs-$name.json")) }
@@ -32,7 +35,11 @@ class Context private constructor() {
     companion object {
         const val MODE_PRIVATE = 0
         /** The single application context. */
+        @JvmField
         val app: Context = Context()
+        private val resolver = ContentResolver()
+        /** Shown as the bundle/package name; set by each app at startup. */
+        var applicationId: String = "app"
         /** Installed by the app's localization layer. */
         var stringResolver: (Int, Array<out Any?>) -> String = { id, _ -> "#$id" }
         private val preferences = HashMap<String, SharedPreferences>()
@@ -70,34 +77,8 @@ class SharedPreferences internal constructor(private val file: File) {
     }
 }
 
-/** android.util.AtomicFile: a write either replaces the file completely or not at all. */
-class AtomicFile(val baseFile: File) {
-    private class Pending : ByteArrayOutputStream()
-
-    fun startWrite(): OutputStream = Pending()
-    fun finishWrite(stream: OutputStream?) {
-        val pending = stream as? Pending ?: return
-        baseFile.writeBytes(pending.toByteArray())
-    }
-    fun failWrite(stream: OutputStream?) {}
-    fun openRead(): InputStream {
-        if (!baseFile.exists()) throw FileNotFoundException("${baseFile.path} (No such file or directory)")
-        return ByteArrayInputStream(baseFile.readBytes())
-    }
-    fun readFully(): ByteArray = baseFile.readBytes()
-    fun delete() { baseFile.delete() }
-}
-
-/**
- * Stand-in for a document Uri. An export Uri collects the bytes the app writes
- * and hands them to the system "save file" sheet when the stream is closed; an
- * import Uri carries the bytes of the file the user picked.
- */
-class Uri internal constructor(internal val name: String, internal val mime: String, internal val bytes: ByteArray?) {
-    override fun toString(): String = "document:$name"
-}
-
 class ContentResolver internal constructor() {
+    @JvmOverloads
     fun openOutputStream(uri: Uri, mode: String = "w"): OutputStream? = object : ByteArrayOutputStream() {
         private var closed = false
         override fun close() {
@@ -109,29 +90,3 @@ class ContentResolver internal constructor() {
     fun openInputStream(uri: Uri): InputStream? = uri.bytes?.let { ByteArrayInputStream(it) }
 }
 
-object Log {
-    fun d(tag: String, message: String): Int { println("D/$tag: $message"); return 0 }
-    fun i(tag: String, message: String): Int { println("I/$tag: $message"); return 0 }
-    fun w(tag: String, message: String): Int { println("W/$tag: $message"); return 0 }
-    fun w(tag: String, message: String, error: Throwable?): Int { println("W/$tag: $message ${error?.message.orEmpty()}"); return 0 }
-    fun e(tag: String, message: String): Int { println("E/$tag: $message"); return 0 }
-    fun e(tag: String, message: String, error: Throwable?): Int { println("E/$tag: $message ${error?.message.orEmpty()}"); return 0 }
-}
-
-@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.FUNCTION, AnnotationTarget.PROPERTY, AnnotationTarget.LOCAL_VARIABLE, AnnotationTarget.FIELD)
-@Retention(AnnotationRetention.SOURCE)
-annotation class StringRes
-
-@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.FUNCTION, AnnotationTarget.PROPERTY, AnnotationTarget.LOCAL_VARIABLE, AnnotationTarget.FIELD)
-@Retention(AnnotationRetention.SOURCE)
-annotation class DrawableRes
-
-// ---- Platform hooks ----
-/** Shows the system sheet for saving [bytes] as a file named [name]. */
-expect fun platformExportFile(name: String, mime: String, bytes: ByteArray)
-/** Creates the directory if needed and marks it as not to be included in device backups. */
-expect fun platformExcludeFromBackup(directory: String)
-/** Calls back whenever the app comes to the foreground / goes to the background. */
-expect fun platformObserveForeground(onForeground: () -> Unit, onBackground: () -> Unit)
-/** Lets the user pick a file; calls back with its bytes, or null if cancelled. */
-expect fun platformImportFile(mimeTypes: List<String>, onResult: (ByteArray?) -> Unit)

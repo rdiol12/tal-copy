@@ -1,6 +1,6 @@
 // Pure-Kotlin stand-in for org.json as shipped with Android (same method
 // names, same coercion rules, insertion-ordered keys, same number output).
-package compat.json
+package org.json
 
 class JSONException(message: String) : RuntimeException(message)
 
@@ -122,14 +122,19 @@ class JSONObject() {
     fun get(name: String): Any = map[name] ?: throw JSONException("No value for $name")
 
     fun getBoolean(name: String): Boolean = get(name).let { toBoolean(it) ?: typeMismatch(name, it, "boolean") }
+    @JvmOverloads
     fun optBoolean(name: String, fallback: Boolean = false): Boolean = toBoolean(opt(name)) ?: fallback
     fun getDouble(name: String): Double = get(name).let { toDouble(it) ?: typeMismatch(name, it, "double") }
+    @JvmOverloads
     fun optDouble(name: String, fallback: Double = Double.NaN): Double = toDouble(opt(name)) ?: fallback
     fun getInt(name: String): Int = get(name).let { toInt(it) ?: typeMismatch(name, it, "int") }
+    @JvmOverloads
     fun optInt(name: String, fallback: Int = 0): Int = toInt(opt(name)) ?: fallback
     fun getLong(name: String): Long = get(name).let { toLong(it) ?: typeMismatch(name, it, "long") }
+    @JvmOverloads
     fun optLong(name: String, fallback: Long = 0L): Long = toLong(opt(name)) ?: fallback
     fun getString(name: String): String = get(name).let { toText(it) ?: typeMismatch(name, it, "String") }
+    @JvmOverloads
     fun optString(name: String, fallback: String = ""): String = toText(opt(name)) ?: fallback
     fun getJSONArray(name: String): JSONArray = get(name).let { it as? JSONArray ?: typeMismatch(name, it, "JSONArray") }
     fun optJSONArray(name: String): JSONArray? = opt(name) as? JSONArray
@@ -157,19 +162,23 @@ class JSONObject() {
 
     companion object {
         /** Sentinel for an explicit JSON null, as in org.json. */
+        @JvmField
         val NULL: Any = object {
             override fun equals(other: Any?): Boolean = other === this || other == null
             override fun hashCode(): Int = 0
             override fun toString(): String = "null"
         }
 
+        @JvmStatic
         fun quote(data: String?): String {
             if (data == null) return "\"\""
             return StringBuilder().also { writeString(it, data) }.toString()
         }
 
-        fun numberToString(number: Number): String = compat.json.numberToString(number)
+        @JvmStatic
+        fun numberToString(number: Number): String = org.json.numberToString(number)
 
+        @JvmStatic
         fun wrap(value: Any?): Any? = when (value) {
             null -> NULL
             is JSONObject, is JSONArray, is Boolean, is Number, is String -> value
@@ -211,14 +220,19 @@ class JSONArray() {
     }
 
     fun getBoolean(index: Int): Boolean = get(index).let { toBoolean(it) ?: typeMismatch(index, it, "boolean") }
+    @JvmOverloads
     fun optBoolean(index: Int, fallback: Boolean = false): Boolean = toBoolean(opt(index)) ?: fallback
     fun getDouble(index: Int): Double = get(index).let { toDouble(it) ?: typeMismatch(index, it, "double") }
+    @JvmOverloads
     fun optDouble(index: Int, fallback: Double = Double.NaN): Double = toDouble(opt(index)) ?: fallback
     fun getInt(index: Int): Int = get(index).let { toInt(it) ?: typeMismatch(index, it, "int") }
+    @JvmOverloads
     fun optInt(index: Int, fallback: Int = 0): Int = toInt(opt(index)) ?: fallback
     fun getLong(index: Int): Long = get(index).let { toLong(it) ?: typeMismatch(index, it, "long") }
+    @JvmOverloads
     fun optLong(index: Int, fallback: Long = 0L): Long = toLong(opt(index)) ?: fallback
     fun getString(index: Int): String = get(index).let { toText(it) ?: typeMismatch(index, it, "String") }
+    @JvmOverloads
     fun optString(index: Int, fallback: String = ""): String = toText(opt(index)) ?: fallback
     fun getJSONArray(index: Int): JSONArray = get(index).let { it as? JSONArray ?: typeMismatch(index, it, "JSONArray") }
     fun optJSONArray(index: Int): JSONArray? = opt(index) as? JSONArray

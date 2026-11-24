@@ -1,92 +1,15 @@
-// android.database look-alikes (SQLiteOpenHelper, SQLiteDatabase, Cursor,
-// ContentValues) on top of a tiny engine interface. The app installs the real
-// engine (the bundled SQLite driver) through Sqlite.opener at startup.
-package compat.android
+package android.database.sqlite
 
-import compat.io.File
-
-interface SqliteStatement {
-    /** Parameter indexes are 1-based, column indexes 0-based, as in SQLite. */
-    fun bindNull(index: Int)
-    fun bindLong(index: Int, value: Long)
-    fun bindDouble(index: Int, value: Double)
-    fun bindText(index: Int, value: String)
-    fun step(): Boolean
-    val columnCount: Int
-    fun columnName(index: Int): String
-    /** 1 = integer, 2 = float, 3 = text, 4 = blob, 5 = null. */
-    fun columnType(index: Int): Int
-    fun getLong(index: Int): Long
-    fun getDouble(index: Int): Double
-    fun getText(index: Int): String
-    fun close()
-}
-
-interface SqliteConnection {
-    fun prepare(sql: String): SqliteStatement
-    fun close()
-}
-
-object Sqlite {
-    /** Opens (creating if needed) the database file at the given path. */
-    var opener: (path: String) -> SqliteConnection = { error("No SQLite engine installed (set compat.android.Sqlite.opener)") }
-}
+import android.content.ContentValues
+import android.content.Context
+import android.database.Cursor
+import compat.android.Sqlite
+import compat.android.SqliteConnection
+import compat.android.SqliteStatement
 
 class SQLiteException(message: String, cause: Throwable? = null) : RuntimeException(message, cause)
 
-class ContentValues {
-    internal val values = LinkedHashMap<String, Any?>()
-    fun put(key: String, value: String?) { values[key] = value }
-    fun put(key: String, value: Int?) { values[key] = value?.toLong() }
-    fun put(key: String, value: Long?) { values[key] = value }
-    fun put(key: String, value: Double?) { values[key] = value }
-    fun put(key: String, value: Boolean?) { values[key] = value?.let { if (it) 1L else 0L } }
-    fun putNull(key: String) { values[key] = null }
-    fun get(key: String): Any? = values[key]
-    fun containsKey(key: String): Boolean = values.containsKey(key)
-    fun keySet(): MutableSet<String> = values.keys
-    fun size(): Int = values.size
-    fun remove(key: String) { values.remove(key) }
-    fun clear() = values.clear()
-}
-
-/** A fully-read result set. */
-class Cursor internal constructor(private val names: List<String>, private val rows: List<Array<Any?>>) : AutoCloseable {
-    private var position = -1
-    val count: Int get() = rows.size
-    val columnCount: Int get() = names.size
-    val columnNames: Array<String> get() = names.toTypedArray()
-
-    fun moveToFirst(): Boolean { position = 0; return rows.isNotEmpty() }
-    fun moveToNext(): Boolean { if (position < rows.size) position++; return position < rows.size }
-    fun moveToPosition(target: Int): Boolean { position = target.coerceIn(-1, rows.size); return target in rows.indices }
-    fun getColumnIndex(name: String): Int = names.indexOfFirst { it.equals(name, ignoreCase = true) }
-    fun getColumnIndexOrThrow(name: String): Int = getColumnIndex(name).also { if (it < 0) throw IllegalArgumentException("column '$name' does not exist") }
-    fun getColumnName(index: Int): String = names[index]
-    private fun value(index: Int): Any? {
-        if (position !in rows.indices) throw IndexOutOfBoundsException("Cursor index $position requested, with a size of ${rows.size}")
-        return rows[position][index]
-    }
-    fun getType(index: Int): Int = when (value(index)) {
-        null -> FIELD_TYPE_NULL; is Long -> FIELD_TYPE_INTEGER; is Double -> FIELD_TYPE_FLOAT; is String -> FIELD_TYPE_STRING; else -> FIELD_TYPE_BLOB
-    }
-    fun isNull(index: Int): Boolean = value(index) == null
-    fun getLong(index: Int): Long = when (val v = value(index)) { null -> 0L; is Long -> v; is Double -> v.toLong(); else -> v.toString().toLongOrNull() ?: v.toString().toDoubleOrNull()?.toLong() ?: 0L }
-    fun getInt(index: Int): Int = getLong(index).toInt()
-    fun getDouble(index: Int): Double = when (val v = value(index)) { null -> 0.0; is Double -> v; is Long -> v.toDouble(); else -> v.toString().toDoubleOrNull() ?: 0.0 }
-    fun getString(index: Int): String? = when (val v = value(index)) { null -> null; is Double -> if (v == v.toLong().toDouble() && kotlin.math.abs(v) < 1e15) v.toLong().toString() + ".0" else v.toString(); else -> v.toString() }
-    override fun close() {}
-
-    companion object {
-        const val FIELD_TYPE_NULL = 0
-        const val FIELD_TYPE_INTEGER = 1
-        const val FIELD_TYPE_FLOAT = 2
-        const val FIELD_TYPE_STRING = 3
-        const val FIELD_TYPE_BLOB = 4
-    }
-}
-
-class SQLiteDatabase internal constructor(private val connection: SqliteConnection) {
+class SQLiteDatabase(private val connection: SqliteConnection) {
     private var depth = 0
     private var successful = false
     private var failed = false
