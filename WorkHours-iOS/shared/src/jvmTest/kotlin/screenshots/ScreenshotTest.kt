@@ -73,8 +73,17 @@ class ScreenshotTest {
 
         runBlocking { repo.restore(sampleData()) }
         shot("02-home-en") { App() }
+        // Launcher icons, positions in dp (see 02-home-en.png).
+        shot("04-snapshot-en", taps = listOf(76 to 378)) { App() }
+        shot("05-summaries-en", taps = listOf(195 to 378)) { App() }
+        shot("06-entries-en", taps = listOf(313 to 378)) { App() }
+        shot("07-leave-en", taps = listOf(76 to 493)) { App() }
+        shot("08-backup-en", taps = listOf(313 to 493)) { App() }
+        shot("09-widgets-page-en", taps = listOf(241 to 668)) { App() }
+        shot("10-manual-entry-en", taps = listOf(302 to 746)) { App() }
         AppText.select("he")
         shot("03-home-he") { App() }
+        shot("11-snapshot-he", taps = listOf(313 to 378)) { App() }
         AppText.select("")
     }
 }
