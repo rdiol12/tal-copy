@@ -60,7 +60,7 @@ class ScreenshotTest {
             Shift(start = timestamp(day.atTime(9, 0)), end = timestamp(day.atTime(if (index % 2 == 0) 17 else 19, 30)),
                 location = if (index % 3 == 0) HOME else OFFICE)
         }
-        return AppData(shifts = shifts, settings = AppSettings(hourlyWage = 65.0), setupComplete = true)
+        return AppData(shifts = shifts, settings = AppSettings(hourlyWage = 65.0, monthlyHours = 182.0), setupComplete = true)
     }
 
     @Test
