@@ -1,0 +1,161 @@
+name: iOS build
+
+# Builds an UNSIGNED .ipa for each iOS port in this repository.
+# Sign it yourself before installing (Sideloadly, AltStore, or your own
+# certificate) - see README.md.
+#
+# Two stages, to keep the expensive macOS minutes to a minimum:
+#   1. check (Linux): unit tests + compiles the Kotlin code for iOS.
+#   2. ipa (macOS):   links the framework, runs xcodebuild, uploads the .ipa.
+
+on:
+  push:
+    branches: [main, ios-port]
+    paths:
+      - "WorkHours-iOS/**"
+      - "PocketFlow-iOS/**"
+      - ".github/workflows/ios.yml"
+  workflow_dispatch:
+    inputs:
+      configuration:
+        description: "Build configuration"
+        type: choice
+        options: [Release, Debug]
+        default: Release
+      skip_ipa:
+        description: "Only run the Linux check (no macOS minutes)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  CONFIGURATION: ${{ inputs.configuration || 'Release' }}
+
+jobs:
+  check:
+    name: Check ${{ matrix.app.name }} (Linux)
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        app:
+          - { name: WorkHours, dir: WorkHours-iOS }
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.konan
+          key: konan-${{ runner.os }}-${{ hashFiles(format('{0}/gradle/libs.versions.toml', matrix.app.dir)) }}
+
+      - name: Unit tests (JVM)
+        working-directory: ${{ matrix.app.dir }}
+        run: ./gradlew :composeApp:jvmTest --stacktrace
+
+      - name: Compile Kotlin for iOS
+        working-directory: ${{ matrix.app.dir }}
+        run: ./gradlew :composeApp:compileKotlinIosArm64 --stacktrace
+
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.app.name }}-test-reports
+          path: ${{ matrix.app.dir }}/composeApp/build/reports
+          if-no-files-found: ignore
+
+  ipa:
+    name: Build ${{ matrix.app.name }} .ipa (macOS)
+    needs: check
+    if: ${{ !inputs.skip_ipa }}
+    runs-on: macos-26
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        app:
+          - { name: WorkHours, dir: WorkHours-iOS }
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.konan
+          key: konan-${{ runner.os }}-${{ hashFiles(format('{0}/gradle/libs.versions.toml', matrix.app.dir)) }}
+
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          java -version
+
+      - name: Link Kotlin framework
+        working-directory: ${{ matrix.app.dir }}
+        run: ./gradlew ":composeApp:link${CONFIGURATION}FrameworkIosArm64" --stacktrace
+
+      - name: Generate Xcode project
+        working-directory: ${{ matrix.app.dir }}/iosApp
+        run: |
+          which xcodegen || brew install xcodegen
+          xcodegen generate
+
+      - name: Build app (unsigned)
+        working-directory: ${{ matrix.app.dir }}
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project iosApp/iosApp.xcodeproj \
+            -scheme iosApp \
+            -configuration "$CONFIGURATION" \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$PWD/build/DerivedData" \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            build 2>&1 | tee xcodebuild.log | grep -E "error|warning: |BUILD|PhaseScriptExecution|> Task|FAILED" || true
+          grep -q "BUILD SUCCEEDED" xcodebuild.log
+
+      - name: Package .ipa
+        working-directory: ${{ matrix.app.dir }}
+        run: |
+          APP_PATH=$(find "build/DerivedData/Build/Products/${CONFIGURATION}-iphoneos" -maxdepth 1 -name '*.app' | head -n 1)
+          test -d "$APP_PATH"
+          rm -rf out && mkdir -p out/Payload
+          cp -R "$APP_PATH" out/Payload/
+          (cd out && zip -qry "${{ matrix.app.name }}-unsigned.ipa" Payload)
+          ls -lh out/*.ipa
+          du -sh "$APP_PATH"
+
+      - name: Upload .ipa
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.app.name }}-unsigned-ipa
+          path: ${{ matrix.app.dir }}/out/*.ipa
+          if-no-files-found: error
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.app.name }}-xcodebuild-log
+          path: ${{ matrix.app.dir }}/xcodebuild.log
+          if-no-files-found: ignore
