@@ -102,6 +102,10 @@ class ScreenshotTest {
             shot("16-salary-from-shifthours")
             assertEquals(1, Screen.dialogs.size)
             home()
+            // The same link from another app (SalaryPro), with its own source name.
+            IncomingLinks.handle("pocketflow://income?amount=7200.00&month=2026-11&date=2026-12-01&done=0&source=SalaryPro&merchant=%D7%9E%D7%A9%D7%9B%D7%95%D7%A8%D7%AA")
+            settle(); assertEquals(1, Screen.dialogs.size)
+            home()
             tap("launcher-app-1")
             shot("17-movements-in-work-hours")
             home()

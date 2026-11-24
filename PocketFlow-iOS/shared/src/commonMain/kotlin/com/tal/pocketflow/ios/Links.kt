@@ -1,5 +1,6 @@
 // Links into the app (iOS only):
 //   pocketflow://income?amount=8450.00&month=2026-11&date=2026-12-01&done=1&wage=5512   salary sent by ShiftHours
+//     (&source=SalaryPro when another app sends it; the default source is ShiftHours)
 //   pocketflow://expense?amount=45.90&merchant=Cafe&card=Visa                            a Wallet tap, via Shortcuts
 //   pocketflow://widget/movement | rule | account                                        the home-screen widgets
 // Either one opens the new-movement form filled in; nothing is saved until the user confirms.
@@ -38,7 +39,9 @@ object IncomingLinks {
                 val cents = parseCents(query["amount"].orEmpty())
                 require(cents > 0) { "חסר סכום" }
                 val month = query["month"].orEmpty()
-                val marker = if (month.isEmpty()) "" else "ShiftHours $month"
+                // The sending app names itself (ShiftHours by default), so each source keeps its own entry per month.
+                val source = query["source"].orEmpty().trim().ifEmpty { "ShiftHours" }
+                val marker = if (month.isEmpty()) "" else "$source $month"
                 val note = listOf(marker, query["note"].orEmpty()).filter { it.isNotEmpty() }.joinToString(" · ")
                 activity.openLinkedMovement("income", cents, date, query["merchant"] ?: "משכורת", note, "", marker, query["done"] != "0")
             }
