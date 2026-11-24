@@ -1,6 +1,7 @@
 // Links into the app (iOS only):
 //   pocketflow://income?amount=8450.00&month=2026-11&date=2026-12-01&done=1&wage=5512   salary sent by ShiftHours
 //   pocketflow://expense?amount=45.90&merchant=Cafe&card=Visa                            a Wallet tap, via Shortcuts
+//   pocketflow://widget/movement | rule | account                                        the home-screen widgets
 // Either one opens the new-movement form filled in; nothing is saved until the user confirms.
 // "wage" (agorot per hour) lets expenses also be shown as hours of work.
 package com.tal.pocketflow
@@ -46,6 +47,9 @@ object IncomingLinks {
                 require(cents > 0) { "חסר סכום" }
                 activity.openLinkedMovement("expense", cents, date, query["merchant"].orEmpty().trim(), query["note"].orEmpty(), query["card"].orEmpty(), "", true)
             }
+            // The home-screen widgets: the same quick actions as the Android widgets.
+            "widget/movement", "widget/rule", "widget/account" ->
+                activity.hostNewIntent(android.content.Intent().putExtra(WidgetActions.EXTRA, action.substringAfter('/')))
             "shifthours" -> Toast.makeText(activity, "הנתונים מ־ShiftHours עודכנו", Toast.LENGTH_SHORT).show()
             else -> throw IllegalArgumentException(action)
         }

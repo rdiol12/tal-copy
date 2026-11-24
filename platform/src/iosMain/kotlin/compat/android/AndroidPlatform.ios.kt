@@ -102,3 +102,29 @@ actual fun platformAuthenticate(reason: String, onResult: (Boolean) -> Unit) {
         platform.darwin.dispatch_async(platform.darwin.dispatch_get_main_queue()) { onResult(success) }
     }
 }
+
+actual fun platformRequestNotifications(onResult: (Boolean) -> Unit) {
+    val options = platform.UserNotifications.UNAuthorizationOptionAlert or platform.UserNotifications.UNAuthorizationOptionSound
+    platform.UserNotifications.UNUserNotificationCenter.currentNotificationCenter().requestAuthorizationWithOptions(options) { granted, _ ->
+        platform.darwin.dispatch_async(platform.darwin.dispatch_get_main_queue()) { onResult(granted) }
+    }
+}
+
+actual fun platformScheduleNotifications(prefix: String, notices: List<ScheduledNotice>) {
+    val center = platform.UserNotifications.UNUserNotificationCenter.currentNotificationCenter()
+    center.getPendingNotificationRequestsWithCompletionHandler { pending ->
+        val stale = pending.orEmpty().mapNotNull { (it as? platform.UserNotifications.UNNotificationRequest)?.identifier }.filter { it.startsWith(prefix) }
+        if (stale.isNotEmpty()) center.removePendingNotificationRequestsWithIdentifiers(stale)
+        for (notice in notices) {
+            val content = platform.UserNotifications.UNMutableNotificationContent()
+            content.setTitle(notice.title)
+            content.setBody(notice.body)
+            content.setSound(platform.UserNotifications.UNNotificationSound.defaultSound)
+            val at = platform.Foundation.NSDateComponents()
+            at.year = notice.year.toLong(); at.month = notice.month.toLong(); at.day = notice.day.toLong()
+            at.hour = notice.hour.toLong(); at.minute = notice.minute.toLong()
+            val trigger = platform.UserNotifications.UNCalendarNotificationTrigger.triggerWithDateMatchingComponents(at, false)
+            center.addNotificationRequest(platform.UserNotifications.UNNotificationRequest.requestWithIdentifier(prefix + notice.id, content, trigger), null)
+        }
+    }
+}

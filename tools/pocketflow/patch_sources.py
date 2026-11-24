@@ -65,6 +65,10 @@ EDITS += [
     ("MainActivity", r'hint\(summary,"סה״כ הוצאות שבוצעו"\);TextView total=bold\(money\(expense\),32,palette\.onContainer\);total\.setTag\("movements-total"\);summary\.addView\(total\);', 'hint(summary,"סה״כ הוצאות שבוצעו");TextView total=bold(money(expense),32,palette.onContainer);total.setTag("movements-total");summary.addView(total);if(!workHours(expense).isEmpty())hint(summary,workHours(expense));'),
     ("MainActivity", r'LinearLayout planning=card\(body\);title\(planning,"תזכורות ותכנון"\);', WALLET_CARD + 'LinearLayout planning=card(body);title(planning,"תזכורות ותכנון");'),
 ]
+EDITS += [
+    # Reminders are planned ahead as local notifications on iOS (ios/ReminderJob.kt).
+    ("MainActivity", r"toast\(\"תזכורות פעילות\. נדרשת הרשאת התראות; התזמון נתון להגבלות Android\.\"\);", 'toast("תזכורות פעילות. יש לאשר התראות; התזכורות מתעדכנות בכל פתיחה של האפליקציה.");'),
+]
 
 def main():
     source, work, names = pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2]), sys.argv[3:]

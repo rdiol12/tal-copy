@@ -3898,7 +3898,7 @@ open class MainActivity : android.app.Activity {
                 requestPermissions(arrayOf<String>("android.permission.POST_NOTIFICATIONS"), 702)
             }
             com.tal.pocketflow.ReminderJob.schedule(this)
-            toast("תזכורות פעילות. נדרשת הרשאת התראות; התזמון נתון להגבלות Android.")
+            toast("תזכורות פעילות. יש לאשר התראות; התזכורות מתעדכנות בכל פתיחה של האפליקציה.")
         }))
         planning!!.addView(button("ביטול תזכורות במכשיר", false, compat.j.Runnable l171@{
             (((getSharedPreferences("reminder-local", 0))!!.edit())!!.putBoolean("enabled", false))!!.apply()

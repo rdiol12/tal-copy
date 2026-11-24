@@ -18,3 +18,10 @@ expect fun platformOpenUrl(url: String): Boolean
 expect fun platformDeviceSecure(): Boolean
 /** Asks for Face ID / Touch ID / the device passcode and reports the outcome on the main thread. */
 expect fun platformAuthenticate(reason: String, onResult: (Boolean) -> Unit)
+
+/** A local notification to show at a given wall-clock time. */
+class ScheduledNotice(val id: String, val title: String, val body: String, val year: Int, val month: Int, val day: Int, val hour: Int, val minute: Int)
+/** Asks the user to allow notifications (once; later calls report the stored answer). */
+expect fun platformRequestNotifications(onResult: (Boolean) -> Unit)
+/** Replaces every pending notification whose id starts with [prefix] by [notices]. */
+expect fun platformScheduleNotifications(prefix: String, notices: List<ScheduledNotice>)

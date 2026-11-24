@@ -64,6 +64,8 @@ targets:
           - $(inherited)
           - -framework
           - ComposeApp
+    dependencies:
+      - target: PocketFlowWidgets
     preBuildScripts:
       - name: Compile Kotlin Framework
         basedOnDependencyAnalysis: false
@@ -74,3 +76,28 @@ targets:
           fi
           cd "$SRCROOT/.."
           ./gradlew :composeApp:embedAndSignAppleFrameworkForXcode
+
+  # Home-screen widgets: quick actions that open the app through pocketflow://widget/... links.
+  PocketFlowWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: widgets
+    info:
+      path: widgets/Info.plist
+      properties:
+        CFBundleDisplayName: PocketFlow
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tal.pocketflow.widgets
+        PRODUCT_NAME: PocketFlowWidgets
+        GENERATE_INFOPLIST_FILE: "NO"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SKIP_INSTALL: "YES"
+    dependencies:
+      - sdk: SwiftUI.framework
+      - sdk: WidgetKit.framework

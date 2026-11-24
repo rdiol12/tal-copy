@@ -12,6 +12,7 @@ import com.tal.pocketflow.App
 import com.tal.pocketflow.IncomingLinks
 import com.tal.pocketflow.Store
 import com.tal.pocketflow.initializeApp
+import com.tal.pocketflow.upcomingReminders
 import compat.android.compose.disableViewAnimations
 import compat.time.LocalDate
 import org.jetbrains.skia.EncodedImageFormat
@@ -103,6 +104,18 @@ class ScreenshotTest {
             home()
             tap("launcher-app-1")
             shot("17-movements-in-work-hours")
+            home()
+
+            // A tap on the "standing order" button of the home-screen widget.
+            IncomingLinks.handle("pocketflow://widget/rule")
+            shot("18-widget-new-standing-order")
+            assertEquals(1, Screen.dialogs.size)
+            home()
+
+            // Reminders: planning the coming two weeks must work on real data (at most one notice per day).
+            val notices = upcomingReminders(Context.app, LocalDate.now(), 0)
+            assertTrue(notices.size <= 14)
+            assertEquals(notices.size, notices.map { it.id }.toSet().size)
         } finally {
             scene.close()
         }

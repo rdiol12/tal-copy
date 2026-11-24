@@ -39,6 +39,9 @@ fun initializeApp() {
     Context.applicationId = "com.tal.pocketflow"
     CompatResources.drawable = ::drawableResource
     installSqlite()
+    ReminderJob.upcoming = ::upcomingReminders
+    // Reminders are re-planned whenever the app is put away, so they reflect the latest data.
+    compat.android.platformObserveForeground({}, { runCatching { ReminderJob.schedule(Context.app) } })
 }
 
 /** Colours for the parts Android takes from the app theme (dialogs, check boxes, cursors). */

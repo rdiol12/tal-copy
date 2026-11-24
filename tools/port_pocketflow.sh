@@ -7,14 +7,14 @@
 # The Java code is type-checked against compiled Kotlin, so <classes> must hold the
 # JVM build of (1) the look-alikes in platform/ and (2) the hand-written files in
 # PocketFlow-iOS/shared/src/commonMain/kotlin/com/tal/pocketflow/ios that the Java
-# code refers to (R, AppLock, AndroidOnly). The Kotlin standard library and the
+# code refers to (R, AppLock, AndroidOnly, ReminderJob). The Kotlin standard library and the
 # JetBrains annotations jar complete the class path.
 #
 # tools/pocketflow/patch_sources.py lists the few edits made to the Java first
 # (Google sign-in and the Android job scheduler are taken out).
 #
 # Not converted: AppLock (rewritten for Face ID / passcode), the Google Drive
-# classes, ReminderJob and the home-screen widgets.
+# classes, ReminderJob (local notifications) and the widgets (WidgetKit, Swift).
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="$ROOT/upstream/PocketFlow-Android/app/src/main/java/com/tal/pocketflow"

@@ -1,5 +1,5 @@
-// Parts of the Android app that have no counterpart in this build: Google Drive backup,
-// the daily reminder job and the home-screen widgets. The screens still refer to them,
+// Parts of the Android app that have no counterpart in this build: Google Drive backup
+// and the Android side of the home-screen widgets. The screens still refer to them,
 // so they exist here with the same shape and do nothing.
 package com.tal.pocketflow
 
@@ -45,10 +45,6 @@ internal class DriveTask(context: Context?, @kotlin.jvm.JvmField val action: Str
     }
 }
 
-internal object ReminderJob {
-    @kotlin.jvm.JvmStatic fun schedule(context: Context?) {}
-    @kotlin.jvm.JvmStatic fun cancel(context: Context?) {}
-}
 
 internal object WidgetActions {
     const val EXTRA = "pocketflow.widget.action"
