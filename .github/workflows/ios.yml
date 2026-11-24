@@ -177,6 +177,7 @@ jobs:
           done
           echo "Icon files:";       ls "$APP_PATH" | grep -i -E 'icon|Assets.car' || echo "  (none)"
           echo "Compose resources:"; find "$APP_PATH" -path '*compose-resources*' -type f | wc -l
+          echo "Extensions:";        ls "$APP_PATH/PlugIns" 2>/dev/null || echo "  (none)"
           lipo -info "$APP_PATH/$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$APP_PATH/Info.plist")"
 
       - name: Upload .ipa
