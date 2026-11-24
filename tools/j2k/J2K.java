@@ -856,6 +856,11 @@ public class J2K {
             List<String> args = argumentList(p, m, t.getArguments());
             String name = select instanceof MemberSelectTree ? ((MemberSelectTree) select).getIdentifier().toString() : select.toString();
             String typeArgs = "";
+            if (select instanceof MemberSelectTree && name.equals("clone") && args.isEmpty()) {
+                TreePath qp = child(child(p, select), ((MemberSelectTree) select).getExpression());
+                TypeMirror qt = typeOf(qp);
+                if (qt != null && qt.getKind() == TypeKind.ARRAY) return receiver(qp) + ".copyOf()";      // arrays have no clone() outside the JVM
+            }
             if (m == null) return (select instanceof MemberSelectTree ? receiver(child(child(p, select), ((MemberSelectTree) select).getExpression())) + "." : "") + id(name) + "(" + String.join(", ", args) + ")";
             TypeElement owner = (TypeElement) m.getEnclosingElement(); boolean isStatic = m.getModifiers().contains(Modifier.STATIC);
             String receiver;

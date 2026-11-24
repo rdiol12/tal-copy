@@ -9,7 +9,7 @@ import compat.util.*
 internal class LauncherLayout {
     private var slots: IntArray? = null
     internal constructor(saved: String?) : super() {
-        slots = DEFAULT!!.clone()
+        slots = DEFAULT!!.copyOf()
         var tokens: Array<String>? = saved!!.javaSplit(",", -1)
         if (((tokens!!.size) != (slots!!.size))) {
             return
@@ -26,8 +26,8 @@ internal class LauncherLayout {
         } catch (ignored: NumberFormatException) {
             return
         }
-        var actual: IntArray? = candidate!!.clone()
-        var expected: IntArray? = DEFAULT!!.clone()
+        var actual: IntArray? = candidate!!.copyOf()
+        var expected: IntArray? = DEFAULT!!.copyOf()
         compat.j.Arrays.sort(actual!!)
         compat.j.Arrays.sort(expected!!)
         if ((compat.j.Arrays.equals(actual!!, expected!!))) {
