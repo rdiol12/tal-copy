@@ -1,0 +1,42 @@
+package com.tal.workhours
+
+import kotlin.math.max
+import kotlin.math.min
+
+val nordicAfricaTaxCountries = setOf("NO", "ZA")
+
+/** Salary-only annual liabilities; country selection never establishes regional/individual eligibility. */
+fun estimateNordicAfricaNet(gross: Double, settings: AppSettings, year: Int): NetEstimate? {
+    val country = settings.taxCountry
+    if (country !in nordicAfricaTaxCountries || !supportsTaxYear(country, year) || settings.taxYear != year ||
+        settings.foreignProfileCountry != country || !gross.isFinite() || gross < 0) return null
+    val cash = settings.foreignMonthlyDeductions ?: return null
+    if (!cash.isFinite() || cash < 0 || cash > gross) return null
+    val annual = gross * 12
+    if (!annual.isFinite()) return null
+    if (country == "NO") {
+        if (settings.taxRegion != "NO-ORDINARY" || settings.noYouthStatus !in setOf("SELECTED", "NOT_SELECTED")) return null
+        val standardDeduction = min(annual * .46, 95700.0)
+        val base = max(0.0, annual - standardDeduction - 114540.0)
+        val youthDeduction = if (settings.noYouthStatus == "SELECTED") max(0.0, 125000.0 - max(0.0, annual - 345000.0) * .40) else 0.0
+        val incomeTax = max(0.0, base - youthDeduction) * .22
+        val stepTax = bandTax(annual, listOf(226100.0, 318300.0, 725050.0, 980100.0, 1467200.0, Double.POSITIVE_INFINITY),
+            listOf(0.0, .017, .04, .137, .168, .178))
+        val ni = min(annual * .076, max(0.0, annual - 99650.0) * .25)
+        // Liability estimate before tax-card withholding, prepaid tax and small-balance collection rules.
+        return NetEstimate(incomeTax / 12, ni / 12, 0.0, 0.0, 0.0, 0.0,
+            gross - (incomeTax + stepTax + ni) / 12 - cash, otherTax = stepTax / 12,
+            otherDeductions = cash, personalCredit = (base * .22 - incomeTax) / 12)
+    }
+    if (settings.zaUifStatus !in setOf("COVERED", "EXEMPT_LT24")) return null
+    // Years are income-year starts:2026 means SARS2027 tax year (March2026–February2027).
+    val caps = if (year == 2026) listOf(245100.0, 383100.0, 530200.0, 695800.0, 887000.0, 1878600.0, Double.POSITIVE_INFINITY)
+        else listOf(237100.0, 370500.0, 512800.0, 673000.0, 857900.0, 1817000.0, Double.POSITIVE_INFINITY)
+    val before = bandTax(annual, caps, listOf(.18, .26, .31, .36, .39, .41, .45))
+    val relief = min(before, if (year == 2026) 17820.0 else 17235.0)
+    val incomeTax = max(0.0, before - relief)
+    val uif = if (settings.zaUifStatus == "COVERED") min(gross, 17712.0) * .01 else 0.0
+    if (cash + uif > gross) return null
+    return NetEstimate(incomeTax / 12, uif, 0.0, 0.0, 0.0, 0.0,
+        gross - incomeTax / 12 - uif - cash, otherDeductions = cash, personalCredit = relief / 12)
+}

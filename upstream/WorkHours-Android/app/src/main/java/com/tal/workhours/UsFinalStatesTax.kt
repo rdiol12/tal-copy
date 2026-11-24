@@ -1,0 +1,101 @@
+package com.tal.workhours
+
+import kotlin.math.*
+
+/** Final 28 state choices. All amounts USD, ordinary full-year resident wages, 2026 ONLY.
+ * FINAL state base and nonrefundable reductions remain independently verified user inputs.
+ * CO/ID/VT have no automatic 2026 tariff here: require verified final annual state liability.
+ * Never substitute an old year or payroll-withholding table for a missing return tariff.
+ * Published rounded quotas are preserved where specified. This is a reserve, not a return.
+ * See TAX-SOURCES.md for official sources, income ceilings and excluded tax situations. */
+val remainingUsStates = listOf("AL", "AR", "CA", "CO", "CT", "DE", "HI", "ID", "KS", "MD",
+    "ME", "MN", "MO", "MT", "ND", "NE", "NJ", "NM", "NY", "OH", "OK", "OR", "RI", "SC", "VA", "VT", "WI", "WV")
+val verifiedLiabilityUsStates = setOf("CO", "ID", "VT")
+
+/** Tax at bracket START + rate on excess. Quotas may be legislatively rounded. */
+private data class UsTaxBand(val start: Double, val rate: Double, val quota: Double)
+private fun schedule(base: Double, starts: List<Double>, rates: List<Double>, quotas: List<Double>? = null, inclusiveStarts: Boolean = false): Double {
+    require(starts.size == rates.size && starts.first() == 0.0 && starts.zipWithNext().all { it.first < it.second })
+    val bands = starts.mapIndexed { i, start ->
+        val accumulated = quotas?.get(i) ?: (0 until i).sumOf { j -> (starts[j + 1] - starts[j]) * rates[j] }
+        UsTaxBand(start, rates[i], accumulated)
+    }
+    val band = bands.last { it.start == 0.0 || (if (inclusiveStarts) base >= it.start else base > it.start) }
+    return max(0.0, band.quota + (base - band.start) * band.rate)
+}
+
+internal fun remainingUsStateBeforeRelief(annual: Double, base: Double, region: String, joint: Boolean): Double? {
+    if (region !in remainingUsStates || region in verifiedLiabilityUsStates || !annual.isFinite() ||
+        !base.isFinite() || annual !in 0.0..1_000_000.0 || base !in 0.0..annual) return null
+    // Ordinary salary only, no AMT/special deductions, investments or other income.
+    // Gross equals state AGI before ordinary deductions in this intentionally narrow scope.
+    if (region == "CT" && annual > if (joint) 100000.0 else 50000.0) return null
+    if (region == "NY" && annual > 107650.0) return null // excludes benefit recapture, all statuses.
+    if (region == "AR" && annual > 94700.0) return null // excludes high-net-income table/adjustments.
+    return when (region) {
+        "AL" -> schedule(base, if (joint) listOf(0.0,1000.0,6000.0) else listOf(0.0,500.0,3000.0), listOf(.02,.04,.05))
+        "AR" -> schedule(base,listOf(0.0,5600.0,11200.0,16000.0,26400.0),listOf(0.0,.02,.03,.034,.037))
+        "CA" -> schedule(base, if (joint) listOf(0.0,22912.0,54314.0,85722.0,118996.0,150394.0,768218.0,921854.0,1536426.0)
+            else listOf(0.0,11456.0,27157.0,42861.0,59498.0,75197.0,384109.0,460927.0,768213.0),
+            listOf(.01,.02,.04,.06,.08,.093,.103,.113,.123),
+            if (joint) listOf(0.0,229.12,857.16,2113.48,4109.92,6621.76,64079.39,79903.90,149350.54)
+            else listOf(0.0,114.56,428.58,1056.74,2054.96,3310.88,32039.70,39951.95,74675.27))
+        "CT" -> schedule(base, if (joint) listOf(0.0,20000.0,100000.0) else listOf(0.0,10000.0,50000.0),listOf(.02,.045,.055))
+        "DE" -> schedule(base,listOf(0.0,2000.0,5000.0,10000.0,20000.0,25000.0,60000.0),listOf(0.0,.022,.039,.048,.052,.0555,.066))
+        "HI" -> schedule(base,if (joint) listOf(0.0,19200.0,28800.0,38400.0,48000.0,72000.0,96000.0,250000.0,350000.0,450000.0,550000.0,650000.0)
+            else listOf(0.0,9600.0,14400.0,19200.0,24000.0,36000.0,48000.0,125000.0,175000.0,225000.0,275000.0,325000.0),
+            listOf(.014,.032,.055,.064,.068,.072,.076,.079,.0825,.09,.10,.11),
+            if (joint) listOf(0.0,269.0,576.0,1104.0,1718.0,3350.0,5078.0,16782.0,24682.0,32932.0,41932.0,51932.0)
+            else listOf(0.0,134.0,288.0,552.0,859.0,1675.0,2539.0,8391.0,12341.0,16466.0,20966.0,25966.0))
+        "KS" -> schedule(base, listOf(0.0,if (joint) 46000.0 else 23000.0),listOf(.052,.0558))
+        "MD" -> schedule(base,if (joint) listOf(0.0,1000.0,2000.0,3000.0,150000.0,175000.0,225000.0,300000.0,600000.0,1200000.0)
+            else listOf(0.0,1000.0,2000.0,3000.0,100000.0,125000.0,150000.0,250000.0,500000.0,1000000.0),
+            listOf(.02,.03,.04,.0475,.05,.0525,.055,.0575,.0625,.065))
+        "ME" -> schedule(base,if (joint) listOf(0.0,54850.0,129750.0) else listOf(0.0,27400.0,64850.0),listOf(.058,.0675,.0715),
+            if (joint) listOf(0.0,3181.0,8237.0) else listOf(0.0,1589.0,4117.0), inclusiveStarts = true)
+        "MN" -> schedule(base,if (joint) listOf(0.0,48700.0,193480.0,337930.0) else listOf(0.0,33310.0,109430.0,203150.0),listOf(.0535,.068,.0785,.0985))
+        "MO" -> schedule(base,listOf(0.0,1348.0,2696.0,4044.0,5392.0,6740.0,8088.0,9436.0),listOf(0.0,.02,.025,.03,.035,.04,.045,.047),
+            listOf(0.0,0.0,27.0,61.0,101.0,148.0,202.0,263.0))
+        "MT" -> schedule(base,listOf(0.0,if (joint) 95000.0 else 47500.0),listOf(.047,.0565))
+        "ND" -> schedule(base,if (joint) listOf(0.0,82800.0,304850.0) else listOf(0.0,49575.0,250400.0),listOf(0.0,.0195,.025),
+            if (joint) listOf(0.0,0.0,4329.98) else listOf(0.0,0.0,3916.09))
+        "NE" -> schedule(base,if (joint) listOf(0.0,8250.0,49530.0,79800.0) else listOf(0.0,4130.0,24760.0,39900.0),listOf(.0246,.0351,.0455,.0455),
+            if (joint) listOf(0.0,202.95,1651.88,3029.16) else listOf(0.0,101.60,825.71,1514.58))
+        "NJ" -> {
+            if (annual <= if (joint) 20000.0 else 10000.0) 0.0
+            else if (joint) when {
+                base<=20000 -> base*.014
+                base<=50000 -> base*.0175-70
+                base<=70000 -> base*.0245-420
+                base<=80000 -> base*.035-1154.50
+                base<=150000 -> base*.05525-2775
+                base<=500000 -> base*.0637-4042.50
+                base<=1000000 -> base*.0897-17042.50
+                else -> base*.1075-34842.50
+            }.coerceAtLeast(0.0)
+            else when {
+                base<=20000 -> base*.014
+                base<=35000 -> base*.0175-70
+                base<=40000 -> base*.035-682.50
+                base<=75000 -> base*.05525-1492.50
+                base<=500000 -> base*.0637-2126.25
+                base<=1000000 -> base*.0897-15126.25
+                else -> base*.1075-32926.25
+            }.coerceAtLeast(0.0)
+        }
+        "NM" -> schedule(base,if (joint) listOf(0.0,8000.0,25000.0,50000.0,100000.0,315000.0)
+            else listOf(0.0,5500.0,16500.0,33500.0,66500.0,210000.0),listOf(.015,.032,.043,.047,.049,.059))
+        "NY" -> schedule(base,if (joint) listOf(0.0,17150.0,23600.0,27900.0,161550.0) else listOf(0.0,8500.0,11700.0,13900.0,80650.0),listOf(.039,.044,.0515,.054,.059),
+            if (joint) listOf(0.0,669.0,953.0,1174.0,8391.0) else listOf(0.0,332.0,473.0,586.0,4191.0))
+        "OH" -> if (base <= 26050.0) 0.0 else 332.0 + (base - 26050.0)*.0275
+        "OK" -> schedule(base,if (joint) listOf(0.0,7500.0,9800.0,14400.0) else listOf(0.0,3750.0,4900.0,7200.0),listOf(0.0,.025,.035,.045))
+        "OR" -> schedule(base,if (joint) listOf(0.0,9100.0,22800.0,250000.0) else listOf(0.0,4550.0,11400.0,125000.0),listOf(.0475,.0675,.0875,.099),
+            if (joint) listOf(0.0,432.0,1357.0,21237.0) else listOf(0.0,216.0,678.0,10618.0))
+        "RI" -> schedule(base,listOf(0.0,82050.0,186450.0),listOf(.0375,.0475,.0599),listOf(0.0,3076.88,8035.88))
+        "SC" -> schedule(base,listOf(0.0,30000.0),listOf(.0199,.0521))
+        "VA" -> schedule(base,listOf(0.0,3000.0,5000.0,17000.0),listOf(.02,.03,.05,.0575))
+        "WI" -> schedule(base,if (joint) listOf(0.0,20150.0,69260.0,443630.0) else listOf(0.0,15110.0,51950.0,332720.0),listOf(.035,.044,.053,.0765))
+        "WV" -> schedule(base,listOf(0.0,10000.0,25000.0,40000.0,60000.0),listOf(.0211,.0281,.0316,.0422,.0458))
+        else -> null
+    }
+}

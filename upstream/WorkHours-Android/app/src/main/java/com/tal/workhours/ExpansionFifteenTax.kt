@@ -1,0 +1,112 @@
+package com.tal.workhours
+
+import kotlin.math.abs
+import kotlin.math.max
+
+val expansionFifteenTaxCountries = setOf("MX", "BR", "CR", "GT", "DO", "KE", "RW", "UG", "ZM", "PK", "UZ", "KZ", "MA", "MD", "MK")
+val expansionFifteenAnnualCountries = expansionFifteenTaxCountries - setOf("BR", "CR")
+const val KAZAKHSTAN_MCI_2026 = 4325.0
+
+/** Published 2026 lower limits and fixed quotas, including statutory cent offsets. */
+internal fun mexico2026AnnualTax(base: Double): Double {
+    val lower = listOf(.01, 10135.12, 86022.12, 151176.20, 175735.67, 210403.70,
+        424353.98, 668840.15, 1276925.99, 1702567.98, 5107703.93)
+    val quotas = listOf(0.0, 194.59, 5051.37, 12140.13, 16069.64, 22282.14,
+        67981.92, 125485.07, 307910.81, 444116.23, 1601862.46)
+    val rates = listOf(.0192, .064, .1088, .16, .1792, .2136, .2352, .30, .32, .34, .35)
+    val i = lower.indexOfLast { base >= it }.coerceAtLeast(0)
+    return quotas[i] + max(0.0, base - lower[i]) * rates[i]
+}
+
+internal fun dominican2026AnnualTax(base: Double): Double = when {
+    base >= 867123.01 -> 79776.0 + (base - 867123.01) * .25
+    base >= 624329.01 -> 31216.0 + (base - 624329.01) * .20
+    base > 416220.01 -> (base - 416220.01) * .15
+    else -> 0.0
+}
+
+/** Brazil ordinary MONTHLY taxable payment only; 13th salary/separate tax events excluded. */
+internal fun brazil2026MonthlyTax(gross: Double, base: Double): Pair<Double, Double> {
+    // Compare complete bases: never subtract the simplified amount from an already-deducted base.
+    val taxable = minOf(base, max(0.0, gross - 607.20))
+    val before = max(0.0, when {
+        taxable > 4664.68 -> taxable * .275 - 908.73
+        taxable > 3751.05 -> taxable * .225 - 675.49
+        taxable > 2826.65 -> taxable * .15 - 394.16
+        taxable > 2428.80 -> taxable * .075 - 182.16
+        else -> 0.0
+    })
+    val reduction = minOf(before, when {
+        gross <= 5000.0 -> 312.89
+        gross < 7350.0 -> max(0.0, 978.62 - .133145 * gross)
+        else -> 0.0
+    })
+    return (before - reduction) to reduction
+}
+
+/** Verified annual bases; UG is an explicit 12-equal-taxable-month reserve, not variable-month PAYE. */
+internal fun expansionFifteenAnnualBeforeRelief(country: String, base: Double): Double = when (country) {
+    "MX" -> mexico2026AnnualTax(base)
+    "GT" -> bandTax(base, listOf(300000.0, Double.POSITIVE_INFINITY), listOf(.05, .07))
+    "DO" -> dominican2026AnnualTax(base)
+    "KE" -> bandTax(base, listOf(288000.0, 388000.0, 6000000.0, 9600000.0, Double.POSITIVE_INFINITY), listOf(.10, .25, .30, .325, .35))
+    "RW" -> bandTax(base, listOf(720000.0, 1200000.0, 2400000.0, Double.POSITIVE_INFINITY), listOf(0.0, .10, .20, .30))
+    "UG" -> bandTax(base, listOf(4020000.0, 4920000.0, 5820000.0, 120000000.0, Double.POSITIVE_INFINITY), listOf(0.0, .20, .25, .30, .40))
+    "ZM" -> bandTax(base, listOf(61200.0, 85200.0, 110400.0, Double.POSITIVE_INFINITY), listOf(0.0, .20, .30, .37))
+    "PK" -> bandTax(base, listOf(600000.0, 1200000.0, 2200000.0, 3200000.0, 4100000.0, 5600000.0, 7000000.0, Double.POSITIVE_INFINITY),
+        listOf(0.0, .01, .11, .20, .25, .29, .32, .35))
+    "UZ", "MD" -> base * .12
+    "KZ" -> bandTax(base, listOf(8500 * KAZAKHSTAN_MCI_2026, Double.POSITIVE_INFINITY), listOf(.10, .15))
+    "MA" -> bandTax(base, listOf(40000.0, 60000.0, 80000.0, 100000.0, 180000.0, Double.POSITIVE_INFINITY), listOf(0.0, .10, .20, .30, .34, .37))
+    "MK" -> base * .10
+    else -> error("Unsupported annual employment profile")
+}
+
+fun estimateExpansionFifteenNet(gross: Double, settings: AppSettings, year: Int): NetEstimate? {
+    val country = settings.taxCountry
+    if (country !in expansionFifteenTaxCountries || settings.foreignProfileCountry != country ||
+        !supportsTaxYear(country, year) || settings.taxYear != year || !gross.isFinite() || gross !in 0.0..1_000_000_000.0) return null
+    val cash = settings.foreignMonthlyDeductions ?: return null
+    if (!cash.isFinite() || cash < 0 || cash > gross) return null
+    var relief = 0.0
+    val tax = if (country == "CR") {
+        // Ordinary cash salary is the salary-tax base, BEFORE employee social deductions.
+        bandTax(gross, listOf(918000.0, 1347000.0, 2364000.0, 4727000.0, Double.POSITIVE_INFINITY), listOf(0.0, .10, .15, .20, .25))
+    } else {
+        val annual = settings.annualEmploymentGross ?: return null
+        if (!annual.isFinite() || annual !in 0.0..MAX_VERIFIED_ANNUAL_AMOUNT || annual < gross) return null
+        if (country == "BR") {
+            // Conservative scope below annual high-income regime; annual total includes 13th pay,
+            // but this ordinary monthly calculation must not include its separate payment in gross/base.
+            if (annual > 600000.0) return null
+            val base = settings.monthlyTaxableBase ?: return null
+            if (!base.isFinite() || base !in 0.0..gross) return null
+            val (due, reduction) = brazil2026MonthlyTax(gross, base)
+            relief = reduction
+            due
+        } else {
+            val base = settings.annualTaxableBase ?: return null
+            if (!base.isFinite() || base !in 0.0..annual) return null
+            val alreadyDeducted = when (country) {
+                "GT" -> 48000.0 + 3024.0 // 2026 EXTRA deduction; 2027 indexation not used.
+                "KZ" -> 360 * KAZAKHSTAN_MCI_2026
+                "MK" -> 131184.0
+                "MD" -> 29700.0
+                else -> 0.0
+            }
+            if (base > max(0.0, annual - alreadyDeducted) + .01) return null
+            if (country == "MD" && annual >= 360000.0) return null // conservative ordinary personal-allowance profile only
+            if (country == "PK" && annual > 10000000.0) return null // surcharge/super-tax cases excluded
+            if (country == "UG" && abs(annual - gross * 12) > .01) return null // no unequal gross months/bonuses in this first profile
+            if (country == "UZ" && abs(base - annual) > .01) return null // ordinary fully taxable salary, no special reliefs
+            // Subsidy recipients are excluded; this average-base gate is conservative but does NOT
+            // itself prove the required absence of subsidy eligibility in every calendar month.
+            if (country == "MX" && annual > 0 && base <= 137911.92) return null // 12*11492.66, avoid division at decimal boundary
+            val before = expansionFifteenAnnualBeforeRelief(country, base)
+            if (country == "KE") relief = minOf(before, 28800.0) / 12
+            before / 12 - relief
+        }
+    }
+    if (tax + cash > gross + .01) return null
+    return NetEstimate(tax, 0.0, 0.0, 0.0, 0.0, 0.0, max(0.0, gross - tax - cash), otherDeductions = cash, personalCredit = relief)
+}

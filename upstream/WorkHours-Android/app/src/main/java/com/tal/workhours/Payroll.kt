@@ -1,0 +1,308 @@
+package com.tal.workhours
+
+import java.time.*
+import java.util.UUID
+import kotlin.math.*
+
+const val OFFICE = "משרד"
+const val HOME = "בית"
+const val HOUR_MS = 3_600_000.0
+
+data class OvertimeTier(val hours: Double? = null, val percent: Double = 150.0)
+data class AppSettings(
+    val appearance: String = "SYSTEM",
+    val foreignTaxRelief: Double? = null,
+    val foreignMonthlyOtherTax: Double? = null,
+    val foreignAnnualVerifiedTax: Double? = null,
+    val taxPaymentDate: String = "",
+    val ecAnnualPersonalExpenses: Double? = null,
+    val pyAnnualTaxableReceipts: Double? = null,
+    val monthlyTaxableBase: Double? = null,
+    val annualEmploymentGross: Double? = null,
+    val sgCpfStatus: String = "",
+    val dkAnnualMunicipalBase: Double? = null,
+    val noYouthStatus: String = "",
+    val zaUifStatus: String = "",
+    val taxCountry: String = "IL",
+    val taxYear: Int = 2026,
+    val taxRegion: String = "",
+    val ukStandardProfile: Boolean = false,
+    val annualTaxableBase: Double? = null,
+    val auHospitalCover: String = "",
+    val nzIetcEligible: Boolean = false,
+    val usFilingStatus: String = "",
+    val usAnnualStateTaxableBase: Double? = null,
+    val usAnnualStateRelief: Double? = null,
+    val usMonthlyLocalTax: Double? = null,
+    val usAnnualVerifiedStateTax: Double? = null,
+    val foreignProfileCountry: String = "",
+    val foreignMonthlyDeductions: Double? = null,
+    val regularHours: Double = 8.0,
+    val tiers: List<OvertimeTier> = listOf(OvertimeTier(2.0, 125.0), OvertimeTier(null, 150.0)),
+    val globalSalary: Boolean = false,
+    val monthlySalary: Double = 0.0,
+    val monthlyHours: Double = 0.0,
+    val hourlyWage: Double = 0.0,
+    val periodStartDay: Int = 1,
+    val breakMode: String = "NONE",
+    val breakMinutes: Int = 30,
+    val deductHomeBreak: Boolean = false,
+    val creditPoints: Double? = null,
+    val pensionPercent: Double? = null,
+    val studyPercent: Double = 0.0,
+    val contributionBasis: String = "BASE",
+    val customBasis: Double = 0.0,
+    val pensionTaxCredit: Boolean = true,
+    val reasons: List<String> = emptyList(),
+    val workDays: Set<Int> = setOf(7, 1, 2, 3, 4),
+    val overtimeMode: String = "DAILY",
+    val weeklyRegularHours: Double = 0.0,
+    val monthlyRegularHours: Double = 0.0,
+    val weekStartDay: Int = 7,
+    val overtimeMonthBasis: String = "PAY_PERIOD"
+) {
+    val wage: Double get() = if (globalSalary) { if (monthlyHours > 0) monthlySalary / monthlyHours else 0.0 } else hourlyWage
+    fun validate(allowUnconfigured: Boolean = false) {
+        require(overtimeMode in setOf("DAILY", "WEEKLY", "MONTHLY") && overtimeMonthBasis in setOf("PAY_PERIOD", "CALENDAR") && weekStartDay in 1..7) { tr(R.string.ot_invalid) }
+        require(weeklyRegularHours.isFinite() && weeklyRegularHours in 0.0..168.0 && monthlyRegularHours.isFinite() && monthlyRegularHours in 0.0..744.0) { tr(R.string.ot_invalid) }
+        require((overtimeMode!="WEEKLY" || weeklyRegularHours>0) && (overtimeMode!="MONTHLY" || monthlyRegularHours>0)) { tr(R.string.ot_threshold_required) }
+        require(appearance in setOf("SYSTEM", "LIGHT", "DARK"))
+
+        require(listOfNotNull(foreignTaxRelief,foreignAnnualVerifiedTax).all { it.isFinite() && it in 0.0..MAX_VERIFIED_ANNUAL_AMOUNT })
+        require(foreignMonthlyOtherTax==null || (foreignMonthlyOtherTax.isFinite() && foreignMonthlyOtherTax in 0.0..1_000_000_000.0))
+        require(taxPaymentDate.isEmpty() || verifiedPaymentDate(taxPaymentDate) != null) { tr(R.string.tax_payment_date_invalid) }
+        require(ecAnnualPersonalExpenses == null || (ecAnnualPersonalExpenses.isFinite() && ecAnnualPersonalExpenses in 0.0..MAX_VERIFIED_ANNUAL_AMOUNT))
+        require(pyAnnualTaxableReceipts == null || (pyAnnualTaxableReceipts.isFinite() && pyAnnualTaxableReceipts in 0.0..MAX_VERIFIED_ANNUAL_AMOUNT))
+        require(monthlyTaxableBase == null || (monthlyTaxableBase.isFinite() && monthlyTaxableBase in 0.0..1_000_000_000.0))
+        require(annualEmploymentGross == null || (annualEmploymentGross.isFinite() && annualEmploymentGross in 0.0..MAX_VERIFIED_ANNUAL_AMOUNT))
+        require(sgCpfStatus in setOf("", "FULL", "FOREIGN"))
+        require(dkAnnualMunicipalBase == null || (dkAnnualMunicipalBase.isFinite() && dkAnnualMunicipalBase in 0.0..1_000_000_000.0))
+        require(noYouthStatus in setOf("", "SELECTED", "NOT_SELECTED"))
+        require(zaUifStatus in setOf("", "COVERED", "EXEMPT_LT24"))
+        require(usFilingStatus in setOf("", "SINGLE", "MFJ"))
+        require(listOfNotNull(usAnnualStateTaxableBase, usAnnualStateRelief, usAnnualVerifiedStateTax).all { it.isFinite() && it in 0.0..MAX_VERIFIED_ANNUAL_AMOUNT })
+        require(usMonthlyLocalTax == null || (usMonthlyLocalTax.isFinite() && usMonthlyLocalTax in 0.0..1_000_000_000.0))
+        require(foreignProfileCountry.isEmpty() || foreignProfileCountry in foreignTaxCountries)
+        require(annualTaxableBase == null || (annualTaxableBase.isFinite() && annualTaxableBase in 0.0..MAX_VERIFIED_ANNUAL_AMOUNT))
+        require(auHospitalCover in setOf("", "FULL", "NONE"))
+        require(foreignMonthlyDeductions == null || (foreignMonthlyDeductions.isFinite() && foreignMonthlyDeductions in 0.0..1_000_000_000.0))
+        require(taxCountries.any { it.code == taxCountry } && taxYear in 2000..2100 && taxRegion.length <= 20)
+        require(regularHours.isFinite() && regularHours > 0 && regularHours <= 24) { tr(R.string.text_93d815fab2) }
+        require(monthlySalary.isFinite() && monthlySalary >= 0 && hourlyWage.isFinite() && hourlyWage >= 0) { tr(R.string.text_9fdb0c0357) }
+        require(monthlyHours.isFinite() && monthlyHours >= 0 && monthlyHours <= 744 && (allowUnconfigured || monthlyHours > 0)) { tr(R.string.text_1020d02bcc) }
+        require(periodStartDay in 1..31) { tr(R.string.text_a3016d567d) }
+        require(tiers.isNotEmpty() && tiers.size <= 20 && tiers.last().hours == null && tiers.dropLast(1).all { it.hours != null }) { tr(R.string.text_a3b71b8576) }
+        require(tiers.all { (it.hours == null || (it.hours.isFinite() && it.hours > 0 && it.hours <= 744)) && it.percent.isFinite() && it.percent in 0.0..1000.0 }) { tr(R.string.text_11798e6af6) }
+        require(breakMode in setOf("NONE", "DAILY", "SEGMENT") && breakMinutes in 0..1440) { tr(R.string.text_142ed94880) }
+        require(creditPoints == null || (creditPoints.isFinite() && creditPoints in 0.0..100.0)) { tr(R.string.text_617d62c8d5) }
+        require(listOfNotNull(pensionPercent, studyPercent).all { it.isFinite() && it in 0.0..100.0 }) { tr(R.string.text_d64e9be198) }
+        require(contributionBasis in setOf("BASE", "GROSS", "CUSTOM") && customBasis.isFinite() && customBasis >= 0) { tr(R.string.text_e9ded22849) }
+        require(workDays.isNotEmpty() && workDays.all { it in 1..7 }) { tr(R.string.text_5340862757) }
+        require(reasons.size <= 500 && reasons.all { it.length <= 500 }) { tr(R.string.text_58ee2bc711) }
+    }
+}
+
+data class Shift(
+    val id: String = UUID.randomUUID().toString(),
+    val start: Long,
+    val end: Long,
+    val location: String,
+    val reason: String = "",
+    val note: String = "",
+    val source: String = "manual",
+    val workDate: String = Instant.ofEpochMilli(start).atZone(ZoneId.of("Asia/Jerusalem")).toLocalDate().toString(),
+    val recordedDurationMs: Long? = null
+)
+data class ActiveShift(val start: Long, val location: String, val reason: String = "", val note: String = "")
+data class AppData(
+    val shifts: List<Shift> = emptyList(),
+    val active: ActiveShift? = null,
+    val settings: AppSettings = AppSettings(),
+    val importedIds: Set<String> = emptySet(),
+    val importAttempted: Boolean = false,
+    val importReport: String = "",
+    val setupComplete: Boolean = false,
+    val leaveConfig: LeaveConfig = LeaveConfig(),
+    val leaveRecords: List<LeaveRecord> = emptyList(),
+    val leaveAdjustments: List<LeaveAdjustment> = emptyList()
+) {
+    fun validate() {
+        validateLeaveData(this)
+        settings.validate(allowUnconfigured = !setupComplete)
+        require(shifts.size <= 100_000 && shifts.map { it.id }.toSet().size == shifts.size) { tr(R.string.text_54904132d0) }
+        shifts.forEach {
+            require(it.start > 0 && it.end > it.start && it.location in setOf(OFFICE, HOME)) { tr(R.string.text_bccb639eb1) }
+            LocalDate.parse(it.workDate)
+            require(it.recordedDurationMs == null || (it.source == "excel" && it.recordedDurationMs > 0 && abs(it.recordedDurationMs - (it.end - it.start)) <= 7_200_000)) { tr(R.string.text_14afe878db) }
+            require(it.reason.length <= 2000 && it.note.length <= 5000) { tr(R.string.text_285af230e1) }
+        }
+        require(shifts.sortedBy { it.start }.zipWithNext().none { (a, b) -> a.end > b.start }) { tr(R.string.text_927652b634) }
+        active?.let { a ->
+            require(a.start > 0 && a.location in setOf(OFFICE, HOME) && shifts.none { it.end > a.start }) { tr(R.string.text_478ac0cba4) }
+        }
+    }
+}
+
+data class PayPeriod(val from: LocalDate, val until: LocalDate) {
+    fun contains(day: LocalDate) = day >= from && day < until
+    val end: LocalDate get() = until.minusDays(1)
+}
+
+fun periodStart(month: YearMonth, day: Int): LocalDate = month.atDay(min(day, month.lengthOfMonth()))
+fun periodFor(date: LocalDate, day: Int): PayPeriod {
+    var month = YearMonth.from(date)
+    if (date < periodStart(month, day)) month = month.minusMonths(1)
+    return PayPeriod(periodStart(month, day), periodStart(month.plusMonths(1), day))
+}
+fun periodFromMonth(month: YearMonth, day: Int) = PayPeriod(periodStart(month, day), periodStart(month.plusMonths(1), day))
+
+data class PaidPart(val shift: Shift, val netMs: Double, val regularMs: Double, val tierMs: List<Double>, val pay: Double)
+data class DayTotal(val day: LocalDate, val parts: List<PaidPart>, val settings: AppSettings) {
+    val totalMs get() = parts.sumOf { it.netMs }
+    val officeMs get() = parts.filter { it.shift.location == OFFICE }.sumOf { it.netMs }
+    val homeMs get() = totalMs - officeMs
+    val regularMs get() = parts.sumOf { it.regularMs }
+    val pay get() = parts.sumOf { it.pay }
+    val overtimePay get() = parts.sumOf { p -> p.tierMs.mapIndexed { i, ms -> ms / HOUR_MS * settings.wage * settings.tiers[i].percent / 100 }.sum() }
+    val tierMs get() = settings.tiers.indices.map { i -> parts.sumOf { it.tierMs[i] } }
+    val shortageMs get() = if (day.dayOfWeek.value in settings.workDays) max(0.0, settings.regularHours * HOUR_MS - totalMs) else 0.0
+    val officeShortageMs get() = max(0.0, settings.regularHours * HOUR_MS - officeMs)
+    val officeOvertimeMs get() = max(0.0, officeMs - settings.regularHours * HOUR_MS)
+}
+
+fun calculateDays(shifts: List<Shift>, settings: AppSettings): List<DayTotal> {
+    settings.validate(allowUnconfigured = true)
+    val bucketConsumed = mutableMapOf<LocalDate,Double>()
+    val threshold = overtimeThreshold(settings) * HOUR_MS
+    return shifts.groupBy { LocalDate.parse(it.workDate) }.toSortedMap().map { (day, entries) ->
+        var dailyBreakLeft = if (settings.breakMode == "DAILY") settings.breakMinutes * 60_000.0 else 0.0
+        val bucket = overtimeBucketStart(day,settings)
+        var consumed = bucketConsumed[bucket] ?: 0.0
+        val parts = entries.sortedBy { it.start }.map { shift ->
+            val raw = (shift.recordedDurationMs ?: (shift.end - shift.start)).toDouble()
+            val eligible = shift.location == OFFICE || settings.deductHomeBreak
+            val deducted = if (!eligible) 0.0 else when (settings.breakMode) {
+                "DAILY" -> min(raw, dailyBreakLeft).also { dailyBreakLeft -= it }
+                "SEGMENT" -> min(raw, settings.breakMinutes * 60_000.0)
+                else -> 0.0
+            }
+            val net = raw - deducted
+            val regular = min(net, max(0.0, threshold - consumed))
+            var left = net - regular
+            var previouslyUsed = max(0.0, consumed - threshold)
+            val bands = settings.tiers.map { tier ->
+                val capacity = tier.hours?.times(HOUR_MS)
+                val free = if (capacity == null) Double.POSITIVE_INFINITY else max(0.0, capacity - previouslyUsed)
+                val taken = min(left, free)
+                left -= taken
+                previouslyUsed = if (capacity == null) 0.0 else max(0.0, previouslyUsed - capacity)
+                taken
+            }
+            consumed += net
+            val pay = (regular + bands.mapIndexed { i, ms -> ms * settings.tiers[i].percent / 100 }.sum()) / HOUR_MS * settings.wage
+            PaidPart(shift, net, regular, bands, pay)
+        }
+        bucketConsumed[bucket] = consumed
+        DayTotal(day, parts, settings)
+    }
+}
+
+data class NetEstimate(val incomeTax: Double, val nationalInsurance: Double, val healthInsurance: Double, val pension: Double, val study: Double, val pensionCredit: Double, val net: Double, val otherTax: Double = 0.0, val otherDeductions: Double = 0.0, val regionalTax: Double = 0.0, val secondPension: Double = 0.0, val personalCredit: Double = 0.0)
+
+// Monthly estimate, 2026 salaried Israeli resident age 18 to retirement.
+// Sources and exclusions are documented in README-HE.md and shown in the app.
+fun estimateNet(gross: Double, basePay: Double, settings: AppSettings, year: Int, periodEnd: LocalDate? = null): NetEstimate? {
+    if (settings.taxCountry in nextTwentyTaxCountries) return estimateNextTwentyNet(gross,settings,year,periodEnd)
+    if (settings.taxCountry in expansionTwentyTaxCountries) return estimateExpansionTwentyNet(gross, settings, year, periodEnd)
+    if (settings.taxCountry in additionalFifteenTaxCountries) return estimateAdditionalFifteenNet(gross, settings, year)
+    if (settings.taxCountry in expansionFifteenTaxCountries) return estimateExpansionFifteenNet(gross, settings, year)
+    if (settings.taxCountry in expansionTenTaxCountries) return estimateExpansionTenNet(gross, settings, year)
+    if (settings.taxCountry in asiaFiveTaxCountries) return estimateAsiaFiveNet(gross, settings, year)
+    if (settings.taxCountry in polandCzechTaxCountries) return estimatePolandCzechNet(gross, settings, year)
+    if (settings.taxCountry in malaysiaPhilippinesTaxCountries) return estimateMalaysiaPhilippinesNet(gross, settings, year)
+    if (settings.taxCountry in singaporeDenmarkTaxCountries) return estimateSingaporeDenmarkNet(gross, settings, year)
+    if (settings.taxCountry in nordicAfricaTaxCountries) return estimateNordicAfricaNet(gross, settings, year)
+    if (settings.taxCountry in hourlyMarketTaxCountries) return estimateHourlyMarketNet(gross, settings, year)
+    if (settings.taxCountry in asiaSpainTaxCountries) return estimateAsiaSpainNet(gross, settings, year)
+    if (settings.taxCountry in furtherTaxCountries) return estimateFurtherCountryNet(gross, settings, year)
+    if (settings.taxCountry in setOf("US", "CA")) return estimateNorthAmericaNet(gross, settings, year)
+    if (settings.taxCountry in setOf("IN", "RU", "AE")) return estimateAdditionalCountryNet(gross, settings, year)
+    if (settings.taxCountry == "GB") return estimateUkNet(gross, settings, year)
+    if (settings.taxCountry != "IL" || settings.taxYear != year) return null
+    val points = settings.creditPoints ?: return null
+    val pensionPercent = settings.pensionPercent ?: return null
+    if (year != 2026) return null
+    val basis = when (settings.contributionBasis) {
+        "GROSS" -> gross
+        "CUSTOM" -> settings.customBasis
+        else -> basePay
+    }
+    val pension = basis * pensionPercent / 100
+    val study = basis * settings.studyPercent / 100
+    val caps = listOf(7010.0, 10060.0, 19000.0, 25100.0, 46690.0, 60130.0, Double.POSITIVE_INFINITY)
+    val rates = listOf(.10, .14, .20, .31, .35, .47, .50)
+    var previous = 0.0
+    val beforeCredits = caps.mapIndexed { i, cap ->
+        (min(gross, cap) - previous).coerceAtLeast(0.0).times(rates[i]).also { previous = cap }
+    }.sum()
+    val pensionCredit = if (settings.pensionTaxCredit) minOf(pension, gross * .07, 679.0) * .35 else 0.0
+    val tax = max(0.0, beforeCredits - points * 242.0 - pensionCredit)
+    val low = min(gross, 7703.0)
+    val high = max(0.0, min(gross, 51910.0) - 7703.0)
+    val national = low * .0104 + high * .07
+    val health = low * .0323 + high * .0517
+    return NetEstimate(tax, national, health, pension, study, pensionCredit, gross - tax - national - health - pension - study)
+}
+
+data class PeriodSummary(val days: List<DayTotal>, val settings: AppSettings, val period: PayPeriod, val leave: List<LeavePayment> = emptyList(), val officeOnlyOvertimeMs: Double? = null) {
+    val absenceHours get() = leave.sumOf { it.hours }
+    val absencePaidHours get() = leave.sumOf { it.paidHours }
+    val absencePay get() = absencePaidHours * settings.wage
+    val absenceDeduction get() = (absenceHours-absencePaidHours) * settings.wage
+    val totalMs get() = days.sumOf { it.totalMs }
+    val officeMs get() = days.sumOf { it.officeMs }
+    val homeMs get() = days.sumOf { it.homeMs }
+    val regularMs get() = days.sumOf { it.regularMs }
+    val tierMs get() = settings.tiers.indices.map { i -> days.sumOf { it.tierMs[i] } }
+    val overtimeMs get() = tierMs.sum()
+    val overtimePay get() = days.sumOf { it.overtimePay }
+    val basePay get() = if (settings.globalSalary) (settings.monthlySalary-absenceDeduction).coerceAtLeast(0.0) else regularMs / HOUR_MS * settings.wage + absencePay
+    val gross get() = basePay + overtimePay
+    val hourlyEquivalentPay get() = days.sumOf { it.pay }
+    val monthlyShortageMs get() = max(0.0, settings.monthlyHours * HOUR_MS - totalMs - absenceHours * HOUR_MS)
+    val dailyShortageMs get() = ((days.map { it.day } + leave.filterNot { it.record.isSettlement }.map { LocalDate.parse(it.record.date) }).distinct().sumOf { date ->
+        if(date.dayOfWeek.value !in settings.workDays) 0.0 else (settings.regularHours*HOUR_MS - (days.find { it.day==date }?.totalMs ?: 0.0) - leave.filter { !it.record.isSettlement && it.record.date==date.toString() }.sumOf { it.hours }*HOUR_MS).coerceAtLeast(0.0)
+    } - leave.filter { it.record.isSettlement }.sumOf { it.hours }*HOUR_MS).coerceAtLeast(0.0)
+    val officeShortageMs get() = days.sumOf { it.officeShortageMs }
+    val officeOvertimeMs get() = officeOnlyOvertimeMs ?: days.sumOf { it.officeOvertimeMs }
+    val missingDays get() = days.count { day -> day.parts.any { it.shift.note.contains("לא הוחתם") || it.shift.note.contains("חסרה החתמה") } }
+    val reasons get() = days.flatMap { it.parts }.filter { it.shift.location == HOME }.groupBy { it.shift.reason.ifBlank { tr(R.string.text_1ce0351978) } }
+    val net get() = estimateNet(gross, basePay, settings, taxYearFor(settings.taxCountry, period.end), period.end)
+}
+
+/** Location allocation of ALREADY calculated period bands; never restart thresholds per location. */
+data class LocationOvertime(val tierMs: List<Double>, val tierPay: List<Double>) {
+    val totalMs get() = tierMs.sum()
+    val totalPay get() = tierPay.sum()
+}
+
+fun PeriodSummary.overtimeAt(location: String): LocationOvertime {
+    require(location in setOf(OFFICE, HOME))
+    val milliseconds = settings.tiers.indices.map { i ->
+        days.sumOf { day -> day.parts.filter { it.shift.location == location }.sumOf { it.tierMs[i] } }
+    }
+    return LocationOvertime(milliseconds, milliseconds.mapIndexed { i, ms ->
+        ms / HOUR_MS * settings.wage * settings.tiers[i].percent / 100
+    })
+}
+
+fun summarize(data: AppData, period: PayPeriod, includeActiveUntil: Long? = null): PeriodSummary {
+    val active = data.active?.takeIf { includeActiveUntil != null && includeActiveUntil > it.start }?.let {
+        Shift(id = "active", start = it.start, end = includeActiveUntil!!, location = it.location, reason = it.reason, note = it.note)
+    }
+    val contextStart = overtimeBucketStart(period.from,data.settings)
+    val shifts = (data.shifts + listOfNotNull(active)).filter { LocalDate.parse(it.workDate).let { day -> day>=contextStart && day<period.until } }
+    val contextDays = calculateDays(shifts, data.settings)
+    return PeriodSummary(contextDays.filter {period.contains(it.day)}, data.settings, period,
+        leavePayments(data.leaveRecords).filter { period.contains(LocalDate.parse(it.record.date)) },officeOnlyOvertime(contextDays,data.settings,period))
+}

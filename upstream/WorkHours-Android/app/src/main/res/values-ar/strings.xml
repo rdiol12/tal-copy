@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="text_93d815fab2" formatted="false">"يجب أن تكون الساعات اليومية القياسية أكبر من 0 وليس أكثر من 24."</string>
+    <string name="text_9fdb0c0357" formatted="false">"يجب أن يكون الراتب صفرًا أو رقم إيجابي."</string>
+    <string name="text_1020d02bcc" formatted="false">"يجب أن يكون الهدف الساعي الشهري أكبر من 0 وليس أكثر من 744."</string>
+    <string name="text_a3016d567d" formatted="false">"يجب أن تكون الفترة اليوم الأول من 1 إلى 31."</string>
+    <string name="text_a3b71b8576" formatted="false">"يجب أن يغطي المستوى النهائي للساعات المتبقية."</string>
+    <string name="text_11798e6af6" formatted="false">"تحقق من ساعات الدرجة والرسوم المدفوعة."</string>
+    <string name="text_142ed94880" formatted="false">"إعدادات الانهيار غير صالحة."</string>
+    <string name="text_617d62c8d5" formatted="false">"نقاط الائتمان الضريبية غير صالحة."</string>
+    <string name="text_d64e9be198" formatted="false">"يجب أن تكون نسبة المساهمة بين 0 و 100."</string>
+    <string name="text_e9ded22849" formatted="false">"قاعدة الدفع غير صالحة."</string>
+    <string name="text_5340862757" formatted="false">"اختيار يوم عمل واحد على الأقل."</string>
+    <string name="text_58ee2bc711" formatted="false">"قائمة الأسباب طويلة جدا."</string>
+    <string name="text_54904132d0" formatted="false">"عدد الإدخالات أو الهوية غير صالح."</string>
+    <string name="text_bccb639eb1" formatted="false">"إدخال العمل المعاق."</string>
+    <string name="text_14afe878db" formatted="false">"المدة الأصلية غير صالحة."</string>
+    <string name="text_285af230e1" formatted="false">"نص الإدخال طويل جدا."</string>
+    <string name="text_927652b634" formatted="false">"ورقة العمل تتجاوز."</string>
+    <string name="text_478ac0cba4" formatted="false">"التغيير النشط يتجاوز الدخول الحالي."</string>
+    <string name="text_1ce0351978" formatted="false">"لا سبب محدد"</string>
+    <string name="text_0206a8d338" formatted="false">"لا يمكنك الاتصال حساب Google الخاص بك في الوقت الحالي.يمكنك استرداد الملف ومحاولة مرة أخرى في وقت لاحق."</string>
+    <string name="text_630af90bc5" formatted="true">"لم يتم منح تصريح Google (الرمز %1$s).إعادة توصيل أو استخدام نسخة احتياطية من ملف."</string>
+    <string name="text_daf10c2ee5" formatted="false">"فشل العملية، تم الحفاظ على بياناتك المحلية."</string>
+    <string name="text_25b395415b" formatted="false">"نسخة احتياطية تم حفظها بنجاح إلى Google Drive."</string>
+    <string name="text_fc021a3be3" formatted="false">"لم يتم العثور على نسخ احتياطية من ShiftHours في هذا الحساب."</string>
+    <string name="text_439ed2ca59" formatted="false">"متصلة بـ Google Drive"</string>
+    <string name="text_7480a74f74" formatted="false">"تم إلغاء الاتصال.لم يتم إجراء نسخة احتياطية أو استرداد."</string>
+    <string name="text_514e675d10" formatted="false">"لم يتم منح الوصول إلى القيادة."</string>
+    <string name="text_325ca3ec59" formatted="false">"لم يتم منح تصريح القيادة."</string>
+    <string name="text_5862cd4663" formatted="false">"غير قادر على فتح ملف الوجهة."</string>
+    <string name="text_a8df08ecdf" formatted="false">"نسخة النسخ الاحتياطي الملف محفوظة."</string>
+    <string name="text_04bb2141d5" formatted="false">"غير قادر على قراءة الملف."</string>
+    <string name="text_5e9b8b7914" formatted="false">"نسخة النسخ الاحتياطي كبيرة جدا."</string>
+    <string name="text_221ac78111" formatted="false">"نسخ النسخ الاحتياطي واستعادة"</string>
+    <string name="text_806ac63619" formatted="false">"احفظ ساعات عملك عند الانتقال إلى هاتف جديد."</string>
+    <string name="text_55d63892ad" formatted="false">"جوجل Drive"</string>
+    <string name="text_e5444dccaf" formatted="false">"لا حساب مختار"</string>
+    <string name="text_0a2305a775" formatted="false">"يتم عرض نسخة احتياطية ناجحة فقط بعد الانتهاء من التحميل."</string>
+    <string name="text_2fc9030263" formatted="false">"قم بتوصيل الحساب وإعطاء الوصول."</string>
+    <string name="text_cd0e41e136" formatted="false">"اختيار حساب / إعادة الاتصال"</string>
+    <string name="text_6f3a7bda3a" formatted="false">"الاتصال بـ Google Drive"</string>
+    <string name="text_15109258b9" formatted="false">"العودة إلى القيادة الآن"</string>
+    <string name="text_c75c1e3a33" formatted="false">"اختر نسخة احتياطية من Drive لاستعادة"</string>
+    <string name="text_90b7df067a" formatted="false">"لا يوجد نسخة احتياطية من Drive قد تم الانتهاء منها لهذا الحساب حتى الآن."</string>
+    <string name="text_1c2b595825" formatted="true">"آخر نسخة احتياطية ناجحة: %1$s %2$s"</string>
+    <string name="text_32640ad12e" formatted="false">"يتم تخزين نسخ النسخ الاحتياطي في مجلد بيانات التطبيقات المخفية في Drive ، وليس كملفات عادية.إعادة التدوير على هاتف جديد ، قم بتثبيت نفس التطبيق وربط نفس حساب Google."</string>
+    <string name="text_ea1a07b6ef" formatted="false">"النسخ الاحتياطي التلقائي"</string>
+    <string name="text_8edcd28553" formatted="false">"متوقف"</string>
+    <string name="text_ef4037576b" formatted="false">"يومي"</string>
+    <string name="text_50296d4c2d" formatted="false">"أسبوعي"</string>
+    <string name="text_790f24eb34" formatted="false">"نسخة النسخ الاحتياطي الجدول الزمني محدث."</string>
+    <string name="text_e75e2661b7" formatted="false">"فقط على شبكة غير مقياس، مثل Wi-Fi"</string>
+    <string name="text_cf3d313652" formatted="false">"يمكن لـ Android تأخير نسخ النسخ الاحتياطية لتخزين البطارية أو عندما تكون غير متصلة.استخدم الزر أعلاه لإنشاء أول نسخة احتياطية على الفور."</string>
+    <string name="text_1e579b05be" formatted="false">"تم إلغاء الاتصال المحلي وإلغاء الجدول الزمني.لم يتم حذف نسخ النسخ الاحتياطية الموجودة."</string>
+    <string name="text_83eccb0dd3" formatted="false">"إلغاء الاتصال وإلغاء الجدول الزمني"</string>
+    <string name="text_b35a854e22" formatted="false">"نسخة احتياطية من الملفات واستعادة"</string>
+    <string name="text_1da6e0d4aa" formatted="false">"حفظ نسخة احتياطية من ملف النسخ الاحتياطي على جهاز الكمبيوتر الخاص بك، في محرك الأقراص، أو في أي مكان آخر، حتى قبل إعداد اتصال Google التطبيق."</string>
+    <string name="text_52cca61a5d" formatted="false">"حفظ النسخ الاحتياطي نسخ الملف"</string>
+    <string name="text_4d2b863edd" formatted="false">"استعادة من النسخ الاحتياطي نسخ الملف"</string>
+    <string name="text_f4ab9db1a0" formatted="false">"وتشمل نسخ النسخ الاحتياطي الإدخالات، والانتقال النشط، والإعدادات، والأسباب التي تم حفظها.قبل الاسترداد، يتم عرض نظرة مسبقة ويتم حفظ نسخة محلية من البيانات السابقة الخاصة بك."</string>
+    <string name="text_86472e4d43" formatted="false">"افتح النسخة المحفوظة قبل آخر إعادة التدوير"</string>
+    <string name="text_bf72e99186" formatted="true">"يحتوي هذا الجهاز على %1$s إدخالات.إعادة توصيل Google وإعداد جدول النسخ الاحتياطي على كل هاتف."</string>
+    <string name="text_b5af650c8c" formatted="false">"وضع الاسترداد: لا يمكن قراءة البيانات المحلية.استرداد من ملف أو محرك أقراص؛ يتم تعطيل إنشاء نسخ احتياطية جديدة."</string>
+    <string name="text_f738c4c045" formatted="false">"نسخ النسخ الاحتياطية المتاحة"</string>
+    <string name="text_c775e7dcf6" formatted="false">"لا توجد نسخ احتياطية في الحساب المحدد."</string>
+    <string name="text_b728721fc0" formatted="false">"قريبة"</string>
+    <string name="text_835ba611ee" formatted="false">"تأكيد استعادة"</string>
+    <string name="text_bfe0764274" formatted="true">"نسخة احتياطية تحتوي على %1$s الإدخالات."</string>
+    <string name="text_19a88cf185" formatted="true">"نطاق: %1$s إلى %2$s"</string>
+    <string name="text_ea12a4ba2b" formatted="false">"لا أحد"</string>
+    <string name="text_1f70207bab" formatted="false">"نعم"</string>
+    <string name="text_3cbbf0077a" formatted="true">"الوردية النشطة: %1$s"</string>
+    <string name="text_2388ed2d80" formatted="true">"ستحل الاستعادة محل %1$s من السجلات وإعدادات هذا الجهاز. ستُحفظ نسخة محلية أولاً."</string>
+    <string name="text_f35658ed7c" formatted="false">"إعادة التدوير كاملة"</string>
+    <string name="text_a87c9f4c06" formatted="false">"استبدال البيانات واستعادة"</string>
+    <string name="text_a7c55a8d06" formatted="false">"إلغاء"</string>
+    <string name="text_7b80593224" formatted="false">"الملف كبير جداً."</string>
+    <string name="text_b36a3090e4" formatted="false">"هذا النسخة الاحتياطية غير متوافقة مع هذا الإصدار التطبيق."</string>
+    <string name="text_1d25b4e13f" formatted="false">"هذا ليس نسخة احتياطية من ShiftHours مدعومة."</string>
+    <string name="text_c84389ddd1" formatted="false">"تم تدمير نسخة النسخ الاحتياطي: فشل التحقق من سلامة."</string>
+    <string name="text_2159b4a358" formatted="false">"نسخة غير معروفة من البيانات السابقة."</string>
+    <string name="text_4ae6ec8fa0" formatted="false">"لم يتم تحميل البيانات حتى الآن."</string>
+    <string name="text_cf903e3463" formatted="false">"إدخال رقم صالح"</string>
+    <string name="text_039bb0fc27" formatted="false">"إدخال الوقت كساعات: دقائق أو ساعات عشرة."</string>
+    <string name="text_a7fcad5418" formatted="false">"عدد ساعات الإعاقة."</string>
+    <string name="text_37e2eed494" formatted="false">"عدد الدقائق المفقودة."</string>
+    <string name="text_77c0279c02" formatted="false">"فترة الإعاقة تبدأ اليوم."</string>
+    <string name="text_3f800b0cce" formatted="false">"فترة الإعاقة نهاية اليوم."</string>
+    <string name="text_14611081ea" formatted="false">"يجب أن يسبق اليوم النهائي بداية الفترة التالية."</string>
+    <string name="text_b9e104411d" formatted="false">"إدخال وقت الفراغ في دقائق كاملة."</string>
+    <string name="text_2189089fc9" formatted="false">"تحقق من الإعدادات"</string>
+    <string name="text_81de798264" formatted="false">"مرحبا بك"</string>
+    <string name="text_47cfdefbce" formatted="false">"إعدادات"</string>
+    <string name="text_8d74344d70" formatted="false">"حدد شروط العمل الخاصة بك وتوفير للبدء."</string>
+    <string name="text_9a90a562d2" formatted="false">"حفظ التغييرات"</string>
+    <string name="text_ab4dfe20aa" formatted="false">"ينطبق على جميع الإدخالات، بما في ذلك الإدخالات السابقة."</string>
+    <string name="text_0bf5310554" formatted="false">"الادخار..."</string>
+    <string name="text_54d36ad080" formatted="false">"حفظ الإعدادات"</string>
+    <string name="text_465e8134a4" formatted="false">"الأجر والساعات الإضافية"</string>
+    <string name="text_45a3198e62" formatted="false">"فترة و انقطاع"</string>
+    <string name="text_bfc0c0e7f1" formatted="false">"الضرائب والمساهمات"</string>
+    <string name="text_a2ceeb919c" formatted="false">"السبب المحفوظ"</string>
+    <string name="text_3d0ffbb6b9" formatted="false">"نوع الأجر"</string>
+    <string name="text_9852666700" formatted="false">"الراتب الشهري الثابت"</string>
+    <string name="text_c17956962e" formatted="false">"الراتب الشهري الإجمالي (₪)"</string>
+    <string name="text_55bc5d12cc" formatted="false">"الراتب الساعي ( ₪ )"</string>
+    <string name="text_635f53e8e3" formatted="false">"الساعات الشهرية المطلوبة من صاحب العمل"</string>
+    <string name="text_8b4c4a643c" formatted="false">"الراتب الشهري = الراتب الشهري ÷ الراتب الشهري الهدف.الراتب الإجمالي يشمل الراتب الشهري الكامل بالإضافة إلى المدفوعات الزائدة في المعدلات المحددة."</string>
+    <string name="text_7414d91b15" formatted="false">"يتم حساب الراتب الإجمالي من الساعات المسجلة والأطراف الثالثة المحددة."</string>
+    <string name="text_8a239ab302" formatted="false">"شرائح الساعات الإضافية"</string>
+    <string name="text_0fea91c3a0" formatted="false">"ساعات منتظمة يوميا"</string>
+    <string name="text_996add3cb0" formatted="false">"إدخال ساعات عشرة أو ساعات: دقائق، مثل 2.5 أو 2:30."</string>
+    <string name="text_b779c7c572" formatted="true">"الشريحة %1$s"</string>
+    <string name="text_25606d5652" formatted="false">"كل الساعات المتبقية"</string>
+    <string name="text_92102dc8df" formatted="false">"ساعات في هذا المستوى"</string>
+    <string name="text_b5fe6f82a9" formatted="false">"النسبة المئوية من معدل الساعة"</string>
+    <string name="text_bd38859717" formatted="false">"هذا المستوى ينطبق بعد ساعات منتظمة وجميع الأطراف فوقه."</string>
+    <string name="text_5192d415d8" formatted="false">"انتقل إلى الأعلى"</string>
+    <string name="text_6179185b49" formatted="false">"انتقل إلى أسفل"</string>
+    <string name="text_7c8173fafa" formatted="false">"حذف"</string>
+    <string name="text_f428ab9623" formatted="false">"إضافة شريحة"</string>
+    <string name="text_f1f14874a4" formatted="false">"تحتاج إلى مستوى واحد بالضبط \"كل الساعات المتبقية\" ، في الترتيب النهائي.إضافة مستوى يحد من المستوى السابق ؛ تحقق من ساعاته."</string>
+    <string name="text_89fef4fd58" formatted="false">"فترة الإبلاغ"</string>
+    <string name="text_6c22041108" formatted="false">"اليوم الأول من الفترة (1-31)"</string>
+    <string name="text_796e34b83e" formatted="false">"اليوم الأخير (31 = نهاية الشهر)"</string>
+    <string name="text_b241433b46" formatted="false">"يتم ربط الأيام لتجنب الفجوات أو الارتباك ، على سبيل المثال 25-24.في شهر قصير ، يتم تعديل تاريخ البدء إلى اليوم الأخير المتاح."</string>
+    <string name="text_a222187697" formatted="true">"المدة الحالية: %1$s – %2$s"</string>
+    <string name="text_01f30eb896" formatted="false">"انقطاع الإعفاءات"</string>
+    <string name="text_c9beca5709" formatted="false">"تكرار كسر الوقت"</string>
+    <string name="text_a123134aa5" formatted="false">"مرة واحدة في اليوم"</string>
+    <string name="text_26dcd5cc53" formatted="false">"حسب القسم"</string>
+    <string name="text_fa4922c12a" formatted="false">"دقائق للخروج"</string>
+    <string name="text_ff7f573a4d" formatted="false">"أيضًا إزالة الفراغات عند العمل من المنزل"</string>
+    <string name="text_143dd7316a" formatted="false">"يتم تخفيض الفراغ اليومي مرة واحدة عبر القطاعات المؤهلة في الترتيب الزمني. يتم استبعاد العمل المنزلي عندما يكون خيارها مفتوحا."</string>
+    <string name="text_40494acb7f" formatted="false">"لا تخفيضات.كل الوقت المسجل يعتبر وقتا مدفوعا."</string>
+    <string name="text_8a53041f32" formatted="false">"أوقات العمل لعدم وجود عيوب يومية"</string>
+    <string name="text_b6c4c767eb" formatted="false">"الأحد"</string>
+    <string name="text_c0505c1097" formatted="false">"الاثنين"</string>
+    <string name="text_7b5b7d0c90" formatted="false">"الثلاثاء"</string>
+    <string name="text_88aa0681e1" formatted="false">"الأربعاء"</string>
+    <string name="text_c2742c4cba" formatted="false">"الخميس"</string>
+    <string name="text_08e0ffcda5" formatted="false">"الجمعة"</string>
+    <string name="text_0645b32caf" formatted="false">"السبت"</string>
+    <string name="text_92d73e83f6" formatted="false">"وتؤثر فقط على العيوب اليومية.تطبق نفس العروض الزائدة في جميع الأيام؛ لا توجد قواعد عطلة نهاية الأسبوع أو عطلة منفصلة."</string>
+    <string name="text_69e69a7518" formatted="false">"نقاط الائتمان الضريبي والراتب الصافي المتوقع"</string>
+    <string name="text_70d7cd14f1" formatted="false">"نقاط الائتمان الضريبي (من paylip الخاص بك)"</string>
+    <string name="text_9987c69efd" formatted="false">"تبلغ قيمة كل نقطة 242 ₪ شهريًا وفق جدول الضرائب الإسرائيلي لعام 2026."</string>
+    <string name="text_8cee38323a" formatted="false">"صندوق التقاعد والتدريب"</string>
+    <string name="text_9982697de0" formatted="false">"مساهمة التقاعد العامل (%)"</string>
+    <string name="text_3638d5596d" formatted="false">"مساهمة صندوق تدريب الموظفين (%؛ 0 إذا لم يكن هناك)"</string>
+    <string name="text_90b68945c0" formatted="false">"إدخال حصة الموظف فقط، باستثناء مساهمات صاحب العمل."</string>
+    <string name="text_e2e16aa700" formatted="false">"قاعدة الدفع للمساهمات"</string>
+    <string name="text_dc959b16aa" formatted="false">"الأجور الأساسية باستثناء الزمن الزائد"</string>
+    <string name="text_682c0e2622" formatted="false">"إجمالي الراتب"</string>
+    <string name="text_3f55564e26" formatted="false">"المبلغ المحدد يدويًا"</string>
+    <string name="text_0d4b9a288d" formatted="false">"قاعدة الدفع (₪)"</string>
+    <string name="text_3284189b89" formatted="false">"إدراج الائتمان الضريبي للمساهمات التقاعدية القياسية"</string>
+    <string name="text_0b5e7d7238" formatted="false">"ويبلغ تقدير الائتمان الضريبي للتقاعد 35% من الإيرادات المؤهلة، يبلغ 679 ₪ من الإيرادات الشهرية و 7% من الأجور."</string>
+    <string name="text_102196cdf2" formatted="false">"ما يشمل التقديرات"</string>
+    <string name="text_c02d9dbae9" formatted="false">"ضريبة الدخل، نقاط الائتمان الضريبي، التأمين الوطني الإسرائيلي والرعاية الصحية، والمساهمات الموظفين.استخدام جدول 2026 للمقيمين الإسرائيليين الذين تزيد أعمارهم عن 18 عاما للتقاعد."</string>
+    <string name="text_a09a8853d1" formatted="false">"استبعاد التنسيق الضريبي، وغيرها من الإيرادات، والفوائد الضريبية للسيارات، والضرائب على مساهمة صاحب العمل، والائتمان الخاص."</string>
+    <string name="text_49148d6451" formatted="false">"الأسباب المطلوبة للعمل من المنزل"</string>
+    <string name="text_62d649ad15" formatted="false">"سبب جديد"</string>
+    <string name="text_45bd96d34b" formatted="false">"إضافة إلى القائمة"</string>
+    <string name="text_a99e68e9f4" formatted="false">"إزالة"</string>
+    <string name="text_1b581c283a" formatted="false">"إزالة السبب المحفوظ لا يغير الإدخالات الموجودة.يمكنك دائمًا إدخال النص المجاني."</string>
+    <string name="text_d44063b451" formatted="false">"فشل تحميل البيانات."</string>
+    <string name="text_31e02fbfa7" formatted="false">"لم يتم إنقاذ التغيير، حاول مرة أخرى."</string>
+    <string name="text_71f28ff8fa" formatted="false">"عدم القدرة على تحميل البيانات"</string>
+    <string name="text_b238f1a394" formatted="false">"تم الحفاظ على الملفات.لا تقم بحذف بيانات التطبيق."</string>
+    <string name="text_fc2297f319" formatted="false">"حاول مرة أخرى"</string>
+    <string name="text_6e56c6a002" formatted="false">"استعادة نسخة احتياطية"</string>
+    <string name="text_e4f2184a47" formatted="false">"تحقق من ساعة الجهاز: تنتهي الدخول في المستقبل."</string>
+    <string name="text_6f6a3321b0" formatted="false">"يجب أن يكون وقت النهاية بعد وقت البدء."</string>
+    <string name="text_e0aad7a0c2" formatted="false">"تم حفظ الإعدادات."</string>
+    <string name="text_8dfb4f3f58" formatted="false">"الدخول ينقذ."</string>
+    <string name="text_7a6915a25c" formatted="false">"لا يمكنك تسجيل الساعات التي لم تحدث بعد."</string>
+    <string name="text_2aca9c2968" formatted="false">"ساعة في الوقت لا يمكن أن يكون في المستقبل."</string>
+    <string name="text_f9dc75319d" formatted="false">"إلغاء الدخول"</string>
+    <string name="text_f026fe8829" formatted="true">"إلغاء إدخال %1$s؟ لا يمكن إلغاء ذلك."</string>
+    <string name="text_b0e3328ac0" formatted="false">"أسباب العمل من المنزل"</string>
+    <string name="text_f1af79973d" formatted="false">"اختار سببًا محفظًا"</string>
+    <string name="text_05d94bc43f" formatted="false">"ساعات العمل الخاصة بي"</string>
+    <string name="text_c83e648a74" formatted="false">"الإعداد الأولي"</string>
+    <string name="text_89c15910b6" formatted="false">"حدد راتبك، والساعات الشهرية، ووقت العمل لتسمح بحسابات الأجور.يمكنك تسجيل الساعات قبل الانتهاء من الإعداد."</string>
+    <string name="text_7c1126f30f" formatted="false">"إعدادات مفتوحة"</string>
+    <string name="text_01ebd1a71f" formatted="false">"هل أنت مستعد للبدء؟"</string>
+    <string name="text_6d81f53fb4" formatted="true">"وردية جارية · %1$s"</string>
+    <string name="text_8b6488028e" formatted="false">"اسحب لبدء وردية في الوقت الحالي."</string>
+    <string name="text_c386f7af9f" formatted="true">"بدء العمل: %1$s %2$s"</string>
+    <string name="text_bc84ae26be" formatted="false">"اسحب لإنهاء الوردية في الوقت الحالي."</string>
+    <string name="text_73a90395c7" formatted="false">"اسحب لبدء العمل"</string>
+    <string name="text_867983500d" formatted="false">"اسحب لإنهاء العمل"</string>
+    <string name="text_a5d8698fba" formatted="false">"دخول الساعة الصحيحة / إعداد وقت آخر"</string>
+    <string name="text_1efd4660f9" formatted="false">"إضافة وردية يدويًا"</string>
+    <string name="text_79a7f1d677" formatted="false">"يتم حفظ ساعة في الوقت حتى عند إغلاق التطبيق."</string>
+    <string name="text_95d86d7f5f" formatted="false">"اليوم"</string>
+    <string name="text_6834f9db87" formatted="false">"صافي الساعات"</string>
+    <string name="text_b076df1539" formatted="false">"يتم الجمع بين الأجزاء في نفس اليوم.الانتقال عبر الليل ينتمي إلى تاريخ بدءه."</string>
+    <string name="text_7991cbb6a8" formatted="false">"الفترة الحالية"</string>
+    <string name="text_3084f001bd" formatted="false">"الساعات المسجلة"</string>
+    <string name="text_7447d177b1" formatted="false">"الساعات الإضافية"</string>
+    <string name="text_e2cbeabb69" formatted="false">"الراتب الكامل + ساعات العمل الزائدة المسجلة"</string>
+    <string name="text_4c0803b36f" formatted="false">"الراتب الإجمالي من الدخول"</string>
+    <string name="text_389abd9ee8" formatted="false">"سوف تظهر مجموعات الدفع بعد حفظ الإيداعات الأولية."</string>
+    <string name="text_1960680292" formatted="false">"نسخة النسخ الاحتياطي"</string>
+    <string name="text_dd6ddc4c4f" formatted="false">"لا يوجد نسخة احتياطية من Drive قد تم الانتهاء منها على هذا الجهاز حتى الآن."</string>
+    <string name="text_1c3f9e273d" formatted="true">"نسخة النسخ الاحتياطي الناجح: %1$s %2$s"</string>
+    <string name="text_6e55aef91f" formatted="false">"النسخ الاحتياطي اليومي المقرر"</string>
+    <string name="text_17ee444b2e" formatted="false">"نسخة النسخ الاحتياطي الأسبوعية المقررة"</string>
+    <string name="text_d7da1ab695" formatted="false">"النسخ الاحتياطي التلقائي محرك الأقراص مغلقة"</string>
+    <string name="text_bba88dd845" formatted="false">"الإعدادات والإجراءات متوفرة في علامة التبويب نسخ النسخ الاحتياطي أدناه."</string>
+    <string name="text_d61f7f639f" formatted="false">"السابق"</string>
+    <string name="text_28890b291d" formatted="false">"التالي"</string>
+    <string name="text_023f8a1a0c" formatted="false">"نظرة عامة"</string>
+    <string name="text_0cdf398747" formatted="false">"ساعات الدفع والتتبع لفترة"</string>
+    <string name="text_5b40d10b38" formatted="false">"الراتب الشهري + العمل الزائد"</string>
+    <string name="text_b7cebc21b4" formatted="false">"ساعات الدفع"</string>
+    <string name="text_24c64cee7b" formatted="false">"الراتب الشهري الكامل"</string>
+    <string name="text_1558a05606" formatted="false">"ساعات الدفع العادية"</string>
+    <string name="text_5407314942" formatted="false">"الراتب الزائد"</string>
+    <string name="text_ebff026858" formatted="false">"سعر الساعة"</string>
+    <string name="text_f072356bdc" formatted="false">"يتم عرض الأوقات المفقودة بشكل منفصل ولا يتم تخفيضها تلقائيًا."</string>
+    <string name="text_d7fec4855e" formatted="false">"يشمل ساعات التغيير النشط خلال هذه الفترة؛ كميات التحديث الحي."</string>
+    <string name="text_087fd2cd6d" formatted="false">"ساعات الانهيار"</string>
+    <string name="text_3eb92e199a" formatted="false">"إجمالي الوقت الصافي"</string>
+    <string name="text_07b643f83a" formatted="false">"الساعات العادية"</string>
+    <string name="text_dda62e1cc9" formatted="false">"إجمالي الساعات الإضافية"</string>
+    <string name="text_27fa002b22" formatted="true">"الساعات بنسبة %1$s%%"</string>
+    <string name="text_0d562e6527" formatted="true">"الأجر بنسبة %1$s%%"</string>
+    <string name="text_b93940ad5b" formatted="false">"ساعات زائدة الوزن"</string>
+    <string name="text_aa79d639a1" formatted="false">"المكتب والمنزل"</string>
+    <string name="text_b895b63363" formatted="false">"ساعات المكتب"</string>
+    <string name="text_bf004c7509" formatted="false">"ساعات المنزل"</string>
+    <string name="text_a839ec02b2" formatted="true">"%1$s%% في المكتب"</string>
+    <string name="text_b8ded3389c" formatted="false">"قيمة مكتب في معدل الأساس"</string>
+    <string name="text_ec791b21f9" formatted="false">"القيمة المنزلية في سعر الأساس"</string>
+    <string name="text_2d3fd3bb5b" formatted="false">"القيم الأساسية تستبعد المكافآت الزائدة؛ لا تضيفها إلى الراتب الإجمالي."</string>
+    <string name="text_6689630948" formatted="false">"الساعات المفقودة والتحقق من الدخول"</string>
+    <string name="text_23b17c77be" formatted="false">"الهدف الأسبوعي لهذا الفترة"</string>
+    <string name="text_9e0655ff1b" formatted="false">"انخفاض مع الهدف الشهري"</string>
+    <string name="text_468b69c83d" formatted="false">"إجمالي العجز اليومي"</string>
+    <string name="text_d75f4dd709" formatted="false">"الحد الأدنى من العيوب اليومية لا يحسب سوى أيام العمل المختارة مع الإدخالات.الأيام بدون الإدخالات لا يتم وضع علامة تلقائية على غيابات."</string>
+    <string name="text_e9f9673a47" formatted="false">"ضعف مكتب واحد فقط"</string>
+    <string name="text_8e87e45498" formatted="false">"ساعات مكتب فقط فوق المعيار اليومي"</string>
+    <string name="text_43af7314c4" formatted="false">"الأيام التي يفتقر إليها ملاحظة الساعة-in/out"</string>
+    <string name="text_d41113bbd2" formatted="false">"الأيام مع الدخول"</string>
+    <string name="text_3ee5d8b89f" formatted="false">"العمل المنزلي حسب السبب"</string>
+    <string name="text_e220a05303" formatted="false">"لا يوجد دخول في المنزل خلال هذه الفترة."</string>
+    <string name="text_4b0ccb42af" formatted="false">"ساعات"</string>
+    <string name="text_387c48c332" formatted="false">"القيمة في سعر الأساس"</string>
+    <string name="text_a347b2c73c" formatted="false">"الراتب الصافي المتوقع"</string>
+    <string name="text_b8e45d7b9e" formatted="true">"لا يتم تكوين لوحات الضرائب ل %1$s. لا يتم عرض أي تقدير صافي."</string>
+    <string name="text_90128d6911" formatted="false">"أدخل نقاط الائتمان الضريبي الخاص بك ومعدل معاش الموظفين في الإعدادات لإظهار تقدير. أدخل 0 إذا لم يكن هناك مساهمة."</string>
+    <string name="text_3d880292e0" formatted="false">"ضريبة الدخل"</string>
+    <string name="text_89e2b25fb1" formatted="false">"التأمين الوطني"</string>
+    <string name="text_c694983c02" formatted="false">"التأمين الصحي"</string>
+    <string name="text_901acdd444" formatted="false">"التقاعد - حصة الموظفين"</string>
+    <string name="text_852a1bee2a" formatted="false">"صندوق التدريب - حصة الموظفين"</string>
+    <string name="text_f8ee9f9027" formatted="false">"قروض الضرائب التقاعدية"</string>
+    <string name="text_192617126a" formatted="false">"التقدير الشهري باستخدام 2026 الجدول الإسرائيلي. يستبعد الضرائب المتراكمة وغيرها من الدخل والفوائد القابلة للضرائب والتنسيق الضريبي. تستخدم المساهمات قاعدة الأجور المختارة."</string>
+    <string name="text_fe04db5f37" formatted="false">"يتم عرض الأوقات على أنها ساعات: دقائق؛ الحسابات تحافظ على ثواني المصدر."</string>
+    <string name="text_3141c61e9e" formatted="false">"تفاصيل الساعات"</string>
+    <string name="text_723a7db2af" formatted="false">"الورديات وفترات العمل"</string>
+    <string name="text_57b4cda969" formatted="false">"+ إضافة وردية يدويًا"</string>
+    <string name="text_7149f2ed6a" formatted="false">"يستخدم الآخرون طوال اليوم ، حتى عند تصفية مكان عمل واحد."</string>
+    <string name="text_3579e0306b" formatted="false">"تعديل بدء أو إدخال وقت النهاية على شاشة الصفحة الرئيسية."</string>
+    <string name="text_643cae9ae3" formatted="false">"لم يتم الانتهاء من الإدخالات خلال هذه الفترة."</string>
+    <string name="text_d3fcfb1a78" formatted="true">"انتهاء العمل: %1$s %2$s"</string>
+    <string name="text_39fe25939b" formatted="false">"إديت"</string>
+    <string name="text_0826149cf1" formatted="false">"ملخص اليوم"</string>
+    <string name="text_d783472020" formatted="false">"إجمالي الوقت الصافي لليوم"</string>
+    <string name="text_a3756d29d2" formatted="false">"الوقت المستحق للدفع"</string>
+    <string name="text_c24fae5be3" formatted="false">"الوقت في الفلتر الحالي"</string>
+    <string name="text_b70622d71d" formatted="false">"التغيير النشط الصحيح"</string>
+    <string name="text_59cb6e8e9a" formatted="false">"تعديل الوردية"</string>
+    <string name="text_10045253c1" formatted="false">"وردية يدوية"</string>
+    <string name="text_2f6783cd3b" formatted="false">"بدء العمل"</string>
+    <string name="text_b939061e41" formatted="false">"انتهاء العمل"</string>
+    <string name="text_8f9bc2d880" formatted="false">"ملاحظة / غياب ساعة أو ساعة خارج"</string>
+    <string name="text_d958ea3cd8" formatted="true">"مدة قبل الانقطاع: %1$s"</string>
+    <string name="text_1be17082dd" formatted="false">"القطاعات في نفس اليوم تشارك الأطراف الزائدة.لا تدخل القطاعات الزائدة."</string>
+    <string name="text_d42c0813fc" formatted="false">"الساعة لا يمكن أن يكون في المستقبل."</string>
+    <string name="text_510b00fcc4" formatted="false">"حفظ البدء الصحيح والحفاظ على التغيير مفتوح"</string>
+    <string name="text_647a733fb8" formatted="false">"ساعة في موعد غير صالح."</string>
+    <string name="text_4c82f98655" formatted="false">"يجب أن يكون التوقيت بعد التوقيت.للتغيير الليلي ، اختر أيضًا الموعد النهائي الصحيح."</string>
+    <string name="text_c2fb808976" formatted="false">"لا يمكن أن يكون هناك ساعة في المستقبل."</string>
+    <string name="text_6eb37ad66f" formatted="false">"انتهاء وتوفير التغيير"</string>
+    <string name="text_e69323393b" formatted="false">"حفظ"</string>
+    <string name="text_b89e7bee64" formatted="false">"الإعدادات الأولية"</string>
+    <string name="text_2eaf74bbd8" formatted="false">"ابدأ بتشريعات عملك"</string>
+    <string name="text_f9fb70ce3b" formatted="false">"إدخال الراتب والساعات الشهرية، ثم تعديل ساعات الزمن الزائد، والانقطاع وفترة الإبلاغ."</string>
+    <string name="text_925bb7a659" formatted="false">"انتهاء صلاحية جوجل.إعادة الاتصال."</string>
+    <string name="text_86de69005f" formatted="false">"تم رفض الوصول إلى محرك الأقراص.إعادة توصيل حساب Google الخاص بك."</string>
+    <string name="text_0885c5a6fa" formatted="false">"لم يتم العثور على نسخة احتياطية في الحساب المحدد."</string>
+    <string name="text_09780711f6" formatted="false">"Google يحد من الطلبات، حاول مرة أخرى في وقت لاحق."</string>
+    <string name="text_2a152ef564" formatted="true">"اتصال Google Drive فشل (الرمز %1$s)."</string>
+    <string name="text_07d8d8fb15" formatted="false">"اختر حساب Google."</string>
+    <string name="text_44707e2acd" formatted="false">"Google لم تقبل إنشاء نسخة احتياطية."</string>
+    <string name="text_eee5e9d37e" formatted="false">"نسخة احتياطية لم يتم إنشاؤها: يُطلب إعادة الترخيص.فتح نسخة احتياطية وإعادة الاتصال."</string>
+    <string name="text_fb5e219eb1" formatted="false">"نسخة النسخ الاحتياطي فشلت:"</string>
+    <string name="text_82a2bfa2fe" formatted="false">"خطأ الشبكة"</string>
+    <string name="nav_home" formatted="false">"الرئيسية"</string>
+    <string name="nav_dashboard" formatted="false">"نظرة عامة"</string>
+    <string name="nav_records" formatted="false">"السجلات"</string>
+    <string name="nav_settings" formatted="false">"الإعدادات"</string>
+    <string name="nav_backup" formatted="false">"النسخ الاحتياطي"</string>
+    <string name="location_home" formatted="false">"المنزل"</string>
+    <string name="location_office" formatted="false">"المكتب"</string>
+    <string name="filter_all" formatted="false">"الكل"</string>
+    <string name="app_name" formatted="false">"ShiftHours"</string>
+    <string name="language_title" formatted="false">"اللغة"</string>
+    <string name="language_system" formatted="false">"لغة الجهاز"</string>
+    <string name="language_hint" formatted="false">"يتم حفظ اللغة على هذا الجهاز. حفظ التغييرات قبل تغيير اللغات. قواعد العملة والضرائب تحافظ على إعداداتها الحالية."</string>
+    <string name="tax_profile" formatted="false">"الملف الضريبي"</string>
+    <string name="tax_country" formatted="false">"الدولة أو الولاية الضريبية"</string>
+    <string name="tax_year" formatted="false">"السنة الضريبية"</string>
+    <string name="tax_region" formatted="false">"المنطقة الضريبية"</string>
+    <string name="tax_choose" formatted="false">"اختيار"</string>
+    <string name="tax_england" formatted="false">"إنجلترا"</string>
+    <string name="tax_wales" formatted="false">"ويلز"</string>
+    <string name="tax_northern_ireland" formatted="false">"أيرلندا الشمالية"</string>
+    <string name="tax_scotland" formatted="false">"اسكتلندا"</string>
+    <string name="tax_unavailable" formatted="false">"تقدير صافي الأجر لهذه الدولة غير متاح بعد. الساعات والأجر الإجمالي متاحان."</string>
+    <string name="tax_year_unavailable" formatted="false">"لا يوجد جدول ضريبي موثق لهذه السنة."</string>
+    <string name="tax_uk_required" formatted="false">"اختر منطقة بريطانية وأكد انطباق الملف عليك."</string>
+    <string name="tax_foreign_fields" formatted="false">"نقاط وقواعد الاقتطاعات الإسرائيلية لا تنطبق على هذه الدولة."</string>
+    <string name="tax_uk_profile" formatted="false">"أؤكد انطباق الملف البريطاني المبين أدناه عليّ."</string>
+    <string name="tax_country_hint" formatted="false">"الدولة مستقلة عن اللغة. اختيار الدولة لا يحدد الاستحقاق الشخصي للإعفاءات."</string>
+    <string name="tax_currency_warning" formatted="false">"يتغير رمز العملة دون تحويل مبالغ الأجر أو قواعد العمل الإضافي. راجع الإعدادات."</string>
+    <string name="tax_uk_scope" formatted="false">"بريطانيا 2026/27: راتب شهري ثابت محسوب سنويًا لضريبة الدخل وتأمين وطني شهري من الفئة A. إعفاء شخصي عادي يتناقص للدخل المرتفع. وظيفة واحدة فقط؛ دون دخل آخر أو اقتطاعات تقاعد أو تضحية بالراتب أو قروض طلاب أو مزايا خاضعة للضريبة أو إعفاءات خاصة. ليس حساب PAYE تراكميًا."</string>
+    <string name="tax_scope_in" formatted="false">"الهند 2025/26–2026/27: موظف مقيم ضريبيًا، النظام الجديد فقط، راتب ثابت محسوب سنويًا؛ دون دخل آخر أو إعفاءات خاصة. يشمل الخصم القياسي والتخفيض والتخفيف الهامشي ورسم 4%. الدخل السنوي الخاضع للضريبة لا يتجاوز 5,000,000 روبية."</string>
+    <string name="tax_scope_ru" formatted="false">"روسيا 2026: موظف مقيم ضريبيًا براتب عادي ثابت فقط؛ دون دخل آخر أو خصومات شخصية أو علاوات شمالية أو قواعد عسكرية خاصة. متوسط ضريبة شهري محسوب سنويًا، وليس اقتطاعًا تراكميًا. لا تُخصم اشتراكات صاحب العمل من راتب الموظف."</string>
+    <string name="tax_scope_ae" formatted="false">"الإمارات 2026: موظف وافد ليس من مواطني مجلس التعاون، بدخل وظيفي فقط. لا توجد ضريبة دخل شخصية. أدخل الاقتطاعات الفعلية للموظف، بما فيها التأمين عند انطباقه. تُستثنى مكافأة نهاية الخدمة واشتراكات صاحب العمل."</string>
+    <string name="tax_actual_deductions" formatted="false">"اقتطاعات الموظف الشهرية الفعلية"</string>
+    <string name="tax_deductions_hint" formatted="false">"أدخل 0 عند عدم وجودها. تشمل تقاعد وتأمين واقتطاعات الموظف المحلية. استثن الضرائب المحسوبة هنا واشتراكات صاحب العمل. تخفض صافي الراتب وليس الدخل الخاضع للضريبة."</string>
+    <string name="tax_confirm_profile" formatted="false">"أؤكد انطباق ملف موظف هذه الدولة عليّ."</string>
+    <string name="tax_foreign_required" formatted="false">"تحقق من ملف الموظف وقيمة الاقتطاعات وحدود الدخل المدعومة."</string>
+    <string name="tax_other_tax" formatted="false">"رسم الصحة والتعليم"</string>
+    <string name="tax_other_deductions" formatted="false">"اقتطاعات موظف أخرى"</string>
+    <string name="tax_scope_us" formatted="false">"2026 فقط: مقيم طوال السنة بعمر 18–64، صاحب عمل محلي عادي واحد W-2، SINGLE أو إقرار مشترك بمعيل أسري واحد. بلا معالين أو دخل آخر أو ائتمانات فدرالية/مستردة أو خصومات خاصة للإكراميات والعمل الإضافي أو مزايا قبل الضريبة أو عمل بين الولايات. تحقق من الأهلية. جميع الولايات الخمسين متاحة: 47 بتعرفة آلية محدودة تشمل الصفر على الأجور؛ CO/ID/VT تتطلب إدخال التزام سنوي موثق. الضريبة/12 احتياطي وليست اقتطاع W-4 أو تراكمي فعلي."</string>
+    <string name="tax_scope_ca" formatted="false">"كندا 2026: أونتاريو وألبرتا فقط. مقيم أعزب طوال السنة بعمر 18–64، يسكن ويعمل بالمقاطعة نفسها، وصاحب عمل واحد. ائتمانات شخصية وعملية أساسية فقط؛ دون معالين أو RRSP أو مزايا قبل الضريبة أو دخل آخر. يشمل الضرائب الفدرالية والمحلية وCPP/CPP2 وEI. متوسط سنوي وليس كشف راتب فعليًا."</string>
+    <string name="tax_na_deductions_hint" formatted="false">"اقتطاعات موظف أخرى بعد الضريبة فقط؛ أدخل 0 عند عدم وجودها. لا تكرر الضرائب أو Social Security أو Medicare أو CPP/CPP2 أو EI أو رسم أونتاريو المحسوبة هنا. الاقتطاعات قبل الضريبة غير مدعومة."</string>
+    <string name="tax_other_region" formatted="false">"منطقة أخرى — غير مدعومة بعد"</string>
+    <string name="tax_region_unavailable" formatted="false">"تقدير الصافي لهذه المنطقة غير مدعوم بعد."</string>
+    <string name="tax_florida" formatted="false">"فلوريدا"</string>
+    <string name="tax_texas" formatted="false">"تكساس"</string>
+    <string name="tax_ontario" formatted="false">"أونتاريو"</string>
+    <string name="tax_alberta" formatted="false">"ألبرتا"</string>
+    <string name="tax_filing" formatted="false">"حالة الإقرار الفدرالي"</string>
+    <string name="tax_single" formatted="false">"فردي"</string>
+    <string name="tax_joint" formatted="false">"متزوجان بإقرار مشترك — معيل واحد"</string>
+    <string name="tax_federal" formatted="false">"ضريبة دخل فدرالية"</string>
+    <string name="tax_provincial" formatted="false">"ضريبة دخل المقاطعة"</string>
+    <string name="tax_ontario_health" formatted="false">"رسم الصحة في أونتاريو"</string>
+    <string name="tax_social_security" formatted="false">"التأمين الاجتماعي الأمريكي"</string>
+    <string name="tax_cpp" formatted="false">CPP</string>
+    <string name="tax_cpp2" formatted="false">CPP2</string>
+    <string name="tax_ei" formatted="false">EI</string>
+    <string name="tax_medicare" formatted="false">Medicare</string>
+    <string name="tax_pt_mainland" formatted="false">"البرتغال — البر الرئيسي"</string>
+    <string name="tax_annual_verified_base" formatted="false">"الوعاء الضريبي السنوي النهائي الموثق"</string>
+    <string name="tax_verified_base_hint" formatted="false">"أدخل الوعاء النهائي بعد جميع الخصومات من تقييم موثق أو حساب متخصص. ليس الراتب الإجمالي؛ لا يستخرجه التطبيق تلقائيًا."</string>
+    <string name="tax_au_hospital" formatted="false">"تغطية استشفاء خاصة معتمدة"</string>
+    <string name="tax_au_full_cover" formatted="false">"السنة الضريبية كاملة"</string>
+    <string name="tax_au_no_cover" formatted="false">"بلا تغطية طوال السنة الضريبية"</string>
+    <string name="tax_nz_ietc_hint" formatted="false">"يشترط IETC الأهلية طوال السنة: دون استحقاق Working for Families أو إعانة رئيسية أو NZ Super أو Veterans Pension أو مدفوعات أجنبية مماثلة. الأهلية الجزئية غير مدعومة."</string>
+    <string name="tax_nz_ietc" formatted="false">"أؤكد أهليتي لـ IETC طوال السنة"</string>
+    <string name="tax_further_deductions_hint" formatted="false">"أدخل اقتطاعات الموظف الفعلية غير المحسوبة هنا، أو 0. استبعد مساهمات صاحب العمل والضرائب أو التأمين المعروض بالفعل. يخفض المبلغ الصافي لا الوعاء الضريبي."</string>
+    <string name="tax_solidarity" formatted="false">"ضريبة التضامن"</string>
+    <string name="tax_pt_social" formatted="false">"ضمان اجتماعي — حصة الموظف"</string>
+    <string name="tax_au_levy" formatted="false">"رسم Medicare"</string>
+    <string name="tax_au_surcharge" formatted="false">"رسم Medicare الإضافي"</string>
+    <string name="tax_acc" formatted="false">"رسم الموظف ACC"</string>
+    <string name="tax_included_relief" formatted="false">"تخفيض مشمول بالفعل في ضريبة الدخل"</string>
+    <string name="tax_scope_de" formatted="false">"ألمانيا 2026: مقيم أعزب بلا أطفال أو ضريبة كنيسة. تقدير سنوي بوعاء نهائي موثق لا يُستخرج من الإجمالي. أدخل الاشتراكات الاجتماعية الفعلية منفصلة. ليس اقتطاع Lohnsteuer من الراتب."</string>
+    <string name="tax_scope_fr" formatted="false">"فرنسا: دخل 2025 المقيّم في 2026 فقط. مقيم أعزب، حصة ضريبية واحدة، راتب فقط وإجمالي سنوي حتى EUR 200,000. الوعاء النهائي بعد المصروفات؛ والاقتطاعات الاجتماعية منفصلة. يشمل décote؛ بلا جدول دخل 2026 أو اقتطاع PAS الجاري."</string>
+    <string name="tax_scope_pt" formatted="false">"البرتغال 2026: البر الرئيسي، مقيم أعزب، الفئة A العادية. 12 دفعة متساوية تشمل بدل الإجازة والميلاد بالتناسب؛ إجمالي سنوي لا يقل عن EUR 20,000. يشمل ضمان الموظف 11% والخصم القياسي وشرائح IRS والتضامن. بلا معالين أو أنظمة خاصة أو ائتمانات فواتير؛ ليس اقتطاع 14 راتبًا."</string>
+    <string name="tax_scope_au" formatted="false">"أستراليا 2025/26–2026/27: مقيم أعزب بعمر 18–64، راتب نقدي سنوي لا يقل عن AUD 50,000 دون Super صاحب العمل. بلا دخل آخر أو مزايا قبل الضريبة أو إعفاءات. يشمل الضريبة وLITO وMedicare بنسبة 2% والرسم الإضافي. صرّح بتغطية استشفاء معتمدة طوال العام أو بلا تغطية؛ لا يدعم الأسر أو التغطية الجزئية."</string>
+    <string name="tax_scope_nz" formatted="false">"نيوزيلندا 2025/26–2026/27: مقيم طوال السنة، وظيفة واحدة وراتب فقط، دون دخل آخر أو إعانات. يشمل ضريبة الدخل وACC؛ وIETC بعد تأكيد الأهلية. أدخل KiwiSaver والقروض والاقتطاعات الفعلية الأخرى منفصلة. تقدير سنوي لدخل ثابت."</string>
+    <string name="tax_scope_es" formatted="false">"إسبانيا 2026: مدريد فقط. مقيم أعزب طوال السنة بعمر 18–64، راتب فقط، بلا أطفال أو إعاقة أو ائتمانات ضريبية. إجمالي سنوي لا يقل عن EUR 40,000 ووعاء عام موثق لا يقل عن EUR 30,000. تشمل ضريبتا الدولة ومدريد الحد الشخصي الأساسي لكل منهما. الاقتطاعات الاجتماعية الفعلية منفصلة. 12 دفعة إجمالية متساوية؛ ليس اقتطاع الراتب."</string>
+    <string name="tax_scope_cn" formatted="false">"الصين 2026: مقيم ضريبي طوال السنة في البر الرئيسي، وظيفة واحدة وراتب فقط، بلا دخل آخر/أجنبي أو تخفيضات ضريبة. وعاء سنوي نهائي موثق بعد RMB 60,000 وكل الخصومات القانونية. اقتطاعات التأمين الاجتماعي وصندوق السكن المحلية الفعلية منفصلة؛ لا افتراض لنسب أو أهلية. بلا مكافأة سنوية بضريبة منفصلة أو اتفاقيات/أنظمة خاصة أو اقتطاع شهري/تراكمي."</string>
+    <string name="tax_scope_sa" formatted="false">"السعودية 2026: موظف وافد غير مواطن بدول مجلس التعاون، دخل وظيفة عادية في السعودية فقط. لا ضريبة دخل شخصية. أدخل اقتطاعات الموظف الفعلية بما فيها التأمين عند اللزوم، أو 0. مساهمات صاحب العمل للأخطار المهنية مستبعدة. معاشات السعوديين/الخليجيين والأعمال والضرائب الأجنبية ومكافأة نهاية الخدمة خارج هذا الملف."</string>
+    <string name="tax_madrid" formatted="false">"مدريد"</string>
+    <string name="tax_cn_mainland" formatted="false">"الصين — البر الرئيسي"</string>
+    <string name="tax_es_base_hint" formatted="false">"أدخل الوعاء العام السنوي النهائي الموثق قبل الحد الشخصي/العائلي وبعد خصومات الراتب القانونية. الإجمالي لا يقل عن EUR 40,000 والوعاء عن EUR 30,000. يطبق التطبيق الحدود الأساسية بنفسه. لا يحسب التأمين الاجتماعي أو يستخرج الوعاء من الإجمالي تلقائيًا."</string>
+    <string name="tax_cn_base_hint" formatted="false">"أدخل وعاء الراتب السنوي النهائي الموثق بعد RMB 60,000 والخصومات القانونية. لا تخصم RMB 60,000 مجددًا. أدخل أيضًا اقتطاعات التأمين/السكن الفعلية في الحقل الشهري؛ يجب أن يكون أثرها الضريبي مشمولًا بالفعل في هذا الوعاء."</string>
+    <string name="tax_state_income" formatted="false">"ضريبة الدخل الوطنية"</string>
+    <string name="tax_regional_income" formatted="false">"ضريبة الدخل الإقليمية"</string>
+    <string name="tax_scope_ie" formatted="false">"إيرلندا 2026: مقيم أعزب طوال السنة بعمر 18–64، وظيفة PAYE مؤهلة واحدة وراتب فقط. يشمل الائتمانات الشخصية/للموظف الأساسية وUSC العادي. بلا مدير مالك أو تخفيض بطاقة طبية أو دخل آخر أو معاش/مزايا قبل الضريبة أو ائتمانات إضافية. أدخل PRSI الفعلي والمعاش/الاقتطاعات بعد الضريبة منفصلة؛ لا افتراض لأهلية MyFutureFund. تقدير سنوي ثابت لا اقتطاع تراكمي."</string>
+    <string name="tax_scope_hk" formatted="false">"هونغ كونغ 2025/26–2026/27: موظف أعزب طوال السنة بعمر 18–64، صاحب عمل واحد وراتب فقط وعضو MPF عادي بأجر شهري. يشمل العمل بالساعة المدفوع شهريًا والإعفاء الأساسي وMPF للموظف وأقل الضريبتين التصاعدية/القياسية. يجب انتهاء إعفاء الاشتراك الأولي قبل بداية السنة. بلا عمال عرضيين/يوميين/معفيين أو معالين أو دخل آخر أو إعفاءات إضافية. تخفيض نهائي لـ 2025/26 فقط؛ ليس فوترة ضريبة مؤقتة."</string>
+    <string name="tax_ie_deductions_hint" formatted="false">"أدخل PRSI الفعلي للموظف والمعاش/الاقتطاعات النقدية بعد الضريبة أو 0. أضف MyFutureFund إذا اقتُطع؛ لا نفترض الانضمام. استبعد تكاليف صاحب العمل وضريبة الدخل وUSC المحسوبة. المعاش المخفض لضريبة الدخل خارج الملف. حدّث الاقتطاعات عند تغير الأجر."</string>
+    <string name="tax_hk_deductions_hint" formatted="false">"اقتطاعات الموظف النقدية الإضافية بعد الضريبة فقط أو 0. لا تكرر MPF أو ضريبة الرواتب المحسوبة. مساهمات صاحب العمل والخصومات الإضافية المخفضة للضريبة خارج الملف."</string>
+    <string name="tax_usc" formatted="false">"الرسم الاجتماعي USC"</string>
+    <string name="tax_mpf" formatted="false">"حصة الموظف من MPF"</string>
+    <string name="tax_scope_no" formatted="false">"النرويج 2026: مقيم أعزب طوال السنة بعمر 18–64، وظيفة واحدة وراتب فقط، منطقة عادية بضريبة 22% وعضوية التأمين الوطني. يشمل الخصومات القياسية/الشخصية وضريبة الشرائح وتخفيض عمل الشباب المؤكد. بلا خصومات معاش/نقابة/فوائد أو غيرها أو دخل آخر أو PAYE للأجانب أو مزايا إقليمية خاصة. تقدير سنوي ثابت قبل الدفعات المقدمة وقواعد تحصيل الأرصدة الصغيرة."</string>
+    <string name="tax_scope_za" formatted="false">"جنوب أفريقيا 2025/26–2026/27: مقيم طوال السنة بعمر 18–64، وظيفة عادية واحدة بالقطاع الخاص. يشمل التخفيض الأساسي وUIF حسب الاختيار. بلا دخل آخر أو عمولات أو مزايا خاضعة أو خصم معاش ضريبي أو ائتمانات طبية/إضافية أو إعفاءات خاصة. أكد UIF العادي أو الإعفاء فقط للعمل أقل من 24 ساعة شهريًا لدى صاحب العمل. تقدير سنوي لا اقتطاع PAYE الفعلي."</string>
+    <string name="tax_no_region" formatted="false">"منطقة الضريبة العادية 22%"</string>
+    <string name="tax_no_region_hint" formatted="false">"يستثني سفالبارد وفينمارك وبلديات ترومس: Karlsøy, Kvænangen, Kåfjord, Lyngen, Nordreisa, Skjervøy, Storfjord."</string>
+    <string name="tax_no_youth" formatted="false">"تخفيض عمل الشباب — حالة موثقة"</string>
+    <string name="tax_no_selected" formatted="false">"مختار — مؤكد من هيئة الضرائب"</string>
+    <string name="tax_no_not_selected" formatted="false">"غير مختار / خارج الفئة المؤهلة"</string>
+    <string name="tax_no_youth_hint" formatted="false">"اختار برنامج 2026 عشوائيًا بعض مواليد 1991–2006. السن أو الإقامة لا يكفيان. تحقق من حالتك الرسمية ولا تخمن. عدم الاختيار يمنع التقدير."</string>
+    <string name="tax_za_uif" formatted="false">"حالة UIF للموظف"</string>
+    <string name="tax_za_covered" formatted="false">"خاضع لـ UIF العادي"</string>
+    <string name="tax_za_lt24" formatted="false">"معفى — أقل من 24 ساعة شهريًا"</string>
+    <string name="tax_za_year_hint" formatted="false">"السنوات بحسب البداية: 2026/27 تعني مارس 2026–فبراير 2027 وتسمى سنة 2027 لدى SARS. إعفاءات UIF الأخرى خارج الملف."</string>
+    <string name="tax_noza_deductions_hint" formatted="false">"اقتطاعات الموظف النقدية الإضافية بعد الضريبة فقط أو 0. لا تكرر الضرائب/التأمين الوطني/UIF المحسوبة، ولا مساهمات صاحب العمل. المعاش المخفض للضريبة والمصروفات القابلة للخصم تحتاج ملفًا آخر."</string>
+    <string name="tax_no_ordinary" formatted="false">"ضريبة الدخل العادية"</string>
+    <string name="tax_no_step" formatted="false">"ضريبة الشرائح على الدخل الشخصي"</string>
+    <string name="tax_no_ni" formatted="false">"حصة الموظف بالتأمين الوطني"</string>
+    <string name="tax_uif" formatted="false">"حصة الموظف من UIF"</string>
+    <string name="tax_scope_sg" formatted="false">"سنغافورة، دخل 2026: مقيم ضريبي طوال السنة، عمر 18–54 بنهايتها، وظيفة واحدة بأجر عادي بلا مكافأة/أجور إضافية أو دخل آخر أو إعاقة أو مزايا أو إعفاءات إضافية. مواطن/مقيم دائم من السنة الثالثة بمعدلات CPF الكاملة طوال السنة، أو أجنبي غير مواطن/مقيم دائم دون CPF. يشمل CPF للموظف وإعفاء دخل العمل الأساسي. تقدير احتياطي ضريبة سنوي لا اقتطاع شهري."</string>
+    <string name="tax_scope_dk" formatted="false">"الدنمارك 2026: كوبنهاغن فقط، مقيم أعزب طوال السنة بعمر 18–59، راتب فقط بلا ضريبة كنيسة أو دخل رأسمالي/أجنبي أو نظام خاص. يتطلب وعاءين سنويين شخصيًا وبلديًا موثقين قبل الإعفاء الشخصي، واقتطاعات AM وATP والمعاش وغيرها الفعلية. يشمل الضريبتين والإعفاء الأساسي؛ لا يستخرج الأوعية من الإجمالي ولا يحسب اقتطاع البطاقة الضريبية."</string>
+    <string name="tax_copenhagen" formatted="false">"كوبنهاغن"</string>
+    <string name="tax_dk_personal_base" formatted="false">"الدخل الشخصي السنوي الموثق بعد AM"</string>
+    <string name="tax_dk_municipal_base" formatted="false">"الوعاء البلدي السنوي الموثق"</string>
+    <string name="tax_dk_base_hint" formatted="false">"أدخل الوعاءين النهائيين الموثقين قبل الإعفاء الشخصي. الدخل الشخصي بعد تعديلات AM/ATP/المعاش؛ والوعاء البلدي بعد خصومات العمل وجميع الخصومات القانونية أيضًا. لا تدخل الإجمالي. لا يستخرج التطبيق الأوعية أو يخصم المبالغ مجددًا. إذا تجاوز الدخل الشخصي DKK 54,100 وكان الوعاء البلدي أقل من ذلك، فلا ندعم بعد حالة توزيع الإعفاء هذه."</string>
+    <string name="tax_dk_actual_deductions" formatted="false">"AM وATP والمعاش والاقتطاعات الشهرية الفعلية"</string>
+    <string name="tax_dk_deductions_hint" formatted="false">"أدرج AM الفعلي وحصة الموظف من ATP/المعاش والاقتطاعات النقدية غير ضريبة الدخل، أو 0. أثرها الضريبي يجب أن يكون في الأوعية. استبعد تكاليف صاحب العمل والضرائب المحسوبة. حدّث المبالغ الثلاثة عند تغير الأجر."</string>
+    <string name="tax_sg_cpf_profile" formatted="false">"ملف CPF للموظف"</string>
+    <string name="tax_sg_full" formatted="false">"مواطن / مقيم دائم من السنة الثالثة — CPF كامل"</string>
+    <string name="tax_sg_foreign" formatted="false">"مقيم ضريبي أجنبي — غير مواطن/مقيم دائم، دون CPF"</string>
+    <string name="tax_sg_year_hint" formatted="false">"2026 تعني دخل يناير–ديسمبر 2026 الذي يُقيّم في YA 2027. لا ننقل تخفيضات YA 2024/2025 المؤقتة. السنتان الأولى/الثانية للإقامة الدائمة وملفات CPF/العمر الأخرى غير مدعومة."</string>
+    <string name="tax_sg_deductions_hint" formatted="false">"اقتطاعات إضافية بعد الضريبة فقط أو 0، بما فيها صناديق المجتمع الفعلية عند انطباقها. لا تكرر CPF أو الضريبة المحسوبة ولا مساهمات صاحب العمل. الخصومات الضريبية الإضافية خارج الملف."</string>
+    <string name="tax_cpf" formatted="false">"حصة الموظف من CPF"</string>
+    <string name="tax_dk_bottom" formatted="false">"الضريبة الوطنية الأساسية"</string>
+    <string name="tax_dk_municipal" formatted="false">"ضريبة بلدية كوبنهاغن"</string>
+    <string name="tax_dk_higher" formatted="false">"ضرائب الشريحة الوسطى / العليا / العليا الإضافية"</string>
+    <string name="tax_scope_my" formatted="false">"ماليزيا 2026: مقيم ضريبي أعزب طوال السنة بعمر 18–59، وظيفة واحدة بأجر نقدي منتظم فقط؛ بلا دخل آخر أو مزايا خاضعة أو نظام خاص أو زكاة أو تخفيضات ضريبية أخرى. يلزم وعاء سنوي نهائي موثق بعد جميع الخصومات القانونية ومنها الشخصي، واقتطاعات الموظف الفعلية. يشمل تخفيضًا شخصيًا غير قابل للاسترداد حتى RM400 للمستحق. تقدير سنوي لا اقتطاع PCB."</string>
+    <string name="tax_scope_ph" formatted="false">"الفلبين 2026: مواطن مقيم أعزب طوال السنة بعمر 18–59، وظيفة خاصة واحدة و12 دفعة أجر نقدي منتظم متساوية، بلا دخل خاضع آخر أو نظام خاص أو ائتمانات ضريبية. يلزم أجر سنوي منتظم خاضع موثق واقتطاعات فعلية. إعفاءات عمال الحد الأدنى خارج النطاق. أجر الشهر 13 والمزايا المعفاة حتى سقف إجمالي PHP90,000 خارج صافي النقد المعروض؛ الزيادة الخاضعة والمكافآت الأخرى غير مدعومة. تقدير سنوي لا اقتطاع رواتب."</string>
+    <string name="tax_my_base_hint" formatted="false">"أدخل الوعاء السنوي النهائي الموثق بعد جميع الخصومات القانونية ومنها الخصم الشخصي RM9,000، لا الأجر الإجمالي. يطبق التطبيق منفصلًا التخفيض المستحق حتى RM400 ولا يستنتج الخصومات أو يطرح الاشتراكات مجددًا. حدّث الوعاء عند تغير الأجر."</string>
+    <string name="tax_ph_base_hint" formatted="false">"أدخل الأجر النقدي المنتظم السنوي الخاضع الموثق بعد اشتراكات/رسوم الموظف القانونية، لا الإجمالي. لا تخصم ضريبة الدخل أو أقساط القروض الشخصية من الوعاء. لا يستنتج التطبيق الإعفاءات أو يطرح الاشتراكات مجددًا. حدّث الوعاء عند تغير الأجر."</string>
+    <string name="tax_myph_deductions_hint" formatted="false">"أدخل اقتطاعات الموظف الشهرية الفعلية: EPF/SOCSO/EIS أو SSS/PhilHealth/Pag-IBIG والرسوم القانونية وغيرها النقدية، أو 0. يجب أن ينعكس أثرها الضريبي في الوعاء الموثق مسبقًا. استبعد مساهمات صاحب العمل وضريبة الدخل المحسوبة هنا. حدّث المبلغين عند تغير الأجر."</string>
+    <string name="tax_scope_pl" formatted="false">"بولندا 2026: مقيم أعزب طوال السنة بعمر 26–59، عقد عمل عادي واحد و12 راتبًا نقديًا متساويًا؛ الإجمالي السنوي حتى PLN1,000,000. بلا دخل آخر أو مزايا خاضعة أو إقرار مشترك أو PIT-0 أو خصومات/ائتمانات إضافية. مصاريف العمل القياسية فقط حتى PLN3,600 سنويًا، لا تذاكر فعلية أو تكاليف إبداعية 50%. يلزم وعاء سنوي موثق واقتطاعات فعلية. يشمل تخفيضًا أساسيًا PLN3,600. تقدير سنوي لا اقتطاع رواتب. المشاركون في PPK خارج هذا الملف."</string>
+    <string name="tax_scope_cz" formatted="false">"التشيك 2026: مقيم أعزب طوال السنة بعمر 18–64، عمل عادي واحد و12 راتبًا نقديًا منتظمًا متساويًا؛ بلا دخل آخر أو مزايا خاضعة أو خصومات وعاء أو ائتمانات إضافية. عقود DPP/DPČ والاقتطاع الخاص مستبعدة. يشمل ائتمانًا سنويًا أساسيًا غير مسترد CZK30,840. تُدخل اقتطاعات التأمين الاجتماعي والصحي وتكملة الحد الصحي الأدنى إن وجبت فعليًا. تقدير ضريبة سنوي لا سلف شهرية."</string>
+    <string name="tax_pl_base_hint" formatted="false">"أدخل الوعاء السنوي النهائي الموثق بعد اشتراكات الموظف الاجتماعية المسموح بها ومصاريف العمل القياسية، وقبل تخفيض الضريبة PLN3,600. لا تطرح PLN30,000 منفصلًا. الصحة وPPK والقروض الشخصية لا تخفض الوعاء بهذا الملف. لا تُطرح الاقتطاعات النقدية مجددًا؛ حدّث المبالغ عند تغير الأجر."</string>
+    <string name="tax_plcz_deductions_hint" formatted="false">"أدخل الاقتطاعات الشهرية الفعلية للموظف: الاجتماعي/الصحي والمعاش بعد الضريبة وغيرها النقدية، أو 0. أدرج تكملة الحد الصحي الأدنى التشيكي عند انطباقها. استبعد تكاليف صاحب العمل وضريبة الدخل المحسوبة هنا. الاقتطاعات التشيكية لا تخفض الوعاء؛ الخصومات البولندية القانونية يجب أن تكون ضمن الوعاء الموثق. حدّث عند تغير الأجر."</string>
+    <string name="tax_scope_th" formatted="false">"تايلاند2026: مقيم أعزب طوال السنة بعمر18–59، وظيفة راتب عادية واحدة، بلا معالين أو دخل آخر أو نظام خاص أو ائتمانات ضريبية. يلزم دخل عمل سنوي ووعاء نهائي موثقان بعد المصاريف والخصومات والإعفاءات القانونية. راتب فقط؛ الضريبة الدنيا البديلة على الدخل الآخر مستبعدة. تنتهي شريحة30% الحالية عند THB5 ملايين لا الحد القديم4 ملايين."</string>
+    <string name="tax_scope_id" formatted="false">"إندونيسيا2026: مقيم أعزب طوال السنة بعمر18–59، موظف دائم، NPWP/NIK مدمج صالح، TK/0 بلا معالين أو دخل آخر. حساب سنوي للمادة17 بعد خصومات/PTKP موثقة. يستبعد DTP/الضريبة الحكومية أو المدفوعة/المجملة من صاحب العمل والأنظمة الخاصة والائتمانات. أدرج THR والمكافآت والمزايا الخاضعة في الأرقام السنوية. ليس اقتطاع TER شهريًا."</string>
+    <string name="tax_scope_vn" formatted="false">"فيتنام2026: مقيم أعزب طوال السنة بعمر18–59، وظيفة راتب واحدة، بلا معالين أو دخل آخر أو نظام خاص أو ائتمانات. يلزم دخل سنوي ووعاء نهائي موثقان بعد التأمين والإعفاء الشخصي والإعفاءات القانونية، ومنها العمل الإضافي عند الاستحقاق. خمس شرائح سنوية لراتب المقيم من2026؛ لا تستخدم السبع القديمة."</string>
+    <string name="tax_scope_tw" formatted="false">"تايوان، دخل2026 بإقرار2027: مقيم أعزب طوال السنة بعمر18–59، راتب فقط، بلا معالين أو دخل آخر/أجنبي أو إضافات AMT أو نظام خاص أو ائتمانات. يلزم دخل عمل سنوي ووعاء نهائي موثقان بعد جميع الخصومات/الإعفاءات وتعديل نفقات المعيشة الأساسية إن انطبق. حد الدخل السنوي TWD7.5 ملايين احترازي للملف وليس حد إجمالي قانونيًا لـAMT."</string>
+    <string name="tax_scope_lk" formatted="false">"سريلانكا2026/27: من1 أبريل2026 إلى31 مارس2027. مقيم أعزب طوال السنة بعمر18–59، وظيفة راتب محلية عادية واحدة، بلا دخل آخر/أجنبي أو نظام خاص أو معاملة متأخرات/نهاية خدمة أو ائتمانات. يلزم دخل سنوي ووعاء نهائي موثقان بعد إعفاء شخصي LKR1.8 مليون والخصومات القانونية الأخرى. احتياطي سنوي لا اقتطاع APIT تراكمي."</string>
+    <string name="tax_annual_employment_gross" formatted="false">"إجمالي دخل العمل السنوي الموثق"</string>
+    <string name="tax_asia_five_income_hint" formatted="false">"أدخل دخل العمل لكامل السنة المختارة قبل الإعفاءات، متضمنًا المكافآت وTHR/الراتب الإضافي وقيمة مزايا صاحب العمل الخاضعة الصحيحة. لا تستخدم الراتب الشهري×12 وحده عند وجود إضافات. تحقق من الإجمالي والوعاء النهائي منفصلين. الصافي المعروض نقد الفترة ناقص الضريبة السنوية/12 والاقتطاعات الفعلية؛ لا يضيف مكافآت سنوية أو مزايا غير نقدية إلى الدفع."</string>
+    <string name="tax_asia_five_base_hint" formatted="false">"أدخل الوعاء السنوي النهائي الموثق بعد جميع المصاريف والتأمين والخصومات الشخصية والإعفاءات القانونية للسنة المختارة. لا يقرر التطبيق الاستحقاق أو يستنتج الخصومات؛ لا تطرحها مجددًا. في إندونيسيا يُقرب PKP للأسفل إلى آلاف IDR كاملة. حدّث المبلغين السنويين عند تغير الدخل أو الظروف."</string>
+    <string name="tax_asia_five_cash_hint" formatted="false">"اقتطاعات الموظف الاجتماعية/الصحية/التقاعدية وغيرها النقدية الفعلية لهذه الفترة، أو0. أثرها الضريبي القانوني يجب أن يكون في الوعاء السنوي الموثق مسبقًا. استبعد تكاليف صاحب العمل وضريبة الدخل المحجوزة هنا ولا تكرر اقتطاع الضريبة. تقدير احتياطي سنوي لا كشف راتب أو صافي سنوي كامل."</string>
+    <string name="tax_scope_pe" formatted="false">"بيرو2026: مقيم موطن ضريبي أعزب طوال السنة بعمر18–59، راتب فئة خامسة من عمل واحد فقط، بلا معالين أو دخل آخر/أجنبي أو نظام خاص أو ائتمانات. UIT=PEN5,500. الوعاء النهائي الموثق يشمل أصلًا خصم7 UIT والمصاريف الإضافية المؤهلة الموثقة. معاش الموظف ليس خصمًا ضريبيًا تلقائيًا."</string>
+    <string name="tax_scope_co" formatted="false">"كولومبيا2026: مقيم أعزب طوال السنة بعمر18–59، راتب عادي فقط، بلا معالين أو دخل آخر/أجنبي أو نظام خاص أو ائتمانات. UVT=COP52,374. وعاء سنوي نهائي موثق بعد الاستبعادات الاجتماعية والإعفاءات وحدود الخصم القانونية. المادة241 السنوية لا383 الشهرية. ضريبة الثروة وغيرها خارج تقدير الراتب."</string>
+    <string name="tax_scope_ee" formatted="false">"إستونيا2026: مقيم أعزب طوال السنة بعمر18–59، راتب عادي فقط، بلا معالين أو دخل آخر أو نظام خاص أو ائتمانات.22% من الوعاء النهائي الموثق بعد الخصومات القانونية والإعفاء الأساسي EUR8,400. لا تخفيض الإعفاء القديم حسب الدخل ولا إعفاء سن التقاعد. اقتطاعات التأمين/المعاش الفعلية منفصلة."</string>
+    <string name="tax_scope_lv" formatted="false">"لاتفيا2026: مقيم أعزب طوال السنة بعمر18–59، راتب فقط، بلا معالين أو دخل آخر أو ائتمانات. إجمالي دخل العمل السنوي حتى EUR105,300؛ الشرائح الأعلى والتضامن و3% الإضافية غير مدعومة.25.5% من الوعاء النهائي الموثق بعد الاشتراكات/الخصومات والإعفاء الأساسي EUR6,600. ليس كشفًا كاملًا للدخل المرتفع."</string>
+    <string name="tax_scope_lt" formatted="false">"ليتوانيا2026: مقيم أعزب طوال السنة بعمر18–59، راتب عادي خاضع بالكامل فقط، بلا معالين أو دخل آخر أو بدل مرض أو إعاقة/NPD خاص أو خصومات/ائتمانات إضافية. المعدلات السنوية20%/25%/32%. وعاء بعد NPD عادي فقط؛ لا خصم تأمين تلقائي. فوق دخل سنوي EUR83,237.40 يجب أن يساوي الوعاء الدخل في هذا الملف."</string>
+    <string name="tax_scope_bg" formatted="false">"بلغاريا2026: مقيم أعزب طوال السنة بعمر18–59، راتب فقط، بلا معالين أو دخل آخر أو نظام خاص أو ائتمانات أو خصم إقرار. العملة EUR من2026؛ لا تدخل BGN قديمًا دون تحويل موثق.10% من الوعاء السنوي النهائي الموثق بعد الاشتراكات/الخصومات القانونية. لا تحويل عملة أو تقريب رواتب قانوني تلقائي."</string>
+    <string name="tax_scope_ro" formatted="false">"رومانيا2026: مقيم أعزب طوال السنة بعمر18–59، وظيفة راتب محلية عادية واحدة، بلا معالين أو دخل آخر أو نظام خاص أو ائتمانات.10% من مجموع الأوعية الشهرية الموثق بعد الاشتراكات والخصومات الشخصية وإعفاءات الحد الأدنى القانونية. افحص شروط كل شهر؛ الاحتياطي السنوي لا يقررها."</string>
+    <string name="tax_scope_hu" formatted="false">"المجر2026: مقيم أعزب طوال السنة بعمر25–59، راتب عادي خاضع بالكامل؛ بلا أطفال أو دخل آخر أو إعفاءات أو خصومات وعاء أو ائتمانات. يستبعد دون25 والأمهات/الأسر والإعاقة/حديثي الزواج والعمل المبسط/الموسمي.15% من الراتب السنوي؛ الوعاء الموثق يساوي دخل العمل السنوي. تأمين الموظف لا يخفضه."</string>
+    <string name="tax_scope_ge" formatted="false">"جورجيا2026: مقيم أعزب طوال السنة بعمر18–59، راتب جورجي عادي خاضع بالكامل فقط، بلا معالين أو دخل آخر/أجنبي أو إعفاءات أو نظام أعمال خاص أو ائتمانات.20% من الراتب السنوي؛ الوعاء الموثق يساوي الدخل السنوي. المعاش والاقتطاعات الفعلية تخفض الدفع لا الوعاء مجددًا."</string>
+    <string name="tax_scope_am" formatted="false">"أرمينيا2026: مقيم أعزب طوال السنة بعمر18–59، راتب محلي عادي خاضع بالكامل؛ بلا معالين أو دخل آخر/أجنبي أو معدلات قطاعية أو إعفاءات أو استرداد رهن/مصاريف اجتماعية أو ائتمانات.20% من الراتب السنوي؛ الوعاء الموثق يساوي الدخل. معاش الموظف ورسم الطابع والصحة الفعلية إن انطبقت منفصلة."</string>
+    <string name="tax_ten_income_hint" formatted="false">"أدخل دخل العمل الموثق لكامل2026 مع المكافآت والراتب الإضافي وقيمة المزايا الخاضعة الصحيحة، والوعاء السنوي النهائي الموثق. في رومانيا الوعاء مجموع أوعية الأشهر الموثقة. تُحجز الضريبة السنوية/12 من نقد الفترة؛ لا تُضاف المكافآت السنوية أو المزايا غير النقدية للدفع المعروض."</string>
+    <string name="tax_ten_base_hint" formatted="false">"تحقق من جميع الخصومات والإعفاءات القانونية قبل إدخال الوعاء السنوي النهائي؛ التطبيق لا يقرر الاستحقاق. جورجيا/أرمينيا/المجر: الوعاء يساوي الراتب السنوي ولا يخفضه تأمين الموظف. ليتوانيا: NPD عادي فقط بلا تخفيض فوق حد الملف المذكور. حدّث الرقمين السنويين عند تغير الظروف."</string>
+    <string name="tax_ten_cash_hint" formatted="false">"أدخل اقتطاعات الموظف الاجتماعية/الصحية/التقاعدية وغيرها النقدية غير ضريبة الدخل للفترة، أو0. أرمينيا تشمل رسم الطابع والصحة الفعليين إن انطبقا. استبعد تكاليف صاحب العمل والضريبة المحجوزة هنا. الآثار القانونية على الضريبة يجب أن تكون في الوعاء أصلًا؛ لا تخصم مرتين. تقدير سنوي لا كشف راتب أو إقرار."</string>
+    <string name="tax_fifteen_common_scope" formatted="false">"الملف: مقيم ضريبي طوال السنة وأعزب بعمر18–59، وظيفة محلية عادية واحدة، دون معالين أو دخل آخر/أجنبي أو نظام خاص أو ائتمانات غير المذكورة. الدولة واللغة لا تثبتان الأهلية. أكد كل الشروط. القيم لجميع الفترات؛ حدّثها عند تغير الأجر أو الظروف."</string>
+    <string name="tax_scope_mx" formatted="false">"المكسيك2026: جدول ISR سنوي وليس اقتطاعًا شهريًا. لا أهلية لدعم التوظيف في أي شهر أو إعفاء الحد الأدنى أو دفعات خاصة/ائتمانات. حد محافظ:الأساس السنوي/12 أعلى من MXN11,492.66، ولا يثبت الأهلية وحده. تحقق من كامل الأساس والخصومات."</string>
+    <string name="tax_scope_br" formatted="false">"البرازيل2026: دفعة نقدية شهرية عادية واحدة خاضعة بالكامل، بأساس شهري موثق بعد خصومات قانونية أو الخصم المبسط، لا كليهما. يشمل التخفيض الشهري الجديد. يستثني العيني/المعفى والراتب13 والإجازات/الأحداث المنفصلة والتسوية السنوية والائتمانات الأخرى. الإجمالي السنوي الموثق حتى BRL600,000 كحد محافظ للتطبيق."</string>
+    <string name="tax_scope_cr" formatted="false">"كوستاريكا2026: راتب نقدي شهري عادي خاضع بالكامل. ضريبة الراتب قبل مساهمات الموظف الاجتماعية وفق شرائح2026. دون ائتمانات الزوج/الأطفال أو مكافآت معفاة أو راتب13 أو دفعات منفصلة/شهر جزئي. اقتطاعات الموظف الفعلية منفصلة."</string>
+    <string name="tax_scope_gt" formatted="false">"غواتيمالا2026: أساس سنوي نهائي موثق بعد الخصومات/الإعفاءات القانونية، يشمل Q48,000 وكذلك Q3,024 الاستثنائية لعام2026. لا إعفاء مفهرس2027.5% حتى أساس Q300,000 و7% فوقه. تحقق من إعفاء aguinaldo/Bono14 والخصومات الموثقة ضمن الأساس."</string>
+    <string name="tax_scope_do" formatted="false">"جمهورية الدومينيكان2026: جدول راتب سنوي بمبالغ ثابتة منشورة. الأساس قبل شريحة الصفر RD$416,220؛ لا تخصمها ثانية. لا جدول2027 أو ائتمانات تعليمية/أخرى. اقتطاعات الموظف الاجتماعية منفصلة."</string>
+    <string name="tax_scope_ke" formatted="false">"كينيا2026: أساس سنوي نهائي موثق بعد الخصومات القانونية ومنها SHIF والإسكان والتقاعد المطبقة. إعفاء ضريبي شخصي للمقيم حتى KES28,800 سنويًا محسوب مرة واحدة وغير مسترد فوق الضريبة. دون تخفيف تأمين خاص أو ائتمانات/إعفاءات خاصة أخرى. الاقتطاعات الفعلية منفصلة دون خصم مكرر."</string>
+    <string name="tax_scope_rw" formatted="false">"رواندا2026: وظيفة عادية لدى صاحب العمل الأول فقط وأساس سنوي موثق. يستثني العمل العرضي15% وصاحب العمل الثاني وبدلات المديرين والأنظمة الخاصة. الضريبة السنوية/12 احتياطي وليست PAYE شهرية متغيرة. المساهمات الفعلية منفصلة."</string>
+    <string name="tax_scope_ug" formatted="false">"أوغندا2026/27:1 يوليو2026–30 يونيو2027، شرائح مقيمين جديدة. الاحتياطي يفترض12 أساسًا شهريًا متساويًا؛ ليس متغيرًا/تراكميًا. لا العتبة القديمة235,000 أو جدول غير المقيم. يشمل10% إضافية فوق أساس شهري UGX10ملايين."</string>
+    <string name="tax_scope_zm" formatted="false">"زامبيا2026: شرائح راتب محولة سنويًا ومنها شريحة صفر شهرية ZMW5,100. أساس سنوي موثق واقتطاعات فعلية. دون ائتمانات إعاقة/عمل خاص/أخرى. يستثني تكاليف صاحب العمل."</string>
+    <string name="tax_scope_pk" formatted="false">"باكستان2026/27، السنة الضريبية2027: شرائح الراتب بقانون المالية2026 المُقر. مقيم براتب فقط وإجمالي عمل سنوي موثق حتى PKR10ملايين. يستثني الزيادة والضريبة الفائقة والتقاعد والأعمال والائتمانات الخاصة. ليس جدول2025/26 أو مشروع قانون."</string>
+    <string name="tax_scope_uz" formatted="false">"أوزبكستان2026: راتب مقيم عادي خاضع بالكامل12%؛ الأساس السنوي يساوي الراتب السنوي. دون إعفاءات خاصة/تخفيف تقاعد طوعي. مبلغ التقاعد المخصص ضمن12% محسوب: لا تسجله مجددًا كاقتطاع إضافي. الضريبة الاجتماعية لصاحب العمل مستثناة."</string>
+    <string name="tax_scope_kz" formatted="false">"كازاخستان2026: جدول سنوي جديد10/15% عند8,500MCI؛ MCI=KZT4,325. الأساس يشمل بالفعل خصم360MCI السنوي العادي والخصومات الاجتماعية القانونية، وليس قاعدة14MCI القديمة. دون ممارسة خاصة أو أعمال أو أرباح موزعة أو تخفيف اجتماعي خاص."</string>
+    <string name="tax_scope_ma" formatted="false">"المغرب2026: راتب عادي وأساس سنوي صاف خاضع موثق بعد المصاريف المهنية والمساهمات والإعفاءات القانونية. ست شرائح حالية حتى37%. دون تخفيف عائلي أو أعمال/زراعة أو منطقة/نسبة خاصة أو ائتمانات أخرى. الاقتطاعات النقدية منفصلة."</string>
+    <string name="tax_scope_md" formatted="false">"مولدوفا2026: نظام عادي وإجمالي عمل سنوي أقل قطعًا من MDL360,000 كحد محافظ. الأساس يشمل تخفيف MDL29,700 والخصومات القانونية. دون حديقة تقنية أو تاكسي أو إعفاء شخصي موسع/عائلي أو ائتمانات أخرى."</string>
+    <string name="tax_scope_mk" formatted="false">"مقدونيا الشمالية2026: راتب عادي،10% من الأساس السنوي النهائي الموثق بعد المساهمات والتخفيض الشخصي السنوي MKD131,184. دون دخل آخر أو إعفاءات/ائتمانات خاصة. الاقتطاعات منفصلة؛ لا تخصم التخفيض مرتين."</string>
+    <string name="tax_monthly_verified_base" formatted="false">"الأساس الضريبي الموثق لهذه الدفعة الشهرية"</string>
+    <string name="tax_br_annual_hint" formatted="false">"أدخل إجمالي العمل الموثق لكامل2026، بما فيه راتب13 والإجازات والمكافآت، لفحص حد BRL600,000. الحساب الشهري لا يحسب ضرائبها المنفصلة أو التسوية السنوية. لا تضع هذه الأحداث ضمن إجمالي/أساس الشهر العادي."</string>
+    <string name="tax_br_monthly_base_hint" formatted="false">"لنفس الدفعة الشهرية العادية: أساس موثق بعد الخصومات القانونية. يقارنه التطبيق بالإجمالي ناقص BRL607.20 ويستخدم الأساس الأقل دون جمع الخصمين. لا نسبة INSS تلقائية. حدّث للدفعة المعروضة؛ لا ملفات تاريخية."</string>
+    <string name="tax_fifteen_income_hint" formatted="false">"دخل العمل الموثق لكل السنة الضريبية، مع المكافآت والمنافع الخاضعة المقيمة صحيحًا، وأساس سنوي نهائي. UG/PK تبدأ يوليو2026؛ PK سنة ضريبية2027. الجدول السنوي/12 احتياطي على النقد، لا كشف راتب/تراكمي/صافي سنوي. UG تفترض12 أساسًا شهريًا متساويًا."</string>
+    <string name="tax_fifteen_base_hint" formatted="false">"الأساس السنوي النهائي الموثق بعد الخصومات القانونية. لا تخصم شريحة الصفر ثانية. GT يشمل Q3,024 إضافية2026؛ KZ360MCI؛ MK131,184MKD. UZ:الأساس=الراتب السنوي. MD:الإجمالي أقل من360,000. لا أهلية مستنتجة تلقائيًا."</string>
+    <string name="tax_fifteen_cash_hint" formatted="false">"اقتطاعات الموظف النقدية الفعلية غير ضريبة الدخل لهذه الدفعة أو0 صريح: اجتماعية وصحة وتقاعد/رسوم مطبقة. استثنِ صاحب العمل وضريبة الدخل المحسوبة هنا. UZ:لا تكرر التقاعد داخل12%. آثار الخصومات القانونية ضمن الأساس الموثق مسبقًا؛ لا خصم مزدوج."</string>
+    <string name="tax_wave_common_scope" formatted="false">"الملف: موظف أعزب18–59 يقيم ويعمل محليًا طوال السنة، وظيفة عادية واحدة، دون معالين أو دخل آخر/أجنبي أو أنظمة/ائتمانات خاصة إلا المذكور. تحقق من الإقامة الضريبية والشروط؛ الدولة/اللغة لا تثبت الأهلية. حساب محلي فقط دون ضريبة دولة الأصل. القيم لجميع الفترات؛ حدّثها."</string>
+    <string name="tax_scope_pa" formatted="false">"بنما2026: راتب مقيم عادي وأساس سنوي نهائي موثق.0% حتى PAB11,000؛15% حتى50,000؛25% فوقها. دون تمثيل/دفعات بنسبة منفصلة أو دخل/ائتمانات أخرى. المساهمات الفعلية منفصلة؛ لا تخصم شريحة الصفر ثانية."</string>
+    <string name="tax_scope_ni" formatted="false">"نيكاراغوا2026: راتب مقيم عادي، أساس سنوي موثق بعد خصومات INSS/الادخار والإعفاءات القانونية.0/15/20/25/30%. تحقق من إعفاء الراتب13؛ لا تخصم شريحة C$100,000 مرة أخرى. دون إنهاء/نسبة منفصلة/ائتمانات خاصة. احتياطي سنوي لا اقتطاع تراكمي."</string>
+    <string name="tax_scope_sv" formatted="false">"السلفادور2026: دفعة شهرية عادية واحدة، أساس موثق بعد الخصومات القانونية. جدول شهري منشور بمبالغ ثابتة؛ لا إعادة تراكمية يونيو/ديسمبر أو تسوية سنوية أو نصف/جزء شهر. دون دفعات خاصة/معفاة أو ائتمانات أخرى."</string>
+    <string name="tax_scope_hn" formatted="false">"هندوراس2026: راتب مقيم عادي، أساس سنوي نهائي يتضمن بالفعل كامل خصم التعليم/الطب المؤهل HNL40,000 والخصومات/الإعفاءات القانونية الأخرى. شرائح2026 الجديدة. دون تخفيف فوق65 أو أعمال/ائتمانات خاصة. لا تخصم شريحة الصفر ثانية."</string>
+    <string name="tax_scope_py" formatted="false">"باراغواي2026: موظف مقيم مسجل بالفعل في IRP-RSP قبل2026. سنة التسجيل الأولى/تجاوز العتبة مستثناة. تحقق من الدخل السنوي الكلي والمقبوضات الخاضعة قبل المصاريف دون راتب13 المعفى والأساس الصافي. حتى PYG80مليون مقبوضات خاضعة لا دفع؛ فوقها8/9/10% تصاعديًا على الصافي. دون رأس مال/أعمال/دخل آخر/ائتمانات."</string>
+    <string name="tax_scope_ec" formatted="false">"الإكوادور2026: مقيم بالبر الرئيسي دون معالين أو إعاقة/مرض خاص أو تخفيف خاص. مبالغ سنوية2026 منشورة. مصاريف شخصية مؤهلة موثقة تعطي تخفيض18% حتى7سلال وبحد الضريبة. غالاباغوس/السقوف الأسرية والخاصة مستثناة. التخفيض للضريبة وليس خصم الأساس ثانية."</string>
+    <string name="tax_scope_na" formatted="false">"ناميبيا2026/27:1مارس2026–28فبراير2027، راتب مقيم محلي عادي. أساس سنوي نهائي موثق بعد الخصومات والمنافع المقيمة. شريحة صفر NAD100,000 ثم18/25/28/30/32/37%. دون سحب تقاعد/زراعة/أعمال/دخل آخر/ائتمانات خاصة. احتياطي سنوي لا PAYE تراكمي."</string>
+    <string name="tax_scope_kh" formatted="false">"كمبوديا2026: راتب مقيم نقدي شهري عادي، دون تخفيف معالين/زوج أو غير مقيم أو ضريبة منافع منفصلة. أساس شهري موثق بعد الخصومات القانونية؛0/5/10/15/20%. لا تخصم شريحة KHR1.5مليون ثانية. المساهمات الفعلية منفصلة."</string>
+    <string name="tax_scope_az" formatted="false">"أذربيجان2026: راتب نقدي شهري عادي خاضع بالكامل بوظيفة رئيسية في القطاع الخاص غير النفطي/الغازي فقط.3/10/14% وإعفاء AZN200 مرة واحدة إذا الإجمالي&lt;=2,500. دون حكومي/نفط/غاز/إعفاءات خاصة. التأمين لا يخفض أساس ضريبة الدخل. لا نسب2027/2028."</string>
+    <string name="tax_scope_bh" formatted="false">"البحرين2026: راتب محلي عادي لموظف وافد غير مواطن GCC. لا ضريبة دخل محلية على الراتب بهذا الملف؛ أدخل SIO/بطالة/تقاعد/اقتطاعات فعلية أخرى أو0 صريح. دون صاحب عمل أو أعمال/دخل آخر أو ضريبة دولة الأصل."</string>
+    <string name="tax_scope_kw" formatted="false">"الكويت2026: راتب محلي عادي لوافد غير GCC. لا ضريبة دخل شخصية محلية على الراتب. تأمين/تقاعد/اقتطاعات فعلية أخرى صراحة أو0. دون شركات/أعمال أو صاحب عمل أو ضريبة خارجية/دولة الأصل."</string>
+    <string name="tax_scope_om" formatted="false">"عمان2026: راتب محلي عادي لوافد غير GCC. لا ضريبة دخل محلية2026؛ القانون الجديد يبدأ2028 فلا تُفرض5% هنا ولا تُفعّل السنوات المقبلة. اقتطاعات اجتماعية/صحة/تقاعد فعلية أو0، دون صاحب العمل/ضرائب خارجية."</string>
+    <string name="tax_scope_qa" formatted="false">"قطر2026: راتب محلي عادي لوافد غير GCC مستثنى من ضريبة الدخل المحلية. تأمين/تقاعد/اقتطاعات فعلية أخرى أو0؛ الدولة لا تثبت إعفاء المساهمات. دون أعمال/شركات أو صاحب عمل أو ضريبة خارجية/الأصل."</string>
+    <string name="tax_scope_bn" formatted="false">"بروناي2026: راتب موظف محلي عادي دون ضريبة دخل شخصية. SPK/تقاعد/اجتماعي/اقتطاعات فعلية موثقة أو0. لا نسبة أو أهلية تلقائية. دون أعمال/دخل آخر أو صاحب عمل أو ضريبة خارجية/الأصل."</string>
+    <string name="tax_scope_bs" formatted="false">"باهاماس2026: راتب محلي عادي دون ضريبة دخل شخصية داخلية. NIB/تقاعد/اقتطاعات فعلية موثقة أخرى أو0. لا إعفاء مساهمات تلقائي أو أعمال/دخل آخر أو صاحب عمل أو ضريبة خارجية/الأصل."</string>
+    <string name="tax_ec_mainland" formatted="false">"الإكوادور: البر الرئيسي"</string>
+    <string name="tax_ec_expenses" formatted="false">"مصاريف شخصية سنوية مؤهلة موثقة"</string>
+    <string name="tax_ec_expenses_hint" formatted="false">"البر الرئيسي بلا معالين/وضع خاص: مصاريف2026 المؤهلة الموثقة أو0 صريح. تخفيض18% حتى USD5,752.60 (7×821.80)، مقرب للسنت ومحدود بالضريبة؛ أقصى USD1,035.47. لا تخصم نفس المصاريف من الأساس السنوي. لا أهلية تلقائية أو زيادة غالاباغوس/سقوف خاصة."</string>
+    <string name="tax_py_receipts" formatted="false">"مقبوضات IRP سنوية خاضعة قبل المصاريف: موثقة"</string>
+    <string name="tax_py_receipts_hint" formatted="false">"باراغواي: مقبوضات العمل الخاضعة IRP-RSP قبل المصاريف دون راتب13/المقبوضات المعفاة قانونًا. ليست بالضرورة إجمالي العمل أو الأساس الصافي. المقبوضات&lt;=الإجمالي السنوي؛ الأساس النهائي&lt;=المقبوضات. عتبة PYG80مليون تستخدم هذا الحقل وليس كل الإجمالي. يلزم تسجيل قبل2026."</string>
+    <string name="tax_wave_annual_hint" formatted="false">"إجمالي العمل الموثق لكامل السنة الضريبية، بما فيه المكافآت والمنافع المقيمة صحيحًا، والأساس السنوي النهائي بعد الخصومات/الإعفاءات القانونية. ناميبيا2026/27 تبدأ1مارس2026؛ البقية تقويم2026. الضريبة السنوية/12 احتياطي على النقد وليست كشفًا/تراكميًا/صافيًا سنويًا. لا إضافة كل المستحقات السنوية للنقد."</string>
+    <string name="tax_wave_monthly_hint" formatted="false">"الأساس النهائي الموثق لنفس الدفعة الشهرية العادية الظاهرة بالإجمالي بعد الخصومات القانونية. لا تخصم شريحة الصفر/الاقتطاعات مرتين. الأساس مشترك للفترات؛ حدّث لكل دفعة. لا تسوية تراكمية/سنوية SV أو ضريبة منافع KH."</string>
+    <string name="tax_wave_base_hint" formatted="false">"الأساس السنوي النهائي الموثق بعد الخصومات/الإعفاءات القانونية وقبل شريحة الصفر. HN:خصم40,000 المؤهل الكامل محسوب. PY:الأساس&lt;=المقبوضات الخاضعة دون راتب13 المعفى. EC:المصاريف الشخصية تخفض الضريبة وليس الأساس ثانية. تحقق من الأهلية."</string>
+    <string name="tax_wave_cash_hint" formatted="false">"اقتطاعات الموظف النقدية الفعلية غير ضريبة الدخل للدفعة أو0 صريح: اجتماعية وصحة وتقاعد وبطالة/NIB/SPK/أخرى. دون صاحب العمل أو ضريبة محسوبة هنا. الآثار القانونية ضمن الأساس الموثق مسبقًا. عدم وجود ضريبة دخل محلية لا يعني عدم الاقتطاعات؛ لا حساب ضريبة خارجية/الأصل."</string>
+    <string name="tax_twenty_common_scope" formatted="false">"النطاق: موظف مقيم أعزب بعمر31–59، يعيش ويعمل محلياً كامل السنة الضريبية، وظيفة عادية واحدة، دون معالين أو دخل آخر/أجنبي أو وضع/ائتمان خاص إلا المذكور. الدولة واللغة لا تثبتان الأهلية. تحقق مستقلاً من الوعاء النهائي واقتطاعات الموظف الفعلية. لا تكاليف صاحب العمل أو ضريبة خارجية. حدّث المدخلات لكل دفعة."</string>
+    <string name="tax_scope_at" formatted="false">"2026: راتب سنوي عادي فقط. ائتمان نقل496 وإضافة حسب الدخل حتى804، بحد الضريبة. لا ائتمان تنقل إضافي أو commuter euro أو راتب13/14 بضريبة مستقلة أو استرداد تأمين اجتماعي. الخصومات القانونية ضمن الوعاء؛ لا تكرر الشريحة الصفرية."</string>
+    <string name="tax_scope_cy" formatted="false">"إصلاح2026: وعاء راتب سنوي نهائي موثق بعد الخصومات والإعفاءات القانونية. لا أهلية تلقائية للسكن/البيئة/الأسرة/أول وظيفة، ولا دخل آخر أو ائتمانات خاصة."</string>
+    <string name="tax_scope_mt" formatted="false">"2026: تعريفة SINGLE فقط، دون شرائح المتزوجين/الوالدين/الأطفال أو نظام العمل الجزئي الخاص15% أو ائتمانات أخرى. وعاء سنوي نهائي موثق."</string>
+    <string name="tax_scope_gr" formatted="false">"2026: بلا أطفال وبعمر31–59 فقط. سلم جديد؛ ائتمان777 يتناقص فوق12000 مرة واحدة وبحد الضريبة. شرط الإنفاق الإلكتروني مستوفى؛ لا جزاء عجز الإنفاق أو إعفاء/ائتمان خاص."</string>
+    <string name="tax_scope_si" formatted="false">"2026: التعريفة السنوية المنشورة على وعاء صافٍ نهائي موثق بعد الاشتراكات والإعفاءات الشخصية/العامة القانونية. لا تخصمها مجدداً. دون أنظمة الشباب/الطلاب/الإعاقة/التطوع، أو دخل أجنبي أو ائتمانات خاصة."</string>
+    <string name="tax_scope_sk" formatted="false">"2026: شرائح سنوية جديدة19/25/30/35%. وعاء نهائي بعد الاشتراكات والخصومات المستحقة الموثقة مع تناقصها حسب الدخل. لا خصم مكرر أو ائتمانات أطفال/رهن/خاصة."</string>
+    <string name="tax_scope_hr" formatted="false">"2026: زغرب فقط، عمر31–59، دون إعفاء الشباب/العائدين. الوعاء النهائي يشمل الخصم الأساسي المستحق7200 والتقاعد القانوني.23/33% عند وعاء60000. البلديات الأخرى غير متاحة."</string>
+    <string name="tax_scope_rs" formatted="false">"2026: استقطاع راتب شهري عادي10% من الوعاء النهائي الموثق بعد الخصم القانوني الموافق للتاريخ ومدة العمل. لا تخصم التأمين ثانية. ضريبة الدخل المرتفع السنوية الإضافية والتسوية التراكمية والإعفاءات الخاصة غير مشمولة."</string>
+    <string name="tax_scope_me" formatted="false">"2026: راتب نقدي شهري عادي خاضع بالكامل؛ الوعاء=الإجمالي قبل اشتراكات الموظف.0/9/15%. الإضافة البلدية على الراتب تكلفة صاحب العمل وليست خصماً إضافياً من الموظف هنا. لا دفعات خاصة أو تسوية سنوية."</string>
+    <string name="tax_scope_al" formatted="false">"2026: تعريفة سنوية13/23%، وعاء نهائي بعد الإعفاء الشخصي حسب الدخل والخصومات القانونية.600000/420000/360000 مضمنة مسبقاً، لا تخصمها مرتين. لا ائتمانات أطفال/تعليم أو دخل آخر."</string>
+    <string name="tax_scope_ba" formatted="false">"2026: اتحاد البوسنة والهرسك فقط، لا جمهورية صربسكا أو برتشكو. وعاء راتب سنوي نهائي بعد الاشتراكات والخصم الشخصي المستحق3600. ضريبة10% دون ائتمانات إضافية."</string>
+    <string name="tax_scope_ng" formatted="false">"NTA/JRB2026:12راتباً نقدياً شهرياً متساوياً خاضعاً بالكامل؛ الإجمالي السنوي=12×إجمالي الشهر الحالي. لا مكافآت/مزايا/أجر متغير أو وظيفة عسكرية/معفاة. يشمل إعفاء الحد الأدنى حتى70000شهرياً. وعاء موثق بعد التخفيف القانوني، دون CRAقديم أو تكرار شريحة800000الصفرية."</string>
+    <string name="tax_scope_gh" formatted="false">"2026: راتب مقيم شهري عادي بجدول نافذ من1سبتمبر. أدخل تاريخ الدفع الفعلي الموثق والوعاء الشهري بعد الخصومات، ونهاية الفترة بنفس الشهر. الأشهر السابقة والمكافآت/الإضافي بسعر خاص والعمل العرضي وغير المقيم والتسويات السنوية/التراكمية غير متاحة."</string>
+    <string name="tax_scope_tz" formatted="false">"2026: البر الرئيسي، موظف مقيم بوظيفة رئيسية، PAYEشهري. وعاء موثق بعد الخصومات/التقاعد المعترف وقبل الشريحة الصفرية. لا زنجبار أو وظيفة ثانية/غير مقيم30% أو دفعات خاصة/تسوية سنوية."</string>
+    <string name="tax_scope_bw" formatted="false">"2026/27من1يوليو2026: تعريفة سنوية مقرة للمقيم، جديدة27.5%فوق400000 لا الحد القديم25%. وعاء نهائي موثق؛ لا غير مقيم أو تعويض/تقاعد مقطوع أو عمل تجاري أو ائتمانات خاصة."</string>
+    <string name="tax_scope_mu" formatted="false">"سنة دخل2026/27من1يوليو2026، لا تسمية سنة التقييم. مجموع دخل العمل السنوي&lt;=12مليون MUR ودون دخل آخر.0/10/20%ضمن النطاق. الدخل الأعلى35%/Fair Share والأنظمة/الائتمانات الخاصة مستبعدة؛ الخصومات موثقة."</string>
+    <string name="tax_scope_eg" formatted="false">"2026: راتب مقيم عادي، مجموع الدخل السنوي&lt;=600000EGP. الوعاء النهائي يتضمن الإعفاء الشخصي المستحق20000 والخصومات القانونية قبل الشريحة الصفرية40000. تقريب الوعاء لأسفل لمضاعف10EGP. لا حالات فقد الشرائح للدخل المرتفع/ائتمانات خاصة. التأمين والدمغة واقتطاعات الموظف الفعلية منفصلة."</string>
+    <string name="tax_scope_sz" formatted="false">"2026/27من1يوليو2026: راتب عادي،20/25/30/33% وتخفيض أساسي8200غير قابل للاسترداد مرة واحدة. حد الصفر الفعلي41000ليس خصماً ثانياً. لا عمر60+ أو امتياز تسريح/تقاعد أو ائتمانات أخرى. وعاء نهائي موثق."</string>
+    <string name="tax_scope_ls" formatted="false">"2026/27من1أبريل2026: شريحة سنوية محدثة77760بسعر20% والفائض30% وائتمان12240غير مسترد. تحل محل مبالغ RSLالقديمة. وعاء عمل نهائي موثق؛ لا ضريبة مزايا على صاحب العمل أو غير مقيم/إنهاء عمل/ائتمانات خاصة."</string>
+    <string name="tax_scope_jo" formatted="false">"2026: راتب مقيم سنوي عادي، وعاء نهائي يتضمن إعفاء شخصياً مستحقاً9000 وخصومات موثقة.5/10/15/20/25/30% ومساهمة وطنية1%فوق200000. تُحذف كسور الدينار من الوعاء والضريبة السنوية قانونياً. لا أنظمة/ائتمانات خاصة."</string>
+    <string name="tax_payment_date" formatted="false">"تاريخ الدفع الفعلي · YYYY-MM-DD"</string>
+    <string name="tax_payment_date_hint" formatted="false">"غانا فقط: تاريخ موثق بين2026-09-01 و2026-12-31 بنفس شهر نهاية الفترة، وإلا الصافي غير متاح. أرقام لاتينية مثل2026-10-31. حدّث التاريخ والوعاء لكل دفعة أخرى. لا جداول سابقة أو تسوية سنوية/تراكمية. التاريخ ضمن النسخ الاحتياطية."</string>
+    <string name="tax_payment_date_invalid" formatted="false">"أدخل تاريخاً صحيحاً YYYY-MM-DD بأرقام لاتينية أو اتركه فارغاً."</string>
+    <string name="tax_zagreb" formatted="false">"زغرب"</string>
+    <string name="tax_fbih" formatted="false">"اتحاد البوسنة والهرسك"</string>
+    <string name="tax_tz_mainland" formatted="false">"تنزانيا البر الرئيسي"</string>
+    <string name="tax_twenty_annual_hint" formatted="false">"تحقق من مجموع دخل العمل والوعاء النهائي لكامل السنة الضريبية. BW/MU/SZ2026/27من1يوليو؛ LSمن1أبريل؛ البقية2026ميلادية. الضريبة السنوية/12احتياطي مقابل نقد الفترة، لا استقطاع تراكمي فعلي/صافي سنوي. نيجيريا:12رواتب متساوية. لا تضف مكافآت/مزايا السنة كاملة إلى هذه الدفعة."</string>
+    <string name="tax_twenty_base_hint" formatted="false">"وعاء سنوي نهائي موثق بعد الخصومات والإعفاءات المستحقة وقبل الشرائح الصفرية والائتمانات. AL/BA/HR/EG/JO: الخصم الأساسي مضمن. AT/GR/SZ/LS: الائتمانات من الضريبة منفصلة. لا تخصم النقد أو شريحة الصفر مرتين؛ تحقق من الأهلية الشخصية."</string>
+    <string name="tax_twenty_monthly_hint" formatted="false">"وعاء نهائي موثق لنفس الدفعة الشهرية بعد الخصومات/الإعفاءات القانونية وقبل شريحة الصفر. RS: الخصم حسب التاريخ والعمل. ME: الوعاء=الإجمالي قبل الاشتراكات. GH: تاريخ/شهر؛ TZ: وظيفة رئيسية بالبر الرئيسي. لا تسوية سنوية/تراكمية. حدّث الوعاء/التاريخ للدفعة الأخرى."</string>
+    <string name="tax_us_ak" formatted="false">"ألاسكا"</string>
+    <string name="tax_us_nv" formatted="false">"نيفادا"</string>
+    <string name="tax_us_sd" formatted="false">"داكوتا الجنوبية"</string>
+    <string name="tax_us_tn" formatted="false">"تينيسي"</string>
+    <string name="tax_us_wa" formatted="false">"واشنطن"</string>
+    <string name="tax_us_wy" formatted="false">"وايومنغ"</string>
+    <string name="tax_us_nh" formatted="false">"نيوهامبشير"</string>
+    <string name="tax_us_az" formatted="false">"أريزونا"</string>
+    <string name="tax_us_ia" formatted="false">"آيوا"</string>
+    <string name="tax_us_il" formatted="false">"إلينوي"</string>
+    <string name="tax_us_mi" formatted="false">"ميشيغان"</string>
+    <string name="tax_us_nc" formatted="false">"كارولينا الشمالية"</string>
+    <string name="tax_us_ut" formatted="false">"يوتا"</string>
+    <string name="tax_us_ky" formatted="false">"كنتاكي"</string>
+    <string name="tax_us_pa" formatted="false">"بنسلفانيا"</string>
+    <string name="tax_us_in" formatted="false">"إنديانا"</string>
+    <string name="tax_us_ma" formatted="false">"ماساتشوستس"</string>
+    <string name="tax_us_ga" formatted="false">"جورجيا"</string>
+    <string name="tax_us_la" formatted="false">"لويزيانا"</string>
+    <string name="tax_us_ms" formatted="false">"مسيسيبي"</string>
+    <string name="tax_us_state_base" formatted="false">"الوعاء السنوي لضريبة الولاية بعد التحقق"</string>
+    <string name="tax_us_base_hint" formatted="false">"الوعاء النهائي بعد خصومات وإعفاءات الولاية القانونية، وقبل الشرائح الصفرية والائتمانات. لا تنسخ الوعاء الفدرالي. تحقق من الأهلية الشخصية بشكل مستقل."</string>
+    <string name="tax_us_state_relief" formatted="false">"التخفيض السنوي لضريبة الولاية بعد التحقق"</string>
+    <string name="tax_us_relief_hint" formatted="false">"إجمالي التخفيضات المستحقة غير القابلة للاسترداد، بما فيها الشخصية وذات الدخل المحدود. أدخل مبلغا موثقا لعام 2026 أو صفرا صريحا. لا يتجاوز الضريبة؛ لا استرداد أو أهلية تلقائية."</string>
+    <string name="tax_us_local_tax" formatted="false">"الضريبة المحلية للموظف لهذه الفترة"</string>
+    <string name="tax_us_local_hint" formatted="false">"المبلغ الفعلي الموثق لضريبة المدينة أو المقاطعة أو المدارس أو المهنة لهذه الدفعة، أو صفر صريح. لا تحسب المعدلات والإعفاءات المحلية. لا تكرر المبلغ في الخصومات الأخرى."</string>
+    <string name="tax_us_zero_hint" formatted="false">"لا ضريبة دخل ولاية على الأجر العادي في ملف 2026 هذا. تبقى الضريبة الفدرالية وSocial Security وMedicare والخصومات المحلية والفعلية. لا تطبق تغييرات واشنطن لعام 2028 على 2026."</string>
+    <string name="tax_us_pa_ut_hint" formatted="false">"PA/UT: أجور خاضعة بالكامل بلا تعديلات؛ الوعاء = 12 × الإجمالي الشهري الحالي. لا خصم قياسي في PA. في UT تؤثر الخصومات الفدرالية على ائتمان منفصل لا على هذا الوعاء؛ تحقق من ائتمان 2026 مستقلا."</string>
+    <string name="tax_us_ms_hint" formatted="false">"مسيسيبي: 4% من وعاء الولاية النهائي فوق 10000 دولار. تطبق الشريحة الصفرية هنا مرة واحدة؛ لا تخصمها من الوعاء المدخل. الإقرار المشترك بمعيل واحد يستخدم شريحة واحدة."</string>
+    <string name="tax_us_ma_hint" formatted="false">"ماساتشوستس: 5% للأجور العادية وإجمالي أسري سنوي لا يتجاوز مليون دولار لاستبعاد الضريبة الإضافية. تحقق منفصلا من تخفيض No Tax Status أو Limited Income Credit."</string>
+    <string name="tax_us_cash_hint" formatted="false">"خصومات الموظف الأخرى الفعلية لهذه الفترة أو صفر: إجازة مدفوعة وWA Cares والبطالة وPFML والمساهمات المستحقة. لا تكاليف صاحب العمل. استبعد الضرائب الفدرالية والولائية والمحلية وSocial Security وMedicare المحسوبة. المزايا قبل الضريبة خارج الملف."</string>
+    <string name="tax_us_current_inputs" formatted="false">"وعاء الولاية وتخفيضها مدخلات يدوية موثقة. الإجمالي السنوي = 12 × الشهري الحالي؛ الضريبة/12 احتياطي متوسط لا اقتطاع W-4 أو تراكمي فعلي. حدّث لكل دفعة وفترة. لا ضرائب محلية تلقائية أو ائتمانات مستردة أو حالات بين الولايات."</string>
+    <string name="tax_us_state_tax" formatted="false">"ضريبة دخل الولاية"</string>
+    <string name="tax_us_al" formatted="false">"ألاباما"</string>
+    <string name="tax_us_ar" formatted="false">"أركنساس"</string>
+    <string name="tax_us_ca" formatted="false">"كاليفورنيا"</string>
+    <string name="tax_us_co" formatted="false">"كولورادو"</string>
+    <string name="tax_us_ct" formatted="false">"كونيتيكت"</string>
+    <string name="tax_us_de" formatted="false">"ديلاوير"</string>
+    <string name="tax_us_hi" formatted="false">"هاواي"</string>
+    <string name="tax_us_id" formatted="false">"أيداهو"</string>
+    <string name="tax_us_ks" formatted="false">"كانساس"</string>
+    <string name="tax_us_md" formatted="false">"ماريلاند"</string>
+    <string name="tax_us_me" formatted="false">"مين"</string>
+    <string name="tax_us_mn" formatted="false">"مينيسوتا"</string>
+    <string name="tax_us_mo" formatted="false">"ميزوري"</string>
+    <string name="tax_us_mt" formatted="false">"مونتانا"</string>
+    <string name="tax_us_nd" formatted="false">"داكوتا الشمالية"</string>
+    <string name="tax_us_ne" formatted="false">"نبراسكا"</string>
+    <string name="tax_us_nj" formatted="false">"نيوجيرسي"</string>
+    <string name="tax_us_nm" formatted="false">"نيو مكسيكو"</string>
+    <string name="tax_us_ny" formatted="false">"نيويورك"</string>
+    <string name="tax_us_oh" formatted="false">"أوهايو"</string>
+    <string name="tax_us_ok" formatted="false">"أوكلاهوما"</string>
+    <string name="tax_us_or" formatted="false">"أوريغون"</string>
+    <string name="tax_us_ri" formatted="false">"رود آيلاند"</string>
+    <string name="tax_us_sc" formatted="false">"كارولينا الجنوبية"</string>
+    <string name="tax_us_va" formatted="false">"فرجينيا"</string>
+    <string name="tax_us_vt" formatted="false">"فيرمونت"</string>
+    <string name="tax_us_wi" formatted="false">"ويسكونسن"</string>
+    <string name="tax_us_wv" formatted="false">"فرجينيا الغربية"</string>
+    <string name="tax_us_final_scope" formatted="false">"28 ملفا جديدا: أجور المقيمين العادية فقط، بلا ضريبة دنيا بديلة أو أنظمة خاصة. سقف الإجمالي الأسري السنوي للحساب التلقائي مليون دولار، مع حدود أقل أدناه. يجب التحقق مستقلا من الوعاء والتخفيضات وخصومات الموظف. التغطية محدودة."</string>
+    <string name="tax_us_manual_scope" formatted="false">"CO / ID / VT: إدخال التزام ضريبي موثق فقط. لم يتم التحقق هنا من تعرفة آلية لإقرار 2026. أدخل الالتزام السنوي النهائي لضريبة الولاية لعام 2026 بعد التحقق المستقل؛ التطبيق لا يحسب هذا الالتزام أو الأهلية."</string>
+    <string name="tax_us_verified_state_tax" formatted="false">"التزام ضريبة الولاية السنوي النهائي الموثق"</string>
+    <string name="tax_us_verified_tax_hint" formatted="false">"التزام 2026 النهائي بعد التخفيضات غير المستردة وقبل الاقتطاعات والدفعات المقدمة. ليس الرصيد المستحق أو الضريبة المقتطعة أو ضريبة سنة سابقة أو الاسترداد. صفر فقط إذا تحقق. يقسم على 12 مرة واحدة؛ يتجاهل حقلي الوعاء والتخفيض هنا. الضرائب المحلية والخصومات الأخرى منفصلة. حدّث لكل دفعة."</string>
+    <string name="tax_us_final_limits" formatted="false">"حدود الإجمالي الأسري السنوي للحساب التلقائي: CT خمسون ألف دولار SINGLE أو مئة ألف MFJ؛ NY 107650؛ AR 94700. لا تحسب استعادة المزايا أو إضافات الدخل المرتفع أو جداول AR البديلة. خارج النطاق لا يتاح الصافي."</string>
+    <string name="tax_us_sc_hint" formatted="false">"كارولينا الجنوبية: قانون 2026 الجديد بشريحتين وSCIAD. يجب أن يتضمن الوعاء النهائي SCIAD المستحق وتخفيضه حسب الدخل بعد التحقق. لا تستخدم تلقائيا الخصم الفدرالي أو الشرائح القديمة 0/3/6%."</string>
+    <string name="tax_us_or_hint" formatted="false">"أوريغون: جداول التقدير الرسمية لعام 2026 مع مبالغ الضريبة الأساسية المنشورة المقربة. قد تتغير الأرقام النهائية. تحقق من الوعاء وخصم الضريبة الفدرالية القانوني والائتمانات. ضرائب النقل والإجازات المدفوعة والمحلية مدخلات فعلية لخصومات الموظف."</string>
+    <string name="tax_us_oh_hint" formatted="false">"أوهايو 2026: صفر حتى وعاء نهائي 26050 دولارا؛ فوقه تضاف 332 دولارا ثم 2.75% من الزائد. تحقق من الائتمانات الشخصية وللدخل المحدود في تخفيض ضريبة الولاية. الضريبة المحلية والمدرسية منفصلة."</string>
+    <string name="tax_us_manual_result" formatted="false">"ضريبة الولاية · الالتزام السنوي المدخل / 12"</string>
+    <string name="tax_next_common_scope" formatted="false">"2026فقط: موظف مقيم أعزب بعمر31–59طوال السنة، وظيفة محلية عادية واحدة، بلا معالين أو دخل آخر أو نظام خاص. تحقق من الأوعية والائتمانات والخصومات الفعلية. لا تكاليف صاحب العمل أو تحويل عملات أو تاريخ ملفات؛ حدّث لكل دفعة."</string>
+    <string name="tax_next_annual_hint" formatted="false">"إجمالي دخل العمل السنوي الكامل الموثق2026. الضريبة/12احتياطي وليست اقتطاعا تراكميا لأجر متغير أو إقرارا أو استردادا. لا تضف المكافآت السنوية كاملة لهذه الدفعة."</string>
+    <string name="tax_next_monthly_hint" formatted="false">"وعاء نهائي موثق لهذه الدفعة الشهرية نفسها. IS/CL/UY/BOليست إقرارات سنوية. قد يشملUYزيادة6%؛ المساهمات تخفض الضريبة بائتمان لا الوعاء مرة أخرى. BOيتضمن خصم2SMNالقانوني."</string>
+    <string name="tax_next_base_hint" formatted="false">"وعاء وطني سنوي نهائي بعد الخصومات القانونية وقبل الشرائح الصفرية والائتمانات. NLيشمل تأمينBox1. حدودJM/FJ/LUتطبق هنا مرة واحدة. إعفاءBB25000وتخفيفBZالشخصي مخصومان مسبقا."</string>
+    <string name="tax_next_annual_relief" formatted="false">"تخفيض سنوي موثق غير قابل للاسترداد"</string>
+    <string name="tax_next_monthly_relief" formatted="false">"تخفيض موثق لهذه الدفعة الشهرية"</string>
+    <string name="tax_next_relief_hint" formatted="false">"أدخل تخفيضا مستحقا موثقا أو صفرا صريحا. يخفض الضريبة حتى حدها بلا استرداد أو أهلية آلية. سنوي عداIS/CL/UY/BOشهري. NLيشمل ائتماناتBox1وLUأثر الصندوق. لا تكرر ائتمانات الضرائب الأخرى."</string>
+    <string name="tax_next_extra_tax" formatted="false">"ضرائب موظف إضافية لهذه الفترة"</string>
+    <string name="tax_next_extra_hint" formatted="false">"ضرائب فعلية موثقة غير محسوبة أو صفر: محلية أو كانتونية أو إقليمية أو دينية وغيرها. إعمارJPوصندوقLU7%وتأمينNLمحسوبة؛ ISيشمل الجزء البلدي القياسي. لا تكررها."</string>
+    <string name="tax_next_cash_hint" formatted="false">"خصومات موظف أخرى فعلية أو صفر: تقاعد وضمان وصحة وتأمين، بلا تكلفة صاحب العمل. استبعد الضرائب المحسوبة والإضافية المدخلة منفصلة. تأمينNLالوطني مشمول. لا تخصم من الوعاء مرتين."</string>
+    <string name="tax_next_verified_tax" formatted="false">"ضريبة وطنية وإقليمية سنوية نهائية موثقة"</string>
+    <string name="tax_next_verified_hint" formatted="false">"يدوي: التزام سنة دخل2026موثق بعد الائتمانات غير المستردة وقبل الاقتطاعات والمقدمات. ليس الضريبة المقتطعة أو الرصيد أو الاسترداد أو سنة سابقة. يقسم على12مرة؛ البلدية منفصلة والوعاء والتخفيض متجاهلان."</string>
+    <string name="tax_next_cl_date_hint" formatted="false">"تشيلي: تاريخ فعلي YYYY-MM-DDفي2026بأرقام لاتينية؛ جداول يناير–نوفمبر فقط. يجب تطابق شهر نهاية الفترة. دون ذلك لا صافي. لا استبدال ضمني بجدول سنوي أو52bis."</string>
+    <string name="tax_next_nl_charge" formatted="false">"ضريبةBox1والتأمين الوطني"</string>
+    <string name="tax_next_manual_result" formatted="false">"ضريبة وطنية وإقليمية · المدخل السنوي /12"</string>
+    <string name="tax_next_nl" formatted="false">"هولندا: Box1قبلAOW، الإجمالي السنوي≤78426EUR. تشمل2026تأمينا وطنيا27.65%في الشريحة الأولى. ائتمانات مشتركة موثقة؛ لا تخصم التأمين مجددا. بلاBox2/3أو نظام30%."</string>
+    <string name="tax_next_be" formatted="false">"بلجيكا: إدخال يدوي فقط لالتزام وطني وإقليمي سنوي موثق. دخل2026يقابل ربط2027لا2026. البلدية منفصلة؛ لا حساب آلي إقليمي أو ائتمانات أوflexi-job."</string>
+    <string name="tax_next_lu" formatted="false">"لوكسمبورغ: الفئة1فقط، الإجمالي≤150000EUR. تعرفة مستمرة منذ2025؛ الوعاء يقرب لأسفل إلى50EUR، وصندوق7%مشمول قبل التخفيض المشترك الموثق. بلا فئات أخرى أو عامل عابر للحدود أو حساب رعاية."</string>
+    <string name="tax_next_ch" formatted="false">"سويسرا: ربط فدرالي عاديSINGLE، الإجمالي≤100000CHF. جدول2026، الوعاء لأسفل إلى100CHFوالضريبة إلى0.05CHF؛ أقل25CHFلا تحصل. الكانتون والبلدية والكنيسة فعليا منفصلة؛ بلا جدول اقتطاع من المنبع."</string>
+    <string name="tax_next_se" formatted="false">"السويد: ضريبة وطنية2026فقط بحد643000SEKبعد الخصم الأساسي، لا إجمالي660400. الوعاء لأسفل إلى100SEKوالفائض الأدنى200. الضرائب المحلية وتوزيع الائتمانات موثقة منفصلة."</string>
+    <string name="tax_next_fi" formatted="false">"فنلندا: جدول وطني2026فقط. حصة الائتمان الوطني موثقة؛ البلدية والكنيسة وYleوالرسوم الأخرى منفصلة. تقاعد وبطالة وصحة فعلية؛ لا توزيع آلي للائتمانات."</string>
+    <string name="tax_next_is" formatted="false">"آيسلندا: جدول اقتطاع شهري2026منشور يشمل المكون البلدي القياسي. ائتمان شهري موثق لا سنوي/12. بلا اختلاف ربط بلدي سنوي أو ترحيل أو تحويل للزوج أو تسوية سنوية."</string>
+    <string name="tax_next_it" formatted="false">"إيطاليا: IRPEFعادي2026بنسب23/33/43%وإجمالي≤200000EUR. تخفيضات العمل موثقة؛ الإقليمية والبلدية فعليا منفصلة. بلا أنظمة بديلة للإضافي والليلي والورديات والمكافآت."</string>
+    <string name="tax_next_jp" formatted="false">"اليابان: دخل مقيم سنوي عادي، الإجمالي≤100مليونJPY. الوعاء القانوني النهائي لأسفل إلى1000JPY. إعمار2026بنسبة2.1%بعد الائتمان الوطني يحسب منفصلا. الضريبة المحلية الفعلية منفصلة؛ بلا قواعد2027."</string>
+    <string name="tax_next_kr" formatted="false">"كوريا الجنوبية: ضريبة وطنية تصاعدية عادية، وعاء نهائي وائتمانات وطنية موثقة. ضريبة محلية وتأمين فعلي منفصلان. بلا خيار أجنبي ثابت أو نظام خاص."</string>
+    <string name="tax_next_ar" formatted="false">"الأرجنتين: جدول سنوي ونهائي رسمي2026للمادة94بمبالغ البداية المنشورة. الوعاء السنوي النهائي موثق. الضريبة/12احتياطي لا اقتطاع تراكمي نصف سنوي أو توزيعSACأو استرداد."</string>
+    <string name="tax_next_cl" formatted="false">"تشيلي: IUSCشهري عادي حسب تاريخ الدفع الفعلي؛ يناير–نوفمبر2026فقط دون52bis. الوعاء والائتمان موثقان؛ التقاعد والصحة فعليا منفصلان. لا تسوية سنوية."</string>
+    <string name="tax_next_uy" formatted="false">"أوروغواي: IRPFشهري عادي2026. الوعاء الموثق يشمل زيادة6%المطبقة حتى106%الإجمالي. المساهمات تخفض الضريبة بائتمان14/8%موثق لا الوعاء مجددا. بلاaguinaldoأو إجازة خاصة أو تسوية سنوية."</string>
+    <string name="tax_next_bo" formatted="false">"بوليفيا: RC-IVAشهري13%بعد2SMNالقانوني والمساهمات القابلة للخصم. الائتمان الشهري الموثق يشمل13%من1SMNوالفواتير والرصيد السابق المفهرس المستحق. بلا حد أدنى أو أهلية أو ترحيل آلي."</string>
+    <string name="tax_next_jm" formatted="false">"جامايكا: احتياطي سنوي2026، حد موزون1876614JMDلا حد أبريل1902360.25/30%وحد أعلى6ملايين دخل قانوني. الوعاء بعد مساهمات قانونية وقبل الشريحة الصفرية. بلاPAYEتراكمي أو تخفيف65+."</string>
+    <string name="tax_next_tt" formatted="false">"ترينيداد وتوباغو:25/30%سنوي عند مليونTTDمن الوعاء النهائي. الإعفاء الشخصي90000مخصوم مسبقا. NISورسوم الصحة الفعلية منفصلة؛ بلا رسوم أعمال صاحب العمل."</string>
+    <string name="tax_next_bz" formatted="false">"بليز:25%من الوعاء السنوي النهائي الموثق. الإعفاء الشخصي25600/24600/22600/19600حسب الإجمالي مخصوم مسبقا. لا أهلية تبرعات أو استرداد آلي؛ الضمان الفعلي منفصل."</string>
+    <string name="tax_next_gy" formatted="false">"غيانا: نسب2026هي25/35%بحد وعاء3360000GYD. وعاء نهائي بعد إعفاء مستحق≥1680000أو الثلث وNISوخصومات إضافي قانونية. بلا أهلية خاصة أو نسب تأمين آلية."</string>
+    <string name="tax_next_bb" formatted="false">"بربادوس: نسب2026الجديدة11.5/27.5%. إعفاء شخصي مستحق25000BBDفي الوعاء مسبقا؛ أول50000منه11.5%. لا تكرر شريحة صفر25000. NISوالرسوم الفعلية منفصلة."</string>
+    <string name="tax_next_fj" formatted="false">"فيجي: تعرفة مقيم منذ2024مستمرة2026؛ شريحة صفر30000FJDمرة واحدة. بلاSRT/ECALالمنفصلين الملغيين أو غير مقيم أو دفعة خاصة. الوعاء والائتمان والمساهمات الفعلية موثقة."</string>
+    <string name="menu_open" formatted="false">"فتح القائمة"</string>
+    <string name="shift_global_hint" formatted="false">"استخدم شريط بدء الوردية وإنهائها أسفل أي شاشة. اختر المكتب أو المنزل هنا قبل البدء."</string>
+    <string name="shift_active" formatted="false">"وردية نشطة"</string>
+    <string name="shift_ready" formatted="false">"جاهز للبدء"</string>
+    <string name="shift_options" formatted="false">"خيارات الوردية"</string>
+    <string name="shift_done" formatted="false">"تم"</string>
+    <string name="period_current" formatted="false">"الفترة الحالية"</string>
+    <string name="period_choose" formatted="false">"اختيار الشهر والسنة"</string>
+    <string name="period_end_hint" formatted="false">"اختر الشهر الذي تنتهي فيه فترة الراتب. تظهر التواريخ الدقيقة أدناه."</string>
+    <string name="period_year" formatted="false">"السنة"</string>
+    <string name="period_year_hint" formatted="false">"أدخل سنة من 1900 إلى 2100."</string>
+    <string name="period_apply" formatted="false">"عرض الفترة"</string>
+    <string name="widget_name" formatted="false">"ShiftHours · الوردية"</string>
+    <string name="widget_description" formatted="false">"ابدأ وردية في المكتب أو المنزل وأنهِها وتابع مدتها أثناء العمل."</string>
+    <string name="widget_open" formatted="false">"فتح التطبيق"</string>
+    <string name="widget_error" formatted="false">"افتح التطبيق للتحقق من البيانات أو استعادة نسخة احتياطية."</string>
+    <string name="widget_setup" formatted="false">"أكمل الإعداد الأولي في التطبيق أولاً."</string>
+    <string name="widget_inactive" formatted="false">"لا توجد وردية نشطة"</string>
+    <string name="widget_start_office" formatted="false">"بدء · المكتب"</string>
+    <string name="widget_start_home" formatted="false">"بدء · المنزل"</string>
+    <string name="widget_stop" formatted="false">"إنهاء الوردية"</string>
+    <string name="shift_changed" formatted="false">"تغيّرت الوردية النشطة. أغلق نافذة التعديل وافتحها مجدداً."</string>
+    <string name="overtime_by_location" formatted="false">"العمل الإضافي حسب المكان"</string>
+    <string name="overtime_by_location_hint" formatted="false">"شرائح العمل الإضافي اليومية مشتركة بين المكتب والمنزل، وتُوزّع حسب مكان أداء العمل. الأجر يشمل نسبة الشريحة كاملة قبل الضريبة."</string>
+    <string name="ui_more_info" formatted="false">"معلومات إضافية"</string>
+    <string name="ui_collapse" formatted="false">"إخفاء التفاصيل"</string>
+    <string name="ui_expand" formatted="false">"عرض التفاصيل"</string>
+    <string name="ui_details" formatted="false">"التفاصيل"</string>
+    <string name="ui_appearance" formatted="false">"المظهر"</string>
+    <string name="ui_theme_system" formatted="false">"حسب الهاتف"</string>
+    <string name="ui_theme_light" formatted="false">"فاتح"</string>
+    <string name="ui_theme_dark" formatted="false">"داكن"</string>
+    <string name="ui_theme_hint" formatted="false">"يُحفظ مع الإعدادات ويُضمّن في النسخ الاحتياطية. الوضع التلقائي يتبع مظهر نظام الهاتف."</string>
+    <string name="ui_gross_estimate" formatted="false">"الأجر الإجمالي التقديري"</string>
+    <string name="ui_record_actions" formatted="false">"إجراءات السجل"</string>
+    <string name="ui_net_estimate" formatted="false">"صافي تقديري ضمن الملف الضريبي المختار."</string>
+    <string name="ui_tax_scope_notice" formatted="false">"الحساب مقصور على ملف ضريبي محدد. اختيار الدولة وحده لا يثبت الأهلية. تظهر المتطلبات الناقصة أعلاه."</string>
+    <string name="ui_tax_scope" formatted="false">"الملف الضريبي والشروط"</string>
+    <string name="ui_pay_details" formatted="false">"تفصيل الأجر"</string>
+    <string name="ui_settings_hours" formatted="false">"الساعات والاستراحات"</string>
+    <string name="ui_settings_pay" formatted="false">"الأجر والعمل الإضافي"</string>
+    <string name="ui_settings_tax" formatted="false">"الضرائب والاشتراكات"</string>
+    <string name="ui_settings_display" formatted="false">"اللغة والمظهر"</string>
+    <string name="ui_country_search" formatted="false">"البحث عن دولة أو رمز أو عملة"</string>
+    <string name="ui_no_results" formatted="false">"لم يتم العثور على دول مطابقة"</string>
+    <string name="export_excel" formatted="false">"تصدير Excel"</string>
+    <string name="export_sheet" formatted="false">"الورديات"</string>
+    <string name="export_period_start" formatted="false">"تاريخ البداية"</string>
+    <string name="export_period_end" formatted="false">"تاريخ النهاية"</string>
+    <string name="export_date" formatted="false">"التاريخ"</string>
+    <string name="export_start" formatted="false">"وقت البداية"</string>
+    <string name="export_end" formatted="false">"وقت النهاية"</string>
+    <string name="export_duration" formatted="false">"إجمالي الوقت"</string>
+    <string name="export_total" formatted="false">"المجموع"</string>
+    <string name="export_note" formatted="false">"المدة المدفوعة بعد خصم الاستراحات المحددة. في الوردية الليلية قد يقع وقت النهاية في اليوم التالي."</string>
+    <string name="export_saved" formatted="false">"تم حفظ ملف Excel."</string>
+    <string name="export_error" formatted="false">"فشل تصدير Excel."</string>
+    <string name="export_filter_hint" formatted="false">"يصدّر الورديات المغلقة في الفترة المختارة حسب مرشح المكتب أو المنزل أو الكل أعلاه."</string>
+    <string name="back_press_again_exit" formatted="false">"اضغط على رجوع مرة أخرى للخروج"</string>
+    <string name="leave_title" formatted="false">"الإجازات والمرض والعطلات"</string>
+    <string name="leave_sick" formatted="false">"إجازة مرضية"</string>
+    <string name="leave_vacation" formatted="false">"إجازة مدفوعة الأجر"</string>
+    <string name="leave_days" formatted="false">"أيام"</string>
+    <string name="leave_setup_hint" formatted="false">"حدد الأرصدة الافتتاحية والاستحقاق الشهري قبل تسجيل الإجازات."</string>
+    <string name="leave_asof" formatted="false">"الرصيد بتاريخ"</string>
+    <string name="leave_period_used" formatted="false">"أيام الرصيد المستخدمة في الفترة المحددة"</string>
+    <string name="leave_pay" formatted="false">"قيمة أجر الإجازات"</string>
+    <string name="leave_pay_hint" formatted="false">"الأجر بالساعة: يضاف الأجر. الراتب الشهري: الإجازات المدفوعة مشمولة بالفعل؛ يُخصم الجزء غير المدفوع فقط. الإجازات لا تولّد ساعات إضافية."</string>
+    <string name="leave_manage" formatted="false">"إدارة الإجازات والمرض"</string>
+    <string name="leave_config" formatted="false">"الأرصدة وقواعد الإجازات"</string>
+    <string name="leave_add" formatted="false">"إضافة إجازة أو مرض أو عطلة"</string>
+    <string name="leave_record_hint" formatted="false">"يُطبّق جزء اليوم على كل تاريخ محدد. الإجازة المدفوعة منفصلة عن العمل الفعلي. تُدرج السجلات المستقبلية في فترة أجرها، لكن الرصيد الحالي يشمل التواريخ حتى اليوم فقط."</string>
+    <string name="leave_empty" formatted="false">"لا توجد إجازات مسجلة في هذه الفترة."</string>
+    <string name="leave_fraction" formatted="false">"جزء اليوم (1 = يوم كامل، 0.5 = نصف يوم)"</string>
+    <string name="leave_hours" formatted="false">"ساعات الغياب"</string>
+    <string name="leave_pay_percent" formatted="false">"نسبة الأجر"</string>
+    <string name="leave_debited" formatted="false">"الأيام المخصومة من الرصيد"</string>
+    <string name="leave_event_start" formatted="false">"بداية الحالة المرضية"</string>
+    <string name="leave_day_number" formatted="false">"اليوم ضمن الحالة"</string>
+    <string name="leave_ledger" formatted="false">"سجل الاستحقاق والاستخدام"</string>
+    <string name="leave_ledger_hint" formatted="false">"حركات فترة الأجر المحددة. الرصيد الافتتاحي + الاستحقاق + التصحيحات − الاستخدام. الحركات المستقبلية مخططة."</string>
+    <string name="leave_opening" formatted="false">"الرصيد الافتتاحي (أيام)"</string>
+    <string name="leave_accrual" formatted="false">"الاستحقاق الشهري"</string>
+    <string name="leave_used" formatted="false">"الاستخدام"</string>
+    <string name="leave_adjustment" formatted="false">"تصحيح الرصيد"</string>
+    <string name="leave_changed" formatted="false">"تغيرت البيانات. أغلق هذا النموذج وأعد فتحه."</string>
+    <string name="leave_delete_hint" formatted="false">"هل تريد حذف هذا السجل؟ سيُعاد حساب أثره على الرصيد والأجر. لا يمكن التراجع عن ذلك."</string>
+    <string name="leave_config_hint" formatted="false">"هذه إعدادات صاحب العمل، وليست قيماً قانونية متحققاً منها. تُطبق من تاريخ البداية. تغيير الأرصدة أو الاستحقاق يعيد حساب السجل؛ استخدم تصحيحاً مؤرخاً للتغييرات لمرة واحدة. تبقى قواعد أجر الغياب المحفوظة مع كل سجل."</string>
+    <string name="leave_opening_date" formatted="false">"تاريخ الرصيد الافتتاحي"</string>
+    <string name="leave_monthly" formatted="false">"الأيام المستحقة كل شهر"</string>
+    <string name="leave_accrual_day" formatted="false">"يوم الاستحقاق الشهري (1–31)"</string>
+    <string name="leave_accrual_hint" formatted="false">"أول استحقاق كامل يكون في اليوم المختار بعد تاريخ البداية حصراً. في الأشهر القصيرة يُستخدم آخر يوم. لا يوجد احتساب نسبي. مستقل عن فترة الأجر."</string>
+    <string name="leave_day_hours" formatted="false">"الساعات لكل يوم إجازة كامل"</string>
+    <string name="leave_vacation_percent" formatted="false">"نسبة أجر الإجازة"</string>
+    <string name="leave_allow_negative" formatted="false">"السماح بأرصدة سالبة"</string>
+    <string name="leave_calendar_days" formatted="false">"احتساب الأيام التقويمية في الحالة المرضية"</string>
+    <string name="leave_calendar_hint" formatted="false">"عند التفعيل: عطلات نهاية الأسبوع والأيام غير المسجلة تنقل إلى شريحة الأجر التالية. عند التعطيل: تتقدم الشريحة بالتواريخ المختلفة المسجلة ضمن الحالة فقط. الغياب المسجل وحده يستهلك الرصيد."</string>
+    <string name="leave_sick_tiers" formatted="false">"شرائح أجر المرض"</string>
+    <string name="leave_tier_hint" formatted="false">"تُطبق الصفوف بالترتيب. نسبة الأجر ونسبة خصم الرصيد منفصلتان. قد يخصم يوم بأجر 50% يوماً كاملاً عند ضبط الخصم على 100%."</string>
+    <string name="leave_tier" formatted="false">"الشريحة"</string>
+    <string name="leave_number_days" formatted="false">"عدد الأيام"</string>
+    <string name="leave_remaining" formatted="false">"جميع الأيام التالية (الصف الأخير)"</string>
+    <string name="leave_debit_percent" formatted="false">"نسبة خصم الرصيد"</string>
+    <string name="leave_add_tier" formatted="false">"إضافة شريحة قبل الصف الأخير"</string>
+    <string name="leave_from" formatted="false">"من تاريخ"</string>
+    <string name="leave_until" formatted="false">"حتى تاريخ (شامل)"</string>
+    <string name="leave_workdays_only" formatted="false">"أيام العمل المحددة فقط"</string>
+    <string name="leave_continue" formatted="false">"متابعة حالة مرضية"</string>
+    <string name="leave_new_event" formatted="false">"حالة مرضية جديدة"</string>
+    <string name="leave_override_pay" formatted="false">"تجاوز نسبة الأجر (فارغ = القاعدة)"</string>
+    <string name="leave_override_debit" formatted="false">"تجاوز نسبة الخصم (فارغ = القاعدة)"</string>
+    <string name="leave_override_hint" formatted="false">"تجاوزات اختيارية لكل سجل. اتركها فارغة لاستخدام سياسة صاحب العمل المحفوظة. تُطبق التجاوزات نفسها على كل يوم محدد في النطاق."</string>
+    <string name="leave_note" formatted="false">"ملاحظة / سبب التصحيح"</string>
+    <string name="leave_preview" formatted="false">"مراجعة التواريخ والأجر"</string>
+    <string name="leave_work_warning" formatted="false">"يوجد أيضاً عمل مسجل أو جارٍ في أحد هذه التواريخ. تحقق من صحة الجمع بين العمل الفعلي والغياب قبل الحفظ."</string>
+    <string name="leave_date" formatted="false">"التاريخ"</string>
+    <string name="leave_adjust_days" formatted="false">"تصحيح الأيام (+ إضافة / − خصم)"</string>
+    <string name="leave_duplicate" formatted="false">"لا يمكن أن يتجاوز إجمالي الغياب في تاريخ واحد يوماً واحداً."</string>
+    <string name="leave_insufficient" formatted="false">"رصيد الإجازات غير كافٍ. صحح الرصيد الافتتاحي أو اسمح صراحةً برصيد سالب."</string>
+    <string name="leave_invalid" formatted="false">"تحقق من التواريخ والأرقام. النسب: 0–100؛ جزء اليوم: أكبر من 0 وحتى 1."</string>
+    <string name="leave_date_error" formatted="false">"اختر نطاق تواريخ مرتباً لا يتجاوز 367 يوماً تقويمياً."</string>
+    <string name="leave_no_dates" formatted="false">"لا توجد تواريخ تطابق أيام العمل المحددة."</string>
+    <string name="leave_salary_adjustment" formatted="false">"خصم الغياب غير المدفوع من الراتب الشهري"</string>
+    <string name="leave_export_hint" formatted="false">"يتضمن تصدير «الكل» ورقة منفصلة للإجازات. يتضمن تصدير المكتب/المنزل ورديات العمل فقط."</string>
+    <string name="leave_holiday" formatted="false">"عطلة / يوم لا عمل فيه"</string>
+    <string name="leave_salary_choice" formatted="false">"الخصم من الراتب (دون استخدام الإجازة)"</string>
+    <string name="leave_settlement" formatted="false">"تسوية ساعات النقص الشهرية"</string>
+    <string name="leave_missing_hours" formatted="false">"ساعات النقص المتبقية في هذه الفترة"</string>
+    <string name="leave_fill_hours" formatted="false">"الساعات المطلوب تسويتها"</string>
+    <string name="leave_use_percent" formatted="false">"إدخال نسبة من يوم إجازة كامل"</string>
+    <string name="leave_day_percent" formatted="false">"نسبة يوم كامل واحد"</string>
+    <string name="leave_target_needed" formatted="false">"حدد الساعات الشهرية المطلوبة في إعدادات الأجر لحساب النقص الشهري."</string>
+    <string name="leave_too_many_hours" formatted="false">"أدخل ساعات موجبة لا تتجاوز النقص المتبقي (بحد أقصى 744)."</string>
+    <string name="leave_settlement_hint" formatted="false">"هذا تعديل للفترة، وليس وردية عمل. الإجازة المستخدمة = الساعات ÷ ساعات يوم الإجازة. مثلاً: 3.2 ساعات ÷ 8 = 0.4 يوم (40%). اختر الدفع من رصيد الإجازة أو خصماً غير مدفوع من الراتب. قد تتطلب تعديلات العمل أو الإجازة اللاحقة تصحيح هذه التسوية."</string>
+    <string name="leave_incomplete_period" formatted="false">"لم تنتهِ فترة الأجر هذه بعد. ساعات النقص مؤقتة؛ راجعها قبل الحفظ."</string>
+    <string name="leave_holiday_hint" formatted="false">"عطلة محددة يدوياً وليست استحقاقاً قانونياً. لا يُستخدم رصيد الإجازة أو المرض. الأجر الافتراضي 100%؛ غيّر النسبة وفق شروط صاحب العمل. النطاقات المقيدة بأيام العمل تتخطى العطلات المسجلة سابقاً. العمل في عطلة لا يمنح علاوة تلقائية."</string>
+    <string name="leave_settlement_review" formatted="false">"قد تتجاوز تسوية مسجلة الآن النقص المتبقي. راجع ساعاتها بعد تغيير العمل أو الإجازات."</string>
+    <string name="ot_method" formatted="false">"حساب الساعات الإضافية"</string>
+    <string name="ot_daily" formatted="false">"يومي"</string>
+    <string name="ot_weekly" formatted="false">"أسبوعي"</string>
+    <string name="ot_monthly" formatted="false">"شهري"</string>
+    <string name="ot_hours" formatted="false">"ساعات عادية"</string>
+    <string name="ot_week_start" formatted="false">"أول يوم من أسبوع العمل"</string>
+    <string name="ot_weekly_threshold" formatted="false">"الساعات العادية الأسبوعية قبل الإضافي"</string>
+    <string name="ot_monthly_threshold" formatted="false">"الساعات العادية الشهرية قبل الإضافي"</string>
+    <string name="ot_calendar" formatted="false">"شهر تقويمي (من اليوم الأول إلى نهاية الشهر)"</string>
+    <string name="ot_pay_period" formatted="false">"فترة الأجر المحددة"</string>
+    <string name="ot_nominal_day" formatted="false">"الساعات اليومية للنقص وإعداد الإجازات"</string>
+    <string name="ot_settings_hint" formatted="false">"اختر طريقة واحدة. تبدأ شرائح الأجر من جديد في كل يوم أو أسبوع أو شهر محدد. الحدود الأسبوعية والشهرية مستقلة عن الساعات اليومية الاسمية وهدف الحضور الشهري. تظل الاستراحات وفق القاعدة المحددة لليوم أو المقطع. العمل الفعلي الصافي وحده يستهلك حدود الإضافي؛ الإجازات والعطلات وتسويات النقص لا تستهلكها."</string>
+    <string name="ot_context_hint" formatted="false">"تستخدم الحسابات الأسبوعية والتقويمية الشهرية أيضاً العمل المحفوظ قبل فترة الأجر المعروضة. أدخل الأسبوع أو الشهر كاملاً لضمان التوزيع الدقيق. تُنسب الوردية كاملة إلى تاريخ عملها المحدد، حتى لو امتدت عبر منتصف الليل. تغيير الطريقة يعيد حساب السجل؛ ولا يعني دمج القواعد اليومية والأسبوعية أو استحقاقاً قانونياً تلقائياً."</string>
+    <string name="ot_location_hint" formatted="false">"يشترك المكتب والمنزل في عداد إضافي واحد لليوم أو الأسبوع أو الشهر المحدد. تُوزع الساعات والأجر الكامل لكل شريحة زمنياً حسب مكان العمل بعد الاستراحات."</string>
+    <string name="ot_office_only" formatted="false">"ساعات المكتب فقط فوق حد الإضافي المحدد"</string>
+    <string name="ot_invalid" formatted="false">"تحقق من الطريقة والفترة والحدود: أسبوعياً 0–168 وشهرياً 0–744 ساعة؛ ويجب أن تكون بداية الأسبوع يوم أسبوع صالحاً."</string>
+    <string name="ot_threshold_required" formatted="false">"أدخل حداً موجباً للساعات العادية لطريقة الحساب المحددة."</string>
+    <string name="widget_compact_name" formatted="false">"ShiftHours · وردية 2×2"</string>
+    <string name="analytics_title" formatted="false">"الملخصات"</string>
+    <string name="analytics_hint" formatted="false">"الورديات المغلقة فقط. تُحسب القيم وفق قواعد الأجر والاستراحات الحالية. لا تشمل الوردية النشطة."</string>
+    <string name="analytics_partial" formatted="false">"لم تنتهِ هذه الفترة بعد. المقارنة مع الفترة السابقة كاملة، وليس مع العدد نفسه من الأيام المنقضية."</string>
+    <string name="analytics_empty" formatted="false">"لا توجد سجلات في هذه الفترة"</string>
+    <string name="analytics_empty_hint" formatted="false">"غياب السجلات لا يعني عدم العمل. الفترات بلا سجلات لا تُحتسب كأشهر براتب صفر."</string>
+    <string name="analytics_overview" formatted="false">"الفترة بالأرقام"</string>
+    <string name="analytics_workdays" formatted="false">"أيام العمل المسجلة"</string>
+    <string name="analytics_shifts" formatted="false">"الورديات المغلقة"</string>
+    <string name="analytics_avg_day" formatted="false">"متوسط الساعات الصافية لكل يوم عمل"</string>
+    <string name="analytics_avg_shift" formatted="false">"متوسط الساعات الصافية لكل وردية"</string>
+    <string name="analytics_home_share" formatted="false">"نسبة العمل من المنزل"</string>
+    <string name="analytics_ot_share" formatted="false">"نسبة الإضافي من العمل الصافي"</string>
+    <string name="analytics_gross" formatted="false">"الأجر الإجمالي قبل الخصومات"</string>
+    <string name="analytics_comparison" formatted="false">"التغير عن الفترة السابقة"</string>
+    <string name="analytics_hours_change" formatted="false">"التغير في الساعات الصافية"</string>
+    <string name="analytics_ot_change" formatted="false">"التغير في الساعات الإضافية"</string>
+    <string name="analytics_gross_change" formatted="false">"التغير في الأجر الإجمالي"</string>
+    <string name="analytics_no_comparison" formatted="false">"يلزم وجود سجلات في الفترتين للمقارنة."</string>
+    <string name="analytics_tiers" formatted="false">"شرائح الساعات الإضافية وأجورها"</string>
+    <string name="analytics_weighted" formatted="false">"ساعات إضافية مرجحة بالأجر"</string>
+    <string name="analytics_weighted_hint" formatted="false">"الساعات المرجحة = ساعات إضافية × معامل الأجر. هذا مكافئ للأجر وليس وقت عمل إضافياً."</string>
+    <string name="analytics_location" formatted="false">"المكتب والمنزل"</string>
+    <string name="analytics_equivalent_hint" formatted="false">"تستخدم قيمة العمل المكافئ بالساعة وتشمل الإضافي. لا توزع الراتب الشهري أو أجر الإجازة حسب المكان أو السبب."</string>
+    <string name="analytics_office_short" formatted="false">"النقص اليومي لساعات المكتب فقط"</string>
+    <string name="analytics_office_ot" formatted="false">"مقارنة الإضافي للمكتب فقط"</string>
+    <string name="analytics_reasons" formatted="false">"أسباب العمل من المنزل"</string>
+    <string name="analytics_no_reasons" formatted="false">"لا توجد ورديات منزلية مغلقة في هذه الفترة."</string>
+    <string name="analytics_shortfalls" formatted="false">"نقص الساعات ومشكلات البصمة"</string>
+    <string name="analytics_daily_short" formatted="false">"النقص اليومي بعد احتساب الغياب"</string>
+    <string name="analytics_monthly_short" formatted="false">"النقص الشهري مقابل الهدف المحدد"</string>
+    <string name="analytics_missing_clock" formatted="false">"أيام موسومة ببصمة مفقودة"</string>
+    <string name="analytics_missing_hint" formatted="false">"تُحدد المشكلات وفق ملاحظات البصمة المفقودة المحفوظة؛ لا يمكن استنتاج أيام العمل غير المسجلة."</string>
+    <string name="analytics_weekdays" formatted="false">"متوسط الساعات الصافية حسب يوم الأسبوع"</string>
+    <string name="analytics_weekdays_hint" formatted="false">"يشمل المتوسط التواريخ ذات العمل الصافي الموجب المسجل فقط. يظهر عدد الأيام؛ تُستبعد الأيام غير المسجلة."</string>
+    <string name="analytics_records" formatted="false">"أيام بارزة"</string>
+    <string name="analytics_longest" formatted="false">"أطول يوم عمل مسجل"</string>
+    <string name="analytics_most_ot" formatted="false">"اليوم ذو أكثر ساعات إضافية منسوبة إليه"</string>
+    <string name="analytics_trend" formatted="false">"12 فترة أجر عبر الزمن"</string>
+    <string name="analytics_trend_hint" formatted="false">"كل صف: ساعات صافية، ساعات إضافية، أجر إجمالي. الشرطة تعني عدم وجود سجلات. تُحسب بيانات الماضي بالإعدادات الحالية لا بالعقود المؤرشفة."</string>
+    <string name="home_sync_title">خادم شخصي</string>
+    <string name="home_sync_hint">مزامنة اختيارية مع حاسوبك. يستمر العمل محليًا دون اتصال.</string>
+    <string name="home_sync_address">عنوان HTTPS للخادم</string>
+    <string name="home_sync_key">مفتاح اتصال الهاتف</string>
+    <string name="home_sync_https">أدخل عنوان HTTPS صالحًا.</string>
+    <string name="home_sync_other_server">هذا الجهاز مرتبط بخادم آخر. احفظ نسخة احتياطية قبل النقل.</string>
+    <string name="home_sync_working">جارٍ المزامنة…</string>
+    <string name="home_sync_ok">تمت المزامنة</string>
+    <string name="home_sync_conflict">تعديلات متعارضة. لم تُستبدل البيانات. طابق السجلات في المتصفح والهاتف ثم أعد المحاولة.</string>
+    <string name="home_sync_auth">انتهت صلاحية المفتاح أو أُلغي. افصل الاتصال وأدخل مفتاحًا جديدًا.</string>
+    <string name="home_sync_identity">تغيّرت هوية الخادم. توقفت المزامنة لحماية البيانات.</string>
+    <string name="home_sync_error">الخادم غير متاح أو رُفضت البيانات. البيانات المحلية محفوظة؛ حاول لاحقًا.</string>
+    <string name="home_sync_pending">تغييرات محلية بانتظار المزامنة.</string>
+    <string name="home_sync_off">المزامنة متوقفة</string>
+    <string name="home_sync_now">مزامنة الآن</string>
+    <string name="home_sync_connect">اتصال</string>
+    <string name="home_sync_disconnect">قطع الاتصال</string>
+    <string name="home_sync_backup_hint">تشمل الإعدادات والإجازات والورديات. لا تحل محل النسخ المحلية أو Drive. تُجدول المزامنة الخلفية كل 15 دقيقة تقريبًا وقد يؤخرها Android. لا تتضمن النسخ مفاتيح الاتصال.</string>
+    <string name="home_sync_back">رجوع</string>
+    <string name="manual_entry" formatted="false">"إضافة يدوية"</string>
+    <string name="manual_kind" formatted="false">"نوع التسجيل"</string>
+    <string name="manual_work_shift" formatted="false">"وردية عمل"</string>
+    <string name="manual_continue" formatted="false">"متابعة"</string>
+    <string name="calendar_title" formatted="false">"تقويم العمل"</string>
+    <string name="calendar_missing_hint" formatted="false">"برتقالي فاتح: يوم مضى من الأحد إلى الخميس دون تسجيل وردية أو غياب. اضغط اليوم للتفاصيل."</string>
+    <string name="calendar_missing_count">"%1$s أيام دون تسجيل"</string>
+    <string name="calendar_missing" formatted="false">"تسجيل مفقود"</string>
+    <string name="calendar_paid_time" formatted="false">"الوقت المدفوع"</string>
+    <string name="calendar_no_report" formatted="false">"لا يوجد تسجيل وردية أو غياب."</string>
+    <string name="snapshot_arrange" formatted="false">"ترتيب البطاقات"</string>
+    <string name="snapshot_move_up" formatted="false">"نقل لأعلى"</string>
+    <string name="snapshot_move_down" formatted="false">"نقل لأسفل"</string>
+    <string name="snapshot_reset_order" formatted="false">"استعادة الترتيب الافتراضي"</string>
+    <string name="snapshot_save_order" formatted="false">"حفظ"</string>
+    <string name="snapshot_cancel_order" formatted="false">"إلغاء"</string>
+    <string name="hours_by_location" formatted="false">"الساعات حسب الموقع"</string>
+    <string name="location_all_hours" formatted="false">"إجمالي الساعات (شامل الإضافي)"</string>
+    <string name="location_all_pay" formatted="false">"الأجر (شامل الإضافي)"</string>
+    <string name="location_hourly_value_hint" formatted="false">"قيمة العمل بالساعة وليست توزيعًا للراتب الشهري."</string>
+    <string name="launcher_widgets">الأدوات</string>
+    <string name="launcher_change_widget">تغيير الأداة</string>
+    <string name="calendar_includes_home">يشمل العمل من المنزل</string>
+</resources>

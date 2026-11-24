@@ -1,0 +1,883 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="text_93d815fab2" formatted="false">"Daily standard hours must be greater than 0 and no more than 24."</string>
+    <string name="text_9fdb0c0357" formatted="false">"Pay must be zero or a positive number."</string>
+    <string name="text_1020d02bcc" formatted="false">"The monthly hours target must be greater than 0 and no more than 744."</string>
+    <string name="text_a3016d567d" formatted="false">"The period start day must be between 1 and 31."</string>
+    <string name="text_a3b71b8576" formatted="false">"The final overtime tier must cover all remaining hours."</string>
+    <string name="text_11798e6af6" formatted="false">"Check the tier hours and pay percentages."</string>
+    <string name="text_142ed94880" formatted="false">"The break settings are invalid."</string>
+    <string name="text_617d62c8d5" formatted="false">"The tax credit points are invalid."</string>
+    <string name="text_d64e9be198" formatted="false">"Contribution percentages must be between 0 and 100."</string>
+    <string name="text_e9ded22849" formatted="false">"The contribution pay basis is invalid."</string>
+    <string name="text_5340862757" formatted="false">"Select at least one working day."</string>
+    <string name="text_58ee2bc711" formatted="false">"The reasons list is too long."</string>
+    <string name="text_54904132d0" formatted="false">"The number of entries or their IDs is invalid."</string>
+    <string name="text_bccb639eb1" formatted="false">"Invalid work entry."</string>
+    <string name="text_14afe878db" formatted="false">"The original duration is invalid."</string>
+    <string name="text_285af230e1" formatted="false">"The entry text is too long."</string>
+    <string name="text_927652b634" formatted="false">"Work entries overlap."</string>
+    <string name="text_478ac0cba4" formatted="false">"The active shift overlaps an existing entry."</string>
+    <string name="text_1ce0351978" formatted="false">"No reason specified"</string>
+    <string name="text_0206a8d338" formatted="false">"Unable to connect your Google account right now. You can back up to a file and try again later."</string>
+    <string name="text_630af90bc5" formatted="true">"Google authorization was not granted (code %1$s). Reconnect or use a backup file."</string>
+    <string name="text_daf10c2ee5" formatted="false">"The operation failed. Your local data was preserved."</string>
+    <string name="text_25b395415b" formatted="false">"Backup saved successfully to Google Drive."</string>
+    <string name="text_fc021a3be3" formatted="false">"No ShiftHours backups were found in this account."</string>
+    <string name="text_439ed2ca59" formatted="false">"Connected to Google Drive."</string>
+    <string name="text_7480a74f74" formatted="false">"Connection canceled. No backup or restore was performed."</string>
+    <string name="text_514e675d10" formatted="false">"Drive access was not granted."</string>
+    <string name="text_325ca3ec59" formatted="false">"Drive authorization was not granted."</string>
+    <string name="text_5862cd4663" formatted="false">"Unable to open the destination file."</string>
+    <string name="text_a8df08ecdf" formatted="false">"Backup file saved."</string>
+    <string name="text_04bb2141d5" formatted="false">"Unable to read the file."</string>
+    <string name="text_5e9b8b7914" formatted="false">"The backup is too large."</string>
+    <string name="text_221ac78111" formatted="false">"Backup and restore"</string>
+    <string name="text_806ac63619" formatted="false">"Keep your work hours when moving to a new phone."</string>
+    <string name="text_55d63892ad" formatted="false">"Google Drive"</string>
+    <string name="text_e5444dccaf" formatted="false">"No account selected"</string>
+    <string name="text_0a2305a775" formatted="false">"Access granted. A successful backup is shown only after the upload finishes."</string>
+    <string name="text_2fc9030263" formatted="false">"Connect an account and grant access."</string>
+    <string name="text_cd0e41e136" formatted="false">"Choose account / reconnect"</string>
+    <string name="text_6f3a7bda3a" formatted="false">"Connect to Google Drive"</string>
+    <string name="text_15109258b9" formatted="false">"Back up to Drive now"</string>
+    <string name="text_c75c1e3a33" formatted="false">"Choose a Drive backup to restore"</string>
+    <string name="text_90b7df067a" formatted="false">"No Drive backup has completed for this account yet."</string>
+    <string name="text_1c2b595825" formatted="true">"Last successful backup: %1$s  %2$s"</string>
+    <string name="text_32640ad12e" formatted="false">"Backups are stored in Drive\'s hidden app data folder, not as ordinary files. To restore on a new phone, install the same app and connect the same Google account."</string>
+    <string name="text_ea1a07b6ef" formatted="false">"Automatic backup"</string>
+    <string name="text_8edcd28553" formatted="false">"Off"</string>
+    <string name="text_ef4037576b" formatted="false">"Daily"</string>
+    <string name="text_50296d4c2d" formatted="false">"Weekly"</string>
+    <string name="text_790f24eb34" formatted="false">"Backup schedule updated."</string>
+    <string name="text_e75e2661b7" formatted="false">"Only on an unmetered network, such as Wi-Fi"</string>
+    <string name="text_cf3d313652" formatted="false">"Scheduling is available after connecting Drive. Android may delay backups to save battery or when offline. Use the button above to create the first backup immediately."</string>
+    <string name="text_1e579b05be" formatted="false">"Disconnected locally and canceled the schedule. Existing backups were not deleted."</string>
+    <string name="text_83eccb0dd3" formatted="false">"Disconnect and cancel schedule"</string>
+    <string name="text_b35a854e22" formatted="false">"File backup and restore"</string>
+    <string name="text_1da6e0d4aa" formatted="false">"Save a backup file on your computer, in Drive, or elsewhere, even before setting up the app\'s Google connection."</string>
+    <string name="text_52cca61a5d" formatted="false">"Save backup file"</string>
+    <string name="text_4d2b863edd" formatted="false">"Restore from backup file"</string>
+    <string name="text_f4ab9db1a0" formatted="false">"Backups include entries, an active shift, settings and saved reasons. Before restoring, a preview is shown and a local copy of your previous data is saved."</string>
+    <string name="text_86472e4d43" formatted="false">"Open the copy saved before the last restore"</string>
+    <string name="text_bf72e99186" formatted="true">"This device holds %1$s entries. Reconnect Google and configure the backup schedule on each phone."</string>
+    <string name="text_b5af650c8c" formatted="false">"Recovery mode: local data could not be read. Restore from a file or Drive; creating new backups is disabled."</string>
+    <string name="text_f738c4c045" formatted="false">"Available backups"</string>
+    <string name="text_c775e7dcf6" formatted="false">"No backups found in the selected account."</string>
+    <string name="text_b728721fc0" formatted="false">"Close"</string>
+    <string name="text_835ba611ee" formatted="false">"Confirm restore"</string>
+    <string name="text_bfe0764274" formatted="true">"Backup contains %1$s entries."</string>
+    <string name="text_19a88cf185" formatted="true">"Range: %1$s to %2$s"</string>
+    <string name="text_ea12a4ba2b" formatted="false">"None"</string>
+    <string name="text_1f70207bab" formatted="false">"Yes"</string>
+    <string name="text_3cbbf0077a" formatted="true">"Active shift: %1$s"</string>
+    <string name="text_2388ed2d80" formatted="true">"Restoring will replace the %1$s entries and settings on this device. A local copy will be saved first."</string>
+    <string name="text_f35658ed7c" formatted="false">"Restore completed."</string>
+    <string name="text_a87c9f4c06" formatted="false">"Replace data and restore"</string>
+    <string name="text_a7c55a8d06" formatted="false">"Cancel"</string>
+    <string name="text_7b80593224" formatted="false">"The file is too large."</string>
+    <string name="text_b36a3090e4" formatted="false">"This backup is incompatible with this app version."</string>
+    <string name="text_1d25b4e13f" formatted="false">"This is not a supported ShiftHours backup."</string>
+    <string name="text_c84389ddd1" formatted="false">"The backup is damaged: integrity check failed."</string>
+    <string name="text_2159b4a358" formatted="false">"Unrecognized previous data version."</string>
+    <string name="text_4ae6ec8fa0" formatted="false">"Data has not loaded yet."</string>
+    <string name="text_cf903e3463" formatted="false">"Enter a valid number."</string>
+    <string name="text_039bb0fc27" formatted="false">"Enter time as hours:minutes or decimal hours."</string>
+    <string name="text_a7fcad5418" formatted="false">"Invalid number of hours."</string>
+    <string name="text_37e2eed494" formatted="false">"Invalid number of minutes."</string>
+    <string name="text_77c0279c02" formatted="false">"Invalid period start day."</string>
+    <string name="text_3f800b0cce" formatted="false">"Invalid period end day."</string>
+    <string name="text_14611081ea" formatted="false">"The end day must precede the start of the next period."</string>
+    <string name="text_b9e104411d" formatted="false">"Enter break time in whole minutes."</string>
+    <string name="text_2189089fc9" formatted="false">"Check the settings."</string>
+    <string name="text_81de798264" formatted="false">"Welcome"</string>
+    <string name="text_47cfdefbce" formatted="false">"Settings"</string>
+    <string name="text_8d74344d70" formatted="false">"Set your working terms and save to get started."</string>
+    <string name="text_9a90a562d2" formatted="false">"Changes take effect when you save."</string>
+    <string name="text_ab4dfe20aa" formatted="false">"Applies to all entries, including past entries."</string>
+    <string name="text_0bf5310554" formatted="false">"Saving…"</string>
+    <string name="text_54d36ad080" formatted="false">"Save settings"</string>
+    <string name="text_465e8134a4" formatted="false">"Pay and tiers"</string>
+    <string name="text_45a3198e62" formatted="false">"Period and breaks"</string>
+    <string name="text_bfc0c0e7f1" formatted="false">"Tax and contributions"</string>
+    <string name="text_a2ceeb919c" formatted="false">"Saved reasons"</string>
+    <string name="text_3d0ffbb6b9" formatted="false">"Pay type and hourly rate"</string>
+    <string name="text_9852666700" formatted="false">"Fixed monthly salary"</string>
+    <string name="text_c17956962e" formatted="false">"Gross monthly salary (₪)"</string>
+    <string name="text_55bc5d12cc" formatted="false">"Hourly pay (₪)"</string>
+    <string name="text_635f53e8e3" formatted="false">"Monthly hours required by your employer"</string>
+    <string name="text_8b4c4a643c" formatted="false">"Hourly rate = monthly salary ÷ monthly hours target. Gross pay includes the full monthly salary plus overtime payments at the configured rates."</string>
+    <string name="text_7414d91b15" formatted="false">"Gross pay is calculated from recorded hours and the configured tiers."</string>
+    <string name="text_8a239ab302" formatted="false">"Overtime tiers"</string>
+    <string name="text_0fea91c3a0" formatted="false">"Regular hours per day"</string>
+    <string name="text_996add3cb0" formatted="false">"Enter decimal hours or hours:minutes, such as 2.5 or 2:30."</string>
+    <string name="text_b779c7c572" formatted="true">"Tier %1$s"</string>
+    <string name="text_25606d5652" formatted="false">"All remaining hours"</string>
+    <string name="text_92102dc8df" formatted="false">"Hours in this tier"</string>
+    <string name="text_b5fe6f82a9" formatted="false">"Percentage of the hourly rate"</string>
+    <string name="text_bd38859717" formatted="false">"This tier applies after regular hours and all tiers above it."</string>
+    <string name="text_5192d415d8" formatted="false">"Move up"</string>
+    <string name="text_6179185b49" formatted="false">"Move down"</string>
+    <string name="text_7c8173fafa" formatted="false">"Delete"</string>
+    <string name="text_f428ab9623" formatted="false">"+ Add tier"</string>
+    <string name="text_f1f14874a4" formatted="false">"Exactly one \'all remaining hours\' tier is required, in the final row. Adding a tier makes the previous tier limited; check its hours."</string>
+    <string name="text_89fef4fd58" formatted="false">"Reporting period"</string>
+    <string name="text_6c22041108" formatted="false">"First day of the period (1–31)"</string>
+    <string name="text_796e34b83e" formatted="false">"Last day (31 = end of month)"</string>
+    <string name="text_b241433b46" formatted="false">"The days are linked to avoid gaps or overlaps, for example 25–24. In a short month, the start date adjusts to the last day available."</string>
+    <string name="text_a222187697" formatted="true">"Current period: %1$s – %2$s"</string>
+    <string name="text_01f30eb896" formatted="false">"Break deductions"</string>
+    <string name="text_c9beca5709" formatted="false">"Deduct break time"</string>
+    <string name="text_a123134aa5" formatted="false">"Once per day"</string>
+    <string name="text_26dcd5cc53" formatted="false">"Per segment"</string>
+    <string name="text_fa4922c12a" formatted="false">"Minutes to deduct"</string>
+    <string name="text_ff7f573a4d" formatted="false">"Also deduct breaks when working from home"</string>
+    <string name="text_143dd7316a" formatted="false">"A daily break is deducted once across eligible segments in time order. Home work is excluded when its option is off. Deductions never exceed the actual time worked."</string>
+    <string name="text_40494acb7f" formatted="false">"No break deduction. All recorded time counts as payable time."</string>
+    <string name="text_8a53041f32" formatted="false">"Working days for daily shortfalls"</string>
+    <string name="text_b6c4c767eb" formatted="false">"Sun"</string>
+    <string name="text_c0505c1097" formatted="false">"Mon"</string>
+    <string name="text_7b5b7d0c90" formatted="false">"Tue"</string>
+    <string name="text_88aa0681e1" formatted="false">"Wed"</string>
+    <string name="text_c2742c4cba" formatted="false">"Thu"</string>
+    <string name="text_08e0ffcda5" formatted="false">"Fri"</string>
+    <string name="text_0645b32caf" formatted="false">"Sat"</string>
+    <string name="text_92d73e83f6" formatted="false">"Only affects daily shortfalls. The same overtime tiers apply on all days; there are no separate weekend or holiday rules."</string>
+    <string name="text_69e69a7518" formatted="false">"Tax credit points and estimated net pay"</string>
+    <string name="text_70d7cd14f1" formatted="false">"Tax credit points (from your payslip)"</string>
+    <string name="text_9987c69efd" formatted="false">"Leave blank to hide the net estimate. Each point is worth ₪242 per month under the 2026 Israeli tax table."</string>
+    <string name="text_8cee38323a" formatted="false">"Pension and training fund"</string>
+    <string name="text_9982697de0" formatted="false">"Employee pension contribution (%)"</string>
+    <string name="text_3638d5596d" formatted="false">"Employee training fund contribution (%; 0 if none)"</string>
+    <string name="text_90b68945c0" formatted="false">"Enter the employee\'s share only, excluding employer contributions."</string>
+    <string name="text_e2e16aa700" formatted="false">"Pay basis for contributions"</string>
+    <string name="text_dc959b16aa" formatted="false">"Base pay excluding overtime"</string>
+    <string name="text_682c0e2622" formatted="false">"Total gross pay"</string>
+    <string name="text_3f55564e26" formatted="false">"Manually defined amount"</string>
+    <string name="text_0d4b9a288d" formatted="false">"Contribution pay basis (₪)"</string>
+    <string name="text_3284189b89" formatted="false">"Include the standard pension contribution tax credit"</string>
+    <string name="text_0b5e7d7238" formatted="false">"The pension tax credit estimate is 35% of eligible contributions, capped at ₪679 of contributions per month and 7% of pay. This is a monthly, noncumulative calculation."</string>
+    <string name="text_102196cdf2" formatted="false">"What the estimate includes"</string>
+    <string name="text_c02d9dbae9" formatted="false">"Income tax, tax credit points, Israeli national and health insurance, and employee contributions. Uses the 2026 tables for Israeli residents aged 18 to retirement."</string>
+    <string name="text_a09a8853d1" formatted="false">"Excludes tax coordination, other income, taxable car benefits, employer contribution taxes and special credits. Compare with your payslip and refine as needed."</string>
+    <string name="text_49148d6451" formatted="false">"Saved reasons for working from home"</string>
+    <string name="text_62d649ad15" formatted="false">"New reason"</string>
+    <string name="text_45bd96d34b" formatted="false">"Add to list"</string>
+    <string name="text_a99e68e9f4" formatted="false">"Remove"</string>
+    <string name="text_1b581c283a" formatted="false">"Removing a saved reason does not change existing entries. You can always enter free text."</string>
+    <string name="text_d44063b451" formatted="false">"Data loading failed."</string>
+    <string name="text_31e02fbfa7" formatted="false">"The change was not saved. Try again."</string>
+    <string name="text_71f28ff8fa" formatted="false">"Unable to load data"</string>
+    <string name="text_b238f1a394" formatted="false">"The files were preserved. Do not clear the app\'s data."</string>
+    <string name="text_fc2297f319" formatted="false">"Try again"</string>
+    <string name="text_6e56c6a002" formatted="false">"Restore a backup"</string>
+    <string name="text_e4f2184a47" formatted="false">"Check the device clock: an entry ends in the future."</string>
+    <string name="text_6f6a3321b0" formatted="false">"The end time must be after the start time."</string>
+    <string name="text_e0aad7a0c2" formatted="false">"Settings saved."</string>
+    <string name="text_8dfb4f3f58" formatted="false">"Entry saved."</string>
+    <string name="text_7a6915a25c" formatted="false">"You cannot record hours that have not occurred yet."</string>
+    <string name="text_2aca9c2968" formatted="false">"The clock-in time cannot be in the future."</string>
+    <string name="text_f9dc75319d" formatted="false">"Delete entry"</string>
+    <string name="text_f026fe8829" formatted="true">"Delete the entry for %1$s? This cannot be undone."</string>
+    <string name="text_b0e3328ac0" formatted="false">"Reason for working from home"</string>
+    <string name="text_f1af79973d" formatted="false">"Choose a saved reason ▾"</string>
+    <string name="text_05d94bc43f" formatted="false">"My work hours"</string>
+    <string name="text_c83e648a74" formatted="false">"Initial setup"</string>
+    <string name="text_89c15910b6" formatted="false">"Set your pay, monthly hours and working terms to enable pay calculations. You can record hours before completing setup."</string>
+    <string name="text_7c1126f30f" formatted="false">"Open settings"</string>
+    <string name="text_01ebd1a71f" formatted="false">"Ready to start?"</string>
+    <string name="text_6d81f53fb4" formatted="true">"Shift in progress · %1$s"</string>
+    <string name="text_8b6488028e" formatted="false">"Swipe to start a shift at the current time."</string>
+    <string name="text_c386f7af9f" formatted="true">"Clock-in: %1$s  %2$s"</string>
+    <string name="text_bc84ae26be" formatted="false">"Swipe to end and save the shift at the current time."</string>
+    <string name="text_73a90395c7" formatted="false">"Swipe to start shift"</string>
+    <string name="text_867983500d" formatted="false">"Swipe to end shift"</string>
+    <string name="text_a5d8698fba" formatted="false">"Correct clock-in / set another end time"</string>
+    <string name="text_1efd4660f9" formatted="false">"+ Enter shift manually"</string>
+    <string name="text_79a7f1d677" formatted="false">"Your clock-in time is saved even when the app is closed."</string>
+    <string name="text_95d86d7f5f" formatted="false">"Today"</string>
+    <string name="text_6834f9db87" formatted="false">"Net hours"</string>
+    <string name="text_b076df1539" formatted="false">"Segments on the same day are combined. An overnight shift belongs to its start date."</string>
+    <string name="text_7991cbb6a8" formatted="false">"Current period"</string>
+    <string name="text_3084f001bd" formatted="false">"Recorded hours"</string>
+    <string name="text_7447d177b1" formatted="false">"Overtime"</string>
+    <string name="text_e2cbeabb69" formatted="false">"Full salary + recorded overtime"</string>
+    <string name="text_4c0803b36f" formatted="false">"Gross pay from entries"</string>
+    <string name="text_389abd9ee8" formatted="false">"Pay summaries will appear after saving the initial settings."</string>
+    <string name="text_1960680292" formatted="false">"Backup status"</string>
+    <string name="text_dd6ddc4c4f" formatted="false">"No Drive backup has completed on this device yet."</string>
+    <string name="text_1c3f9e273d" formatted="true">"Successful Drive backup: %1$s  %2$s"</string>
+    <string name="text_6e55aef91f" formatted="false">"Daily backup scheduled"</string>
+    <string name="text_17ee444b2e" formatted="false">"Weekly backup scheduled"</string>
+    <string name="text_d7da1ab695" formatted="false">"Automatic Drive backup is off"</string>
+    <string name="text_bba88dd845" formatted="false">"Settings and actions are available in the Backup tab below."</string>
+    <string name="text_d61f7f639f" formatted="false">"Previous"</string>
+    <string name="text_28890b291d" formatted="false">"Next"</string>
+    <string name="text_023f8a1a0c" formatted="false">"Snapshot"</string>
+    <string name="text_0cdf398747" formatted="false">"Hours, pay and tracking for the period"</string>
+    <string name="text_5b40d10b38" formatted="false">"Monthly salary + overtime"</string>
+    <string name="text_b7cebc21b4" formatted="false">"Hourly pay"</string>
+    <string name="text_24c64cee7b" formatted="false">"Full monthly salary"</string>
+    <string name="text_1558a05606" formatted="false">"Regular-hours pay"</string>
+    <string name="text_5407314942" formatted="false">"Overtime pay"</string>
+    <string name="text_ebff026858" formatted="false">"Hourly rate"</string>
+    <string name="text_f072356bdc" formatted="false">"The full monthly salary is shown. Missing hours are displayed separately and are not deducted automatically."</string>
+    <string name="text_d7fec4855e" formatted="false">"Includes the active shift\'s hours within this period; amounts update live."</string>
+    <string name="text_087fd2cd6d" formatted="false">"Hours breakdown"</string>
+    <string name="text_3eb92e199a" formatted="false">"Total net hours"</string>
+    <string name="text_07b643f83a" formatted="false">"Regular hours"</string>
+    <string name="text_dda62e1cc9" formatted="false">"Total overtime"</string>
+    <string name="text_27fa002b22" formatted="true">"Hours at %1$s%%"</string>
+    <string name="text_0d562e6527" formatted="true">"Pay at %1$s%%"</string>
+    <string name="text_b93940ad5b" formatted="false">"Weighted overtime hours"</string>
+    <string name="text_aa79d639a1" formatted="false">"Office and home"</string>
+    <string name="text_b895b63363" formatted="false">"Office hours"</string>
+    <string name="text_bf004c7509" formatted="false">"Home hours"</string>
+    <string name="text_a839ec02b2" formatted="true">"%1$s%% office"</string>
+    <string name="text_b8ded3389c" formatted="false">"Office value at base rate"</string>
+    <string name="text_ec791b21f9" formatted="false">"Home value at base rate"</string>
+    <string name="text_2d3fd3bb5b" formatted="false">"Base-rate values exclude overtime premiums; do not add them to gross pay."</string>
+    <string name="text_6689630948" formatted="false">"Missing hours and entry checks"</string>
+    <string name="text_23b17c77be" formatted="false">"Hours target for this period"</string>
+    <string name="text_9e0655ff1b" formatted="false">"Shortfall against monthly target"</string>
+    <string name="text_468b69c83d" formatted="false">"Sum of daily shortfalls"</string>
+    <string name="text_d75f4dd709" formatted="false">"Daily shortfalls count only selected working days with entries. Days without entries are not automatically marked as absences."</string>
+    <string name="text_e9f9673a47" formatted="false">"Office-only shortfall"</string>
+    <string name="text_8e87e45498" formatted="false">"Office-only hours above daily standard"</string>
+    <string name="text_43af7314c4" formatted="false">"Days with a missing clock-in/out note"</string>
+    <string name="text_d41113bbd2" formatted="false">"Days with entries"</string>
+    <string name="text_3ee5d8b89f" formatted="false">"Home work by reason"</string>
+    <string name="text_e220a05303" formatted="false">"No home entries in this period."</string>
+    <string name="text_4b0ccb42af" formatted="false">"Hours"</string>
+    <string name="text_387c48c332" formatted="false">"Value at base rate"</string>
+    <string name="text_a347b2c73c" formatted="false">"Estimated net pay"</string>
+    <string name="text_b8e45d7b9e" formatted="true">"Tax tables for %1$s are not configured. No net estimate is shown."</string>
+    <string name="text_90128d6911" formatted="false">"Enter your tax credit points and employee pension percentage in settings to show an estimate. Enter 0 if there is no contribution."</string>
+    <string name="text_3d880292e0" formatted="false">"Income tax"</string>
+    <string name="text_89e2b25fb1" formatted="false">"National insurance"</string>
+    <string name="text_c694983c02" formatted="false">"Health insurance"</string>
+    <string name="text_901acdd444" formatted="false">"Pension — employee share"</string>
+    <string name="text_852a1bee2a" formatted="false">"Training fund — employee share"</string>
+    <string name="text_f8ee9f9027" formatted="false">"Pension contribution tax credit"</string>
+    <string name="text_192617126a" formatted="false">"Monthly estimate using 2026 Israeli tables. Excludes cumulative tax, other income, taxable benefits and tax coordination. Contributions use the selected pay basis. Not a substitute for a payslip."</string>
+    <string name="text_fe04db5f37" formatted="false">"Times are shown as hours:minutes; calculations retain source seconds. Your configured tiers apply on every day of the week."</string>
+    <string name="text_3141c61e9e" formatted="false">"Hours detail"</string>
+    <string name="text_723a7db2af" formatted="false">"Shifts and work segments"</string>
+    <string name="text_57b4cda969" formatted="false">"+ Add manual shift"</string>
+    <string name="text_7149f2ed6a" formatted="false">"Tiers use the whole day, even when filtering to one work location."</string>
+    <string name="text_3579e0306b" formatted="false">"A shift is active. Correct its start or enter an end time on the Home screen."</string>
+    <string name="text_643cae9ae3" formatted="false">"No completed entries in this period."</string>
+    <string name="text_d3fcfb1a78" formatted="true">"Clock-out: %1$s  %2$s"</string>
+    <string name="text_39fe25939b" formatted="false">"Edit"</string>
+    <string name="text_0826149cf1" formatted="false">"Day summary"</string>
+    <string name="text_d783472020" formatted="false">"Total net time for the day"</string>
+    <string name="text_a3756d29d2" formatted="false">"Payable time"</string>
+    <string name="text_c24fae5be3" formatted="false">"Time in current filter"</string>
+    <string name="text_b70622d71d" formatted="false">"Correct active shift"</string>
+    <string name="text_59cb6e8e9a" formatted="false">"Edit shift"</string>
+    <string name="text_10045253c1" formatted="false">"Manual shift entry"</string>
+    <string name="text_2f6783cd3b" formatted="false">"Clock-in"</string>
+    <string name="text_b939061e41" formatted="false">"Clock-out"</string>
+    <string name="text_8f9bc2d880" formatted="false">"Note / missing clock-in or clock-out"</string>
+    <string name="text_d958ea3cd8" formatted="true">"Duration before break: %1$s"</string>
+    <string name="text_1be17082dd" formatted="false">"Segments on the same day share the overtime tiers. Do not enter overlapping segments."</string>
+    <string name="text_d42c0813fc" formatted="false">"Clock-in cannot be in the future."</string>
+    <string name="text_510b00fcc4" formatted="false">"Save corrected start and keep shift open"</string>
+    <string name="text_647a733fb8" formatted="false">"Invalid clock-in date."</string>
+    <string name="text_4c82f98655" formatted="false">"Clock-out must be after clock-in. For an overnight shift, also choose the correct end date."</string>
+    <string name="text_c2fb808976" formatted="false">"Clock-out cannot be in the future."</string>
+    <string name="text_6eb37ad66f" formatted="false">"End and save shift"</string>
+    <string name="text_e69323393b" formatted="false">"Save"</string>
+    <string name="text_b89e7bee64" formatted="false">"Initial settings"</string>
+    <string name="text_2eaf74bbd8" formatted="false">"Start with your working terms"</string>
+    <string name="text_f9fb70ce3b" formatted="false">"Enter pay and monthly hours, then adjust overtime tiers, breaks and the reporting period. The dashboard appears after saving."</string>
+    <string name="text_925bb7a659" formatted="false">"Google authorization expired. Reconnect."</string>
+    <string name="text_86de69005f" formatted="false">"Drive access was denied. Reconnect your Google account."</string>
+    <string name="text_0885c5a6fa" formatted="false">"The backup was not found in the selected account."</string>
+    <string name="text_09780711f6" formatted="false">"Google is limiting requests. Try again later."</string>
+    <string name="text_2a152ef564" formatted="true">"Google Drive communication failed (code %1$s)."</string>
+    <string name="text_07d8d8fb15" formatted="false">"Select a Google account."</string>
+    <string name="text_44707e2acd" formatted="false">"Google did not confirm backup creation."</string>
+    <string name="text_eee5e9d37e" formatted="false">"Backup was not created: authorization is required again. Open Backup and reconnect."</string>
+    <string name="text_fb5e219eb1" formatted="false">"Backup failed: "</string>
+    <string name="text_82a2bfa2fe" formatted="false">"Network error"</string>
+    <string name="nav_home" formatted="false">"Home"</string>
+    <string name="nav_dashboard" formatted="false">"Snapshot"</string>
+    <string name="nav_records" formatted="false">"Entries"</string>
+    <string name="nav_settings" formatted="false">"Settings"</string>
+    <string name="nav_backup" formatted="false">"Backup"</string>
+    <string name="location_home" formatted="false">"Home"</string>
+    <string name="location_office" formatted="false">"Office"</string>
+    <string name="filter_all" formatted="false">"All"</string>
+    <string name="app_name" formatted="false">"ShiftHours"</string>
+    <string name="language_title" formatted="false">"Language"</string>
+    <string name="language_system" formatted="false">"Device language"</string>
+    <string name="language_hint" formatted="false">"Language is saved on this device. Save changes before switching languages. Currency and tax rules keep their current settings."</string>
+    <string name="tax_profile" formatted="false">"Tax profile"</string>
+    <string name="tax_country" formatted="false">"Tax country or jurisdiction"</string>
+    <string name="tax_year" formatted="false">"Tax year"</string>
+    <string name="tax_region" formatted="false">"Tax region"</string>
+    <string name="tax_choose" formatted="false">"Choose"</string>
+    <string name="tax_england" formatted="false">"England"</string>
+    <string name="tax_wales" formatted="false">"Wales"</string>
+    <string name="tax_northern_ireland" formatted="false">"Northern Ireland"</string>
+    <string name="tax_scotland" formatted="false">"Scotland"</string>
+    <string name="tax_unavailable" formatted="false">"Net estimates for this country are not available yet. Hours and gross pay remain available."</string>
+    <string name="tax_year_unavailable" formatted="false">"No verified tax table for this year. Net estimate is unavailable."</string>
+    <string name="tax_uk_required" formatted="false">"Select a UK region and confirm that the supported employee profile applies."</string>
+    <string name="tax_foreign_fields" formatted="false">"Israeli tax points and contribution rules do not apply to this country."</string>
+    <string name="tax_uk_profile" formatted="false">"I confirm that the UK profile below applies to me."</string>
+    <string name="tax_country_hint" formatted="false">"Country and language are independent. Country alone does not establish eligibility for personal reliefs."</string>
+    <string name="tax_currency_warning" formatted="false">"Changing country changes the currency label, without converting salary amounts or overtime rules. Review your settings before saving."</string>
+    <string name="tax_uk_scope" formatted="false">"UK 2026/27: steady monthly pay annualised for Income Tax; monthly Category A National Insurance. Standard Personal Allowance with high-income taper. Only one employment; no other income, pension deductions, salary sacrifice, student loans, taxable benefits or special reliefs. This estimate is not cumulative PAYE."</string>
+    <string name="tax_scope_in" formatted="false">"India FY 2025/26–2026/27: resident salaried employee, new regime only, steady annualised cash salary, no other income or special tax relief. Standard deduction, rebate, marginal relief and 4% cess included. Taxable annual income must not exceed INR 5,000,000."</string>
+    <string name="tax_scope_ru" formatted="false">"Russia 2026: tax-resident employee, ordinary steady salary only. No other income, personal tax deductions, northern allowances or special military rules. Tax is an annualised monthly average, not year-to-date payroll withholding. Employer social contributions are not deducted from employee pay."</string>
+    <string name="tax_scope_ae" formatted="false">"UAE 2026: non-GCC expatriate employee, employment income only. No personal income tax. Enter actual employee payroll deductions, including insurance where applicable. End-of-service benefits and employer contributions are excluded."</string>
+    <string name="tax_actual_deductions" formatted="false">"Actual employee deductions per month"</string>
+    <string name="tax_deductions_hint" formatted="false">"Enter 0 if none. Include employee pension, insurance and local payroll deductions. Exclude the income tax/cess calculated here and employer contributions. This amount reduces take-home pay, not taxable income."</string>
+    <string name="tax_confirm_profile" formatted="false">"I confirm that this country’s employee profile applies to me."</string>
+    <string name="tax_foreign_required" formatted="false">"Check the employee profile, deduction amount and supported income limits before estimating net pay."</string>
+    <string name="tax_other_tax" formatted="false">"Health and Education Cess"</string>
+    <string name="tax_other_deductions" formatted="false">"Other employee deductions"</string>
+    <string name="tax_scope_us" formatted="false">"2026 only: full-year resident aged 18–64, one ordinary local W-2 employer, SINGLE or joint filing with ONE household earner. No dependents, other income, federal/refundable credits, special tips/overtime deductions, pretax benefits or interstate work. Verify eligibility. All 50 states selectable: 47 have scoped automatic state tariffs (including zero wage tax); CO/ID/VT require verified annual state liability entry. Tax/12 is a reserve, not W-4/YTD payroll withholding."</string>
+    <string name="tax_scope_ca" formatted="false">"Canada 2026: Ontario/Alberta only. Single full-year resident aged 18–64, living and working in the same province, one employer. Basic personal/employment credits only; no dependants, RRSP, pre-tax benefits or other income. Federal/provincial tax, CPP/CPP2 and EI included. Annual steady-pay average, not an actual pay run."</string>
+    <string name="tax_na_deductions_hint" formatted="false">"Other post-tax employee deductions only; enter 0 if none. Do not re-enter taxes, Social Security, Medicare, CPP/CPP2, EI or Ontario Health Premium already calculated. Pre-tax deductions are not supported."</string>
+    <string name="tax_other_region" formatted="false">"Other region — not supported yet"</string>
+    <string name="tax_region_unavailable" formatted="false">"Net estimates for this region are not supported yet."</string>
+    <string name="tax_florida" formatted="false">"Florida"</string>
+    <string name="tax_texas" formatted="false">"Texas"</string>
+    <string name="tax_ontario" formatted="false">"Ontario"</string>
+    <string name="tax_alberta" formatted="false">"Alberta"</string>
+    <string name="tax_filing" formatted="false">"Federal filing status"</string>
+    <string name="tax_single" formatted="false">"Single"</string>
+    <string name="tax_joint" formatted="false">"Married filing jointly — one earner"</string>
+    <string name="tax_federal" formatted="false">"Federal income tax"</string>
+    <string name="tax_provincial" formatted="false">"Provincial income tax"</string>
+    <string name="tax_ontario_health" formatted="false">"Ontario Health Premium"</string>
+    <string name="tax_social_security" formatted="false">"Social Security"</string>
+    <string name="tax_cpp" formatted="false">CPP</string>
+    <string name="tax_cpp2" formatted="false">CPP2</string>
+    <string name="tax_ei" formatted="false">EI</string>
+    <string name="tax_medicare" formatted="false">Medicare</string>
+    <string name="tax_pt_mainland" formatted="false">"Portugal — mainland"</string>
+    <string name="tax_annual_verified_base" formatted="false">"Verified final annual taxable income"</string>
+    <string name="tax_verified_base_hint" formatted="false">"Enter the final taxable base after all allowances, from a verified assessment or professional calculation. This is not gross salary; the app does not derive it automatically."</string>
+    <string name="tax_au_hospital" formatted="false">"Approved private hospital cover"</string>
+    <string name="tax_au_full_cover" formatted="false">"Full tax year"</string>
+    <string name="tax_au_no_cover" formatted="false">"None throughout the tax year"</string>
+    <string name="tax_nz_ietc_hint" formatted="false">"IETC requires full-year eligibility: no Working for Families entitlement, main benefit, NZ Super, Veterans Pension or equivalent overseas payment. Partial-year eligibility is not supported."</string>
+    <string name="tax_nz_ietc" formatted="false">"I confirm full-year IETC eligibility"</string>
+    <string name="tax_further_deductions_hint" formatted="false">"Enter actual employee cash deductions not calculated here, or 0. Exclude employer contributions and taxes/insurance already shown. This reduces take-home pay, not the taxable base."</string>
+    <string name="tax_solidarity" formatted="false">"Solidarity tax"</string>
+    <string name="tax_pt_social" formatted="false">"Employee Social Security"</string>
+    <string name="tax_au_levy" formatted="false">"Medicare levy"</string>
+    <string name="tax_au_surcharge" formatted="false">"Medicare levy surcharge"</string>
+    <string name="tax_acc" formatted="false">"ACC earners levy"</string>
+    <string name="tax_included_relief" formatted="false">"Relief already included in income tax"</string>
+    <string name="tax_scope_de" formatted="false">"Germany 2026: single resident, no children or church tax. Annual assessment using a verified final taxable base, not derived from gross pay. Enter actual employee social contributions separately. This is not Lohnsteuer payroll withholding."</string>
+    <string name="tax_scope_fr" formatted="false">"France: 2025 income assessed in 2026 only. Single resident, one tax share, salary only, annual gross up to EUR 200,000. Enter final taxable income after expense allowances; actual payroll social deductions separately. Includes décote; no 2026 income table or live PAS withholding."</string>
+    <string name="tax_scope_pt" formatted="false">"Portugal 2026: mainland, single resident, ordinary category A. Twelve equal payments including holiday/Christmas pro-rata; annual gross at least EUR 20,000. Includes 11% employee Social Security, standard deduction, IRS bands and solidarity. No dependants, special regimes or invoice credits; not a 14-payment withholding calculation."</string>
+    <string name="tax_scope_au" formatted="false">"Australia FY 2025/26–2026/27: single resident aged 18–64, cash salary at least AUD 50,000 a year, excluding employer Super. No other income, pre-tax benefits or exemptions. Includes Income Tax, LITO, 2% Medicare and surcharge. Declare approved hospital cover for the whole year or none; families and partial cover excluded."</string>
+    <string name="tax_scope_nz" formatted="false">"New Zealand FY 2025/26–2026/27: full-year resident, salary only, one job, no other income or benefits. Income Tax and ACC included; IETC only after explicit eligibility confirmation. Enter actual KiwiSaver/loan/other employee deductions separately. Annual steady-income estimate."</string>
+    <string name="tax_scope_es" formatted="false">"Spain 2026: Madrid only. Single full-year resident aged 18–64, salary only, no children, disability or tax credits. Annual cash gross at least EUR 40,000 and verified general taxable base at least EUR 30,000. National and Madrid tax include their basic personal minima. Actual social/payroll deductions are entered separately. Twelve equal total payments; not payroll withholding."</string>
+    <string name="tax_scope_cn" formatted="false">"China 2026: mainland full-year tax resident, salary only from one job, no other/foreign income or tax reductions. Enter a verified final annual taxable base after RMB 60,000 and all lawful deductions. Actual local social insurance/housing fund deductions are entered separately; no local rates or eligibility are inferred. No separately taxed annual bonus, treaty/special expat regime or monthly/YTD withholding."</string>
+    <string name="tax_scope_sa" formatted="false">"Saudi Arabia 2026: non-GCC expatriate, ordinary employment income in Saudi Arabia only. No personal income tax. Enter actual employee cash deductions, including insurance where applicable, or 0. Employer occupational-risk contributions are excluded. Saudi/GCC pension rules, business income, foreign tax liabilities and end-of-service benefits are outside this profile."</string>
+    <string name="tax_madrid" formatted="false">"Madrid"</string>
+    <string name="tax_cn_mainland" formatted="false">"Mainland China"</string>
+    <string name="tax_es_base_hint" formatted="false">"Enter the verified final annual general taxable base BEFORE the personal/family minimum, after lawful salary deductions. Gross must be at least EUR 40,000; base at least EUR 30,000. The app applies the standard minima itself. No automatic social-insurance or gross-to-base calculation."</string>
+    <string name="tax_cn_base_hint" formatted="false">"Enter the verified final annual taxable salary base AFTER RMB 60,000 and all lawful deductions. Do not subtract RMB 60,000 again. Actual social/housing cash deductions must also be entered in the monthly employee-deductions field; their tax effect must already be in this base."</string>
+    <string name="tax_state_income" formatted="false">"National income tax"</string>
+    <string name="tax_regional_income" formatted="false">"Regional income tax"</string>
+    <string name="tax_scope_ie" formatted="false">"Ireland 2026: single full-year resident aged 18–64, one qualifying PAYE job, salary only. Basic personal/employee credits and ordinary USC included. No proprietary director, medical-card concession, other income, pre-tax pension/benefits or extra credits. Enter actual employee PRSI and post-tax pension/other deductions separately; MyFutureFund eligibility is not inferred. Annual steady-income estimate, not cumulative payroll."</string>
+    <string name="tax_scope_hk" formatted="false">"Hong Kong 2025/26–2026/27: single full-year salary-only employee aged 18–64, one employer, regular monthly-paid MPF member. Includes hourly work paid monthly, basic allowance, employee MPF and lower progressive/standard tax. Contribution holidays must have expired before year start. No casual/daily-paid/exempt employees, dependants, other income or extra reliefs. 2025/26 final tax rebate only; not provisional-tax billing."</string>
+    <string name="tax_ie_deductions_hint" formatted="false">"Enter actual employee PRSI plus post-tax pension/other cash deductions, or 0. Include MyFutureFund if deducted; no automatic enrolment assumption. Exclude employer costs, Income Tax and USC already calculated. Income-tax-relieved pension contributions are outside this profile. Update actual deductions when pay changes."</string>
+    <string name="tax_hk_deductions_hint" formatted="false">"Only extra post-tax employee cash deductions, or 0. Do not re-enter the employee MPF or Salaries Tax calculated here. Employer contributions and extra tax-relieved deductions are outside this profile."</string>
+    <string name="tax_usc" formatted="false">"Universal Social Charge (USC)"</string>
+    <string name="tax_mpf" formatted="false">"Employee MPF"</string>
+    <string name="tax_scope_no" formatted="false">"Norway 2026: single full-year resident aged 18–64, one salary-only job, ordinary 22% region and National Insurance membership. Includes standard/personal deductions, step tax and verified youth work allowance where selected. No pension/union/interest/other deductions, other income, foreign-worker PAYE or special regional rules. Annual steady-income liability before tax-card prepayments and small-balance collection rules."</string>
+    <string name="tax_scope_za" formatted="false">"South Africa 2025/26–2026/27: full-year resident aged 18–64, one ordinary private-sector salary job. Includes primary rebate and selected UIF treatment. No other income, commission, taxable benefits, pension tax deduction, medical/other credits or special exemptions. Confirm ordinary UIF coverage, or exemption solely for working under 24 hours per month for this employer. Annual steady-income estimate, not actual PAYE withholding."</string>
+    <string name="tax_no_region" formatted="false">"Ordinary 22% region"</string>
+    <string name="tax_no_region_hint" formatted="false">"Excludes Svalbard, Finnmark and these Troms municipalities: Karlsøy, Kvænangen, Kåfjord, Lyngen, Nordreisa, Skjervøy, Storfjord."</string>
+    <string name="tax_no_youth" formatted="false">"Youth work allowance — verified status"</string>
+    <string name="tax_no_selected" formatted="false">"Selected — confirmed by the Tax Administration"</string>
+    <string name="tax_no_not_selected" formatted="false">"Not selected / outside the eligible group"</string>
+    <string name="tax_no_youth_hint" formatted="false">"The 2026 pilot selected some people born in 1991–2006 at random. Being young or resident is not enough. Check your official status; do not guess. A blank status blocks the estimate."</string>
+    <string name="tax_za_uif" formatted="false">"Employee UIF status"</string>
+    <string name="tax_za_covered" formatted="false">"Covered by ordinary UIF"</string>
+    <string name="tax_za_lt24" formatted="false">"Exempt — under 24 hours per month"</string>
+    <string name="tax_za_year_hint" formatted="false">"Years are labelled by their start: 2026/27 means March 2026–February 2027, called the 2027 tax year by SARS. Other UIF exemptions are outside this profile."</string>
+    <string name="tax_noza_deductions_hint" formatted="false">"Enter only extra post-tax employee cash deductions, or 0. Do not repeat calculated taxes or employee National Insurance/UIF, and exclude employer contributions. Tax-relieved pension or other deductible expenses require another profile."</string>
+    <string name="tax_no_ordinary" formatted="false">"Ordinary income tax"</string>
+    <string name="tax_no_step" formatted="false">"Step tax on personal income"</string>
+    <string name="tax_no_ni" formatted="false">"Employee National Insurance"</string>
+    <string name="tax_uif" formatted="false">"Employee UIF"</string>
+    <string name="tax_scope_sg" formatted="false">"Singapore income year 2026: full-year tax resident aged 18–54 at year end, one ordinary-wage job, no bonus/additional wages, other income, disability, benefits or extra reliefs. Full-rate CPF citizen/PR from third year throughout the year, or foreign non-citizen/non-PR without CPF. Includes employee CPF and basic Earned Income Relief. Annual tax reserve estimate; not monthly tax withholding."</string>
+    <string name="tax_scope_dk" formatted="false">"Denmark 2026: Copenhagen only, single full-year resident aged 18–59, salary only, no church/capital/foreign income or special regime. Requires verified annual personal and municipal taxable bases before personal allowance, plus actual AM, ATP, employee pension and other cash deductions. Includes national/municipal tax and basic personal allowance; no automatic gross-to-base calculation or tax-card withholding."</string>
+    <string name="tax_copenhagen" formatted="false">"Copenhagen"</string>
+    <string name="tax_dk_personal_base" formatted="false">"Verified annual personal income after AM"</string>
+    <string name="tax_dk_municipal_base" formatted="false">"Verified annual municipal taxable income"</string>
+    <string name="tax_dk_base_hint" formatted="false">"Enter both verified final bases BEFORE the personal allowance. Personal income is after AM/ATP/pension adjustments; municipal taxable income also reflects all lawful employment/job/other base deductions. Do not enter gross pay. The app does not derive either base or subtract these deductions again. If personal income exceeds DKK 54,100 but the municipal base is below DKK 54,100, this allowance-allocation case is not supported yet."</string>
+    <string name="tax_dk_actual_deductions" formatted="false">"Actual AM, ATP, pension and other cash deductions per month"</string>
+    <string name="tax_dk_deductions_hint" formatted="false">"Include actual AM labour-market tax, employee ATP/pension and other non-income-tax cash deductions, or 0. Their tax effects must already be reflected in the verified bases. Exclude employer costs and national/municipal income tax computed here. Update all three inputs when pay changes."</string>
+    <string name="tax_sg_cpf_profile" formatted="false">"CPF employee profile"</string>
+    <string name="tax_sg_full" formatted="false">"Citizen / PR year 3+ — full CPF rates"</string>
+    <string name="tax_sg_foreign" formatted="false">"Foreign tax resident — not citizen/PR, no CPF"</string>
+    <string name="tax_sg_year_hint" formatted="false">"2026 means income earned January–December 2026, assessed in YA 2027. Earlier one-off YA 2024/2025 rebates are not carried forward. PR first/second year and other CPF/age profiles are not supported."</string>
+    <string name="tax_sg_deductions_hint" formatted="false">"Only extra post-tax employee cash deductions, or 0, including actual community-fund deductions where applicable. Do not repeat calculated employee CPF or income tax, and exclude employer contributions. Extra tax-relieved deductions are outside this profile."</string>
+    <string name="tax_cpf" formatted="false">"Employee CPF"</string>
+    <string name="tax_dk_bottom" formatted="false">"National bottom-bracket tax"</string>
+    <string name="tax_dk_municipal" formatted="false">"Copenhagen municipal income tax"</string>
+    <string name="tax_dk_higher" formatted="false">"Middle / top / additional top taxes"</string>
+    <string name="tax_scope_my" formatted="false">"Malaysia 2026: single full-year tax resident aged 18–59, one job with regular cash salary only; no other income, taxable benefits, special regime, zakat or other tax rebates. Requires a verified final annual chargeable income after all lawful reliefs including the self relief, and actual employee cash deductions. Includes the non-refundable RM400 personal rebate where eligible. Annual tax reserve estimate, not PCB withholding."</string>
+    <string name="tax_scope_ph" formatted="false">"Philippines 2026: single full-year resident citizen aged 18–59, one private job, 12 equal regular cash salary payments, no other taxable income, special regime or tax credits. Requires verified annual taxable regular compensation and actual employee deductions. Statutory minimum-wage-earner exemptions are outside this profile. Non-taxable 13th-month/other benefits up to the combined PHP90,000 limit are outside the displayed cash net; taxable excess or other bonus cases are unsupported. Annual estimate, not payroll withholding."</string>
+    <string name="tax_my_base_hint" formatted="false">"Enter verified final annual chargeable income AFTER all lawful reliefs, including the RM9,000 self relief. Do not enter gross salary. The app applies the eligible RM400 rebate separately; it does not derive reliefs or subtract cash contributions again. Update the base when pay changes."</string>
+    <string name="tax_ph_base_hint" formatted="false">"Enter verified annual taxable REGULAR cash compensation after lawful employee contributions/dues, not gross pay. Do not deduct income tax or personal loan payments from this base. The app does not derive exemptions or subtract contributions again. Update the base when pay changes."</string>
+    <string name="tax_myph_deductions_hint" formatted="false">"Enter actual monthly employee EPF/SOCSO/EIS or SSS/PhilHealth/Pag-IBIG, lawful dues and other cash deductions, or 0. Their tax effects must already be reflected in the verified base. Exclude employer contributions and income tax calculated here. Update both amounts when pay changes."</string>
+    <string name="tax_scope_pl" formatted="false">"Poland 2026: single full-year resident aged 26–59, one ordinary employment contract, 12 equal cash salaries; annual gross up to PLN1,000,000. No other income, taxable benefits, joint filing, PIT-0, extra deductions or credits. Standard employment costs only (up to PLN3,600/year), not actual-ticket or 50% creative costs. Requires verified annual taxable base and actual cash deductions. Includes the basic PLN3,600 tax reduction. Annual estimate, not payroll withholding. PPK participants are outside this profile."</string>
+    <string name="tax_scope_cz" formatted="false">"Czechia 2026: single full-year resident aged 18–64, one ordinary employment with 12 equal regular cash salaries; no other income, taxable benefits, base deductions or extra credits. DPP/DPČ and special withholding cases are excluded. Includes the basic annual CZK30,840 non-refundable credit. Social, health and any minimum-health top-up must be entered as actual employee deductions. Annual assessment estimate, not monthly tax advances."</string>
+    <string name="tax_pl_base_hint" formatted="false">"Enter verified final annual taxable income after lawful employee social contributions and standard employment costs, BEFORE the PLN3,600 tax reduction. Do not subtract PLN30,000 separately. Health contributions, PPK and personal loan payments do not reduce this base in this profile. No second subtraction of cash deductions; update all amounts when pay changes."</string>
+    <string name="tax_plcz_deductions_hint" formatted="false">"Enter actual monthly employee social/health insurance, post-tax pension and other cash deductions, or 0 if none. Include any applicable Czech minimum-health top-up. Exclude employer costs and income tax calculated here. Czech cash deductions do not reduce the tax base; Polish lawful tax deductions must already be in the verified base. Update when pay changes."</string>
+    <string name="tax_scope_th" formatted="false">"Thailand 2026: single full-year resident aged 18–59, one ordinary salary job, no dependents, other income, special regime or tax credits. Requires verified annual employment income and final net taxable income after lawful expenses, allowances and exemptions. Salary only; the alternative minimum tax on other income is excluded. Current 30% band ends at THB5,000,000, not the old THB4,000,000."</string>
+    <string name="tax_scope_id" formatted="false">"Indonesia 2026: single full-year resident aged 18–59, permanent employee, valid NPWP/integrated NIK, TK/0 with no dependents or other income. Annual Article 17 calculation after verified deductions and PTKP. Excludes DTP/government-borne tax, employer-paid/gross-up tax, special regimes and tax credits. Include THR/bonuses and taxable benefits in annual figures. Not monthly TER withholding."</string>
+    <string name="tax_scope_vn" formatted="false">"Vietnam 2026: single full-year resident aged 18–59, one salary job, no dependents, other income, special regime or tax credits. Requires verified annual employment income and final taxable base after lawful insurance, personal relief and exemptions, including any eligible overtime exemption. Five annual bands apply to resident salary from tax year 2026; do not reuse the old seven-band table."</string>
+    <string name="tax_scope_tw" formatted="false">"Taiwan 2026 income, filed in 2027: single full-year resident aged 18–59, salary only, no dependents, other/foreign income, AMT additions, special regime or tax credits. Requires verified annual employment income and final taxable base after all lawful exemptions/deductions and applicable basic-living-expense adjustment. Annual employment income limited to TWD7,500,000 as a conservative profile limit, not a legal gross AMT threshold."</string>
+    <string name="tax_scope_lk" formatted="false">"Sri Lanka 2026/27: 1 April 2026–31 March 2027. Single full-year resident aged 18–59, one ordinary domestic salary job, no other/foreign income, special regime, arrears/terminal-benefit treatment or tax credits. Requires verified annual income and final taxable base after LKR1,800,000 personal relief and other lawful deductions. Ordinary annual tax reserve, not APIT/YTD withholding."</string>
+    <string name="tax_annual_employment_gross" formatted="false">"Verified total annual employment income"</string>
+    <string name="tax_asia_five_income_hint" formatted="false">"Enter the full selected tax year’s total employment income before reliefs, including bonuses, THR/extra salary and correctly valued taxable employer benefits. Do not enter only monthly pay ×12 when extra income applies. Verify this total and the final taxable base independently. Net shown is this period’s cash pay less annual tax/12 and actual employee cash deductions; it does not add annual bonuses or noncash benefits to cash payout."</string>
+    <string name="tax_asia_five_base_hint" formatted="false">"Enter the verified final annual taxable base after all lawful expenses, insurance deductions, personal allowances and exemptions for the selected year. The app does not decide eligibility or derive reliefs. They must not be subtracted again. Indonesia: PKP is floored to full IDR1,000. Update both annual amounts when income or circumstances change."</string>
+    <string name="tax_asia_five_cash_hint" formatted="false">"Actual employee social/health/pension and other cash deductions for this period, or 0. Their lawful tax effects must already be in the verified annual base. Exclude employer costs and income tax reserved here. Do not enter tax withholding again. This is an annual tax reserve estimate, not a payslip or full annual net total."</string>
+    <string name="tax_scope_pe" formatted="false">"Peru 2026: single full-year domiciled resident aged 18–59, one fifth-category salary job only, no dependents, other/foreign income, special regime or tax credits. UIT=PEN5,500. Final verified taxable base already includes the 7-UIT deduction and any independently verified eligible additional expenses. Employee pension contributions are not automatically tax-deductible."</string>
+    <string name="tax_scope_co" formatted="false">"Colombia 2026: single full-year resident aged 18–59, ordinary salary only, no dependents, other/foreign income, special regime or tax credits. UVT=COP52,374. Requires final verified annual taxable base after lawful social exclusions, exemptions and deduction limits. Uses annual Article241, not monthly Article383 withholding. Other taxes such as wealth tax are outside this salary estimate."</string>
+    <string name="tax_scope_ee" formatted="false">"Estonia 2026: single full-year resident aged 18–59, ordinary salary only, no dependents, other income, special regime or tax credits. 22% of verified final taxable base after lawful deductions and the EUR8,400 basic exemption. No old income-dependent exemption phase-out or pension-age allowance. Employee insurance/pension cash is entered separately."</string>
+    <string name="tax_scope_lv" formatted="false">"Latvia 2026: single full-year resident aged 18–59, ordinary salary only, no dependents, other income or tax credits. Annual total employment income limited to EUR105,300; higher-rate, solidarity and additional 3% cases are unsupported. 25.5% of verified final base after lawful contributions/deductions and EUR6,600 basic exemption. Not a complete high-income payroll calculation."</string>
+    <string name="tax_scope_lt" formatted="false">"Lithuania 2026: single full-year resident aged 18–59, ordinary fully taxable salary only, no dependents, other income, sickness benefits, disability/special NPD, extra deductions or credits. Annual rates 20%/25%/32%. Verified base after ordinary NPD only; employee social insurance is not deducted automatically. Above annual income EUR83,237.40 this limited profile requires taxable base equal to annual income."</string>
+    <string name="tax_scope_bg" formatted="false">"Bulgaria 2026: single full-year resident aged 18–59, ordinary salary only, no dependents, other income, special regime, tax credits or filing discounts. Currency is EUR from 2026; do not enter old BGN amounts without independent conversion. 10% of final verified annual base after lawful employee contributions/deductions. No automatic FX or statutory payroll rounding."</string>
+    <string name="tax_scope_ro" formatted="false">"Romania 2026: single full-year resident aged 18–59, one ordinary domestic salary job, no dependents, other income, special regime or tax credits. 10% of the verified sum of monthly taxable salary bases after lawful contributions, personal deductions and applicable minimum-wage exemptions. Monthly legal conditions must be checked individually; this annual reserve does not determine them."</string>
+    <string name="tax_scope_hu" formatted="false">"Hungary 2026: single full-year resident aged 25–59, ordinary fully taxable salary only; no children, other income, exemptions, base allowances or tax credits. Excludes under-25, mother/family, disability/newlywed relief and simplified/seasonal employment. 15% of annual salary; in this profile verified taxable base must equal annual employment income. Employee insurance does not reduce it."</string>
+    <string name="tax_scope_ge" formatted="false">"Georgia 2026: single full-year resident aged 18–59, ordinary fully taxable Georgian salary only, no dependents, other/foreign income, exemptions, special business regime or tax credits. 20% of annual salary. Verified taxable base must equal annual employment income. Actual employee pension/other cash is deducted from payout, not again from the tax base."</string>
+    <string name="tax_scope_am" formatted="false">"Armenia 2026: single full-year resident aged 18–59, ordinary fully taxable domestic salary only; no dependents, other/foreign income, special sector rates, exemptions, mortgage/social-expense refunds or tax credits. 20% of annual salary; verified taxable base equals annual employment income. Actual employee pension, stamp duty and applicable health-insurance cash are supplied separately."</string>
+    <string name="tax_ten_income_hint" formatted="false">"Enter verified employment income for the whole 2026 calendar year, including bonuses, extra salary and correctly valued taxable benefits, plus the verified final annual taxable base. For Romania the base is the sum of verified monthly bases. Annual tax/12 is reserved against period cash; annual bonuses/noncash benefits are not added to the displayed payout."</string>
+    <string name="tax_ten_base_hint" formatted="false">"Verify all legal base deductions and exemptions before entering the final annual amount; the app does not decide eligibility. Georgia, Armenia and Hungary: base equals annual salary in these profiles; employee insurance does not reduce it. Lithuania: ordinary NPD only, no reduction above the stated profile threshold. Update both annual inputs when circumstances change."</string>
+    <string name="tax_ten_cash_hint" formatted="false">"Enter actual employee social/health/pension and other non-PIT cash deductions for the period, or 0. Armenia includes actual stamp duty/health premiums when applicable. Exclude employer costs and income tax already reserved here. Lawful tax effects must already be in the verified base; do not deduct cash or reliefs twice. Annual estimate, not a payslip or tax return."</string>
+    <string name="tax_fifteen_common_scope" formatted="false">"Scope: single full-year tax resident aged 18–59, one ordinary domestic job, no dependents, other/foreign income, special regime or tax credits beyond those stated. Country and language do not establish eligibility. Confirm the full profile. Values apply to every viewed period; update verified figures when pay or circumstances change."</string>
+    <string name="tax_scope_mx" formatted="false">"Mexico 2026: annual ISR tariff, not monthly withholding. No employment-subsidy eligibility in ANY month, minimum-wage exemption, special payments or credits. Conservative gate: annual final base/12 must exceed MXN11,492.66. This gate alone does not prove eligibility. Verify the whole-year final base and all exclusions/deductions."</string>
+    <string name="tax_scope_br" formatted="false">"Brazil 2026: estimate for ONE ordinary monthly fully taxable cash payment, using a verified monthly base after either lawful deductions or the simplified deduction, never both. Includes the new monthly tax reduction. Excludes noncash/exempt payments, 13th salary, vacation/separate tax events, annual settlement and other credits. Verified full-year total must not exceed BRL600,000; this is a conservative app limit."</string>
+    <string name="tax_scope_cr" formatted="false">"Costa Rica 2026: ordinary monthly fully taxable cash salary. Salary tax applies BEFORE employee social deductions, using the 2026 salary bands. No spouse/child credits, exempt bonuses, 13th salary, separate or partial-month payment calculations. Actual employee cash deductions are separate."</string>
+    <string name="tax_scope_gt" formatted="false">"Guatemala 2026: verified final annual base after all lawful deductions/exemptions, including Q48,000 ordinary deduction AND the Q3,024 extraordinary 2026 deduction. No automatic 2027 indexed exemption. Tax: 5% up to Q300,000 of final base; 7% above. Verify any exempt aguinaldo/Bono14 and documented deductions in the base."</string>
+    <string name="tax_scope_do" formatted="false">"Dominican Republic 2026: annual salary scale with published fixed quotas. Enter verified base BEFORE the tariff’s zero-rate band of RD$416,220; do not subtract that threshold again. No 2027 scale or education/other tax credits. Actual employee social cash is separate."</string>
+    <string name="tax_scope_ke" formatted="false">"Kenya 2026: verified final annual base after lawful deductions, including applicable SHIF, housing levy and pension deductions. Resident personal relief up to KES28,800/year is included once, nonrefundable. No private-insurance relief or other credits/special exemptions. Actual employee cash deductions are separate; no second deduction from base."</string>
+    <string name="tax_scope_rw" formatted="false">"Rwanda 2026: ordinary first-employer employment only, verified annual base. Casual-labour 15% treatment, second employers, board fees and special regimes are excluded. Annual tariff/12 is a reserve, not actual variable-month PAYE. Enter actual employee cash contributions separately."</string>
+    <string name="tax_scope_ug" formatted="false">"Uganda FY2026/27: 1 July 2026–30 June 2027. NEW resident bands effective July 2026. Reserve assumes 12 equal taxable monthly amounts; not a variable-month/YTD calculation. No old 235,000 threshold or nonresident scale. Additional 10% above UGX10m taxable/month is included."</string>
+    <string name="tax_scope_zm" formatted="false">"Zambia 2026: ordinary annualised salary bands, including the ZMW5,100 monthly zero band. Enter verified annual base and actual employee cash deductions. No disability, special-employment or other tax credits. Employer costs are excluded."</string>
+    <string name="tax_scope_pk" formatted="false">"Pakistan FY2026/27, tax year2027: enacted Finance Act2026 salary bands. Salary-only resident with verified total annual employment income at most PKR10m. Surcharge, super-tax, pension, business and special-credit cases excluded. No 2025/26 table or proposed-bill rates."</string>
+    <string name="tax_scope_uz" formatted="false">"Uzbekistan 2026: ordinary fully taxable resident salary, 12%; verified annual base equals annual salary. No special exemptions/voluntary pension relief. Any funded-pension amount allocated WITHIN the 12% is already included in this reserve: do NOT enter it again as an extra cash deduction. Employer social tax is excluded."</string>
+    <string name="tax_scope_kz" formatted="false">"Kazakhstan 2026: new 10%/15% annual scale at 8,500 MCI; MCI=KZT4,325. Verified base already includes the ordinary full-year 360-MCI deduction and lawful social deductions, not the old 14-MCI rule. No private-practice, business, dividend or special social-relief profile."</string>
+    <string name="tax_scope_ma" formatted="false">"Morocco 2026: ordinary salary only, verified annual net taxable base after lawful professional expenses, employee contributions and exemptions. Six current bands, top 37%. No family credits, business/agricultural income, special zone/rate or other tax credits. Actual employee cash deductions are separate."</string>
+    <string name="tax_scope_md" formatted="false">"Moldova 2026: ordinary regime only, total annual employment income strictly below MDL360,000 as a conservative app scope. Verified base already includes the ordinary MDL29,700 allowance and lawful deductions. No IT-park, taxi, major personal/family relief or other credits."</string>
+    <string name="tax_scope_mk" formatted="false">"North Macedonia 2026: ordinary salary, 10% of verified final annual base after lawful contributions and the annual MKD131,184 personal reduction. No other income, special exemptions or tax credits. Actual employee cash deductions are separate; do not subtract the allowance twice."</string>
+    <string name="tax_monthly_verified_base" formatted="false">"Verified taxable base for this monthly payment"</string>
+    <string name="tax_br_annual_hint" formatted="false">"Enter independently verified TOTAL 2026 employment income, including 13th salary, vacation and bonuses, to check the BRL600,000 scope limit. The monthly tax estimate below does not calculate their separate tax or annual settlement. Do not put a 13th-salary/separate event into this ordinary month’s cash/base."</string>
+    <string name="tax_br_monthly_base_hint" formatted="false">"For the same ordinary monthly payment: enter the verified base after lawful deductions. The app compares it with gross minus BRL607.20 and uses the lower base; it never adds both deductions. No automatic INSS rate. Update for the payment viewed; no historical profile versions."</string>
+    <string name="tax_fifteen_income_hint" formatted="false">"Enter verified full-year employment income for the selected tax year, including bonuses and correctly valued taxable benefits, plus the verified final annual tax base. UG/PK start July 2026; PK is tax year2027. Annual tariff/12 is a tax reserve against period cash, not a payslip/YTD/annual cash total. UG assumes 12 equal taxable months."</string>
+    <string name="tax_fifteen_base_hint" formatted="false">"Enter the FINAL verified annual base after lawful deductions and allowances. Do not subtract a tariff’s zero-rate band again. GT includes the extra 2026 Q3,024; KZ uses the new 360-MCI allowance; MK uses MKD131,184. UZ requires base=annual salary. MD is limited to annual total below360,000. Legal eligibility is not inferred."</string>
+    <string name="tax_fifteen_cash_hint" formatted="false">"Actual non-PIT employee cash deductions for this payment, or explicit0. Include applicable social, health, pension or levy amounts, not employer costs or income tax already calculated here. UZ: exclude funded pension already allocated inside12%. Any lawful base deduction must already be reflected in the verified base; never subtract it twice."</string>
+    <string name="tax_wave_common_scope" formatted="false">"Scope: single ordinary employee aged18–59 living and working locally for the full year, one domestic job, no dependents, other/foreign income or special regimes/credits unless stated. Confirm tax residence and all individual conditions independently; country/language do not establish eligibility. This is local payroll only, not home-country/foreign tax. Values apply to all viewed periods; update them when pay or circumstances change."</string>
+    <string name="tax_scope_pa" formatted="false">"Panama2026: ordinary resident salary and verified final annual taxable base.0% through PAB11,000;15% to50,000;25% above. No representation allowances/separate-rate payments, other income or special credits. Employee social cash separate; do not subtract the zero-rate band twice."</string>
+    <string name="tax_scope_ni" formatted="false">"Nicaragua2026: ordinary resident salary, verified annual base after lawful INSS/savings deductions and exemptions. Current annual0/15/20/25/30% tariff. Verify exempt13th pay in base; do not deduct the C$100,000 zero band again. No terminal/separate-rate payments or special credits; annual reserve is not YTD withholding."</string>
+    <string name="tax_scope_sv" formatted="false">"El Salvador2026: ONE ordinary monthly taxable payment using a verified monthly base after lawful deductions. Published monthly withholding table, including fixed quotas; not June/December cumulative recalculation, annual settlement or partial-month/fortnightly payroll. No special/exempt payments or other credits."</string>
+    <string name="tax_scope_hn" formatted="false">"Honduras2026: ordinary resident salary and final verified annual base already reflecting the full eligible HNL40,000 education/medical deduction and other lawful deductions/exemptions. New2026bands. No over65 relief, business income, special exemptions or credits. Do not subtract the tariff’s zero band again."</string>
+    <string name="tax_scope_py" formatted="false">"Paraguay2026: ordinary resident employee ALREADY registered in IRP-RSP before2026. First registration/threshold-crossing year is excluded. Verify total annual employment income, IRP-liable receipts BEFORE expenses excluding exempt aguinaldo, and final net taxable base. Up to PYG80m liable receipts: no payment due; above,8/9/10% progressive net-base tariff. No capital/business/other income or credits."</string>
+    <string name="tax_scope_ec" formatted="false">"Ecuador2026: mainland resident employee, no dependents, disability/catastrophic illness or special relief. Published2026annual quotas. Verified eligible personal expenses produce an18% rebate up to the ordinary7-basket cap, limited to tax. Galápagos and larger/special family caps excluded. Expenses reduce TAX, not the taxable base again."</string>
+    <string name="tax_scope_na" formatted="false">"Namibia2026/27:1March2026–28February2027, ordinary resident domestic salary only. Verified final annual base after lawful deductions/valued benefits. Current100,000NAD zero band and18/25/28/30/32/37% marginal bands. No pension withdrawals, farming/business, other income or special credits. Annual reserve, not cumulative PAYE."</string>
+    <string name="tax_scope_kh" formatted="false">"Cambodia2026: ordinary resident monthly cash salary only, no dependents/spouse allowance, nonresident treatment or fringe-benefit/separate-tax regime. Verified monthly taxable salary after lawful deductions. Current0/5/10/15/20% bands. Do not subtract the KHR1.5m zero band again; employee cash contributions separate."</string>
+    <string name="tax_scope_az" formatted="false">"Azerbaijan2026: ordinary fully taxable monthly CASH salary at the main job in the private NON-oil/NON-gas sector only.3/10/14% schedule;200AZN exemption when gross is at most2,500 included once. No public/oil-gas sector, special exemptions or credits. Employee insurance cash does not reduce the PIT base.2027/2028rates not applied."</string>
+    <string name="tax_scope_bh" formatted="false">"Bahrain2026: ordinary local salary of a non-GCC expatriate employee only. No local salary income tax in this profile; actual applicable SIO/unemployment/pension/other employee cash must be entered explicitly, including0 if none. No employer costs, business/other income or home-country tax calculation."</string>
+    <string name="tax_scope_kw" formatted="false">"Kuwait2026: ordinary local salary of a non-GCC expatriate employee only. No local personal salary income tax; actual employee insurance/pension/other payroll cash entered explicitly or0. No corporate/business tax, employer costs or foreign/home-country tax calculation."</string>
+    <string name="tax_scope_om" formatted="false">"Oman2026: ordinary local salary of a non-GCC expatriate employee only. No local PIT for2026. The new personal income tax law starts2028; its5% rate is NOT charged here and future years are not enabled. Enter actual applicable employee social/health/pension cash or0; exclude employer costs and foreign taxes."</string>
+    <string name="tax_scope_qa" formatted="false">"Qatar2026: ordinary local salary/wages of a non-GCC expatriate employee only, excluded from local income tax. Enter actual applicable employee insurance/pension/other payroll cash or0; do not infer a contribution exemption from country. No business/corporate, employer costs or foreign/home-country tax."</string>
+    <string name="tax_scope_bn" formatted="false">"Brunei2026: ordinary local employee salary only, no personal income tax. Actual applicable SPK/pension/social/other employee cash must be verified and entered, or0; no automatic rate or contribution eligibility. No business/other income, employer costs or foreign/home-country tax."</string>
+    <string name="tax_scope_bs" formatted="false">"Bahamas2026: ordinary local salary only, no domestic personal income tax. Actual applicable NIB/pension/other employee payroll cash must be verified and entered, or0. No automatic contribution exemption, business/other income, employer costs or foreign/home-country tax."</string>
+    <string name="tax_ec_mainland" formatted="false">"Mainland Ecuador"</string>
+    <string name="tax_ec_expenses" formatted="false">"Verified eligible annual personal expenses"</string>
+    <string name="tax_ec_expenses_hint" formatted="false">"Ecuador mainland, no dependents or special status: enter independently verified eligible2026personal expenses, or explicit0. Rebate=18% of up to USD5,752.60 (7×821.80), rounded to cents and limited to tax; maximum USD1,035.47. Do NOT subtract these same expenses from the annual tax base. No automatic eligibility, Galápagos uplift or special caps."</string>
+    <string name="tax_py_receipts" formatted="false">"Verified annual IRP-liable receipts before expenses"</string>
+    <string name="tax_py_receipts_hint" formatted="false">"Paraguay: verify gross IRP-RSP-liable employment receipts BEFORE deductible expenses, excluding legally exempt aguinaldo/receipts. This amount is not necessarily all employment income or the final net base. It must be at most total annual employment income, and final base at most this amount. The PYG80m payment threshold uses this field, not all gross pay. Pre2026registration required."</string>
+    <string name="tax_wave_annual_hint" formatted="false">"Enter verified TOTAL employment income for the selected full tax year, including bonuses and correctly valued benefits, and final annual taxable base after lawful deductions/exemptions. Namibia2026/27 starts1March2026; others2026calendar. Annual tax/12 is a reserve against period cash, not YTD/payslip or full annual net; yearly extras are not added wholesale to cash."</string>
+    <string name="tax_wave_monthly_hint" formatted="false">"Enter the final verified taxable base of the SAME ordinary monthly payment shown in gross, after only lawful deductions. Never subtract a tariff’s zero band again or cash deductions twice. This monthly base is reused across viewed periods: update it for each payment. SV cumulative/annual adjustments and KH fringe-benefit taxes are not calculated."</string>
+    <string name="tax_wave_base_hint" formatted="false">"Final verified ANNUAL taxable base after lawful deductions/exemptions, but BEFORE any zero-rate tariff band. HN full eligible40,000deduction already included. PY base&lt;=verified liable receipts; exempt aguinaldo not in those receipts. EC personal expenses are a separate post-tax rebate, not another base deduction. Eligibility must be independently checked."</string>
+    <string name="tax_wave_cash_hint" formatted="false">"Actual non-PIT employee cash deductions for this payment, or explicit0. Include applicable social, health, pension, unemployment/NIB/SPK and other payroll amounts; not employer costs or PIT calculated here. Their lawful tax effects must already be in the verified base. No local PIT does NOT mean no employee deductions; no foreign/home-country tax calculation."</string>
+    <string name="tax_twenty_common_scope" formatted="false">"Scope: single resident employee aged31–59, living/working locally for the FULL tax year, one ordinary domestic job, no dependents, other/foreign income or special status/credits except stated. Country/language do not prove eligibility. Verify final tax base and actual employee cash deductions independently. No employer costs or foreign/home-country tax. Current inputs apply to all viewed periods; update them for each payment."</string>
+    <string name="tax_scope_at" formatted="false">"2026 ordinary annual salary only. Standard transportation credit496 and income-tested supplement up to804 included, capped at tax. No increased commuter credit, commuter euro, separate-tax13th/14th pay or refundable social-insurance settlement. Verify lawful salary deductions in annual base; do not subtract tariff zero band again."</string>
+    <string name="tax_scope_cy" formatted="false">"2026 reform bands, verified final annual taxable salary after legally eligible deductions/exemptions. No automatic housing/green/family or first-employment entitlement, other income, special rates or tax credits."</string>
+    <string name="tax_scope_mt" formatted="false">"2026 SINGLE rates only; no spouse/parent/child rate schedule, special part-time15% regime or other tax credits. Verify final annual chargeable income after lawful deductions."</string>
+    <string name="tax_scope_gr" formatted="false">"2026 CHILDLESS employee aged31–59 only. New age/child-dependent scale; ordinary777 credit tapered above12000 included once and capped at tax. Required electronic-spending conditions fulfilled; no shortfall penalty, special exemption or other credits."</string>
+    <string name="tax_scope_si" formatted="false">"2026 published annual tariff on VERIFIED final net annual base after legal social deductions and personal/general allowances. No further subtraction of those allowances. No youth/student/disability/volunteer, foreign-income or special tax credits."</string>
+    <string name="tax_scope_sk" formatted="false">"2026 NEW19/25/30/35% annual employment bands. Verified final taxable base AFTER lawful contributions and eligible non-taxable allowances, including any income-based taper. Do not subtract allowances twice. No child/mortgage/other credits or special status."</string>
+    <string name="tax_scope_hr" formatted="false">"2026 ZAGREB only, ordinary annual salary, age31–59, no returning-emigrant/youth exemption. Final verified base already includes eligible7200 basic allowance and lawful pension deductions.23/33% at60000 taxable base. Other municipalities unavailable."</string>
+    <string name="tax_scope_rs" formatted="false">"2026 ordinary MONTHLY salary withholding10% of verified final monthly base AFTER the lawful salary allowance for that payment/date/work fraction. Do not deduct employee insurance again from this base. Annual additional high-income tax, cumulative settlement and special exemptions are NOT included."</string>
+    <string name="tax_scope_me" formatted="false">"2026 ordinary fully taxable MONTHLY cash salary: base must equal gross BEFORE employee contributions;0/9/15% bands. Municipal surtax on salary is an EMPLOYER cost, not an extra employee deduction here. No special/exempt pay or annual settlement."</string>
+    <string name="tax_scope_al" formatted="false">"2026 annual employment tariff13/23%; verified final base AFTER the income-dependent personal allowance and other lawful deductions. Personal allowance600000/420000/360000 according to total income already in base, not deducted twice. No child/education credits or other income."</string>
+    <string name="tax_scope_ba" formatted="false">"2026 FEDERATION OF BOSNIA AND HERZEGOVINA only; not Republika Srpska or Brčko. Ordinary annual salary, final verified base after lawful employee contributions and eligible3600 basic personal allowance.10% income tax; no extra credits."</string>
+    <string name="tax_scope_ng" formatted="false">"2026 NTA/JRB rules. Initial scope:12 EQUAL fully taxable monthly CASH salaries, annual total=12×current gross; no bonuses, benefits, variable pay, military/other exempt job. Minimum-wage employment exemption through70000/month included. Verify annual base after lawful reliefs; no old CRA or duplicate800000 zero-band deduction."</string>
+    <string name="tax_scope_gh" formatted="false">"2026 ordinary resident MONTHLY wage only under table effective1SEPTEMBER. Enter verified actual payment date and monthly base after lawful deductions; viewed period must end in SAME calendar month. Earlier months, bonus/concessionary overtime rates, casual workers, nonresident and annual/cumulative settlement unavailable."</string>
+    <string name="tax_scope_tz" formatted="false">"2026 MAINLAND ordinary resident primary-job MONTHLY PAYE only. Verify monthly taxable salary after lawful deductions/approved pension, before applying zero band. Zanzibar, second-job/nonresident30% flat tax, special pay and annual settlement excluded."</string>
+    <string name="tax_scope_bw" formatted="false">"2026/27 starts1July2026. Enacted resident annual tariff includes NEW27.5% above400000, not the old25% top rate. Verified final annual salary base; no nonresident schedule, severance/pension lump sums, business income or special credits."</string>
+    <string name="tax_scope_mu" formatted="false">"2026/27 INCOME YEAR starts1July2026, not assessment-year label. Conservative scope:TOTAL annual employment income at most12m MUR, no other income. Current0/10/20% bands within this scope. Higher-income35%/Fair Share cases, special regimes and tax credits excluded; verify all base deductions."</string>
+    <string name="tax_scope_eg" formatted="false">"2026 ordinary resident salary, conservative TOTAL annual income&lt;=600000EGP. Final verified base includes eligible20000 personal exemption and lawful deductions, before40000 tariff zero band. Base rounded DOWN to10EGP. Higher-income lost-band rules and special credits unavailable. Enter actual employee social/stamp/other payroll cash separately."</string>
+    <string name="tax_scope_sz" formatted="false">"2026/27 starts1July2026. Ordinary salary, annual20/25/30/33% tariff and8200 nonrefundable basic rebate included once.41000 effective zero point is NOT another base deduction. No age60+, redundancy/retirement concession or special credits; verify final taxable base."</string>
+    <string name="tax_scope_ls" formatted="false">"2026/27 starts1April2026. Updated77760 annual band at20%,30% above and12240 nonrefundable annual credit. These replace older RSL page amounts. Verify final taxable employment base; no employer fringe-benefit tax, nonresident, termination or special credits."</string>
+    <string name="tax_scope_jo" formatted="false">"2026 resident ordinary annual salary. Final verified base includes eligible9000 personal exemption and lawful documented deductions.5/10/15/20/25/30% tariff plus1% national contribution on taxable base above200000. Annual base/tax fractions dropped per law; no special regimes/other credits."</string>
+    <string name="tax_payment_date" formatted="false">"Actual payment date · YYYY-MM-DD"</string>
+    <string name="tax_payment_date_hint" formatted="false">"Ghana only: verified date between2026-09-01 and2026-12-31. It must be in the SAME calendar month as the viewed period end; otherwise net is unavailable. Use Latin digits, e.g.2026-10-31. Re-enter date/base for another payment. Earlier2026rates and annual/cumulative settlement are not enabled. Date is included in backups."</string>
+    <string name="tax_payment_date_invalid" formatted="false">"Enter a valid payment date as YYYY-MM-DD using Latin digits, or leave blank."</string>
+    <string name="tax_zagreb" formatted="false">"Zagreb"</string>
+    <string name="tax_fbih" formatted="false">"Federation of Bosnia and Herzegovina"</string>
+    <string name="tax_tz_mainland" formatted="false">"Mainland Tanzania"</string>
+    <string name="tax_twenty_annual_hint" formatted="false">"Enter independently verified TOTAL employment income for the FULL selected tax year and final annual taxable base. BW/MU/SZ2026/27 start1July; LS2026/27 starts1April; others2026calendar. Annual tax/12 is a reserve against period cash, not actual YTD withholding or annual cash net. Nigerian scope requires12 equal cash salaries. Bonuses/benefits are not added wholesale to this payment."</string>
+    <string name="tax_twenty_base_hint" formatted="false">"Final verified annual taxable base AFTER lawful deductions/eligible personal allowances, BEFORE tariff zero bands and post-tax credits. AL/BA/HR/EG/JO basic allowance must already be included. AT/GR/SZ/LS credits are applied to TAX separately. Never deduct cash or a zero band twice. Individual eligibility must be checked."</string>
+    <string name="tax_twenty_monthly_hint" formatted="false">"Final verified taxable base for this SAME ordinary monthly payment, after lawful deductions/allowances but before zero-rate bands. RS allowance must match actual date/work fraction. ME base=gross before contributions. GH requires actual date/month; TZ mainland primary job only. No annual/cumulative reconciliation. Update base/date when viewing another payment."</string>
+    <string name="tax_us_ak" formatted="false">"Alaska"</string>
+    <string name="tax_us_nv" formatted="false">"Nevada"</string>
+    <string name="tax_us_sd" formatted="false">"South Dakota"</string>
+    <string name="tax_us_tn" formatted="false">"Tennessee"</string>
+    <string name="tax_us_wa" formatted="false">"Washington"</string>
+    <string name="tax_us_wy" formatted="false">"Wyoming"</string>
+    <string name="tax_us_nh" formatted="false">"New Hampshire"</string>
+    <string name="tax_us_az" formatted="false">"Arizona"</string>
+    <string name="tax_us_ia" formatted="false">"Iowa"</string>
+    <string name="tax_us_il" formatted="false">"Illinois"</string>
+    <string name="tax_us_mi" formatted="false">"Michigan"</string>
+    <string name="tax_us_nc" formatted="false">"North Carolina"</string>
+    <string name="tax_us_ut" formatted="false">"Utah"</string>
+    <string name="tax_us_ky" formatted="false">"Kentucky"</string>
+    <string name="tax_us_pa" formatted="false">"Pennsylvania"</string>
+    <string name="tax_us_in" formatted="false">"Indiana"</string>
+    <string name="tax_us_ma" formatted="false">"Massachusetts"</string>
+    <string name="tax_us_ga" formatted="false">"Georgia"</string>
+    <string name="tax_us_la" formatted="false">"Louisiana"</string>
+    <string name="tax_us_ms" formatted="false">"Mississippi"</string>
+    <string name="tax_us_state_base" formatted="false">"Verified annual state taxable base"</string>
+    <string name="tax_us_base_hint" formatted="false">"Final state base AFTER lawful state deductions/exemptions, BEFORE zero-rate bands or tax credits. Do not copy the federal taxable base. Verify personal eligibility independently."</string>
+    <string name="tax_us_state_relief" formatted="false">"Verified annual state tax reduction"</string>
+    <string name="tax_us_relief_hint" formatted="false">"Total eligible NONREFUNDABLE reduction of state tax, including personal/low-income relief when applicable. Enter an independently verified 2026 amount, or explicit 0 if none. Capped at state tax; no refund or automatic eligibility."</string>
+    <string name="tax_us_local_tax" formatted="false">"Local employee tax for this period"</string>
+    <string name="tax_us_local_hint" formatted="false">"Actual verified city/county/school/occupational employee tax for this payment, or explicit 0 if none. Local rates and exemptions are NOT calculated. Do not include it again in other deductions."</string>
+    <string name="tax_us_zero_hint" formatted="false">"No state income tax on ordinary wages in this 2026 profile. Federal tax, Social Security, Medicare and actual local/other employee deductions still apply. Washington income-tax changes for 2028 are not applied to 2026."</string>
+    <string name="tax_us_pa_ut_hint" formatted="false">"PA/UT initial scope: fully taxable unadjusted wages; state base must equal 12 × current gross. PA has no standard deduction. In UT, federal deductions affect a separate tax credit, not this base; verify the 2026 credit independently."</string>
+    <string name="tax_us_ms_hint" formatted="false">"Mississippi: 4% on final state base above $10,000. This zero band is applied here once; do not deduct it from the entered base. Sole-earner joint profile uses one band."</string>
+    <string name="tax_us_ma_hint" formatted="false">"Massachusetts: ordinary wages at 5%, annual household gross limited to $1,000,000 to exclude high-income surtax cases. Verify any No Tax Status or Limited Income Credit reduction separately."</string>
+    <string name="tax_us_cash_hint" formatted="false">"Actual OTHER employee cash for this period, or explicit 0: include employee paid-leave, WA Cares, unemployment, PFML and other contributions when applicable. No employer costs. Exclude federal/state/local tax, Social Security and Medicare already shown. Pretax benefits are outside this profile."</string>
+    <string name="tax_us_current_inputs" formatted="false">"State base/reduction are manual VERIFIED inputs. Annual gross = 12 × current monthly gross; tax/12 is an average liability reserve, not W-4/YTD withholding. Update inputs for each payment/period. No automatic local tax, refundable credits or cross-state cases."</string>
+    <string name="tax_us_state_tax" formatted="false">"State income tax"</string>
+    <string name="tax_us_al" formatted="false">"Alabama"</string>
+    <string name="tax_us_ar" formatted="false">"Arkansas"</string>
+    <string name="tax_us_ca" formatted="false">"California"</string>
+    <string name="tax_us_co" formatted="false">"Colorado"</string>
+    <string name="tax_us_ct" formatted="false">"Connecticut"</string>
+    <string name="tax_us_de" formatted="false">"Delaware"</string>
+    <string name="tax_us_hi" formatted="false">"Hawaii"</string>
+    <string name="tax_us_id" formatted="false">"Idaho"</string>
+    <string name="tax_us_ks" formatted="false">"Kansas"</string>
+    <string name="tax_us_md" formatted="false">"Maryland"</string>
+    <string name="tax_us_me" formatted="false">"Maine"</string>
+    <string name="tax_us_mn" formatted="false">"Minnesota"</string>
+    <string name="tax_us_mo" formatted="false">"Missouri"</string>
+    <string name="tax_us_mt" formatted="false">"Montana"</string>
+    <string name="tax_us_nd" formatted="false">"North Dakota"</string>
+    <string name="tax_us_ne" formatted="false">"Nebraska"</string>
+    <string name="tax_us_nj" formatted="false">"New Jersey"</string>
+    <string name="tax_us_nm" formatted="false">"New Mexico"</string>
+    <string name="tax_us_ny" formatted="false">"New York"</string>
+    <string name="tax_us_oh" formatted="false">"Ohio"</string>
+    <string name="tax_us_ok" formatted="false">"Oklahoma"</string>
+    <string name="tax_us_or" formatted="false">"Oregon"</string>
+    <string name="tax_us_ri" formatted="false">"Rhode Island"</string>
+    <string name="tax_us_sc" formatted="false">"South Carolina"</string>
+    <string name="tax_us_va" formatted="false">"Virginia"</string>
+    <string name="tax_us_vt" formatted="false">"Vermont"</string>
+    <string name="tax_us_wi" formatted="false">"Wisconsin"</string>
+    <string name="tax_us_wv" formatted="false">"West Virginia"</string>
+    <string name="tax_us_final_scope" formatted="false">"New 28-state profiles: ordinary resident wages only; no alternative minimum tax or special regimes. Automatic tariff estimates have a $1,000,000 annual household gross ceiling, with lower limits below. Base/relief and employee deductions must be independently verified. Not full payroll coverage."</string>
+    <string name="tax_us_manual_scope" formatted="false">"CO / ID / VT: VERIFIED-LIABILITY ENTRY ONLY. An automatic 2026 return tariff has not been verified here. Enter independently verified final annual state income-tax liability for 2026; the app does not calculate that liability or its eligibility."</string>
+    <string name="tax_us_verified_state_tax" formatted="false">"Verified final annual state income tax"</string>
+    <string name="tax_us_verified_tax_hint" formatted="false">"Final 2026 state income-tax LIABILITY after applicable nonrefundable relief, BEFORE withholding/estimated payments. Not balance due, tax withheld, last year’s tax or a refund. Explicit 0 only if verified. Divided by 12 once; base/relief fields are ignored in this route. Local/other employee cash is separate. Update for each payment."</string>
+    <string name="tax_us_final_limits" formatted="false">"Automatic scope ceilings: CT annual household gross ≤ $50,000 SINGLE / $100,000 MFJ; NY ≤ $107,650; AR ≤ $94,700. Higher-income add-backs, recapture and AR alternative schedules are not calculated. Outside scope: net unavailable."</string>
+    <string name="tax_us_sc_hint" formatted="false">"South Carolina uses its NEW 2026 two-band law and SCIAD. Final state base must already include your verified eligible SCIAD and phase-out; do not automatically use the federal standard deduction or the old 0/3/6% schedule."</string>
+    <string name="tax_us_or_hint" formatted="false">"Oregon uses the official 2026 ESTIMATED rate charts, including published rounded base-tax amounts. Final return figures may change. Verify the state base including any lawful federal-tax subtraction and credits independently. Transit, paid-leave and local taxes remain actual employee cash inputs."</string>
+    <string name="tax_us_oh_hint" formatted="false">"Ohio 2026: tax is zero through $26,050 final state base; above it the statutory $332 amount is added before 2.75% on the excess. Verify eligible personal and low-income credits in state relief. Local/school tax is separate."</string>
+    <string name="tax_us_manual_result" formatted="false">"State tax · entered annual liability / 12"</string>
+    <string name="tax_next_common_scope" formatted="false">"2026 only: single resident employee aged31–59, full year, one ordinary local job, no dependents, other/foreign income or special regimes. Country/language does not prove eligibility. Verify final bases, credits and actual employee cash independently. No employer costs, currency conversion or historical profile snapshots. Update inputs for each payment."</string>
+    <string name="tax_next_annual_hint" formatted="false">"Verified TOTAL annual employment gross for2026. Annual tax/12 is a reserve against period cash, not actual variable-pay/YTD withholding or an annual return/refund. Include lawful annual extras where within scope; do not add them wholesale to this payment."</string>
+    <string name="tax_next_monthly_hint" formatted="false">"Verified final taxable base for this SAME monthly payment. IS/CL/UY/BO are monthly profiles, not annual returns. UY base may include statutory6% uplift; do not subtract contribution-based tax credits from base. BO base already includes lawful2SMN deduction."</string>
+    <string name="tax_next_base_hint" formatted="false">"Final verified annual national taxable base AFTER lawful deductions/allowances, BEFORE tariff zero bands and tax credits. NL includes Box1 insurance; JM threshold, FJ zero band and LU zero band are applied here once. BB25000personal allowance and BZeligible personal relief must ALREADY be deducted."</string>
+    <string name="tax_next_annual_relief" formatted="false">"Verified annual nonrefundable tax reduction"</string>
+    <string name="tax_next_monthly_relief" formatted="false">"Verified reduction for this monthly payment"</string>
+    <string name="tax_next_relief_hint" formatted="false">"Enter independently verified eligible reduction, or explicit0 if none. Applied to TAX, capped at computed charge; no refund or automatic eligibility. Annual for annual profiles, monthly for IS/CL/UY/BO. NL reduction includes eligible Box1 tax/insurance credit; LU includes fund-related impact. Exclude credits already included in extra taxes."</string>
+    <string name="tax_next_extra_tax" formatted="false">"Additional employee taxes for this period"</string>
+    <string name="tax_next_extra_hint" formatted="false">"Actual verified taxes NOT already calculated, or explicit0: local/canton/region/municipal/church/broadcast/health levies as applicable. JP reconstruction, LU7% fund and NL Box1 insurance are already calculated; IS includes standard municipal component. Do not duplicate them or amounts in other deductions."</string>
+    <string name="tax_next_cash_hint" formatted="false">"Actual OTHER employee deductions for this payment, or explicit0: pension/social/health/insurance as applicable, no employer costs. Exclude calculated national tax and separately entered additional taxes. NL Box1 national insurance is already included. Deductible contributions may affect the verified base and cash separately, never twice from the base."</string>
+    <string name="tax_next_verified_tax" formatted="false">"Verified final annual national/regional income tax"</string>
+    <string name="tax_next_verified_hint" formatted="false">"Manual route: independently verified2026 income-year LIABILITY after nonrefundable credits, BEFORE withholding/advance payments. Not tax withheld, balance due, refund or a previous income year. Divide by12 once. Municipal tax entered separately; base/reduction fields ignored here."</string>
+    <string name="tax_next_cl_date_hint" formatted="false">"Chile: actual payment date YYYY-MM-DD in2026, using Latin digits. Official monthly tables January–November only; date must match the viewed period-end month. Missing, mismatched or unsupported month gives unavailable net. No silent annual or article52bis table substitution."</string>
+    <string name="tax_next_nl_charge" formatted="false">"Box1 tax and national insurance"</string>
+    <string name="tax_next_manual_result" formatted="false">"National/regional tax · verified annual input /12"</string>
+    <string name="tax_next_nl" formatted="false">"Netherlands: ordinary Box1 before AOW, annual gross≤78426EUR.2026combined rates include27.65% national insurance in first band. Verified combined credits; do not deduct that insurance again. No Box2/3,30%ruling or capped-deduction cases."</string>
+    <string name="tax_next_be" formatted="false">"Belgium: MANUAL verified annual national/regional liability only.2026income corresponds to assessment2027; the available assessment2026 calculator is not relabeled. Municipal tax separate. No automatic regional/credit eligibility or flexi-job regime."</string>
+    <string name="tax_next_lu" formatted="false">"Luxembourg: tax class1 only, annual gross≤150000EUR. Continuing2025tariff; base rounded down to50EUR,7%employment fund included before verified combined reduction. No class1a/2, cross-border or dependency contribution calculation."</string>
+    <string name="tax_next_ch" formatted="false">"Switzerland: SINGLE ordinary federal assessment only, annual gross≤100000CHF.2026federal table, base rounded down to100CHF, tax to0.05CHF; amounts below25CHF not collected. Canton/commune/church tax actual separate input; no source-tax tariff."</string>
+    <string name="tax_next_se" formatted="false">"Sweden: national income tax only,2026threshold643000SEK AFTER verified basic allowance; not gross threshold660400. Base rounded down to100SEK, national-tax minimum excess200. Municipal/church/burial/public-service taxes and credit allocation verified separately."</string>
+    <string name="tax_next_fi" formatted="false">"Finland:2026state earned-income scale only. Verified national share of credits; municipality/church/Yle/other levies separate. Actual pension/unemployment/health employee cash required; no automatic municipality or credit allocation."</string>
+    <string name="tax_next_is" formatted="false">"Iceland: standard published2026MONTHLY withholding table, including municipal component. Verified monthly credit, not annual credit/12. Different municipal annual assessment, unused-credit carryover, spouse transfer and annual reconciliation excluded."</string>
+    <string name="tax_next_it" formatted="false">"Italy: ordinary2026IRPEF23/33/43%, annual gross≤200000EUR. Verified employment-tax relief; actual regional/municipal taxes separate. No substitute-tax overtime/night/shift/bonus schemes, special regimes or inferred credits."</string>
+    <string name="tax_next_jp" formatted="false">"Japan: ordinary resident annual income, gross≤100mJPY. Final base after legal salary/basic deductions, rounded down to1000JPY.2026reconstruction2.1% after verified national credits included separately. Local resident tax actual separate, no2027defence rules."</string>
+    <string name="tax_next_kr" formatted="false">"South Korea: ordinary resident national progressive wage tax; final base after legal deductions and verified national tax credits. Local income tax and actual employee insurance separate. No foreign-worker flat election or special regimes."</string>
+    <string name="tax_next_ar" formatted="false">"Argentina: official2026ANNUAL/final Article94table, published opening quotas retained. Verified final annual deductions/base. Annual tax/12 is a reserve; not changing half-year cumulative payroll withholding, SAC allocation or an annual refund."</string>
+    <string name="tax_next_cl" formatted="false">"Chile: ordinary monthly IUSC table selected by actual payment month. January–November2026published tables only, not article52bis. Verify monthly taxable wage and credit; pensions/health actual cash separately. No annual reconciliation."</string>
+    <string name="tax_next_uy" formatted="false">"Uruguay: ordinary2026MONTHLY resident IRPF. Verified base includes applicable6% uplift, up to106%of cash gross. Contributions reduce TAX at eligible14/8% via verified monthly credit, not base again. No aguinaldo/vacation special tax or annual settlement."</string>
+    <string name="tax_next_bo" formatted="false">"Bolivia: ordinary monthly RC-IVA13%of verified base AFTER lawful2SMN and deductible contributions. Verified monthly credit includes eligible13%of1SMN, invoices and indexed prior balance; no automatic minimum wage, eligibility or carryover."</string>
+    <string name="tax_next_jm" formatted="false">"Jamaica: ordinary2026ANNUAL reserve, blended full-year threshold1876614JMD, not April annualised1902360. Rates25/30%, upper threshold6m statutory income. Verified base after lawful contributions, BEFORE zero band. No cumulative PAYE/age65relief."</string>
+    <string name="tax_next_tt" formatted="false">"Trinidad and Tobago: ordinary annual resident tax25/30%at1mTTD chargeable base.90000personal allowance and lawful deductions already in verified base. Actual NIS/health surcharge separate; no employer business/green levy."</string>
+    <string name="tax_next_bz" formatted="false">"Belize:25%of verified final chargeable annual wage. Personal relief25600/24600/22600/19600according to total gross must already be in base. No automatic charitable eligibility/refunds; actual social-security cash separate."</string>
+    <string name="tax_next_gy" formatted="false">"Guyana:2026rates25/35%, chargeable threshold3360000GYD. Verified final base after eligible free pay≥1680000or one-third, NIS and lawful overtime/other deductions. No automatic special deduction entitlement or insurance rates."</string>
+    <string name="tax_next_bb" formatted="false">"Barbados:NEW2026rates11.5/27.5%. Eligible25000BBDpersonal allowance already in final base; first50000of that base at11.5%. No duplicate25000zero band. Actual NIS/other levies separate, no special regimes."</string>
+    <string name="tax_next_fj" formatted="false">"Fiji: resident2024-and-later tariff still applicable in2026;30000FJD zero band applied once. No repealed separate SRT/ECAL, nonresident or special lump-sum cases. Verify final base/credits and actual employee contributions."</string>
+    <string name="menu_open" formatted="false">"Open menu"</string>
+    <string name="shift_global_hint" formatted="false">"Use the shift slider at the bottom of any screen. Choose office or home here before starting."</string>
+    <string name="shift_active" formatted="false">"Active shift"</string>
+    <string name="shift_ready" formatted="false">"Ready to start"</string>
+    <string name="shift_options" formatted="false">"Shift options"</string>
+    <string name="shift_done" formatted="false">"Done"</string>
+    <string name="period_current" formatted="false">"Current period"</string>
+    <string name="period_choose" formatted="false">"Choose month and year"</string>
+    <string name="period_end_hint" formatted="false">"Choose the month in which the pay period ENDS. The exact dates appear below."</string>
+    <string name="period_year" formatted="false">"Year"</string>
+    <string name="period_year_hint" formatted="false">"Enter a year from 1900 to 2100."</string>
+    <string name="period_apply" formatted="false">"Show period"</string>
+    <string name="widget_name" formatted="false">"ShiftHours · Shift"</string>
+    <string name="widget_description" formatted="false">"Start an office or home shift, end it and see its running duration."</string>
+    <string name="widget_open" formatted="false">"Open app"</string>
+    <string name="widget_error" formatted="false">"Open the app to check your data or restore a backup."</string>
+    <string name="widget_setup" formatted="false">"Complete initial setup in the app first."</string>
+    <string name="widget_inactive" formatted="false">"No active shift"</string>
+    <string name="widget_start_office" formatted="false">"Start · Office"</string>
+    <string name="widget_start_home" formatted="false">"Start · Home"</string>
+    <string name="widget_stop" formatted="false">"End shift"</string>
+    <string name="shift_changed" formatted="false">"The active shift changed. Close this editor and open it again."</string>
+    <string name="overtime_by_location" formatted="false">"Overtime by location"</string>
+    <string name="overtime_by_location_hint" formatted="false">"Daily overtime bands are shared by office and home, then allocated to where the work was done. Pay includes the full band percentage, before tax."</string>
+    <string name="ui_more_info" formatted="false">"More information"</string>
+    <string name="ui_collapse" formatted="false">"Hide details"</string>
+    <string name="ui_expand" formatted="false">"Show details"</string>
+    <string name="ui_details" formatted="false">"Details"</string>
+    <string name="ui_appearance" formatted="false">"Appearance"</string>
+    <string name="ui_theme_system" formatted="false">"Follow phone"</string>
+    <string name="ui_theme_light" formatted="false">"Light"</string>
+    <string name="ui_theme_dark" formatted="false">"Dark"</string>
+    <string name="ui_theme_hint" formatted="false">"Saved with your settings and included in backups. Follow phone switches automatically with the system theme."</string>
+    <string name="ui_gross_estimate" formatted="false">"Estimated gross pay"</string>
+    <string name="ui_record_actions" formatted="false">"Record actions"</string>
+    <string name="ui_net_estimate" formatted="false">"Estimated net pay, within the selected tax profile."</string>
+    <string name="ui_tax_scope_notice" formatted="false">"Tax rules apply to a limited profile. Country selection alone does not establish eligibility. Missing requirements are shown above."</string>
+    <string name="ui_tax_scope" formatted="false">"Tax profile and conditions"</string>
+    <string name="ui_pay_details" formatted="false">"Pay breakdown"</string>
+    <string name="ui_settings_hours" formatted="false">"Hours &amp; breaks"</string>
+    <string name="ui_settings_pay" formatted="false">"Pay &amp; overtime"</string>
+    <string name="ui_settings_tax" formatted="false">"Tax &amp; contributions"</string>
+    <string name="ui_settings_display" formatted="false">"Language &amp; appearance"</string>
+    <string name="ui_country_search" formatted="false">"Search country, code or currency"</string>
+    <string name="ui_no_results" formatted="false">"No matching countries"</string>
+    <string name="export_excel" formatted="false">"Export Excel"</string>
+    <string name="export_sheet" formatted="false">"Shifts"</string>
+    <string name="export_period_start" formatted="false">"Start date"</string>
+    <string name="export_period_end" formatted="false">"End date"</string>
+    <string name="export_date" formatted="false">"Date"</string>
+    <string name="export_start" formatted="false">"Start time"</string>
+    <string name="export_end" formatted="false">"End time"</string>
+    <string name="export_duration" formatted="false">"Total time"</string>
+    <string name="export_total" formatted="false">"Total"</string>
+    <string name="export_note" formatted="false">"Paid duration after configured breaks. For overnight shifts, the end time can be on the following day."</string>
+    <string name="export_saved" formatted="false">"Excel file saved."</string>
+    <string name="export_error" formatted="false">"Excel export failed."</string>
+    <string name="export_filter_hint" formatted="false">"Exports closed shifts in the selected period, using Office, Home or All as selected above."</string>
+
+    <string name="leave_title" formatted="false">"Leave, sickness and holidays"</string>
+    <string name="leave_sick" formatted="false">"Sick leave"</string>
+    <string name="leave_vacation" formatted="false">"Paid vacation"</string>
+    <string name="leave_days" formatted="false">"days"</string>
+    <string name="leave_setup_hint" formatted="false">"Set opening balances and monthly accrual before reporting leave."</string>
+    <string name="leave_asof" formatted="false">"Balance as of"</string>
+    <string name="leave_period_used" formatted="false">"Balance days used in selected period"</string>
+    <string name="leave_pay" formatted="false">"Leave pay value"</string>
+    <string name="leave_pay_hint" formatted="false">"Hourly: adds pay. Monthly salary: paid leave is already included; only the unpaid portion is deducted. Leave does not generate overtime."</string>
+    <string name="leave_manage" formatted="false">"Manage leave and sickness"</string>
+    <string name="leave_config" formatted="false">"Balances and leave rules"</string>
+    <string name="leave_add" formatted="false">"Add vacation, sickness or holiday"</string>
+    <string name="leave_record_hint" formatted="false">"A fraction of a day applies to each selected date. Paid leave is separate from actual work. Future entries are included in their pay period, but the current balance includes dates through today only."</string>
+    <string name="leave_empty" formatted="false">"No leave reported in this period."</string>
+    <string name="leave_fraction" formatted="false">"Day fraction (1 = full day, 0.5 = half)"</string>
+    <string name="leave_hours" formatted="false">"Absence hours"</string>
+    <string name="leave_pay_percent" formatted="false">"Pay percentage"</string>
+    <string name="leave_debited" formatted="false">"Days deducted from balance"</string>
+    <string name="leave_event_start" formatted="false">"Sickness event start"</string>
+    <string name="leave_day_number" formatted="false">"Day in event"</string>
+    <string name="leave_ledger" formatted="false">"Accrual and usage history"</string>
+    <string name="leave_ledger_hint" formatted="false">"Movements in the selected pay period. Opening + accrual + corrections − usage. Future movements are planned."</string>
+    <string name="leave_opening" formatted="false">"Opening balance (days)"</string>
+    <string name="leave_accrual" formatted="false">"Monthly accrual"</string>
+    <string name="leave_used" formatted="false">"Usage"</string>
+    <string name="leave_adjustment" formatted="false">"Balance correction"</string>
+    <string name="leave_changed" formatted="false">"Data changed. Close and reopen this form."</string>
+    <string name="leave_delete_hint" formatted="false">"Delete this entry? Its effect on balance and pay will be recalculated. This cannot be undone."</string>
+    <string name="leave_config_hint" formatted="false">"These are your employer settings, not verified legal defaults. Rates apply from the opening date. Changing balances or accrual recalculates history; use a dated balance correction for one-time changes. Saved absence pay rules stay with each record."</string>
+    <string name="leave_opening_date" formatted="false">"Opening balance date"</string>
+    <string name="leave_monthly" formatted="false">"Days accrued each month"</string>
+    <string name="leave_accrual_day" formatted="false">"Monthly accrual day (1–31)"</string>
+    <string name="leave_accrual_hint" formatted="false">"First full accrual is on the chosen day strictly after the opening date. Short months use their last day. No proration. Independent of the pay period."</string>
+    <string name="leave_day_hours" formatted="false">"Hours per full leave day"</string>
+    <string name="leave_vacation_percent" formatted="false">"Vacation pay percentage"</string>
+    <string name="leave_allow_negative" formatted="false">"Allow negative balances"</string>
+    <string name="leave_calendar_days" formatted="false">"Count calendar days in sickness event"</string>
+    <string name="leave_calendar_hint" formatted="false">"On: weekends and unreported days advance the payment tier. Off: only distinct reported dates in the event advance it. Only reported leave consumes balance."</string>
+    <string name="leave_sick_tiers" formatted="false">"Sickness payment tiers"</string>
+    <string name="leave_tier_hint" formatted="false">"Rows apply in order. Pay % and balance deduction % are separate. A day at 50% pay may still deduct a full day at 100% deduction."</string>
+    <string name="leave_tier" formatted="false">"Tier"</string>
+    <string name="leave_number_days" formatted="false">"Number of days"</string>
+    <string name="leave_remaining" formatted="false">"All following days (last row)"</string>
+    <string name="leave_debit_percent" formatted="false">"Balance deduction percentage"</string>
+    <string name="leave_add_tier" formatted="false">"Add tier before final row"</string>
+    <string name="leave_from" formatted="false">"From date"</string>
+    <string name="leave_until" formatted="false">"Through date (inclusive)"</string>
+    <string name="leave_workdays_only" formatted="false">"Only configured workdays"</string>
+    <string name="leave_continue" formatted="false">"Continue sickness event"</string>
+    <string name="leave_new_event" formatted="false">"New sickness event"</string>
+    <string name="leave_override_pay" formatted="false">"Override pay % (blank = rule)"</string>
+    <string name="leave_override_debit" formatted="false">"Override deduction % (blank = rule)"</string>
+    <string name="leave_override_hint" formatted="false">"Optional per-record overrides. Leave blank to use the saved employer policy. A range uses the same overrides for each selected day."</string>
+    <string name="leave_note" formatted="false">"Note / correction reason"</string>
+    <string name="leave_preview" formatted="false">"Review dates and payment"</string>
+    <string name="leave_work_warning" formatted="false">"Work is also recorded or active on one of these dates. Check that actual work plus leave is correct before saving."</string>
+    <string name="leave_date" formatted="false">"Date"</string>
+    <string name="leave_adjust_days" formatted="false">"Days correction (+ add / − deduct)"</string>
+    <string name="leave_duplicate" formatted="false">"Total leave on a date cannot exceed one day."</string>
+    <string name="leave_insufficient" formatted="false">"Insufficient leave balance. Correct the opening balance or explicitly allow a negative balance."</string>
+    <string name="leave_invalid" formatted="false">"Check dates and numeric values. Percentages: 0–100; fraction: greater than 0 and up to 1."</string>
+    <string name="leave_date_error" formatted="false">"Choose an ordered date range of no more than 367 calendar days."</string>
+    <string name="leave_no_dates" formatted="false">"No dates match the configured workdays."</string>
+    <string name="leave_salary_adjustment" formatted="false">"Unpaid leave deduction from monthly salary"</string>
+    <string name="leave_export_hint" formatted="false">"The All export includes a separate leave sheet. Office/Home exports contain work shifts only."</string>
+
+    <string name="leave_holiday" formatted="false">"Holiday / non-working day"</string>
+    <string name="leave_salary_choice" formatted="false">"Deduct from salary (no vacation use)"</string>
+    <string name="leave_settlement" formatted="false">"Settle monthly missing hours"</string>
+    <string name="leave_missing_hours" formatted="false">"Remaining missing hours in this period"</string>
+    <string name="leave_fill_hours" formatted="false">"Hours to settle"</string>
+    <string name="leave_use_percent" formatted="false">"Enter a percentage of a full leave day"</string>
+    <string name="leave_day_percent" formatted="false">"Percentage of one full day"</string>
+    <string name="leave_target_needed" formatted="false">"Set required monthly hours in pay settings to calculate a monthly shortage."</string>
+    <string name="leave_too_many_hours" formatted="false">"Enter positive hours no greater than the remaining shortage (maximum 744)."</string>
+    <string name="leave_settlement_hint" formatted="false">"This is a period adjustment, not a work shift. Vacation use = hours ÷ hours per leave day. For example, 3.2 hours ÷ 8 = 0.4 day (40%). Choose vacation payment or an unpaid salary deduction. Later work/leave edits may require correcting this adjustment."</string>
+    <string name="leave_incomplete_period" formatted="false">"This pay period has not ended. Missing hours are provisional; review before saving."</string>
+    <string name="leave_holiday_hint" formatted="false">"Manually configured holiday, not a legal entitlement. No vacation/sick balance is used. Default pay is 100%; use the pay override for different employer terms. Date ranges restricted to workdays skip previously reported holidays. Work on a holiday is not automatically given a premium."</string>
+    <string name="leave_settlement_review" formatted="false">"A recorded settlement may now exceed the remaining shortage. Review its hours after work or leave changes."</string>
+
+    <string name="ot_method" formatted="false">"Overtime calculation"</string>
+    <string name="ot_daily" formatted="false">"Daily"</string>
+    <string name="ot_weekly" formatted="false">"Weekly"</string>
+    <string name="ot_monthly" formatted="false">"Monthly"</string>
+    <string name="ot_hours" formatted="false">"standard hours"</string>
+    <string name="ot_week_start" formatted="false">"First day of the workweek"</string>
+    <string name="ot_weekly_threshold" formatted="false">"Weekly standard hours before overtime"</string>
+    <string name="ot_monthly_threshold" formatted="false">"Monthly standard hours before overtime"</string>
+    <string name="ot_calendar" formatted="false">"Calendar month (1st to month end)"</string>
+    <string name="ot_pay_period" formatted="false">"Configured pay period"</string>
+    <string name="ot_nominal_day" formatted="false">"Daily hours for shortfalls and leave setup"</string>
+    <string name="ot_settings_hint" formatted="false">"Choose ONE method. Existing pay tiers restart in each selected day/week/month. Weekly and monthly thresholds are separate from daily nominal hours and the monthly attendance target. Breaks still follow the configured daily/segment rule. Only actual net work consumes overtime thresholds; leave, holidays and shortage settlements do not."</string>
+    <string name="ot_context_hint" formatted="false">"Weekly/calendar-month calculations also use stored work before the displayed pay period. Enter the complete workweek/month for accurate allocation. Each entire shift belongs to its assigned work date, including overnight shifts. Changing the method recalculates saved history; no combined daily+weekly rule or automatic legal entitlement is implied."</string>
+    <string name="ot_location_hint" formatted="false">"Office and home share one overtime counter for the selected day/week/month. Hours and full band pay are allocated chronologically to where the work occurred, after breaks."</string>
+    <string name="ot_office_only" formatted="false">"Office-only hours above the selected overtime threshold"</string>
+    <string name="ot_invalid" formatted="false">"Check overtime method, period and thresholds: weekly 0–168, monthly 0–744 hours; week start must be a valid weekday."</string>
+    <string name="ot_threshold_required" formatted="false">"Enter a positive standard-hours threshold for the selected overtime method."</string>
+    <string name="back_press_again_exit" formatted="false">"Press Back again to exit"</string>
+    <string name="widget_compact_name" formatted="false">"ShiftHours · Shift 2×2"</string>
+    <string name="analytics_title" formatted="false">"Summaries"</string>
+    <string name="analytics_hint" formatted="false">"Closed shifts only. All figures use the current saved pay and break rules. Active shifts are excluded."</string>
+    <string name="analytics_partial" formatted="false">"This period is not finished. Comparison is against the full previous period, not the same elapsed days."</string>
+    <string name="analytics_empty" formatted="false">"No records in this period"</string>
+    <string name="analytics_empty_hint" formatted="false">"No records does not mean no work. Missing periods are not counted as zero-pay months."</string>
+    <string name="analytics_overview" formatted="false">"Period overview"</string>
+    <string name="analytics_workdays" formatted="false">"Recorded workdays"</string>
+    <string name="analytics_shifts" formatted="false">"Closed shifts"</string>
+    <string name="analytics_avg_day" formatted="false">"Average net hours per workday"</string>
+    <string name="analytics_avg_shift" formatted="false">"Average net hours per shift"</string>
+    <string name="analytics_home_share" formatted="false">"Share worked from home"</string>
+    <string name="analytics_ot_share" formatted="false">"Overtime share of net work"</string>
+    <string name="analytics_gross" formatted="false">"Gross pay"</string>
+    <string name="analytics_comparison" formatted="false">"Change from previous period"</string>
+    <string name="analytics_hours_change" formatted="false">"Change in net hours"</string>
+    <string name="analytics_ot_change" formatted="false">"Change in overtime hours"</string>
+    <string name="analytics_gross_change" formatted="false">"Change in gross pay"</string>
+    <string name="analytics_no_comparison" formatted="false">"Both periods need records for comparison."</string>
+    <string name="analytics_tiers" formatted="false">"Overtime bands and pay"</string>
+    <string name="analytics_weighted" formatted="false">"Pay-weighted overtime hours"</string>
+    <string name="analytics_weighted_hint" formatted="false">"Weighted hours = overtime hours × pay multiplier. This is a pay equivalent, not additional time worked."</string>
+    <string name="analytics_location" formatted="false">"Office and home"</string>
+    <string name="analytics_equivalent_hint" formatted="false">"Work-value amounts use the hourly equivalent and include overtime. They do not allocate a monthly salary or leave pay by location/reason."</string>
+    <string name="analytics_office_short" formatted="false">"Office-only daily shortfall"</string>
+    <string name="analytics_office_ot" formatted="false">"Office-only overtime comparison"</string>
+    <string name="analytics_reasons" formatted="false">"Home-work reasons"</string>
+    <string name="analytics_no_reasons" formatted="false">"No closed home-work shifts in this period."</string>
+    <string name="analytics_shortfalls" formatted="false">"Shortfalls and clocking issues"</string>
+    <string name="analytics_daily_short" formatted="false">"Daily shortfall after absence credits"</string>
+    <string name="analytics_monthly_short" formatted="false">"Monthly shortfall against configured target"</string>
+    <string name="analytics_missing_clock" formatted="false">"Days flagged for missing clocking"</string>
+    <string name="analytics_missing_hint" formatted="false">"Clocking issues use saved missing-clock notes; unrecorded workdays cannot be inferred."</string>
+    <string name="analytics_weekdays" formatted="false">"Average net hours by weekday"</string>
+    <string name="analytics_weekdays_hint" formatted="false">"Averages use only dates with recorded positive net work. The day count is shown; unrecorded days are excluded."</string>
+    <string name="analytics_records" formatted="false">"Notable days"</string>
+    <string name="analytics_longest" formatted="false">"Longest recorded workday"</string>
+    <string name="analytics_most_ot" formatted="false">"Day with most allocated overtime"</string>
+    <string name="analytics_trend" formatted="false">"12 pay periods over time"</string>
+    <string name="analytics_trend_hint" formatted="false">"Each row: net hours, overtime hours, gross pay. A dash means no records. Historical figures use current settings, not archived contracts."</string>
+    <string name="home_sync_title">Personal server</string>
+    <string name="home_sync_hint">Optional sync with your own computer. Local work continues offline.</string>
+    <string name="home_sync_address">Server HTTPS address</string>
+    <string name="home_sync_key">Phone connection key</string>
+    <string name="home_sync_https">Enter a valid HTTPS server address.</string>
+    <string name="home_sync_other_server">This device is paired with another server. Keep a backup before migration.</string>
+    <string name="home_sync_working">Syncing…</string>
+    <string name="home_sync_ok">Synced</string>
+    <string name="home_sync_conflict">Conflicting edits. No data was overwritten. Match the conflicting records in the browser and phone, then retry.</string>
+    <string name="home_sync_auth">Connection key expired or revoked. Disconnect and enter a new key.</string>
+    <string name="home_sync_identity">Server identity changed. Sync stopped to protect your data.</string>
+    <string name="home_sync_error">Server unavailable or data rejected. Local data is safe; retry later.</string>
+    <string name="home_sync_pending">Local changes are waiting to sync.</string>
+    <string name="home_sync_off">Sync is off</string>
+    <string name="home_sync_now">Sync now</string>
+    <string name="home_sync_connect">Connect</string>
+    <string name="home_sync_disconnect">Disconnect</string>
+    <string name="home_sync_backup_hint">Sync includes settings, leave and shifts. It does not replace local or Drive backups. Background sync is scheduled approximately every 15 minutes; Android may delay it. Device keys are excluded from backups.</string>
+    <string name="home_sync_back">Back</string>
+    <string name="manual_entry" formatted="false">"Manual entry"</string>
+    <string name="manual_kind" formatted="false">"Report type"</string>
+    <string name="manual_work_shift" formatted="false">"Work shift"</string>
+    <string name="manual_continue" formatted="false">"Continue"</string>
+    <string name="calendar_title" formatted="false">"Work calendar"</string>
+    <string name="calendar_missing_hint" formatted="false">"Light orange: past Sunday–Thursday without a shift or absence report. Tap a day for details."</string>
+    <string name="calendar_missing_count">"%1$s days without reports"</string>
+    <string name="calendar_missing" formatted="false">"Missing report"</string>
+    <string name="calendar_paid_time" formatted="false">"Time for payment"</string>
+    <string name="calendar_no_report" formatted="false">"No shift or absence report."</string>
+    <string name="snapshot_arrange" formatted="false">"Arrange cards"</string>
+    <string name="snapshot_move_up" formatted="false">"Move up"</string>
+    <string name="snapshot_move_down" formatted="false">"Move down"</string>
+    <string name="snapshot_reset_order" formatted="false">"Restore default order"</string>
+    <string name="snapshot_save_order" formatted="false">"Save"</string>
+    <string name="snapshot_cancel_order" formatted="false">"Cancel"</string>
+    <string name="hours_by_location" formatted="false">"Hours by location"</string>
+    <string name="location_all_hours" formatted="false">"Total hours (including overtime)"</string>
+    <string name="location_all_pay" formatted="false">"Pay (including overtime)"</string>
+    <string name="location_hourly_value_hint" formatted="false">"Hourly work value, not an allocation of the monthly salary."</string>
+    <string name="launcher_widgets">Widgets</string>
+    <string name="launcher_change_widget">Change widget</string>
+    <string name="calendar_includes_home">Includes work from home</string>
+</resources>

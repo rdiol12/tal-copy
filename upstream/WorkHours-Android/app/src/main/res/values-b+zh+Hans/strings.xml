@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="text_93d815fab2" formatted="false">"每日标准时间必须超过0和不超过24小时。"</string>
+    <string name="text_9fdb0c0357" formatted="false">"付款必须是零或一个积极的数字。"</string>
+    <string name="text_1020d02bcc" formatted="false">"每月的目标时间必须超过0和不超过744。"</string>
+    <string name="text_a3016d567d" formatted="false">"开始日期必须在1至31之间。"</string>
+    <string name="text_a3b71b8576" formatted="false">"最后的过时级必须覆盖剩余的所有小时。"</string>
+    <string name="text_11798e6af6" formatted="false">"查看水平时间和支付百分比。"</string>
+    <string name="text_142ed94880" formatted="false">"破裂设置是无效的。"</string>
+    <string name="text_617d62c8d5" formatted="false">"税收信用点是无效的。"</string>
+    <string name="text_d64e9be198" formatted="false">"捐款比例必须在0至100之间。"</string>
+    <string name="text_e9ded22849" formatted="false">"付款基础是无效的。"</string>
+    <string name="text_5340862757" formatted="false">"选择至少一个工作日。"</string>
+    <string name="text_58ee2bc711" formatted="false">"原因列表太长了。"</string>
+    <string name="text_54904132d0" formatted="false">"登录或其身份证的数量是无效的。"</string>
+    <string name="text_bccb639eb1" formatted="false">"残疾工作入口。"</string>
+    <string name="text_14afe878db" formatted="false">"原始期限是无效的。"</string>
+    <string name="text_285af230e1" formatted="false">"输入文本太长了。"</string>
+    <string name="text_927652b634" formatted="false">"工作输入超越。"</string>
+    <string name="text_478ac0cba4" formatted="false">"活跃的转换超越现有输入。"</string>
+    <string name="text_1ce0351978" formatted="false">"没有明确的理由"</string>
+    <string name="text_0206a8d338" formatted="false">"无法立即连接您的 Google 帐户. 您可以恢复到文件,然后稍后再尝试。"</string>
+    <string name="text_630af90bc5" formatted="true">"Google 授权未授予(代码 %1$s) 重新连接或使用备份复制文件。"</string>
+    <string name="text_daf10c2ee5" formatted="false">"操作失败了,您的本地数据已保留。"</string>
+    <string name="text_25b395415b" formatted="false">"备份复印件成功存储到 Google Drive。"</string>
+    <string name="text_fc021a3be3" formatted="false">"在此帐户中没有找到 ShiftHours 备份副本。"</string>
+    <string name="text_439ed2ca59" formatted="false">"连接到 Google Drive。"</string>
+    <string name="text_7480a74f74" formatted="false">"已取消连接,未进行备份或恢复。"</string>
+    <string name="text_514e675d10" formatted="false">"没有允许开车。"</string>
+    <string name="text_325ca3ec59" formatted="false">"没有获得驾驶执照。"</string>
+    <string name="text_5862cd4663" formatted="false">"无法打开目的地文件。"</string>
+    <string name="text_a8df08ecdf" formatted="false">"备份复制文件保存。"</string>
+    <string name="text_04bb2141d5" formatted="false">"无法阅读文件。"</string>
+    <string name="text_5e9b8b7914" formatted="false">"备份副本太大了。"</string>
+    <string name="text_221ac78111" formatted="false">"备份复制和恢复"</string>
+    <string name="text_806ac63619" formatted="false">"在移动到新手机时保持工作时间。"</string>
+    <string name="text_55d63892ad" formatted="false">"谷歌驱动"</string>
+    <string name="text_e5444dccaf" formatted="false">"未选择的帐户"</string>
+    <string name="text_0a2305a775" formatted="false">"获取权限:成功的备份副本仅在上传完成后显示。"</string>
+    <string name="text_2fc9030263" formatted="false">"连接一个帐户并提供访问。"</string>
+    <string name="text_cd0e41e136" formatted="false">"选择帐户 / 重新连接"</string>
+    <string name="text_6f3a7bda3a" formatted="false">"连接到 Google Drive"</string>
+    <string name="text_15109258b9" formatted="false">"回到现在开车"</string>
+    <string name="text_c75c1e3a33" formatted="false">"选择一个驱动备份复制以恢复"</string>
+    <string name="text_90b7df067a" formatted="false">"尚未完成此帐户的驱动备份副本。"</string>
+    <string name="text_1c2b595825" formatted="true">"最后一个成功的备份副本: %1$s %2$s"</string>
+    <string name="text_32640ad12e" formatted="false">"备份副本存储在 Drive 的隐藏的应用程序数据文件夹中,而不是普通文件。 要在新手机上恢复,安装相同的应用程序并连接相同的 Google 帐户。"</string>
+    <string name="text_ea1a07b6ef" formatted="false">"自动备份"</string>
+    <string name="text_8edcd28553" formatted="false">"关闭"</string>
+    <string name="text_ef4037576b" formatted="false">"每天"</string>
+    <string name="text_50296d4c2d" formatted="false">"每周"</string>
+    <string name="text_790f24eb34" formatted="false">"备份复制日程更新。"</string>
+    <string name="text_e75e2661b7" formatted="false">"只有在一个不调节的网络上,如Wi-Fi"</string>
+    <string name="text_cf3d313652" formatted="false">"Android 可能延迟备份,以保存电池或在离线时。"</string>
+    <string name="text_1e579b05be" formatted="false">"已故地解锁并取消时间表. 现有备份未被删除。"</string>
+    <string name="text_83eccb0dd3" formatted="false">"关闭和取消时间表"</string>
+    <string name="text_b35a854e22" formatted="false">"文件备份复制和恢复"</string>
+    <string name="text_1da6e0d4aa" formatted="false">"在您的计算机、驱动器或其他地方保存备份复制文件,即使在应用程序的 Google 连接设置之前。"</string>
+    <string name="text_52cca61a5d" formatted="false">"保存备份复制文件"</string>
+    <string name="text_4d2b863edd" formatted="false">"恢复从备份复制文件"</string>
+    <string name="text_f4ab9db1a0" formatted="false">"备份副本包括输入,一个活跃的转换,设置和保存原因. 在恢复之前,显示预览,并保存您以前的数据的本地副本。"</string>
+    <string name="text_86472e4d43" formatted="false">"在最后恢复之前打开保存的副本"</string>
+    <string name="text_bf72e99186" formatted="true">"此裝置持有 %1$s 插件. 重新連接 Google 並在每個手機上設定備份複製日程。"</string>
+    <string name="text_b5af650c8c" formatted="false">"恢复模式:本地数据无法阅读;从文件或驱动器中恢复;创建新的备份副本被禁用。"</string>
+    <string name="text_f738c4c045" formatted="false">"可用的备份副本"</string>
+    <string name="text_c775e7dcf6" formatted="false">"未在所选择的帐户中找到备份副本。"</string>
+    <string name="text_b728721fc0" formatted="false">"接近"</string>
+    <string name="text_835ba611ee" formatted="false">"确认恢复"</string>
+    <string name="text_bfe0764274" formatted="true">"备份副本包含 %1$s 输入。"</string>
+    <string name="text_19a88cf185" formatted="true">"此分類上一篇: %1$s to %2$s"</string>
+    <string name="text_ea12a4ba2b" formatted="false">"没有一个"</string>
+    <string name="text_1f70207bab" formatted="false">"是的"</string>
+    <string name="text_3cbbf0077a" formatted="true">"当前班次：%1$s"</string>
+    <string name="text_2388ed2d80" formatted="true">"恢复将替换此设备上的 %1$s 条记录和设置。将先保存本地副本。"</string>
+    <string name="text_f35658ed7c" formatted="false">"恢复完成。"</string>
+    <string name="text_a87c9f4c06" formatted="false">"数据交换和恢复"</string>
+    <string name="text_a7c55a8d06" formatted="false">"取消"</string>
+    <string name="text_7b80593224" formatted="false">"文件太大了。"</string>
+    <string name="text_b36a3090e4" formatted="false">"此备份与此应用程序版本不兼容。"</string>
+    <string name="text_1d25b4e13f" formatted="false">"这不是支持的ShiftHours备份。"</string>
+    <string name="text_c84389ddd1" formatted="false">"备份复印件受损:完整性检查失败。"</string>
+    <string name="text_2159b4a358" formatted="false">"未识别的数据版本。"</string>
+    <string name="text_4ae6ec8fa0" formatted="false">"数据尚未加载。"</string>
+    <string name="text_cf903e3463" formatted="false">"输入有效号码。"</string>
+    <string name="text_039bb0fc27" formatted="false">"按时输入时间:分钟或数十小时。"</string>
+    <string name="text_a7fcad5418" formatted="false">"残疾人数。"</string>
+    <string name="text_37e2eed494" formatted="false">"不合格的几分钟。"</string>
+    <string name="text_77c0279c02" formatted="false">"残疾期开始日期。"</string>
+    <string name="text_3f800b0cce" formatted="false">"残疾期末日。"</string>
+    <string name="text_14611081ea" formatted="false">"最后一天必须先于下一个期限的开始。"</string>
+    <string name="text_b9e104411d" formatted="false">"全分钟内输入休息时间。"</string>
+    <string name="text_2189089fc9" formatted="false">"查看设置。"</string>
+    <string name="text_81de798264" formatted="false">"欢迎"</string>
+    <string name="text_47cfdefbce" formatted="false">"设置"</string>
+    <string name="text_8d74344d70" formatted="false">"设置工作条件,并节省开始。"</string>
+    <string name="text_9a90a562d2" formatted="false">"保存更改"</string>
+    <string name="text_ab4dfe20aa" formatted="false">"适用于所有输入,包括过去输入。"</string>
+    <string name="text_0bf5310554" formatted="false">"节省..."</string>
+    <string name="text_54d36ad080" formatted="false">"保存设置"</string>
+    <string name="text_465e8134a4" formatted="false">"工资与加班"</string>
+    <string name="text_45a3198e62" formatted="false">"时间和休息"</string>
+    <string name="text_bfc0c0e7f1" formatted="false">"税收和贡献"</string>
+    <string name="text_a2ceeb919c" formatted="false">"拯救的理由"</string>
+    <string name="text_3d0ffbb6b9" formatted="false">"工资类型"</string>
+    <string name="text_9852666700" formatted="false">"固定月薪"</string>
+    <string name="text_c17956962e" formatted="false">"月薪(₪)"</string>
+    <string name="text_55bc5d12cc" formatted="false">"按时支付(₪)"</string>
+    <string name="text_635f53e8e3" formatted="false">"您雇主所要求的每月时间"</string>
+    <string name="text_8b4c4a643c" formatted="false">"每小时利率 = 每月工资 ÷ 每月时间目标. 总工资包括每月全额工资以及在设置的利率上支付过时费用。"</string>
+    <string name="text_7414d91b15" formatted="false">"总工资从记录时间和配置的三分之一计算。"</string>
+    <string name="text_8a239ab302" formatted="false">"加班档位"</string>
+    <string name="text_0fea91c3a0" formatted="false">"每日定期时间"</string>
+    <string name="text_996add3cb0" formatted="false">"输入数十小时或时间:分钟,如 2.5 或 2:30。"</string>
+    <string name="text_b779c7c572" formatted="true">"第 %1$s 档"</string>
+    <string name="text_25606d5652" formatted="false">"剩下的所有时间"</string>
+    <string name="text_92102dc8df" formatted="false">"这个层次的时间"</string>
+    <string name="text_b5fe6f82a9" formatted="false">"每小时率的百分比"</string>
+    <string name="text_bd38859717" formatted="false">"这个级别适用于正常时间后,并在其以上的所有三分之一。"</string>
+    <string name="text_5192d415d8" formatted="false">"移动上"</string>
+    <string name="text_6179185b49" formatted="false">"移动下"</string>
+    <string name="text_7c8173fafa" formatted="false">"删除"</string>
+    <string name="text_f428ab9623" formatted="false">"添加档位"</string>
+    <string name="text_f1f14874a4" formatted="false">"需要一个“所有剩余时间”级别,在最后一行中,添加一个级别使前级限制;检查其时间。"</string>
+    <string name="text_89fef4fd58" formatted="false">"报告期"</string>
+    <string name="text_6c22041108" formatted="false">"第一天(1～31)"</string>
+    <string name="text_796e34b83e" formatted="false">"最后一天(31 = 月末)"</string>
+    <string name="text_b241433b46" formatted="false">"这些日子是为了避免漏洞或过渡,例如25至24日,在一个短的月内,开始日期调整到最后一天可用。"</string>
+    <string name="text_a222187697" formatted="true">"此分類上一篇: %1$s - %2$s"</string>
+    <string name="text_01f30eb896" formatted="false">"折扣中断"</string>
+    <string name="text_c9beca5709" formatted="false">"破坏时间"</string>
+    <string name="text_a123134aa5" formatted="false">"每日一次"</string>
+    <string name="text_26dcd5cc53" formatted="false">"分区"</string>
+    <string name="text_fa4922c12a" formatted="false">"分鐘取消"</string>
+    <string name="text_ff7f573a4d" formatted="false">"除去休息时从家工作"</string>
+    <string name="text_143dd7316a" formatted="false">"每日休息时间按时排除一次,当选项关闭时,家务被排除,退休时间永远不会超过实际工作时间。"</string>
+    <string name="text_40494acb7f" formatted="false">"没有折扣,所有记录的时间都计算为付费时间。"</string>
+    <string name="text_8a53041f32" formatted="false">"日常缺陷工作日"</string>
+    <string name="text_b6c4c767eb" formatted="false">"周日"</string>
+    <string name="text_c0505c1097" formatted="false">"周一"</string>
+    <string name="text_7b5b7d0c90" formatted="false">"周二"</string>
+    <string name="text_88aa0681e1" formatted="false">"周三"</string>
+    <string name="text_c2742c4cba" formatted="false">"周四"</string>
+    <string name="text_08e0ffcda5" formatted="false">"周五"</string>
+    <string name="text_0645b32caf" formatted="false">"周六"</string>
+    <string name="text_92d73e83f6" formatted="false">"相同的过时三分之一适用于所有日;没有单独的周末或假期规则。"</string>
+    <string name="text_69e69a7518" formatted="false">"税收信用点和估计净工资"</string>
+    <string name="text_70d7cd14f1" formatted="false">"税收信用点(从您的 payslip)"</string>
+    <string name="text_9987c69efd" formatted="false">"以色列2026税表下每分值为每月242 ₪。"</string>
+    <string name="text_8cee38323a" formatted="false">"养老金和培训基金"</string>
+    <string name="text_9982697de0" formatted="false">"员工养老金(%)"</string>
+    <string name="text_3638d5596d" formatted="false">"员工培训基金的贡献(%; 0 如果没有)"</string>
+    <string name="text_90b68945c0" formatted="false">"只输入员工的份额,除非雇主的贡献。"</string>
+    <string name="text_e2e16aa700" formatted="false">"支付捐款基础"</string>
+    <string name="text_dc959b16aa" formatted="false">"基本薪水 排除过时"</string>
+    <string name="text_682c0e2622" formatted="false">"总工资"</string>
+    <string name="text_3f55564e26" formatted="false">"手动定义的数量"</string>
+    <string name="text_0d4b9a288d" formatted="false">"付款基础(₪)"</string>
+    <string name="text_3284189b89" formatted="false">"包括标准养老金捐款税收信用"</string>
+    <string name="text_0b5e7d7238" formatted="false">"养老金税收抵免估算为符合条件缴费的 35%，按每月最多 679 ₪ 的缴费及工资的 7% 限额计算。此估算按月计算，不累计。"</string>
+    <string name="text_102196cdf2" formatted="false">"估计所包含的"</string>
+    <string name="text_c02d9dbae9" formatted="false">"收入税,税收信用点,以色列国家和医疗保险,以及员工补贴. 使用2026表,以色列居民18岁退休。"</string>
+    <string name="text_a09a8853d1" formatted="false">"排除税务协调、其他收入、可征税的汽车福利、雇主贡献税和特殊信用。"</string>
+    <string name="text_49148d6451" formatted="false">"从家工作的救赎理由"</string>
+    <string name="text_62d649ad15" formatted="false">"新原因"</string>
+    <string name="text_45bd96d34b" formatted="false">"添加到列表"</string>
+    <string name="text_a99e68e9f4" formatted="false">"取消"</string>
+    <string name="text_1b581c283a" formatted="false">"删除保存的原因不会改变现有输入,您可以随时输入免费文本。"</string>
+    <string name="text_d44063b451" formatted="false">"数据加载失败。"</string>
+    <string name="text_31e02fbfa7" formatted="false">"没有改变,再试一次。"</string>
+    <string name="text_71f28ff8fa" formatted="false">"无法加载数据"</string>
+    <string name="text_b238f1a394" formatted="false">"文件保留了. 不要清除应用程序的数据。"</string>
+    <string name="text_fc2297f319" formatted="false">"再次尝试"</string>
+    <string name="text_6e56c6a002" formatted="false">"恢复备份副本"</string>
+    <string name="text_e4f2184a47" formatted="false">"检查设备时钟:未来的输入结束。"</string>
+    <string name="text_6f6a3321b0" formatted="false">"结束时间必须在开始时间之后。"</string>
+    <string name="text_e0aad7a0c2" formatted="false">"设置保存。"</string>
+    <string name="text_8dfb4f3f58" formatted="false">"入口保存。"</string>
+    <string name="text_7a6915a25c" formatted="false">"您无法记录尚未发生的时刻。"</string>
+    <string name="text_2aca9c2968" formatted="false">"时间的时钟不能在未来。"</string>
+    <string name="text_f9dc75319d" formatted="false">"删除入口"</string>
+    <string name="text_f026fe8829" formatted="true">"删除入口为 %1$s? 这不能否认。"</string>
+    <string name="text_b0e3328ac0" formatted="false">"自家工作的理由"</string>
+    <string name="text_f1af79973d" formatted="false">"选择一个拯救的理由"</string>
+    <string name="text_05d94bc43f" formatted="false">"我的工作时间"</string>
+    <string name="text_c83e648a74" formatted="false">"初始设置"</string>
+    <string name="text_89c15910b6" formatted="false">"设置您的工资、每月时间和工作时间,以便允许支付计算,您可以在完成设置之前记录时间。"</string>
+    <string name="text_7c1126f30f" formatted="false">"开放设置"</string>
+    <string name="text_01ebd1a71f" formatted="false">"准备开始了吗？"</string>
+    <string name="text_6d81f53fb4" formatted="true">"班次进行中 · %1$s"</string>
+    <string name="text_8b6488028e" formatted="false">"滑动以按当前时间开始班次。"</string>
+    <string name="text_c386f7af9f" formatted="true">"上班：%1$s %2$s"</string>
+    <string name="text_bc84ae26be" formatted="false">"滑动以按当前时间结束班次。"</string>
+    <string name="text_73a90395c7" formatted="false">"滑动上班"</string>
+    <string name="text_867983500d" formatted="false">"滑动下班"</string>
+    <string name="text_a5d8698fba" formatted="false">"正确的时间 / 设置另一个终点时间"</string>
+    <string name="text_1efd4660f9" formatted="false">"手动添加班次"</string>
+    <string name="text_79a7f1d677" formatted="false">"您的时间存储,即使应用程序关闭时。"</string>
+    <string name="text_95d86d7f5f" formatted="false">"今天"</string>
+    <string name="text_6834f9db87" formatted="false">"净工时"</string>
+    <string name="text_b076df1539" formatted="false">"同一天的分区是相结合的,夜间交换属于其开始日期。"</string>
+    <string name="text_7991cbb6a8" formatted="false">"当前周期"</string>
+    <string name="text_3084f001bd" formatted="false">"已记录工时"</string>
+    <string name="text_7447d177b1" formatted="false">"加班工时"</string>
+    <string name="text_e2cbeabb69" formatted="false">"全薪 + 记录过剩时间"</string>
+    <string name="text_4c0803b36f" formatted="false">"入口总额"</string>
+    <string name="text_389abd9ee8" formatted="false">"支付总结将在初始存款后出现。"</string>
+    <string name="text_1960680292" formatted="false">"备份复制状态"</string>
+    <string name="text_dd6ddc4c4f" formatted="false">"尚未在该设备上完成任何驱动备份副本。"</string>
+    <string name="text_1c3f9e273d" formatted="true">"成功的驱动备份副本: %1$s %2$s"</string>
+    <string name="text_6e55aef91f" formatted="false">"每日备份复制计划"</string>
+    <string name="text_17ee444b2e" formatted="false">"每周预订备份"</string>
+    <string name="text_d7da1ab695" formatted="false">"自动驱动备份复制已关闭"</string>
+    <string name="text_bba88dd845" formatted="false">"设置和操作可在下面的备份复制选项卡中找到。"</string>
+    <string name="text_d61f7f639f" formatted="false">"上一篇"</string>
+    <string name="text_28890b291d" formatted="false">"下一篇"</string>
+    <string name="text_023f8a1a0c" formatted="false">"概览"</string>
+    <string name="text_0cdf398747" formatted="false">"时间,支付和跟踪期间"</string>
+    <string name="text_5b40d10b38" formatted="false">"月薪 + 超時間"</string>
+    <string name="text_b7cebc21b4" formatted="false">"时间付款"</string>
+    <string name="text_24c64cee7b" formatted="false">"全月薪"</string>
+    <string name="text_1558a05606" formatted="false">"定期薪水"</string>
+    <string name="text_5407314942" formatted="false">"过时付款"</string>
+    <string name="text_ebff026858" formatted="false">"时率"</string>
+    <string name="text_f072356bdc" formatted="false">"全月工资显示:失踪时间单独显示,并且不会自动退款。"</string>
+    <string name="text_d7fec4855e" formatted="false">"此期内包含活跃转换时间;直播更新数量。"</string>
+    <string name="text_087fd2cd6d" formatted="false">"时间分裂"</string>
+    <string name="text_3eb92e199a" formatted="false">"净工时合计"</string>
+    <string name="text_07b643f83a" formatted="false">"正常工时"</string>
+    <string name="text_dda62e1cc9" formatted="false">"加班工时合计"</string>
+    <string name="text_27fa002b22" formatted="true">"按 %1$s%% 计算的工时"</string>
+    <string name="text_0d562e6527" formatted="true">"按 %1$s%% 计算的工资"</string>
+    <string name="text_b93940ad5b" formatted="false">"重量过时时间"</string>
+    <string name="text_aa79d639a1" formatted="false">"办公室和家"</string>
+    <string name="text_b895b63363" formatted="false">"办公室时间"</string>
+    <string name="text_bf004c7509" formatted="false">"家时钟"</string>
+    <string name="text_a839ec02b2" formatted="true">"%1$s%% 在办公室"</string>
+    <string name="text_b8ded3389c" formatted="false">"办公室值 基率"</string>
+    <string name="text_ec791b21f9" formatted="false">"Home 基率 基率"</string>
+    <string name="text_2d3fd3bb5b" formatted="false">"基本利率值排除过时奖金;不要将其添加到总工资。"</string>
+    <string name="text_6689630948" formatted="false">"缺席时间和入口检查"</string>
+    <string name="text_23b17c77be" formatted="false">"此期间的目标时间"</string>
+    <string name="text_9e0655ff1b" formatted="false">"对每月目标的短缺"</string>
+    <string name="text_468b69c83d" formatted="false">"日常缺陷的总数"</string>
+    <string name="text_d75f4dd709" formatted="false">"每日缺陷只计算选定的工作日与输入. 没有输入的日期不会自动标记为缺席。"</string>
+    <string name="text_e9f9673a47" formatted="false">"办公室缺点"</string>
+    <string name="text_8e87e45498" formatted="false">"工作时间超越日常标准"</string>
+    <string name="text_43af7314c4" formatted="false">"缺少的时钟/出门笔记"</string>
+    <string name="text_d41113bbd2" formatted="false">"与入口的日子"</string>
+    <string name="text_3ee5d8b89f" formatted="false">"家庭工作因原因"</string>
+    <string name="text_e220a05303" formatted="false">"在此期间,没有家门。"</string>
+    <string name="text_4b0ccb42af" formatted="false">"时间"</string>
+    <string name="text_387c48c332" formatted="false">"基率的价值"</string>
+    <string name="text_a347b2c73c" formatted="false">"估计净工资"</string>
+    <string name="text_b8e45d7b9e" formatted="true">"%1$s 的税表不配置. 没有显示净估计。"</string>
+    <string name="text_90128d6911" formatted="false">"请在设置中输入税收抵免点数和个人养老金缴费比例，以显示估算。没有缴费时请输入 0。"</string>
+    <string name="text_3d880292e0" formatted="false">"收入税"</string>
+    <string name="text_89e2b25fb1" formatted="false">"国家保险"</string>
+    <string name="text_c694983c02" formatted="false">"健康保险"</string>
+    <string name="text_901acdd444" formatted="false">"养老金 - 员工份额"</string>
+    <string name="text_852a1bee2a" formatted="false">"培训基金 - 员工份额"</string>
+    <string name="text_f8ee9f9027" formatted="false">"养老金捐款税收信用"</string>
+    <string name="text_192617126a" formatted="false">"使用2026以色列表的每月估计. 排除累积税、其他收入、可征税福利和税务协调。"</string>
+    <string name="text_fe04db5f37" formatted="false">"时间显示为小时:分钟;计算保持源秒. 您的设置的分数适用于每周的每一天。"</string>
+    <string name="text_3141c61e9e" formatted="false">"工时明细"</string>
+    <string name="text_723a7db2af" formatted="false">"班次与工作时段"</string>
+    <string name="text_57b4cda969" formatted="false">"+ 手动添加班次"</string>
+    <string name="text_7149f2ed6a" formatted="false">"其他人使用整天,即使在过滤到一个工作场所。"</string>
+    <string name="text_3579e0306b" formatted="false">"一个更改是活跃的,在主屏幕上纠正其开始或输入终点时间。"</string>
+    <string name="text_643cae9ae3" formatted="false">"在此期间没有完成的入门。"</string>
+    <string name="text_d3fcfb1a78" formatted="true">"下班：%1$s %2$s"</string>
+    <string name="text_39fe25939b" formatted="false">"编辑"</string>
+    <string name="text_0826149cf1" formatted="false">"当日汇总"</string>
+    <string name="text_d783472020" formatted="false">"当日净工时合计"</string>
+    <string name="text_a3756d29d2" formatted="false">"计薪工时"</string>
+    <string name="text_c24fae5be3" formatted="false">"时间在当前的过滤器"</string>
+    <string name="text_b70622d71d" formatted="false">"正确的活跃转换"</string>
+    <string name="text_59cb6e8e9a" formatted="false">"编辑班次"</string>
+    <string name="text_10045253c1" formatted="false">"手动班次"</string>
+    <string name="text_2f6783cd3b" formatted="false">"上班"</string>
+    <string name="text_b939061e41" formatted="false">"下班"</string>
+    <string name="text_8f9bc2d880" formatted="false">"注意 / 缺少 时钟或 时钟"</string>
+    <string name="text_d958ea3cd8" formatted="true">"休息前的长度: %1$s"</string>
+    <string name="text_1be17082dd" formatted="false">"同一天的分区共享过时三分,不要进入过时分区。"</string>
+    <string name="text_d42c0813fc" formatted="false">"未來的時鐘並不存在。"</string>
+    <string name="text_510b00fcc4" formatted="false">"保存正确的启动,并保持转换开放"</string>
+    <string name="text_647a733fb8" formatted="false">"无效时钟日期。"</string>
+    <string name="text_4c82f98655" formatted="false">"出行时间必须在入行时间后。对于过夜的转换,也选择正确的终止日期。"</string>
+    <string name="text_c2fb808976" formatted="false">"时间外不能在未来。"</string>
+    <string name="text_6eb37ad66f" formatted="false">"结束和保存转换"</string>
+    <string name="text_e69323393b" formatted="false">"保存"</string>
+    <string name="text_b89e7bee64" formatted="false">"初步设置"</string>
+    <string name="text_2eaf74bbd8" formatted="false">"开始你的工作条件"</string>
+    <string name="text_f9fb70ce3b" formatted="false">"输入薪水和每月时间,然后调整过时周期,休息和报告期。"</string>
+    <string name="text_925bb7a659" formatted="false">"Google 许可已终止,重新连接。"</string>
+    <string name="text_86de69005f" formatted="false">"驱动访问被拒绝. 重新连接您的 Google 帐户。"</string>
+    <string name="text_0885c5a6fa" formatted="false">"备份未在所选择的帐户中找到。"</string>
+    <string name="text_09780711f6" formatted="false">"Google 正在限制请求,然后再试一次。"</string>
+    <string name="text_2a152ef564" formatted="true">"Google Drive 通讯失败(代码 %1$s)。"</string>
+    <string name="text_07d8d8fb15" formatted="false">"选择一个 Google 帐户。"</string>
+    <string name="text_44707e2acd" formatted="false">"谷歌没有确认备份复制的创建。"</string>
+    <string name="text_eee5e9d37e" formatted="false">"备份复印件未创建:需要重新授权; 打开备份复印件并重新连接。"</string>
+    <string name="text_fb5e219eb1" formatted="false">"备份复印件失败:"</string>
+    <string name="text_82a2bfa2fe" formatted="false">"网络错误"</string>
+    <string name="nav_home" formatted="false">"首页"</string>
+    <string name="nav_dashboard" formatted="false">"概览"</string>
+    <string name="nav_records" formatted="false">"工时记录"</string>
+    <string name="nav_settings" formatted="false">"设置"</string>
+    <string name="nav_backup" formatted="false">"备份"</string>
+    <string name="location_home" formatted="false">"居家"</string>
+    <string name="location_office" formatted="false">"办公室"</string>
+    <string name="filter_all" formatted="false">"全部"</string>
+    <string name="app_name" formatted="false">"ShiftHours"</string>
+    <string name="language_title" formatted="false">"语言"</string>
+    <string name="language_system" formatted="false">"设备语言"</string>
+    <string name="language_hint" formatted="false">"语言存储在此设备上. 在转换语言之前,保存更改. 货币和税收规则保持其当前设置。"</string>
+    <string name="tax_profile" formatted="false">"税务资料"</string>
+    <string name="tax_country" formatted="false">"纳税国家或地区"</string>
+    <string name="tax_year" formatted="false">"纳税年度"</string>
+    <string name="tax_region" formatted="false">"纳税地区"</string>
+    <string name="tax_choose" formatted="false">"选择"</string>
+    <string name="tax_england" formatted="false">"英格兰"</string>
+    <string name="tax_wales" formatted="false">"威尔士"</string>
+    <string name="tax_northern_ireland" formatted="false">"北爱尔兰"</string>
+    <string name="tax_scotland" formatted="false">"苏格兰"</string>
+    <string name="tax_unavailable" formatted="false">"此国家暂不支持净工资估算。仍可查看工时和税前工资。"</string>
+    <string name="tax_year_unavailable" formatted="false">"此年度尚无已验证的税表。"</string>
+    <string name="tax_uk_required" formatted="false">"请选择英国地区并确认适用的雇员资料。"</string>
+    <string name="tax_foreign_fields" formatted="false">"以色列的抵免点数和缴费规则不适用于此国家。"</string>
+    <string name="tax_uk_profile" formatted="false">"我确认符合下述英国雇员条件。"</string>
+    <string name="tax_country_hint" formatted="false">"国家与界面语言独立。国家选择不能确定个人减免资格。"</string>
+    <string name="tax_currency_warning" formatted="false">"更改国家仅更改货币标识，不换算工资金额或加班规则。请检查设置。"</string>
+    <string name="tax_uk_scope" formatted="false">"英国2026/27：按固定月薪年化计算所得税，按月计算A类国民保险。标准个人免税额随高收入递减。仅一份工作；无其他收入、养老金扣款、薪酬牺牲、学生贷款、应税福利或特殊减免。不是累计PAYE计算。"</string>
+    <string name="tax_scope_in" formatted="false">"印度2025/26–2026/27财年：税务居民雇员，仅新税制，固定现金工资按年计算；无其他收入或特殊减免。包含标准扣除、税收抵免、边际减免和4%附加税。年度应税收入上限为5,000,000印度卢比。"</string>
+    <string name="tax_scope_ru" formatted="false">"俄罗斯2026：税务居民雇员，仅普通固定工资；无其他收入、个人税收扣除、北方津贴或特殊军人规则。所得税按全年平均月额估算，不是累计代扣。雇主社保缴费不从员工工资扣除。"</string>
+    <string name="tax_scope_ae" formatted="false">"阿联酋2026：非海合会公民的外籍雇员，仅受雇收入。无个人所得税。请输入实际员工工资扣款，包括适用的保险。离职福利和雇主缴费不计入。"</string>
+    <string name="tax_actual_deductions" formatted="false">"实际每月员工扣款"</string>
+    <string name="tax_deductions_hint" formatted="false">"无扣款时请输入0。包括员工养老金、保险和当地工资扣款；不包括此处计算的税款和雇主缴费。该金额减少到手工资，不减少应税收入。"</string>
+    <string name="tax_confirm_profile" formatted="false">"我确认符合此国家的雇员条件。"</string>
+    <string name="tax_foreign_required" formatted="false">"请检查雇员条件、扣款金额和支持的收入上限。"</string>
+    <string name="tax_other_tax" formatted="false">"健康与教育附加税"</string>
+    <string name="tax_other_deductions" formatted="false">"其他员工扣款"</string>
+    <string name="tax_scope_us" formatted="false">"仅2026：全年居民，18至64岁，一个本地普通W-2雇主；单身或夫妻合报且全家仅一人有收入。无受抚养人、其他收入、联邦或可退还抵免、特殊小费或加班扣除、税前福利及跨州工作。资格须核实。50州均可选择：47州有范围有限的自动州税率，包括工资零税；CO/ID/VT须输入已核实年度州税负。税额/12是预留估算，并非W-4或年内累计预扣。"</string>
+    <string name="tax_scope_ca" formatted="false">"加拿大2026：仅安大略省/阿尔伯塔省。全年单身居民，18–64岁，在同一省生活和工作，一个雇主。仅基本个人和就业抵免；无受抚养人、RRSP、税前福利或其他收入。包含联邦/省税、CPP/CPP2和EI。按稳定工资计算的年度月平均值，不是实际工资单。"</string>
+    <string name="tax_na_deductions_hint" formatted="false">"仅填其他税后员工扣款；没有时填0。不要重复填写已计算的税款、Social Security、Medicare、CPP/CPP2、EI或安大略健康费。不支持税前扣除。"</string>
+    <string name="tax_other_region" formatted="false">"其他地区—暂不支持"</string>
+    <string name="tax_region_unavailable" formatted="false">"此地区暂不支持净工资估算。"</string>
+    <string name="tax_florida" formatted="false">"佛罗里达州"</string>
+    <string name="tax_texas" formatted="false">"得克萨斯州"</string>
+    <string name="tax_ontario" formatted="false">"安大略省"</string>
+    <string name="tax_alberta" formatted="false">"阿尔伯塔省"</string>
+    <string name="tax_filing" formatted="false">"联邦报税身份"</string>
+    <string name="tax_single" formatted="false">"单身申报"</string>
+    <string name="tax_joint" formatted="false">"夫妻联合申报—仅一人有收入"</string>
+    <string name="tax_federal" formatted="false">"联邦所得税"</string>
+    <string name="tax_provincial" formatted="false">"省所得税"</string>
+    <string name="tax_ontario_health" formatted="false">"安大略健康费"</string>
+    <string name="tax_social_security" formatted="false">"美国社会保障税"</string>
+    <string name="tax_cpp" formatted="false">CPP</string>
+    <string name="tax_cpp2" formatted="false">CPP2</string>
+    <string name="tax_ei" formatted="false">EI</string>
+    <string name="tax_medicare" formatted="false">Medicare</string>
+    <string name="tax_pt_mainland" formatted="false">"葡萄牙 — 大陆地区"</string>
+    <string name="tax_annual_verified_base" formatted="false">"已核实的最终年度应税所得"</string>
+    <string name="tax_verified_base_hint" formatted="false">"请输入经核实税务评估或专业计算中、所有扣除后的最终应税所得。这不是税前工资；应用不会自动推算。"</string>
+    <string name="tax_au_hospital" formatted="false">"认可的私人住院保险"</string>
+    <string name="tax_au_full_cover" formatted="false">"整个纳税年度"</string>
+    <string name="tax_au_no_cover" formatted="false">"整个纳税年度均无保险"</string>
+    <string name="tax_nz_ietc_hint" formatted="false">"IETC 要求全年符合资格：无 Working for Families 资格、主要福利、NZ Super、Veterans Pension 或同类境外款项。不支持仅部分年度符合资格。"</string>
+    <string name="tax_nz_ietc" formatted="false">"我确认全年符合 IETC 资格"</string>
+    <string name="tax_further_deductions_hint" formatted="false">"请输入此处未计算的实际员工扣款，无则填 0。不要包括雇主缴款和已列出的税费或保险。该金额减少实发工资，不减少应税所得。"</string>
+    <string name="tax_solidarity" formatted="false">"团结税"</string>
+    <string name="tax_pt_social" formatted="false">"员工社会保险"</string>
+    <string name="tax_au_levy" formatted="false">"Medicare 征费"</string>
+    <string name="tax_au_surcharge" formatted="false">"Medicare 附加征费"</string>
+    <string name="tax_acc" formatted="false">"ACC 员工征费"</string>
+    <string name="tax_included_relief" formatted="false">"所得税中已计入的减免"</string>
+    <string name="tax_scope_de" formatted="false">"德国 2026：单身居民，无子女及教会税。使用已核实的最终应税所得估算年度税款，不从税前工资推算。实际员工社会保险扣款另行输入。不是 Lohnsteuer 工资预扣计算。"</string>
+    <string name="tax_scope_fr" formatted="false">"法国：仅限 2026 年评税的 2025 年收入。单身居民、一个税务份额、仅工资收入，年税前收入不超过 EUR 200,000。输入扣除费用后的最终应税所得；社会扣款另填。包含 décote；没有 2026 收入税表或实时 PAS 预扣。"</string>
+    <string name="tax_scope_pt" formatted="false">"葡萄牙 2026：大陆、单身居民、普通 A 类工资。每年 12 次等额支付，含按比例分摊的假期和圣诞津贴；年税前收入至少 EUR 20,000。包含员工社保 11%、标准扣除、IRS 税档和团结税。无受抚养人、特殊制度或发票抵税；不是 14 薪预扣计算。"</string>
+    <string name="tax_scope_au" formatted="false">"澳大利亚 2025/26–2026/27：18–64 岁单身居民，年现金工资至少 AUD 50,000，不含雇主 Super。无其他收入、税前福利或豁免。含所得税、LITO、2% Medicare 及附加费。须选择全年认可住院保险或全年无保险；不支持家庭及部分年度保险。"</string>
+    <string name="tax_scope_nz" formatted="false">"新西兰 2025/26–2026/27：全年居民、单一工作、仅工资，无其他收入或福利。含所得税及 ACC；IETC 仅在明确确认资格后计入。实际 KiwiSaver、贷款及其他员工扣款另填。按稳定收入估算全年。"</string>
+    <string name="tax_scope_es" formatted="false">"西班牙 2026：仅马德里。全年单身居民，18–64 岁，仅工资，无子女、残疾或税额抵免。年现金税前收入至少 EUR 40,000，已核实一般税基至少 EUR 30,000。国家税和马德里税均含其基本个人最低额。实际社保扣款另填。全年 12 次等额总付款；不是工资预扣。"</string>
+    <string name="tax_scope_cn" formatted="false">"中国 2026：全年为中国大陆税收居民，仅一份工作的工资，无其他或境外收入及减免税额。输入已扣除人民币 60,000 元及所有法定扣除后的最终年度应税所得。实际地方社保及住房公积金员工扣款另填；不推定地方比例或资格。不含单独计税年终奖、税收协定或特殊外籍待遇，也不是月度或累计预扣计算。"</string>
+    <string name="tax_scope_sa" formatted="false">"沙特阿拉伯 2026：非海合会国籍外籍员工，仅在沙特境内的普通雇佣收入。无个人所得税。请输入实际员工扣款（适用时含保险），无则填 0。雇主职业风险缴款不计入员工扣款。不含沙特/海合会养老金规则、经营收入、境外纳税义务及离职待遇。"</string>
+    <string name="tax_madrid" formatted="false">"马德里"</string>
+    <string name="tax_cn_mainland" formatted="false">"中国大陆"</string>
+    <string name="tax_es_base_hint" formatted="false">"输入法定工资扣除后的最终年度一般税基，须为个人/家庭最低额扣抵之前。税前收入至少 EUR 40,000，税基至少 EUR 30,000。应用自行计算基本最低额税额扣抵，不自动计算社保或从税前工资推算税基。"</string>
+    <string name="tax_cn_base_hint" formatted="false">"输入已扣除人民币 60,000 元和所有法定扣除后的最终年度工资应税所得，不要再次减去 60,000 元。实际社保/公积金扣款还须填入月度员工扣款栏，其税务影响必须已经反映在此税基中。"</string>
+    <string name="tax_state_income" formatted="false">"国家所得税"</string>
+    <string name="tax_regional_income" formatted="false">"地区所得税"</string>
+    <string name="tax_scope_ie" formatted="false">"爱尔兰 2026：全年单身居民，18–64岁，仅一份符合PAYE抵免资格的工资工作。含基本个人/雇员税收抵免和普通USC。不含控股董事、医疗卡优惠、其他收入、税前养老金/福利或额外抵免。实际员工PRSI及税后养老金/其他扣款另填；不推定MyFutureFund资格。按稳定收入估算全年，不是累计工资预扣。"</string>
+    <string name="tax_scope_hk" formatted="false">"香港 2025/26–2026/27：全年单身员工，18–64岁，一个雇主，仅工资、按月发薪的普通强积金成员。包括按时计薪、按月支付；含基本免税额、员工强积金及累进/标准两者较低税款。供款假期须在年度开始前结束。不含临时/日薪/豁免员工、受养人、其他收入及额外宽减。仅 2025/26有最终税额宽减；不是暂缴税账单。"</string>
+    <string name="tax_ie_deductions_hint" formatted="false">"请输入实际员工PRSI及税后养老金/其他现金扣款，无则填 0。如扣缴MyFutureFund须计入，不推定自动加入。不要包括雇主成本和已算所得税/USC。可减所得税的养老金不属此范围。工资变化时须更新扣款。"</string>
+    <string name="tax_hk_deductions_hint" formatted="false">"仅额外的税后员工现金扣款，无则填 0。不要重复输入已计算的员工强积金或薪俸税。不含雇主供款及额外可扣税项目。"</string>
+    <string name="tax_usc" formatted="false">"统一社会税（USC）"</string>
+    <string name="tax_mpf" formatted="false">"员工强积金（MPF）"</string>
+    <string name="tax_scope_no" formatted="false">"挪威 2026：全年单身居民，18–64岁，一份工作、仅工资，适用普通22%地区税并加入国民保险。含标准/个人扣除、阶梯税及经确认的青年工作扣除。不含养老金/工会/利息等额外扣除、其他收入、外国员工PAYE或特殊地区待遇。按稳定收入估算年度责任，不含税卡预缴及小额余额征收规则。"</string>
+    <string name="tax_scope_za" formatted="false">"南非 2025/26–2026/27：全年居民，18–64岁，一份普通私营部门工作。含基本税额减免及所选UIF。不含其他收入、佣金、应税福利、养老金税前扣除、医疗/其他抵免及特别豁免。须确认普通UIF缴款资格，或仅因在该雇主处每月少于24小时而豁免。年度估算，不是实际PAYE预扣。"</string>
+    <string name="tax_no_region" formatted="false">"普通22%纳税地区"</string>
+    <string name="tax_no_region_hint" formatted="false">"不含斯瓦尔巴、芬马克及以下特罗姆斯市镇：Karlsøy, Kvænangen, Kåfjord, Lyngen, Nordreisa, Skjervøy, Storfjord。"</string>
+    <string name="tax_no_youth" formatted="false">"青年工作扣除 — 已核实状态"</string>
+    <string name="tax_no_selected" formatted="false">"已入选 — 税务机关确认"</string>
+    <string name="tax_no_not_selected" formatted="false">"未入选／不属于符合资格组"</string>
+    <string name="tax_no_youth_hint" formatted="false">"2026试点随机抽取部分1991–2006年出生者。年龄或居民身份不代表资格。请核实官方状态，不要猜测。未选择时不提供估算。"</string>
+    <string name="tax_za_uif" formatted="false">"员工UIF状态"</string>
+    <string name="tax_za_covered" formatted="false">"普通UIF缴款人"</string>
+    <string name="tax_za_lt24" formatted="false">"豁免 — 每月少于24小时"</string>
+    <string name="tax_za_year_hint" formatted="false">"年份按开始年显示：2026/27指2026年3月至2027年2月，SARS称为2027纳税年度。不支持其他UIF豁免。"</string>
+    <string name="tax_noza_deductions_hint" formatted="false">"仅额外税后员工现金扣款，无则填0。不要重复填写已算税款、国民保险或UIF，也不含雇主缴款。可抵税养老金及其他可扣除费用需另一配置。"</string>
+    <string name="tax_no_ordinary" formatted="false">"普通所得税"</string>
+    <string name="tax_no_step" formatted="false">"个人所得阶梯税"</string>
+    <string name="tax_no_ni" formatted="false">"员工国民保险"</string>
+    <string name="tax_uif" formatted="false">"员工UIF"</string>
+    <string name="tax_scope_sg" formatted="false">"新加坡2026收入年度：全年税收居民，年末18–54岁，一份普通工资工作，无奖金/额外工资、其他收入、残疾、福利或额外扣除。全年适用完整CPF率的公民/第三年起永久居民，或非公民/非永久居民且无CPF的外籍税收居民。含员工CPF及基本劳动所得减免。估算年度税款预留，不是每月预扣。"</string>
+    <string name="tax_scope_dk" formatted="false">"丹麦2026：仅哥本哈根，全年单身居民，18–59岁，仅工资，无教会税、资本/境外收入或特殊制度。须输入个人及市政两个最终核实年度税基，均为个人免税额扣抵之前，并填实际AM、ATP、员工养老金等现金扣款。含国家/市政税和基本个人免税额；不从税前工资推算税基，也不模拟税卡预扣。"</string>
+    <string name="tax_copenhagen" formatted="false">"哥本哈根"</string>
+    <string name="tax_dk_personal_base" formatted="false">"AM后已核实年度个人所得"</string>
+    <string name="tax_dk_municipal_base" formatted="false">"已核实年度市政应税所得"</string>
+    <string name="tax_dk_base_hint" formatted="false">"输入个人免税额扣抵前的两个最终已核实税基。个人所得已计AM/ATP/养老金调整；市政所得还应计全部合法就业、工作及其他税基扣除。不要填税前工资。应用不会推算税基或再次减去这些扣除。 若个人所得高于DKK 54,100而市政税基低于该额，暂不支持此免税额分配情形。"</string>
+    <string name="tax_dk_actual_deductions" formatted="false">"实际每月AM、ATP、养老金及其他现金扣款"</string>
+    <string name="tax_dk_deductions_hint" formatted="false">"包括实际AM劳动力市场税、员工ATP/养老金及其他非所得税现金扣款，无则填0。税务影响须已计入税基。不要含雇主成本及已算国家/市政所得税。工资变化时更新三个金额。"</string>
+    <string name="tax_sg_cpf_profile" formatted="false">"员工CPF身份"</string>
+    <string name="tax_sg_full" formatted="false">"公民／第三年起永久居民 — 完整CPF率"</string>
+    <string name="tax_sg_foreign" formatted="false">"外籍税收居民 — 非公民/永久居民，无CPF"</string>
+    <string name="tax_sg_year_hint" formatted="false">"2026指2026年1–12月收入，在YA 2027评税。不延用YA 2024/2025一次性税款减免。不支持永久居民首两年及其他CPF/年龄类型。"</string>
+    <string name="tax_sg_deductions_hint" formatted="false">"仅额外税后员工现金扣款，无则填0，包括适用的实际社群基金扣款。不要重复已算员工CPF或所得税，不含雇主缴款。额外可减税扣除不在此范围。"</string>
+    <string name="tax_cpf" formatted="false">"员工CPF"</string>
+    <string name="tax_dk_bottom" formatted="false">"国家基本税"</string>
+    <string name="tax_dk_municipal" formatted="false">"哥本哈根市政所得税"</string>
+    <string name="tax_dk_higher" formatted="false">"中档／高档／额外高档税"</string>
+    <string name="tax_scope_my" formatted="false">"马来西亚2026：全年单身税收居民，18–59岁，一份工作，仅普通现金工资；无其他收入、应税福利、特殊制度、天课或其他税款抵减。须提供已核实的最终年度应税所得，已计全部合法减免（含个人减免），及实际员工现金扣款。符合资格者含最高RM400不可退还个人税款抵减。年度估算，不是PCB预扣。"</string>
+    <string name="tax_scope_ph" formatted="false">"菲律宾2026：全年单身居民公民，18–59岁，一份私营工作，12次等额普通现金工资；无其他应税收入、特殊制度或税收抵免。须提供已核实年度普通应税工资及实际员工扣款。不支持最低工资劳动者免税。第13个月工资及其他福利在合计PHP90,000免税限额内不计入所示现金净额；应税超额及其他奖金不支持。年度估算，不是工资预扣。"</string>
+    <string name="tax_my_base_hint" formatted="false">"输入已扣全部合法减免（包括RM9,000个人减免）的最终已核实年度应税所得。不要填税前工资。应用另计符合资格的最高RM400税款抵减，不推算减免或再次减去现金缴款。工资变化时更新税基。"</string>
+    <string name="tax_ph_base_hint" formatted="false">"输入已扣合法员工缴款/会费的已核实年度普通应税现金工资，不是税前工资。不要从税基扣除所得税或私人贷款还款。应用不推算免税额或再次减去缴款。工资变化时更新税基。"</string>
+    <string name="tax_myph_deductions_hint" formatted="false">"输入实际每月员工EPF/SOCSO/EIS或SSS/PhilHealth/Pag-IBIG、合法会费及其他现金扣款，无则填0。其税务影响须已计入核实税基。不要含雇主缴款及此处计算的所得税。工资变化时更新两个金额。"</string>
+    <string name="tax_scope_pl" formatted="false">"波兰2026：全年单身居民，26–59岁，一份普通劳动合同，12次等额现金工资；年税前总额不超过PLN1,000,000。无其他收入、应税福利、联合申报、PIT-0、额外扣除或抵免。仅标准工作费用（最高PLN3,600/年），不含实际车票或50%创作费用。须核实年度税基及实际扣款。含PLN3,600基本税额减免。年度估算，不是工资预扣。本范围不含PPK参与者。"</string>
+    <string name="tax_scope_cz" formatted="false">"捷克2026：全年单身居民，18–64岁，一份普通工作，12次等额普通现金工资；无其他收入、应税福利、税基扣除或额外抵免。不含DPP/DPČ合同及特殊预扣。含CZK30,840年度基本不可退还抵免。社会保险、医保及适用的最低医保补差须输入员工实际扣款。估算年度税额，不是月度预缴。"</string>
+    <string name="tax_pl_base_hint" formatted="false">"输入扣除合法员工社保缴款及标准工作费用后的最终核实年度税基，须在PLN3,600税额减免之前。不要另减PLN30,000。本范围内医保、PPK和个人贷款不减税基。现金扣款不再扣除；工资变化时更新金额。"</string>
+    <string name="tax_plcz_deductions_hint" formatted="false">"输入实际每月员工社保/医保、税后养老金及其他现金扣款，无则填0。含适用的捷克最低医保补差。不要含雇主成本及此处计算的所得税。捷克现金扣款不减税基；波兰合法税务扣除须已计入核实税基。工资变化时更新。"</string>
+    <string name="tax_scope_th" formatted="false">"泰国2026：全年单身居民，18–59岁，一份普通工资工作，无受养人、其他收入、特殊制度或税收抵免。须核实全年工作收入及扣除合法费用、减免、免税后的最终税基。仅工资，不含其他收入的替代最低税。目前30%税档上限是THB500万，不是旧THB400万。"</string>
+    <string name="tax_scope_id" formatted="false">"印度尼西亚2026：全年单身居民，18–59岁，长期雇员，NPWP/整合NIK有效，TK/0，无受养人或其他收入。按核实扣除及PTKP后的税基进行第17条年度计算。不含DTP政府承担税款、雇主代付/税款补足、特殊制度及税收抵免。年度数据须含THR、奖金及应税福利。不是月度TER预扣。"</string>
+    <string name="tax_scope_vn" formatted="false">"越南2026：全年单身居民，18–59岁，一份工资工作，无受养人、其他收入、特殊制度或税收抵免。须核实全年工作收入及扣除合法保险、个人减免和免税（含符合资格的加班免税）后的最终税基。居民工资从2026税年起适用五档年度税率，不沿用旧七档。"</string>
+    <string name="tax_scope_tw" formatted="false">"台湾2026收入、2027申报：全年单身居民，18–59岁，仅工资，无受养人、其他/境外收入、AMT加计项目、特殊制度或税收抵免。须核实全年工作收入及全部合法免税、扣除和适用基本生活费调整后的最终税基。全年工作收入保守限定TWD750万以内；这不是法定税前AMT门槛。"</string>
+    <string name="tax_scope_lk" formatted="false">"斯里兰卡2026/27：2026年4月1日至2027年3月31日。全年单身居民，18–59岁，一份普通本地工资工作，无其他/境外收入、特殊制度、补发工资/离职特殊处理或税收抵免。须核实全年收入及扣除LKR180万个人减免和其他合法扣除后的最终税基。普通年度税款预留估算，不是APIT累计预扣。"</string>
+    <string name="tax_annual_employment_gross" formatted="false">"已核实全年工作收入总额"</string>
+    <string name="tax_asia_five_income_hint" formatted="false">"输入所选完整税年的减免前工作收入，含奖金、THR/额外工资及正确估值的应税雇主福利。有额外收入时不要只填月薪×12。总额与最终税基须分别核实。所示净额为本期现金工资减年度税款/12及员工实际现金扣款；不会把全年奖金或非现金福利加到所示现金收入。"</string>
+    <string name="tax_asia_five_base_hint" formatted="false">"输入已计所选税年全部合法费用、保险扣除、个人减免及免税的最终核实年度税基。应用不判断资格或推算减免，不要再次扣除。印尼PKP向下取整至IDR1,000。收入或情况变化时更新两个年度金额。"</string>
+    <string name="tax_asia_five_cash_hint" formatted="false">"填写本期实际员工社保/医保/养老金及其他现金扣款，无则填0。其合法税务影响须已反映在核实年度税基中。不要含雇主成本及此处预留的所得税，也不要再次填写税款预扣。这是年度税款预留估算，不是工资单或完整年度净收入。"</string>
+    <string name="tax_scope_pe" formatted="false">"秘鲁2026：全年单身本地税务居民，18–59岁，仅一份第五类工资工作，无受养人、其他/境外收入、特殊制度或税收抵免。UIT=PEN5,500。最终核实税基已计7 UIT扣除及另行核实的合资格额外费用。员工养老金不自动获得税基扣除。"</string>
+    <string name="tax_scope_co" formatted="false">"哥伦比亚2026：全年单身居民，18–59岁，仅普通工资，无受养人、其他/境外收入、特殊制度或抵免。UVT=COP52,374。须提供已计合法社保排除、免税及扣除限额的最终年度税基。使用年度第241条，不是月度第383条预扣。财富税等其他税种不在工资估算内。"</string>
+    <string name="tax_scope_ee" formatted="false">"爱沙尼亚2026：全年单身居民，18–59岁，仅普通工资，无受养人、其他收入、特殊制度或抵免。最终核实税基在合法扣除及EUR8,400基本免税额后按22%计税。不沿用旧收入递减免税额或退休年龄免税额。实际员工保险/养老金另填。"</string>
+    <string name="tax_scope_lv" formatted="false">"拉脱维亚2026：全年单身居民，18–59岁，仅工资，无受养人、其他收入或抵免。全年工作总收入不超过EUR105,300；不含高档税率、团结税及额外3%。最终核实税基在合法缴款/扣除及EUR6,600基本免税额后按25.5%计税。不是完整高收入工资计算。"</string>
+    <string name="tax_scope_lt" formatted="false">"立陶宛2026：全年单身居民，18–59岁，仅普通全额应税工资，无受养人、其他收入、病假津贴、残疾/特殊NPD或额外扣除/抵免。年度税率20%/25%/32%。核实税基仅计普通NPD，员工社保不自动扣除。年收入超过EUR83,237.40时，本范围要求税基等于全年收入。"</string>
+    <string name="tax_scope_bg" formatted="false">"保加利亚2026：全年单身居民，18–59岁，仅工资，无受养人、其他收入、特殊制度、抵免或申报折扣。2026起使用EUR，旧BGN金额须另行核实换算后输入。核实最终年度税基在合法员工缴款/扣除后按10%计税。不自动换汇或模拟法定工资取整。"</string>
+    <string name="tax_scope_ro" formatted="false">"罗马尼亚2026：全年单身居民，18–59岁，一份普通本地工资工作，无受养人、其他收入、特殊制度或抵免。已核实月度工资税基合计在合法缴款、个人扣除和最低工资免税后按10%计税。须逐月核实条件，年度预留不决定资格。"</string>
+    <string name="tax_scope_hu" formatted="false">"匈牙利2026：全年单身居民，25–59岁，仅普通全额应税工资，无子女、其他收入、免税、税基减免或抵免。不含25岁以下、母亲/家庭、残疾/新婚减免及简化/季节雇佣。全年工资税率15%；本范围核实税基须等于全年工作收入。员工保险不减税基。"</string>
+    <string name="tax_scope_ge" formatted="false">"格鲁吉亚2026：全年单身居民，18–59岁，仅普通全额应税本地工资，无受养人、其他/境外收入、免税、特殊经营制度或抵免。全年工资税率20%；核实税基须等于全年工作收入。实际员工养老金等现金扣款只减现金收入，不再次减税基。"</string>
+    <string name="tax_scope_am" formatted="false">"亚美尼亚2026：全年单身居民，18–59岁，仅普通全额应税本地工资，无受养人、其他/境外收入、特殊行业税率、免税、住房贷款/社会费用退税或抵免。全年工资税率20%，核实税基等于全年工作收入。实际员工养老金、印花税及适用医保现金另填。"</string>
+    <string name="tax_ten_income_hint" formatted="false">"填写已核实的2026完整日历年工作收入，含奖金、额外工资和正确估值的应税福利，以及最终年度税基。罗马尼亚税基为核实月度税基之和。年度税款/12从本期现金工资中预留；不把全年奖金或非现金福利加到所示现金收入。"</string>
+    <string name="tax_ten_base_hint" formatted="false">"输入最终年度税基前核实全部合法扣除与免税；应用不判断资格。格鲁吉亚、亚美尼亚、匈牙利本范围税基等于全年工资，员工保险不减税基。立陶宛只含普通NPD，超过所示门槛不得减基。情况变化时更新两个年度金额。"</string>
+    <string name="tax_ten_cash_hint" formatted="false">"填写本期实际员工社保/医保/养老金及其他非所得税现金扣款，无则0。亚美尼亚含适用的实际印花税和医保费。不要含雇主成本及此处预留的所得税。合法税务影响须已计入核实税基，勿重复扣除。这是年度估算，不是工资单或税务申报。"</string>
+    <string name="tax_fifteen_common_scope" formatted="false">"适用条件：全年税务居民、单身18–59岁，仅一份普通境内工作，无受扶养人、其他或境外收入、特殊制度及未注明的税收抵免。国家和语言不能确定资格。请确认全部条件。数值适用于所有查看的期间；收入或情况改变时请更新。"</string>
+    <string name="tax_scope_mx" formatted="false">"墨西哥2026：年度ISR税表，并非月度代扣。任何月份均无就业补贴资格、最低工资免税、特殊支付或抵免。保守限制：最终年税基/12须超过MXN11,492.66；仅此不能证明资格。请核实全年的税基及扣除。"</string>
+    <string name="tax_scope_br" formatted="false">"巴西2026：仅一次普通、全额应税的月度现金工资；采用法定扣除或简化扣除后的已核实月税基，不能同时用两者。包含新的月度减税。不含实物/免税款、第13薪、休假或单独计税事件、年度结算及其他抵免。已核实全年总额不超过BRL600,000，此为应用保守限制。"</string>
+    <string name="tax_scope_cr" formatted="false">"哥斯达黎加2026：普通全额应税月度现金工资。按照2026工资税表，在扣除员工社保之前计税。无配偶/子女抵免、免税奖金、第13薪、单独或不足整月支付计算。员工实际现金扣款单独输入。"</string>
+    <string name="tax_scope_gt" formatted="false">"危地马拉2026：法定扣除及免税后的最终已核实年税基，包括普通Q48,000及2026额外Q3,024扣除。不使用2027指数化免税。税基Q300,000以内5%，超出部分7%。请在税基中核实aguinaldo/Bono14免税及凭证扣除。"</string>
+    <string name="tax_scope_do" formatted="false">"多米尼加共和国2026：年度工资税表及公布固定税额。输入RD$416,220零税率区间之前的税基，不要再次减去该门槛。无2027税表、教育或其他抵免。员工实际社保现金单独输入。"</string>
+    <string name="tax_scope_ke" formatted="false">"肯尼亚2026：法定SHIF、住房征费及养老金扣除后的最终已核实年税基。居民个人减税每年最高KES28,800已计一次，不超过税额退款。不含私人保险减税、其他抵免或特殊免税。实际现金扣款单列，不能再次减税基。"</string>
+    <string name="tax_scope_rw" formatted="false">"卢旺达2026：仅第一雇主的普通工作及已核实年税基。不含15%临时劳工、第二雇主、董事费或特殊制度。年税/12为预留，并非变动月份实际PAYE。员工实际缴费单列。"</string>
+    <string name="tax_scope_ug" formatted="false">"乌干达2026/27：2026年7月1日至2027年6月30日，采用新居民税档。预留假设12个月应税基数相同，不是变动或累计扣税。不使用旧235,000门槛或非居民税表。含月税基超过UGX1000万部分额外10%。"</string>
+    <string name="tax_scope_zm" formatted="false">"赞比亚2026：按年换算工资税档，包含月度ZMW5,100零税率档。输入已核实年税基及实际员工扣款。不含残疾、特殊就业或其他抵免。排除雇主成本。"</string>
+    <string name="tax_scope_pk" formatted="false">"巴基斯坦2026/27、税年2027：已通过2026财政法工资税档。居民仅工资收入，已核实全年就业总额最高PKR1000万。排除附加税、超级税、养老金、经营或特殊抵免。不使用2025/26税表或法案草案税率。"</string>
+    <string name="tax_scope_uz" formatted="false">"乌兹别克斯坦2026：普通全额应税居民工资12%；已核实年税基等于年工资。无特殊免税或自愿养老金优惠。12%内部划拨的积累养老金已包括，不能再次作为额外现金扣款。排除雇主社会税。"</string>
+    <string name="tax_scope_kz" formatted="false">"哈萨克斯坦2026：8,500MCI处采用新年度10%/15%税档；MCI=KZT4,325。税基已包括全年普通360MCI及法定社保扣除，不使用旧14MCI规则。无私人执业、经营、股息或特殊社会减免。"</string>
+    <string name="tax_scope_ma" formatted="false">"摩洛哥2026：仅普通工资，已核实年净应税基数已扣除法定职业费用、员工缴费及免税。六个现行税档，最高37%。无家庭抵免、经营/农业、特殊区域/税率或其他抵免。实际现金扣款单列。"</string>
+    <string name="tax_scope_md" formatted="false">"摩尔多瓦2026：普通制度，全年就业总额严格低于MDL360,000，此为保守应用范围。税基已包含普通MDL29,700免税及法定扣除。无科技园、出租车、增额个人/家庭减免或其他抵免。"</string>
+    <string name="tax_scope_mk" formatted="false">"北马其顿2026：普通工资，法定缴费及每年MKD131,184个人减免后的最终已核实年税基按10%。无其他收入、特殊免税或抵免。实际员工现金单列；勿重复减免。"</string>
+    <string name="tax_monthly_verified_base" formatted="false">"本次月度支付的已核实应税基数"</string>
+    <string name="tax_br_annual_hint" formatted="false">"输入2026全年已核实就业总收入，包括第13薪、休假及奖金，以检查BRL600,000范围限制。下方月度估算不计算其单独税额或年度结算。不要将这些事件放入普通月份的现金总额或税基。"</string>
+    <string name="tax_br_monthly_base_hint" formatted="false">"同一次普通月度支付：输入法定扣除后的已核实税基。应用与税前工资减BRL607.20比较，采用较低税基，不叠加两项扣除。不自动计算INSS。请按所查看支付更新；无历史配置版本。"</string>
+    <string name="tax_fifteen_income_hint" formatted="false">"输入所选完整税年的已核实就业收入，包括奖金、正确计价的应税福利及最终年税基。UG/PK从2026年7月开始；PK为税年2027。年度税表/12为现金工资的税款预留，不是工资单、累计扣税或全年净收入。UG假设12个月税基相同。"</string>
+    <string name="tax_fifteen_base_hint" formatted="false">"输入法定扣除及减免后的最终已核实年税基。不要再次减去零税率区间。GT含2026额外Q3,024；KZ360MCI；MK131,184MKD。UZ税基等于年工资。MD总额低于360,000。不自动判断法律资格。"</string>
+    <string name="tax_fifteen_cash_hint" formatted="false">"输入本次支付实际非所得税员工现金扣款，或明确输入0：适用社保、医疗、养老金及征费。排除雇主成本及此处已计算所得税。UZ不要重复计入12%内养老金。合法税基影响应已包括在已核实税基，勿重复扣除。"</string>
+    <string name="tax_wave_common_scope" formatted="false">"适用条件：18–59岁单身普通员工，全年在当地居住工作，仅一份境内工作，无受扶养人、其他或境外收入、特殊制度或未注明抵免。请独立核实税务居民身份与个人条件；国家和语言不能证明资格。仅计算当地工资，不含母国/境外税。数值适用于所有期间，请及时更新。"</string>
+    <string name="tax_scope_pa" formatted="false">"巴拿马2026：居民普通工资及最终已核实年税基。PAB11,000以内0%，至50,000为15%，超额25%。无代表津贴/单独税率支付、其他收入或特殊抵免。实际社保现金单列，勿重复扣除零税档。"</string>
+    <string name="tax_scope_ni" formatted="false">"尼加拉瓜2026：居民普通工资，合法INSS/储蓄扣除及免税后的年税基。现行0/15/20/25/30%。税基中核实第13薪免税；勿再扣C$100,000零税档。无离职/单独税率支付/特殊抵免。年度预留，并非累计代扣。"</string>
+    <string name="tax_scope_sv" formatted="false">"萨尔瓦多2026：仅一次普通月度应税支付及合法扣除后的已核实月税基。公布月度代扣表含固定税额；不计算6月/12月累计重算、年度结算、半月或不足整月。无特殊/免税支付或其他抵免。"</string>
+    <string name="tax_scope_hn" formatted="false">"洪都拉斯2026：居民普通工资，最终年税基已含完整符合资格的HNL40,000教育医疗扣除及其他合法扣除免税。采用2026新档。无65岁以上优惠、经营或特殊抵免。勿再次扣零税档。"</string>
+    <string name="tax_scope_py" formatted="false">"巴拉圭2026：居民雇员须在2026之前已登记IRP-RSP；不支持首次登记/跨门槛年份。核实全年总收入、费用前IRP应税收入（不含免税第13薪）及净税基。应税收入至PYG8000万无需缴税，以上按净税基8/9/10%累进。无资本、经营、其他收入或抵免。"</string>
+    <string name="tax_scope_ec" formatted="false">"厄瓜多尔2026：大陆居民员工，无受扶养人、残疾/特殊疾病或特殊优惠。公布2026年度固定税额。已核实合资格个人费用按18%减税，上限普通7篮子及税额。排除加拉帕戈斯、家庭及特殊上限。减少税额，不重复减少税基。"</string>
+    <string name="tax_scope_na" formatted="false">"纳米比亚2026/27：2026年3月1日至2027年2月28日，居民普通本地工资。合法扣除及正确计价福利后的最终年税基。NAD100,000零税档及18/25/28/30/32/37%。无养老金提取、农业/经营/其他收入或特殊抵免。年度预留，不是累计PAYE。"</string>
+    <string name="tax_scope_kh" formatted="false">"柬埔寨2026：居民普通月度现金工资，不含受扶养人/配偶减免、非居民或福利单独税制。合法扣除后的已核实月税基，0/5/10/15/20%。勿再扣KHR150万零税档；实际员工缴费单列。"</string>
+    <string name="tax_scope_az" formatted="false">"阿塞拜疆2026：主要工作为私营非石油非天然气行业的普通全额应税月度现金工资。3/10/14%，税前工资不超过2,500时一次计AZN200免税。不支持公共/油气行业或特殊减免。员工保险现金不减少所得税基。不用2027/2028税率。"</string>
+    <string name="tax_scope_bh" formatted="false">"巴林2026：非GCC公民外籍员工的普通本地工资。此条件下无本地工资所得税；须明确输入实际SIO/失业/养老金/其他员工现金或0。不含雇主成本、经营/其他收入或母国税。"</string>
+    <string name="tax_scope_kw" formatted="false">"科威特2026：非GCC外籍员工普通本地工资，无本地个人工资所得税。实际保险/养老金/其他工资扣款明确输入或0。不计算公司/经营、雇主成本及境外/母国税。"</string>
+    <string name="tax_scope_om" formatted="false">"阿曼2026：非GCC外籍员工普通本地工资。2026无本地个人所得税；新法2028才生效，此处不收5%，也未开启未来年份。实际社保/医疗/养老金现金或0，不含雇主成本/境外税。"</string>
+    <string name="tax_scope_qa" formatted="false">"卡塔尔2026：非GCC外籍员工普通本地工资不适用当地所得税。实际保险/养老金/其他扣款或0；不得从国家推断免缴贡献。不含经营/公司、雇主成本或境外/母国税。"</string>
+    <string name="tax_scope_bn" formatted="false">"文莱2026：普通本地员工工资无个人所得税。须核实并输入实际SPK/养老金/社保/其他现金或0；不自动判断费率或资格。不含经营/其他收入、雇主成本或境外/母国税。"</string>
+    <string name="tax_scope_bs" formatted="false">"巴哈马2026：普通本地工资无国内个人所得税。须核实并输入实际NIB/养老金/其他员工扣款或0。不自动推断免缴贡献，不含经营/其他收入、雇主成本或境外/母国税。"</string>
+    <string name="tax_ec_mainland" formatted="false">"厄瓜多尔大陆"</string>
+    <string name="tax_ec_expenses" formatted="false">"已核实合资格年度个人费用"</string>
+    <string name="tax_ec_expenses_hint" formatted="false">"大陆、无受扶养人或特殊身份：输入独立核实的2026合资格个人费用，或明确0。USD5,752.60（7×821.80）以内按18%减税，四舍五入至分且不超过税额，最高USD1,035.47。不得把相同费用再次从年税基扣除。不自动判断资格或加拉帕戈斯/特殊上限。"</string>
+    <string name="tax_py_receipts" formatted="false">"已核实费用前年度IRP应税收入"</string>
+    <string name="tax_py_receipts_hint" formatted="false">"巴拉圭：核实扣除费用前IRP-RSP应税工资收入，不含合法免税第13薪/收入。不一定等于全年就业总收入或净税基。此数额&lt;=全年总收入；最终税基&lt;=此数额。PYG8000万缴税门槛使用此字段而非全部税前收入。须2026前已登记。"</string>
+    <string name="tax_wave_annual_hint" formatted="false">"输入整个税年的已核实就业总收入，包括奖金、正确计价福利及合法扣除免税后的最终年税基。纳米比亚2026/27从2026年3月1日开始，其他为2026历年。年税/12为期间现金工资的税款预留，不是工资单、累计扣税或全年净收入。不会把全年额外收入全部加入当期现金。"</string>
+    <string name="tax_wave_monthly_hint" formatted="false">"输入与所示税前工资对应的同一次普通月度支付的最终已核实税基，仅扣合法项目。不要重复减零税档或现金扣款。月税基适用于所有期间：按每次支付更新。不计算SV累计/年度调整或KH福利税。"</string>
+    <string name="tax_wave_base_hint" formatted="false">"输入合法扣除免税后的最终已核实年税基、零税档之前。HN已包含完整符合资格的40,000扣除。PY税基&lt;=已核实应税收入，不含免税第13薪。EC个人费用单独减税，不再次扣税基。请独立核实资格。"</string>
+    <string name="tax_wave_cash_hint" formatted="false">"本次支付实际非所得税员工现金扣款，或明确0，包括适用社保、医疗、养老金、失业/NIB/SPK及其他工资项目。排除雇主成本及此处已计算所得税。合法税务影响应已在已核实税基中。无本地所得税不代表没有员工扣款；不计算境外/母国税。"</string>
+    <string name="tax_twenty_common_scope" formatted="false">"适用范围：31–59岁单身税务居民，在当地居住并工作整个纳税年度，仅一份普通工作，无受扶养人、其他或境外收入，除明确说明外无特殊身份或抵免。国家和语言不能证明资格。请独立核实最终计税基础及实际员工扣款；不含雇主成本或境外税。每笔付款须更新输入。"</string>
+    <string name="tax_scope_at" formatted="false">"2026普通年薪。包含496交通抵免和按收入递减的最高804补贴，以税额为限。不含提高的通勤抵免、commuter euro、单独计税的第13/14薪或社保退款。合法工资扣除已在基础内，不要再次扣除零税率档。"</string>
+    <string name="tax_scope_cy" formatted="false">"2026改革税档，核实合法扣除与免税后的最终年薪基础。住房、环保、家庭或首次就业优惠不自动认定；不含其他收入和特殊抵免。"</string>
+    <string name="tax_scope_mt" formatted="false">"2026仅SINGLE单身税档；不含已婚、父母、子女税档、特殊15%兼职制或其他抵免。须核实最终年度应税收入。"</string>
+    <string name="tax_scope_gr" formatted="false">"2026仅31–59岁无子女员工。新税档；777抵免在12000以上递减，限税额且只计一次。须满足电子消费条件；不含消费不足附加税、特殊免税或其他抵免。"</string>
+    <string name="tax_scope_si" formatted="false">"2026官方年度税表，使用合法社保、个人及一般减免后的最终年度净基础。不得重复扣除。无青年、学生、残障、志愿者特殊待遇，亦无境外收入或特殊抵免。"</string>
+    <string name="tax_scope_sk" formatted="false">"2026新年度税档19/25/30/35%。最终基础已扣合法缴费及符合条件的免税额，包括收入递减。不得重复扣除，不含子女、房贷或特殊抵免。"</string>
+    <string name="tax_scope_hr" formatted="false">"2026仅萨格勒布，31–59岁，无青年或回流移民免税。最终基础已含符合条件的7200基本减免及合法养老金扣除。基础60000处适用23/33%。其他市镇暂不支持。"</string>
+    <string name="tax_scope_rs" formatted="false">"2026普通月度工资预扣：按日期及工时适用的合法工资减免后的最终核实月基础乘10%。不得再扣员工保险。高收入年度附加税、累计结算及特殊免税不包含。"</string>
+    <string name="tax_scope_me" formatted="false">"2026普通全额应税月度现金工资，基础须等于员工缴费前的税前工资。税档0/9/15%。工资市政附加税属于雇主成本，不在此再次扣员工工资。无特殊付款或年度结算。"</string>
+    <string name="tax_scope_al" formatted="false">"2026年度税率13/23%，最终基础已扣按收入确定的个人免税额及其他合法扣除。600000/420000/360000已经计入，不再重复。无子女、教育抵免或其他收入。"</string>
+    <string name="tax_scope_ba" formatted="false">"2026仅波黑联邦，不含塞族共和国或布尔奇科。最终年薪基础已扣合法员工缴费和符合条件的3600个人减免。所得税10%，无额外抵免。"</string>
+    <string name="tax_scope_ng" formatted="false">"NTA/JRB2026：仅12笔相同的全额应税月度现金工资，年总额=当前税前工资×12。无奖金、福利、变动工资、军人或其他免税职位。包含每月不超过70000最低工资就业免税。年基础须合法减免后核实；不使用旧CRA或重复扣除800000零税档。"</string>
+    <string name="tax_scope_gh" formatted="false">"2026普通居民月薪，仅9月1日起的新表。须输入核实的实际付款日及合法扣除后的月基础；报告期末必须同一公历月。此前月份、奖金、优惠加班、临时工、非居民及年度/累计结算不支持。"</string>
+    <string name="tax_scope_tz" formatted="false">"2026仅大陆地区居民主要工作，月度PAYE。基础须已扣合法减免/认可养老金，再应用零税档。不含桑给巴尔、第二份工作或非居民30%固定税、特殊付款及年度结算。"</string>
+    <string name="tax_scope_bw" formatted="false">"2026/27自2026年7月1日开始，已生效居民年表新增400000以上27.5%，不是旧最高25%。最终基础须核实；无非居民税档、遣散/养老金一次性支付、经营收入或特殊抵免。"</string>
+    <string name="tax_scope_mu" formatted="false">"收入年度2026/27自2026年7月1日开始，不是评税年度。保守范围：全年就业总收入不超过1200万MUR，无其他收入。范围内税率0/10/20%。不含更高收入35%/Fair Share、特殊制度及抵免；须核实全部基础扣除。"</string>
+    <string name="tax_scope_eg" formatted="false">"2026普通居民工资，全年总收入不超过600000EGP。最终核实基础已含符合条件的20000个人免税及合法扣除，在40000零税档之前。基础向下取10EGP整数倍。更高收入失去税档和特殊抵免不支持。员工社保、印花税等实际现金扣款另填。"</string>
+    <string name="tax_scope_sz" formatted="false">"2026/27自2026年7月1日开始，普通工资年税档20/25/30/33%，含一次性8200不可退还基本抵免。实际零税点41000不是另一项基础扣除。不含60岁以上、遣散/退休特殊税或其他抵免；基础须核实。"</string>
+    <string name="tax_scope_ls" formatted="false">"2026/27自2026年4月1日开始，更新年度税档77760按20%，超额30%，不可退还年度抵免12240。替代RSL旧页面金额。须核实最终工资基础；不含雇主福利税、非居民、离职及特殊抵免。"</string>
+    <string name="tax_scope_jo" formatted="false">"2026普通居民年薪。最终核实基础已含符合条件的9000个人免税及合法有凭证扣除。税档5/10/15/20/25/30%，200000以上另有1%国家贡献。年度基础和税额按法舍去第纳尔小数；无特殊制度/抵免。"</string>
+    <string name="tax_payment_date" formatted="false">"实际付款日 · YYYY-MM-DD"</string>
+    <string name="tax_payment_date_hint" formatted="false">"仅加纳：核实日期须在2026-09-01至2026-12-31，且与报告期末同一公历月，否则不显示净额。使用拉丁数字，如2026-10-31。另一付款须更新日期/基础；旧表及年度/累计结算未启用。日期包含于备份。"</string>
+    <string name="tax_payment_date_invalid" formatted="false">"请输入有效的YYYY-MM-DD日期，使用拉丁数字，或留空。"</string>
+    <string name="tax_zagreb" formatted="false">"萨格勒布"</string>
+    <string name="tax_fbih" formatted="false">"波斯尼亚和黑塞哥维那联邦"</string>
+    <string name="tax_tz_mainland" formatted="false">"坦桑尼亚大陆"</string>
+    <string name="tax_twenty_annual_hint" formatted="false">"独立核实整个纳税年度的就业总收入和最终基础。BW/MU/SZ2026/27从7月1日开始，LS从4月1日开始，其他为2026公历年。年税÷12是对本期现金的税款储备，不是实际累计扣缴或全年净现金。尼日利亚须12笔等额工资。年度奖金/福利不全部加入当前付款。"</string>
+    <string name="tax_twenty_base_hint" formatted="false">"最终核实年度计税基础：合法扣除和符合条件的个人减免后，零税档及税后抵免前。AL/BA/HR/EG/JO基本减免已含在基础内；AT/GR/SZ/LS抵免另从税额计算。不得重复扣除现金或零税档，须确认个人资格。"</string>
+    <string name="tax_twenty_monthly_hint" formatted="false">"同一普通月付款的最终核实计税基础：合法减免后、零税档前。RS减免须对应日期和工时；ME基础=缴费前税前工资；GH须实际日期及月份；TZ仅大陆主要工作。不含年度或累计结算，查看其他付款须更新基础/日期。"</string>
+    <string name="tax_us_ak" formatted="false">"阿拉斯加州"</string>
+    <string name="tax_us_nv" formatted="false">"内华达州"</string>
+    <string name="tax_us_sd" formatted="false">"南达科他州"</string>
+    <string name="tax_us_tn" formatted="false">"田纳西州"</string>
+    <string name="tax_us_wa" formatted="false">"华盛顿州"</string>
+    <string name="tax_us_wy" formatted="false">"怀俄明州"</string>
+    <string name="tax_us_nh" formatted="false">"新罕布什尔州"</string>
+    <string name="tax_us_az" formatted="false">"亚利桑那州"</string>
+    <string name="tax_us_ia" formatted="false">"艾奥瓦州"</string>
+    <string name="tax_us_il" formatted="false">"伊利诺伊州"</string>
+    <string name="tax_us_mi" formatted="false">"密歇根州"</string>
+    <string name="tax_us_nc" formatted="false">"北卡罗来纳州"</string>
+    <string name="tax_us_ut" formatted="false">"犹他州"</string>
+    <string name="tax_us_ky" formatted="false">"肯塔基州"</string>
+    <string name="tax_us_pa" formatted="false">"宾夕法尼亚州"</string>
+    <string name="tax_us_in" formatted="false">"印第安纳州"</string>
+    <string name="tax_us_ma" formatted="false">"马萨诸塞州"</string>
+    <string name="tax_us_ga" formatted="false">"佐治亚州"</string>
+    <string name="tax_us_la" formatted="false">"路易斯安那州"</string>
+    <string name="tax_us_ms" formatted="false">"密西西比州"</string>
+    <string name="tax_us_state_base" formatted="false">"已核实的州年度应税基数"</string>
+    <string name="tax_us_base_hint" formatted="false">"扣除合法州扣除额及免税额后的最终基数，适用零税率档及抵免之前。不要复制联邦应税基数；个人资格须另行核实。"</string>
+    <string name="tax_us_state_relief" formatted="false">"已核实的州年度税额减免"</string>
+    <string name="tax_us_relief_hint" formatted="false">"适用的不可退还减税总额，包括符合资格的个人或低收入减免。输入已核实的2026金额，无则明确填0。最多减至州税为零；不计算退税或自动认定资格。"</string>
+    <string name="tax_us_local_tax" formatted="false">"本期员工地方税"</string>
+    <string name="tax_us_local_hint" formatted="false">"本次付款实际且已核实的市、县、学区或职业员工税，无则明确填0。不计算地方税率或豁免；不要再计入其他扣款。"</string>
+    <string name="tax_us_zero_hint" formatted="false">"此2026方案不对普通工资征收州所得税。联邦税、Social Security、Medicare及实际地方税和其他员工扣款仍适用。华盛顿州2028年的所得税变更不用于2026年。"</string>
+    <string name="tax_us_pa_ut_hint" formatted="false">"PA/UT初期仅支持全额应税且无调整的工资；州基数须等于当前月毛薪乘12。PA无标准扣除。UT的联邦扣除影响单独抵免而非此基数；须另行核实2026抵免。"</string>
+    <string name="tax_us_ms_hint" formatted="false">"密西西比：最终州基数超过10,000美元的部分按4%。此处已应用一次零税率档，不要从输入基数中再扣除。夫妻联合申报且仅一人有收入时只用一档。"</string>
+    <string name="tax_us_ma_hint" formatted="false">"马萨诸塞：普通工资按5%，家庭年毛收入上限100万美元，以排除高收入附加税情况。No Tax Status或Limited Income Credit减免须另行核实。"</string>
+    <string name="tax_us_cash_hint" formatted="false">"本期其他实际员工扣款，无则填0：适用的带薪休假、WA Cares、失业保险、PFML及其他供款。不含雇主费用；排除已计算的联邦、州、地方税、Social Security及Medicare。税前福利不在此方案范围内。"</string>
+    <string name="tax_us_current_inputs" formatted="false">"州基数及减免须手动输入已核实金额。年毛薪=当前月毛薪乘12；年税/12是平均负债预留，并非W-4或年内累计预扣。每次付款和期间须更新。不自动计算地方税、可退还抵免或跨州情形。"</string>
+    <string name="tax_us_state_tax" formatted="false">"州所得税"</string>
+    <string name="tax_us_al" formatted="false">"阿拉巴马州"</string>
+    <string name="tax_us_ar" formatted="false">"阿肯色州"</string>
+    <string name="tax_us_ca" formatted="false">"加利福尼亚州"</string>
+    <string name="tax_us_co" formatted="false">"科罗拉多州"</string>
+    <string name="tax_us_ct" formatted="false">"康涅狄格州"</string>
+    <string name="tax_us_de" formatted="false">"特拉华州"</string>
+    <string name="tax_us_hi" formatted="false">"夏威夷州"</string>
+    <string name="tax_us_id" formatted="false">"爱达荷州"</string>
+    <string name="tax_us_ks" formatted="false">"堪萨斯州"</string>
+    <string name="tax_us_md" formatted="false">"马里兰州"</string>
+    <string name="tax_us_me" formatted="false">"缅因州"</string>
+    <string name="tax_us_mn" formatted="false">"明尼苏达州"</string>
+    <string name="tax_us_mo" formatted="false">"密苏里州"</string>
+    <string name="tax_us_mt" formatted="false">"蒙大拿州"</string>
+    <string name="tax_us_nd" formatted="false">"北达科他州"</string>
+    <string name="tax_us_ne" formatted="false">"内布拉斯加州"</string>
+    <string name="tax_us_nj" formatted="false">"新泽西州"</string>
+    <string name="tax_us_nm" formatted="false">"新墨西哥州"</string>
+    <string name="tax_us_ny" formatted="false">"纽约州"</string>
+    <string name="tax_us_oh" formatted="false">"俄亥俄州"</string>
+    <string name="tax_us_ok" formatted="false">"俄克拉何马州"</string>
+    <string name="tax_us_or" formatted="false">"俄勒冈州"</string>
+    <string name="tax_us_ri" formatted="false">"罗得岛州"</string>
+    <string name="tax_us_sc" formatted="false">"南卡罗来纳州"</string>
+    <string name="tax_us_va" formatted="false">"弗吉尼亚州"</string>
+    <string name="tax_us_vt" formatted="false">"佛蒙特州"</string>
+    <string name="tax_us_wi" formatted="false">"威斯康星州"</string>
+    <string name="tax_us_wv" formatted="false">"西弗吉尼亚州"</string>
+    <string name="tax_us_final_scope" formatted="false">"新增28州仅支持居民普通工资，不含替代性最低税或特殊制度。自动税率估算的家庭年毛收入上限为100万美元，部分州另有较低限制。基数、减免及员工扣款须独立核实；并非完整薪资计算。"</string>
+    <string name="tax_us_manual_scope" formatted="false">"CO / ID / VT：仅支持输入已核实税负。此处尚未核实2026报税自动税率表。须输入独立核实的2026最终州年度所得税负；本应用不计算该税负或减免资格。"</string>
+    <string name="tax_us_verified_state_tax" formatted="false">"已核实的最终州年度所得税负"</string>
+    <string name="tax_us_verified_tax_hint" formatted="false">"2026最终税负，已计入不可退还减免，但尚未扣除预扣税和预缴款。不是待补缴余额、已预扣税、往年税或退款。核实无税负才明确填0。仅除以12一次；此模式忽略基数和减免字段。地方税及其他员工扣款另列。每次付款须更新。"</string>
+    <string name="tax_us_final_limits" formatted="false">"自动计算家庭年毛收入上限：CT单身5万美元、夫妻合报10万美元；NY 107650美元；AR 94700美元。不计算高收入附加或优惠追回及AR替代税表。超出范围则净薪不可用。"</string>
+    <string name="tax_us_sc_hint" formatted="false">"南卡罗来纳采用2026新法的两档税率及SCIAD。最终基数须已包含核实后的适用SCIAD及其递减，不得自动沿用联邦标准扣除或旧0/3/6%税档。"</string>
+    <string name="tax_us_or_hint" formatted="false">"俄勒冈采用官方2026估算税率表及公布的取整基础税额，最终报税数据可能变化。基数、合法联邦税扣除和抵免须另行核实。交通税、带薪假供款及地方税按实际员工扣款输入。"</string>
+    <string name="tax_us_oh_hint" formatted="false">"俄亥俄2026：最终州基数不超过26050美元时为零；超过后先加332美元，再对超出部分按2.75%。个人及低收入抵免须在州减免中核实。地方及学区税另计。"</string>
+    <string name="tax_us_manual_result" formatted="false">"州税 · 输入的年度税负 / 12"</string>
+    <string name="tax_next_common_scope" formatted="false">"仅2026：31至59岁单身全年居民，一份普通本地工作，无受抚养人、其他或境外收入及特殊制度。国家和语言不证明资格；基数、抵免及实际员工扣款须核实。无雇主费用、汇率或历史设置版本；每次付款须更新。"</string>
+    <string name="tax_next_annual_hint" formatted="false">"已核实的2026全年总就业毛收入。年税/12是本期现金预留，并非浮动工资累计预扣、年报或退税。全年附加收入不得全数加入本期现金。"</string>
+    <string name="tax_next_monthly_hint" formatted="false">"本次月度付款的最终已核实基数。IS/CL/UY/BO并非年报。UY可含法定6%上调；供款通过抵免减税，不再次减基数。BO已包含合法2SMN扣除。"</string>
+    <string name="tax_next_base_hint" formatted="false">"合法扣除及免税额后的最终国家年度基数，零税率档和抵免之前。NL含Box1保险。JM/FJ/LU零档在此应用一次；BB25000及BZ适用个人减免须已扣除。"</string>
+    <string name="tax_next_annual_relief" formatted="false">"已核实年度不可退还减税额"</string>
+    <string name="tax_next_monthly_relief" formatted="false">"本次月度付款的已核实减税额"</string>
+    <string name="tax_next_relief_hint" formatted="false">"输入独立核实的适用减税，无则明确0。限于税额，不产生退款或自动资格。年度方案输入年额，IS/CL/UY/BO输入月额。NL含Box1税及保险抵免；LU含基金影响。其他税已用抵免不得重复。"</string>
+    <string name="tax_next_extra_tax" formatted="false">"本期员工附加税"</string>
+    <string name="tax_next_extra_hint" formatted="false">"实际且已核实的未计算税费，无则0：地方、州县、区域、教会、广播及其他。JP重建税、LU7%基金及NL保险已算；IS含标准市政部分。不得重复或与其他扣款重叠。"</string>
+    <string name="tax_next_cash_hint" formatted="false">"本期其他实际员工扣款，无则0：适用养老金、社保、医疗及保险；不含雇主费用。排除已算国家税和另输附加税。NL国家保险已含。合法供款可分别影响基数与现金，不得重复减基数。"</string>
+    <string name="tax_next_verified_tax" formatted="false">"已核实最终国家及区域年度所得税"</string>
+    <string name="tax_next_verified_hint" formatted="false">"手动模式：已核实2026收入年度税负，适用不可退还抵免之后、预扣及预缴之前。不是已预扣税、待补余额、退款或往年税。仅除以12一次；市政税另列，此模式忽略基数及减税字段。"</string>
+    <string name="tax_next_cl_date_hint" formatted="false">"智利：2026实际付款日期YYYY-MM-DD，拉丁数字。仅已发布1至11月表；须与所看期间结束月份一致，否则净薪不可用。不自动替换成年表或52bis。"</string>
+    <string name="tax_next_nl_charge" formatted="false">"Box1税及国家保险"</string>
+    <string name="tax_next_manual_result" formatted="false">"国家及区域税 · 已输入年度税负 /12"</string>
+    <string name="tax_next_nl" formatted="false">"荷兰：未达AOW年龄的普通Box1，年毛收入≤78426EUR。2026首档含27.65%国家保险。核实合并抵免，不得再扣该保险。不含Box2/3、30%优惠或高收入扣除限制情况。"</string>
+    <string name="tax_next_be" formatted="false">"比利时：仅手动输入已核实国家及区域年度税负。2026收入对应2027评税，不能改用2026评税计算器。市政税另列；不自动计算区域资格、抵免或flexi-job。"</string>
+    <string name="tax_next_lu" formatted="false">"卢森堡：仅class1，年毛收入≤150000EUR。2025起持续税率；基数向下取50EUR整数倍，先含7%就业基金再减已核实合并抵免。不含其他类别、跨境或护理供款计算。"</string>
+    <string name="tax_next_ch" formatted="false">"瑞士：仅普通SINGLE联邦评税，年毛收入≤100000CHF。2026表；基数向下取100CHF，税取0.05CHF，低于25CHF不征收。州、市及教会税按实际另输，不用源泉税表。"</string>
+    <string name="tax_next_se" formatted="false">"瑞典：仅2026国家所得税，643000SEK门槛适用于核实基本扣除后，并非660400毛收入。基数向下取100SEK，最少超额200。地方及其他税、抵免分配另行核实。"</string>
+    <string name="tax_next_fi" formatted="false">"芬兰：仅2026国家劳动所得税表。国家抵免份额须核实；市、教会、Yle及其他税另输。养老金、失业和医疗按实际员工扣款；不自动分配抵免。"</string>
+    <string name="tax_next_is" formatted="false">"冰岛：已发布2026标准月度预扣表，含市政部分。输入核实月抵免，不用年抵免/12。不含不同市政年度评税、抵免结转、配偶转让或年度结算。"</string>
+    <string name="tax_next_it" formatted="false">"意大利：普通2026IRPEF税率23/33/43%，年毛收入≤200000EUR。劳动抵免核实，区域和市政实际税另输。不含加班、夜班、轮班、奖金替代税或特殊制度。"</string>
+    <string name="tax_next_jp" formatted="false">"日本：居民普通年工资，毛收入≤1亿JPY。合法工资及基本扣除后的最终基数向下取1000JPY。核实国家抵免后另算2026重建税2.1%。居民地方税实际另输，不用2027国防规则。"</string>
+    <string name="tax_next_kr" formatted="false">"韩国：居民普通国家累进工资税，最终基数及国家抵免核实。地方所得税和实际员工保险另输。不含外籍员工统一税率选择或特殊制度。"</string>
+    <string name="tax_next_ar" formatted="false">"阿根廷：官方2026全年及最终结算第94条税表，保留发布的起始税额。最终年基数核实。年税/12为预留，不是变动半年度累计预扣、SAC分配或年退税。"</string>
+    <string name="tax_next_cl" formatted="false">"智利：按实际付款月份选普通月度IUSC，仅2026年1至11月已发布表，不用52bis。月基数和抵免核实；养老金及医疗实际另列。无年度结算。"</string>
+    <string name="tax_next_uy" formatted="false">"乌拉圭：2026居民普通月度IRPF。基数核实适用6%上调，最高现金毛薪106%。供款按适用14/8%转为已核实月减税，不再减基数。不含aguinaldo或休假特殊税及年度结算。"</string>
+    <string name="tax_next_bo" formatted="false">"玻利维亚：合法2SMN及可扣供款后的核实基数按月RC-IVA13%。已核实月抵免包含适用1SMN的13%、发票及指数化往期余额。不自动判定最低工资、资格或结转。"</string>
+    <string name="tax_next_jm" formatted="false">"牙买加：普通2026年度预留，全年加权门槛1876614JMD，并非4月年化1902360。税率25/30%，上档法定收入门槛600万。基数在合法供款后、零档前。不算累计PAYE或65岁优惠。"</string>
+    <string name="tax_next_tt" formatted="false">"特立尼达和多巴哥：居民普通年税25/30%，最终应税基数门槛100万TTD。90000个人免税额及合法扣除已在基数内。NIS及医疗附加实际另列，不扣雇主经营或绿色基金税。"</string>
+    <string name="tax_next_bz" formatted="false">"伯利兹：最终核实年度应税工资基数按25%。依据毛收入的个人减免25600/24600/22600/19600须已扣除。不自动认定捐赠资格或退税；社保实际另列。"</string>
+    <string name="tax_next_gy" formatted="false">"圭亚那：2026税率25/35%，应税门槛3360000GYD。最终基数已含适用至少1680000或三分之一免税额、NIS及合法加班等扣除。不自动判定特殊资格或保险率。"</string>
+    <string name="tax_next_bb" formatted="false">"巴巴多斯：2026新税率11.5/27.5%。适用25000BBD个人免税额已在最终基数中；该基数前50000按11.5%。不再扣25000零档。NIS及其他实际税另列，无特殊制度。"</string>
+    <string name="tax_next_fj" formatted="false">"斐济：2024起居民税表仍适用2026；30000FJD零档应用一次。不另扣已废除SRT/ECAL，不含非居民或特殊一次性支付。最终基数、抵免和实际员工供款须核实。"</string>
+    <string name="menu_open" formatted="false">"打开菜单"</string>
+    <string name="shift_global_hint" formatted="false">"使用任意页面底部的班次滑块。开始前在此选择办公室或居家。"</string>
+    <string name="shift_active" formatted="false">"班次进行中"</string>
+    <string name="shift_ready" formatted="false">"可以开始"</string>
+    <string name="shift_options" formatted="false">"班次选项"</string>
+    <string name="shift_done" formatted="false">"完成"</string>
+    <string name="period_current" formatted="false">"当前周期"</string>
+    <string name="period_choose" formatted="false">"选择月份和年份"</string>
+    <string name="period_end_hint" formatted="false">"请选择工资周期结束所在的月份。下方显示准确日期。"</string>
+    <string name="period_year" formatted="false">"年份"</string>
+    <string name="period_year_hint" formatted="false">"请输入1900至2100之间的年份。"</string>
+    <string name="period_apply" formatted="false">"显示周期"</string>
+    <string name="widget_name" formatted="false">"ShiftHours · 班次"</string>
+    <string name="widget_description" formatted="false">"开始办公室或居家班次、结束班次并查看实时持续时间。"</string>
+    <string name="widget_open" formatted="false">"打开应用"</string>
+    <string name="widget_error" formatted="false">"打开应用检查数据或恢复备份。"</string>
+    <string name="widget_setup" formatted="false">"请先在应用中完成初始设置。"</string>
+    <string name="widget_inactive" formatted="false">"没有进行中的班次"</string>
+    <string name="widget_start_office" formatted="false">"开始 · 办公室"</string>
+    <string name="widget_start_home" formatted="false">"开始 · 居家"</string>
+    <string name="widget_stop" formatted="false">"结束班次"</string>
+    <string name="shift_changed" formatted="false">"当前班次已更改。请关闭此编辑窗口后重新打开。"</string>
+    <string name="overtime_by_location" formatted="false">"按工作地点划分的加班"</string>
+    <string name="overtime_by_location_hint" formatted="false">"办公室与居家工作共享每日加班档位，再按实际工作地点分配。报酬包含档位的完整比例，为税前金额。"</string>
+    <string name="ui_more_info" formatted="false">"更多信息"</string>
+    <string name="ui_collapse" formatted="false">"收起详情"</string>
+    <string name="ui_expand" formatted="false">"展开详情"</string>
+    <string name="ui_details" formatted="false">"详情"</string>
+    <string name="ui_appearance" formatted="false">"外观"</string>
+    <string name="ui_theme_system" formatted="false">"跟随手机"</string>
+    <string name="ui_theme_light" formatted="false">"浅色"</string>
+    <string name="ui_theme_dark" formatted="false">"深色"</string>
+    <string name="ui_theme_hint" formatted="false">"随设置保存并包含在备份中。自动模式随手机系统主题切换。"</string>
+    <string name="ui_gross_estimate" formatted="false">"预计税前工资"</string>
+    <string name="ui_record_actions" formatted="false">"记录操作"</string>
+    <string name="ui_net_estimate" formatted="false">"所选税务情形范围内的预计税后工资。"</string>
+    <string name="ui_tax_scope_notice" formatted="false">"计算仅适用于特定税务情形。选择国家本身不代表具备资格。缺少的条件显示在上方。"</string>
+    <string name="ui_tax_scope" formatted="false">"税务情形与条件"</string>
+    <string name="ui_pay_details" formatted="false">"工资明细"</string>
+    <string name="ui_settings_hours" formatted="false">"工时与休息"</string>
+    <string name="ui_settings_pay" formatted="false">"工资与加班"</string>
+    <string name="ui_settings_tax" formatted="false">"税务与缴费"</string>
+    <string name="ui_settings_display" formatted="false">"语言与外观"</string>
+    <string name="ui_country_search" formatted="false">"搜索国家、代码或货币"</string>
+    <string name="ui_no_results" formatted="false">"未找到匹配的国家"</string>
+    <string name="export_excel" formatted="false">"导出 Excel"</string>
+    <string name="export_sheet" formatted="false">"班次"</string>
+    <string name="export_period_start" formatted="false">"开始日期"</string>
+    <string name="export_period_end" formatted="false">"结束日期"</string>
+    <string name="export_date" formatted="false">"日期"</string>
+    <string name="export_start" formatted="false">"开始时间"</string>
+    <string name="export_end" formatted="false">"结束时间"</string>
+    <string name="export_duration" formatted="false">"总时长"</string>
+    <string name="export_total" formatted="false">"合计"</string>
+    <string name="export_note" formatted="false">"按设置扣除休息后的计薪时长。跨夜班次的结束时间可能属于次日。"</string>
+    <string name="export_saved" formatted="false">"Excel 文件已保存。"</string>
+    <string name="export_error" formatted="false">"Excel 导出失败。"</string>
+    <string name="export_filter_hint" formatted="false">"按上方所选办公室、居家或全部筛选，导出所选周期内已结束的班次。"</string>
+    <string name="back_press_again_exit" formatted="false">"再按一次返回键退出"</string>
+    <string name="leave_title" formatted="false">"休假、病假和节假日"</string>
+    <string name="leave_sick" formatted="false">"病假"</string>
+    <string name="leave_vacation" formatted="false">"带薪休假"</string>
+    <string name="leave_days" formatted="false">"天"</string>
+    <string name="leave_setup_hint" formatted="false">"登记休假前，请先设置期初余额和每月累积天数。"</string>
+    <string name="leave_asof" formatted="false">"余额截至"</string>
+    <string name="leave_period_used" formatted="false">"所选期间扣除的余额天数"</string>
+    <string name="leave_pay" formatted="false">"休假工资金额"</string>
+    <string name="leave_pay_hint" formatted="false">"时薪制：另加休假工资。月薪制：带薪休假已包含在工资内，仅扣除无薪部分。休假不产生加班。"</string>
+    <string name="leave_manage" formatted="false">"管理休假和病假"</string>
+    <string name="leave_config" formatted="false">"余额和休假规则"</string>
+    <string name="leave_add" formatted="false">"添加休假、病假或节假日"</string>
+    <string name="leave_record_hint" formatted="false">"每天的休假比例适用于每个所选日期。带薪休假与实际工作分开计算。未来记录计入其所属工资周期，但当前余额仅包含截至今天的日期。"</string>
+    <string name="leave_empty" formatted="false">"此期间没有休假记录。"</string>
+    <string name="leave_fraction" formatted="false">"天数比例（1 = 全天，0.5 = 半天）"</string>
+    <string name="leave_hours" formatted="false">"缺勤小时数"</string>
+    <string name="leave_pay_percent" formatted="false">"工资支付比例"</string>
+    <string name="leave_debited" formatted="false">"从余额扣除的天数"</string>
+    <string name="leave_event_start" formatted="false">"本次病假开始日期"</string>
+    <string name="leave_day_number" formatted="false">"本次病假的第几天"</string>
+    <string name="leave_ledger" formatted="false">"累积和使用记录"</string>
+    <string name="leave_ledger_hint" formatted="false">"所选工资周期内的变动。期初余额 + 累积 + 调整 − 使用。未来变动为计划值。"</string>
+    <string name="leave_opening" formatted="false">"期初余额（天）"</string>
+    <string name="leave_accrual" formatted="false">"每月累积"</string>
+    <string name="leave_used" formatted="false">"使用"</string>
+    <string name="leave_adjustment" formatted="false">"余额调整"</string>
+    <string name="leave_changed" formatted="false">"数据已更改。请关闭并重新打开此表单。"</string>
+    <string name="leave_delete_hint" formatted="false">"删除此记录？将重新计算其对余额和工资的影响。此操作无法撤销。"</string>
+    <string name="leave_config_hint" formatted="false">"这些是雇主设置，并非经过核实的法定默认值。规则从期初日期起生效。更改余额或累积设置会重新计算历史记录；一次性变动请使用带日期的余额调整。每条记录保留其已保存的缺勤工资规则。"</string>
+    <string name="leave_opening_date" formatted="false">"期初余额日期"</string>
+    <string name="leave_monthly" formatted="false">"每月累积天数"</string>
+    <string name="leave_accrual_day" formatted="false">"每月累积日（1–31）"</string>
+    <string name="leave_accrual_hint" formatted="false">"首次完整累积发生在期初日期之后的所选日期。较短月份使用当月最后一天。不按比例折算，且独立于工资周期。"</string>
+    <string name="leave_day_hours" formatted="false">"每个完整休假日的小时数"</string>
+    <string name="leave_vacation_percent" formatted="false">"休假工资支付比例"</string>
+    <string name="leave_allow_negative" formatted="false">"允许负余额"</string>
+    <string name="leave_calendar_days" formatted="false">"按日历天数计算本次病假"</string>
+    <string name="leave_calendar_hint" formatted="false">"开启：周末和未登记日期也计入工资档位天数。关闭：仅本次病假中不同的已登记日期计入。只有已登记休假会消耗余额。"</string>
+    <string name="leave_sick_tiers" formatted="false">"病假工资档位"</string>
+    <string name="leave_tier_hint" formatted="false">"各行依次应用。工资比例与余额扣除比例相互独立。工资按50%支付的一天，如果扣除比例为100%，仍可扣除完整一天余额。"</string>
+    <string name="leave_tier" formatted="false">"档位"</string>
+    <string name="leave_number_days" formatted="false">"天数"</string>
+    <string name="leave_remaining" formatted="false">"此后所有日期（最后一行）"</string>
+    <string name="leave_debit_percent" formatted="false">"余额扣除比例"</string>
+    <string name="leave_add_tier" formatted="false">"在最后一行前添加档位"</string>
+    <string name="leave_from" formatted="false">"起始日期"</string>
+    <string name="leave_until" formatted="false">"结束日期（含当日）"</string>
+    <string name="leave_workdays_only" formatted="false">"仅限已设置的工作日"</string>
+    <string name="leave_continue" formatted="false">"继续本次病假"</string>
+    <string name="leave_new_event" formatted="false">"新建病假事件"</string>
+    <string name="leave_override_pay" formatted="false">"覆盖工资比例（留空 = 使用规则）"</string>
+    <string name="leave_override_debit" formatted="false">"覆盖扣除比例（留空 = 使用规则）"</string>
+    <string name="leave_override_hint" formatted="false">"可为每条记录单独覆盖。留空则使用已保存的雇主规则。日期范围内每个所选日期应用相同的覆盖设置。"</string>
+    <string name="leave_note" formatted="false">"备注／调整原因"</string>
+    <string name="leave_preview" formatted="false">"核对日期和工资"</string>
+    <string name="leave_work_warning" formatted="false">"其中某个日期也有工作记录或进行中的班次。保存前请核对实际工作与休假的合计是否正确。"</string>
+    <string name="leave_date" formatted="false">"日期"</string>
+    <string name="leave_adjust_days" formatted="false">"天数调整（+ 增加／− 扣除）"</string>
+    <string name="leave_duplicate" formatted="false">"同一日期的休假合计不能超过一天。"</string>
+    <string name="leave_insufficient" formatted="false">"休假余额不足。请修正期初余额，或明确允许负余额。"</string>
+    <string name="leave_invalid" formatted="false">"请检查日期和数字。比例：0–100；天数比例：大于0且不超过1。"</string>
+    <string name="leave_date_error" formatted="false">"请选择按先后顺序排列且不超过367个日历日的日期范围。"</string>
+    <string name="leave_no_dates" formatted="false">"没有符合已设置工作日的日期。"</string>
+    <string name="leave_salary_adjustment" formatted="false">"从月薪扣除的无薪缺勤金额"</string>
+    <string name="leave_export_hint" formatted="false">"“全部”导出包含独立的休假工作表。“办公室／居家”导出仅包含工作班次。"</string>
+    <string name="leave_holiday" formatted="false">"节假日／非工作日"</string>
+    <string name="leave_salary_choice" formatted="false">"从工资扣除（不使用休假）"</string>
+    <string name="leave_settlement" formatted="false">"结算每月不足工时"</string>
+    <string name="leave_missing_hours" formatted="false">"此期间尚缺小时数"</string>
+    <string name="leave_fill_hours" formatted="false">"待结算小时数"</string>
+    <string name="leave_use_percent" formatted="false">"输入一个完整休假日的百分比"</string>
+    <string name="leave_day_percent" formatted="false">"一个完整工作日的百分比"</string>
+    <string name="leave_target_needed" formatted="false">"请在工资设置中填写每月要求工时，以计算每月不足工时。"</string>
+    <string name="leave_too_many_hours" formatted="false">"请输入正数小时，且不超过尚缺工时（最多744小时）。"</string>
+    <string name="leave_settlement_hint" formatted="false">"这是期间调整，不是工作班次。使用休假天数 = 小时数 ÷ 每个休假日的小时数。例如：3.2小时 ÷ 8 = 0.4天（40%）。请选择使用带薪休假或按无薪方式扣除工资。之后修改工作或休假记录时，可能需要修正此调整。"</string>
+    <string name="leave_incomplete_period" formatted="false">"此工资周期尚未结束。不足工时为暂定值，请在保存前核对。"</string>
+    <string name="leave_holiday_hint" formatted="false">"这是手动设置的节假日，并不代表法定权益。不消耗休假或病假余额。默认工资比例为100%，可按雇主条件覆盖。仅限工作日的日期范围会跳过已登记的节假日。节假日工作不会自动获得额外工资。"</string>
+    <string name="leave_settlement_review" formatted="false">"已登记的结算可能已超过剩余不足工时。修改工作或休假后，请核对结算小时数。"</string>
+    <string name="ot_method" formatted="false">"加班计算"</string>
+    <string name="ot_daily" formatted="false">"按日"</string>
+    <string name="ot_weekly" formatted="false">"按周"</string>
+    <string name="ot_monthly" formatted="false">"按月"</string>
+    <string name="ot_hours" formatted="false">"正常工时"</string>
+    <string name="ot_week_start" formatted="false">"工作周的第一天"</string>
+    <string name="ot_weekly_threshold" formatted="false">"开始计加班前的每周正常工时"</string>
+    <string name="ot_monthly_threshold" formatted="false">"开始计加班前的每月正常工时"</string>
+    <string name="ot_calendar" formatted="false">"日历月（每月1日至月末）"</string>
+    <string name="ot_pay_period" formatted="false">"已设置的工资周期"</string>
+    <string name="ot_nominal_day" formatted="false">"用于不足工时和休假设置的每日小时数"</string>
+    <string name="ot_settings_hint" formatted="false">"请选择一种方式。现有工资档位在每个所选日、周或月重新开始。每周和每月门槛独立于每日标准工时及每月出勤目标。休息仍按已设置的每日或每段规则扣除。只有扣除休息后的实际工作计入加班门槛；休假、节假日及不足工时结算均不计入。"</string>
+    <string name="ot_context_hint" formatted="false">"按周和日历月计算时，也会使用所显示工资周期之前保存的工作记录。请录入完整的工作周或月份，以确保分配准确。整个班次均归属其指定工作日期，跨午夜班次也不例外。更改计算方式会重新计算历史记录；并不表示同时应用日与周规则，也不代表自动享有法定权益。"</string>
+    <string name="ot_location_hint" formatted="false">"办公室和居家共用所选日、周或月的加班计数器。扣除休息后，工时和每档完整工资按时间顺序分配至实际工作地点。"</string>
+    <string name="ot_office_only" formatted="false">"仅办公室工时超过所选加班门槛的部分"</string>
+    <string name="ot_invalid" formatted="false">"请检查方式、期间和门槛：每周0–168小时，每月0–744小时；每周起始日必须有效。"</string>
+    <string name="ot_threshold_required" formatted="false">"请输入所选加班计算方式的正数正常工时门槛。"</string>
+    <string name="widget_compact_name" formatted="false">"ShiftHours · 班次 2×2"</string>
+    <string name="analytics_title" formatted="false">"统计汇总"</string>
+    <string name="analytics_hint" formatted="false">"仅含已结束班次。所有数据使用当前保存的工资和休息规则，不包含进行中的班次。"</string>
+    <string name="analytics_partial" formatted="false">"此期间尚未结束。比较对象为完整的上一期间，而非相同的已过天数。"</string>
+    <string name="analytics_empty" formatted="false">"此期间没有记录"</string>
+    <string name="analytics_empty_hint" formatted="false">"没有记录不代表没有工作。无记录期间不视为工资为零的月份。"</string>
+    <string name="analytics_overview" formatted="false">"期间概览"</string>
+    <string name="analytics_workdays" formatted="false">"已记录工作日"</string>
+    <string name="analytics_shifts" formatted="false">"已结束班次"</string>
+    <string name="analytics_avg_day" formatted="false">"每工作日平均净工时"</string>
+    <string name="analytics_avg_shift" formatted="false">"每班次平均净工时"</string>
+    <string name="analytics_home_share" formatted="false">"居家工作占比"</string>
+    <string name="analytics_ot_share" formatted="false">"加班占净工时比例"</string>
+    <string name="analytics_gross" formatted="false">"税前工资"</string>
+    <string name="analytics_comparison" formatted="false">"与上一期间相比的变化"</string>
+    <string name="analytics_hours_change" formatted="false">"净工时变化"</string>
+    <string name="analytics_ot_change" formatted="false">"加班工时变化"</string>
+    <string name="analytics_gross_change" formatted="false">"税前工资变化"</string>
+    <string name="analytics_no_comparison" formatted="false">"两个期间都需要有记录才能比较。"</string>
+    <string name="analytics_tiers" formatted="false">"加班档位与工资"</string>
+    <string name="analytics_weighted" formatted="false">"按工资系数折算的加班工时"</string>
+    <string name="analytics_weighted_hint" formatted="false">"折算工时 = 加班工时 × 工资倍数。这是工资等值，并非额外工作时间。"</string>
+    <string name="analytics_location" formatted="false">"办公室和居家"</string>
+    <string name="analytics_equivalent_hint" formatted="false">"工作价值按小时工资等值计算，包含加班。不将月薪或休假工资按地点或原因分摊。"</string>
+    <string name="analytics_office_short" formatted="false">"仅办公室工时的每日不足"</string>
+    <string name="analytics_office_ot" formatted="false">"仅办公室加班对比"</string>
+    <string name="analytics_reasons" formatted="false">"居家工作原因"</string>
+    <string name="analytics_no_reasons" formatted="false">"此期间没有已结束的居家工作班次。"</string>
+    <string name="analytics_shortfalls" formatted="false">"不足工时与打卡问题"</string>
+    <string name="analytics_daily_short" formatted="false">"计入缺勤抵扣后的每日不足"</string>
+    <string name="analytics_monthly_short" formatted="false">"相对已设置目标的每月不足"</string>
+    <string name="analytics_missing_clock" formatted="false">"标记为缺少打卡的日期数"</string>
+    <string name="analytics_missing_hint" formatted="false">"打卡问题根据已保存的缺卡备注识别，无法推断完全未记录的工作日。"</string>
+    <string name="analytics_weekdays" formatted="false">"各星期日的平均净工时"</string>
+    <string name="analytics_weekdays_hint" formatted="false">"仅计算已记录且净工时为正的日期。显示天数；不包含未记录日期。"</string>
+    <string name="analytics_records" formatted="false">"突出日期"</string>
+    <string name="analytics_longest" formatted="false">"已记录的最长工作日"</string>
+    <string name="analytics_most_ot" formatted="false">"分配加班最多的一天"</string>
+    <string name="analytics_trend" formatted="false">"12个工资周期趋势"</string>
+    <string name="analytics_trend_hint" formatted="false">"每行依次为净工时、加班工时和税前工资。横线表示无记录。历史数据按当前设置计算，而非历史合同。"</string>
+    <string name="home_sync_title">个人服务器</string>
+    <string name="home_sync_hint">可选择与自己的电脑同步。离线时仍可在本地使用。</string>
+    <string name="home_sync_address">服务器 HTTPS 地址</string>
+    <string name="home_sync_key">手机连接密钥</string>
+    <string name="home_sync_https">请输入有效的 HTTPS 地址。</string>
+    <string name="home_sync_other_server">此设备已关联其他服务器。迁移前请备份。</string>
+    <string name="home_sync_working">正在同步…</string>
+    <string name="home_sync_ok">已同步</string>
+    <string name="home_sync_conflict">存在编辑冲突，未覆盖数据。请在浏览器和手机中统一冲突记录后重试。</string>
+    <string name="home_sync_auth">密钥已过期或被撤销。请断开连接并输入新密钥。</string>
+    <string name="home_sync_identity">服务器身份已变更。为保护数据，同步已停止。</string>
+    <string name="home_sync_error">服务器不可用或数据被拒绝。本地数据安全，请稍后重试。</string>
+    <string name="home_sync_pending">本地更改等待同步。</string>
+    <string name="home_sync_off">同步已关闭</string>
+    <string name="home_sync_now">立即同步</string>
+    <string name="home_sync_connect">连接</string>
+    <string name="home_sync_disconnect">断开连接</string>
+    <string name="home_sync_backup_hint">包括设置、休假和班次，不能代替本地或 Drive 备份。后台同步约每15分钟调度一次，Android可能延迟执行。备份不包含连接密钥。</string>
+    <string name="home_sync_back">返回</string>
+    <string name="manual_entry" formatted="false">"手动添加"</string>
+    <string name="manual_kind" formatted="false">"记录类型"</string>
+    <string name="manual_work_shift" formatted="false">"工作班次"</string>
+    <string name="manual_continue" formatted="false">"继续"</string>
+    <string name="calendar_title" formatted="false">"工作日历"</string>
+    <string name="calendar_missing_hint" formatted="false">"浅橙色：已过去的周日至周四，没有班次或缺勤记录。点击日期查看详情。"</string>
+    <string name="calendar_missing_count">"%1$s 天没有记录"</string>
+    <string name="calendar_missing" formatted="false">"缺少记录"</string>
+    <string name="calendar_paid_time" formatted="false">"计薪时间"</string>
+    <string name="calendar_no_report" formatted="false">"没有班次或缺勤记录。"</string>
+    <string name="snapshot_arrange" formatted="false">"排列卡片"</string>
+    <string name="snapshot_move_up" formatted="false">"上移"</string>
+    <string name="snapshot_move_down" formatted="false">"下移"</string>
+    <string name="snapshot_reset_order" formatted="false">"恢复默认顺序"</string>
+    <string name="snapshot_save_order" formatted="false">"保存"</string>
+    <string name="snapshot_cancel_order" formatted="false">"取消"</string>
+    <string name="hours_by_location" formatted="false">"按地点统计工时"</string>
+    <string name="location_all_hours" formatted="false">"总工时（含加班）"</string>
+    <string name="location_all_pay" formatted="false">"报酬（含加班）"</string>
+    <string name="location_hourly_value_hint" formatted="false">"按小时计算的工作价值，并非月薪的分配。"</string>
+    <string name="launcher_widgets">小组件</string>
+    <string name="launcher_change_widget">更换小组件</string>
+    <string name="calendar_includes_home">含居家办公</string>
+</resources>

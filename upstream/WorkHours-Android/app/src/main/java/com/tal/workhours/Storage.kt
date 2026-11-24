@@ -1,0 +1,234 @@
+package com.tal.workhours
+
+import android.content.Context
+import android.util.AtomicFile
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
+import kotlinx.coroutines.withContext
+import org.json.JSONArray
+import org.json.JSONObject
+import java.io.File
+import java.security.MessageDigest
+
+private fun JSONArray.strings() = (0 until length()).map { getString(it) }
+private fun JSONObject.optionalNumber(key: String): Double? = if (isNull(key)) null else getDouble(key)
+private fun array(values: Iterable<Any>) = JSONArray().apply { values.forEach { put(it) } }
+
+fun encodeSettings(s: AppSettings) = JSONObject().apply {
+    put("overtimeMode",s.overtimeMode);put("weeklyRegularHours",s.weeklyRegularHours);put("monthlyRegularHours",s.monthlyRegularHours)
+    put("weekStartDay",s.weekStartDay);put("overtimeMonthBasis",s.overtimeMonthBasis)
+    put("appearance", s.appearance)
+    put("foreignTaxRelief",s.foreignTaxRelief ?: JSONObject.NULL)
+    put("foreignMonthlyOtherTax",s.foreignMonthlyOtherTax ?: JSONObject.NULL)
+    put("foreignAnnualVerifiedTax",s.foreignAnnualVerifiedTax ?: JSONObject.NULL)
+    put("taxPaymentDate", s.taxPaymentDate)
+    put("ecAnnualPersonalExpenses", s.ecAnnualPersonalExpenses ?: JSONObject.NULL)
+    put("pyAnnualTaxableReceipts", s.pyAnnualTaxableReceipts ?: JSONObject.NULL)
+    put("monthlyTaxableBase", s.monthlyTaxableBase ?: JSONObject.NULL)
+    put("annualEmploymentGross", s.annualEmploymentGross ?: JSONObject.NULL)
+    put("sgCpfStatus", s.sgCpfStatus); put("dkAnnualMunicipalBase", s.dkAnnualMunicipalBase ?: JSONObject.NULL)
+    put("noYouthStatus", s.noYouthStatus); put("zaUifStatus", s.zaUifStatus)
+    put("annualTaxableBase", s.annualTaxableBase ?: JSONObject.NULL); put("auHospitalCover", s.auHospitalCover); put("nzIetcEligible", s.nzIetcEligible)
+    put("usFilingStatus", s.usFilingStatus)
+    put("usAnnualStateTaxableBase", s.usAnnualStateTaxableBase ?: JSONObject.NULL)
+    put("usAnnualStateRelief", s.usAnnualStateRelief ?: JSONObject.NULL)
+    put("usMonthlyLocalTax", s.usMonthlyLocalTax ?: JSONObject.NULL)
+    put("usAnnualVerifiedStateTax", s.usAnnualVerifiedStateTax ?: JSONObject.NULL)
+    put("foreignProfileCountry", s.foreignProfileCountry); put("foreignMonthlyDeductions", s.foreignMonthlyDeductions ?: JSONObject.NULL)
+    put("taxCountry", s.taxCountry); put("taxYear", s.taxYear); put("taxRegion", s.taxRegion); put("ukStandardProfile", s.ukStandardProfile)
+    put("regularHours", s.regularHours)
+    put("tiers", array(s.tiers.map { JSONObject().put("hours", it.hours ?: JSONObject.NULL).put("percent", it.percent) }))
+    put("globalSalary", s.globalSalary); put("monthlySalary", s.monthlySalary)
+    put("monthlyHours", s.monthlyHours); put("hourlyWage", s.hourlyWage)
+    put("periodStartDay", s.periodStartDay); put("breakMode", s.breakMode)
+    put("breakMinutes", s.breakMinutes); put("deductHomeBreak", s.deductHomeBreak)
+    put("creditPoints", s.creditPoints ?: JSONObject.NULL)
+    put("pensionPercent", s.pensionPercent ?: JSONObject.NULL); put("studyPercent", s.studyPercent)
+    put("contributionBasis", s.contributionBasis); put("customBasis", s.customBasis)
+    put("pensionTaxCredit", s.pensionTaxCredit)
+    put("reasons", array(s.reasons)); put("workDays", array(s.workDays.sorted()))
+}
+
+fun decodeSettings(o: JSONObject): AppSettings {
+    val tiers = o.getJSONArray("tiers")
+    return AppSettings(
+        overtimeMode=o.optString("overtimeMode","DAILY"),weeklyRegularHours=o.optDouble("weeklyRegularHours",0.0),monthlyRegularHours=o.optDouble("monthlyRegularHours",0.0),
+        weekStartDay=o.optInt("weekStartDay",7),overtimeMonthBasis=o.optString("overtimeMonthBasis","PAY_PERIOD"),
+        appearance=o.optString("appearance", "SYSTEM"),
+        foreignTaxRelief=o.optionalNumber("foreignTaxRelief"),
+        foreignMonthlyOtherTax=o.optionalNumber("foreignMonthlyOtherTax"),
+        foreignAnnualVerifiedTax=o.optionalNumber("foreignAnnualVerifiedTax"),
+        taxPaymentDate = o.optString("taxPaymentDate", ""),
+        ecAnnualPersonalExpenses = o.optionalNumber("ecAnnualPersonalExpenses"),
+        pyAnnualTaxableReceipts = o.optionalNumber("pyAnnualTaxableReceipts"),
+        monthlyTaxableBase = o.optionalNumber("monthlyTaxableBase"),
+        annualEmploymentGross = o.optionalNumber("annualEmploymentGross"),
+        sgCpfStatus = o.optString("sgCpfStatus", ""), dkAnnualMunicipalBase = o.optionalNumber("dkAnnualMunicipalBase"),        noYouthStatus = o.optString("noYouthStatus", ""), zaUifStatus = o.optString("zaUifStatus", ""),        annualTaxableBase = o.optionalNumber("annualTaxableBase"), auHospitalCover = o.optString("auHospitalCover", ""), nzIetcEligible = o.optBoolean("nzIetcEligible", false),
+        usFilingStatus = o.optString("usFilingStatus", ""),
+        usAnnualStateTaxableBase = o.optionalNumber("usAnnualStateTaxableBase"),
+        usAnnualStateRelief = o.optionalNumber("usAnnualStateRelief"),
+        usMonthlyLocalTax = o.optionalNumber("usMonthlyLocalTax"),
+        usAnnualVerifiedStateTax = o.optionalNumber("usAnnualVerifiedStateTax"),
+        foreignProfileCountry = o.optString("foreignProfileCountry", ""), foreignMonthlyDeductions = o.optionalNumber("foreignMonthlyDeductions"),
+        taxCountry = o.optString("taxCountry", "IL"), taxYear = o.optInt("taxYear", 2026),
+        taxRegion = o.optString("taxRegion", ""), ukStandardProfile = o.optBoolean("ukStandardProfile", false),
+        regularHours = o.getDouble("regularHours"),
+        tiers = (0 until tiers.length()).map { i -> tiers.getJSONObject(i).let { OvertimeTier(it.optionalNumber("hours"), it.getDouble("percent")) } },
+        globalSalary = o.getBoolean("globalSalary"), monthlySalary = o.getDouble("monthlySalary"),
+        monthlyHours = o.getDouble("monthlyHours"), hourlyWage = o.getDouble("hourlyWage"),
+        periodStartDay = o.getInt("periodStartDay"), breakMode = o.getString("breakMode"),
+        breakMinutes = o.getInt("breakMinutes"), deductHomeBreak = o.getBoolean("deductHomeBreak"),
+        creditPoints = o.optionalNumber("creditPoints"), pensionPercent = o.optionalNumber("pensionPercent"),
+        studyPercent = o.getDouble("studyPercent"), contributionBasis = o.getString("contributionBasis"),
+        customBasis = o.getDouble("customBasis"), pensionTaxCredit = o.getBoolean("pensionTaxCredit"),
+        reasons = o.getJSONArray("reasons").strings(),
+        workDays = o.getJSONArray("workDays").let { a -> (0 until a.length()).map { a.getInt(it) }.toSet() }
+    ).also { it.validate(allowUnconfigured = true) }
+}
+
+fun encodeShift(s: Shift) = JSONObject().apply {
+    put("id", s.id); put("start", s.start); put("end", s.end); put("location", s.location)
+    put("reason", s.reason); put("note", s.note); put("source", s.source); put("workDate", s.workDate)
+    put("recordedDurationMs", s.recordedDurationMs ?: JSONObject.NULL)
+}
+fun decodeShift(o: JSONObject) = Shift(o.getString("id"), o.getLong("start"), o.getLong("end"),
+    o.getString("location"), o.optString("reason"), o.optString("note"), o.optString("source", "manual"), o.getString("workDate"),
+    if (o.isNull("recordedDurationMs")) null else o.getLong("recordedDurationMs"))
+
+const val DATA_VERSION = 22
+
+fun encodeData(d: AppData): String = JSONObject().apply {
+    put("app", "com.tal.workhours"); put("version", DATA_VERSION); put("setupComplete", d.setupComplete)
+    put("leaveConfig", encodeLeaveConfig(d.leaveConfig))
+    put("leaveRecords", array(d.leaveRecords.map(::encodeLeaveRecord)))
+    put("leaveAdjustments", array(d.leaveAdjustments.map(::encodeLeaveAdjustment)))
+    put("settings", encodeSettings(d.settings)); put("shifts", array(d.shifts.map(::encodeShift)))
+    put("active", d.active?.let { JSONObject().put("start", it.start).put("location", it.location).put("reason", it.reason).put("note", it.note) } ?: JSONObject.NULL)
+    put("importedIds", array(d.importedIds)); put("importAttempted", d.importAttempted); put("importReport", d.importReport)
+}.toString().also { require(it.toByteArray(Charsets.UTF_8).size <= 20_000_000) { tr(R.string.text_7b80593224) } }
+
+fun decodeData(raw: String): AppData {
+    require(raw.toByteArray().size <= 20_000_000) { tr(R.string.text_7b80593224) }
+    val o = JSONObject(raw)
+    require(o.getString("app") == "com.tal.workhours" && o.getInt("version") in setOf(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, DATA_VERSION)) { tr(R.string.text_b36a3090e4) }
+    if(o.getInt("version") >= 21) { o.getJSONObject("leaveConfig");o.getJSONArray("leaveRecords");o.getJSONArray("leaveAdjustments") }
+    if(o.getInt("version") >= 22) { val s=o.getJSONObject("settings");s.getString("overtimeMode");s.getDouble("weeklyRegularHours");s.getDouble("monthlyRegularHours");s.getInt("weekStartDay");s.getString("overtimeMonthBasis") }
+    val shifts = o.getJSONArray("shifts")
+    val active = if (o.isNull("active")) null else o.getJSONObject("active").let { ActiveShift(it.getLong("start"), it.getString("location"), it.optString("reason"), it.optString("note")) }
+    return AppData(
+        shifts = (0 until shifts.length()).map { decodeShift(shifts.getJSONObject(it)) },
+        active = active, settings = decodeSettings(o.getJSONObject("settings")),
+        importedIds = o.getJSONArray("importedIds").strings().toSet(),
+        importAttempted = o.getBoolean("importAttempted"), importReport = o.optString("importReport"),
+        setupComplete = o.optBoolean("setupComplete", true),
+        leaveConfig = o.optJSONObject("leaveConfig")?.let(::decodeLeaveConfig) ?: LeaveConfig(),
+        leaveRecords = o.optJSONArray("leaveRecords")?.let { a -> (0 until a.length()).map { decodeLeaveRecord(a.getJSONObject(it)) } } ?: emptyList(),
+        leaveAdjustments = o.optJSONArray("leaveAdjustments")?.let { a -> (0 until a.length()).map { decodeLeaveAdjustment(a.getJSONObject(it)) } } ?: emptyList()
+    ).also { it.validate() }
+}
+
+private fun sha256(text: String) = MessageDigest.getInstance("SHA-256").digest(text.toByteArray(Charsets.UTF_8)).joinToString("") { "%02x".format(it) }
+fun backupText(data: AppData): String {
+    val payload = encodeData(data)
+    return JSONObject().put("format", "WorkHoursBackup").put("version", 1)
+        .put("createdAt", System.currentTimeMillis()).put("sha256", sha256(payload)).put("payload", payload).toString()
+}
+fun readBackup(text: String): AppData {
+    require(text.toByteArray().size <= 25_000_000) { tr(R.string.text_5e9b8b7914) }
+    val envelope = JSONObject(text)
+    require(envelope.getString("format") == "WorkHoursBackup" && envelope.getInt("version") == 1) { tr(R.string.text_1d25b4e13f) }
+    val payload = envelope.getString("payload")
+    require(sha256(payload) == envelope.getString("sha256")) { tr(R.string.text_c84389ddd1) }
+    return decodeData(payload)
+}
+
+class WorkRepository private constructor(private val context: Context) {
+    companion object {
+        @Volatile private var instance: WorkRepository? = null
+        fun get(context: Context): WorkRepository = instance ?: synchronized(this) {
+            instance ?: WorkRepository(context.applicationContext).also { instance = it }
+        }
+    }
+    private val mutex = Mutex()
+    private val file = AtomicFile(File(context.filesDir, "workhours-v2.json"))
+    private val mutable = MutableStateFlow<AppData?>(null)
+    val state = mutable.asStateFlow()
+
+    private fun write(d: AppData) {
+        d.validate()
+        val stream = file.startWrite()
+        try { stream.write(encodeData(d).toByteArray(Charsets.UTF_8)); file.finishWrite(stream) }
+        catch (e: Exception) { file.failWrite(stream); throw e }
+    }
+
+    suspend fun load(): AppData = mutex.withLock { withContext(Dispatchers.IO) {
+        mutable.value?.let { return@withContext it }
+        val data = if (file.baseFile.exists() || File(file.baseFile.path + ".bak").exists()) {
+            file.openRead().bufferedReader(Charsets.UTF_8).use { decodeData(it.readText()) }
+        } else {
+            val old = context.getSharedPreferences("workhours_v1", 0).getString("data", null)
+            val migrated = if (old == null) AppData() else {
+                val o = JSONObject(old)
+                require(o.getInt("version") == 1) { tr(R.string.text_2159b4a358) }
+                val arr = o.getJSONArray("entries")
+                AppData(shifts = (0 until arr.length()).map { i ->
+                    val e = arr.getJSONObject(i)
+                    Shift(e.getString("id"), e.getLong("start"), e.getLong("end"), e.getString("location"), source = "v1")
+                }, active = if (o.isNull("activeStart")) null else ActiveShift(o.getLong("activeStart"), o.getString("activeLocation")))
+                    .also { it.validate() }
+            }
+            migrated.also(::write)
+        }
+        mutable.value = data
+        data
+    } }
+
+    suspend fun change(block: (AppData) -> AppData): AppData = mutex.withLock { withContext(Dispatchers.IO) {
+        val old = mutable.value ?: error(tr(R.string.text_4ae6ec8fa0))
+        block(old).also { write(it); mutable.value = it; ShiftWidgetProvider.refresh(context, it); HomeSync.changed(context) }
+    } }
+    suspend fun snapshot(): AppData = mutex.withLock { mutable.value ?: error(tr(R.string.text_4ae6ec8fa0)) }
+    suspend fun restore(data: AppData) = mutex.withLock { withContext(Dispatchers.IO) {
+        data.validate()
+        val safety = AtomicFile(File(context.filesDir, "before-restore.json"))
+        val old = mutable.value
+        if (old == null) {
+            // Recovery must remain possible even when local JSON cannot be decoded.
+            // Preserve the unreadable bytes separately; never erase them to unlock the UI.
+            runCatching { file.openRead().use { it.readBytes() } }.getOrNull()?.let { bytes ->
+                val original = AtomicFile(File(context.filesDir, "unreadable-before-restore.bin"))
+                val stream = original.startWrite()
+                try { stream.write(bytes); original.finishWrite(stream) }
+                catch (e: Exception) { original.failWrite(stream); throw e }
+            }
+            write(data); mutable.value = data; ShiftWidgetProvider.refresh(context, data); HomeSync.changed(context)
+            return@withContext
+        }
+        val output = safety.startWrite()
+        try { output.write(backupText(old).toByteArray(Charsets.UTF_8)); safety.finishWrite(output) }
+        catch (e: Exception) { safety.failWrite(output); throw e }
+        write(data); mutable.value = data; ShiftWidgetProvider.refresh(context, data); HomeSync.changed(context)
+    } }
+
+    /** Merge against the latest local state under the same lock as normal edits. */
+    internal suspend fun applyHomeDelta(base: JSONObject, delta: JSONArray) = mutex.withLock { withContext(Dispatchers.IO) {
+        if (delta.length() == 0) return@withContext
+        val old = mutable.value ?: error("Repository not loaded")
+        val local = HomeSyncDocument.flat(encodeData(old))
+        val fresh = base.length() == 0 && !old.setupComplete && old.shifts.isEmpty() && old.active == null && old.leaveRecords.isEmpty() && old.leaveAdjustments.isEmpty()
+        val merged = try { HomeSyncDocument.merge(base, local, delta, fresh) }
+        catch (e: IllegalStateException) { throw HomeSyncConflict() }
+        if (!HomeSyncDocument.same(local, merged)) {
+            val result = decodeData(HomeSyncDocument.inflate(merged))
+            val safety = AtomicFile(File(context.filesDir, "before-home-sync.json"))
+            val out = safety.startWrite()
+            try { out.write(backupText(old).toByteArray(Charsets.UTF_8)); safety.finishWrite(out) }
+            catch(e: Exception) { safety.failWrite(out); throw e }
+            write(result); mutable.value = result; ShiftWidgetProvider.refresh(context, result)
+        }
+    } }
+
+}

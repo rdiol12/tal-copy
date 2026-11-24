@@ -1,0 +1,104 @@
+package com.tal.workhours
+
+import java.time.LocalDate
+import java.util.Locale
+import kotlin.math.*
+
+data class TaxCountry(val code: String, val currency: String)
+val taxCountries = listOf(
+    TaxCountry("IL", "ILS"), TaxCountry("GB", "GBP"), TaxCountry("US", "USD"), TaxCountry("CA", "CAD"),
+    TaxCountry("ES", "EUR"), TaxCountry("RU", "RUB"), TaxCountry("AE", "AED"),
+    TaxCountry("SA", "SAR"), TaxCountry("CN", "CNY"), TaxCountry("IN", "INR"),
+    TaxCountry("AU", "AUD"), TaxCountry("NZ", "NZD"), TaxCountry("FR", "EUR"), TaxCountry("PT", "EUR"), TaxCountry("DE", "EUR"), TaxCountry("IE", "EUR"), TaxCountry("HK", "HKD"), TaxCountry("NO", "NOK"), TaxCountry("ZA", "ZAR"), TaxCountry("SG", "SGD"), TaxCountry("DK", "DKK"), TaxCountry("MY", "MYR"), TaxCountry("PH", "PHP"), TaxCountry("PL", "PLN"), TaxCountry("CZ", "CZK"), TaxCountry("TH", "THB"), TaxCountry("ID", "IDR"), TaxCountry("VN", "VND"), TaxCountry("TW", "TWD"), TaxCountry("LK", "LKR"), TaxCountry("PE", "PEN"), TaxCountry("CO", "COP"), TaxCountry("EE", "EUR"), TaxCountry("LV", "EUR"), TaxCountry("LT", "EUR"), TaxCountry("BG", "EUR"), TaxCountry("RO", "RON"), TaxCountry("HU", "HUF"), TaxCountry("GE", "GEL"), TaxCountry("AM", "AMD"), TaxCountry("MX", "MXN"), TaxCountry("BR", "BRL"), TaxCountry("CR", "CRC"), TaxCountry("GT", "GTQ"), TaxCountry("DO", "DOP"), TaxCountry("KE", "KES"), TaxCountry("RW", "RWF"), TaxCountry("UG", "UGX"), TaxCountry("ZM", "ZMW"), TaxCountry("PK", "PKR"), TaxCountry("UZ", "UZS"), TaxCountry("KZ", "KZT"), TaxCountry("MA", "MAD"), TaxCountry("MD", "MDL"), TaxCountry("MK", "MKD"), TaxCountry("PA", "PAB"), TaxCountry("NI", "NIO"), TaxCountry("SV", "USD"), TaxCountry("HN", "HNL"), TaxCountry("PY", "PYG"), TaxCountry("EC", "USD"), TaxCountry("NA", "NAD"), TaxCountry("KH", "KHR"), TaxCountry("AZ", "AZN"), TaxCountry("BH", "BHD"), TaxCountry("KW", "KWD"), TaxCountry("OM", "OMR"), TaxCountry("QA", "QAR"), TaxCountry("BN", "BND"), TaxCountry("BS", "BSD"), TaxCountry("AT", "EUR"), TaxCountry("CY", "EUR"), TaxCountry("MT", "EUR"), TaxCountry("GR", "EUR"), TaxCountry("SI", "EUR"), TaxCountry("SK", "EUR"), TaxCountry("HR", "EUR"), TaxCountry("RS", "RSD"), TaxCountry("ME", "EUR"), TaxCountry("AL", "ALL"), TaxCountry("BA", "BAM"), TaxCountry("NG", "NGN"), TaxCountry("GH", "GHS"), TaxCountry("TZ", "TZS"), TaxCountry("BW", "BWP"), TaxCountry("MU", "MUR"), TaxCountry("EG", "EGP"), TaxCountry("SZ", "SZL"), TaxCountry("LS", "LSL"), TaxCountry("JO", "JOD"), TaxCountry("NL", "EUR"), TaxCountry("BE", "EUR"), TaxCountry("LU", "EUR"), TaxCountry("CH", "CHF"), TaxCountry("SE", "SEK"), TaxCountry("FI", "EUR"), TaxCountry("IS", "ISK"), TaxCountry("IT", "EUR"), TaxCountry("JP", "JPY"), TaxCountry("KR", "KRW"), TaxCountry("AR", "ARS"), TaxCountry("CL", "CLP"), TaxCountry("UY", "UYU"), TaxCountry("BO", "BOB"), TaxCountry("JM", "JMD"), TaxCountry("TT", "TTD"), TaxCountry("BZ", "BZD"), TaxCountry("GY", "GYD"), TaxCountry("BB", "BBD"), TaxCountry("FJ", "FJD")
+)
+fun taxCurrency(country: String): String = taxCountries.first { it.code == country }.currency
+fun money(value: Double, currencyCode: String = "ILS"): String = java.text.NumberFormat.getCurrencyInstance(appLocale).apply {
+    val chosen = java.util.Currency.getInstance(currencyCode)
+    currency = chosen
+    minimumFractionDigits = chosen.defaultFractionDigits.coerceAtLeast(0)
+    maximumFractionDigits = minimumFractionDigits
+}.format(value)
+fun countryName(code: String): String = Locale.Builder().setRegion(code).build().getDisplayCountry(appLocale)
+val supportedTaxCountries = setOf("IL", "GB", "IN", "RU", "AE", "US", "CA", "DE", "FR", "PT", "AU", "NZ", "ES", "CN", "SA", "IE", "HK", "NO", "ZA", "SG", "DK", "MY", "PH", "PL", "CZ", "TH", "ID", "VN", "TW", "LK", "PE", "CO", "EE", "LV", "LT", "BG", "RO", "HU", "GE", "AM", "MX", "BR", "CR", "GT", "DO", "KE", "RW", "UG", "ZM", "PK", "UZ", "KZ", "MA", "MD", "MK", "PA", "NI", "SV", "HN", "PY", "EC", "NA", "KH", "AZ", "BH", "KW", "OM", "QA", "BN", "BS", "AT", "CY", "MT", "GR", "SI", "SK", "HR", "RS", "ME", "AL", "BA", "NG", "GH", "TZ", "BW", "MU", "EG", "SZ", "LS", "JO") + nextTwentyTaxCountries
+val foreignTaxCountries = supportedTaxCountries - setOf("IL", "GB")
+fun supportsTaxYear(country: String, year: Int): Boolean = when (country) {
+    "FR" -> year == 2025 // 2026 assessment table is for 2025 income, never relabel as 2026 income.
+    "IN", "AU", "NZ", "HK", "ZA" -> year in setOf(2025, 2026)
+    else -> country in supportedTaxCountries && year == 2026
+}
+fun taxYearFor(country: String, date: LocalDate): Int {
+    if (country in setOf("ZA", "NA")) return if (date < LocalDate.of(date.year, 3, 1)) date.year - 1 else date.year
+    if (country in setOf("AU", "UG", "PK", "BW", "MU", "SZ")) return if (date < LocalDate.of(date.year, 7, 1)) date.year - 1 else date.year
+    val startDay = if (country == "GB") 6 else 1
+    return if (country in setOf("GB", "IN", "NZ", "HK", "LK", "LS") && date < LocalDate.of(date.year, 4, startDay)) date.year - 1 else date.year
+}
+
+internal fun bandTax(amount: Double, caps: List<Double>, rates: List<Double>): Double {
+    var previous = 0.0
+    return caps.mapIndexed { i, cap ->
+        (min(amount, cap) - previous).coerceAtLeast(0.0).times(rates[i]).also { previous = cap }
+    }.sum()
+}
+
+/** Monthly steady-pay estimate. See TAX-SOURCES.md for scope and verified 2026/27 tables. */
+fun estimateUkNet(gross: Double, settings: AppSettings, year: Int): NetEstimate? {
+    if (year != 2026 || settings.taxYear != year || !settings.ukStandardProfile ||
+        settings.taxRegion !in setOf("ENG", "WLS", "NIR", "SCT")) return null
+    val annual = gross * 12
+    val allowance = (12570.0 - max(0.0, annual - 100000.0) / 2).coerceAtLeast(0.0)
+    val taxable = max(0.0, annual - allowance)
+    val tax = if (settings.taxRegion == "SCT") bandTax(taxable,
+        listOf(3967.0, 16956.0, 31092.0, 62430.0, 125140.0, Double.POSITIVE_INFINITY),
+        listOf(.19, .20, .21, .42, .45, .48))
+    else bandTax(taxable, listOf(37700.0, 125140.0, Double.POSITIVE_INFINITY), listOf(.20, .40, .45))
+    val ni = max(0.0, min(gross, 4189.0) - 1048.0) * .08 + max(0.0, gross - 4189.0) * .02
+    return NetEstimate(tax / 12, ni, 0.0, 0.0, 0.0, 0.0, gross - tax / 12 - ni)
+}
+
+
+/** Supported resident/expatriate scenarios only; no inference of eligibility from UI language. */
+fun estimateAdditionalCountryNet(gross: Double, settings: AppSettings, year: Int): NetEstimate? {
+    val country = settings.taxCountry
+    if (!gross.isFinite() || gross < 0 || !supportsTaxYear(country, year) || year != settings.taxYear ||
+        country !in setOf("IN", "RU", "AE") || settings.foreignProfileCountry != country) return null
+    val deductions = settings.foreignMonthlyDeductions ?: return null
+    if (!deductions.isFinite() || deductions < 0 || deductions > gross) return null
+    val annual = gross * 12
+    var cess = 0.0
+    val annualTax = when (country) {
+        "RU" -> bandTax(annual, listOf(2400000.0, 5000000.0, 20000000.0, 50000000.0, Double.POSITIVE_INFINITY),
+            listOf(.13, .15, .18, .20, .22))
+        "IN" -> {
+            val taxable = max(0.0, annual - 75000.0)
+            // Surcharge cases are intentionally excluded from this first supported profile.
+            if (taxable > 5000000.0) return null
+            val beforeRebate = bandTax(taxable, listOf(400000.0, 800000.0, 1200000.0, 1600000.0, 2000000.0, 2400000.0, Double.POSITIVE_INFINITY),
+                listOf(0.0, .05, .10, .15, .20, .25, .30))
+            val tax = if (taxable <= 1200000.0) max(0.0, beforeRebate - 60000.0)
+                else min(beforeRebate, taxable - 1200000.0)
+            cess = tax * .04
+            tax
+        }
+        else -> 0.0 // UAE non-GCC expatriate employment profile; actual payroll deductions supplied separately.
+    }
+    val tax = annualTax / 12
+    val otherTax = cess / 12
+    return NetEstimate(tax, 0.0, 0.0, 0.0, 0.0, 0.0, gross - tax - otherTax - deductions,
+        otherTax = otherTax, otherDeductions = deductions)
+}
+
+/** Localized name, English fallback, ISO code and currency; accent-insensitive search. */
+fun searchTaxCountries(query: String, locale: Locale): List<TaxCountry> {
+    fun normalized(value: String): String = java.text.Normalizer.normalize(value,java.text.Normalizer.Form.NFD)
+        .replace(Regex("\\p{M}+"),"").lowercase(Locale.ROOT).trim()
+    val needle=normalized(query)
+    val collator=java.text.Collator.getInstance(locale)
+    fun name(c: TaxCountry)=Locale.Builder().setRegion(c.code).build().getDisplayCountry(locale)
+    return taxCountries.filter { c ->
+        listOf(c.code,c.currency,name(c),Locale.Builder().setRegion(c.code).build().getDisplayCountry(Locale.ENGLISH)).any { normalized(it).contains(needle) }
+    }.sortedWith { a,b ->
+        val exactA=normalized(a.code)==needle
+        val exactB=normalized(b.code)==needle
+        when { exactA && !exactB -> -1;exactB && !exactA -> 1;else -> collator.compare(name(a),name(b)) }
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/widget_root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="12dp" android:background="@drawable/widget_background_dark" android:layoutDirection="locale">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+    <TextView android:id="@+id/widget_title" android:layout_width="0dp" android:layout_weight="1" android:layout_height="36dp" android:gravity="center_vertical" android:text="@string/app_name" android:textColor="#ADC7FF" android:textSize="16sp" android:textStyle="bold" />
+    <TextView android:id="@+id/widget_open" android:layout_width="wrap_content" android:layout_height="36dp" android:paddingHorizontal="8dp" android:gravity="center" android:text="@string/widget_open" android:textColor="#ADC7FF" android:textSize="12sp" />
+  </LinearLayout>
+  <TextView android:id="@+id/widget_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/widget_inactive" android:textColor="#E7EDF4" android:textSize="12sp" android:maxLines="2" />
+  <Chronometer android:id="@+id/widget_elapsed" android:textDirection="ltr" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center" android:textColor="#E7EDF4" android:textSize="28sp" android:textStyle="bold" android:visibility="gone" android:format="%s" />
+  <TextView android:id="@+id/widget_idle" android:textDirection="ltr" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center" android:text="00:00" android:textColor="#E7EDF4" android:textSize="28sp" android:textStyle="bold" />
+  <LinearLayout android:id="@+id/widget_start_group" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <Button android:id="@+id/widget_start_office" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:text="@string/widget_start_office" android:textSize="12sp" android:textAllCaps="false" android:backgroundTint="#ADC7FF" android:textColor="#002D73" />
+    <Button android:id="@+id/widget_start_home" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:text="@string/widget_start_home" android:textSize="12sp" android:textAllCaps="false" android:backgroundTint="#80D6CB" android:textColor="#003733" />
+  </LinearLayout>
+  <Button android:id="@+id/widget_stop" android:layout_width="match_parent" android:layout_height="48dp" android:visibility="gone" android:text="@string/widget_stop" android:textSize="13sp" android:textAllCaps="false" android:backgroundTint="#FFB1C0" android:textColor="#650D25" />
+</LinearLayout>

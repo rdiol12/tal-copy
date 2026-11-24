@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="text_93d815fab2" formatted="false">"Die tägliche Standardzeit muss größer als 0 und nicht größer als 24 sein."</string>
+    <string name="text_9fdb0c0357" formatted="false">"Die Zahlung muss null oder eine positive Zahl sein."</string>
+    <string name="text_1020d02bcc" formatted="false">"Der monatliche Stundeziel muss größer als 0 und nicht größer als 744."</string>
+    <string name="text_a3016d567d" formatted="false">"Der Zeitpunkt am Starttag muss zwischen 1 und 31 liegen."</string>
+    <string name="text_a3b71b8576" formatted="false">"Die endgültige Überzeit muss alle übrigen Stunden abdecken."</string>
+    <string name="text_11798e6af6" formatted="false">"Überprüfen Sie die Höhestunden und bezahlen Sie Prozentsätze."</string>
+    <string name="text_142ed94880" formatted="false">"Die Abbrechungsinstellungen sind nicht gültig."</string>
+    <string name="text_617d62c8d5" formatted="false">"Die Steuerkredittpunkte sind ungültig."</string>
+    <string name="text_d64e9be198" formatted="false">"Die Beiträge müssen zwischen 0 und 100 liegen."</string>
+    <string name="text_e9ded22849" formatted="false">"Die Zahlungsgrundlage ist ungültig."</string>
+    <string name="text_5340862757" formatted="false">"Wählen Sie mindestens einen Arbeitstag aus."</string>
+    <string name="text_58ee2bc711" formatted="false">"Die Ursachenliste ist zu lang."</string>
+    <string name="text_54904132d0" formatted="false">"Die Anzahl der Beiträge oder deren IDs ist ungültig."</string>
+    <string name="text_bccb639eb1" formatted="false">"Invalid Arbeitsentzug."</string>
+    <string name="text_14afe878db" formatted="false">"Die ursprüngliche Dauer ist ungültig."</string>
+    <string name="text_285af230e1" formatted="false">"Der Eingangstext ist zu lang."</string>
+    <string name="text_927652b634" formatted="false">"Arbeiten enthalten überlappen."</string>
+    <string name="text_478ac0cba4" formatted="false">"Die aktive Umwandlung überschreitet einen vorhandenen Eingang."</string>
+    <string name="text_1ce0351978" formatted="false">"Keine angegebenen Gründe"</string>
+    <string name="text_0206a8d338" formatted="false">"Sie können Ihr Google-Konto nicht sofort verbinden. Sie können auf eine Datei zurückkehren und später erneut versuchen."</string>
+    <string name="text_630af90bc5" formatted="true">"Google-Autorisierung wurde nicht erteilt (code %1$s). Wiederverbindung oder Verwendung einer Backup-Datei."</string>
+    <string name="text_daf10c2ee5" formatted="false">"Die Operation versagt. Ihre lokalen Daten wurden beibehalten."</string>
+    <string name="text_25b395415b" formatted="false">"Eine Backup-Kopie wurde erfolgreich auf Google Drive gespeichert."</string>
+    <string name="text_fc021a3be3" formatted="false">"Keine ShiftHours Backup-Kopien wurden in diesem Konto gefunden."</string>
+    <string name="text_439ed2ca59" formatted="false">"In Verbindung mit Google Drive."</string>
+    <string name="text_7480a74f74" formatted="false">"Verbindung abgesagt. Keine Backup oder Wiederherstellung wurde durchgeführt."</string>
+    <string name="text_514e675d10" formatted="false">"Zugang zum Fahrzeug wurde nicht erteilt."</string>
+    <string name="text_325ca3ec59" formatted="false">"Fahrerlaubnis wurde nicht erteilt."</string>
+    <string name="text_5862cd4663" formatted="false">"Nicht in der Lage, die Zieldatei zu öffnen."</string>
+    <string name="text_a8df08ecdf" formatted="false">"Backup Copy Datei gespeichert."</string>
+    <string name="text_04bb2141d5" formatted="false">"Nicht in der Lage, die Datei zu lesen."</string>
+    <string name="text_5e9b8b7914" formatted="false">"Die Backup-Kopie ist zu groß."</string>
+    <string name="text_221ac78111" formatted="false">"Backup kopieren und wiederherstellen"</string>
+    <string name="text_806ac63619" formatted="false">"Halten Sie Ihre Arbeitszeiten, wenn Sie auf ein neues Telefon wechseln."</string>
+    <string name="text_55d63892ad" formatted="false">"Die Google Drive"</string>
+    <string name="text_e5444dccaf" formatted="false">"Kein Konto ausgewählt"</string>
+    <string name="text_0a2305a775" formatted="false">"Eine erfolgreiche Backup-Kopie wird erst nach Abschluss der Laden angezeigt."</string>
+    <string name="text_2fc9030263" formatted="false">"Verbinden Sie ein Konto und geben Sie Zugriff."</string>
+    <string name="text_cd0e41e136" formatted="false">"Wählen Sie ein Konto / erneut verbinden"</string>
+    <string name="text_6f3a7bda3a" formatted="false">"Verbindung mit Google Drive"</string>
+    <string name="text_15109258b9" formatted="false">"Zurück zum Fahren jetzt"</string>
+    <string name="text_c75c1e3a33" formatted="false">"Wählen Sie eine Drive Backup-Kopie zur Wiederherstellung"</string>
+    <string name="text_90b7df067a" formatted="false">"No Drive Backup Copy ist für dieses Konto noch abgeschlossen."</string>
+    <string name="text_1c2b595825" formatted="true">"Letzte erfolgreiche Backup-Kopie: %1$s %2$s"</string>
+    <string name="text_32640ad12e" formatted="false">"Backup-Kopien werden in Drive\'s verborgenen App-Datenmappe gespeichert, nicht als gewöhnliche Dateien.Um auf einem neuen Telefon wiederherzustellen, installieren Sie die gleiche App und verbinden Sie das gleiche Google-Konto."</string>
+    <string name="text_ea1a07b6ef" formatted="false">"Automatische Sicherung"</string>
+    <string name="text_8edcd28553" formatted="false">"Aus"</string>
+    <string name="text_ef4037576b" formatted="false">"Täglich"</string>
+    <string name="text_50296d4c2d" formatted="false">"Wöchentlich"</string>
+    <string name="text_790f24eb34" formatted="false">"Backup Copy Zeitplan aktualisiert."</string>
+    <string name="text_e75e2661b7" formatted="false">"Nur auf einem unmeterten Netzwerk wie Wi-Fi"</string>
+    <string name="text_cf3d313652" formatted="false">"Schema ist nach der Verbindung mit dem Drive verfügbar. Android kann Backup-Kopien verzögern, um die Batterie zu speichern oder wenn offline. Verwenden Sie den oben genannten Button, um die erste Backup-Kopie sofort zu erstellen."</string>
+    <string name="text_1e579b05be" formatted="false">"Lokalerweise abgeschaltet und die Zeitplan annulliert. bestehende Backup-Kopien wurden nicht gelöscht."</string>
+    <string name="text_83eccb0dd3" formatted="false">"Disconnect und annulliere Zeitplan"</string>
+    <string name="text_b35a854e22" formatted="false">"Backup-Datei kopieren und wiederherstellen"</string>
+    <string name="text_1da6e0d4aa" formatted="false">"Speichern Sie eine Backup-Datei auf Ihrem Computer, im Drive oder an anderer Stelle, auch vor der Einrichtung der Google-Verbindung der App."</string>
+    <string name="text_52cca61a5d" formatted="false">"Speichern Sie Backup Copy File"</string>
+    <string name="text_4d2b863edd" formatted="false">"Wiederherstellen von Backup Copy File"</string>
+    <string name="text_f4ab9db1a0" formatted="false">"Backup-Kopien beinhalten Einträge, eine aktive Umstellung, Einstellungen und gespeicherte Gründe. Vor der Wiederherstellung wird ein Vorschau angezeigt und eine lokale Kopie Ihrer vorherigen Daten wird gespeichert."</string>
+    <string name="text_86472e4d43" formatted="false">"Öffnen Sie die gespeicherte Kopie vor der letzten Wiederherstellung"</string>
+    <string name="text_bf72e99186" formatted="true">"Dieses Gerät hält %1$s Einträge. Wiederverbindet Google und konfiguriert die Backup-Copy-Schema auf jedem Telefon."</string>
+    <string name="text_b5af650c8c" formatted="false">"Wiederherstellungsmodus: Lokale Daten können nicht gelesen werden. Wiederherstellen aus einer Datei oder Drive; die Erstellung neuer Backup-Kopien ist deaktiviert."</string>
+    <string name="text_f738c4c045" formatted="false">"Verfügbare Backup-Kopien"</string>
+    <string name="text_c775e7dcf6" formatted="false">"Keine Backup-Kopien im ausgewählten Konto gefunden."</string>
+    <string name="text_b728721fc0" formatted="false">"nahe"</string>
+    <string name="text_835ba611ee" formatted="false">"Wiederherstellung bestätigt"</string>
+    <string name="text_bfe0764274" formatted="true">"Backup Copy enthält %1$s Einträge."</string>
+    <string name="text_19a88cf185" formatted="true">"Range: %1$s zu %2$s"</string>
+    <string name="text_ea12a4ba2b" formatted="false">"Keiner"</string>
+    <string name="text_1f70207bab" formatted="false">"Ja ja"</string>
+    <string name="text_3cbbf0077a" formatted="true">"Aktive Schicht: %1$s"</string>
+    <string name="text_2388ed2d80" formatted="true">"Die Wiederherstellung ersetzt %1$s Einträge und die Einstellungen auf diesem Gerät. Zuvor wird eine lokale Kopie gespeichert."</string>
+    <string name="text_f35658ed7c" formatted="false">"Restaurierung abgeschlossen."</string>
+    <string name="text_a87c9f4c06" formatted="false">"Daten ersetzen und wiederherstellen"</string>
+    <string name="text_a7c55a8d06" formatted="false">"Abschaffung"</string>
+    <string name="text_7b80593224" formatted="false">"Die Datei ist zu groß."</string>
+    <string name="text_b36a3090e4" formatted="false">"Diese Backup-Kopie ist mit dieser App-Version nicht kompatibel."</string>
+    <string name="text_1d25b4e13f" formatted="false">"Dies ist keine unterstützte Backup-Kopie von ShiftHours."</string>
+    <string name="text_c84389ddd1" formatted="false">"Die Backup-Kopie ist beschädigt: Integrity Check fehlte."</string>
+    <string name="text_2159b4a358" formatted="false">"Unbekannte vorherige Datenversion."</string>
+    <string name="text_4ae6ec8fa0" formatted="false">"Die Daten sind noch nicht geladen."</string>
+    <string name="text_cf903e3463" formatted="false">"Geben Sie eine gültige Nummer ein."</string>
+    <string name="text_039bb0fc27" formatted="false">"Geben Sie die Zeit als Stunden ein: Minuten oder zehnstündige Stunden."</string>
+    <string name="text_a7fcad5418" formatted="false">"Invaliditätsstundenzahl."</string>
+    <string name="text_37e2eed494" formatted="false">"Invalidität der Minuten."</string>
+    <string name="text_77c0279c02" formatted="false">"Invalid Period beginnt Tag."</string>
+    <string name="text_3f800b0cce" formatted="false">"Invalidsperiode am Ende des Tages."</string>
+    <string name="text_14611081ea" formatted="false">"Der Endtag muss vor Beginn des nächsten Zeitraums vorausgehen."</string>
+    <string name="text_b9e104411d" formatted="false">"Geben Sie die Pausezeit in ganz Minuten ein."</string>
+    <string name="text_2189089fc9" formatted="false">"Überprüfen Sie die Einstellungen."</string>
+    <string name="text_81de798264" formatted="false">"Willkommen"</string>
+    <string name="text_47cfdefbce" formatted="false">"Einstellungen"</string>
+    <string name="text_8d74344d70" formatted="false">"Setzen Sie Ihre Arbeitsbedingungen und sparen Sie, um zu beginnen."</string>
+    <string name="text_9a90a562d2" formatted="false">"Änderungen speichern"</string>
+    <string name="text_ab4dfe20aa" formatted="false">"Es gilt für alle Beiträge, einschließlich früheren Beiträgen."</string>
+    <string name="text_0bf5310554" formatted="false">"Sparen..."</string>
+    <string name="text_54d36ad080" formatted="false">"Einstellungen speichern"</string>
+    <string name="text_465e8134a4" formatted="false">"Vergütung und Überstunden"</string>
+    <string name="text_45a3198e62" formatted="false">"Periode und Pausen"</string>
+    <string name="text_bfc0c0e7f1" formatted="false">"Steuer und Beiträge"</string>
+    <string name="text_a2ceeb919c" formatted="false">"Rettungsgründe"</string>
+    <string name="text_3d0ffbb6b9" formatted="false">"Vergütungsart"</string>
+    <string name="text_9852666700" formatted="false">"Festsatzmonatlicher Lohn"</string>
+    <string name="text_c17956962e" formatted="false">"Gesamtmonatlicher Lohn (₪)"</string>
+    <string name="text_55bc5d12cc" formatted="false">"Stundenzahlung (₪)"</string>
+    <string name="text_635f53e8e3" formatted="false">"Monatliche Stunden, die Ihr Arbeitgeber verlangt"</string>
+    <string name="text_8b4c4a643c" formatted="false">"Hourly rate = monatliche Löhne ÷ monatliche Stunden Ziel.Gross Löhne enthält die volle monatliche Löhne plus Überzeitzahlungen an den konfigurierten Raten."</string>
+    <string name="text_7414d91b15" formatted="false">"Der Gesamtlohn wird aus registrierten Stunden und den konfigurierten Dritten berechnet."</string>
+    <string name="text_8a239ab302" formatted="false">"Überstundenstufen"</string>
+    <string name="text_0fea91c3a0" formatted="false">"Regelmäßige Stunden pro Tag"</string>
+    <string name="text_996add3cb0" formatted="false">"Geben Sie zehnstündige Stunden oder Stunden ein: Minuten, z. B. 2.5 oder 2:30."</string>
+    <string name="text_b779c7c572" formatted="true">"Stufe %1$s"</string>
+    <string name="text_25606d5652" formatted="false">"Alle übrigen Stunden"</string>
+    <string name="text_92102dc8df" formatted="false">"Stunden auf dieser Ebene"</string>
+    <string name="text_b5fe6f82a9" formatted="false">"Prozentsatz der Stundrate"</string>
+    <string name="text_bd38859717" formatted="false">"Diese Ebene gilt nach regelmäßigen Stunden und alle Dritte darüber."</string>
+    <string name="text_5192d415d8" formatted="false">"zu bewegen"</string>
+    <string name="text_6179185b49" formatted="false">"Bewegung nach unten"</string>
+    <string name="text_7c8173fafa" formatted="false">"Löschen"</string>
+    <string name="text_f428ab9623" formatted="false">"Stufe hinzufügen"</string>
+    <string name="text_f1f14874a4" formatted="false">"Genau eine \"alle übrigen Stunden\" Ebene ist erforderlich, in der letzten Reihe.Ein Ebene hinzufügen begrenzt die vorherige Ebene; prüfen Sie ihre Stunden."</string>
+    <string name="text_89fef4fd58" formatted="false">"Berichterstattungsperiode"</string>
+    <string name="text_6c22041108" formatted="false">"Erster Tag des Zeitraums (1–31)"</string>
+    <string name="text_796e34b83e" formatted="false">"Der letzte Tag (31 = Ende des Monats)"</string>
+    <string name="text_b241433b46" formatted="false">"Die Tage sind verbunden, um Lücke oder Überlapse zu vermeiden, zum Beispiel 25–24. In einem kurzen Monat wird die Startdatum an den letzten verfügbaren Tag angepasst."</string>
+    <string name="text_a222187697" formatted="true">"Aktuelles Zeitraum: %1$s – %2$s"</string>
+    <string name="text_01f30eb896" formatted="false">"Unterbrechen von Abzug"</string>
+    <string name="text_c9beca5709" formatted="false">"Deduct brechen Zeit"</string>
+    <string name="text_a123134aa5" formatted="false">"Einmal am Tag"</string>
+    <string name="text_26dcd5cc53" formatted="false">"durch Segment"</string>
+    <string name="text_fa4922c12a" formatted="false">"Minuten zum Abfangen"</string>
+    <string name="text_ff7f573a4d" formatted="false">"Auch Abfälle bei der Arbeit von zu Hause abnehmen"</string>
+    <string name="text_143dd7316a" formatted="false">"Eine tägliche Pause wird einmal über qualifizierte Segmente in Zeitordnung abgezogen. Hausarbeit ist ausgeschlossen, wenn die Option ausgeschlossen ist. Abzüge überschreiten nie die tatsächliche Arbeitszeit."</string>
+    <string name="text_40494acb7f" formatted="false">"Keine Unterbrechung. alle aufgeführten Zeiten werden als bezahlbare Zeit berechnet."</string>
+    <string name="text_8a53041f32" formatted="false">"Arbeitstagen für tägliche Mängel"</string>
+    <string name="text_b6c4c767eb" formatted="false">"So"</string>
+    <string name="text_c0505c1097" formatted="false">"Mo"</string>
+    <string name="text_7b5b7d0c90" formatted="false">"Di"</string>
+    <string name="text_88aa0681e1" formatted="false">"Mi"</string>
+    <string name="text_c2742c4cba" formatted="false">"Do"</string>
+    <string name="text_08e0ffcda5" formatted="false">"Fr"</string>
+    <string name="text_0645b32caf" formatted="false">"Sa"</string>
+    <string name="text_92d73e83f6" formatted="false">"Die gleichen Überschusszeiten gelten für alle Tage; es gibt keine separate Wochenenden oder Urlaubsregeln."</string>
+    <string name="text_69e69a7518" formatted="false">"Steuerkredittpunkte und geschätzte Nettogebühr"</string>
+    <string name="text_70d7cd14f1" formatted="false">"Steuerkredittpunkte (von Ihrem paylip)"</string>
+    <string name="text_9987c69efd" formatted="false">"Jedes Punkt ist im Wert von ₪242 pro Monat unter der 2026 israelischen Steuertabelle."</string>
+    <string name="text_8cee38323a" formatted="false">"Pension und Schulungsfonds"</string>
+    <string name="text_9982697de0" formatted="false">"Anzahl der Arbeitnehmerpensionsbeiträge (%)"</string>
+    <string name="text_3638d5596d" formatted="false">"Beitrag des Personaltrainingfonds (%; 0 wenn nicht)"</string>
+    <string name="text_90b68945c0" formatted="false">"Geben Sie nur den Anteil des Mitarbeiters ein, außer Arbeitgeber Beiträge."</string>
+    <string name="text_e2e16aa700" formatted="false">"Zahlungsgrundlage für Beiträge"</string>
+    <string name="text_dc959b16aa" formatted="false">"Basisbezahlung ausgenommen Überzeit"</string>
+    <string name="text_682c0e2622" formatted="false">"Gesamtgebühr gross"</string>
+    <string name="text_3f55564e26" formatted="false">"manuell definierte Menge"</string>
+    <string name="text_0d4b9a288d" formatted="false">"Zahlungsgrundlage für Beiträge (₪)"</string>
+    <string name="text_3284189b89" formatted="false">"Inkludieren Sie den Standard-Pensionenbeitragsteuerkredit"</string>
+    <string name="text_0b5e7d7238" formatted="false">"Die Pensionsteuer-Kreditschätzung beträgt 35% der zugelassenen Beiträge, umfasst bei ₪679 der Beiträge pro Monat und 7% des Gehalts."</string>
+    <string name="text_102196cdf2" formatted="false">"Was die Schätzung enthält"</string>
+    <string name="text_c02d9dbae9" formatted="false">"Einkommenssteuern, Steuerkreditpunkte, israelische nationale und gesundheitliche Versicherung und Mitarbeiterbeiträge. Verwenden Sie die 2026-Tabellen für israelische Bewohner im Alter von 18 Jahren zum Ruhestand."</string>
+    <string name="text_a09a8853d1" formatted="false">"Ausschließen Steuerkoordination, andere Einnahmen, steuerfähige Autoverträge, Arbeitgeber-Beitragsteuern und spezielle Kredite. Vergleichen Sie mit Ihrem Payer und Refinieren Sie wie nötig."</string>
+    <string name="text_49148d6451" formatted="false">"Grund für die Arbeit von zu Hause"</string>
+    <string name="text_62d649ad15" formatted="false">"Neue Gründe"</string>
+    <string name="text_45bd96d34b" formatted="false">"hinzufügen auf die Liste"</string>
+    <string name="text_a99e68e9f4" formatted="false">"Entfernen"</string>
+    <string name="text_1b581c283a" formatted="false">"Die Entfernung eines gespeicherten Grundsatzes ändert keine bestehenden Einträge. Sie können immer kostenlosen Text eingeben."</string>
+    <string name="text_d44063b451" formatted="false">"Die Datenladung versagt."</string>
+    <string name="text_31e02fbfa7" formatted="false">"Die Veränderung wurde nicht gerettet. versuchen Sie erneut."</string>
+    <string name="text_71f28ff8fa" formatted="false">"Unfähig Daten zu laden"</string>
+    <string name="text_b238f1a394" formatted="false">"Die Dateien wurden beibehalten.Daten der App nicht löschen."</string>
+    <string name="text_fc2297f319" formatted="false">"Versuchen Sie erneut"</string>
+    <string name="text_6e56c6a002" formatted="false">"Wiederherstellen einer Backup-Kopie"</string>
+    <string name="text_e4f2184a47" formatted="false">"Überprüfen Sie die Gerätuhr: Eine Einreise endet in der Zukunft."</string>
+    <string name="text_6f6a3321b0" formatted="false">"Die Endzeit muss nach der Startzeit sein."</string>
+    <string name="text_e0aad7a0c2" formatted="false">"Die Einstellungen gespeichert."</string>
+    <string name="text_8dfb4f3f58" formatted="false">"Eintritt gerettet wurde."</string>
+    <string name="text_7a6915a25c" formatted="false">"Sie können keine Stunden aufzeichnen, die noch nicht geschehen sind."</string>
+    <string name="text_2aca9c2968" formatted="false">"Die Uhrzeit kann nicht in der Zukunft sein."</string>
+    <string name="text_f9dc75319d" formatted="false">"Entfernen Eingang"</string>
+    <string name="text_f026fe8829" formatted="true">"Entfernen Sie den Eingang für %1$s? Dies kann nicht verweigert werden."</string>
+    <string name="text_b0e3328ac0" formatted="false">"Gründe, von zu Hause zu arbeiten"</string>
+    <string name="text_f1af79973d" formatted="false">"Wählen Sie einen geretteten Grund"</string>
+    <string name="text_05d94bc43f" formatted="false">"Meine Arbeitsstunden"</string>
+    <string name="text_c83e648a74" formatted="false">"Initialer Setup"</string>
+    <string name="text_89c15910b6" formatted="false">"Setzen Sie Ihre Löhne, monatliche Stunden und Arbeitszeiten, um Zahlungsrechnungen zu ermöglichen. Sie können Stunden vor Abschluss der Einstellung aufzeichnen."</string>
+    <string name="text_7c1126f30f" formatted="false">"Öffnete Einrichtungen"</string>
+    <string name="text_01ebd1a71f" formatted="false">"Bereit zum Start?"</string>
+    <string name="text_6d81f53fb4" formatted="true">"Schicht läuft · %1$s"</string>
+    <string name="text_8b6488028e" formatted="false">"Wischen, um die Schicht jetzt zu beginnen."</string>
+    <string name="text_c386f7af9f" formatted="true">"Arbeitsbeginn: %1$s %2$s"</string>
+    <string name="text_bc84ae26be" formatted="false">"Wischen, um die Schicht jetzt zu beenden."</string>
+    <string name="text_73a90395c7" formatted="false">"Zum Starten wischen"</string>
+    <string name="text_867983500d" formatted="false">"Zum Beenden wischen"</string>
+    <string name="text_a5d8698fba" formatted="false">"Richtige Uhrzeit-In / Einrichten einer anderen Endzeit"</string>
+    <string name="text_1efd4660f9" formatted="false">"Schicht manuell hinzufügen"</string>
+    <string name="text_79a7f1d677" formatted="false">"Ihre Uhrzeit wird gespeichert, auch wenn die App geschlossen ist."</string>
+    <string name="text_95d86d7f5f" formatted="false">"Heute"</string>
+    <string name="text_6834f9db87" formatted="false">"Nettostunden"</string>
+    <string name="text_b076df1539" formatted="false">"Segmente am selben Tag werden kombiniert. Eine Übernachtungswechsel gehört zu seinem Startdatum."</string>
+    <string name="text_7991cbb6a8" formatted="false">"Aktueller Zeitraum"</string>
+    <string name="text_3084f001bd" formatted="false">"Erfasste Stunden"</string>
+    <string name="text_7447d177b1" formatted="false">"Überstunden"</string>
+    <string name="text_e2cbeabb69" formatted="false">"Vollständige Löhne + aufgezeichneter Überzeit"</string>
+    <string name="text_4c0803b36f" formatted="false">"Gesamtzahlung von Einträgen"</string>
+    <string name="text_389abd9ee8" formatted="false">"Zahlungssumme erscheinen nach der Ersparung der ersten Einstellungen."</string>
+    <string name="text_1960680292" formatted="false">"Backup Kopierung Status"</string>
+    <string name="text_dd6ddc4c4f" formatted="false">"No Drive Backup Copy ist auf diesem Gerät noch abgeschlossen."</string>
+    <string name="text_1c3f9e273d" formatted="true">"Erfolgreiches Drive Backup Kopie: %1$s %2$s"</string>
+    <string name="text_6e55aef91f" formatted="false">"tägliche Backup-Kopie geplant"</string>
+    <string name="text_17ee444b2e" formatted="false">"Wöchentliche Backup-Kopie geplant"</string>
+    <string name="text_d7da1ab695" formatted="false">"Automatic Drive Backup Kopie ist ausgeschaltet"</string>
+    <string name="text_bba88dd845" formatted="false">"Einstellungen und Aktionen sind in der Backup Copy-Taste unten verfügbar."</string>
+    <string name="text_d61f7f639f" formatted="false">"Vorheriger"</string>
+    <string name="text_28890b291d" formatted="false">"Nächste"</string>
+    <string name="text_023f8a1a0c" formatted="false">"Übersicht"</string>
+    <string name="text_0cdf398747" formatted="false">"Stunden, Zahlung und Verfolgung für den Zeitraum"</string>
+    <string name="text_5b40d10b38" formatted="false">"Monatliche Löhne + Überzeit"</string>
+    <string name="text_b7cebc21b4" formatted="false">"Stunde bezahlt"</string>
+    <string name="text_24c64cee7b" formatted="false">"Vollmonatliche Löhne"</string>
+    <string name="text_1558a05606" formatted="false">"Regelmäßige Gehaltszeiten"</string>
+    <string name="text_5407314942" formatted="false">"Überzeit bezahlt"</string>
+    <string name="text_ebff026858" formatted="false">"Uhren Rate"</string>
+    <string name="text_f072356bdc" formatted="false">"Die vollständige monatliche Lohn wird angezeigt. fehlende Stunden werden separat angezeigt und werden nicht automatisch abgezogen."</string>
+    <string name="text_d7fec4855e" formatted="false">"Inkludiert die aktiven Wechselstunden innerhalb dieser Zeit; Aktualisierungsmengen live."</string>
+    <string name="text_087fd2cd6d" formatted="false">"Stundenbrechungen"</string>
+    <string name="text_3eb92e199a" formatted="false">"Nettozeit gesamt"</string>
+    <string name="text_07b643f83a" formatted="false">"Reguläre Stunden"</string>
+    <string name="text_dda62e1cc9" formatted="false">"Überstunden gesamt"</string>
+    <string name="text_27fa002b22" formatted="true">"Stunden zu %1$s%%"</string>
+    <string name="text_0d562e6527" formatted="true">"Vergütung zu %1$s%%"</string>
+    <string name="text_b93940ad5b" formatted="false">"Überzeitstunden übergewichtig"</string>
+    <string name="text_aa79d639a1" formatted="false">"Büro und Haus"</string>
+    <string name="text_b895b63363" formatted="false">"Büro Stunden"</string>
+    <string name="text_bf004c7509" formatted="false">"Home Stunden"</string>
+    <string name="text_a839ec02b2" formatted="true">"%1$s%% im Büro"</string>
+    <string name="text_b8ded3389c" formatted="false">"Büro-Wert auf Basisrate"</string>
+    <string name="text_ec791b21f9" formatted="false">"Home Wert auf Basisrate"</string>
+    <string name="text_2d3fd3bb5b" formatted="false">"Basis-Rate-Werte ausschließen Überzeitpremiume; fügen Sie sie nicht zu grosses Gehalt hinzu."</string>
+    <string name="text_6689630948" formatted="false">"Fehlzeiten und Eintrittschecks"</string>
+    <string name="text_23b17c77be" formatted="false">"Zielstunden für diesen Zeitraum"</string>
+    <string name="text_9e0655ff1b" formatted="false">"Kurzfall gegen monatliche Ziele"</string>
+    <string name="text_468b69c83d" formatted="false">"Summe der täglichen Mängel"</string>
+    <string name="text_d75f4dd709" formatted="false">"Die täglichen Mängel zählen nur ausgewählte Arbeitstage mit Beiträgen. Tage ohne Beiträge werden nicht automatisch als Abwesenheit gekennzeichnet."</string>
+    <string name="text_e9f9673a47" formatted="false">"Büro-einzig Mangel"</string>
+    <string name="text_8e87e45498" formatted="false">"Büro-nur Stunden über den täglichen Standard"</string>
+    <string name="text_43af7314c4" formatted="false">"Tage mit einem fehlenden Clock-in/Out Note"</string>
+    <string name="text_d41113bbd2" formatted="false">"Tage mit Einträgen"</string>
+    <string name="text_3ee5d8b89f" formatted="false">"Hausarbeit nach Gründen"</string>
+    <string name="text_e220a05303" formatted="false">"In diesem Zeitraum gibt es keine Einträge."</string>
+    <string name="text_4b0ccb42af" formatted="false">"Stunden"</string>
+    <string name="text_387c48c332" formatted="false">"Wert auf Basisrate"</string>
+    <string name="text_a347b2c73c" formatted="false">"Schätzungsweise netter Bezahlung"</string>
+    <string name="text_b8e45d7b9e" formatted="true">"Steuertabellen für %1$s sind nicht konfiguriert. Keine Netto-Schätzung wird angezeigt."</string>
+    <string name="text_90128d6911" formatted="false">"Geben Sie Ihre Steuerkreditätspunkte und Mitarbeiterpensionsquote in Einstellungen ein, um eine Schätzung anzuzeigen. Geben Sie 0 ein, wenn keine Beiträge vorhanden sind."</string>
+    <string name="text_3d880292e0" formatted="false">"Einkommensteuer"</string>
+    <string name="text_89e2b25fb1" formatted="false">"Nationale Versicherung"</string>
+    <string name="text_c694983c02" formatted="false">"Gesundheitsversicherung"</string>
+    <string name="text_901acdd444" formatted="false">"Pension - Arbeitnehmerteil"</string>
+    <string name="text_852a1bee2a" formatted="false">"Schulungsfonds – Mitarbeiteranteil"</string>
+    <string name="text_f8ee9f9027" formatted="false">"Rentenbeitrag Steuerkredit"</string>
+    <string name="text_192617126a" formatted="false">"Monatliche Schätzung mit 2026 israelischen Tabellen. Ausschließt kumulative Steuern, andere Einnahmen, steuerbare Leistungen und Steuerkoordination. Beiträge verwenden die ausgewählte Lohnbasis. Kein Ersatz für eine Paylip."</string>
+    <string name="text_fe04db5f37" formatted="false">"Zeiten werden als Stunden angezeigt: Minuten; Berechnungen behalten Quellsekunden. Ihre konfigurierten Drittel gelten für jeden Tag der Woche."</string>
+    <string name="text_3141c61e9e" formatted="false">"Stundendetails"</string>
+    <string name="text_723a7db2af" formatted="false">"Schichten und Arbeitsabschnitte"</string>
+    <string name="text_57b4cda969" formatted="false">"+ Schicht manuell hinzufügen"</string>
+    <string name="text_7149f2ed6a" formatted="false">"Dritte verwenden den ganzen Tag, auch wenn sie an einem Arbeitsplatz filtern."</string>
+    <string name="text_3579e0306b" formatted="false">"Eine Änderung ist aktiv. Korrigieren Sie den Start oder geben Sie eine Endzeit auf dem Home-Screen ein."</string>
+    <string name="text_643cae9ae3" formatted="false">"In diesem Zeitraum sind keine Beiträge abgeschlossen."</string>
+    <string name="text_d3fcfb1a78" formatted="true">"Arbeitsende: %1$s %2$s"</string>
+    <string name="text_39fe25939b" formatted="false">"Bearbeiten"</string>
+    <string name="text_0826149cf1" formatted="false">"Tagesübersicht"</string>
+    <string name="text_d783472020" formatted="false">"Nettozeit des Tages"</string>
+    <string name="text_a3756d29d2" formatted="false">"Bezahlte Zeit"</string>
+    <string name="text_c24fae5be3" formatted="false">"Zeit im aktuellen Filter"</string>
+    <string name="text_b70622d71d" formatted="false">"korrekte aktive Wechsel"</string>
+    <string name="text_59cb6e8e9a" formatted="false">"Schicht bearbeiten"</string>
+    <string name="text_10045253c1" formatted="false">"Manuelle Schicht"</string>
+    <string name="text_2f6783cd3b" formatted="false">"Arbeitsbeginn"</string>
+    <string name="text_b939061e41" formatted="false">"Arbeitsende"</string>
+    <string name="text_8f9bc2d880" formatted="false">"Hinweis / fehlende Clock-in oder Clock-out"</string>
+    <string name="text_d958ea3cd8" formatted="true">"Dauer vor der Pause: %1$s"</string>
+    <string name="text_1be17082dd" formatted="false">"Segmente am selben Tag teilen die Überzeit-Tier. Gehen Sie nicht in überlappende Segmente ein."</string>
+    <string name="text_d42c0813fc" formatted="false">"Clock-in kann nicht in der Zukunft sein."</string>
+    <string name="text_510b00fcc4" formatted="false">"Speichern Sie einen korrigierten Start und halten Sie den Shift offen"</string>
+    <string name="text_647a733fb8" formatted="false">"Invalid Clock-in Datum"</string>
+    <string name="text_4c82f98655" formatted="false">"Clock-out muss nach clock-in sein. Für einen Übernachtungswechsel wählen Sie auch die richtige Enddatum."</string>
+    <string name="text_c2fb808976" formatted="false">"Clock-out ist in Zukunft nicht möglich."</string>
+    <string name="text_6eb37ad66f" formatted="false">"Beenden und speichern Sie Schwankungen"</string>
+    <string name="text_e69323393b" formatted="false">"Speichern"</string>
+    <string name="text_b89e7bee64" formatted="false">"Anfangsinstellungen"</string>
+    <string name="text_2eaf74bbd8" formatted="false">"Beginnen Sie mit Ihren Arbeitsbedingungen"</string>
+    <string name="text_f9fb70ce3b" formatted="false">"Geben Sie Gebühren und monatliche Stunden ein, dann ändern Sie Überzeit-Tier, Pausen und die Berichterstattungsperiode. Das Dashboard erscheint nach dem Einsparen."</string>
+    <string name="text_925bb7a659" formatted="false">"Die Google-Autorisierung ist abgeschlossen. Wiederverbindung."</string>
+    <string name="text_86de69005f" formatted="false">"Drive-Access wurde abgelehnt. Ihr Google-Konto erneut verbinden."</string>
+    <string name="text_0885c5a6fa" formatted="false">"Die Backup-Kopie wurde nicht im ausgewählten Konto gefunden."</string>
+    <string name="text_09780711f6" formatted="false">"Google begrenzt Anfragen. versuchen Sie später wieder."</string>
+    <string name="text_2a152ef564" formatted="true">"Die Google Drive-Kommunikation versagt (code %1$s)."</string>
+    <string name="text_07d8d8fb15" formatted="false">"Wählen Sie ein Google-Konto aus."</string>
+    <string name="text_44707e2acd" formatted="false">"Google bestätigte keine Backup-Kopie."</string>
+    <string name="text_eee5e9d37e" formatted="false">"Backup-Kopie wurde nicht erstellt: Zulassung wird erneut erforderlich. Öffnen Sie Backup-Kopie und verbinden Sie sich erneut."</string>
+    <string name="text_fb5e219eb1" formatted="false">"Backup Kopie fehlte:"</string>
+    <string name="text_82a2bfa2fe" formatted="false">"Netzwerkfehler"</string>
+    <string name="nav_home" formatted="false">"Start"</string>
+    <string name="nav_dashboard" formatted="false">"Übersicht"</string>
+    <string name="nav_records" formatted="false">"Einträge"</string>
+    <string name="nav_settings" formatted="false">"Einstellungen"</string>
+    <string name="nav_backup" formatted="false">"Sicherung"</string>
+    <string name="location_home" formatted="false">"Zuhause"</string>
+    <string name="location_office" formatted="false">"Büro"</string>
+    <string name="filter_all" formatted="false">"Alle"</string>
+    <string name="app_name" formatted="false">"ShiftHours"</string>
+    <string name="language_title" formatted="false">"Sprache"</string>
+    <string name="language_system" formatted="false">"Gerätesprache"</string>
+    <string name="language_hint" formatted="false">"Sprache wird auf diesem Gerät gespeichert. Speichern Sie Änderungen, bevor Sie Sprachen wechseln. Währungs- und Steuerregeln behalten Ihre aktuellen Einstellungen."</string>
+    <string name="tax_profile" formatted="false">"Steuerprofil"</string>
+    <string name="tax_country" formatted="false">"Steuerland oder Steuergebiet"</string>
+    <string name="tax_year" formatted="false">"Steuerjahr"</string>
+    <string name="tax_region" formatted="false">"Steuerregion"</string>
+    <string name="tax_choose" formatted="false">"Auswählen"</string>
+    <string name="tax_england" formatted="false">"England"</string>
+    <string name="tax_wales" formatted="false">"Wales"</string>
+    <string name="tax_northern_ireland" formatted="false">"Nordirland"</string>
+    <string name="tax_scotland" formatted="false">"Schottland"</string>
+    <string name="tax_unavailable" formatted="false">"Für dieses Land ist noch keine Nettoschätzung verfügbar. Stunden und Bruttolohn bleiben verfügbar."</string>
+    <string name="tax_year_unavailable" formatted="false">"Für dieses Jahr liegt keine geprüfte Steuertabelle vor."</string>
+    <string name="tax_uk_required" formatted="false">"Britische Region auswählen und das Profil bestätigen."</string>
+    <string name="tax_foreign_fields" formatted="false">"Israelische Steuerpunkte und Beitragsregeln gelten hier nicht."</string>
+    <string name="tax_uk_profile" formatted="false">"Ich bestätige, dass das folgende britische Profil auf mich zutrifft."</string>
+    <string name="tax_country_hint" formatted="false">"Land und Sprache sind unabhängig. Das Land allein bestimmt keine persönlichen Steuervergünstigungen."</string>
+    <string name="tax_currency_warning" formatted="false">"Das Währungssymbol ändert sich, ohne Lohnbeträge oder Überstundenregeln umzurechnen. Einstellungen prüfen."</string>
+    <string name="tax_uk_scope" formatted="false">"Vereinigtes Königreich 2026/27: konstanter Monatslohn zur jährlichen Einkommensteuer hochgerechnet; monatliche National Insurance der Kategorie A. Standardfreibetrag mit Kürzung bei hohem Einkommen. Nur ein Arbeitsverhältnis; keine anderen Einkünfte, Rentenabzüge, Gehaltsumwandlung, Studienkredite, steuerpflichtigen Sachleistungen oder Sondervergünstigungen. Keine kumulative PAYE-Berechnung."</string>
+    <string name="tax_scope_in" formatted="false">"Indien, Steuerjahre 2025/26–2026/27: steueransässiger Arbeitnehmer, nur neues System, konstanter auf das Jahr hochgerechneter Barlohn; keine anderen Einkünfte oder Sondervergünstigungen. Standardabzug, Steuernachlass, Grenzentlastung und 4% Zusatzsteuer enthalten. Steuerpflichtiges Jahreseinkommen höchstens 5.000.000 INR."</string>
+    <string name="tax_scope_ru" formatted="false">"Russland 2026: steueransässiger Arbeitnehmer mit konstantem regulärem Lohn; keine anderen Einkünfte, persönlichen Abzüge, Nordzulagen oder militärischen Sonderregeln. Jahresbasierter Monatsdurchschnitt, kein kumulativer Lohnsteuerabzug. Arbeitgeberbeiträge werden nicht vom Arbeitnehmerlohn abgezogen."</string>
+    <string name="tax_scope_ae" formatted="false">"VAE 2026: ausländischer Arbeitnehmer ohne GCC-Staatsangehörigkeit, nur Arbeitseinkommen. Keine persönliche Einkommensteuer. Tatsächliche Arbeitnehmerabzüge einschließlich anwendbarer Versicherung eingeben. Abfindungen bei Dienstende und Arbeitgeberbeiträge ausgeschlossen."</string>
+    <string name="tax_actual_deductions" formatted="false">"Tatsächliche monatliche Arbeitnehmerabzüge"</string>
+    <string name="tax_deductions_hint" formatted="false">"Falls keine, 0 eingeben. Arbeitnehmeranteile für Rente, Versicherung und lokale Lohnabzüge einschließen. Hier berechnete Steuern und Arbeitgeberbeiträge ausschließen. Der Betrag mindert die Auszahlung, nicht das steuerpflichtige Einkommen."</string>
+    <string name="tax_confirm_profile" formatted="false">"Ich bestätige, dass das Arbeitnehmerprofil dieses Landes auf mich zutrifft."</string>
+    <string name="tax_foreign_required" formatted="false">"Arbeitnehmerprofil, Abzüge und unterstützte Einkommensgrenzen prüfen."</string>
+    <string name="tax_other_tax" formatted="false">"Gesundheits- und Bildungszusatzsteuer"</string>
+    <string name="tax_other_deductions" formatted="false">"Weitere Arbeitnehmerabzüge"</string>
+    <string name="tax_scope_us" formatted="false">"Nur 2026: ganzjährig ansässig, 18–64, ein örtlicher W-2-Arbeitgeber; SINGLE oder gemeinsame Veranlagung mit EINEM Haushaltsverdiener. Keine Unterhaltsberechtigten, anderen Einkünfte, Bundes-/erstattbaren Gutschriften, besonderen Trinkgeld-/Überstundenabzüge, Vorsteuerleistungen oder Arbeit über Staatsgrenzen. Berechtigung prüfen. 50 Bundesstaaten wählbar: 47 begrenzte automatische Tarife einschließlich Nullsteuer auf Löhne; CO/ID/VT erfordern geprüfte jährliche Staatssteuerschuld. Steuer/12 ist Rücklage, kein W-4-/kumulativer Einbehalt."</string>
+    <string name="tax_scope_ca" formatted="false">"Kanada 2026: nur Ontario/Alberta. Ganzjährig alleinstehender Einwohner, 18–64 Jahre, Wohn- und Arbeitsort in derselben Provinz, ein Arbeitgeber. Nur grundlegende persönliche/berufliche Freibeträge; keine Unterhaltsberechtigten, RRSP, Vorsteuerleistungen oder anderen Einkünfte. Bundes-/Provinzsteuer, CPP/CPP2 und EI enthalten. Jahresdurchschnitt, keine tatsächliche Lohnabrechnung."</string>
+    <string name="tax_na_deductions_hint" formatted="false">"Nur andere Arbeitnehmerabzüge nach Steuern; falls keine, 0 eingeben. Bereits berechnete Steuern, Social Security, Medicare, CPP/CPP2, EI und Ontario-Gesundheitsprämie nicht erneut eintragen. Vorsteuerabzüge werden nicht unterstützt."</string>
+    <string name="tax_other_region" formatted="false">"Andere Region — noch nicht unterstützt"</string>
+    <string name="tax_region_unavailable" formatted="false">"Nettoschätzungen für diese Region werden noch nicht unterstützt."</string>
+    <string name="tax_florida" formatted="false">"Florida"</string>
+    <string name="tax_texas" formatted="false">"Texas"</string>
+    <string name="tax_ontario" formatted="false">"Ontario"</string>
+    <string name="tax_alberta" formatted="false">"Alberta"</string>
+    <string name="tax_filing" formatted="false">"Bundessteuerlicher Veranlagungsstatus"</string>
+    <string name="tax_single" formatted="false">"Einzelveranlagung"</string>
+    <string name="tax_joint" formatted="false">"Zusammenveranlagung — ein Einkommen"</string>
+    <string name="tax_federal" formatted="false">"Bundeseinkommensteuer"</string>
+    <string name="tax_provincial" formatted="false">"Provinzeinkommensteuer"</string>
+    <string name="tax_ontario_health" formatted="false">"Ontario-Gesundheitsprämie"</string>
+    <string name="tax_social_security" formatted="false">"US-Sozialversicherung"</string>
+    <string name="tax_cpp" formatted="false">CPP</string>
+    <string name="tax_cpp2" formatted="false">CPP2</string>
+    <string name="tax_ei" formatted="false">EI</string>
+    <string name="tax_medicare" formatted="false">Medicare</string>
+    <string name="tax_pt_mainland" formatted="false">"Portugal — Festland"</string>
+    <string name="tax_annual_verified_base" formatted="false">"Geprüftes endgültiges jährliches zu versteuerndes Einkommen"</string>
+    <string name="tax_verified_base_hint" formatted="false">"Endgültige Bemessungsgrundlage nach allen Abzügen aus geprüftem Bescheid oder fachlicher Berechnung eingeben. Kein Bruttolohn; die App leitet sie nicht automatisch ab."</string>
+    <string name="tax_au_hospital" formatted="false">"Anerkannter privater Krankenhausschutz"</string>
+    <string name="tax_au_full_cover" formatted="false">"Gesamtes Steuerjahr"</string>
+    <string name="tax_au_no_cover" formatted="false">"Ganzjährig ohne Versicherungsschutz"</string>
+    <string name="tax_nz_ietc_hint" formatted="false">"IETC setzt ganzjährige Berechtigung voraus: kein Anspruch auf Working for Families, Hauptsozialleistung, NZ Super, Veterans Pension oder entsprechende Auslandsleistung. Teiljahre werden nicht unterstützt."</string>
+    <string name="tax_nz_ietc" formatted="false">"Ich bestätige die ganzjährige IETC-Berechtigung"</string>
+    <string name="tax_further_deductions_hint" formatted="false">"Tatsächliche Arbeitnehmerabzüge eingeben, die hier nicht berechnet werden, oder 0. Keine Arbeitgeberbeiträge oder bereits gezeigten Steuern/Versicherungen. Mindert das Netto, nicht die Steuerbasis."</string>
+    <string name="tax_solidarity" formatted="false">"Solidaritätssteuer"</string>
+    <string name="tax_pt_social" formatted="false">"Arbeitnehmer-Sozialversicherung"</string>
+    <string name="tax_au_levy" formatted="false">"Medicare-Abgabe"</string>
+    <string name="tax_au_surcharge" formatted="false">"Medicare-Zusatzabgabe"</string>
+    <string name="tax_acc" formatted="false">"ACC-Arbeitnehmerabgabe"</string>
+    <string name="tax_included_relief" formatted="false">"Bereits in der Einkommensteuer enthaltene Entlastung"</string>
+    <string name="tax_scope_de" formatted="false">"Deutschland 2026: alleinstehender Ansässiger ohne Kinder und Kirchensteuer. Jahresveranlagung mit geprüftem endgültigem zu versteuerndem Einkommen, nicht aus Brutto abgeleitet. Tatsächliche Arbeitnehmer-Sozialabzüge separat eingeben. Keine Lohnsteuerabrechnung."</string>
+    <string name="tax_scope_fr" formatted="false">"Frankreich: nur Einkommen 2025, veranlagt 2026. Alleinstehender Ansässiger, ein Steueranteil, nur Gehalt, Jahresbrutto bis EUR 200.000. Endgültige Steuerbasis nach Werbungskosten eingeben; Sozialabzüge separat. Décote enthalten; keine Tabelle für Einkommen 2026 und kein laufender PAS-Abzug."</string>
+    <string name="tax_scope_pt" formatted="false">"Portugal 2026: Festland, alleinstehender Ansässiger, normale Kategorie A. Zwölf gleiche Zahlungen mit anteiligem Urlaubs-/Weihnachtsgeld; Jahresbrutto mindestens EUR 20.000. Enthält 11% Arbeitnehmer-Sozialbeitrag, Standardabzug, IRS-Stufen und Solidarität. Keine Angehörigen, Sonderregeln oder Rechnungsabzüge; keine 14-Gehalts-Abzugsrechnung."</string>
+    <string name="tax_scope_au" formatted="false">"Australien 2025/26–2026/27: alleinstehender Ansässiger, 18–64 Jahre, Jahresgehalt mindestens AUD 50.000 ohne Arbeitgeber-Super. Keine weiteren Einkünfte, Vorsteuerleistungen oder Befreiungen. Enthält Einkommensteuer, LITO, Medicare 2% und Zuschlag. Ganzjähriger anerkannter Krankenhausschutz oder keiner; Familien und Teiljahresschutz ausgeschlossen."</string>
+    <string name="tax_scope_nz" formatted="false">"Neuseeland 2025/26–2026/27: ganzjährig ansässig, ein Arbeitsverhältnis, nur Gehalt, keine weiteren Einkünfte oder Leistungen. Einkommensteuer und ACC enthalten; IETC nur nach ausdrücklicher Bestätigung. Tatsächliche KiwiSaver-, Kredit- und andere Arbeitnehmerabzüge separat eingeben. Jahresschätzung bei konstantem Einkommen."</string>
+    <string name="tax_scope_es" formatted="false">"Spanien 2026: nur Madrid. Ganzjährig alleinstehend ansässig, 18–64 Jahre, nur Gehalt, ohne Kinder, Behinderung oder Steuergutschriften. Jahresbrutto mindestens EUR 40.000 und geprüfte allgemeine Steuerbasis mindestens EUR 30.000. Nationale und Madrider Steuer enthalten die jeweiligen persönlichen Grundminima. Tatsächliche Sozialabzüge separat. Zwölf gleiche Gesamtzahlungen; kein Lohnsteuerabzug."</string>
+    <string name="tax_scope_cn" formatted="false">"China 2026: ganzjähriger Steueransässiger auf dem Festland, ein Arbeitsverhältnis, nur Gehalt, keine anderen/ausländischen Einkünfte oder Steuerermäßigungen. Geprüfte endgültige Jahressteuerbasis nach RMB 60.000 und gesetzlichen Abzügen. Tatsächliche lokale Sozial-/Wohnfondsabzüge separat; keine vermuteten Sätze oder Ansprüche. Keine separat besteuerte Jahresprämie, Abkommens-/Sonderregelung oder monatliche/kumulative Einbehaltung."</string>
+    <string name="tax_scope_sa" formatted="false">"Saudi-Arabien 2026: ausländischer Arbeitnehmer ohne GCC-Staatsangehörigkeit, nur gewöhnliches Arbeitsentgelt in Saudi-Arabien. Keine persönliche Einkommensteuer. Tatsächliche Arbeitnehmerabzüge einschließlich ggf. Versicherung eingeben, sonst 0. Arbeitgeberbeiträge für Berufsrisiken ausgeschlossen. Saudische/GCC-Rentenregeln, Geschäftseinkünfte, ausländische Steuern und Abfindungen außerhalb des Profils."</string>
+    <string name="tax_madrid" formatted="false">"Madrid"</string>
+    <string name="tax_cn_mainland" formatted="false">"Festlandchina"</string>
+    <string name="tax_es_base_hint" formatted="false">"Geprüfte endgültige allgemeine Jahressteuerbasis VOR persönlichem/familiärem Minimum und nach gesetzlichen Gehaltsabzügen eingeben. Brutto mindestens EUR 40.000; Basis mindestens EUR 30.000. Die App berücksichtigt die Grundminima selbst. Keine automatische Sozialbeitrags- oder Brutto-Basis-Berechnung."</string>
+    <string name="tax_cn_base_hint" formatted="false">"Geprüfte endgültige jährliche Gehaltssteuerbasis NACH RMB 60.000 und gesetzlichen Abzügen eingeben. RMB 60.000 nicht erneut abziehen. Tatsächliche Sozial-/Wohnfondsabzüge auch im monatlichen Arbeitnehmerabzugsfeld eingeben; ihre Steuerwirkung muss bereits in dieser Basis enthalten sein."</string>
+    <string name="tax_state_income" formatted="false">"Nationale Einkommensteuer"</string>
+    <string name="tax_regional_income" formatted="false">"Regionale Einkommensteuer"</string>
+    <string name="tax_scope_ie" formatted="false">"Irland 2026: ganzjährig alleinstehend ansässig,18–64 Jahre, ein qualifiziertes PAYE-Arbeitsverhältnis, nur Gehalt. Persönlicher/Arbeitnehmer-Grundkredit und gewöhnliche USC enthalten. Kein Eigentümerdirektor, Medical-Card-Nachlass, weiteres Einkommen, Vorsteuer-Pension/Sachleistungen oder zusätzliche Gutschriften. Tatsächliche Arbeitnehmer-PRSI und Nachsteuerabzüge separat; MyFutureFund nicht angenommen. Jahresschätzung bei stabilem Einkommen, keine kumulative Abrechnung."</string>
+    <string name="tax_scope_hk" formatted="false">"Hongkong 2025/26–2026/27: ganzjährig alleinstehender Arbeitnehmer,18–64 Jahre, ein Arbeitgeber, nur Gehalt, reguläres MPF-Mitglied mit Monatszahlung. Enthält stundenweise Arbeit mit Monatsauszahlung, Grundfreibetrag, Arbeitnehmer-MPF und niedrigere progressive/Standardsteuer. Anfängliche Beitragspause vor Jahresbeginn beendet. Keine Gelegenheits-/Tages-/befreiten Arbeitnehmer, Angehörigen, weiteren Einkünfte oder Zusatzentlastungen. Endgültiger Nachlass nur 2025/26; keine Vorauszahlungsrechnung."</string>
+    <string name="tax_ie_deductions_hint" formatted="false">"Tatsächliche Arbeitnehmer-PRSI und Nachsteuer-Pensions-/sonstige Geldabzüge eingeben, sonst 0. MyFutureFund bei Abzug einbeziehen; Teilnahme nicht angenommen. Keine Arbeitgeberkosten oder schon berechnete Steuer/USC. Einkommensteuerbegünstigte Pensionen außerhalb des Profils. Bei Lohnänderung Abzüge aktualisieren."</string>
+    <string name="tax_hk_deductions_hint" formatted="false">"Nur zusätzliche Nachsteuer-Arbeitnehmerabzüge, sonst 0. Berechneten Arbeitnehmer-MPF und Salaries Tax nicht erneut eingeben. Arbeitgeberbeiträge und zusätzliche Steuerabzüge ausgeschlossen."</string>
+    <string name="tax_usc" formatted="false">"Universelle Sozialabgabe (USC)"</string>
+    <string name="tax_mpf" formatted="false">"Arbeitnehmer-MPF"</string>
+    <string name="tax_scope_no" formatted="false">"Norwegen 2026: ganzjährig alleinstehend ansässig, 18–64 Jahre, ein Arbeitsverhältnis, nur Gehalt, gewöhnliche 22%-Region und nationale Sozialversicherung. Standard-/persönlicher Abzug, Stufensteuer und bestätigter Jugend-Arbeitsabzug enthalten. Keine Pensions-/Gewerkschafts-/Zins-/sonstigen Abzüge, anderen Einkünfte, Ausländer-PAYE oder regionalen Sonderregeln. Jahresschätzung vor Vorauszahlungen und Kleinbetrags-Einziehung."</string>
+    <string name="tax_scope_za" formatted="false">"Südafrika 2025/26–2026/27: ganzjährig ansässig, 18–64 Jahre, ein gewöhnlicher privater Arbeitsplatz. Grundermäßigung und gewählte UIF-Behandlung enthalten. Keine anderen Einkünfte, Provisionen, steuerpflichtigen Sachleistungen, Pensionsabzüge, medizinischen/weiteren Gutschriften oder Sonderbefreiungen. Gewöhnliche UIF-Pflicht oder Befreiung nur wegen unter 24 Monatsstunden bei diesem Arbeitgeber bestätigen. Jahresschätzung, kein tatsächlicher PAYE-Abzug."</string>
+    <string name="tax_no_region" formatted="false">"Gewöhnliche 22%-Steuerregion"</string>
+    <string name="tax_no_region_hint" formatted="false">"Ohne Svalbard, Finnmark und diese Troms-Gemeinden: Karlsøy, Kvænangen, Kåfjord, Lyngen, Nordreisa, Skjervøy, Storfjord."</string>
+    <string name="tax_no_youth" formatted="false">"Jugend-Arbeitsabzug — geprüfter Status"</string>
+    <string name="tax_no_selected" formatted="false">"Ausgewählt — von Steuerverwaltung bestätigt"</string>
+    <string name="tax_no_not_selected" formatted="false">"Nicht ausgewählt / außerhalb der Zielgruppe"</string>
+    <string name="tax_no_youth_hint" formatted="false">"Der Pilot 2026 wählte einen Teil der Geburtsjahrgänge 1991–2006 zufällig aus. Alter oder Ansässigkeit reichen nicht. Offiziellen Status prüfen, nicht raten. Ohne Auswahl keine Schätzung."</string>
+    <string name="tax_za_uif" formatted="false">"UIF-Status des Arbeitnehmers"</string>
+    <string name="tax_za_covered" formatted="false">"Gewöhnlich UIF-pflichtig"</string>
+    <string name="tax_za_lt24" formatted="false">"Befreit — unter 24 Stunden im Monat"</string>
+    <string name="tax_za_year_hint" formatted="false">"Jahre nach Beginn: 2026/27 heißt März 2026–Februar 2027, bei SARS Steuerjahr 2027. Andere UIF-Befreiungen außerhalb des Profils."</string>
+    <string name="tax_noza_deductions_hint" formatted="false">"Nur zusätzliche Nachsteuer-Arbeitnehmerabzüge eingeben, sonst 0. Berechnete Steuern/Sozialversicherung/UIF nicht erneut eingeben und keine Arbeitgeberbeiträge einschließen. Steuerbegünstigte Pensionen und weitere abzugsfähige Kosten benötigen ein anderes Profil."</string>
+    <string name="tax_no_ordinary" formatted="false">"Gewöhnliche Einkommensteuer"</string>
+    <string name="tax_no_step" formatted="false">"Stufensteuer auf persönliches Einkommen"</string>
+    <string name="tax_no_ni" formatted="false">"Arbeitnehmer-Sozialversicherung"</string>
+    <string name="tax_uif" formatted="false">"Arbeitnehmer-UIF"</string>
+    <string name="tax_scope_sg" formatted="false">"Singapur, Einkommen 2026: ganzjährig steueransässig, Jahresendalter 18–54, ein Arbeitsverhältnis mit gewöhnlichem Lohn, keine Boni/Zusatzlöhne, anderen Einkünfte, Behinderung, Sachleistungen oder weiteren Entlastungen. Ganzjährig voller CPF als Bürger/PR ab Jahr 3 oder ausländischer Nichtbürger/Nicht-PR ohne CPF. Enthält Arbeitnehmer-CPF und grundlegende Erwerbseinkommensentlastung. Jährliche Steuerrücklage, kein Monatsabzug."</string>
+    <string name="tax_scope_dk" formatted="false">"Dänemark 2026: nur Kopenhagen, ganzjährig alleinstehend ansässig, 18–59 Jahre, nur Gehalt, ohne Kirchensteuer, Kapital-/Auslandseinkünfte oder Sonderregime. Geprüfte endgültige persönliche und kommunale Jahresbasen vor persönlichem Freibetrag sowie tatsächliche AM-, ATP-, Pensions-/sonstige Geldabzüge nötig. Enthält Steuern und Grundfreibetrag; keine Brutto-Basis-Ableitung oder Steuerkartenabrechnung."</string>
+    <string name="tax_copenhagen" formatted="false">"Kopenhagen"</string>
+    <string name="tax_dk_personal_base" formatted="false">"Geprüftes persönliches Jahreseinkommen nach AM"</string>
+    <string name="tax_dk_municipal_base" formatted="false">"Geprüfte kommunale Jahressteuerbasis"</string>
+    <string name="tax_dk_base_hint" formatted="false">"Beide geprüften endgültigen Basen VOR persönlichem Freibetrag eingeben. Persönliches Einkommen nach AM/ATP/Pension; kommunale Basis zusätzlich nach allen gesetzlichen Arbeits-/anderen Abzügen. Kein Brutto. Die App leitet keine Basen ab und zieht Beträge nicht erneut ab. Liegt das persönliche Einkommen über DKK 54.100 und die kommunale Basis darunter, wird dieser Fall der Freibetragszuordnung noch nicht unterstützt."</string>
+    <string name="tax_dk_actual_deductions" formatted="false">"Tatsächliche monatliche AM-, ATP-, Pensions-/sonstige Abzüge"</string>
+    <string name="tax_dk_deductions_hint" formatted="false">"Tatsächliche AM, Arbeitnehmer-ATP/Pension und weitere Geldabzüge außer Einkommensteuer eingeben, sonst 0. Steuerwirkung bereits in den Basen. Keine Arbeitgeberkosten oder schon berechneten Steuern. Bei Lohnänderung alle drei Werte aktualisieren."</string>
+    <string name="tax_sg_cpf_profile" formatted="false">"Arbeitnehmer-CPF-Profil"</string>
+    <string name="tax_sg_full" formatted="false">"Bürger / PR ab Jahr 3 — voller CPF"</string>
+    <string name="tax_sg_foreign" formatted="false">"Ausländischer Steueransässiger — kein Bürger/PR, ohne CPF"</string>
+    <string name="tax_sg_year_hint" formatted="false">"2026 bezeichnet Januar–Dezember 2026, veranlagt in YA 2027. Einmalige YA-2024/2025-Nachlässe werden nicht fortgeführt. Erste zwei PR-Jahre und weitere CPF-/Altersprofile ausgeschlossen."</string>
+    <string name="tax_sg_deductions_hint" formatted="false">"Nur zusätzliche Nachsteuer-Geldabzüge, sonst 0, einschließlich ggf. tatsächlicher Gemeinschaftsfonds. Berechneten Arbeitnehmer-CPF/Steuer und Arbeitgeberbeiträge nicht erneut eingeben. Weitere steuerbegünstigte Abzüge ausgeschlossen."</string>
+    <string name="tax_cpf" formatted="false">"Arbeitnehmer-CPF"</string>
+    <string name="tax_dk_bottom" formatted="false">"Nationale Grundsteuer auf Einkommen"</string>
+    <string name="tax_dk_municipal" formatted="false">"Kommunale Einkommensteuer Kopenhagen"</string>
+    <string name="tax_dk_higher" formatted="false">"Mittlere / obere / zusätzliche obere Einkommensteuer"</string>
+    <string name="tax_scope_my" formatted="false">"Malaysia 2026: ganzjährig alleinstehender Steuerinländer, 18–59 Jahre, eine Stelle mit regulärem Barlohn; keine anderen Einkünfte, steuerpflichtigen Sachleistungen, Sonderregelung, Zakat oder weiteren Steuerermäßigungen. Erfordert geprüfte endgültige Jahresbemessungsgrundlage nach allen zulässigen Freibeträgen einschließlich persönlichem sowie tatsächliche Arbeitnehmerabzüge. Enthält bis RM400 nicht erstattungsfähige persönliche Ermäßigung bei Berechtigung. Jahresschätzung, kein PCB-Abzug."</string>
+    <string name="tax_scope_ph" formatted="false">"Philippinen 2026: ganzjährig alleinstehender ansässiger Staatsbürger, 18–59 Jahre, eine private Stelle, 12 gleiche reguläre Barlohnzahlungen; keine anderen steuerpflichtigen Einkünfte, Sonderregelung oder Steuergutschriften. Erfordert geprüften jährlichen steuerpflichtigen Regellohn und tatsächliche Abzüge. Mindestlohn-Steuerbefreiungen ausgeschlossen. Steuerfreies 13. Gehalt/sonstige Leistungen bis zusammen PHP90.000 liegen außerhalb des angezeigten Nettos; steuerpflichtiger Mehrbetrag/andere Boni nicht unterstützt. Jahresschätzung, kein Lohnsteuerabzug."</string>
+    <string name="tax_my_base_hint" formatted="false">"Geprüfte endgültige Jahresbemessungsgrundlage NACH allen zulässigen Freibeträgen einschließlich RM9.000 persönlichem eingeben, nicht den Bruttolohn. Die App wendet die berechtigte Ermäßigung bis RM400 separat an; sie ermittelt keine Freibeträge und zieht Beiträge nicht erneut ab. Bei Lohnänderung aktualisieren."</string>
+    <string name="tax_ph_base_hint" formatted="false">"Geprüften jährlichen steuerpflichtigen REGULÄREN Barlohn nach zulässigen Arbeitnehmerbeiträgen/Gebühren eingeben, nicht brutto. Einkommensteuer oder private Kredittilgungen nicht von dieser Basis abziehen. Die App ermittelt keine Befreiungen und zieht Beiträge nicht erneut ab. Bei Lohnänderung aktualisieren."</string>
+    <string name="tax_myph_deductions_hint" formatted="false">"Tatsächliche monatliche Arbeitnehmerabzüge eingeben: EPF/SOCSO/EIS oder SSS/PhilHealth/Pag-IBIG, zulässige Beiträge und weitere Barabzüge, oder 0. Ihre Steuerwirkung muss bereits in der geprüften Basis enthalten sein. Arbeitgeberbeiträge und hier berechnete Einkommensteuer ausschließen. Bei Lohnänderung beide Beträge aktualisieren."</string>
+    <string name="tax_scope_pl" formatted="false">"Polen 2026: ganzjährig alleinstehender Einwohner, 26–59 Jahre, ein regulärer Arbeitsvertrag, 12 gleiche Barlöhne; Jahresbrutto bis PLN1.000.000. Keine anderen Einkünfte, steuerpflichtigen Sachleistungen, Zusammenveranlagung, PIT-0 oder weiteren Abzüge/Gutschriften. Nur pauschale Arbeitskosten bis PLN3.600/Jahr, keine tatsächlichen Tickets oder 50%-Kreativkosten. Geprüfte Jahresbasis und tatsächliche Abzüge nötig. Enthält PLN3.600 Grundermäßigung. Jahresschätzung, kein Lohnsteuerabzug. PPK-Teilnehmer sind in diesem Profil ausgeschlossen."</string>
+    <string name="tax_scope_cz" formatted="false">"Tschechien 2026: ganzjährig alleinstehender Einwohner, 18–64 Jahre, eine reguläre Beschäftigung mit 12 gleichen regulären Barlöhnen; keine anderen Einkünfte, steuerpflichtigen Sachleistungen, Basisabzüge oder weiteren Gutschriften. DPP/DPČ und Sonderquellensteuer ausgeschlossen. Enthält nicht erstattungsfähige jährliche Grundgutschrift CZK30.840. Sozial-/Krankenversicherung und nötige Mindest-Krankenversicherungsaufstockung tatsächlich eingeben. Jahresschätzung, keine monatlichen Vorauszahlungen."</string>
+    <string name="tax_pl_base_hint" formatted="false">"Geprüfte endgültige Jahressteuerbasis nach zulässigen Arbeitnehmer-Sozialbeiträgen und pauschalen Arbeitskosten eingeben, VOR PLN3.600 Steuerermäßigung. PLN30.000 nicht separat abziehen. Krankenversicherung, PPK und private Kredite mindern diese Basis in diesem Profil nicht. Keine erneute Subtraktion von Barabzügen; bei Lohnänderung aktualisieren."</string>
+    <string name="tax_plcz_deductions_hint" formatted="false">"Tatsächliche monatliche Arbeitnehmerabzüge für Sozial-/Krankenversicherung, Rente nach Steuern und weitere eingeben, oder 0. Nötige tschechische Mindest-Krankenversicherungsaufstockung einschließen. Arbeitgeberkosten und hier berechnete Steuer ausschließen. Tschechische Barabzüge mindern die Basis nicht; polnische steuerliche Abzüge müssen bereits in der geprüften Basis stehen. Bei Lohnänderung aktualisieren."</string>
+    <string name="tax_scope_th" formatted="false">"Thailand2026: ganzjährig alleinstehender Einwohner,18–59 Jahre, ein regulärer Gehaltsjob; keine Unterhaltsberechtigten, anderen Einkünfte, Sonderregelung oder Steuergutschriften. Geprüftes Jahreseinkommen und endgültige Nettosteuerbasis nach zulässigen Kosten/Freibeträgen/Befreiungen nötig. Nur Lohn, alternative Mindeststeuer auf andere Einkünfte ausgeschlossen. Aktuelle30%-Stufe endet bei THB5 Mio., nicht früheren4 Mio."</string>
+    <string name="tax_scope_id" formatted="false">"Indonesien2026: ganzjährig alleinstehender Einwohner,18–59 Jahre, dauerhaft Beschäftigter, gültige NPWP/integrierte NIK, TK/0 ohne Unterhaltsberechtigte/andere Einkünfte. Jahresberechnung Artikel17 nach geprüften Abzügen/PTKP. Keine DTP/staatlich getragene Steuer, Arbeitgeberzahlung/Bruttohochrechnung, Sonderregime oder Gutschriften. THR/Boni und steuerpflichtige Vorteile jährlich einschließen. Kein monatlicher TER-Abzug."</string>
+    <string name="tax_scope_vn" formatted="false">"Vietnam2026: ganzjährig alleinstehender Einwohner,18–59 Jahre, ein Gehaltsjob; keine Unterhaltsberechtigten, anderen Einkünfte, Sonderregelung oder Gutschriften. Geprüftes Jahreseinkommen/Endbasis nach zulässigen Versicherungen, persönlichem Freibetrag und Befreiungen einschließlich berechtigter Überstunden nötig. Ab Steuerjahr2026 fünf Jahresstufen für ansässige Arbeitnehmer, nicht frühere sieben."</string>
+    <string name="tax_scope_tw" formatted="false">"Taiwan, Einkommen2026 mit Erklärung2027: ganzjährig alleinstehender Einwohner,18–59 Jahre, nur Lohn; keine Unterhaltsberechtigten, anderen/ausländischen Einkünfte, AMT-Zurechnungen, Sonderregime oder Gutschriften. Geprüftes Jahreseinkommen/Endbasis nach allen zulässigen Abzügen/Befreiungen und nötiger Lebenshaltungskostenanpassung. Konservative Jahresgrenze TWD7,5 Mio., keine gesetzliche Brutto-AMT-Grenze."</string>
+    <string name="tax_scope_lk" formatted="false">"Sri Lanka2026/27: 1. April2026–31. März2027. Ganzjährig alleinstehender Einwohner,18–59 Jahre, ein regulärer inländischer Gehaltsjob; keine anderen/ausländischen Einkünfte, Sonderregime, Nachzahlungs-/Beendigungs-Sonderbehandlung oder Gutschriften. Geprüftes Jahreseinkommen/Endbasis nach LKR1,8 Mio. persönlichem Freibetrag und weiteren zulässigen Abzügen. Jahresrücklage, kein APIT/YTD-Abzug."</string>
+    <string name="tax_annual_employment_gross" formatted="false">"Geprüftes gesamtes Jahreseinkommen aus Arbeit"</string>
+    <string name="tax_asia_five_income_hint" formatted="false">"Gesamtes gewähltes Steuerjahr vor Freibeträgen eingeben, einschließlich Boni, THR/Extragehalt und korrekt bewerteter steuerpflichtiger Arbeitgebervorteile. Bei Extras nicht nur Monatslohn×12. Gesamtbetrag und endgültige Basis separat prüfen. Angezeigtes Netto: Bargeldlohn der Periode minus Jahressteuer/12 und tatsächliche Abzüge; Jahresboni/Sachvorteile werden nicht zur Auszahlung addiert."</string>
+    <string name="tax_asia_five_base_hint" formatted="false">"Geprüfte endgültige Jahressteuerbasis nach allen zulässigen Kosten, Versicherungen, persönlichen Freibeträgen und Befreiungen des Jahres eingeben. Die App bestimmt weder Berechtigung noch Freibeträge; nicht erneut abziehen. Indonesien: PKP auf volle IDR1.000 abrunden. Beide Jahresbeträge bei Einkommens-/Situationsänderung aktualisieren."</string>
+    <string name="tax_asia_five_cash_hint" formatted="false">"Tatsächliche Arbeitnehmerabzüge für Sozial-/Krankenversicherung, Rente und andere Barabzüge der Periode, oder0. Zulässige Steuerwirkung muss bereits in der geprüften Jahresbasis stehen. Arbeitgeberkosten und hier zurückgelegte Steuer ausschließen, Steuerabzug nicht erneut eingeben. Jahresrücklagenschätzung, keine Lohnabrechnung und kein vollständiges Jahresnetto."</string>
+    <string name="tax_scope_pe" formatted="false">"Peru2026: ganzjährig alleinstehender steuerlich ansässiger Einwohner,18–59 Jahre, ein Gehaltsjob der fünften Kategorie; keine Unterhaltsberechtigten, anderen/ausländischen Einkünfte, Sonderregime oder Gutschriften. UIT=PEN5.500. Geprüfte Endbasis enthält bereits7 UIT und geprüfte berechtigte Mehrkosten. Arbeitnehmerrente nicht automatisch steuerlich abziehbar."</string>
+    <string name="tax_scope_co" formatted="false">"Kolumbien2026: ganzjährig alleinstehender Einwohner,18–59 Jahre, nur regulärer Lohn; keine Unterhaltsberechtigten, anderen/ausländischen Einkünfte, Sonderregime oder Gutschriften. UVT=COP52.374. Geprüfte Endjahresbasis nach gesetzlichen Sozialausschlüssen, Befreiungen und Abzugsgrenzen. Jahresartikel241, kein Monatsabzug383. Vermögensteuer/weitere Steuern ausgeschlossen."</string>
+    <string name="tax_scope_ee" formatted="false">"Estland2026: ganzjährig alleinstehender Einwohner,18–59 Jahre, nur regulärer Lohn; keine Unterhaltsberechtigten, anderen Einkünfte, Sonderregime oder Gutschriften.22% der geprüften Endbasis nach zulässigen Abzügen und EUR8.400 Grundfreibetrag. Kein alter einkommensabhängiger Abbau oder Rentenaltersfreibetrag. Tatsächliche Versicherungs-/Rentenabzüge separat."</string>
+    <string name="tax_scope_lv" formatted="false">"Lettland2026: ganzjährig alleinstehender Einwohner,18–59 Jahre, nur Lohn; keine Unterhaltsberechtigten, anderen Einkünfte oder Gutschriften. Jahresarbeitseinkommen bis EUR105.300; höhere Sätze, Solidarität und zusätzliche3% ausgeschlossen.25,5% der geprüften Basis nach Beiträgen/Abzügen und EUR6.600 Grundfreibetrag. Keine vollständige Hochverdienerabrechnung."</string>
+    <string name="tax_scope_lt" formatted="false">"Litauen2026: ganzjährig alleinstehender Einwohner,18–59 Jahre, nur regulärer voll steuerpflichtiger Lohn; keine Unterhaltsberechtigten, anderen Einkünfte, Krankengelder, Behinderung/Sonder-NPD oder weiteren Abzüge/Gutschriften. Jahressätze20%/25%/32%. Basis nur nach gewöhnlichem NPD; Versicherung nicht automatisch abgezogen. Über EUR83.237,40 Jahreseinkommen muss die Basis in diesem Profil dem Jahreseinkommen entsprechen."</string>
+    <string name="tax_scope_bg" formatted="false">"Bulgarien2026: ganzjährig alleinstehender Einwohner,18–59 Jahre, nur Lohn; keine Unterhaltsberechtigten, anderen Einkünfte, Sonderregime, Gutschriften oder Erklärungsrabatte. Seit2026 EUR; alte BGN erst nach geprüfter Umrechnung eingeben.10% der geprüften Endjahresbasis nach zulässigen Beiträgen/Abzügen. Kein automatischer Wechselkurs oder gesetzliches Lohnrunden."</string>
+    <string name="tax_scope_ro" formatted="false">"Rumänien2026: ganzjährig alleinstehender Einwohner,18–59 Jahre, ein regulärer inländischer Gehaltsjob; keine Unterhaltsberechtigten, anderen Einkünfte, Sonderregime oder Gutschriften.10% der geprüften Summe monatlicher Lohnsteuerbasen nach Beiträgen, persönlichen Abzügen und gesetzlichen Mindestlohnbefreiungen. Monatsbedingungen einzeln prüfen; Jahresrücklage bestimmt sie nicht."</string>
+    <string name="tax_scope_hu" formatted="false">"Ungarn2026: ganzjährig alleinstehender Einwohner,25–59 Jahre, regulärer voll steuerpflichtiger Lohn; keine Kinder, anderen Einkünfte, Befreiungen, Basisfreibeträge oder Gutschriften. Unter25, Mütter/Familien, Behinderungs-/Frischverheiratetenvergünstigungen und vereinfachte/Saisonarbeit ausgeschlossen.15% Jahreslohn; geprüfte Basis gleich Jahresarbeitseinkommen. Versicherung mindert sie nicht."</string>
+    <string name="tax_scope_ge" formatted="false">"Georgien2026: ganzjährig alleinstehender Einwohner,18–59 Jahre, nur regulärer voll steuerpflichtiger georgischer Lohn; keine Unterhaltsberechtigten, anderen/ausländischen Einkünfte, Befreiungen, Unternehmenssonderregime oder Gutschriften.20% Jahreslohn; geprüfte Basis gleich Jahreseinkommen. Tatsächliche Rente/Barabzüge mindern Auszahlung, nicht erneut die Basis."</string>
+    <string name="tax_scope_am" formatted="false">"Armenien2026: ganzjährig alleinstehender Einwohner,18–59 Jahre, regulärer voll steuerpflichtiger Inlandlohn; keine Unterhaltsberechtigten, anderen/ausländischen Einkünfte, Branchensondersätze, Befreiungen, Hypotheken-/Sozialkostenerstattungen oder Gutschriften.20% Jahreslohn; geprüfte Basis gleich Jahreseinkommen. Tatsächliche Arbeitnehmerrente, Stempelabgabe und nötige Krankenbeiträge separat."</string>
+    <string name="tax_ten_income_hint" formatted="false">"Geprüftes Arbeitseinkommen für ganz2026 einschließlich Boni, Extragehalt und korrekt bewerteter steuerpflichtiger Vorteile sowie endgültige Jahresbasis eingeben. Rumänien: Summe geprüfter Monatsbasen. Jahressteuer/12 wird vom Periodenbargeld zurückgelegt; Jahresboni/Sachvorteile nicht zur angezeigten Auszahlung addiert."</string>
+    <string name="tax_ten_base_hint" formatted="false">"Alle gesetzlichen Abzüge/Befreiungen vor Eingabe der Endjahresbasis prüfen; die App bestimmt keine Berechtigung. Georgien/Armenien/Ungarn: Basis gleich Jahreslohn, Arbeitnehmerversicherung mindert sie hier nicht. Litauen: nur normaler NPD, keine Minderung über genannter Profilgrenze. Beide Jahresangaben bei Änderungen aktualisieren."</string>
+    <string name="tax_ten_cash_hint" formatted="false">"Tatsächliche Arbeitnehmerabzüge für Sozial-/Krankenversicherung, Rente und weitere Barabzüge außer Einkommensteuer der Periode, oder0. Armenien: tatsächliche Stempelabgabe/Krankenprämien falls nötig. Arbeitgeberkosten und hier reservierte Steuer ausschließen. Gesetzliche Steuerwirkung bereits in geprüfter Basis, nichts doppelt abziehen. Jahresschätzung, keine Lohnabrechnung/Steuererklärung."</string>
+    <string name="tax_fifteen_common_scope" formatted="false">"Profil: ganzjährig steuerlich ansässig, alleinstehend18–59 Jahre, ein regulärer Inlandsjob, keine Unterhaltsberechtigten, weiteren/ausländischen Einkünfte, Sonderregime oder sonstigen Gutschriften. Land/Sprache bestimmen keine Ansprüche. Gesamtprofil bestätigen. Werte gelten für alle Perioden; bei Änderungen aktualisieren."</string>
+    <string name="tax_scope_mx" formatted="false">"Mexiko2026: jährlicher ISR-Tarif, kein monatlicher Abzug. KEIN Monat mit Anspruch auf Beschäftigungszuschuss/Mindestlohnbefreiung; keine Sonderzahlungen/Gutschriften. Vorsichtige Grenze:Jahresbasis/12 über MXN11.492,66, allein kein Eignungsnachweis. Gesamte Jahresbasis und Abzüge prüfen."</string>
+    <string name="tax_scope_br" formatted="false">"Brasilien2026: EINE reguläre voll steuerpflichtige monatliche Barzahlung; geprüfte Monatsbasis nach gesetzlichen Abzügen ODER Pauschale, nie beides. Neue Monatssteuerermäßigung enthalten. Sach-/steuerfreie Leistungen,13.Gehalt, Urlaub/separate Ereignisse, Jahresausgleich und andere Gutschriften ausgeschlossen. Geprüftes Jahrestotal höchstens BRL600.000 als vorsichtige App-Grenze."</string>
+    <string name="tax_scope_cr" formatted="false">"Costa Rica2026: regulärer voll steuerpflichtiger monatlicher Barlohn. Lohnsteuer VOR Arbeitnehmer-Sozialabzügen nach2026Tarif. Keine Ehepartner-/Kindergutschriften, steuerfreien Boni,13.Gehalt oder getrennten/Teilmonatszahlungen. Tatsächliche Barabzüge separat."</string>
+    <string name="tax_scope_gt" formatted="false">"Guatemala2026: endgültige geprüfte Jahresbasis nach gesetzlichen Abzügen/Befreiungen, einschließlich Q48.000 UND außerordentlichen Q3.024 für2026. Keine indexierte2027Befreiung.5% bis Q300.000 Basis,7% darüber. Steuerfreie aguinaldo/Bono14 und belegte Abzüge in Basis prüfen."</string>
+    <string name="tax_scope_do" formatted="false">"Dominikanische Republik2026: Jahreslohntarif mit veröffentlichten Festbeträgen. Basis VOR Nullsatzstufe RD$416.220; Schwelle nicht erneut abziehen. Keine2027Tabelle/Bildungs- oder anderen Gutschriften. Tatsächliche Sozialabzüge separat."</string>
+    <string name="tax_scope_ke" formatted="false">"Kenia2026: endgültige geprüfte Jahresbasis nach gesetzlichen Abzügen einschließlich SHIF,Wohnungsabgabe/Rente soweit anwendbar. Ansässigenentlastung bis KES28.800/Jahr einmal enthalten, nicht erstattbar. Keine Privatversicherungs-/anderen Gutschriften/Sonderbefreiungen. Barabzüge separat, keine zweite Basisminderung."</string>
+    <string name="tax_scope_rw" formatted="false">"Ruanda2026: regulärer Erst-Arbeitgeberjob, geprüfte Jahresbasis. Gelegenheitsarbeit15%, Zweitarbeitgeber, Aufsichtsratsgelder und Sonderregime ausgeschlossen. Jahressteuer/12 ist Rücklage, kein variabler monatlicher PAYE. Tatsächliche Beiträge separat."</string>
+    <string name="tax_scope_ug" formatted="false">"Uganda2026/27:1.Juli2026–30.Juni2027, NEUE Ansässigenstufen. Rücklage mit12 gleichen monatlichen Steuerbasen; kein variabler/kumulativer Abzug. Nicht alte235.000Schwelle/Nichtansässigensätze. Zusätzliche10% über UGX10Mio.Monatsbasis enthalten."</string>
+    <string name="tax_scope_zm" formatted="false">"Sambia2026: auf Jahresbasis gerechnete Lohnstufen einschließlich monatlicher Nullstufe ZMW5.100. Geprüfte Jahresbasis/tatsächliche Barabzüge. Keine Behinderten-/Sonderjob-/sonstigen Gutschriften. Arbeitgeberkosten ausgeschlossen."</string>
+    <string name="tax_scope_pk" formatted="false">"Pakistan2026/27, Steuerjahr2027: verabschiedete Finanzgesetz2026Lohnstufen. Ansässiger nur mit Lohn, geprüftes Jahrestotal höchstens PKR10Mio. Zuschlag, Supersteuer, Rente, Unternehmen/Sondergutschriften ausgeschlossen. Nicht2025/26Tabelle/Gesetzesvorschlag."</string>
+    <string name="tax_scope_uz" formatted="false">"Usbekistan2026: regulärer voll steuerpflichtiger Ansässigenlohn12%; Jahresbasis=Jahreslohn. Keine Sonderbefreiungen/freiwillige Rentenvergünstigung. Innerhalb der12% zugewiesene Rentensumme ist bereits enthalten: NICHT nochmals bar abziehen. Arbeitgeber-Sozialsteuer ausgeschlossen."</string>
+    <string name="tax_scope_kz" formatted="false">"Kasachstan2026: neuer Jahrestarif10/15% bei8.500MCI; MCI=KZT4.325. Basis enthält bereits regulären Jahresabzug360MCI und gesetzliche Sozialabzüge, nicht alte14MCI-Regel. Keine Privatpraxis, Unternehmen, Dividenden oder besonderen Sozialvergünstigungen."</string>
+    <string name="tax_scope_ma" formatted="false">"Marokko2026: regulärer Lohn, geprüfte jährliche Nettosteuerbasis nach Berufskosten, Beiträgen/gesetzlichen Befreiungen. Sechs aktuelle Stufen, maximal37%. Keine Familiengutschriften, Unternehmen/Landwirtschaft, Sonderzonen/-sätze oder sonstigen Gutschriften. Barabzüge separat."</string>
+    <string name="tax_scope_md" formatted="false">"Moldau2026: reguläres Regime, gesamtes Jahreseinkommen aus Arbeit strikt unter MDL360.000 als vorsichtige App-Grenze. Basis enthält MDL29.700Entlastung/gesetzliche Abzüge. Kein IT-Park, Taxi, erhöhte persönliche/Familienentlastung oder weitere Gutschriften."</string>
+    <string name="tax_scope_mk" formatted="false">"Nordmazedonien2026: regulärer Lohn,10% geprüfte endgültige Jahresbasis nach Beiträgen und persönlicher Jahresermäßigung MKD131.184. Keine weiteren Einkünfte/Sonderbefreiungen/Gutschriften. Barabzüge separat; Entlastung nicht doppelt abziehen."</string>
+    <string name="tax_monthly_verified_base" formatted="false">"Geprüfte Steuerbasis dieser Monatszahlung"</string>
+    <string name="tax_br_annual_hint" formatted="false">"Geprüftes GESAMTES Arbeitseinkommen2026 einschließlich13.Gehalt, Urlaub/Boni zur Prüfung der BRL600.000Grenze. Monatsrechnung berechnet deren separate Steuer/Jahresausgleich nicht. Diese Ereignisse nicht in Brutto/Basis des regulären Monats aufnehmen."</string>
+    <string name="tax_br_monthly_base_hint" formatted="false">"Gleiche reguläre Monatszahlung: geprüfte Basis nach gesetzlichen Abzügen. App vergleicht mit Brutto minus BRL607,20 und verwendet die kleinere Basis, ohne beide Abzüge zu addieren. Keine automatische INSS-Rate. Für betrachtete Zahlung aktualisieren; keine historischen Profile."</string>
+    <string name="tax_fifteen_income_hint" formatted="false">"Geprüftes Arbeitseinkommen des GESAMTEN Steuerjahres mit Boni/korrekt bewerteten steuerpflichtigen Vorteilen und endgültige Jahresbasis. UG/PK beginnen Juli2026; PK Steuerjahr2027. Jahrestarif/12=Rücklage gegen Bargeld, keine Abrechnung/kumulatives/Jahresnetto. UG setzt12 gleiche Steuerbasen voraus."</string>
+    <string name="tax_fifteen_base_hint" formatted="false">"ENDGÜLTIGE geprüfte Jahresbasis nach gesetzlichen Abzügen/Entlastungen. Nullsatzstufe nicht nochmals abziehen. GT enthält extra Q3.024 für2026; KZ360MCI; MK131.184MKD. UZ:Basis=Jahreslohn. MD:Gesamt unter360.000. Kein automatischer Anspruch."</string>
+    <string name="tax_fifteen_cash_hint" formatted="false">"Tatsächliche Arbeitnehmer-Barabzüge außer Einkommensteuer für diese Zahlung oder explizit0: Sozial-, Kranken-, Renten-/sonstige Abgaben. Arbeitgeberkosten/hier berechnete Steuer ausschließen. UZ:innerhalb12% enthaltene Rente nicht wiederholen. Gesetzliche Effekte bereits in geprüfter Basis; kein Doppelabzug."</string>
+    <string name="tax_wave_common_scope" formatted="false">"Profil: alleinstehender Arbeitnehmer18–59, ganzjährig lokal wohnhaft/arbeitend, ein regulärer Job, keine Unterhaltsberechtigten, weiteren/ausländischen Einkünfte, Sonderregime/-gutschriften außer genannten. Steueransässigkeit/Ansprüche unabhängig prüfen; Land/Sprache reichen nicht. Nur lokale Lohnrechnung, keine Heimat-/Auslandsteuer. Werte gelten für alle Perioden; aktualisieren."</string>
+    <string name="tax_scope_pa" formatted="false">"Panama2026: regulärer Ansässigenlohn, geprüfte endgültige Jahresbasis.0% bis PAB11.000;15% bis50.000;25% darüber. Keine Repräsentations-/Sondersatzzahlungen, weiteren Einkünfte/Gutschriften. Sozialbarabzüge separat; Nullstufe nicht doppelt abziehen."</string>
+    <string name="tax_scope_ni" formatted="false">"Nicaragua2026: regulärer Ansässigenlohn, geprüfte Jahresbasis nach gesetzlichen INSS/Sparabzügen/Befreiungen.0/15/20/25/30%. Steuerfreies13.Gehalt in Basis prüfen; Nullstufe C$100.000 nicht nochmals abziehen. Keine Abfindungs-/Sonderzahlungen/Gutschriften. Jahresrücklage, nicht kumulativ."</string>
+    <string name="tax_scope_sv" formatted="false">"El Salvador2026: EINE reguläre Monatszahlung, geprüfte Basis nach gesetzlichen Abzügen. Veröffentlichter Monatstarif mit Festbeträgen; keine kumulative Juni-/Dezemberrechnung, Jahresabrechnung, Halb-/Teilmonate. Keine Sonder-/steuerfreien Zahlungen oder weiteren Gutschriften."</string>
+    <string name="tax_scope_hn" formatted="false">"Honduras2026: regulärer Ansässigenlohn, geprüfte Jahresbasis enthält vollen berechtigten HNL40.000Bildungs-/Medizinabzug und weitere gesetzliche Abzüge/Befreiungen. Neue2026Stufen. Keine über65Entlastung, Unternehmen/Sondergutschriften. Nullstufe nicht nochmals abziehen."</string>
+    <string name="tax_scope_py" formatted="false">"Paraguay2026: Ansässiger Arbeitnehmer BEREITS vor2026 im IRP-RSP registriert. Erstregistrierungs-/Schwellenjahr ausgeschlossen. Gesamtjahreseinkommen, steuerpflichtige Einnahmen VOR Kosten ohne steuerfreies13.Gehalt und Nettobasis prüfen. Bis PYG80Mio.steuerpflichtiger Einnahmen keine Zahlung; darüber progressiv8/9/10% Nettobasis. Keine Kapital-/Unternehmens-/anderen Einkünfte/Gutschriften."</string>
+    <string name="tax_scope_ec" formatted="false">"Ecuador2026: Festlandansässiger ohne Unterhaltsberechtigte, Behinderung/Sonderkrankheit oder Sonderentlastung.2026Jahresfestbeträge. Geprüfte berechtigte persönliche Ausgaben führen zu18%Ermäßigung bis7Körbe, höchstens Steuer. Galápagos/Familien-/Sonderhöchstbeträge ausgeschlossen. STEUERermäßigung, kein zweiter Basisabzug."</string>
+    <string name="tax_scope_na" formatted="false">"Namibia2026/27:1März2026–28Februar2027, regulärer Ansässigenlohn. Geprüfte endgültige Jahresbasis nach Abzügen/bewerteten Vorteilen. Nullstufe NAD100.000 und18/25/28/30/32/37%. Keine Rentenentnahmen, Landwirtschaft/Unternehmen/anderen Einkünfte/Sondergutschriften. Jahresrücklage, kein kumulativer PAYE."</string>
+    <string name="tax_scope_kh" formatted="false">"Kambodscha2026: regulärer monatlicher Ansässigenbarlohn, keine Unterhalts-/Ehepartnerentlastung, Nichtansässigen-/Sachbezugsondersteuer. Geprüfte Monatsbasis nach gesetzlichen Abzügen;0/5/10/15/20%. Nullstufe KHR1,5Mio.nicht nochmals abziehen. Tatsächliche Beiträge separat."</string>
+    <string name="tax_scope_az" formatted="false">"Aserbaidschan2026: regulärer voll steuerpflichtiger monatlicher BARlohn, Hauptjob im PRIVATEN Nicht-Öl-/Nicht-Gassektor.3/10/14%, AZN200Befreiung einmal bei Brutto&lt;=2.500. Kein öffentlicher/Öl-/Gassektor oder Sonderentlastung. Versicherungsbarabzüge mindern PIT-Basis nicht. Keine2027/2028Sätze."</string>
+    <string name="tax_scope_bh" formatted="false">"Bahrain2026: regulärer lokaler Lohn eines Nicht-GCC-Auslandsarbeitnehmers. Keine lokale Lohn-PIT im Profil; tatsächliche SIO/Arbeitslosen-/Renten-/andere Barabzüge oder explizit0. Keine Arbeitgeberkosten, Unternehmens-/anderen Einkünfte oder Heimatsteuer."</string>
+    <string name="tax_scope_kw" formatted="false">"Kuwait2026: regulärer lokaler Lohn eines Nicht-GCC-Auslandsarbeitnehmers. Keine lokale persönliche Lohn-PIT. Tatsächliche Versicherungs-/Renten-/andere Abzüge explizit oder0. Keine Unternehmenssteuer/Arbeitgeber-/Ausland-/Heimatsteuer."</string>
+    <string name="tax_scope_om" formatted="false">"Oman2026: regulärer lokaler Lohn eines Nicht-GCC-Auslandsarbeitnehmers. Keine PIT2026; neues Gesetz beginnt2028,5% hier NICHT belastet, künftige Jahre nicht freigeschaltet. Tatsächliche Sozial-/Kranken-/Rentenbarabzüge oder0; keine Arbeitgeber-/Auslandsteuer."</string>
+    <string name="tax_scope_qa" formatted="false">"Katar2026: regulärer lokaler Nicht-GCC-Auslandsarbeitnehmerlohn, von lokaler PIT ausgeschlossen. Tatsächliche Versicherungs-/Renten-/andere Abzüge oder0; Land beweist keine Beitragsbefreiung. Keine Unternehmens-, Arbeitgeber-, Auslands-/Heimatsteuer."</string>
+    <string name="tax_scope_bn" formatted="false">"Brunei2026: regulärer lokaler Arbeitnehmerlohn, keine persönliche PIT. Tatsächliche geprüfte SPK/Renten-/Sozial-/andere Barabzüge oder0. Keine automatische Rate/Beitragsberechtigung. Keine Unternehmens-/anderen Einkünfte, Arbeitgeber-/Ausland-/Heimatsteuer."</string>
+    <string name="tax_scope_bs" formatted="false">"Bahamas2026: regulärer lokaler Lohn, keine inländische persönliche PIT. Tatsächliche geprüfte NIB/Renten-/andere Barabzüge oder0. Keine automatische Beitragsbefreiung, Unternehmens-/anderen Einkünfte, Arbeitgeber-/Ausland-/Heimatsteuer."</string>
+    <string name="tax_ec_mainland" formatted="false">"Festland Ecuador"</string>
+    <string name="tax_ec_expenses" formatted="false">"Geprüfte berechtigte persönliche Jahresausgaben"</string>
+    <string name="tax_ec_expenses_hint" formatted="false">"Festland ohne Unterhaltsberechtigte/Sonderstatus: unabhängig geprüfte berechtigte2026Ausgaben oder0. Ermäßigung18% von bis USD5.752,60 (7×821,80), auf Cent gerundet/höchstens Steuer; maximal USD1.035,47. NICHT dieselben Ausgaben von Jahresbasis abziehen. Kein automatischer Anspruch/Galápagos/Sonderhöchstbetrag."</string>
+    <string name="tax_py_receipts" formatted="false">"Geprüfte jährliche IRP-pflichtige Einnahmen vor Kosten"</string>
+    <string name="tax_py_receipts_hint" formatted="false">"Paraguay: IRP-RSP-pflichtige Bruttoarbeitseinnahmen VOR Kosten, ohne steuerfreies13.Gehalt/Einnahmen prüfen. Nicht zwingend gesamtes Arbeitseinkommen/Nettobasis. Einnahmen&lt;=Jahrestotal, Endbasis&lt;=Einnahmen. PYG80Mio.Schwelle nutzt dieses Feld, nicht Gesamtbrutto. Registrierung vor2026 nötig."</string>
+    <string name="tax_wave_annual_hint" formatted="false">"Geprüftes GESAMTES Arbeitseinkommen des Steuerjahres mit Boni/korrekt bewerteten Vorteilen und endgültige Jahresbasis nach gesetzlichen Abzügen/Befreiungen. Namibia2026/27 beginnt1März2026; andere Kalender2026. Jahressteuer/12=Barlohnrücklage, keine Abrechnung/kumulatives/Jahresnetto. Jahresextras nicht vollständig zum Bargeld addiert."</string>
+    <string name="tax_wave_monthly_hint" formatted="false">"Geprüfte endgültige Basis DERSELBEN regulären Monatszahlung wie Brutto, nach gesetzlichen Abzügen. Nullstufe/Barabzüge nicht doppelt abziehen. Gemeinsame Basis für Perioden: je Zahlung aktualisieren. Keine kumulative/Jahresanpassung SV oder Sachbezugsteuer KH."</string>
+    <string name="tax_wave_base_hint" formatted="false">"ENDGÜLTIGE geprüfte Jahresbasis nach gesetzlichen Abzügen/Befreiungen, VOR Nullstufe. HN:voller berechtigter40.000Abzug bereits enthalten. PY:Basis&lt;=geprüfte steuerpflichtige Einnahmen ohne steuerfreies13.Gehalt. EC:persönliche Kosten mindern Steuer, nicht nochmals Basis. Anspruch prüfen."</string>
+    <string name="tax_wave_cash_hint" formatted="false">"Tatsächliche Arbeitnehmer-Barabzüge außer PIT für diese Zahlung oder explizit0: Sozial-, Kranken-, Rente, Arbeitslosen-/NIB/SPK/andere. Keine Arbeitgeberkosten/hier berechnete PIT. Gesetzliche Effekte bereits in geprüfter Basis. Keine lokale PIT bedeutet NICHT keine Abzüge. Keine Auslands-/Heimatsteuer."</string>
+    <string name="tax_twenty_common_scope" formatted="false">"Profil: alleinstehender ansässiger Arbeitnehmer31–59Jahre, GANZES Steuerjahr lokal wohnhaft/beschäftigt, ein regulärer Job, keine Unterhaltsberechtigten, anderen/ausländischen Einkünfte oder Sonderregeln/Gutschriften außer angegeben. Land/Sprache begründen keine Ansprüche. Endgültige Basis und tatsächliche Arbeitnehmerabzüge prüfen; keine Arbeitgeberkosten/Auslandssteuern. Für jede Zahlung aktualisieren."</string>
+    <string name="tax_scope_at" formatted="false">"2026: nur reguläres Jahresgehalt. Verkehrsabsetzbetrag496 und einkommensabhängiger Zuschlag bis804, begrenzt auf Steuer. Kein erhöhter Pendlerabsetzbetrag, Pendlereuro, gesondert besteuertes13./14.Gehalt oder SV-Rückerstattung. Gesetzliche Abzüge bereits in Basis; Nullstufe nicht nochmals abziehen."</string>
+    <string name="tax_scope_cy" formatted="false">"Reform2026: geprüfte endgültige Jahreslohnbasis nach gesetzlichen Abzügen/Befreiungen. Kein automatischer Anspruch auf Wohn-/Umwelt-/Familien-/Erstbeschäftigungsbegünstigung; keine anderen Einkünfte oder Sondergutschriften."</string>
+    <string name="tax_scope_mt" formatted="false">"2026: nur SINGLE-Tarif; keine Ehe-/Eltern-/Kindertarife, besondere15%-Teilzeitregel oder sonstigen Gutschriften. Geprüfte endgültige Jahresbasis."</string>
+    <string name="tax_scope_gr" formatted="false">"2026: KINDERLOS,31–59Jahre. Neue Skala;777-Gutschrift mit Abschmelzung über12000 einmal und höchstens bis Steuer. Vorgeschriebene elektronische Ausgaben erfüllt; keine Fehlbetragsstrafe/Sonderbefreiung/weiteren Gutschriften."</string>
+    <string name="tax_scope_si" formatted="false">"2026: veröffentlichter Jahrestarif auf geprüfte endgültige Nettobasis nach gesetzlichen Sozial-/persönlichen/allgemeinen Abzügen. Nicht nochmals abziehen. Keine Jugend-/Studenten-/Behinderungs-/Ehrenamtsregeln, Auslandsbezüge oder Sondergutschriften."</string>
+    <string name="tax_scope_sk" formatted="false">"2026: NEUE Jahresstufen19/25/30/35%. Endgültige Basis nach geprüften Beiträgen/Freibeträgen einschließlich Einkommensabschmelzung. Keine doppelten Abzüge oder Kinder-/Hypotheken-/Sondergutschriften."</string>
+    <string name="tax_scope_hr" formatted="false">"2026: nur ZAGREB,31–59Jahre, keine Jugend-/Rückkehrerbefreiung. Endbasis enthält berechtigten7200-Grundfreibetrag und gesetzliche Rentenabzüge.23/33% bei60000-Basis. Andere Gemeinden nicht verfügbar."</string>
+    <string name="tax_scope_rs" formatted="false">"2026: regulärer MONATLICHER Lohnsteuerabzug10% von geprüfter Endbasis NACH gesetzlichem Freibetrag passend zu Datum/Arbeitsumfang. Versicherung nicht erneut abziehen. Zusätzliche Jahressteuer für hohe Einkommen, kumulative Abrechnung/Sonderbefreiungen NICHT enthalten."</string>
+    <string name="tax_scope_me" formatted="false">"2026: regulärer voll steuerpflichtiger MONATLICHER Barlohn; Basis=Brutto VOR Arbeitnehmerbeiträgen.0/9/15%. Kommunaler Lohnsteuerzuschlag ist ARBEITGEBERKOSTEN, kein zusätzlicher Arbeitnehmerabzug. Keine Sonderzahlungen/Jahresabrechnung."</string>
+    <string name="tax_scope_al" formatted="false">"2026: Jahrestarif13/23%; Endbasis nach einkommensabhängigem persönlichem Freibetrag und gesetzlichen Abzügen.600000/420000/360000 bereits enthalten; nicht zweimal. Keine Kinder-/Bildungsgutschriften/anderen Einkünfte."</string>
+    <string name="tax_scope_ba" formatted="false">"2026: nur FÖDERATION Bosnien und Herzegowina, nicht Republika Srpska/Brčko. Endgültige Jahreslohnbasis nach Beiträgen und berechtigtem3600-Grundfreibetrag.10%, keine weiteren Gutschriften."</string>
+    <string name="tax_scope_ng" formatted="false">"NTA/JRB2026:12 GLEICHE voll steuerpflichtige monatliche Bargehälter; Jahresgesamt=12×aktuelles Brutto. Keine Boni/Sachbezüge/variable Löhne/Militär- oder Sonderbefreiung. Mindestlohnbefreiung bis70000/Monat enthalten. Geprüfte Basis nach gesetzlichen Entlastungen; kein altes CRA/zweite800000-Nullstufe."</string>
+    <string name="tax_scope_gh" formatted="false">"2026: regulärer ansässiger MONATSLOHN, Tabelle ab1SEPTEMBER. Geprüftes tatsächliches Zahlungsdatum und Monatsbasis nach Abzügen; Periodenende im GLEICHEN Kalendermonat. Frühere Monate, Sonderbonus-/Überstundentarife, Gelegenheitsarbeit/Nichtansässige und Jahres-/kumulative Abrechnung ausgeschlossen."</string>
+    <string name="tax_scope_tz" formatted="false">"2026: FESTLAND, ansässiger Hauptjob, MONATLICHES PAYE. Geprüfte Basis nach gesetzlichen Abzügen/anerkannter Rente vor Nullstufe. Kein Sansibar, Zweitjob/Nichtansässigen-Pauschalsatz30%, Sonderlohn oder Jahresausgleich."</string>
+    <string name="tax_scope_bw" formatted="false">"2026/27 ab1Juli2026: verabschiedeter Ansässigen-Jahrestarif mit NEU27,5% über400000, nicht altem25%-Höchstsatz. Geprüfte Endbasis; keine Nichtansässigen, Abfindungs-/Rentenkapitalzahlungen, Gewerbeeinkünfte/Sondergutschriften."</string>
+    <string name="tax_scope_mu" formatted="false">"EINKOMMENSJAHR2026/27 ab1Juli2026, nicht Veranlagungsbezeichnung. GESAMTER Jahresarbeitslohn&lt;=12Mio.MUR, keine anderen Einkünfte.0/10/20% in diesem Umfang. Höhere Einkommen35%/Fair Share/Sonderregeln oder Gutschriften ausgeschlossen; Basisabzüge prüfen."</string>
+    <string name="tax_scope_eg" formatted="false">"2026: normal ansässig, GESAMTES Jahreseinkommen&lt;=600000EGP. Endbasis enthält berechtigte20000-Personalbefreiung/gesetzliche Abzüge, vor40000-Nullstufe. Basis ABRUNDEN auf10EGP. Höhere Einkommen mit Stufenverlust/Sondergutschriften ausgeschlossen. Tatsächliche Sozial-/Stempel-/Lohnabzüge separat."</string>
+    <string name="tax_scope_sz" formatted="false">"2026/27 ab1Juli2026: regulärer Lohn,20/25/30/33% plus nicht erstattbare8200-Grundgutschrift einmal. Effektiver41000-Nullpunkt ist KEIN weiterer Abzug. Keine60+, Kündigungs-/Ruhestandssondertarife oder weiteren Gutschriften. Endbasis prüfen."</string>
+    <string name="tax_scope_ls" formatted="false">"2026/27 ab1April2026: neue Jahresgrenze77760 bei20%, darüber30%, nicht erstattbare12240-Jahresgutschrift. Ersetzt alte RSL-Seitenwerte. Geprüfte Endlohnbasis; keine Arbeitgeber-Sachbezugssteuer, Nichtansässigen-/Abfindungs-/Sondergutschriften."</string>
+    <string name="tax_scope_jo" formatted="false">"2026: regulärer ansässiger Jahreslohn. Endbasis mit berechtigter9000-Personalbefreiung/dokumentierten Abzügen.5/10/15/20/25/30% plus1%Nationalbeitrag über200000. Dinarbruchteile von Jahresbasis/-steuer gesetzlich verwerfen. Keine Sonderregeln/Gutschriften."</string>
+    <string name="tax_payment_date" formatted="false">"Tatsächliches Zahlungsdatum · YYYY-MM-DD"</string>
+    <string name="tax_payment_date_hint" formatted="false">"Nur Ghana: geprüftes Datum2026-09-01 bis2026-12-31 im GLEICHEN Monat wie Periodenende, sonst Netto nicht verfügbar. Lateinische Ziffern, z.B.2026-10-31. Datum/Basis für neue Zahlung ändern. Keine früheren Tabellen/Jahres- oder kumulative Abrechnung. Datum wird gesichert."</string>
+    <string name="tax_payment_date_invalid" formatted="false">"Gültiges Datum YYYY-MM-DD mit lateinischen Ziffern eingeben oder leer lassen."</string>
+    <string name="tax_zagreb" formatted="false">"Zagreb"</string>
+    <string name="tax_fbih" formatted="false">"Föderation Bosnien und Herzegowina"</string>
+    <string name="tax_tz_mainland" formatted="false">"Tansania-Festland"</string>
+    <string name="tax_twenty_annual_hint" formatted="false">"GESAMTEN Arbeitslohn und Endbasis des VOLLEN Steuerjahrs unabhängig prüfen. BW/MU/SZ2026/27 ab1Juli; LS ab1April; andere Kalender2026. Jahressteuer/12 ist Reserve gegen Periodenbargeld, kein tatsächlicher kumulativer Abzug/Jahresnetto. Nigeria:12 gleiche Bargehälter. Boni/Sachbezüge nicht vollständig dieser Zahlung zuschlagen."</string>
+    <string name="tax_twenty_base_hint" formatted="false">"Geprüfte ENDGÜLTIGE Jahressteuerbasis NACH gesetzlichen Abzügen/Freibeträgen, VOR Nullstufen/Steuergutschriften. AL/BA/HR/EG/JO: Grundfreibetrag bereits enthalten. AT/GR/SZ/LS: Gutschriften separat von STEUER. Bargeld/Nullstufe nicht doppelt abziehen; persönliche Ansprüche prüfen."</string>
+    <string name="tax_twenty_monthly_hint" formatted="false">"Geprüfte Endbasis DERSELBEN regulären Monatszahlung nach gesetzlichen Abzügen/Freibeträgen vor Nullstufen. RS: Freibetrag passend zu Datum/Arbeit. ME: Basis=Brutto vor Beiträgen. GH: tatsächliches Datum/Monat; TZ: Hauptjob Festland. Kein Jahres-/kumulativer Ausgleich; für andere Zahlung aktualisieren."</string>
+    <string name="tax_us_ak" formatted="false">"Alaska"</string>
+    <string name="tax_us_nv" formatted="false">"Nevada"</string>
+    <string name="tax_us_sd" formatted="false">"South Dakota"</string>
+    <string name="tax_us_tn" formatted="false">"Tennessee"</string>
+    <string name="tax_us_wa" formatted="false">"Washington"</string>
+    <string name="tax_us_wy" formatted="false">"Wyoming"</string>
+    <string name="tax_us_nh" formatted="false">"New Hampshire"</string>
+    <string name="tax_us_az" formatted="false">"Arizona"</string>
+    <string name="tax_us_ia" formatted="false">"Iowa"</string>
+    <string name="tax_us_il" formatted="false">"Illinois"</string>
+    <string name="tax_us_mi" formatted="false">"Michigan"</string>
+    <string name="tax_us_nc" formatted="false">"North Carolina"</string>
+    <string name="tax_us_ut" formatted="false">"Utah"</string>
+    <string name="tax_us_ky" formatted="false">"Kentucky"</string>
+    <string name="tax_us_pa" formatted="false">"Pennsylvania"</string>
+    <string name="tax_us_in" formatted="false">"Indiana"</string>
+    <string name="tax_us_ma" formatted="false">"Massachusetts"</string>
+    <string name="tax_us_ga" formatted="false">"Georgia"</string>
+    <string name="tax_us_la" formatted="false">"Louisiana"</string>
+    <string name="tax_us_ms" formatted="false">"Mississippi"</string>
+    <string name="tax_us_state_base" formatted="false">"Geprüfte jährliche Steuerbasis des Bundesstaats"</string>
+    <string name="tax_us_base_hint" formatted="false">"Endgültige Basis NACH rechtmäßigen Abzügen/Freibeträgen des Bundesstaats, VOR Nullstufen und Steuergutschriften. Nicht die Bundessteuerbasis übernehmen. Persönliche Ansprüche gesondert prüfen."</string>
+    <string name="tax_us_state_relief" formatted="false">"Geprüfte jährliche staatliche Steuerermäßigung"</string>
+    <string name="tax_us_relief_hint" formatted="false">"Gesamte berechtigte NICHT ERSTATTBARE Ermäßigung, einschließlich persönlicher Vergünstigungen und Entlastung niedriger Einkommen. Geprüfter Betrag für 2026 oder ausdrücklich 0. Auf die Steuer begrenzt; keine Erstattung oder automatische Berechtigung."</string>
+    <string name="tax_us_local_tax" formatted="false">"Lokale Arbeitnehmersteuer dieses Zeitraums"</string>
+    <string name="tax_us_local_hint" formatted="false">"Tatsächliche geprüfte Stadt-, County-, Schul- oder Berufssteuer dieser Zahlung, sonst ausdrücklich 0. Lokale Sätze/Freibeträge werden nicht berechnet. Nicht nochmals bei anderen Abzügen eintragen."</string>
+    <string name="tax_us_zero_hint" formatted="false">"Keine staatliche Einkommensteuer auf normale Löhne in diesem Profil 2026. Bundessteuer, Social Security, Medicare und tatsächliche lokale/sonstige Arbeitnehmerabzüge gelten weiter. Washingtons Änderungen für 2028 gelten hier nicht für 2026."</string>
+    <string name="tax_us_pa_ut_hint" formatted="false">"PA/UT zunächst nur vollständig steuerpflichtige Löhne ohne Anpassungen; Basis = 12 × aktuelles Monatsbrutto. PA hat keinen Standardabzug. In UT wirken Bundesabzüge über eine separate Steuergutschrift, nicht diese Basis; Gutschrift für 2026 prüfen."</string>
+    <string name="tax_us_ms_hint" formatted="false">"Mississippi: 4% der endgültigen Basis über 10.000 USD. Nullstufe wird hier einmal berücksichtigt; nicht von der eingegebenen Basis abziehen. Zusammenveranlagung mit nur einem Verdiener: eine Nullstufe."</string>
+    <string name="tax_us_ma_hint" formatted="false">"Massachusetts: normale Löhne mit 5%, jährliches Haushaltsbrutto auf 1.000.000 USD begrenzt, um Zuschlagsfälle auszuschließen. No Tax Status und Limited Income Credit gesondert prüfen."</string>
+    <string name="tax_us_cash_hint" formatted="false">"Sonstige TATSÄCHLICHE Arbeitnehmerabzüge dieses Zeitraums oder 0: bezahlte Freistellung, WA Cares, Arbeitslosenversicherung, PFML und weitere Beiträge. Keine Arbeitgeberkosten. Bereits berechnete Bundes-/Staats-/Lokalsteuer, Social Security und Medicare ausschließen. Vorsteuerleistungen außerhalb des Profils."</string>
+    <string name="tax_us_current_inputs" formatted="false">"Staatliche Basis/Ermäßigung sind manuelle GEPRÜFTE Eingaben. Jahresbrutto = 12 × aktuelles Monatsbrutto; Steuer/12 ist eine durchschnittliche Rücklage, kein W-4-/kumulativer Einbehalt. Je Zahlung/Zeitraum aktualisieren. Keine automatische Lokalsteuer, erstattbaren Gutschriften oder bundesstaatübergreifenden Fälle."</string>
+    <string name="tax_us_state_tax" formatted="false">"Einkommensteuer des Bundesstaats"</string>
+    <string name="tax_us_al" formatted="false">"Alabama"</string>
+    <string name="tax_us_ar" formatted="false">"Arkansas"</string>
+    <string name="tax_us_ca" formatted="false">"Kalifornien"</string>
+    <string name="tax_us_co" formatted="false">"Colorado"</string>
+    <string name="tax_us_ct" formatted="false">"Connecticut"</string>
+    <string name="tax_us_de" formatted="false">"Delaware"</string>
+    <string name="tax_us_hi" formatted="false">"Hawaii"</string>
+    <string name="tax_us_id" formatted="false">"Idaho"</string>
+    <string name="tax_us_ks" formatted="false">"Kansas"</string>
+    <string name="tax_us_md" formatted="false">"Maryland"</string>
+    <string name="tax_us_me" formatted="false">"Maine"</string>
+    <string name="tax_us_mn" formatted="false">"Minnesota"</string>
+    <string name="tax_us_mo" formatted="false">"Missouri"</string>
+    <string name="tax_us_mt" formatted="false">"Montana"</string>
+    <string name="tax_us_nd" formatted="false">"North Dakota"</string>
+    <string name="tax_us_ne" formatted="false">"Nebraska"</string>
+    <string name="tax_us_nj" formatted="false">"New Jersey"</string>
+    <string name="tax_us_nm" formatted="false">"New Mexico"</string>
+    <string name="tax_us_ny" formatted="false">"New York"</string>
+    <string name="tax_us_oh" formatted="false">"Ohio"</string>
+    <string name="tax_us_ok" formatted="false">"Oklahoma"</string>
+    <string name="tax_us_or" formatted="false">"Oregon"</string>
+    <string name="tax_us_ri" formatted="false">"Rhode Island"</string>
+    <string name="tax_us_sc" formatted="false">"South Carolina"</string>
+    <string name="tax_us_va" formatted="false">"Virginia"</string>
+    <string name="tax_us_vt" formatted="false">"Vermont"</string>
+    <string name="tax_us_wi" formatted="false">"Wisconsin"</string>
+    <string name="tax_us_wv" formatted="false">"West Virginia"</string>
+    <string name="tax_us_final_scope" formatted="false">"28 neue Profile: reguläre Ansässigenlöhne, keine alternative Mindeststeuer/Sonderregime. Jährliches Haushaltsbrutto für automatische Tarife höchstens 1.000.000 USD, unten teils niedrigere Grenzen. Basis, Entlastungen und Arbeitnehmerabzüge unabhängig prüfen. Begrenzte Abdeckung."</string>
+    <string name="tax_us_manual_scope" formatted="false">"CO / ID / VT: NUR EINGABE GEPRÜFTER STEUERSCHULD. Kein automatischer Tarif der Steuererklärung 2026 wurde hier bestätigt. Unabhängig geprüfte endgültige staatliche Jahressteuerschuld 2026 eingeben; die App berechnet weder diese Schuld noch die Berechtigung."</string>
+    <string name="tax_us_verified_state_tax" formatted="false">"Geprüfte endgültige jährliche Staatssteuerschuld"</string>
+    <string name="tax_us_verified_tax_hint" formatted="false">"Endgültige Steuerschuld 2026 nach nicht erstattbaren Entlastungen, VOR Einbehalt/Vorauszahlungen. Nicht Restzahlung, einbehaltene Steuer, Vorjahressteuer oder Erstattung. 0 nur nach Prüfung. Einmal durch 12 geteilt; Basis/Entlastungsfelder werden hier ignoriert. Lokale/sonstige Abzüge separat. Je Zahlung aktualisieren."</string>
+    <string name="tax_us_final_limits" formatted="false">"Automatische Grenzen des jährlichen Haushaltsbruttos: CT 50.000 USD SINGLE / 100.000 MFJ; NY 107.650; AR 94.700. Keine Rücknahme von Steuervorteilen, Hochverdiener-Zuschläge oder alternativen AR-Tabellen. Außerhalb des Umfangs kein Netto."</string>
+    <string name="tax_us_sc_hint" formatted="false">"South Carolina: NEUES Gesetz 2026 mit zwei Stufen und SCIAD. Geprüfte berechtigte SCIAD einschließlich Abschmelzung muss bereits in der Basis sein. Nicht automatisch Bundesstandardabzug oder alte 0/3/6%-Stufen verwenden."</string>
+    <string name="tax_us_or_hint" formatted="false">"Oregon: offizielle GESCHÄTZTE Tariftabellen 2026 einschließlich veröffentlichter gerundeter Grundsteuerbeträge. Endwerte können sich ändern. Basis, zulässigen Bundessteuerabzug und Gutschriften prüfen. Verkehrsabgabe, bezahlte Freistellung und lokale Steuern als tatsächliche Arbeitnehmerabzüge eingeben."</string>
+    <string name="tax_us_oh_hint" formatted="false">"Ohio 2026: bis 26.050 USD endgültiger Staatsbasis steuerfrei; darüber 332 USD plus 2,75% des Mehrbetrags. Persönliche/Niedrigeinkommensgutschriften unter staatlicher Entlastung prüfen. Lokal-/Schulsteuer separat."</string>
+    <string name="tax_us_manual_result" formatted="false">"Staatssteuer · eingegebene Jahresschuld / 12"</string>
+    <string name="tax_next_common_scope" formatted="false">"Nur2026: lediger ansässiger Arbeitnehmer31–59, volles Jahr, eine örtliche reguläre Stelle; keine Unterhaltsberechtigten/anderen Einkünfte/Sonderregime. Basis, Gutschriften und Abzüge prüfen. Keine Arbeitgeberkosten, Umrechnung oder historischen Profile; je Zahlung aktualisieren."</string>
+    <string name="tax_next_annual_hint" formatted="false">"Geprüftes GESAMTES Jahresbrutto2026. Jahressteuer/12 ist Rücklage, kein kumulativer Einbehalt bei wechselndem Lohn, Steuerbescheid oder Erstattung. Jahreszusätze nicht komplett dieser Zahlung zuschlagen."</string>
+    <string name="tax_next_monthly_hint" formatted="false">"Geprüfte endgültige Basis DIESER Monatszahlung. IS/CL/UY/BO sind keine Jahreserklärungen. UY kann6%Aufschlag enthalten; Beiträge mindern Steuer per Gutschrift, nicht nochmals Basis. BO enthält gesetzlichen2SMNAbzug."</string>
+    <string name="tax_next_base_hint" formatted="false">"Endgültige nationale Jahresbasis nach gesetzlichen Abzügen, vor Nullstufen/Gutschriften. NL enthält Box1Versicherung. JM/FJ/LUNullstufen einmal hier. BB25000und berechtigteBZpersönliche Entlastung schon abgezogen."</string>
+    <string name="tax_next_annual_relief" formatted="false">"Geprüfte jährliche nicht erstattbare Ermäßigung"</string>
+    <string name="tax_next_monthly_relief" formatted="false">"Geprüfte Ermäßigung dieser Monatszahlung"</string>
+    <string name="tax_next_relief_hint" formatted="false">"Geprüfte berechtigte Ermäßigung oder ausdrücklich0. Mindert STEUER höchstens bis null; keine Erstattung/automatischer Anspruch. Jährlich außer monatlichIS/CL/UY/BO. NLBox1Gutschriften/LUFondswirkung eingeschlossen. Andere Gutschriften nicht doppeln."</string>
+    <string name="tax_next_extra_tax" formatted="false">"Zusätzliche Arbeitnehmersteuern dieses Zeitraums"</string>
+    <string name="tax_next_extra_hint" formatted="false">"Geprüfte TATSÄCHLICHE nicht berechnete lokale/kantonale/regionale/Kirchen-/sonstige Steuern oder0. JPWiederaufbau, LU7%Fonds und NLVersicherung bereits berechnet; ISenthält Standardgemeindeanteil. Keine Doppelabzüge."</string>
+    <string name="tax_next_cash_hint" formatted="false">"Sonstige TATSÄCHLICHE Arbeitnehmerabzüge oder0: Rente, Sozial-/Krankenversicherung; keine Arbeitgeberkosten. Berechnete und separat eingegebene Zusatzsteuern ausschließen. NLVolksversicherung enthalten. Basis nicht doppelt mindern."</string>
+    <string name="tax_next_verified_tax" formatted="false">"Geprüfte endgültige nationale/regionale Jahressteuer"</string>
+    <string name="tax_next_verified_hint" formatted="false">"Manuell: geprüfte Steuerschuld für Einkommensjahr2026 nach nicht erstattbaren Gutschriften, VOR Einbehalt/Vorauszahlungen. Nicht einbehaltene Steuer, Restschuld, Erstattung oder Vorjahr. Einmal durch12; Gemeindesteuer separat, Basis/Ermäßigung ignoriert."</string>
+    <string name="tax_next_cl_date_hint" formatted="false">"Chile: tatsächliches Datum YYYY-MM-DD2026 in lateinischen Ziffern; Tabellen nur Januar–November. Gleicher Monat wie Periodenende erforderlich. Sonst Netto nicht verfügbar. Kein stiller Wechsel zu Jahres-/52bisTabelle."</string>
+    <string name="tax_next_nl_charge" formatted="false">"Box1Steuer und Volksversicherung"</string>
+    <string name="tax_next_manual_result" formatted="false">"Nationale/regionale Steuer · Jahreseingabe /12"</string>
+    <string name="tax_next_nl" formatted="false">"Niederlande: Box1 vor AOW, Jahresbrutto≤78426EUR.2026erste Stufe enthält27,65%Volksversicherung. Kombinierte Gutschriften prüfen; Versicherung nicht nochmals abziehen. Keine Box2/3oder30%Regelung."</string>
+    <string name="tax_next_be" formatted="false">"Belgien: NUR MANUELL geprüfte nationale/regionale Jahresschuld. Einkommen2026 entspricht Veranlagung2027, nicht2026. Gemeindesteuer separat. Keine automatische regionale Berechtigung/Gutschrift/flexi-job."</string>
+    <string name="tax_next_lu" formatted="false">"Luxemburg: nurKlasse1, Brutto≤150000EUR. Tarif seit2025; Basis auf50EUR abrunden,7%Beschäftigungsfonds vor geprüfter kombinierter Ermäßigung enthalten. Keine anderen Klassen/Grenzgänger/Pflegebeitragsberechnung."</string>
+    <string name="tax_next_ch" formatted="false">"Schweiz: ordentliche SINGLEBundesveranlagung, Brutto≤100000CHF.2026Tabelle, Basis auf100CHF und Steuer auf0,05CHF abrunden; unter25CHF nicht erhoben. Kanton/Gemeinde/Kirche tatsächlich separat, keine Quellensteuertabelle."</string>
+    <string name="tax_next_se" formatted="false">"Schweden: nur nationale Steuer2026, Grenze643000SEK NACH Grundfreibetrag, nicht Brutto660400. Basis auf100SEK abrunden, Mindestüberschuss200. Lokale Steuern/Gutschriftaufteilung separat prüfen."</string>
+    <string name="tax_next_fi" formatted="false">"Finnland: nur staatlicher Einkommenstarif2026. Staatlichen Gutschriftanteil prüfen; Gemeinde/Kirche/Yle/sonstige Abgaben separat. Tatsächliche Renten-/Arbeitslosen-/Krankenbeiträge; keine automatische Aufteilung."</string>
+    <string name="tax_next_is" formatted="false">"Island: veröffentlichte MONATLICHE2026Einbehaltstabelle mit Standardgemeindeanteil. Geprüfte Monatsgutschrift, nicht Jahreswert/12. Keine abweichende Gemeindejahresveranlagung, Überträge/Ehegattentransfers/Jahresabrechnung."</string>
+    <string name="tax_next_it" formatted="false">"Italien: reguläre IRPEF2026mit23/33/43%, Brutto≤200000EUR. Geprüfte Arbeitnehmerermäßigungen; regionale/Gemeindesteuern tatsächlich separat. Keine Ersatzsteuer für Überstunden/Nacht/Schicht/Prämien."</string>
+    <string name="tax_next_jp" formatted="false">"Japan: regulärer ansässiger Jahreslohn, Brutto≤100mJPY. Gesetzliche Endbasis auf1000JPY abrunden.2026Wiederaufbau2,1%nach geprüften nationalen Gutschriften separat berechnet. Lokale Steuer tatsächlich separat, keine2027Regeln."</string>
+    <string name="tax_next_kr" formatted="false">"Südkorea: reguläre progressive nationale Lohnsteuer, Endbasis und nationale Gutschriften geprüft. Lokale Einkommensteuer/tatsächliche Versicherung separat. Keine Ausländerpauschalwahl/Sonderregime."</string>
+    <string name="tax_next_ar" formatted="false">"Argentinien: offizielle JAHRES-/Endtabelle2026Art94, veröffentlichte Ausgangsbeträge. Geprüfte endgültige Jahresbasis. Steuer/12Rücklage, kein halbjährlich wechselnder kumulativer Einbehalt/SAC-Aufteilung/Erstattung."</string>
+    <string name="tax_next_cl" formatted="false">"Chile: reguläre MonatsIUSC nach tatsächlichem Zahlungsmonat. Nur Januar–November2026, keine52bisTabelle. Basis/Gutschrift geprüft, Renten-/Krankenabzüge tatsächlich separat. Keine Jahresabrechnung."</string>
+    <string name="tax_next_uy" formatted="false">"Uruguay: reguläre MONATLICHEIRPF2026. Geprüfte Basis ggf. mit6%Aufschlag, höchstens106%Brutto. Beiträge mindern STEUER über geprüfte14/8%Gutschrift, nicht nochmals Basis. Kein Sonderaguinaldo/Urlaubsentgelt/Jahresausgleich."</string>
+    <string name="tax_next_bo" formatted="false">"Bolivien: monatliche RC-IVA13%nach gesetzlichen2SMN und abzugsfähigen Beiträgen. Geprüfte Monatsgutschrift inkl. berechtigter13%von1SMN, Rechnungen und indexiertem Vorsaldo. Keine automatische Mindestlohn-/Anspruchs-/Übertragsberechnung."</string>
+    <string name="tax_next_jm" formatted="false">"Jamaika: JAHRESRücklage2026, gewichtete Jahresgrenze1876614JMD, nicht Apriljahreswert1902360.25/30%, obere Grenze6mstatutarisches Einkommen. Basis nach rechtmäßigen Beiträgen, vor Nullstufe. Kein kumulativesPAYE/65+Entlastung."</string>
+    <string name="tax_next_tt" formatted="false">"Trinidad und Tobago: jährliche25/30%ab1mTTD endgültiger Basis.90000persönlicher Freibetrag bereits abgezogen. TatsächlicheNIS/Gesundheitsabgabe separat; keine Arbeitgeberbetriebsabgaben."</string>
+    <string name="tax_next_bz" formatted="false">"Belize:25%geprüfter endgültiger Jahresbasis. Persönliche Entlastung25600/24600/22600/19600nach Gesamtbrutto bereits abgezogen. Keine automatische Spendenberechtigung/Erstattung; Sozialbeiträge tatsächlich separat."</string>
+    <string name="tax_next_gy" formatted="false">"Guyana:2026Sätze25/35%, steuerpflichtige Grenze3360000GYD. Endbasis nach berechtigtem Freibetrag≥1680000oder einem Drittel, NIS und legalen Überstundenabzügen. Keine automatische Sonderberechtigung/Versicherungsraten."</string>
+    <string name="tax_next_bb" formatted="false">"Barbados: NEUE2026Sätze11,5/27,5%. Berechtigter persönlicher Freibetrag25000BBD schon in Endbasis; erste50000davon11,5%. Keine doppelte25000Nullstufe. TatsächlicheNIS/sonstige Abgaben separat."</string>
+    <string name="tax_next_fj" formatted="false">"Fidschi: Ansässigentarif seit2024 weiter2026gültig;30000FJDNullstufe einmal. Keine aufgehobenen separatenSRT/ECAL, Nichtansässige/Sonderabfindungen. Endbasis/Gutschriften/tatsächliche Beiträge prüfen."</string>
+    <string name="menu_open" formatted="false">"Menü öffnen"</string>
+    <string name="shift_global_hint" formatted="false">"Nutze den Schichtregler unten auf jedem Bildschirm. Wähle hier vor dem Start Büro oder Zuhause."</string>
+    <string name="shift_active" formatted="false">"Aktive Schicht"</string>
+    <string name="shift_ready" formatted="false">"Bereit zum Start"</string>
+    <string name="shift_options" formatted="false">"Schichtoptionen"</string>
+    <string name="shift_done" formatted="false">"Fertig"</string>
+    <string name="period_current" formatted="false">"Aktueller Zeitraum"</string>
+    <string name="period_choose" formatted="false">"Monat und Jahr wählen"</string>
+    <string name="period_end_hint" formatted="false">"Wähle den Monat, in dem der Abrechnungszeitraum ENDET. Die genauen Daten stehen unten."</string>
+    <string name="period_year" formatted="false">"Jahr"</string>
+    <string name="period_year_hint" formatted="false">"Gib ein Jahr von 1900 bis 2100 ein."</string>
+    <string name="period_apply" formatted="false">"Zeitraum anzeigen"</string>
+    <string name="widget_name" formatted="false">"ShiftHours · Schicht"</string>
+    <string name="widget_description" formatted="false">"Starte eine Schicht im Büro oder zu Hause, beende sie und sieh ihre laufende Dauer."</string>
+    <string name="widget_open" formatted="false">"App öffnen"</string>
+    <string name="widget_error" formatted="false">"Öffne die App, um deine Daten zu prüfen oder eine Sicherung wiederherzustellen."</string>
+    <string name="widget_setup" formatted="false">"Schließe zuerst die Ersteinrichtung in der App ab."</string>
+    <string name="widget_inactive" formatted="false">"Keine aktive Schicht"</string>
+    <string name="widget_start_office" formatted="false">"Start · Büro"</string>
+    <string name="widget_start_home" formatted="false">"Start · Zuhause"</string>
+    <string name="widget_stop" formatted="false">"Schicht beenden"</string>
+    <string name="shift_changed" formatted="false">"Die aktive Schicht wurde geändert. Schließe den Editor und öffne ihn erneut."</string>
+    <string name="overtime_by_location" formatted="false">"Überstunden nach Arbeitsort"</string>
+    <string name="overtime_by_location_hint" formatted="false">"Die täglichen Überstundenstufen gelten gemeinsam für Büro und Zuhause und werden dem jeweiligen Arbeitsort zugeordnet. Die Vergütung enthält den vollen Stufensatz vor Steuern."</string>
+    <string name="ui_more_info" formatted="false">"Weitere Informationen"</string>
+    <string name="ui_collapse" formatted="false">"Details ausblenden"</string>
+    <string name="ui_expand" formatted="false">"Details anzeigen"</string>
+    <string name="ui_details" formatted="false">"Details"</string>
+    <string name="ui_appearance" formatted="false">"Darstellung"</string>
+    <string name="ui_theme_system" formatted="false">"Wie Telefon"</string>
+    <string name="ui_theme_light" formatted="false">"Hell"</string>
+    <string name="ui_theme_dark" formatted="false">"Dunkel"</string>
+    <string name="ui_theme_hint" formatted="false">"Wird mit den Einstellungen gespeichert und gesichert. Automatisch folgt dem Systemdesign des Telefons."</string>
+    <string name="ui_gross_estimate" formatted="false">"Geschätztes Bruttogehalt"</string>
+    <string name="ui_record_actions" formatted="false">"Eintragsaktionen"</string>
+    <string name="ui_net_estimate" formatted="false">"Geschätztes Netto im gewählten Steuerprofil."</string>
+    <string name="ui_tax_scope_notice" formatted="false">"Die Berechnung gilt für ein begrenztes Steuerprofil. Die Landeswahl allein begründet keinen Anspruch. Fehlende Angaben stehen oben."</string>
+    <string name="ui_tax_scope" formatted="false">"Steuerprofil und Bedingungen"</string>
+    <string name="ui_pay_details" formatted="false">"Gehaltsübersicht"</string>
+    <string name="ui_settings_hours" formatted="false">"Stunden und Pausen"</string>
+    <string name="ui_settings_pay" formatted="false">"Lohn und Überstunden"</string>
+    <string name="ui_settings_tax" formatted="false">"Steuern und Beiträge"</string>
+    <string name="ui_settings_display" formatted="false">"Sprache und Darstellung"</string>
+    <string name="ui_country_search" formatted="false">"Land, Code oder Währung suchen"</string>
+    <string name="ui_no_results" formatted="false">"Keine passenden Länder"</string>
+    <string name="export_excel" formatted="false">"Excel exportieren"</string>
+    <string name="export_sheet" formatted="false">"Schichten"</string>
+    <string name="export_period_start" formatted="false">"Anfangsdatum"</string>
+    <string name="export_period_end" formatted="false">"Enddatum"</string>
+    <string name="export_date" formatted="false">"Datum"</string>
+    <string name="export_start" formatted="false">"Beginn"</string>
+    <string name="export_end" formatted="false">"Ende"</string>
+    <string name="export_duration" formatted="false">"Gesamtzeit"</string>
+    <string name="export_total" formatted="false">"Gesamt"</string>
+    <string name="export_note" formatted="false">"Bezahlte Dauer nach den eingestellten Pausen. Bei Nachtschichten kann das Ende am folgenden Tag liegen."</string>
+    <string name="export_saved" formatted="false">"Excel-Datei gespeichert."</string>
+    <string name="export_error" formatted="false">"Excel-Export fehlgeschlagen."</string>
+    <string name="export_filter_hint" formatted="false">"Exportiert beendete Schichten im gewählten Zeitraum mit dem oben gewählten Filter Büro, Zuhause oder Alle."</string>
+    <string name="back_press_again_exit" formatted="false">"Zum Beenden erneut Zurück drücken"</string>
+    <string name="leave_title" formatted="false">"Urlaub, Krankheit und Feiertage"</string>
+    <string name="leave_sick" formatted="false">"Krankheitsurlaub"</string>
+    <string name="leave_vacation" formatted="false">"Bezahlter Urlaub"</string>
+    <string name="leave_days" formatted="false">"Tage"</string>
+    <string name="leave_setup_hint" formatted="false">"Legen Sie Anfangsguthaben und monatlichen Zuwachs fest, bevor Sie Abwesenheiten erfassen."</string>
+    <string name="leave_asof" formatted="false">"Guthaben zum"</string>
+    <string name="leave_period_used" formatted="false">"Verbrauchte Guthabentage im gewählten Zeitraum"</string>
+    <string name="leave_pay" formatted="false">"Vergütung für Abwesenheiten"</string>
+    <string name="leave_pay_hint" formatted="false">"Stundenlohn: Vergütung wird hinzugefügt. Monatsgehalt: Bezahlte Abwesenheiten sind bereits enthalten; nur der unbezahlte Anteil wird abgezogen. Abwesenheiten erzeugen keine Überstunden."</string>
+    <string name="leave_manage" formatted="false">"Urlaub und Krankheit verwalten"</string>
+    <string name="leave_config" formatted="false">"Guthaben und Abwesenheitsregeln"</string>
+    <string name="leave_add" formatted="false">"Urlaub, Krankheit oder Feiertag hinzufügen"</string>
+    <string name="leave_record_hint" formatted="false">"Der Tagesanteil gilt für jedes ausgewählte Datum. Bezahlte Abwesenheiten werden getrennt von tatsächlicher Arbeit erfasst. Zukünftige Einträge zählen zu ihrem Abrechnungszeitraum; das aktuelle Guthaben berücksichtigt nur Daten bis heute."</string>
+    <string name="leave_empty" formatted="false">"Keine Abwesenheiten in diesem Zeitraum erfasst."</string>
+    <string name="leave_fraction" formatted="false">"Tagesanteil (1 = ganzer Tag, 0,5 = halber Tag)"</string>
+    <string name="leave_hours" formatted="false">"Abwesenheitsstunden"</string>
+    <string name="leave_pay_percent" formatted="false">"Vergütung in Prozent"</string>
+    <string name="leave_debited" formatted="false">"Vom Guthaben abgezogene Tage"</string>
+    <string name="leave_event_start" formatted="false">"Beginn des Krankheitsfalls"</string>
+    <string name="leave_day_number" formatted="false">"Tag im Krankheitsfall"</string>
+    <string name="leave_ledger" formatted="false">"Verlauf von Zuwachs und Verbrauch"</string>
+    <string name="leave_ledger_hint" formatted="false">"Buchungen im ausgewählten Abrechnungszeitraum. Anfangsguthaben + Zuwachs + Korrekturen − Verbrauch. Zukünftige Buchungen sind geplant."</string>
+    <string name="leave_opening" formatted="false">"Anfangsguthaben (Tage)"</string>
+    <string name="leave_accrual" formatted="false">"Monatlicher Zuwachs"</string>
+    <string name="leave_used" formatted="false">"Verbrauch"</string>
+    <string name="leave_adjustment" formatted="false">"Guthabenkorrektur"</string>
+    <string name="leave_changed" formatted="false">"Die Daten wurden geändert. Schließen und öffnen Sie dieses Formular erneut."</string>
+    <string name="leave_delete_hint" formatted="false">"Diesen Eintrag löschen? Die Auswirkungen auf Guthaben und Vergütung werden neu berechnet. Dies kann nicht rückgängig gemacht werden."</string>
+    <string name="leave_config_hint" formatted="false">"Dies sind Ihre Arbeitgeberbedingungen, keine geprüften gesetzlichen Vorgaben. Sie gelten ab dem Anfangsdatum. Änderungen am Guthaben oder Zuwachs berechnen den Verlauf neu; nutzen Sie für einmalige Änderungen eine datierte Korrektur. Gespeicherte Vergütungsregeln bleiben beim jeweiligen Eintrag."</string>
+    <string name="leave_opening_date" formatted="false">"Datum des Anfangsguthabens"</string>
+    <string name="leave_monthly" formatted="false">"Monatlich gutgeschriebene Tage"</string>
+    <string name="leave_accrual_day" formatted="false">"Monatlicher Gutschriftstag (1–31)"</string>
+    <string name="leave_accrual_hint" formatted="false">"Die erste volle Gutschrift erfolgt am gewählten Tag nach dem Anfangsdatum. In kurzen Monaten gilt der letzte Tag. Keine anteilige Berechnung. Unabhängig vom Abrechnungszeitraum."</string>
+    <string name="leave_day_hours" formatted="false">"Stunden pro vollem Abwesenheitstag"</string>
+    <string name="leave_vacation_percent" formatted="false">"Urlaubsvergütung in Prozent"</string>
+    <string name="leave_allow_negative" formatted="false">"Negatives Guthaben erlauben"</string>
+    <string name="leave_calendar_days" formatted="false">"Kalendertage im Krankheitsfall zählen"</string>
+    <string name="leave_calendar_hint" formatted="false">"Ein: Wochenenden und nicht erfasste Tage erhöhen die Vergütungsstufe. Aus: Nur unterschiedliche erfasste Daten des Krankheitsfalls erhöhen sie. Nur erfasste Abwesenheiten verbrauchen Guthaben."</string>
+    <string name="leave_sick_tiers" formatted="false">"Vergütungsstufen bei Krankheit"</string>
+    <string name="leave_tier_hint" formatted="false">"Die Zeilen gelten der Reihe nach. Vergütungs- und Guthabenabzugsprozentsatz sind getrennt. Ein zu 50% vergüteter Tag kann bei 100% Abzug einen ganzen Guthabentag verbrauchen."</string>
+    <string name="leave_tier" formatted="false">"Stufe"</string>
+    <string name="leave_number_days" formatted="false">"Anzahl der Tage"</string>
+    <string name="leave_remaining" formatted="false">"Alle folgenden Tage (letzte Zeile)"</string>
+    <string name="leave_debit_percent" formatted="false">"Guthabenabzug in Prozent"</string>
+    <string name="leave_add_tier" formatted="false">"Stufe vor der letzten Zeile hinzufügen"</string>
+    <string name="leave_from" formatted="false">"Ab Datum"</string>
+    <string name="leave_until" formatted="false">"Bis Datum (einschließlich)"</string>
+    <string name="leave_workdays_only" formatted="false">"Nur festgelegte Arbeitstage"</string>
+    <string name="leave_continue" formatted="false">"Krankheitsfall fortsetzen"</string>
+    <string name="leave_new_event" formatted="false">"Neuer Krankheitsfall"</string>
+    <string name="leave_override_pay" formatted="false">"Vergütung % überschreiben (leer = Regel)"</string>
+    <string name="leave_override_debit" formatted="false">"Abzug % überschreiben (leer = Regel)"</string>
+    <string name="leave_override_hint" formatted="false">"Optionale Abweichungen je Eintrag. Leer lassen, um die gespeicherten Arbeitgeberbedingungen zu verwenden. Für einen Zeitraum gelten dieselben Abweichungen an jedem ausgewählten Tag."</string>
+    <string name="leave_note" formatted="false">"Notiz / Korrekturgrund"</string>
+    <string name="leave_preview" formatted="false">"Daten und Vergütung prüfen"</string>
+    <string name="leave_work_warning" formatted="false">"An einem dieser Tage ist auch Arbeit erfasst oder eine Schicht aktiv. Prüfen Sie vor dem Speichern, ob tatsächliche Arbeit und Abwesenheit zusammen korrekt sind."</string>
+    <string name="leave_date" formatted="false">"Datum"</string>
+    <string name="leave_adjust_days" formatted="false">"Tageskorrektur (+ gutschreiben / − abziehen)"</string>
+    <string name="leave_duplicate" formatted="false">"Die gesamte Abwesenheit an einem Datum darf einen Tag nicht überschreiten."</string>
+    <string name="leave_insufficient" formatted="false">"Unzureichendes Abwesenheitsguthaben. Korrigieren Sie das Anfangsguthaben oder erlauben Sie ausdrücklich einen negativen Stand."</string>
+    <string name="leave_invalid" formatted="false">"Prüfen Sie Daten und Zahlen. Prozentsätze: 0–100; Tagesanteil: größer als 0 und höchstens 1."</string>
+    <string name="leave_date_error" formatted="false">"Wählen Sie einen chronologischen Zeitraum von höchstens 367 Kalendertagen."</string>
+    <string name="leave_no_dates" formatted="false">"Keine Daten entsprechen den festgelegten Arbeitstagen."</string>
+    <string name="leave_salary_adjustment" formatted="false">"Abzug unbezahlter Abwesenheit vom Monatsgehalt"</string>
+    <string name="leave_export_hint" formatted="false">"Der Export Alle enthält ein separates Abwesenheitsblatt. Büro-/Zuhause-Exporte enthalten nur Arbeitsschichten."</string>
+    <string name="leave_holiday" formatted="false">"Feiertag / arbeitsfreier Tag"</string>
+    <string name="leave_salary_choice" formatted="false">"Vom Gehalt abziehen (ohne Urlaubsverbrauch)"</string>
+    <string name="leave_settlement" formatted="false">"Monatliche Fehlstunden ausgleichen"</string>
+    <string name="leave_missing_hours" formatted="false">"Verbleibende Fehlstunden in diesem Zeitraum"</string>
+    <string name="leave_fill_hours" formatted="false">"Auszugleichende Stunden"</string>
+    <string name="leave_use_percent" formatted="false">"Prozentsatz eines vollen Abwesenheitstages eingeben"</string>
+    <string name="leave_day_percent" formatted="false">"Prozentsatz eines ganzen Tages"</string>
+    <string name="leave_target_needed" formatted="false">"Legen Sie die monatlichen Sollstunden in den Gehaltseinstellungen fest, um Fehlstunden zu berechnen."</string>
+    <string name="leave_too_many_hours" formatted="false">"Geben Sie positive Stunden ein, höchstens die verbleibenden Fehlstunden (maximal 744)."</string>
+    <string name="leave_settlement_hint" formatted="false">"Dies ist eine Zeitraumkorrektur, keine Arbeitsschicht. Urlaubsverbrauch = Stunden ÷ Stunden je Abwesenheitstag. Beispiel: 3,2 Stunden ÷ 8 = 0,4 Tage (40%). Wählen Sie bezahlten Urlaub oder einen unbezahlten Gehaltsabzug. Spätere Änderungen an Arbeit oder Abwesenheiten können eine Korrektur dieses Ausgleichs erfordern."</string>
+    <string name="leave_incomplete_period" formatted="false">"Dieser Abrechnungszeitraum ist noch nicht beendet. Die Fehlstunden sind vorläufig; vor dem Speichern prüfen."</string>
+    <string name="leave_holiday_hint" formatted="false">"Manuell festgelegter Feiertag, kein gesetzlicher Anspruch. Kein Verbrauch von Urlaubs- oder Krankheitsguthaben. Standardvergütung: 100%; bei anderen Arbeitgeberbedingungen überschreiben. Auf Arbeitstage begrenzte Zeiträume überspringen bereits erfasste Feiertage. Arbeit am Feiertag erhält keinen automatischen Zuschlag."</string>
+    <string name="leave_settlement_review" formatted="false">"Ein erfasster Ausgleich kann inzwischen die verbleibenden Fehlstunden überschreiten. Prüfen Sie seine Stunden nach Änderungen an Arbeit oder Abwesenheiten."</string>
+    <string name="ot_method" formatted="false">"Überstundenberechnung"</string>
+    <string name="ot_daily" formatted="false">"Täglich"</string>
+    <string name="ot_weekly" formatted="false">"Wöchentlich"</string>
+    <string name="ot_monthly" formatted="false">"Monatlich"</string>
+    <string name="ot_hours" formatted="false">"Regelstunden"</string>
+    <string name="ot_week_start" formatted="false">"Erster Tag der Arbeitswoche"</string>
+    <string name="ot_weekly_threshold" formatted="false">"Wöchentliche Regelstunden vor Überstunden"</string>
+    <string name="ot_monthly_threshold" formatted="false">"Monatliche Regelstunden vor Überstunden"</string>
+    <string name="ot_calendar" formatted="false">"Kalendermonat (vom 1. bis Monatsende)"</string>
+    <string name="ot_pay_period" formatted="false">"Festgelegter Abrechnungszeitraum"</string>
+    <string name="ot_nominal_day" formatted="false">"Tägliche Stunden für Fehlzeiten und Abwesenheiten"</string>
+    <string name="ot_settings_hint" formatted="false">"Wählen Sie EINE Methode. Die Vergütungsstufen beginnen jeden gewählten Tag, jede Woche oder jeden Monat neu. Wöchentliche und monatliche Schwellen sind unabhängig von täglichen Sollstunden und dem monatlichen Anwesenheitsziel. Pausen folgen weiterhin der eingestellten Tages- oder Abschnittsregel. Nur tatsächliche Nettoarbeit zählt zur Schwelle; Abwesenheiten, Feiertage und Fehlstundenausgleiche nicht."</string>
+    <string name="ot_context_hint" formatted="false">"Wochen- und Kalendermonatsberechnungen nutzen auch gespeicherte Arbeit vor dem angezeigten Abrechnungszeitraum. Erfassen Sie die gesamte Woche bzw. den gesamten Monat für eine korrekte Zuordnung. Jede ganze Schicht zählt zu ihrem zugewiesenen Arbeitstag, auch über Mitternacht. Ein Methodenwechsel berechnet den Verlauf neu; dies kombiniert keine Tages- und Wochenregel und begründet keinen automatischen gesetzlichen Anspruch."</string>
+    <string name="ot_location_hint" formatted="false">"Büro und Zuhause teilen einen Überstundenzähler für den gewählten Tag, die Woche oder den Monat. Stunden und volle Stufenvergütung werden nach Pausen chronologisch dem Arbeitsort zugeordnet."</string>
+    <string name="ot_office_only" formatted="false">"Reine Bürostunden über der gewählten Überstundenschwelle"</string>
+    <string name="ot_invalid" formatted="false">"Prüfen Sie Methode, Zeitraum und Schwellen: wöchentlich 0–168, monatlich 0–744 Stunden; der Wochenbeginn muss ein gültiger Wochentag sein."</string>
+    <string name="ot_threshold_required" formatted="false">"Geben Sie eine positive Regelstundenschwelle für die gewählte Methode ein."</string>
+    <string name="widget_compact_name" formatted="false">"ShiftHours · Schicht 2×2"</string>
+    <string name="analytics_title" formatted="false">"Auswertungen"</string>
+    <string name="analytics_hint" formatted="false">"Nur abgeschlossene Schichten. Alle Werte verwenden die aktuellen Lohn- und Pausenregeln. Laufende Schichten sind ausgeschlossen."</string>
+    <string name="analytics_partial" formatted="false">"Der Zeitraum ist noch nicht beendet. Verglichen wird mit dem gesamten vorherigen Zeitraum, nicht mit gleich vielen vergangenen Tagen."</string>
+    <string name="analytics_empty" formatted="false">"Keine Einträge in diesem Zeitraum"</string>
+    <string name="analytics_empty_hint" formatted="false">"Keine Einträge bedeuten nicht keine Arbeit. Zeiträume ohne Einträge gelten nicht als Monate ohne Gehalt."</string>
+    <string name="analytics_overview" formatted="false">"Zeitraum im Überblick"</string>
+    <string name="analytics_workdays" formatted="false">"Erfasste Arbeitstage"</string>
+    <string name="analytics_shifts" formatted="false">"Abgeschlossene Schichten"</string>
+    <string name="analytics_avg_day" formatted="false">"Durchschnittliche Nettostunden je Arbeitstag"</string>
+    <string name="analytics_avg_shift" formatted="false">"Durchschnittliche Nettostunden je Schicht"</string>
+    <string name="analytics_home_share" formatted="false">"Anteil der Arbeit von zu Hause"</string>
+    <string name="analytics_ot_share" formatted="false">"Überstundenanteil an der Nettoarbeit"</string>
+    <string name="analytics_gross" formatted="false">"Bruttogehalt"</string>
+    <string name="analytics_comparison" formatted="false">"Änderung zum vorherigen Zeitraum"</string>
+    <string name="analytics_hours_change" formatted="false">"Änderung der Nettostunden"</string>
+    <string name="analytics_ot_change" formatted="false">"Änderung der Überstunden"</string>
+    <string name="analytics_gross_change" formatted="false">"Änderung des Bruttogehalts"</string>
+    <string name="analytics_no_comparison" formatted="false">"Für einen Vergleich sind Einträge in beiden Zeiträumen erforderlich."</string>
+    <string name="analytics_tiers" formatted="false">"Überstundenstufen und Vergütung"</string>
+    <string name="analytics_weighted" formatted="false">"Nach Vergütung gewichtete Überstunden"</string>
+    <string name="analytics_weighted_hint" formatted="false">"Gewichtete Stunden = Überstunden × Vergütungsfaktor. Dies ist ein Vergütungsäquivalent, keine zusätzlich geleistete Zeit."</string>
+    <string name="analytics_location" formatted="false">"Büro und Zuhause"</string>
+    <string name="analytics_equivalent_hint" formatted="false">"Der Arbeitswert nutzt den Stundenlohnwert einschließlich Überstunden. Monatsgehalt und Abwesenheitsvergütung werden nicht nach Ort oder Grund verteilt."</string>
+    <string name="analytics_office_short" formatted="false">"Tägliche Fehlstunden nur im Büro"</string>
+    <string name="analytics_office_ot" formatted="false">"Überstundenvergleich nur für Büroarbeit"</string>
+    <string name="analytics_reasons" formatted="false">"Gründe für Arbeit von zu Hause"</string>
+    <string name="analytics_no_reasons" formatted="false">"Keine abgeschlossenen Heimarbeitsschichten in diesem Zeitraum."</string>
+    <string name="analytics_shortfalls" formatted="false">"Fehlstunden und Zeiterfassung"</string>
+    <string name="analytics_daily_short" formatted="false">"Tägliche Fehlstunden nach Abwesenheitsgutschriften"</string>
+    <string name="analytics_monthly_short" formatted="false">"Monatliche Fehlstunden zum festgelegten Soll"</string>
+    <string name="analytics_missing_clock" formatted="false">"Tage mit vermerkter fehlender Buchung"</string>
+    <string name="analytics_missing_hint" formatted="false">"Probleme werden anhand gespeicherter Notizen über fehlende Buchungen erkannt. Nicht erfasste Arbeitstage lassen sich nicht ableiten."</string>
+    <string name="analytics_weekdays" formatted="false">"Durchschnittliche Nettostunden nach Wochentag"</string>
+    <string name="analytics_weekdays_hint" formatted="false">"Nur Daten mit erfasster positiver Nettoarbeit zählen. Die Anzahl der Tage wird angezeigt; nicht erfasste Tage bleiben unberücksichtigt."</string>
+    <string name="analytics_records" formatted="false">"Besondere Tage"</string>
+    <string name="analytics_longest" formatted="false">"Längster erfasster Arbeitstag"</string>
+    <string name="analytics_most_ot" formatted="false">"Tag mit den meisten zugeordneten Überstunden"</string>
+    <string name="analytics_trend" formatted="false">"12 Abrechnungszeiträume im Verlauf"</string>
+    <string name="analytics_trend_hint" formatted="false">"Je Zeile: Nettostunden, Überstunden, Bruttogehalt. Ein Strich bedeutet keine Einträge. Vergangene Werte nutzen aktuelle Einstellungen, keine archivierten Verträge."</string>
+    <string name="home_sync_title">Persönlicher Server</string>
+    <string name="home_sync_hint">Optionale Synchronisierung mit Ihrem Computer. Lokales Arbeiten bleibt offline möglich.</string>
+    <string name="home_sync_address">HTTPS-Adresse des Servers</string>
+    <string name="home_sync_key">Verbindungsschlüssel des Telefons</string>
+    <string name="home_sync_https">Geben Sie eine gültige HTTPS-Adresse ein.</string>
+    <string name="home_sync_other_server">Dieses Gerät ist mit einem anderen Server verbunden. Vor dem Wechsel eine Sicherung erstellen.</string>
+    <string name="home_sync_working">Synchronisierung…</string>
+    <string name="home_sync_ok">Synchronisiert</string>
+    <string name="home_sync_conflict">Widersprüchliche Änderungen. Keine Daten überschrieben. Gleichen Sie die Einträge im Browser und Telefon ab und versuchen Sie es erneut.</string>
+    <string name="home_sync_auth">Schlüssel abgelaufen oder widerrufen. Trennen und neuen Schlüssel eingeben.</string>
+    <string name="home_sync_identity">Serveridentität geändert. Synchronisierung zum Schutz Ihrer Daten angehalten.</string>
+    <string name="home_sync_error">Server nicht verfügbar oder Daten abgelehnt. Lokale Daten sind sicher; später erneut versuchen.</string>
+    <string name="home_sync_pending">Lokale Änderungen warten auf Synchronisierung.</string>
+    <string name="home_sync_off">Synchronisierung aus</string>
+    <string name="home_sync_now">Jetzt synchronisieren</string>
+    <string name="home_sync_connect">Verbinden</string>
+    <string name="home_sync_disconnect">Trennen</string>
+    <string name="home_sync_backup_hint">Enthält Einstellungen, Urlaub und Schichten. Ersetzt keine lokalen oder Drive-Sicherungen. Hintergrundsynchronisierung etwa alle 15 Minuten geplant; Android kann sie verzögern. Schlüssel sind nicht in Sicherungen enthalten.</string>
+    <string name="home_sync_back">Zurück</string>
+    <string name="manual_entry" formatted="false">"Manueller Eintrag"</string>
+    <string name="manual_kind" formatted="false">"Eintragstyp"</string>
+    <string name="manual_work_shift" formatted="false">"Arbeitsschicht"</string>
+    <string name="manual_continue" formatted="false">"Weiter"</string>
+    <string name="calendar_title" formatted="false">"Arbeitskalender"</string>
+    <string name="calendar_missing_hint" formatted="false">"Hellorange: vergangene Tage von Sonntag bis Donnerstag ohne Schicht oder Abwesenheit. Tag für Details antippen."</string>
+    <string name="calendar_missing_count">"%1$s Tage ohne Eintrag"</string>
+    <string name="calendar_missing" formatted="false">"Eintrag fehlt"</string>
+    <string name="calendar_paid_time" formatted="false">"Vergütete Zeit"</string>
+    <string name="calendar_no_report" formatted="false">"Keine Schicht oder Abwesenheit erfasst."</string>
+    <string name="snapshot_arrange" formatted="false">"Karten anordnen"</string>
+    <string name="snapshot_move_up" formatted="false">"Nach oben"</string>
+    <string name="snapshot_move_down" formatted="false">"Nach unten"</string>
+    <string name="snapshot_reset_order" formatted="false">"Standardreihenfolge wiederherstellen"</string>
+    <string name="snapshot_save_order" formatted="false">"Speichern"</string>
+    <string name="snapshot_cancel_order" formatted="false">"Abbrechen"</string>
+    <string name="hours_by_location" formatted="false">"Stunden nach Arbeitsort"</string>
+    <string name="location_all_hours" formatted="false">"Gesamtstunden (mit Überstunden)"</string>
+    <string name="location_all_pay" formatted="false">"Vergütung (mit Überstunden)"</string>
+    <string name="location_hourly_value_hint" formatted="false">"Arbeitswert nach Stundensatz, keine Aufteilung des Monatsgehalts."</string>
+    <string name="launcher_widgets">Widgets</string>
+    <string name="launcher_change_widget">Widget wechseln</string>
+    <string name="calendar_includes_home">Enthält Arbeit von zu Hause</string>
+</resources>

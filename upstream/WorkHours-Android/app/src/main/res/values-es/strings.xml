@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="text_93d815fab2" formatted="false">"Las horas normales diarias deben ser más de 0 y no más de 24."</string>
+    <string name="text_9fdb0c0357" formatted="false">"El pago debe ser cero o un número positivo."</string>
+    <string name="text_1020d02bcc" formatted="false">"El objetivo de las horas mensuales debe ser superior a 0 y no superior a 744."</string>
+    <string name="text_a3016d567d" formatted="false">"El período de inicio del día debe ser entre 1 y 31."</string>
+    <string name="text_a3b71b8576" formatted="false">"El nivel final de horario debe cubrir todas las horas restantes."</string>
+    <string name="text_11798e6af6" formatted="false">"Consulte las horas de nivel y pague los porcentajes."</string>
+    <string name="text_142ed94880" formatted="false">"Las configuraciones de interrupción son invalidas."</string>
+    <string name="text_617d62c8d5" formatted="false">"Los puntos de crédito fiscales son invalidos."</string>
+    <string name="text_d64e9be198" formatted="false">"El porcentaje de contribución debe ser entre 0 y 100."</string>
+    <string name="text_e9ded22849" formatted="false">"La base de pago de la contribución es invalida."</string>
+    <string name="text_5340862757" formatted="false">"Seleccione al menos un día de trabajo."</string>
+    <string name="text_58ee2bc711" formatted="false">"La lista de razones es demasiado larga."</string>
+    <string name="text_54904132d0" formatted="false">"El número de entradas o sus IDs es invalido."</string>
+    <string name="text_bccb639eb1" formatted="false">"Invalida entrada de trabajo."</string>
+    <string name="text_14afe878db" formatted="false">"La duración original es invalida."</string>
+    <string name="text_285af230e1" formatted="false">"El texto de entrada es demasiado largo."</string>
+    <string name="text_927652b634" formatted="false">"Las entradas de trabajo están superadas."</string>
+    <string name="text_478ac0cba4" formatted="false">"El cambio activo supera una entrada existente."</string>
+    <string name="text_1ce0351978" formatted="false">"No hay razones especificadas"</string>
+    <string name="text_0206a8d338" formatted="false">"No puedes conectar tu cuenta de Google ahora mismo.Puede volver a un archivo y intentarlo de nuevo más tarde."</string>
+    <string name="text_630af90bc5" formatted="true">"No se otorgó autorización a Google (código %1$s). reconectar o utilizar un archivo de copia de seguridad."</string>
+    <string name="text_daf10c2ee5" formatted="false">"La operación falleció. sus datos locales se conservaron."</string>
+    <string name="text_25b395415b" formatted="false">"La copia de seguridad se salvó con éxito a Google Drive."</string>
+    <string name="text_fc021a3be3" formatted="false">"No se han encontrado copias de seguridad de ShiftHours en esta cuenta."</string>
+    <string name="text_439ed2ca59" formatted="false">"Conectado con Google Drive."</string>
+    <string name="text_7480a74f74" formatted="false">"La conexión se canceló.No se realizó ninguna copia de seguridad o restauración."</string>
+    <string name="text_514e675d10" formatted="false">"No se concedió acceso a la conducción."</string>
+    <string name="text_325ca3ec59" formatted="false">"No se concedió autorización de conducción."</string>
+    <string name="text_5862cd4663" formatted="false">"No puede abrir el archivo de destino."</string>
+    <string name="text_a8df08ecdf" formatted="false">"El archivo de copia de seguridad se salvó."</string>
+    <string name="text_04bb2141d5" formatted="false">"No puede leer el archivo."</string>
+    <string name="text_5e9b8b7914" formatted="false">"La copia de seguridad es demasiado grande."</string>
+    <string name="text_221ac78111" formatted="false">"Copiar y restaurar"</string>
+    <string name="text_806ac63619" formatted="false">"Mantenga sus horas de trabajo cuando se mueve a un nuevo teléfono."</string>
+    <string name="text_55d63892ad" formatted="false">"El Google Drive"</string>
+    <string name="text_e5444dccaf" formatted="false">"No hay cuenta seleccionada"</string>
+    <string name="text_0a2305a775" formatted="false">"Una copia de seguridad exitosa sólo se muestra después de que las cargas terminen."</string>
+    <string name="text_2fc9030263" formatted="false">"Conectar una cuenta y dar acceso."</string>
+    <string name="text_cd0e41e136" formatted="false">"Seleccion de cuenta / reconectar"</string>
+    <string name="text_6f3a7bda3a" formatted="false">"Conexión a Google Drive"</string>
+    <string name="text_15109258b9" formatted="false">"Volver a conducir ahora"</string>
+    <string name="text_c75c1e3a33" formatted="false">"Seleccione una copia de seguridad de Drive para restaurar"</string>
+    <string name="text_90b7df067a" formatted="false">"No hay copia de seguridad de Drive completada para esta cuenta aún."</string>
+    <string name="text_1c2b595825" formatted="true">"Última copia de seguridad exitosa: %1$s %2$s"</string>
+    <string name="text_32640ad12e" formatted="false">"Las copias de seguridad se almacenan en la carpeta de datos de aplicaciones ocultas de Drive, no como archivos habituales.Para restaurar en un nuevo teléfono, instale la misma aplicación y conecta la misma cuenta de Google."</string>
+    <string name="text_ea1a07b6ef" formatted="false">"Copia automática"</string>
+    <string name="text_8edcd28553" formatted="false">"Desactivada"</string>
+    <string name="text_ef4037576b" formatted="false">"Diaria"</string>
+    <string name="text_50296d4c2d" formatted="false">"Semanal"</string>
+    <string name="text_790f24eb34" formatted="false">"El horario de copia de seguridad se actualiza."</string>
+    <string name="text_e75e2661b7" formatted="false">"Sólo en una red no mediada, como Wi-Fi"</string>
+    <string name="text_cf3d313652" formatted="false">"El calendario está disponible después de conectar Drive. Android puede retrasar copias de seguridad para salvar la batería o cuando fuera de línea. Utilice el botón anteriormente para crear la primera copia de seguridad inmediatamente."</string>
+    <string name="text_1e579b05be" formatted="false">"Desconectado localmente y cancelado el horario. las copias de seguridad existentes no fueron eliminadas."</string>
+    <string name="text_83eccb0dd3" formatted="false">"Desconectar y cancelar el horario"</string>
+    <string name="text_b35a854e22" formatted="false">"Copia y restauración de archivos"</string>
+    <string name="text_1da6e0d4aa" formatted="false">"Salva un archivo de copia de seguridad en su ordenador, en Drive o en cualquier otro lugar, incluso antes de configurar la conexión de Google de la aplicación."</string>
+    <string name="text_52cca61a5d" formatted="false">"Salva el archivo de copia de seguridad"</string>
+    <string name="text_4d2b863edd" formatted="false">"Recuperar el archivo de copia de seguridad"</string>
+    <string name="text_f4ab9db1a0" formatted="false">"Las copias de seguridad incluyen las entradas, un cambio activo, las configuraciones y las razones salvadas. Antes de restaurar, se muestra una previsión y se salva una copia local de sus datos anteriores."</string>
+    <string name="text_86472e4d43" formatted="false">"Abre la copia salvada antes de la última restauración"</string>
+    <string name="text_bf72e99186" formatted="true">"Este dispositivo tiene entradas %1$s Reconectar a Google y configurar el horario de copia de seguridad en cada teléfono."</string>
+    <string name="text_b5af650c8c" formatted="false">"Modo de recuperación: los datos locales no pueden ser leídos. restablecer de un archivo o Drive; se deshabilita la creación de nuevas copias de seguridad."</string>
+    <string name="text_f738c4c045" formatted="false">"Copias de backup disponibles"</string>
+    <string name="text_c775e7dcf6" formatted="false">"No hay copias de seguridad encontradas en la cuenta seleccionada."</string>
+    <string name="text_b728721fc0" formatted="false">"Cerca"</string>
+    <string name="text_835ba611ee" formatted="false">"Confirmando la restauración"</string>
+    <string name="text_bfe0764274" formatted="true">"La copia de seguridad contiene %1$s entradas."</string>
+    <string name="text_19a88cf185" formatted="true">"Rango: %1$s a %2$s"</string>
+    <string name="text_ea12a4ba2b" formatted="false">"Ninguno"</string>
+    <string name="text_1f70207bab" formatted="false">"Sí"</string>
+    <string name="text_3cbbf0077a" formatted="true">"Turno activo: %1$s"</string>
+    <string name="text_2388ed2d80" formatted="true">"La restauración reemplazará %1$s registros y los ajustes de este dispositivo. Primero se guardará una copia local."</string>
+    <string name="text_f35658ed7c" formatted="false">"Restauración terminada ."</string>
+    <string name="text_a87c9f4c06" formatted="false">"Substituir datos y restaurar"</string>
+    <string name="text_a7c55a8d06" formatted="false">"Cancelar"</string>
+    <string name="text_7b80593224" formatted="false">"El archivo es demasiado grande."</string>
+    <string name="text_b36a3090e4" formatted="false">"Esta copia de seguridad es incompatible con esta versión de la aplicación."</string>
+    <string name="text_1d25b4e13f" formatted="false">"Esta no es una copia de seguridad de ShiftHours apoyada."</string>
+    <string name="text_c84389ddd1" formatted="false">"La copia de seguridad está dañada: el control de integridad fracasó."</string>
+    <string name="text_2159b4a358" formatted="false">"Versión de datos no reconocida anterior."</string>
+    <string name="text_4ae6ec8fa0" formatted="false">"Los datos aún no se han cargado."</string>
+    <string name="text_cf903e3463" formatted="false">"Introduce un número válido."</string>
+    <string name="text_039bb0fc27" formatted="false">"Introduce el tiempo como horas: minutos o décimas horas."</string>
+    <string name="text_a7fcad5418" formatted="false">"Número de horas invalidas."</string>
+    <string name="text_37e2eed494" formatted="false">"Número de minutos invalidos."</string>
+    <string name="text_77c0279c02" formatted="false">"Invalida el día de inicio."</string>
+    <string name="text_3f800b0cce" formatted="false">"Invalida el fin del día."</string>
+    <string name="text_14611081ea" formatted="false">"El día final debe preceder al comienzo del siguiente período."</string>
+    <string name="text_b9e104411d" formatted="false">"Introduce el tiempo de pausa en minutos enteros."</string>
+    <string name="text_2189089fc9" formatted="false">"Véase las configuraciones."</string>
+    <string name="text_81de798264" formatted="false">"Bienvenido"</string>
+    <string name="text_47cfdefbce" formatted="false">"Estaciones"</string>
+    <string name="text_8d74344d70" formatted="false">"Configure sus términos de trabajo y ahorra para comenzar."</string>
+    <string name="text_9a90a562d2" formatted="false">"Guardar cambios"</string>
+    <string name="text_ab4dfe20aa" formatted="false">"Se aplica a todas las entradas, incluidas las entradas anteriores."</string>
+    <string name="text_0bf5310554" formatted="false">"ahorrar..."</string>
+    <string name="text_54d36ad080" formatted="false">"Guardar ajustes"</string>
+    <string name="text_465e8134a4" formatted="false">"Salario y horas extra"</string>
+    <string name="text_45a3198e62" formatted="false">"Periódico y pausas"</string>
+    <string name="text_bfc0c0e7f1" formatted="false">"Impuestos y contribuciones"</string>
+    <string name="text_a2ceeb919c" formatted="false">"Razones salvadas"</string>
+    <string name="text_3d0ffbb6b9" formatted="false">"Tipo de salario"</string>
+    <string name="text_9852666700" formatted="false">"Salario mensual fijo"</string>
+    <string name="text_c17956962e" formatted="false">"Salario mensual bruto (₪)"</string>
+    <string name="text_55bc5d12cc" formatted="false">"El pago horario (₪)"</string>
+    <string name="text_635f53e8e3" formatted="false">"Horas mensuales requeridas por su empleador"</string>
+    <string name="text_8b4c4a643c" formatted="false">"La tasa horaria = el salario mensual ÷ el objetivo horario mensual. el salario bruto incluye el salario mensual completo más los pagos de tiempo adicional a las tasas configuradas."</string>
+    <string name="text_7414d91b15" formatted="false">"El salario bruto se calcula desde las horas registradas y los tercios configurados."</string>
+    <string name="text_8a239ab302" formatted="false">"Tramos de horas extra"</string>
+    <string name="text_0fea91c3a0" formatted="false">"Horas regulares por día"</string>
+    <string name="text_996add3cb0" formatted="false">"Introduce horas decimales o horas:minutos, como 2.5 o 2:30."</string>
+    <string name="text_b779c7c572" formatted="true">"Tramo %1$s"</string>
+    <string name="text_25606d5652" formatted="false">"Todas las horas restantes"</string>
+    <string name="text_92102dc8df" formatted="false">"Horas en este nivel"</string>
+    <string name="text_b5fe6f82a9" formatted="false">"Porcentaje de la tasa horaria"</string>
+    <string name="text_bd38859717" formatted="false">"Este nivel se aplica después de horas regulares y todos los tercios por encima."</string>
+    <string name="text_5192d415d8" formatted="false">"Moverse arriba"</string>
+    <string name="text_6179185b49" formatted="false">"Moviendo hacia abajo"</string>
+    <string name="text_7c8173fafa" formatted="false">"Eliminar"</string>
+    <string name="text_f428ab9623" formatted="false">"Añadir tramo"</string>
+    <string name="text_f1f14874a4" formatted="false">"Exactamente se requiere un nivel de \"todas las horas restantes\", en la línea final.Añadir un nivel hace que el nivel anterior sea limitado; verifique sus horas."</string>
+    <string name="text_89fef4fd58" formatted="false">"Periodo de informes"</string>
+    <string name="text_6c22041108" formatted="false">"El primer día del período (1-31)"</string>
+    <string name="text_796e34b83e" formatted="false">"Último día (31 = fin del mes)"</string>
+    <string name="text_b241433b46" formatted="false">"Los días están vinculados para evitar escasos o sobrecargas, por ejemplo 25–24.En un corto mes, la fecha de inicio se ajusta al último día disponible."</string>
+    <string name="text_a222187697" formatted="true">"Periodo actual: %1$s – %2$s"</string>
+    <string name="text_01f30eb896" formatted="false">"Interrupción de deducciones"</string>
+    <string name="text_c9beca5709" formatted="false">"Deduct rompe el tiempo"</string>
+    <string name="text_a123134aa5" formatted="false">"Una vez al día"</string>
+    <string name="text_26dcd5cc53" formatted="false">"por segmento"</string>
+    <string name="text_fa4922c12a" formatted="false">"Minutos para deducir"</string>
+    <string name="text_ff7f573a4d" formatted="false">"También deducir brechas cuando trabaja de casa"</string>
+    <string name="text_143dd7316a" formatted="false">"Una pausa diaria se deduce una vez en los segmentos elegibles en orden horario.El trabajo en casa se excluye cuando su opción está abierta."</string>
+    <string name="text_40494acb7f" formatted="false">"No hay deducción de brechas.Todos los tiempos registrados se cuentan como tiempo pagable."</string>
+    <string name="text_8a53041f32" formatted="false">"Días de trabajo para las carencias diarias"</string>
+    <string name="text_b6c4c767eb" formatted="false">"Dom"</string>
+    <string name="text_c0505c1097" formatted="false">"Lun"</string>
+    <string name="text_7b5b7d0c90" formatted="false">"Mar"</string>
+    <string name="text_88aa0681e1" formatted="false">"Mié"</string>
+    <string name="text_c2742c4cba" formatted="false">"Jue"</string>
+    <string name="text_08e0ffcda5" formatted="false">"Vie"</string>
+    <string name="text_0645b32caf" formatted="false">"Sáb"</string>
+    <string name="text_92d73e83f6" formatted="false">"Sólo afectan a los déficits diarios.Los mismos tercios de horario se aplican en todos los días; no hay reglas separadas de fin de semana o vacaciones."</string>
+    <string name="text_69e69a7518" formatted="false">"Puntos de crédito fiscal y salario neto estimado"</string>
+    <string name="text_70d7cd14f1" formatted="false">"Puntos de crédito fiscal (de su paylip)"</string>
+    <string name="text_9987c69efd" formatted="false">"Cada punto vale 242 ₪ por mes bajo la tabla de impuestos de 2026 de Israel."</string>
+    <string name="text_8cee38323a" formatted="false">"Pensiones y Fondo de Formación"</string>
+    <string name="text_9982697de0" formatted="false">"Contribución de la pensión del empleado (%)"</string>
+    <string name="text_3638d5596d" formatted="false">"Contribución del Fondo de Formación de Empleados (%; 0 si no)"</string>
+    <string name="text_90b68945c0" formatted="false">"Sólo ingresa la cuota del empleado, excluyendo las contribuciones del empleador."</string>
+    <string name="text_e2e16aa700" formatted="false">"Bases de pago para las contribuciones"</string>
+    <string name="text_dc959b16aa" formatted="false">"Pagos de base excluyendo el horario excesivo"</string>
+    <string name="text_682c0e2622" formatted="false">"El salario total"</string>
+    <string name="text_3f55564e26" formatted="false">"Cuantía definida manualmente"</string>
+    <string name="text_0d4b9a288d" formatted="false">"Bases de pago de contribuciones (₪)"</string>
+    <string name="text_3284189b89" formatted="false">"Incluye el crédito de impuesto de contribución de la pensión estándar"</string>
+    <string name="text_0b5e7d7238" formatted="false">"La estimación del crédito de impuesto de la pensión es el 35% de las contribuciones elegibles, cubierta en ₪679 de las contribuciones por mes y el 7% de los salarios."</string>
+    <string name="text_102196cdf2" formatted="false">"Lo que la estimación incluye"</string>
+    <string name="text_c02d9dbae9" formatted="false">"Impuesto sobre ingresos, puntos de crédito tributario, seguro nacional y sanitario israelí, y contribuciones de empleado. Uso de las tablas 2026 para residentes israelíes de 18 años a la jubilación."</string>
+    <string name="text_a09a8853d1" formatted="false">"Exclude la coordinación fiscal, otros ingresos, beneficios de automóviles tributables, impuestos de contribución del empleador y créditos especiales."</string>
+    <string name="text_49148d6451" formatted="false">"Razones para trabajar de casa"</string>
+    <string name="text_62d649ad15" formatted="false">"Nueva razón"</string>
+    <string name="text_45bd96d34b" formatted="false">"Añadir a la lista"</string>
+    <string name="text_a99e68e9f4" formatted="false">"Eliminar"</string>
+    <string name="text_1b581c283a" formatted="false">"Eliminar una razón salvada no cambia las entradas existentes. siempre se puede introducir texto gratuito."</string>
+    <string name="text_d44063b451" formatted="false">"El cargamiento de datos falleció."</string>
+    <string name="text_31e02fbfa7" formatted="false">"El cambio no se ha salvado, vuelve a probar."</string>
+    <string name="text_71f28ff8fa" formatted="false">"Incapacidad para cargar datos"</string>
+    <string name="text_b238f1a394" formatted="false">"Los archivos se conservan. no clarifique los datos de la aplicación."</string>
+    <string name="text_fc2297f319" formatted="false">"Trate de nuevo"</string>
+    <string name="text_6e56c6a002" formatted="false">"Restaurar una copia de seguridad"</string>
+    <string name="text_e4f2184a47" formatted="false">"Véase el reloj del dispositivo: una entrada termina en el futuro."</string>
+    <string name="text_6f6a3321b0" formatted="false">"El horario de final debe ser después del horario de inicio."</string>
+    <string name="text_e0aad7a0c2" formatted="false">"La configuración se salvó."</string>
+    <string name="text_8dfb4f3f58" formatted="false">"La entrada se salvó."</string>
+    <string name="text_7a6915a25c" formatted="false">"No puedes registrar horas que aún no han ocurrido."</string>
+    <string name="text_2aca9c2968" formatted="false">"La hora en el tiempo no puede ser en el futuro."</string>
+    <string name="text_f9dc75319d" formatted="false">"Eliminar la entrada"</string>
+    <string name="text_f026fe8829" formatted="true">"Eliminar la entrada para %1$s? esto no puede ser negado."</string>
+    <string name="text_b0e3328ac0" formatted="false">"Razones para trabajar de casa"</string>
+    <string name="text_f1af79973d" formatted="false">"Elegir una razón salvada"</string>
+    <string name="text_05d94bc43f" formatted="false">"Mi horario de trabajo"</string>
+    <string name="text_c83e648a74" formatted="false">"Inicio Establecimiento"</string>
+    <string name="text_89c15910b6" formatted="false">"Configure su salario, horarios mensuales y plazos de trabajo para permitir los cálculos de los pagos."</string>
+    <string name="text_7c1126f30f" formatted="false">"Instalaciones abiertas"</string>
+    <string name="text_01ebd1a71f" formatted="false">"¿Listo para empezar?"</string>
+    <string name="text_6d81f53fb4" formatted="true">"Turno en curso · %1$s"</string>
+    <string name="text_8b6488028e" formatted="false">"Desliza para iniciar un turno a la hora actual."</string>
+    <string name="text_c386f7af9f" formatted="true">"Entrada: %1$s %2$s"</string>
+    <string name="text_bc84ae26be" formatted="false">"Desliza para finalizar el turno a la hora actual."</string>
+    <string name="text_73a90395c7" formatted="false">"Desliza para empezar"</string>
+    <string name="text_867983500d" formatted="false">"Desliza para terminar"</string>
+    <string name="text_a5d8698fba" formatted="false">"Clock-in correcto / establecer otro horario de final"</string>
+    <string name="text_1efd4660f9" formatted="false">"Añadir turno manualmente"</string>
+    <string name="text_79a7f1d677" formatted="false">"Su reloj en tiempo se salva incluso cuando la aplicación está cerrada."</string>
+    <string name="text_95d86d7f5f" formatted="false">"Hoy"</string>
+    <string name="text_6834f9db87" formatted="false">"Horas netas"</string>
+    <string name="text_b076df1539" formatted="false">"Los segmentos en el mismo día se combinan. un cambio de noche pertenece a su fecha de inicio."</string>
+    <string name="text_7991cbb6a8" formatted="false">"Período actual"</string>
+    <string name="text_3084f001bd" formatted="false">"Horas registradas"</string>
+    <string name="text_7447d177b1" formatted="false">"Horas extra"</string>
+    <string name="text_e2cbeabb69" formatted="false">"Salario completo + horario registrado"</string>
+    <string name="text_4c0803b36f" formatted="false">"Gross Pay de las entradas"</string>
+    <string name="text_389abd9ee8" formatted="false">"Los sumarios de pagos aparecerán después de ahorrar las apuestas iniciales."</string>
+    <string name="text_1960680292" formatted="false">"Backup Copia del estado"</string>
+    <string name="text_dd6ddc4c4f" formatted="false">"No hay copia de seguridad de Drive completada en este dispositivo aún."</string>
+    <string name="text_1c3f9e273d" formatted="true">"Copia de copia de seguridad de Drive de éxito: %1$s %2$s"</string>
+    <string name="text_6e55aef91f" formatted="false">"Copia de seguridad diaria programada"</string>
+    <string name="text_17ee444b2e" formatted="false">"Copia de seguridad semanal programada"</string>
+    <string name="text_d7da1ab695" formatted="false">"La copia de seguridad automática de Drive se apaga"</string>
+    <string name="text_bba88dd845" formatted="false">"Las configuraciones y las acciones están disponibles en la tabla de copia de seguridad a continuación."</string>
+    <string name="text_d61f7f639f" formatted="false">"Anterior"</string>
+    <string name="text_28890b291d" formatted="false">"Siguiente"</string>
+    <string name="text_023f8a1a0c" formatted="false">"Resumen"</string>
+    <string name="text_0cdf398747" formatted="false">"Horas, pago y seguimiento para el período"</string>
+    <string name="text_5b40d10b38" formatted="false">"Salario mensual + horario adicional"</string>
+    <string name="text_b7cebc21b4" formatted="false">"Hora de pago"</string>
+    <string name="text_24c64cee7b" formatted="false">"Salario mensual completo"</string>
+    <string name="text_1558a05606" formatted="false">"El salario regular"</string>
+    <string name="text_5407314942" formatted="false">"Pago sobre tiempo"</string>
+    <string name="text_ebff026858" formatted="false">"Rata horaria"</string>
+    <string name="text_f072356bdc" formatted="false">"Las horas perdidas se muestran separadamente y no se deducen automáticamente."</string>
+    <string name="text_d7fec4855e" formatted="false">"Incluye las horas de cambio activo dentro de este período; cantidad de actualizaciones en vivo."</string>
+    <string name="text_087fd2cd6d" formatted="false">"Horas de desintegración"</string>
+    <string name="text_3eb92e199a" formatted="false">"Tiempo neto total"</string>
+    <string name="text_07b643f83a" formatted="false">"Horas ordinarias"</string>
+    <string name="text_dda62e1cc9" formatted="false">"Total de horas extra"</string>
+    <string name="text_27fa002b22" formatted="true">"Horas al %1$s%%"</string>
+    <string name="text_0d562e6527" formatted="true">"Pago al %1$s%%"</string>
+    <string name="text_b93940ad5b" formatted="false">"Horas de exceso de tiempo"</string>
+    <string name="text_aa79d639a1" formatted="false">"Oficina y casa"</string>
+    <string name="text_b895b63363" formatted="false">"Horas de oficina"</string>
+    <string name="text_bf004c7509" formatted="false">"Home Horas"</string>
+    <string name="text_a839ec02b2" formatted="true">"%1$s%% en oficina"</string>
+    <string name="text_b8ded3389c" formatted="false">"Valor de la oficina a tasa de base"</string>
+    <string name="text_ec791b21f9" formatted="false">"Valor del hogar a base"</string>
+    <string name="text_2d3fd3bb5b" formatted="false">"Los valores de tasa básica excluyen los prémios sobre tiempo; no los añade al salario bruto."</string>
+    <string name="text_6689630948" formatted="false">"Horas perdidas y controles de entrada"</string>
+    <string name="text_23b17c77be" formatted="false">"El objetivo de las horas para este período"</string>
+    <string name="text_9e0655ff1b" formatted="false">"Reducción de la meta mensual"</string>
+    <string name="text_468b69c83d" formatted="false">"Suma de las carencias diarias"</string>
+    <string name="text_d75f4dd709" formatted="false">"Las deficiencias diarias sólo cuentan días de trabajo seleccionados con entradas.Días sin entradas no se marcan automáticamente como ausencias."</string>
+    <string name="text_e9f9673a47" formatted="false">"Oficina exclusiva de defectos"</string>
+    <string name="text_8e87e45498" formatted="false">"Horas de trabajo superiores a los estándares diarios"</string>
+    <string name="text_43af7314c4" formatted="false">"Días con una nota de horario en / fuera ausente"</string>
+    <string name="text_d41113bbd2" formatted="false">"Días con entradas"</string>
+    <string name="text_3ee5d8b89f" formatted="false">"Trabajo en casa por razón"</string>
+    <string name="text_e220a05303" formatted="false">"No hay ingresos en este período."</string>
+    <string name="text_4b0ccb42af" formatted="false">"Hores"</string>
+    <string name="text_387c48c332" formatted="false">"Valor a la base"</string>
+    <string name="text_a347b2c73c" formatted="false">"El salario neto estimado"</string>
+    <string name="text_b8e45d7b9e" formatted="true">"Las tablas de impuestos para %1$s no se configuran. no se muestra ninguna estimación neta."</string>
+    <string name="text_90128d6911" formatted="false">"Introduce sus puntos de crédito fiscal y porcentaje de pensión del empleado en las apuestas para mostrar una estimación. Introduce 0 si no hay contribución."</string>
+    <string name="text_3d880292e0" formatted="false">"Impuesto sobre ingresos"</string>
+    <string name="text_89e2b25fb1" formatted="false">"Seguros nacionales"</string>
+    <string name="text_c694983c02" formatted="false">"Seguros de salud"</string>
+    <string name="text_901acdd444" formatted="false">"Pensiones - Participación del empleado"</string>
+    <string name="text_852a1bee2a" formatted="false">"Fondo de Formación - Participación del empleado"</string>
+    <string name="text_f8ee9f9027" formatted="false">"Crédito de contribución de la pensión"</string>
+    <string name="text_192617126a" formatted="false">"Estimación mensual utilizando tablas de 2026 israelíes. excluye impuestos cumulativos, otros ingresos, beneficios tributables y coordinación fiscal. contribuciones utilizan la base salarial seleccionada. no sustituye a un paylip."</string>
+    <string name="text_fe04db5f37" formatted="false">"Los tiempos se muestran como horas:minutos; los cálculos conservan segundos de fuente. sus tercios configurados se aplican en cada día de la semana."</string>
+    <string name="text_3141c61e9e" formatted="false">"Detalle de horas"</string>
+    <string name="text_723a7db2af" formatted="false">"Turnos y tramos de trabajo"</string>
+    <string name="text_57b4cda969" formatted="false">"+ Añadir turno manualmente"</string>
+    <string name="text_7149f2ed6a" formatted="false">"Los demás usan durante todo el día, incluso cuando se filtra en un solo lugar de trabajo."</string>
+    <string name="text_3579e0306b" formatted="false">"Corregir su comienzo o introducir un tiempo de fin en la pantalla de inicio."</string>
+    <string name="text_643cae9ae3" formatted="false">"No hay entradas completadas en este período."</string>
+    <string name="text_d3fcfb1a78" formatted="true">"Salida: %1$s %2$s"</string>
+    <string name="text_39fe25939b" formatted="false">"Editar"</string>
+    <string name="text_0826149cf1" formatted="false">"Resumen del día"</string>
+    <string name="text_d783472020" formatted="false">"Total neto del día"</string>
+    <string name="text_a3756d29d2" formatted="false">"Tiempo remunerado"</string>
+    <string name="text_c24fae5be3" formatted="false">"El tiempo en el filtro actual"</string>
+    <string name="text_b70622d71d" formatted="false">"Cambios activos correctos"</string>
+    <string name="text_59cb6e8e9a" formatted="false">"Editar turno"</string>
+    <string name="text_10045253c1" formatted="false">"Turno manual"</string>
+    <string name="text_2f6783cd3b" formatted="false">"Entrada"</string>
+    <string name="text_b939061e41" formatted="false">"Salida"</string>
+    <string name="text_8f9bc2d880" formatted="false">"Noticia / ausencia de relojo o relojo"</string>
+    <string name="text_d958ea3cd8" formatted="true">"Duración antes de la pausa: %1$s"</string>
+    <string name="text_1be17082dd" formatted="false">"Segmentos en el mismo día comparte los tercios de tiempo excesivo. No entre segmentos de tiempo excesivo."</string>
+    <string name="text_d42c0813fc" formatted="false">"El reloj no puede ser en el futuro."</string>
+    <string name="text_510b00fcc4" formatted="false">"Salva el comienzo corregido y mantenga el cambio abierto"</string>
+    <string name="text_647a733fb8" formatted="false">"Invalida hora en fecha."</string>
+    <string name="text_4c82f98655" formatted="false">"El horario de salida debe ser después del horario de entrada.Para un cambio de noche, también seleccione la fecha correcta de final."</string>
+    <string name="text_c2fb808976" formatted="false">"La hora no puede ser en el futuro."</string>
+    <string name="text_6eb37ad66f" formatted="false">"Terminar y salvar el cambio"</string>
+    <string name="text_e69323393b" formatted="false">"Guardar"</string>
+    <string name="text_b89e7bee64" formatted="false">"Instalaciones iniciales"</string>
+    <string name="text_2eaf74bbd8" formatted="false">"Comienza con sus términos de trabajo"</string>
+    <string name="text_f9fb70ce3b" formatted="false">"Introduzca las horas de pago y mensual, luego ajuste los tiers de tiempo excedente, las pausas y el período de informes."</string>
+    <string name="text_925bb7a659" formatted="false">"La autorización de Google ha expirado.Reconexión."</string>
+    <string name="text_86de69005f" formatted="false">"El acceso al Drive fue rechazado. reconectar su cuenta de Google."</string>
+    <string name="text_0885c5a6fa" formatted="false">"La copia de seguridad no se encontró en la cuenta seleccionada."</string>
+    <string name="text_09780711f6" formatted="false">"Google está limitando las solicitudes. intenta de nuevo más tarde."</string>
+    <string name="text_2a152ef564" formatted="true">"La comunicación de Google Drive falleció (código %1$s)."</string>
+    <string name="text_07d8d8fb15" formatted="false">"Seleccione una cuenta de Google."</string>
+    <string name="text_44707e2acd" formatted="false">"Google no confirmó la creación de copias de seguridad."</string>
+    <string name="text_eee5e9d37e" formatted="false">"no se creó una copia de seguridad: se requiere autorización de nuevo."</string>
+    <string name="text_fb5e219eb1" formatted="false">"La copia de seguridad falleció:"</string>
+    <string name="text_82a2bfa2fe" formatted="false">"Errores de red"</string>
+    <string name="nav_home" formatted="false">"Inicio"</string>
+    <string name="nav_dashboard" formatted="false">"Resumen"</string>
+    <string name="nav_records" formatted="false">"Registros"</string>
+    <string name="nav_settings" formatted="false">"Ajustes"</string>
+    <string name="nav_backup" formatted="false">"Copia de seguridad"</string>
+    <string name="location_home" formatted="false">"Casa"</string>
+    <string name="location_office" formatted="false">"Oficina"</string>
+    <string name="filter_all" formatted="false">"Todos"</string>
+    <string name="app_name" formatted="false">"ShiftHours"</string>
+    <string name="language_title" formatted="false">"Idioma"</string>
+    <string name="language_system" formatted="false">"Idioma del dispositivo"</string>
+    <string name="language_hint" formatted="false">"El lenguaje se salva en este dispositivo. Salva los cambios antes de cambiar las lenguas. Las reglas de divisas y impuestos mantienen sus configuraciones actuales."</string>
+    <string name="tax_profile" formatted="false">"Perfil fiscal"</string>
+    <string name="tax_country" formatted="false">"País o jurisdicción fiscal"</string>
+    <string name="tax_year" formatted="false">"Año fiscal"</string>
+    <string name="tax_region" formatted="false">"Región fiscal"</string>
+    <string name="tax_choose" formatted="false">"Seleccionar"</string>
+    <string name="tax_england" formatted="false">"Inglaterra"</string>
+    <string name="tax_wales" formatted="false">"Gales"</string>
+    <string name="tax_northern_ireland" formatted="false">"Irlanda del Norte"</string>
+    <string name="tax_scotland" formatted="false">"Escocia"</string>
+    <string name="tax_unavailable" formatted="false">"El cálculo neto de este país aún no está disponible. Se muestran horas y salario bruto."</string>
+    <string name="tax_year_unavailable" formatted="false">"No hay tabla fiscal verificada para este año."</string>
+    <string name="tax_uk_required" formatted="false">"Seleccione una región británica y confirme el perfil."</string>
+    <string name="tax_foreign_fields" formatted="false">"Los puntos y las aportaciones de Israel no se aplican a este país."</string>
+    <string name="tax_uk_profile" formatted="false">"Confirmo que cumplo el perfil británico indicado."</string>
+    <string name="tax_country_hint" formatted="false">"País e idioma son independientes. El país no determina las deducciones personales."</string>
+    <string name="tax_currency_warning" formatted="false">"Cambiar el país cambia la moneda mostrada, sin convertir importes ni reglas de horas extra. Revise los ajustes."</string>
+    <string name="tax_uk_scope" formatted="false">"Reino Unido 2026/27: salario mensual constante anualizado; National Insurance mensual de categoría A. Exención personal estándar con reducción por ingresos altos. Un solo empleo; sin otros ingresos, aportaciones de pensión, reducción salarial, préstamos estudiantiles, beneficios sujetos a impuestos ni deducciones especiales. No es PAYE acumulativo."</string>
+    <string name="tax_scope_in" formatted="false">"India, ejercicios 2025/26–2026/27: residente asalariado, régimen nuevo, salario constante anualizado; sin otros ingresos ni beneficios fiscales especiales. Incluye deducción estándar, rebaja, alivio marginal y recargo del 4%. Renta anual imponible máxima: INR 5.000.000."</string>
+    <string name="tax_scope_ru" formatted="false">"Rusia 2026: residente fiscal con salario ordinario constante, sin otros ingresos, deducciones personales, complementos del norte ni reglas militares. Promedio mensual anualizado, no retención acumulativa. Las cotizaciones patronales no se descuentan del salario."</string>
+    <string name="tax_scope_ae" formatted="false">"Emiratos Árabes Unidos 2026: trabajador expatriado no ciudadano del CCG, solo ingresos laborales. Sin impuesto personal sobre la renta. Introduzca descuentos reales del empleado, incluido seguro cuando corresponda. Excluye indemnización final y aportaciones patronales."</string>
+    <string name="tax_actual_deductions" formatted="false">"Descuentos mensuales reales del empleado"</string>
+    <string name="tax_deductions_hint" formatted="false">"Introduzca 0 si no hay. Incluya pensión, seguro y descuentos locales del empleado. Excluya impuestos calculados aquí y aportaciones patronales. Reduce el neto, no la renta imponible."</string>
+    <string name="tax_confirm_profile" formatted="false">"Confirmo que cumplo el perfil laboral de este país."</string>
+    <string name="tax_foreign_required" formatted="false">"Revise el perfil, los descuentos y los límites de ingresos admitidos."</string>
+    <string name="tax_other_tax" formatted="false">"Recargo de salud y educación"</string>
+    <string name="tax_other_deductions" formatted="false">"Otros descuentos del empleado"</string>
+    <string name="tax_scope_us" formatted="false">"Solo 2026: residente todo el año de 18–64 años, un empleador local W-2; SINGLE o declaración conjunta con UN perceptor familiar. Sin dependientes, otros ingresos, créditos federales/reembolsables, deducciones especiales de propinas/horas extra, beneficios antes de impuestos ni trabajo entre estados. Verifique elegibilidad. 50 estados seleccionables: 47 con tarifa automática limitada, incluido impuesto salarial cero; CO/ID/VT requieren obligación anual estatal verificada. Impuesto/12 es reserva, no retención W-4/acumulada."</string>
+    <string name="tax_scope_ca" formatted="false">"Canadá 2026: solo Ontario/Alberta. Soltero residente todo el año, 18–64 años, vive y trabaja en la misma provincia, un empleador. Solo créditos básicos personales/laborales; sin dependientes, RRSP, beneficios antes de impuestos ni otros ingresos. Incluye impuestos federal/provincial, CPP/CPP2 y EI. Promedio anual, no nómina real."</string>
+    <string name="tax_na_deductions_hint" formatted="false">"Solo otros descuentos después de impuestos; introduzca 0 si no hay. No repita impuestos, Social Security, Medicare, CPP/CPP2, EI ni prima de Ontario ya calculados. No se admiten descuentos antes de impuestos."</string>
+    <string name="tax_other_region" formatted="false">"Otra región — aún no admitida"</string>
+    <string name="tax_region_unavailable" formatted="false">"El cálculo neto de esta región aún no está disponible."</string>
+    <string name="tax_florida" formatted="false">"Florida"</string>
+    <string name="tax_texas" formatted="false">"Texas"</string>
+    <string name="tax_ontario" formatted="false">"Ontario"</string>
+    <string name="tax_alberta" formatted="false">"Alberta"</string>
+    <string name="tax_filing" formatted="false">"Estado civil fiscal federal"</string>
+    <string name="tax_single" formatted="false">"Soltero"</string>
+    <string name="tax_joint" formatted="false">"Casados conjuntamente — un perceptor"</string>
+    <string name="tax_federal" formatted="false">"Impuesto federal"</string>
+    <string name="tax_provincial" formatted="false">"Impuesto provincial"</string>
+    <string name="tax_ontario_health" formatted="false">"Prima de salud de Ontario"</string>
+    <string name="tax_social_security" formatted="false">"Seguridad Social de EE. UU."</string>
+    <string name="tax_cpp" formatted="false">CPP</string>
+    <string name="tax_cpp2" formatted="false">CPP2</string>
+    <string name="tax_ei" formatted="false">EI</string>
+    <string name="tax_medicare" formatted="false">Medicare</string>
+    <string name="tax_pt_mainland" formatted="false">"Portugal — territorio continental"</string>
+    <string name="tax_annual_verified_base" formatted="false">"Base imponible anual final verificada"</string>
+    <string name="tax_verified_base_hint" formatted="false">"Introduzca la base final tras todas las deducciones, de una liquidación verificada o un cálculo profesional. No es el salario bruto; la app no la calcula automáticamente."</string>
+    <string name="tax_au_hospital" formatted="false">"Cobertura hospitalaria privada autorizada"</string>
+    <string name="tax_au_full_cover" formatted="false">"Todo el ejercicio fiscal"</string>
+    <string name="tax_au_no_cover" formatted="false">"Sin cobertura durante todo el ejercicio"</string>
+    <string name="tax_nz_ietc_hint" formatted="false">"IETC exige elegibilidad todo el año: sin derecho a Working for Families, prestación principal, NZ Super, Veterans Pension ni pagos extranjeros equivalentes. No se admite elegibilidad parcial."</string>
+    <string name="tax_nz_ietc" formatted="false">"Confirmo elegibilidad IETC todo el año"</string>
+    <string name="tax_further_deductions_hint" formatted="false">"Introduzca deducciones reales del empleado no calculadas aquí, o 0. Excluya aportaciones empresariales e impuestos/seguros ya mostrados. Reduce el neto, no la base imponible."</string>
+    <string name="tax_solidarity" formatted="false">"Impuesto de solidaridad"</string>
+    <string name="tax_pt_social" formatted="false">"Seguridad Social del empleado"</string>
+    <string name="tax_au_levy" formatted="false">"Gravamen Medicare"</string>
+    <string name="tax_au_surcharge" formatted="false">"Recargo Medicare"</string>
+    <string name="tax_acc" formatted="false">"Cotización ACC"</string>
+    <string name="tax_included_relief" formatted="false">"Beneficio ya incluido en el impuesto"</string>
+    <string name="tax_scope_de" formatted="false">"Alemania 2026: residente soltero, sin hijos ni impuesto eclesiástico. Liquidación anual con base final verificada, no derivada del bruto. Introduzca cotizaciones salariales reales aparte. No reproduce la retención Lohnsteuer."</string>
+    <string name="tax_scope_fr" formatted="false">"Francia: solo rentas de 2025 liquidadas en 2026. Residente soltero, una parte fiscal, solo salario y bruto anual hasta EUR 200.000. Base final tras gastos; cotizaciones reales aparte. Incluye décote; sin tabla de rentas de 2026 ni retención PAS."</string>
+    <string name="tax_scope_pt" formatted="false">"Portugal 2026: continente, residente soltero, categoría A ordinaria. Doce pagos iguales con extras de vacaciones/Navidad prorrateadas; bruto anual mínimo EUR 20.000. Incluye Seguridad Social del 11%, deducción estándar, tramos IRS y solidaridad. Sin dependientes, regímenes especiales ni créditos de facturas; no calcula retención de 14 pagas."</string>
+    <string name="tax_scope_au" formatted="false">"Australia 2025/26–2026/27: residente soltero de 18–64 años, salario anual mínimo AUD 50.000 sin Super empresarial. Sin otras rentas, beneficios antes de impuestos ni exenciones. Incluye impuesto, LITO, Medicare del 2% y recargo. Declare cobertura hospitalaria aprobada todo el año o ninguna; excluye familias y cobertura parcial."</string>
+    <string name="tax_scope_nz" formatted="false">"Nueva Zelanda 2025/26–2026/27: residente todo el año, un empleo, solo salario, sin otras rentas ni prestaciones. Incluye impuesto y ACC; IETC solo con elegibilidad confirmada. KiwiSaver, préstamos y otras deducciones reales se introducen aparte. Estimación anual de ingresos estables."</string>
+    <string name="tax_scope_es" formatted="false">"España 2026: solo Madrid. Residente soltero todo el año, 18–64 años, solo salario, sin hijos, discapacidad ni deducciones de cuota. Bruto anual mínimo EUR 40.000 y base general verificada mínima EUR 30.000. Impuestos estatal y madrileño con sus mínimos personales básicos. Cotizaciones reales aparte. Doce pagos totales iguales; no es retención de nómina."</string>
+    <string name="tax_scope_cn" formatted="false">"China 2026: residente fiscal todo el año en China continental, un empleo, solo salario, sin otras rentas/extranjeras ni reducciones de cuota. Base anual final verificada tras RMB 60.000 y deducciones legales. Seguros sociales y fondo de vivienda locales reales aparte; no se infieren tipos ni derechos. Sin prima anual separada, régimen especial/convenio ni retención mensual/acumulada."</string>
+    <string name="tax_scope_sa" formatted="false">"Arabia Saudí 2026: expatriado no ciudadano del CCG, solo empleo ordinario en Arabia Saudí. Sin impuesto personal sobre la renta. Introduzca deducciones reales del empleado, incluido seguro cuando proceda, o 0. Se excluyen cuotas empresariales por riesgos laborales. Sin pensiones saudíes/CCG, actividad empresarial, impuestos extranjeros ni indemnización final."</string>
+    <string name="tax_madrid" formatted="false">"Madrid"</string>
+    <string name="tax_cn_mainland" formatted="false">"China continental"</string>
+    <string name="tax_es_base_hint" formatted="false">"Introduzca la base liquidable general anual final verificada ANTES del mínimo personal/familiar, tras deducciones salariales legales. Bruto mínimo EUR 40.000; base mínima EUR 30.000. La app aplica los mínimos básicos. No calcula cotizaciones ni deriva la base del bruto."</string>
+    <string name="tax_cn_base_hint" formatted="false">"Introduzca la base anual salarial final verificada DESPUÉS de RMB 60.000 y deducciones legales. No reste de nuevo RMB 60.000. Los descuentos reales de seguros/vivienda se introducen también en el campo mensual; su efecto fiscal debe estar ya en esta base."</string>
+    <string name="tax_state_income" formatted="false">"IRPF estatal"</string>
+    <string name="tax_regional_income" formatted="false">"IRPF autonómico"</string>
+    <string name="tax_scope_ie" formatted="false">"Irlanda 2026: residente soltero todo el año,18–64 años, un empleo PAYE válido, solo salario. Incluye créditos personales/laborales básicos y USC ordinario. Sin director propietario, concesión por tarjeta médica, otras rentas, pensión/beneficios antes de impuestos ni créditos extra. PRSI real y pensión/descuentos después de impuestos aparte; no se presume MyFutureFund. Estimación anual estable, no nómina acumulada."</string>
+    <string name="tax_scope_hk" formatted="false">"Hong Kong 2025/26–2026/27: empleado soltero todo el año,18–64 años, un empleador, solo salario y MPF regular con pago mensual. Incluye trabajo por horas pagado mensualmente, exención básica, MPF del empleado y menor impuesto progresivo/estándar. Vacaciones de aportación terminadas antes del año. Sin eventuales/pago diario/exentos, dependientes, otras rentas ni beneficios extra. Rebaja final solo 2025/26; no liquidación provisional."</string>
+    <string name="tax_ie_deductions_hint" formatted="false">"Introduzca PRSI real del empleado y pensión/otras deducciones después de impuestos, o 0. Incluya MyFutureFund si se descuenta; no se presume afiliación. Excluya costes empresariales, impuesto y USC ya calculados. Pensiones con desgravación del impuesto quedan fuera del perfil. Actualice si cambia el salario."</string>
+    <string name="tax_hk_deductions_hint" formatted="false">"Solo deducciones adicionales del empleado después de impuestos, o 0. No repita MPF ni Salaries Tax ya calculados. Aportaciones empresariales y deducciones adicionales con desgravación quedan fuera."</string>
+    <string name="tax_usc" formatted="false">"Universal Social Charge (USC)"</string>
+    <string name="tax_mpf" formatted="false">"MPF del empleado"</string>
+    <string name="tax_scope_no" formatted="false">"Noruega 2026: residente soltero todo el año, 18–64 años, un empleo y solo salario, región ordinaria del 22% y afiliación al seguro nacional. Incluye deducciones estándar/personales, impuesto escalonado y beneficio juvenil confirmado. Sin deducciones de pensión/sindicato/intereses u otras, otras rentas, PAYE para extranjeros ni reglas regionales especiales. Estimación anual estable antes de anticipos y cobro de saldos pequeños."</string>
+    <string name="tax_scope_za" formatted="false">"Sudáfrica 2025/26–2026/27: residente todo el año de 18–64 años, un empleo privado ordinario. Incluye beneficio básico y UIF seleccionado. Sin otras rentas, comisiones, beneficios imponibles, pensiones deducibles ni créditos médicos/extra o exenciones especiales. Confirme UIF ordinario o exención solo por trabajar menos de 24 horas mensuales para este empleador. Estimación anual, no retención PAYE real."</string>
+    <string name="tax_no_region" formatted="false">"Región ordinaria del 22%"</string>
+    <string name="tax_no_region_hint" formatted="false">"Excluye Svalbard, Finnmark y estos municipios de Troms: Karlsøy, Kvænangen, Kåfjord, Lyngen, Nordreisa, Skjervøy, Storfjord."</string>
+    <string name="tax_no_youth" formatted="false">"Beneficio laboral juvenil — estado verificado"</string>
+    <string name="tax_no_selected" formatted="false">"Seleccionado — confirmado por Hacienda"</string>
+    <string name="tax_no_not_selected" formatted="false">"No seleccionado / fuera del grupo elegible"</string>
+    <string name="tax_no_youth_hint" formatted="false">"El piloto de 2026 seleccionó al azar a parte de los nacidos en 1991–2006. La edad o residencia no bastan. Verifique su estado oficial; no lo suponga. Sin selección no hay cálculo."</string>
+    <string name="tax_za_uif" formatted="false">"Estado UIF del empleado"</string>
+    <string name="tax_za_covered" formatted="false">"Sujeto a UIF ordinario"</string>
+    <string name="tax_za_lt24" formatted="false">"Exento — menos de 24 horas al mes"</string>
+    <string name="tax_za_year_hint" formatted="false">"Los años indican el inicio: 2026/27 es marzo 2026–febrero 2027, llamado ejercicio 2027 por SARS. Otras exenciones UIF no se incluyen."</string>
+    <string name="tax_noza_deductions_hint" formatted="false">"Solo deducciones adicionales después de impuestos, o 0. No repita impuestos ni seguro nacional/UIF calculados; excluya aportaciones empresariales. Pensiones desgravables u otros gastos deducibles requieren otro perfil."</string>
+    <string name="tax_no_ordinary" formatted="false">"Impuesto ordinario sobre la renta"</string>
+    <string name="tax_no_step" formatted="false">"Impuesto escalonado sobre renta personal"</string>
+    <string name="tax_no_ni" formatted="false">"Seguro nacional del empleado"</string>
+    <string name="tax_uif" formatted="false">"UIF del empleado"</string>
+    <string name="tax_scope_sg" formatted="false">"Singapur, ingresos 2026: residente fiscal todo el año, 18–54 años al cierre, un empleo con salario ordinario, sin primas/pagos adicionales, otras rentas, discapacidad, beneficios ni desgravaciones extra. Ciudadano/PR desde tercer año con CPF completo todo el año, o extranjero no ciudadano/PR sin CPF. Incluye CPF del empleado y Earned Income Relief básico. Reserva anual de impuesto, no retención mensual."</string>
+    <string name="tax_scope_dk" formatted="false">"Dinamarca 2026: solo Copenhague, residente soltero todo el año de 18–59 años, solo salario, sin impuesto eclesiástico, rentas de capital/extranjeras ni régimen especial. Requiere bases anuales personal y municipal verificadas antes de la exención personal, y descuentos reales AM, ATP, pensión y otros. Incluye impuestos nacional/municipal y exención básica; no deriva bases del bruto ni calcula retención por tarjeta fiscal."</string>
+    <string name="tax_copenhagen" formatted="false">"Copenhague"</string>
+    <string name="tax_dk_personal_base" formatted="false">"Renta personal anual verificada tras AM"</string>
+    <string name="tax_dk_municipal_base" formatted="false">"Base municipal anual verificada"</string>
+    <string name="tax_dk_base_hint" formatted="false">"Introduzca ambas bases finales verificadas ANTES de la exención personal. Renta personal tras AM/ATP/pensión; base municipal tras todas las deducciones legales de trabajo y demás. No introduzca bruto. La app no deriva las bases ni vuelve a restar deducciones. Si la renta personal supera DKK 54.100 pero la base municipal es inferior, este caso de reparto de la exención aún no se admite."</string>
+    <string name="tax_dk_actual_deductions" formatted="false">"AM, ATP, pensión y otros descuentos mensuales reales"</string>
+    <string name="tax_dk_deductions_hint" formatted="false">"Incluya AM real, ATP/pensión del empleado y otros descuentos monetarios distintos del impuesto sobre la renta, o 0. El efecto fiscal ya debe figurar en las bases. Excluya costes empresariales e impuestos nacional/municipal calculados. Actualice los tres importes si cambia el salario."</string>
+    <string name="tax_sg_cpf_profile" formatted="false">"Perfil CPF del empleado"</string>
+    <string name="tax_sg_full" formatted="false">"Ciudadano / PR año 3+ — CPF completo"</string>
+    <string name="tax_sg_foreign" formatted="false">"Extranjero residente — no ciudadano/PR, sin CPF"</string>
+    <string name="tax_sg_year_hint" formatted="false">"2026 es renta de enero–diciembre de 2026, liquidada en YA 2027. No se trasladan rebajas puntuales YA 2024/2025. PR de primer/segundo año y otros perfiles CPF/edad no admitidos."</string>
+    <string name="tax_sg_deductions_hint" formatted="false">"Solo descuentos adicionales después de impuestos, o 0, incluidos fondos comunitarios reales aplicables. No repita CPF ni impuesto calculados ni incluya aportaciones empresariales. Deducciones fiscales extra quedan fuera."</string>
+    <string name="tax_cpf" formatted="false">"CPF del empleado"</string>
+    <string name="tax_dk_bottom" formatted="false">"Impuesto nacional básico"</string>
+    <string name="tax_dk_municipal" formatted="false">"Impuesto municipal de Copenhague"</string>
+    <string name="tax_dk_higher" formatted="false">"Impuestos intermedio / superior / superior adicional"</string>
+    <string name="tax_scope_my" formatted="false">"Malasia 2026: residente fiscal soltero todo el año, 18–59 años, un empleo con salario regular en efectivo; sin otros ingresos, beneficios imponibles, régimen especial, zakat ni otras rebajas fiscales. Requiere renta imponible anual final verificada tras todas las deducciones legales, incluida la personal, y retenciones reales del empleado. Incluye rebaja personal no reembolsable de hasta RM400 si corresponde. Estimación anual, no retención PCB."</string>
+    <string name="tax_scope_ph" formatted="false">"Filipinas 2026: ciudadano residente soltero todo el año, 18–59 años, un empleo privado, 12 salarios regulares iguales en efectivo; sin otros ingresos imponibles, régimen especial ni créditos fiscales. Requiere salario regular imponible anual verificado y deducciones reales. No cubre exenciones del salario mínimo. La paga 13 y otros beneficios exentos hasta el límite conjunto de PHP90.000 quedan fuera del neto mostrado; no admite exceso imponible ni otros bonos. Estimación anual, no retención de nómina."</string>
+    <string name="tax_my_base_hint" formatted="false">"Introduzca renta imponible anual final verificada DESPUÉS de todas las deducciones legales, incluida la personal de RM9.000. No el bruto. La app aplica por separado la rebaja de hasta RM400 si corresponde; no calcula deducciones ni resta otra vez las aportaciones. Actualice la base al cambiar el salario."</string>
+    <string name="tax_ph_base_hint" formatted="false">"Introduzca remuneración REGULAR en efectivo imponible anual verificada tras aportaciones/cuotas legales del empleado, no el bruto. No reste impuesto ni préstamos personales de esta base. La app no determina exenciones ni vuelve a restar aportaciones. Actualice la base al cambiar el salario."</string>
+    <string name="tax_myph_deductions_hint" formatted="false">"Introduzca deducciones mensuales reales: EPF/SOCSO/EIS o SSS/PhilHealth/Pag-IBIG, cuotas legales y otras retenciones en efectivo, o 0. Su efecto fiscal ya debe estar en la base verificada. Excluya aportaciones patronales e impuesto calculado aquí. Actualice ambos importes si cambia el salario."</string>
+    <string name="tax_scope_pl" formatted="false">"Polonia 2026: residente soltero todo el año, 26–59 años, un contrato laboral ordinario, 12 salarios iguales en efectivo; bruto anual hasta PLN1.000.000. Sin otros ingresos, beneficios imponibles, declaración conjunta, PIT-0 ni deducciones/créditos adicionales. Solo gastos laborales estándar hasta PLN3.600/año, no billetes reales ni gastos creativos del 50%. Requiere base anual verificada y deducciones reales. Incluye reducción básica de PLN3.600. Estimación anual, no retención salarial. Los participantes en PPK quedan fuera de este perfil."</string>
+    <string name="tax_scope_cz" formatted="false">"Chequia 2026: residente soltero todo el año, 18–64 años, un empleo ordinario con 12 salarios regulares iguales en efectivo; sin otros ingresos, beneficios imponibles, deducciones de base ni créditos extra. Excluye DPP/DPČ y retenciones especiales. Incluye crédito anual básico no reembolsable de CZK30.840. Seguro social, salud y complemento mínimo sanitario si corresponde se introducen como deducciones reales. Estimación anual, no anticipos mensuales."</string>
+    <string name="tax_pl_base_hint" formatted="false">"Introduzca base anual final verificada tras aportaciones sociales deducibles del empleado y gastos laborales estándar, ANTES de reducir el impuesto PLN3.600. No reste PLN30.000 por separado. Salud, PPK y préstamos personales no reducen esta base en este perfil. No se vuelven a restar deducciones en efectivo; actualice los importes al cambiar el salario."</string>
+    <string name="tax_plcz_deductions_hint" formatted="false">"Introduzca deducciones mensuales reales del empleado: seguro social/salud, pensión después de impuestos y otras, o 0. Incluya complemento sanitario mínimo checo si corresponde. Excluya costes patronales e impuesto calculado aquí. Las deducciones checas no reducen la base; las deducibles polacas ya deben estar en la base verificada. Actualice si cambia el salario."</string>
+    <string name="tax_scope_th" formatted="false">"Tailandia 2026: residente soltero todo el año, 18–59 años, un empleo salarial ordinario; sin dependientes, otros ingresos, régimen especial ni créditos fiscales. Requiere ingreso laboral anual y base final verificados tras gastos, deducciones y exenciones legales. Solo salario; excluye impuesto mínimo alternativo de otros ingresos. El tramo actual del 30% termina en THB5.000.000, no el antiguo THB4.000.000."</string>
+    <string name="tax_scope_id" formatted="false">"Indonesia 2026: residente soltero todo el año, 18–59 años, empleado permanente, NPWP/NIK integrado válido, TK/0 sin dependientes ni otros ingresos. Cálculo anual del artículo 17 tras deducciones/PTKP verificados. Excluye DTP/impuesto estatal, impuesto pagado o aumentado por el empleador, regímenes especiales y créditos. Incluya THR/bonos y beneficios imponibles en cifras anuales. No retención TER mensual."</string>
+    <string name="tax_scope_vn" formatted="false">"Vietnam 2026: residente soltero todo el año, 18–59 años, un empleo; sin dependientes, otros ingresos, régimen especial ni créditos. Requiere ingreso anual y base final verificados tras seguros, deducción personal y exenciones legales, incluidas horas extra si corresponde. Cinco tramos anuales se aplican al salario residente desde 2026; no reutilice los siete antiguos."</string>
+    <string name="tax_scope_tw" formatted="false">"Taiwán, ingresos 2026 declarados en 2027: residente soltero todo el año, 18–59 años, solo salario; sin dependientes, otros ingresos/extranjeros, adiciones AMT, régimen especial ni créditos. Requiere ingreso laboral anual y base final verificados tras todas las deducciones/exenciones y ajuste de gastos básicos si corresponde. Tope conservador de ingreso laboral anual TWD7.500.000; no es un umbral legal bruto AMT."</string>
+    <string name="tax_scope_lk" formatted="false">"Sri Lanka 2026/27: 1 abril 2026–31 marzo 2027. Residente soltero todo el año, 18–59 años, un empleo salarial local ordinario; sin otros ingresos/extranjeros, régimen especial, atrasos/indemnización terminal ni créditos. Requiere ingreso anual y base final verificados tras deducción personal LKR1.800.000 y otras legales. Reserva anual ordinaria, no retención APIT/acumulada."</string>
+    <string name="tax_annual_employment_gross" formatted="false">"Ingreso laboral anual total verificado"</string>
+    <string name="tax_asia_five_income_hint" formatted="false">"Introduzca ingreso laboral de todo el año elegido antes de deducciones, con bonos, THR/paga extra y beneficios patronales imponibles valorados correctamente. No use solo salario mensual ×12 si hay extras. Verifique total y base final por separado. Neto mostrado: efectivo del período menos impuesto anual/12 y deducciones reales; no añade bonos anuales ni beneficios no monetarios al pago."</string>
+    <string name="tax_asia_five_base_hint" formatted="false">"Introduzca base imponible anual final verificada tras todos los gastos, seguros, deducciones personales y exenciones legales del año. La app no decide elegibilidad ni calcula deducciones; no las reste otra vez. Indonesia: PKP se redondea hacia abajo a IDR1.000 enteros. Actualice ambas cifras anuales si cambian ingresos o circunstancias."</string>
+    <string name="tax_asia_five_cash_hint" formatted="false">"Deducciones reales del empleado de seguridad social/salud/pensión y otras en efectivo para este período, o 0. Su efecto fiscal legal ya debe estar en la base anual verificada. Excluya costes patronales e impuesto reservado aquí; no repita retención fiscal. Estimación de reserva anual, no nómina ni neto anual total."</string>
+    <string name="tax_scope_pe" formatted="false">"Perú 2026: residente domiciliado soltero todo el año, 18–59 años, un empleo de quinta categoría; sin dependientes, otros ingresos/extranjeros, régimen especial ni créditos. UIT=PEN5.500. La base final verificada ya incluye 7 UIT y gastos adicionales elegibles verificados. Las aportaciones de pensión del empleado no son automáticamente deducibles."</string>
+    <string name="tax_scope_co" formatted="false">"Colombia 2026: residente soltero todo el año, 18–59 años, solo salario ordinario; sin dependientes, otros ingresos/extranjeros, régimen especial ni créditos. UVT=COP52.374. Base anual final verificada tras exclusiones sociales, exenciones y límites legales. Artículo241 anual, no retención mensual383. Otros tributos como patrimonio quedan fuera."</string>
+    <string name="tax_scope_ee" formatted="false">"Estonia 2026: residente soltero todo el año, 18–59 años, solo salario ordinario; sin dependientes, otros ingresos, régimen especial ni créditos. 22% de base final verificada tras deducciones legales y exención básica EUR8.400. Sin antigua reducción por ingresos ni exención de jubilado. Seguros/pensiones reales por separado."</string>
+    <string name="tax_scope_lv" formatted="false">"Letonia 2026: residente soltero todo el año, 18–59 años, solo salario; sin dependientes, otros ingresos ni créditos. Ingreso laboral anual total hasta EUR105.300; no admite tramo superior, solidaridad ni 3% adicional. 25,5% de base final verificada tras aportaciones/deducciones y exención básica EUR6.600. No es nómina completa de renta alta."</string>
+    <string name="tax_scope_lt" formatted="false">"Lituania 2026: residente soltero todo el año, 18–59 años, solo salario ordinario totalmente imponible; sin dependientes, otros ingresos, subsidio por enfermedad, discapacidad/NPD especial ni deducciones/créditos extra. Tipos anuales20%/25%/32%. Base verificada tras NPD ordinario; seguros no se deducen automáticamente. Sobre EUR83.237,40 anuales, este perfil exige base igual al ingreso anual."</string>
+    <string name="tax_scope_bg" formatted="false">"Bulgaria 2026: residente soltero todo el año, 18–59 años, solo salario; sin dependientes, otros ingresos, régimen especial, créditos ni descuento por declaración. Moneda EUR desde2026; no introduzca BGN antiguos sin conversión verificada. 10% de base anual final verificada tras aportaciones/deducciones legales. Sin cambio de moneda ni redondeos salariales automáticos."</string>
+    <string name="tax_scope_ro" formatted="false">"Rumanía 2026: residente soltero todo el año, 18–59 años, un empleo salarial local; sin dependientes, otros ingresos, régimen especial ni créditos. 10% de suma verificada de bases salariales mensuales tras aportaciones, deducciones personales y exenciones mínimas legales. Compruebe condiciones de cada mes; la reserva anual no las determina."</string>
+    <string name="tax_scope_hu" formatted="false">"Hungría 2026: residente soltero todo el año, 25–59 años, salario ordinario totalmente imponible; sin hijos, otros ingresos, exenciones, deducciones de base ni créditos. Excluye menores de25, madres/familias, discapacidad/recién casados y empleo simplificado/estacional. 15% del salario anual; base verificada igual al ingreso laboral anual. Seguros del empleado no la reducen."</string>
+    <string name="tax_scope_ge" formatted="false">"Georgia 2026: residente soltero todo el año, 18–59 años, salario georgiano ordinario totalmente imponible; sin dependientes, otros ingresos/extranjeros, exenciones, régimen empresarial especial ni créditos. 20% del salario anual; base verificada igual al ingreso laboral anual. Pensión/otros descuentos reales reducen el pago, no otra vez la base."</string>
+    <string name="tax_scope_am" formatted="false">"Armenia 2026: residente soltero todo el año, 18–59 años, salario local ordinario totalmente imponible; sin dependientes, otros ingresos/extranjeros, tipos sectoriales, exenciones, devoluciones hipotecarias/sociales ni créditos. 20% del salario anual; base verificada igual al ingreso anual. Pensión, timbre y salud del empleado aplicables se introducen como descuentos reales separados."</string>
+    <string name="tax_ten_income_hint" formatted="false">"Introduzca ingreso laboral verificado de todo2026, con bonos, paga extra y beneficios imponibles bien valorados, y la base anual final verificada. En Rumanía es la suma de bases mensuales verificadas. Se reserva impuesto anual/12 contra el efectivo del período; bonos anuales/beneficios no monetarios no se añaden al pago mostrado."</string>
+    <string name="tax_ten_base_hint" formatted="false">"Verifique todas las deducciones/exenciones legales antes de introducir la base anual final; la app no determina elegibilidad. Georgia/Armenia/Hungría: base igual al salario anual; seguros no la reducen. Lituania: solo NPD ordinario, sin reducción sobre el límite indicado. Actualice ambos datos anuales si cambia la situación."</string>
+    <string name="tax_ten_cash_hint" formatted="false">"Descuentos reales del empleado de seguridad social/salud/pensión y otros no fiscales del período, o0. En Armenia incluya timbre/primas sanitarias reales cuando proceda. Excluya costes patronales e impuesto reservado aquí. Efectos fiscales legales ya deben figurar en la base; no deduzca efectivo ni alivios dos veces. Estimación anual, no nómina/declaración."</string>
+    <string name="tax_fifteen_common_scope" formatted="false">"Perfil: residente fiscal todo el año, soltero de18–59 años, un empleo nacional ordinario, sin dependientes, otros ingresos/extranjeros, regímenes especiales ni créditos salvo los indicados. País e idioma no establecen derechos. Confirme el perfil completo. Los valores se aplican a todos los períodos; actualícelos si cambia el salario o la situación."</string>
+    <string name="tax_scope_mx" formatted="false">"México2026: tarifa anual ISR, no retención mensual. Sin derecho al subsidio al empleo en NINGÚN mes, exención de salario mínimo, pagos especiales ni créditos. Límite conservador: base anual/12 superior a MXN11.492,66; no prueba por sí solo la elegibilidad. Verifique toda la base y sus exclusiones/deducciones."</string>
+    <string name="tax_scope_br" formatted="false">"Brasil2026: UN pago mensual ordinario en efectivo totalmente gravado, con base mensual verificada tras deducciones legales O descuento simplificado, nunca ambos. Incluye la nueva reducción mensual. Excluye beneficios en especie/exentos, aguinaldo13, vacaciones/eventos separados, ajuste anual y otros créditos. Total anual verificado máximo BRL600.000, límite conservador de la app."</string>
+    <string name="tax_scope_cr" formatted="false">"Costa Rica2026: salario mensual ordinario en efectivo totalmente gravado. Impuesto ANTES de cotizaciones del trabajador con tramos salariales2026. Sin créditos por cónyuge/hijos, bonos exentos, aguinaldo13 ni pagos separados/mes parcial. Deducciones efectivas aparte."</string>
+    <string name="tax_scope_gt" formatted="false">"Guatemala2026: base anual final verificada después de deducciones/exenciones legales, incluidos Q48.000 Y Q3.024 extraordinarios de2026. No exención indexada de2027.5% hasta base Q300.000 y7% del exceso. Verifique aguinaldo/Bono14 exentos y deducciones documentadas en la base."</string>
+    <string name="tax_scope_do" formatted="false">"República Dominicana2026: escala salarial anual y cuotas publicadas. Base verificada ANTES del tramo exento de RD$416.220; no descontarlo otra vez. Sin escala2027 ni créditos educativos/u otros. Deducciones sociales del trabajador aparte."</string>
+    <string name="tax_scope_ke" formatted="false">"Kenia2026: base anual final verificada tras deducciones legales, incluidos SHIF, vivienda y pensión aplicables. Alivio personal residente hasta KES28.800/año incluido una vez, no reembolsable. Sin alivio de seguros privados, otros créditos o exenciones especiales. Deducciones reales aparte, sin repetirlas en la base."</string>
+    <string name="tax_scope_rw" formatted="false">"Ruanda2026: empleo ordinario del primer empleador y base anual verificada. Excluye trabajo ocasional al15%, segundo empleador, dietas de directores y regímenes especiales. Impuesto anual/12 es reserva, no PAYE mensual variable. Cotizaciones efectivas aparte."</string>
+    <string name="tax_scope_ug" formatted="false">"Uganda2026/27:1 julio2026–30 junio2027, NUEVOS tramos residentes. Reserva basada en12 bases mensuales iguales; no cálculo variable/acumulado. Sin antiguo umbral235.000 ni tarifa no residente. Incluye10% adicional sobre base mensual UGX10m."</string>
+    <string name="tax_scope_zm" formatted="false">"Zambia2026: tramos salariales anualizados, incluido tramo mensual cero ZMW5.100. Base anual verificada y deducciones reales. Sin créditos por discapacidad, empleo especial u otros. Excluya costes patronales."</string>
+    <string name="tax_scope_pk" formatted="false">"Pakistán2026/27, año fiscal2027: tramos salariales de la Ley de Finanzas2026 aprobada. Residente solo asalariado, total anual verificado hasta PKR10m. Excluye recargos, supertax, pensiones, negocios y créditos especiales. No tabla2025/26 ni tipos del proyecto."</string>
+    <string name="tax_scope_uz" formatted="false">"Uzbekistán2026: salario residente ordinario totalmente gravado al12%; base anual igual al salario anual. Sin exenciones especiales/alivio de pensión voluntaria. Pensión financiada DENTRO del12% ya incluida: NO repetirla como deducción adicional. Impuesto social patronal excluido."</string>
+    <string name="tax_scope_kz" formatted="false">"Kazajistán2026: nueva escala anual10/15% en8.500MCI; MCI=KZT4.325. Base ya incluye deducción ordinaria anual360MCI y cotizaciones legales, no antigua regla14MCI. Sin práctica privada, negocios, dividendos ni alivios sociales especiales."</string>
+    <string name="tax_scope_ma" formatted="false">"Marruecos2026: salario ordinario, base anual neta gravable verificada tras gastos profesionales, cotizaciones y exenciones legales. Seis tramos actuales, máximo37%. Sin créditos familiares, negocios/agricultura, zonas/tipos especiales u otros créditos. Deducciones reales aparte."</string>
+    <string name="tax_scope_md" formatted="false">"Moldavia2026: régimen ordinario, total anual de empleo estrictamente inferior a MDL360.000 como límite conservador. Base ya incluye alivio MDL29.700 y deducciones legales. Sin parque tecnológico, taxi, alivios personales ampliados/familiares u otros créditos."</string>
+    <string name="tax_scope_mk" formatted="false">"Macedonia del Norte2026: salario ordinario,10% de base anual final verificada tras cotizaciones legales y reducción personal anual MKD131.184. Sin otros ingresos/exenciones/créditos especiales. Deducciones efectivas aparte; no repetir el alivio."</string>
+    <string name="tax_monthly_verified_base" formatted="false">"Base gravable verificada de este pago mensual"</string>
+    <string name="tax_br_annual_hint" formatted="false">"Total verificado de empleo de2026, incluidos aguinaldo13, vacaciones y bonos, para comprobar el límite BRL600.000. El cálculo mensual no incluye su impuesto separado ni ajuste anual. No incluya esos eventos en el efectivo/base del mes ordinario."</string>
+    <string name="tax_br_monthly_base_hint" formatted="false">"Mismo pago mensual ordinario: base verificada tras deducciones legales. La app compara con bruto menos BRL607,20 y usa la base menor, sin sumar ambas deducciones. Sin tasa INSS automática. Actualice para el pago consultado; sin versiones históricas del perfil."</string>
+    <string name="tax_fifteen_income_hint" formatted="false">"Ingreso laboral verificado de TODO el año fiscal, incluidos bonos/beneficios gravados correctamente valorados, y base anual final. UG/PK comienzan julio2026; PK año fiscal2027. Tarifa anual/12 es reserva sobre efectivo, no nómina/acumulado/neto anual. UG exige12 bases mensuales iguales."</string>
+    <string name="tax_fifteen_base_hint" formatted="false">"Base anual FINAL verificada tras deducciones/alivios legales; no descontar otra vez un tramo al0%. GT incluye Q3.024 extra2026; KZ360MCI; MK131.184MKD. UZ:base=salario anual. MD:total inferior a360.000. No se infiere elegibilidad."</string>
+    <string name="tax_fifteen_cash_hint" formatted="false">"Deducciones reales del trabajador distintas del ISR para este pago, o0 explícito: sociales, salud, pensión/gravámenes aplicables. Excluya costes patronales/ISR calculado aquí. UZ:no repetir pensión incluida dentro del12%. Efectos legales ya en la base verificada; sin doble descuento."</string>
+    <string name="tax_wave_common_scope" formatted="false">"Perfil: empleado soltero18–59 que vive/trabaja localmente todo el año, un empleo ordinario, sin dependientes, otros ingresos/extranjeros ni regímenes/créditos especiales salvo indicación. Verifique residencia fiscal y condiciones; país/idioma no prueban derechos. Solo nómina local, sin impuesto del país de origen. Valores comunes a todos los períodos; actualícelos."</string>
+    <string name="tax_scope_pa" formatted="false">"Panamá2026: salario residente ordinario y base anual final verificada.0% hasta PAB11.000;15% hasta50.000;25% del exceso. Sin gastos de representación/pagos a tipo separado, otros ingresos o créditos especiales. Cotizaciones reales aparte; no repetir tramo cero."</string>
+    <string name="tax_scope_ni" formatted="false">"Nicaragua2026: salario residente ordinario, base anual verificada tras INSS/ahorro y exenciones legales. Tarifa0/15/20/25/30%. Verifique aguinaldo exento en la base; no restar otra vez tramo C$100.000. Sin terminación/pagos separados/créditos especiales. Reserva anual, no retención acumulativa."</string>
+    <string name="tax_scope_sv" formatted="false">"El Salvador2026: UN pago mensual ordinario y base verificada tras deducciones legales. Tabla mensual publicada con cuotas fijas; sin recálculo acumulado junio/diciembre, liquidación anual, quincena o mes parcial. Sin pagos especiales/exentos u otros créditos."</string>
+    <string name="tax_scope_hn" formatted="false">"Honduras2026: salario residente ordinario, base anual final ya con deducción completa elegible HNL40.000 educativa/médica y demás deducciones/exenciones legales. Nuevos tramos2026. Sin alivio mayores65, negocio/créditos especiales. No repetir tramo cero."</string>
+    <string name="tax_scope_py" formatted="false">"Paraguay2026: empleado residente YA inscrito IRP-RSP antes2026. Excluye primer año de inscripción/cruce del umbral. Verifique total anual, ingresos IRP antes de gastos sin aguinaldo exento y base neta. Hasta PYG80m gravados sin pago; por encima tarifa progresiva8/9/10% sobre base neta. Sin capital/negocio/otros ingresos/créditos."</string>
+    <string name="tax_scope_ec" formatted="false">"Ecuador2026: residente continental sin cargas, discapacidad/enfermedad especial ni alivios especiales. Cuotas anuales2026. Gastos personales elegibles verificados generan rebaja18% hasta7canastas, limitada al impuesto. Excluye Galápagos/topes familiares o especiales. Rebaja del IMPUESTO, no deducción repetida de la base."</string>
+    <string name="tax_scope_na" formatted="false">"Namibia2026/27:1marzo2026–28febrero2027, salario residente ordinario. Base anual final verificada tras deducciones/beneficios valorados. Tramo cero NAD100.000 y18/25/28/30/32/37%. Sin retiros de pensión, agricultura/negocio/otros ingresos/créditos especiales. Reserva anual, no PAYE acumulado."</string>
+    <string name="tax_scope_kh" formatted="false">"Camboya2026: salario mensual residente ordinario en efectivo, sin alivio dependientes/cónyuge, no residente o impuesto separado de beneficios. Base mensual verificada tras deducciones legales;0/5/10/15/20%. No repetir tramo cero KHR1,5m. Cotizaciones reales aparte."</string>
+    <string name="tax_scope_az" formatted="false">"Azerbaiyán2026: salario mensual ordinario plenamente gravado en efectivo, empleo principal privado NO petrolero/gas.3/10/14%, exención AZN200 una vez si bruto&lt;=2.500. Sin sector público/petróleo/gas ni alivios especiales. Seguro del empleado no reduce base ISR. No tipos2027/2028."</string>
+    <string name="tax_scope_bh" formatted="false">"Baréin2026: salario local ordinario de expatriado no ciudadano GCC. Sin ISR local en este perfil; ingrese deducciones reales SIO/desempleo/pensión/otras o0 explícito. Sin empleador, negocio/otros ingresos ni impuesto del país de origen."</string>
+    <string name="tax_scope_kw" formatted="false">"Kuwait2026: salario local ordinario de expatriado no GCC. Sin ISR personal salarial local. Seguro/pensión/otras deducciones reales explícitas o0. Sin impuesto empresarial, empleador ni impuesto extranjero/de origen."</string>
+    <string name="tax_scope_om" formatted="false">"Omán2026: salario local ordinario de expatriado no GCC. Sin ISR local2026; nueva ley inicia2028, NO se cobra5% aquí ni se habilitan años futuros. Deducciones sociales/salud/pensión reales o0; sin empleador/impuestos extranjeros."</string>
+    <string name="tax_scope_qa" formatted="false">"Catar2026: salario local ordinario de expatriado no GCC, excluido de ISR local. Deducciones reales seguro/pensión/otras o0; país no determina exención de cotización. Sin negocio/empresa, empleador ni impuesto extranjero/de origen."</string>
+    <string name="tax_scope_bn" formatted="false">"Brunéi2026: salario local ordinario, sin ISR personal. Deducciones reales verificadas SPK/pensión/social/otras o0. Sin tasa/elegibilidad automática. Sin negocio/otros ingresos, empleador ni impuestos extranjeros/de origen."</string>
+    <string name="tax_scope_bs" formatted="false">"Bahamas2026: salario local ordinario, sin ISR personal nacional. Deducciones reales verificadas NIB/pensión/otras o0. Sin exención automática de cotización, negocio/otros ingresos, empleador ni impuestos extranjeros/de origen."</string>
+    <string name="tax_ec_mainland" formatted="false">"Ecuador continental"</string>
+    <string name="tax_ec_expenses" formatted="false">"Gastos personales anuales elegibles verificados"</string>
+    <string name="tax_ec_expenses_hint" formatted="false">"Continental sin cargas/estatus especial: gastos elegibles2026 verificados o0. Rebaja18% de hasta USD5.752,60 (7×821,80), redondeada a centavos y limitada al impuesto; máximo USD1.035,47. NO deducir esos mismos gastos de la base anual. Sin elegibilidad automática, Galápagos/topes especiales."</string>
+    <string name="tax_py_receipts" formatted="false">"Ingresos anuales gravados IRP antes de gastos: verificados"</string>
+    <string name="tax_py_receipts_hint" formatted="false">"Paraguay: ingresos laborales brutos gravados IRP-RSP antes de gastos, sin aguinaldo/ingresos legalmente exentos. No equivalen necesariamente al total laboral o base neta. Deben ser&lt;=total anual y base final&lt;=esta cifra. Umbral PYG80m usa este campo, no todo el bruto. Inscripción anterior2026 requerida."</string>
+    <string name="tax_wave_annual_hint" formatted="false">"Total laboral verificado de TODO el año fiscal, bonos/beneficios bien valorados y base anual final tras deducciones/exenciones legales. Namibia2026/27 inicia1marzo2026; otros calendario2026. Impuesto anual/12 es reserva sobre efectivo, no nómina/acumulado/neto anual. No añadir todas las extras anuales al efectivo."</string>
+    <string name="tax_wave_monthly_hint" formatted="false">"Base final verificada del MISMO pago mensual ordinario mostrado en bruto, tras deducciones legales. No repetir tramo cero ni deducciones. Base común a períodos: actualícela por pago. Sin ajuste acumulado/anual SV ni impuesto de beneficios KH."</string>
+    <string name="tax_wave_base_hint" formatted="false">"Base ANUAL final verificada tras deducciones/exenciones legales y ANTES del tramo cero. HN:deducción completa elegible40.000 ya incluida. PY:base&lt;=ingresos gravados verificados, sin aguinaldo exento. EC:gastos personales rebajan impuesto, no base otra vez. Verifique derechos."</string>
+    <string name="tax_wave_cash_hint" formatted="false">"Deducciones reales del trabajador distintas de ISR para este pago o0 explícito: sociales, salud, pensión, desempleo/NIB/SPK/otras. Sin empleador ni ISR ya calculado. Efectos legales ya en la base verificada. No ISR local NO significa sin deducciones. Sin impuestos extranjeros/de origen."</string>
+    <string name="tax_twenty_common_scope" formatted="false">"Perfil: residente soltero de31–59años, vive/trabaja localmente TODO el año fiscal, un empleo ordinario, sin dependientes, otras rentas/extranjeras ni régimen/crédito especial salvo indicación. País/idioma no prueban derechos. Verifique base final y descuentos reales del empleado; sin costes patronales ni impuesto extranjero. Actualice los datos para cada pago."</string>
+    <string name="tax_scope_at" formatted="false">"2026: salario anual ordinario. Crédito de transporte496 y complemento según renta hasta804, limitados al impuesto. Sin crédito de desplazamiento aumentado, commuter euro, pagas13/14 con impuesto separado ni devolución de seguridad social. Deducciones legales ya en la base; no repetir tramo cero."</string>
+    <string name="tax_scope_cy" formatted="false">"Reforma2026: base salarial anual final verificada tras deducciones/exenciones legales. Sin derecho automático a ayudas de vivienda, ecológicas, familiares o primer empleo, otros ingresos ni créditos especiales."</string>
+    <string name="tax_scope_mt" formatted="false">"2026: tabla SINGLE solamente; sin tarifas familiares/padres, régimen parcial especial15% ni otros créditos. Base anual final verificada."</string>
+    <string name="tax_scope_gr" formatted="false">"2026: SIN hijos, edad31–59. Nueva escala; crédito777 decreciente sobre12000 incluido una vez, limitado al impuesto. Cumple gasto electrónico; sin penalización por déficit, exención ni otros créditos."</string>
+    <string name="tax_scope_si" formatted="false">"2026: tabla anual publicada sobre base final verificada tras cotizaciones y desgravaciones legales. No deducirlas otra vez. Sin regímenes de jóvenes/estudiantes/discapacidad/voluntariado, renta extranjera ni créditos especiales."</string>
+    <string name="tax_scope_sk" formatted="false">"2026: nuevas bandas anuales19/25/30/35%. Base final tras cotizaciones y mínimos legales verificados, incluida reducción según renta. Sin doble deducción ni créditos de hijos/hipoteca/especiales."</string>
+    <string name="tax_scope_hr" formatted="false">"2026: solo ZAGREB,31–59años, sin exención juvenil/retornados. Base final incluye mínimo elegible7200 y pensión legal.23/33% con umbral60000. Otros municipios no disponibles."</string>
+    <string name="tax_scope_rs" formatted="false">"2026: retención MENSUAL ordinaria10% sobre base final verificada tras mínimo legal correspondiente a fecha/jornada. No deducir seguro de nuevo. No incluye impuesto anual adicional por rentas altas ni regularización acumulada/exenciones especiales."</string>
+    <string name="tax_scope_me" formatted="false">"2026: salario MENSUAL en efectivo plenamente gravado; base=bruto ANTES de cotizaciones. Bandas0/9/15%. Recargo municipal salarial a cargo del EMPLEADOR, no descuento adicional del trabajador. Sin pagos especiales ni liquidación anual."</string>
+    <string name="tax_scope_al" formatted="false">"2026: tarifa anual13/23%; base final tras mínimo personal según renta y deducciones legales. Mínimo600000/420000/360000 ya incluido; no duplicarlo. Sin créditos por hijos/educación ni otras rentas."</string>
+    <string name="tax_scope_ba" formatted="false">"2026: solo FEDERACIÓN de Bosnia y Herzegovina, no Republika Srpska ni Brčko. Base salarial anual final tras cotizaciones y mínimo elegible3600.10%, sin créditos adicionales."</string>
+    <string name="tax_scope_ng" formatted="false">"NTA/JRB2026:12 salarios MENSUALES IGUALES en efectivo; total anual=12×bruto actual. Sin bonos, beneficios, variación ni puesto militar/exento. Exención de salario mínimo hasta70000/mes incluida. Base anual tras desgravaciones legales; sin antiguo CRA ni doble tramo cero800000."</string>
+    <string name="tax_scope_gh" formatted="false">"2026: salario residente MENSUAL ordinario, tabla desde1SEPTIEMBRE. Fecha real verificada y base mensual legal; fin del período en el MISMO mes. Meses anteriores, bonos/horas extra bonificadas, trabajo ocasional, no residentes y liquidación anual/acumulada no disponibles."</string>
+    <string name="tax_scope_tz" formatted="false">"2026: CONTINENTE, residente, empleo principal, PAYE MENSUAL. Base tras deducciones/pensión admitida, antes del tramo cero. Sin Zanzíbar, segundo empleo/no residente30%, pagos especiales ni liquidación anual."</string>
+    <string name="tax_scope_bw" formatted="false">"2026/27 desde1julio2026: tabla anual residente promulgada con NUEVO27,5% sobre400000, no antiguo máximo25%. Base final verificada; sin no residentes, indemnización/pensión global, negocio ni créditos especiales."</string>
+    <string name="tax_scope_mu" formatted="false">"Año de INGRESOS2026/27 desde1julio2026, no año de liquidación. Total anual laboral&lt;=12m MUR; sin otras rentas.0/10/20% dentro de este alcance. Excluye35%/Fair Share de altos ingresos y regímenes/créditos especiales. Deducciones verificadas."</string>
+    <string name="tax_scope_eg" formatted="false">"2026: residente ordinario, TOTAL anual&lt;=600000EGP. Base final incluye exención personal elegible20000 y deducciones legales, antes del tramo cero40000. Redondeo de base HACIA ABAJO a10EGP. Sin retirada de tramos por ingresos altos/créditos especiales. Seguro/timbre y descuentos reales por separado."</string>
+    <string name="tax_scope_sz" formatted="false">"2026/27 desde1julio2026: salario ordinario;20/25/30/33% y rebaja básica8200 no reembolsable una vez. Umbral efectivo41000 NO es otra deducción. Sin edad60+, jubilación/despido especial ni otros créditos. Base final verificada."</string>
+    <string name="tax_scope_ls" formatted="false">"2026/27 desde1abril2026: primer tramo anual77760 al20%, exceso30%, crédito12240 no reembolsable. Reemplaza cifras antiguas de RSL. Base laboral final; sin impuesto patronal de beneficios, no residente, fin de contrato ni créditos especiales."</string>
+    <string name="tax_scope_jo" formatted="false">"2026: salario anual residente; base final incluye exención personal elegible9000 y deducciones documentadas.5/10/15/20/25/30% más contribución nacional1% sobre200000. Fracciones de dinar de base/impuesto anual descartadas conforme a ley. Sin régimen/crédito especial."</string>
+    <string name="tax_payment_date" formatted="false">"Fecha real de pago · YYYY-MM-DD"</string>
+    <string name="tax_payment_date_hint" formatted="false">"Solo Ghana: fecha verificada entre2026-09-01 y2026-12-31, en el MISMO mes del fin del período. Si no, neto no disponible. Dígitos latinos, p.ej.2026-10-31. Actualice fecha/base para otro pago. Sin tablas anteriores/liquidación anual o acumulada. Incluida en copias."</string>
+    <string name="tax_payment_date_invalid" formatted="false">"Introduzca fecha válida YYYY-MM-DD con dígitos latinos, o deje vacío."</string>
+    <string name="tax_zagreb" formatted="false">"Zagreb"</string>
+    <string name="tax_fbih" formatted="false">"Federación de Bosnia y Herzegovina"</string>
+    <string name="tax_tz_mainland" formatted="false">"Tanzania continental"</string>
+    <string name="tax_twenty_annual_hint" formatted="false">"Verifique TOTAL laboral y base final del año fiscal COMPLETO. BW/MU/SZ2026/27 desde1julio; LS desde1abril; demás2026calendario. Impuesto anual/12 es una reserva contra efectivo del período, no retención acumulada ni neto anual. Nigeria requiere12 salarios iguales. Bonos/beneficios no se añaden íntegros a este pago."</string>
+    <string name="tax_twenty_base_hint" formatted="false">"Base anual FINAL verificada tras deducciones/mínimos legales, ANTES de tramos cero y créditos. AL/BA/HR/EG/JO: mínimo básico ya incluido. AT/GR/SZ/LS: créditos sobre IMPUESTO por separado. No duplicar efectivo/tramo cero; verificar derechos individuales."</string>
+    <string name="tax_twenty_monthly_hint" formatted="false">"Base final verificada del MISMO pago mensual, tras mínimos/deducciones legales, antes de tramos cero. RS: mínimo según fecha/jornada. ME: base=bruto antes de cotizar. GH: fecha/mes; TZ: empleo principal continental. Sin regularización anual/acumulada; actualice para otro pago."</string>
+    <string name="tax_us_ak" formatted="false">"Alaska"</string>
+    <string name="tax_us_nv" formatted="false">"Nevada"</string>
+    <string name="tax_us_sd" formatted="false">"Dakota del Sur"</string>
+    <string name="tax_us_tn" formatted="false">"Tennessee"</string>
+    <string name="tax_us_wa" formatted="false">"Washington"</string>
+    <string name="tax_us_wy" formatted="false">"Wyoming"</string>
+    <string name="tax_us_nh" formatted="false">"Nuevo Hampshire"</string>
+    <string name="tax_us_az" formatted="false">"Arizona"</string>
+    <string name="tax_us_ia" formatted="false">"Iowa"</string>
+    <string name="tax_us_il" formatted="false">"Illinois"</string>
+    <string name="tax_us_mi" formatted="false">"Míchigan"</string>
+    <string name="tax_us_nc" formatted="false">"Carolina del Norte"</string>
+    <string name="tax_us_ut" formatted="false">"Utah"</string>
+    <string name="tax_us_ky" formatted="false">"Kentucky"</string>
+    <string name="tax_us_pa" formatted="false">"Pensilvania"</string>
+    <string name="tax_us_in" formatted="false">"Indiana"</string>
+    <string name="tax_us_ma" formatted="false">"Massachusetts"</string>
+    <string name="tax_us_ga" formatted="false">"Georgia"</string>
+    <string name="tax_us_la" formatted="false">"Luisiana"</string>
+    <string name="tax_us_ms" formatted="false">"Misisipi"</string>
+    <string name="tax_us_state_base" formatted="false">"Base estatal anual verificada"</string>
+    <string name="tax_us_base_hint" formatted="false">"Base final DESPUÉS de deducciones y exenciones estatales legales, ANTES de tramos al 0% y créditos. No copie la base federal. Verifique la elegibilidad personal."</string>
+    <string name="tax_us_state_relief" formatted="false">"Reducción anual estatal verificada"</string>
+    <string name="tax_us_relief_hint" formatted="false">"Reducción total NO REEMBOLSABLE aplicable, incluidos beneficios personales o por bajos ingresos. Importe de 2026 verificado, o 0 explícito si no corresponde. Limitada al impuesto; sin reembolso ni elegibilidad automática."</string>
+    <string name="tax_us_local_tax" formatted="false">"Impuesto local del empleado del período"</string>
+    <string name="tax_us_local_hint" formatted="false">"Importe real verificado municipal, del condado, escolar u ocupacional para este pago, o 0 explícito. No se calculan tasas ni exenciones locales. No repita el importe en otras deducciones."</string>
+    <string name="tax_us_zero_hint" formatted="false">"Sin impuesto estatal sobre salarios ordinarios en este perfil de 2026. Siguen aplicándose impuesto federal, Social Security, Medicare y deducciones reales locales y del empleado. Los cambios de Washington para 2028 no se aplican a 2026."</string>
+    <string name="tax_us_pa_ut_hint" formatted="false">"PA/UT: solo salarios íntegramente gravados sin ajustes; base estatal = 12 × bruto mensual actual. PA no tiene deducción estándar. En UT las deducciones federales afectan un crédito separado, no esta base; verifique el crédito de 2026."</string>
+    <string name="tax_us_ms_hint" formatted="false">"Misisipi: 4% sobre la base estatal final superior a $10.000. El tramo cero se aplica aquí una sola vez; no lo reste de la base. Declaración conjunta con un único perceptor: un tramo."</string>
+    <string name="tax_us_ma_hint" formatted="false">"Massachusetts: salarios ordinarios al 5%, bruto familiar anual limitado a $1.000.000 para excluir la sobretasa. Verifique aparte la reducción No Tax Status o Limited Income Credit."</string>
+    <string name="tax_us_cash_hint" formatted="false">"Otras deducciones REALES del empleado del período, o 0: permisos pagados, WA Cares, desempleo, PFML y aportaciones aplicables. Sin costos patronales. Excluya impuestos federal/estatal/local, Social Security y Medicare ya calculados. Beneficios antes de impuestos fuera del perfil."</string>
+    <string name="tax_us_current_inputs" formatted="false">"Base y reducción estatales son datos manuales VERIFICADOS. Bruto anual = 12 × bruto mensual actual; impuesto/12 es una reserva media, no retención W-4/acumulada. Actualice cada pago/período. Sin impuestos locales automáticos, créditos reembolsables ni casos entre estados."</string>
+    <string name="tax_us_state_tax" formatted="false">"Impuesto estatal sobre la renta"</string>
+    <string name="tax_us_al" formatted="false">"Alabama"</string>
+    <string name="tax_us_ar" formatted="false">"Arkansas"</string>
+    <string name="tax_us_ca" formatted="false">"California"</string>
+    <string name="tax_us_co" formatted="false">"Colorado"</string>
+    <string name="tax_us_ct" formatted="false">"Connecticut"</string>
+    <string name="tax_us_de" formatted="false">"Delaware"</string>
+    <string name="tax_us_hi" formatted="false">"Hawái"</string>
+    <string name="tax_us_id" formatted="false">"Idaho"</string>
+    <string name="tax_us_ks" formatted="false">"Kansas"</string>
+    <string name="tax_us_md" formatted="false">"Maryland"</string>
+    <string name="tax_us_me" formatted="false">"Maine"</string>
+    <string name="tax_us_mn" formatted="false">"Minnesota"</string>
+    <string name="tax_us_mo" formatted="false">"Misuri"</string>
+    <string name="tax_us_mt" formatted="false">"Montana"</string>
+    <string name="tax_us_nd" formatted="false">"Dakota del Norte"</string>
+    <string name="tax_us_ne" formatted="false">"Nebraska"</string>
+    <string name="tax_us_nj" formatted="false">"Nueva Jersey"</string>
+    <string name="tax_us_nm" formatted="false">"Nuevo México"</string>
+    <string name="tax_us_ny" formatted="false">"Nueva York"</string>
+    <string name="tax_us_oh" formatted="false">"Ohio"</string>
+    <string name="tax_us_ok" formatted="false">"Oklahoma"</string>
+    <string name="tax_us_or" formatted="false">"Oregón"</string>
+    <string name="tax_us_ri" formatted="false">"Rhode Island"</string>
+    <string name="tax_us_sc" formatted="false">"Carolina del Sur"</string>
+    <string name="tax_us_va" formatted="false">"Virginia"</string>
+    <string name="tax_us_vt" formatted="false">"Vermont"</string>
+    <string name="tax_us_wi" formatted="false">"Wisconsin"</string>
+    <string name="tax_us_wv" formatted="false">"Virginia Occidental"</string>
+    <string name="tax_us_final_scope" formatted="false">"28 perfiles nuevos: salarios ordinarios de residentes; sin impuesto mínimo alternativo ni regímenes especiales. Límite de bruto familiar anual para cálculo automático: $1.000.000, con límites menores indicados abajo. Base, alivios y deducciones deben verificarse. Cobertura limitada."</string>
+    <string name="tax_us_manual_scope" formatted="false">"CO / ID / VT: SOLO INTRODUCCIÓN DE OBLIGACIÓN VERIFICADA. No se ha verificado aquí una tarifa automática para la declaración de 2026. Introduzca la obligación anual estatal final de 2026 verificada externamente; la app no calcula ese importe ni la elegibilidad."</string>
+    <string name="tax_us_verified_state_tax" formatted="false">"Obligación anual estatal final verificada"</string>
+    <string name="tax_us_verified_tax_hint" formatted="false">"Obligación final de 2026 después de alivios no reembolsables, ANTES de retenciones/pagos estimados. No saldo pendiente, retenciones, impuesto anterior ni devolución. 0 solo si verificado. Se divide entre 12 una vez; base y alivio se ignoran en esta vía. Impuestos locales y otras deducciones aparte. Actualice cada pago."</string>
+    <string name="tax_us_final_limits" formatted="false">"Límites automáticos de bruto familiar anual: CT $50.000 SINGLE / $100.000 MFJ; NY $107.650; AR $94.700. No se calculan recapturas, recargos de altos ingresos ni tablas alternativas de AR. Fuera del alcance, neto no disponible."</string>
+    <string name="tax_us_sc_hint" formatted="false">"Carolina del Sur usa la NUEVA ley de 2026 de dos tramos y SCIAD. La base final debe incluir el SCIAD elegible y su reducción verificados. No copie automáticamente la deducción federal ni los tramos anteriores 0/3/6%."</string>
+    <string name="tax_us_or_hint" formatted="false">"Oregón usa tablas oficiales ESTIMADAS de 2026 con importes base redondeados publicados. Los valores finales pueden cambiar. Verifique base, deducción legal del impuesto federal y créditos. Transporte, permisos pagados e impuestos locales se introducen como deducciones reales."</string>
+    <string name="tax_us_oh_hint" formatted="false">"Ohio 2026: cero hasta $26.050 de base estatal final; por encima se añaden $332 y 2,75% del exceso. Verifique créditos personales y de bajos ingresos en el alivio estatal. Impuesto local/escolar aparte."</string>
+    <string name="tax_us_manual_result" formatted="false">"Impuesto estatal · obligación introducida / 12"</string>
+    <string name="tax_next_common_scope" formatted="false">"Solo2026: empleado residente soltero31–59, todo el año, un empleo local ordinario; sin dependientes, otros ingresos o regímenes especiales. Verifique bases, créditos y deducciones. Sin costos patronales, cambio de moneda ni perfiles históricos; actualice cada pago."</string>
+    <string name="tax_next_annual_hint" formatted="false">"Bruto TOTAL anual de2026 verificado. Impuesto anual/12 es una reserva, no retención acumulada de salario variable, declaración o devolución. No añada íntegramente extras anuales a este pago."</string>
+    <string name="tax_next_monthly_hint" formatted="false">"Base final verificada de ESTE pago mensual. IS/CL/UY/BO no son declaraciones anuales. UY puede incluir aumento legal6%; las aportaciones reducen impuesto mediante crédito, no otra vez la base. BO ya incluye deducción legal2SMN."</string>
+    <string name="tax_next_base_hint" formatted="false">"Base anual nacional final tras deducciones legales, antes de tramos cero y créditos. NL incluye seguro Box1. Umbrales JM/FJ/LU se aplican aquí una vez. BB25000y alivio personal BZ ya deben estar descontados."</string>
+    <string name="tax_next_annual_relief" formatted="false">"Reducción anual verificada no reembolsable"</string>
+    <string name="tax_next_monthly_relief" formatted="false">"Reducción verificada de este pago mensual"</string>
+    <string name="tax_next_relief_hint" formatted="false">"Reducción elegible verificada o0 explícito. Reduce IMPUESTO hasta su importe, sin reembolso ni elegibilidad automática. Anual salvo IS/CL/UY/BO mensual. NL incluye créditos Box1; LU efecto del fondo. No duplique créditos incluidos en otros impuestos."</string>
+    <string name="tax_next_extra_tax" formatted="false">"Impuestos adicionales del empleado del período"</string>
+    <string name="tax_next_extra_hint" formatted="false">"Impuestos REALES verificados no calculados, o0: locales, cantonales, regionales, religiosos u otras tasas. Reconstrucción JP, fondo LU7% y seguro NL ya incluidos; IS incluye componente municipal estándar. Sin duplicarlos."</string>
+    <string name="tax_next_cash_hint" formatted="false">"Otras deducciones REALES o0: pensión, seguridad social, salud y seguros del empleado; sin costos patronales. Excluya impuestos calculados y adicionales separados. Seguro nacional NL ya incluido. Sin doble deducción de la base."</string>
+    <string name="tax_next_verified_tax" formatted="false">"Impuesto nacional/regional anual final verificado"</string>
+    <string name="tax_next_verified_hint" formatted="false">"Modo manual: obligación del año de ingresos2026 tras créditos no reembolsables, ANTES de retenciones/anticipos. No impuesto retenido, saldo, devolución ni año anterior. Se divide entre12 una vez. Impuesto municipal aparte; base y reducción ignoradas."</string>
+    <string name="tax_next_cl_date_hint" formatted="false">"Chile: fecha real YYYY-MM-DD de2026, dígitos latinos; tablas enero–noviembre únicamente. Debe coincidir con el mes final del período. Sin coincidencia, neto no disponible. No tabla anual o52bis implícita."</string>
+    <string name="tax_next_nl_charge" formatted="false">"Impuesto Box1 y seguro nacional"</string>
+    <string name="tax_next_manual_result" formatted="false">"Impuesto nacional/regional · importe anual verificado /12"</string>
+    <string name="tax_next_nl" formatted="false">"Países Bajos: Box1 antes de AOW, bruto anual≤78426EUR. Tarifas2026 incluyen seguro nacional27,65% en primer tramo. Créditos combinados verificados; no deduzca ese seguro otra vez. Sin Box2/3 ni régimen30%."</string>
+    <string name="tax_next_be" formatted="false">"Bélgica: SOLO obligación anual nacional/regional verificada manualmente. Ingresos2026 corresponden a liquidación2027, no2026. Impuesto municipal separado. Sin cálculo regional, créditos o flexi-job automático."</string>
+    <string name="tax_next_lu" formatted="false">"Luxemburgo: clase1, bruto≤150000EUR. Tarifa vigente desde2025; base redondeada hacia abajo a50EUR y fondo7% incluido antes del alivio combinado verificado. Sin otras clases, trabajo transfronterizo o aporte de dependencia."</string>
+    <string name="tax_next_ch" formatted="false">"Suiza: liquidación federal ordinaria SINGLE, bruto≤100000CHF. Tabla2026, base hacia abajo a100CHF e impuesto a0,05CHF; menos25CHF no se cobra. Cantón/municipio/iglesia aparte; sin tarifa en origen."</string>
+    <string name="tax_next_se" formatted="false">"Suecia: solo impuesto nacional2026, umbral643000SEK tras deducción básica, no bruto660400. Base hacia abajo a100SEK, exceso mínimo200. Impuestos locales y reparto de créditos verificados aparte."</string>
+    <string name="tax_next_fi" formatted="false">"Finlandia: solo tarifa estatal2026. Créditos nacionales verificados; municipio/iglesia/Yle y otras tasas separados. Aportaciones reales de pensión/desempleo/salud; sin reparto automático de créditos."</string>
+    <string name="tax_next_is" formatted="false">"Islandia: tabla MENSUAL2026 publicada con componente municipal estándar. Crédito mensual verificado, no anual/12. Sin diferencias de liquidación municipal, arrastres, transferencias conyugales o ajuste anual."</string>
+    <string name="tax_next_it" formatted="false">"Italia: IRPEF2026 ordinario23/33/43%, bruto≤200000EUR. Alivios laborales verificados; impuestos regional/municipal reales aparte. Sin regímenes sustitutivos de horas extra, nocturnidad, turnos o bonos."</string>
+    <string name="tax_next_jp" formatted="false">"Japón: renta anual ordinaria de residente, bruto≤100mJPY. Base legal final hacia abajo a1000JPY. Reconstrucción2026 del2,1% tras créditos nacionales calculada aparte. Impuesto local real separado, sin reglas2027."</string>
+    <string name="tax_next_kr" formatted="false">"Corea del Sur: impuesto nacional progresivo ordinario; base final y créditos nacionales verificados. Impuesto local y seguros reales separados. Sin elección plana para extranjeros ni régimen especial."</string>
+    <string name="tax_next_ar" formatted="false">"Argentina: tabla oficial ANUAL/final2026 del artículo94 con cuotas publicadas. Base anual final verificada. Impuesto/12 es reserva, no retención acumulada semestral, reparto SAC ni devolución."</string>
+    <string name="tax_next_cl" formatted="false">"Chile: IUSC mensual ordinario según fecha real. Solo tablas enero–noviembre2026; no52bis. Base/crédito verificados, pensión/salud reales aparte. Sin ajuste anual."</string>
+    <string name="tax_next_uy" formatted="false">"Uruguay: IRPF MENSUAL2026 ordinario. Base verificada con aumento6% aplicable, hasta106% del bruto. Aportaciones reducen IMPUESTO mediante crédito verificado14/8%, no la base otra vez. Sin aguinaldo/vacaciones especiales o ajuste anual."</string>
+    <string name="tax_next_bo" formatted="false">"Bolivia: RC-IVA mensual13% tras2SMN legales y aportes deducibles. Crédito mensual verificado incluye13%de1SMN, facturas y saldo previo indexado elegibles. Sin salario mínimo, derecho o arrastre automático."</string>
+    <string name="tax_next_jm" formatted="false">"Jamaica: reserva ANUAL2026; umbral anual ponderado1876614JMD, no1902360 de abril.25/30%, umbral superior6m de ingreso estatutario. Base tras aportes legales, antes de tramo cero. Sin PAYE acumulado ni alivio65+."</string>
+    <string name="tax_next_tt" formatted="false">"Trinidad y Tobago:25/30% anual con umbral1mTTD de base final. Deducción personal90000ya incluida en base. NIS/salud reales aparte; sin gravámenes empresariales del empleador."</string>
+    <string name="tax_next_bz" formatted="false">"Belice:25% de base anual final verificada. Alivio personal25600/24600/22600/19600según bruto ya descontado. Sin elegibilidad benéfica/reembolso automático. Seguridad social real aparte."</string>
+    <string name="tax_next_gy" formatted="false">"Guyana:2026tasas25/35%, umbral gravable3360000GYD. Base final tras exención elegible≥1680000o un tercio, NIS y horas extra legales. Sin elegibilidad especial o seguro automáticos."</string>
+    <string name="tax_next_bb" formatted="false">"Barbados: NUEVAS tasas2026de11,5/27,5%. Exención personal25000BBD ya en base; primeros50000de esa base al11,5%. No repita tramo cero25000. NIS/tasas reales aparte."</string>
+    <string name="tax_next_fj" formatted="false">"Fiyi: tarifa residente vigente desde2024, válida2026; cero30000FJD una vez. Sin antiguos SRT/ECAL separados, no residente o pagos especiales. Base/créditos/aportes reales verificados."</string>
+    <string name="menu_open" formatted="false">"Abrir menú"</string>
+    <string name="shift_global_hint" formatted="false">"Usa el deslizador del turno al pie de cualquier pantalla. Elige oficina o casa aquí antes de empezar."</string>
+    <string name="shift_active" formatted="false">"Turno activo"</string>
+    <string name="shift_ready" formatted="false">"Listo para empezar"</string>
+    <string name="shift_options" formatted="false">"Opciones del turno"</string>
+    <string name="shift_done" formatted="false">"Listo"</string>
+    <string name="period_current" formatted="false">"Período actual"</string>
+    <string name="period_choose" formatted="false">"Elegir mes y año"</string>
+    <string name="period_end_hint" formatted="false">"Elige el mes en que TERMINA el período de pago. Las fechas exactas aparecen abajo."</string>
+    <string name="period_year" formatted="false">"Año"</string>
+    <string name="period_year_hint" formatted="false">"Introduce un año entre 1900 y 2100."</string>
+    <string name="period_apply" formatted="false">"Mostrar período"</string>
+    <string name="widget_name" formatted="false">"ShiftHours · Turno"</string>
+    <string name="widget_description" formatted="false">"Inicia un turno en oficina o casa, finalízalo y consulta su duración en curso."</string>
+    <string name="widget_open" formatted="false">"Abrir app"</string>
+    <string name="widget_error" formatted="false">"Abre la app para comprobar tus datos o restaurar una copia."</string>
+    <string name="widget_setup" formatted="false">"Completa primero la configuración inicial en la app."</string>
+    <string name="widget_inactive" formatted="false">"Sin turno activo"</string>
+    <string name="widget_start_office" formatted="false">"Iniciar · Oficina"</string>
+    <string name="widget_start_home" formatted="false">"Iniciar · Casa"</string>
+    <string name="widget_stop" formatted="false">"Finalizar turno"</string>
+    <string name="shift_changed" formatted="false">"El turno activo cambió. Cierra este editor y ábrelo de nuevo."</string>
+    <string name="overtime_by_location" formatted="false">"Horas extra por lugar"</string>
+    <string name="overtime_by_location_hint" formatted="false">"Las franjas diarias de horas extra son comunes a oficina y casa y se asignan al lugar donde se trabajó. El pago incluye el porcentaje completo de cada franja, antes de impuestos."</string>
+    <string name="ui_more_info" formatted="false">"Más información"</string>
+    <string name="ui_collapse" formatted="false">"Ocultar detalles"</string>
+    <string name="ui_expand" formatted="false">"Mostrar detalles"</string>
+    <string name="ui_details" formatted="false">"Detalles"</string>
+    <string name="ui_appearance" formatted="false">"Apariencia"</string>
+    <string name="ui_theme_system" formatted="false">"Seguir teléfono"</string>
+    <string name="ui_theme_light" formatted="false">"Claro"</string>
+    <string name="ui_theme_dark" formatted="false">"Oscuro"</string>
+    <string name="ui_theme_hint" formatted="false">"Se guarda con la configuración y se incluye en las copias de seguridad. Seguir teléfono cambia con el tema del sistema."</string>
+    <string name="ui_gross_estimate" formatted="false">"Salario bruto estimado"</string>
+    <string name="ui_record_actions" formatted="false">"Acciones del registro"</string>
+    <string name="ui_net_estimate" formatted="false">"Neto estimado, dentro del perfil fiscal seleccionado."</string>
+    <string name="ui_tax_scope_notice" formatted="false">"El cálculo se limita a un perfil fiscal. Elegir un país no determina la elegibilidad. Los requisitos pendientes aparecen arriba."</string>
+    <string name="ui_tax_scope" formatted="false">"Perfil fiscal y condiciones"</string>
+    <string name="ui_pay_details" formatted="false">"Desglose salarial"</string>
+    <string name="ui_settings_hours" formatted="false">"Horas y descansos"</string>
+    <string name="ui_settings_pay" formatted="false">"Salario y horas extra"</string>
+    <string name="ui_settings_tax" formatted="false">"Impuestos y aportes"</string>
+    <string name="ui_settings_display" formatted="false">"Idioma y apariencia"</string>
+    <string name="ui_country_search" formatted="false">"Buscar país, código o moneda"</string>
+    <string name="ui_no_results" formatted="false">"No se encontraron países"</string>
+    <string name="export_excel" formatted="false">"Exportar Excel"</string>
+    <string name="export_sheet" formatted="false">"Turnos"</string>
+    <string name="export_period_start" formatted="false">"Fecha inicial"</string>
+    <string name="export_period_end" formatted="false">"Fecha final"</string>
+    <string name="export_date" formatted="false">"Fecha"</string>
+    <string name="export_start" formatted="false">"Hora de inicio"</string>
+    <string name="export_end" formatted="false">"Hora de fin"</string>
+    <string name="export_duration" formatted="false">"Tiempo total"</string>
+    <string name="export_total" formatted="false">"Total"</string>
+    <string name="export_note" formatted="false">"Duración pagada tras los descansos configurados. En turnos nocturnos, la hora de fin puede corresponder al día siguiente."</string>
+    <string name="export_saved" formatted="false">"Archivo Excel guardado."</string>
+    <string name="export_error" formatted="false">"Error al exportar a Excel."</string>
+    <string name="export_filter_hint" formatted="false">"Exporta turnos cerrados del período elegido, según el filtro Oficina, Casa o Todos seleccionado arriba."</string>
+    <string name="back_press_again_exit" formatted="false">"Pulsa Atrás otra vez para salir"</string>
+    <string name="leave_title" formatted="false">"Vacaciones, bajas y festivos"</string>
+    <string name="leave_sick" formatted="false">"Baja por enfermedad"</string>
+    <string name="leave_vacation" formatted="false">"Vacaciones remuneradas"</string>
+    <string name="leave_days" formatted="false">"días"</string>
+    <string name="leave_setup_hint" formatted="false">"Configura los saldos iniciales y la acumulación mensual antes de registrar ausencias."</string>
+    <string name="leave_asof" formatted="false">"Saldo a fecha de"</string>
+    <string name="leave_period_used" formatted="false">"Días de saldo usados en el período seleccionado"</string>
+    <string name="leave_pay" formatted="false">"Importe de las ausencias remuneradas"</string>
+    <string name="leave_pay_hint" formatted="false">"Por horas: se añade al salario. Sueldo mensual: las ausencias remuneradas ya están incluidas; solo se descuenta la parte no remunerada. Las ausencias no generan horas extra."</string>
+    <string name="leave_manage" formatted="false">"Gestionar vacaciones y bajas"</string>
+    <string name="leave_config" formatted="false">"Saldos y reglas de ausencias"</string>
+    <string name="leave_add" formatted="false">"Añadir vacaciones, baja o festivo"</string>
+    <string name="leave_record_hint" formatted="false">"La fracción de día se aplica a cada fecha seleccionada. Las ausencias remuneradas se separan del trabajo real. Los registros futuros se incluyen en su período de pago, pero el saldo actual solo incluye fechas hasta hoy."</string>
+    <string name="leave_empty" formatted="false">"No hay ausencias registradas en este período."</string>
+    <string name="leave_fraction" formatted="false">"Fracción de día (1 = completo, 0,5 = medio)"</string>
+    <string name="leave_hours" formatted="false">"Horas de ausencia"</string>
+    <string name="leave_pay_percent" formatted="false">"Porcentaje de remuneración"</string>
+    <string name="leave_debited" formatted="false">"Días descontados del saldo"</string>
+    <string name="leave_event_start" formatted="false">"Inicio del episodio de enfermedad"</string>
+    <string name="leave_day_number" formatted="false">"Día del episodio"</string>
+    <string name="leave_ledger" formatted="false">"Historial de acumulación y uso"</string>
+    <string name="leave_ledger_hint" formatted="false">"Movimientos del período de pago seleccionado. Saldo inicial + acumulación + ajustes − uso. Los movimientos futuros están previstos."</string>
+    <string name="leave_opening" formatted="false">"Saldo inicial (días)"</string>
+    <string name="leave_accrual" formatted="false">"Acumulación mensual"</string>
+    <string name="leave_used" formatted="false">"Uso"</string>
+    <string name="leave_adjustment" formatted="false">"Ajuste del saldo"</string>
+    <string name="leave_changed" formatted="false">"Los datos han cambiado. Cierra este formulario y vuelve a abrirlo."</string>
+    <string name="leave_delete_hint" formatted="false">"¿Eliminar este registro? Se recalculará su efecto en el saldo y el salario. No se puede deshacer."</string>
+    <string name="leave_config_hint" formatted="false">"Estas son las condiciones de tu empleador, no valores legales verificados. Se aplican desde la fecha inicial. Cambiar saldos o acumulación recalcula el historial; usa un ajuste con fecha para cambios puntuales. Las reglas de remuneración guardadas se conservan en cada registro."</string>
+    <string name="leave_opening_date" formatted="false">"Fecha del saldo inicial"</string>
+    <string name="leave_monthly" formatted="false">"Días acumulados cada mes"</string>
+    <string name="leave_accrual_day" formatted="false">"Día de acumulación mensual (1–31)"</string>
+    <string name="leave_accrual_hint" formatted="false">"La primera acumulación completa ocurre en el día elegido posterior a la fecha inicial. En meses cortos se usa el último día. Sin prorrateo e independiente del período de pago."</string>
+    <string name="leave_day_hours" formatted="false">"Horas por día completo de ausencia"</string>
+    <string name="leave_vacation_percent" formatted="false">"Porcentaje de remuneración de vacaciones"</string>
+    <string name="leave_allow_negative" formatted="false">"Permitir saldos negativos"</string>
+    <string name="leave_calendar_days" formatted="false">"Contar días naturales en el episodio de enfermedad"</string>
+    <string name="leave_calendar_hint" formatted="false">"Activado: los fines de semana y días sin registrar avanzan el tramo de pago. Desactivado: solo avanzan las fechas distintas registradas del episodio. Solo las ausencias registradas consumen saldo."</string>
+    <string name="leave_sick_tiers" formatted="false">"Tramos de remuneración por enfermedad"</string>
+    <string name="leave_tier_hint" formatted="false">"Las filas se aplican en orden. El porcentaje de pago y el de descuento del saldo son independientes. Un día pagado al 50% puede descontar un día completo si el descuento es del 100%."</string>
+    <string name="leave_tier" formatted="false">"Tramo"</string>
+    <string name="leave_number_days" formatted="false">"Número de días"</string>
+    <string name="leave_remaining" formatted="false">"Todos los días siguientes (última fila)"</string>
+    <string name="leave_debit_percent" formatted="false">"Porcentaje de descuento del saldo"</string>
+    <string name="leave_add_tier" formatted="false">"Añadir tramo antes de la última fila"</string>
+    <string name="leave_from" formatted="false">"Desde la fecha"</string>
+    <string name="leave_until" formatted="false">"Hasta la fecha (inclusive)"</string>
+    <string name="leave_workdays_only" formatted="false">"Solo días laborables configurados"</string>
+    <string name="leave_continue" formatted="false">"Continuar episodio de enfermedad"</string>
+    <string name="leave_new_event" formatted="false">"Nuevo episodio de enfermedad"</string>
+    <string name="leave_override_pay" formatted="false">"Sustituir porcentaje de pago (vacío = regla)"</string>
+    <string name="leave_override_debit" formatted="false">"Sustituir porcentaje de descuento (vacío = regla)"</string>
+    <string name="leave_override_hint" formatted="false">"Cambios opcionales por registro. Deja vacío para usar la política guardada del empleador. Se aplican los mismos cambios a cada día seleccionado del intervalo."</string>
+    <string name="leave_note" formatted="false">"Nota / motivo del ajuste"</string>
+    <string name="leave_preview" formatted="false">"Revisar fechas y remuneración"</string>
+    <string name="leave_work_warning" formatted="false">"También hay trabajo registrado o activo en alguna de estas fechas. Comprueba el trabajo real y las ausencias antes de guardar."</string>
+    <string name="leave_date" formatted="false">"Fecha"</string>
+    <string name="leave_adjust_days" formatted="false">"Ajuste de días (+ añadir / − descontar)"</string>
+    <string name="leave_duplicate" formatted="false">"El total de ausencias de una fecha no puede superar un día."</string>
+    <string name="leave_insufficient" formatted="false">"Saldo de ausencias insuficiente. Corrige el saldo inicial o permite expresamente un saldo negativo."</string>
+    <string name="leave_invalid" formatted="false">"Comprueba las fechas y los números. Porcentajes: 0–100; fracción: mayor que 0 y hasta 1."</string>
+    <string name="leave_date_error" formatted="false">"Elige un intervalo ordenado de no más de 367 días naturales."</string>
+    <string name="leave_no_dates" formatted="false">"Ninguna fecha coincide con los días laborables configurados."</string>
+    <string name="leave_salary_adjustment" formatted="false">"Descuento de ausencias no remuneradas del sueldo mensual"</string>
+    <string name="leave_export_hint" formatted="false">"La exportación de Todo incluye una hoja separada de ausencias. Las exportaciones de Oficina/Casa solo incluyen turnos trabajados."</string>
+    <string name="leave_holiday" formatted="false">"Festivo / día no laborable"</string>
+    <string name="leave_salary_choice" formatted="false">"Descontar del sueldo (sin usar vacaciones)"</string>
+    <string name="leave_settlement" formatted="false">"Compensar horas mensuales faltantes"</string>
+    <string name="leave_missing_hours" formatted="false">"Horas pendientes de cubrir en este período"</string>
+    <string name="leave_fill_hours" formatted="false">"Horas a compensar"</string>
+    <string name="leave_use_percent" formatted="false">"Introducir un porcentaje de un día completo de ausencia"</string>
+    <string name="leave_day_percent" formatted="false">"Porcentaje de un día completo"</string>
+    <string name="leave_target_needed" formatted="false">"Configura las horas mensuales requeridas en los ajustes salariales para calcular las horas faltantes."</string>
+    <string name="leave_too_many_hours" formatted="false">"Introduce horas positivas que no superen las horas pendientes (máximo 744)."</string>
+    <string name="leave_settlement_hint" formatted="false">"Es un ajuste del período, no un turno trabajado. Vacaciones usadas = horas ÷ horas por día de ausencia. Por ejemplo: 3,2 horas ÷ 8 = 0,4 días (40%). Elige vacaciones remuneradas o descuento salarial sin remuneración. Los cambios posteriores en trabajo o ausencias pueden requerir corregir este ajuste."</string>
+    <string name="leave_incomplete_period" formatted="false">"Este período de pago aún no ha terminado. Las horas faltantes son provisionales; revísalas antes de guardar."</string>
+    <string name="leave_holiday_hint" formatted="false">"Festivo configurado manualmente, no un derecho legal. No consume saldo de vacaciones ni de enfermedad. Pago predeterminado: 100%; modifica el porcentaje según tu empleador. Los intervalos limitados a días laborables omiten festivos ya registrados. Trabajar en festivo no genera automáticamente un recargo."</string>
+    <string name="leave_settlement_review" formatted="false">"Una compensación registrada podría superar ahora las horas pendientes. Revisa sus horas tras cambiar trabajo o ausencias."</string>
+    <string name="ot_method" formatted="false">"Cálculo de horas extra"</string>
+    <string name="ot_daily" formatted="false">"Diario"</string>
+    <string name="ot_weekly" formatted="false">"Semanal"</string>
+    <string name="ot_monthly" formatted="false">"Mensual"</string>
+    <string name="ot_hours" formatted="false">"horas ordinarias"</string>
+    <string name="ot_week_start" formatted="false">"Primer día de la semana laboral"</string>
+    <string name="ot_weekly_threshold" formatted="false">"Horas ordinarias semanales antes de horas extra"</string>
+    <string name="ot_monthly_threshold" formatted="false">"Horas ordinarias mensuales antes de horas extra"</string>
+    <string name="ot_calendar" formatted="false">"Mes natural (del día 1 al último día)"</string>
+    <string name="ot_pay_period" formatted="false">"Período de pago configurado"</string>
+    <string name="ot_nominal_day" formatted="false">"Horas diarias para faltantes y configuración de ausencias"</string>
+    <string name="ot_settings_hint" formatted="false">"Elige UN método. Los tramos de pago se reinician cada día, semana o mes seleccionado. Los umbrales semanales y mensuales son independientes de las horas diarias nominales y del objetivo mensual de asistencia. Las pausas siguen la regla diaria o por segmento configurada. Solo el trabajo real neto consume los umbrales; las ausencias, festivos y compensaciones no."</string>
+    <string name="ot_context_hint" formatted="false">"Los cálculos semanales o por mes natural también usan trabajo guardado anterior al período mostrado. Registra toda la semana o mes para asignar correctamente las horas. Cada turno completo pertenece a su fecha asignada, incluso si cruza la medianoche. Cambiar el método recalcula el historial; no implica combinar reglas diarias y semanales ni un derecho legal automático."</string>
+    <string name="ot_location_hint" formatted="false">"Oficina y casa comparten un contador de horas extra por día, semana o mes seleccionado. Las horas y la remuneración completa de cada tramo se asignan cronológicamente al lugar del trabajo, tras descontar las pausas."</string>
+    <string name="ot_office_only" formatted="false">"Horas solo de oficina por encima del umbral seleccionado"</string>
+    <string name="ot_invalid" formatted="false">"Comprueba el método, período y umbrales: semanales 0–168, mensuales 0–744 horas; el inicio de semana debe ser un día válido."</string>
+    <string name="ot_threshold_required" formatted="false">"Introduce un umbral positivo de horas ordinarias para el método seleccionado."</string>
+    <string name="widget_compact_name" formatted="false">"ShiftHours · Turno 2×2"</string>
+    <string name="analytics_title" formatted="false">"Resúmenes"</string>
+    <string name="analytics_hint" formatted="false">"Solo turnos cerrados. Las cifras usan las reglas salariales y de pausas actuales. Se excluyen los turnos activos."</string>
+    <string name="analytics_partial" formatted="false">"El período no ha terminado. Se compara con todo el período anterior, no con los mismos días transcurridos."</string>
+    <string name="analytics_empty" formatted="false">"No hay registros en este período"</string>
+    <string name="analytics_empty_hint" formatted="false">"Sin registros no significa sin trabajo. Los períodos sin registros no cuentan como meses con salario cero."</string>
+    <string name="analytics_overview" formatted="false">"Resumen del período"</string>
+    <string name="analytics_workdays" formatted="false">"Días trabajados registrados"</string>
+    <string name="analytics_shifts" formatted="false">"Turnos cerrados"</string>
+    <string name="analytics_avg_day" formatted="false">"Promedio de horas netas por día trabajado"</string>
+    <string name="analytics_avg_shift" formatted="false">"Promedio de horas netas por turno"</string>
+    <string name="analytics_home_share" formatted="false">"Porcentaje de trabajo desde casa"</string>
+    <string name="analytics_ot_share" formatted="false">"Porcentaje de horas extra del trabajo neto"</string>
+    <string name="analytics_gross" formatted="false">"Salario bruto"</string>
+    <string name="analytics_comparison" formatted="false">"Cambio respecto al período anterior"</string>
+    <string name="analytics_hours_change" formatted="false">"Cambio de horas netas"</string>
+    <string name="analytics_ot_change" formatted="false">"Cambio de horas extra"</string>
+    <string name="analytics_gross_change" formatted="false">"Cambio de salario bruto"</string>
+    <string name="analytics_no_comparison" formatted="false">"Se necesitan registros en ambos períodos para comparar."</string>
+    <string name="analytics_tiers" formatted="false">"Tramos de horas extra y remuneración"</string>
+    <string name="analytics_weighted" formatted="false">"Horas extra ponderadas por remuneración"</string>
+    <string name="analytics_weighted_hint" formatted="false">"Horas ponderadas = horas extra × multiplicador salarial. Es un equivalente de pago, no tiempo adicional trabajado."</string>
+    <string name="analytics_location" formatted="false">"Oficina y casa"</string>
+    <string name="analytics_equivalent_hint" formatted="false">"El valor del trabajo usa el equivalente por hora e incluye horas extra. No reparte el sueldo mensual ni la paga por ausencias entre lugares o motivos."</string>
+    <string name="analytics_office_short" formatted="false">"Déficit diario solo de oficina"</string>
+    <string name="analytics_office_ot" formatted="false">"Comparación de horas extra solo de oficina"</string>
+    <string name="analytics_reasons" formatted="false">"Motivos del trabajo desde casa"</string>
+    <string name="analytics_no_reasons" formatted="false">"No hay turnos cerrados de trabajo desde casa en este período."</string>
+    <string name="analytics_shortfalls" formatted="false">"Horas faltantes y fichajes"</string>
+    <string name="analytics_daily_short" formatted="false">"Déficit diario tras acreditar ausencias"</string>
+    <string name="analytics_monthly_short" formatted="false">"Déficit mensual frente al objetivo configurado"</string>
+    <string name="analytics_missing_clock" formatted="false">"Días marcados por falta de fichaje"</string>
+    <string name="analytics_missing_hint" formatted="false">"Los problemas se identifican por las notas guardadas de fichajes faltantes; no se pueden deducir días no registrados."</string>
+    <string name="analytics_weekdays" formatted="false">"Promedio de horas netas por día de la semana"</string>
+    <string name="analytics_weekdays_hint" formatted="false">"Solo se promedian fechas con trabajo neto positivo registrado. Se muestra el número de días; se excluyen días sin registro."</string>
+    <string name="analytics_records" formatted="false">"Días destacados"</string>
+    <string name="analytics_longest" formatted="false">"Día registrado de mayor duración"</string>
+    <string name="analytics_most_ot" formatted="false">"Día con más horas extra asignadas"</string>
+    <string name="analytics_trend" formatted="false">"Evolución de 12 períodos de pago"</string>
+    <string name="analytics_trend_hint" formatted="false">"Cada fila: horas netas, horas extra y salario bruto. Un guion indica que no hay registros. El histórico usa las condiciones actuales, no contratos archivados."</string>
+    <string name="home_sync_title">Servidor personal</string>
+    <string name="home_sync_hint">Sincronización opcional con tu ordenador. Puedes seguir trabajando sin conexión.</string>
+    <string name="home_sync_address">Dirección HTTPS del servidor</string>
+    <string name="home_sync_key">Clave de conexión del teléfono</string>
+    <string name="home_sync_https">Introduce una dirección HTTPS válida.</string>
+    <string name="home_sync_other_server">Este dispositivo está vinculado a otro servidor. Guarda una copia antes de migrar.</string>
+    <string name="home_sync_working">Sincronizando…</string>
+    <string name="home_sync_ok">Sincronizado</string>
+    <string name="home_sync_conflict">Hay cambios en conflicto. No se sobrescribieron datos. Iguala los registros en el navegador y el teléfono y reintenta.</string>
+    <string name="home_sync_auth">La clave caducó o fue revocada. Desconecta e introduce otra.</string>
+    <string name="home_sync_identity">Cambió la identidad del servidor. Se detuvo la sincronización para proteger los datos.</string>
+    <string name="home_sync_error">Servidor no disponible o datos rechazados. Los datos locales están seguros; reintenta después.</string>
+    <string name="home_sync_pending">Hay cambios locales pendientes.</string>
+    <string name="home_sync_off">Sincronización desactivada</string>
+    <string name="home_sync_now">Sincronizar ahora</string>
+    <string name="home_sync_connect">Conectar</string>
+    <string name="home_sync_disconnect">Desconectar</string>
+    <string name="home_sync_backup_hint">Incluye ajustes, ausencias y turnos. No sustituye las copias locales ni de Drive. La sincronización en segundo plano se programa cada 15 minutos aproximadamente; Android puede retrasarla. Las claves no se incluyen en las copias.</string>
+    <string name="home_sync_back">Volver</string>
+    <string name="manual_entry" formatted="false">"Entrada manual"</string>
+    <string name="manual_kind" formatted="false">"Tipo de registro"</string>
+    <string name="manual_work_shift" formatted="false">"Turno de trabajo"</string>
+    <string name="manual_continue" formatted="false">"Continuar"</string>
+    <string name="calendar_title" formatted="false">"Calendario laboral"</string>
+    <string name="calendar_missing_hint" formatted="false">"Naranja claro: domingo a jueves pasados sin turno ni ausencia. Toca un día para ver detalles."</string>
+    <string name="calendar_missing_count">"%1$s días sin registros"</string>
+    <string name="calendar_missing" formatted="false">"Falta registro"</string>
+    <string name="calendar_paid_time" formatted="false">"Tiempo remunerado"</string>
+    <string name="calendar_no_report" formatted="false">"Sin registro de turno ni ausencia."</string>
+    <string name="snapshot_arrange" formatted="false">"Ordenar tarjetas"</string>
+    <string name="snapshot_move_up" formatted="false">"Subir"</string>
+    <string name="snapshot_move_down" formatted="false">"Bajar"</string>
+    <string name="snapshot_reset_order" formatted="false">"Restaurar orden predeterminado"</string>
+    <string name="snapshot_save_order" formatted="false">"Guardar"</string>
+    <string name="snapshot_cancel_order" formatted="false">"Cancelar"</string>
+    <string name="hours_by_location" formatted="false">"Horas por ubicación"</string>
+    <string name="location_all_hours" formatted="false">"Horas totales (incluidas extras)"</string>
+    <string name="location_all_pay" formatted="false">"Pago (incluidas extras)"</string>
+    <string name="location_hourly_value_hint" formatted="false">"Valor del trabajo por hora; no es un reparto del sueldo mensual."</string>
+    <string name="launcher_widgets">Widgets</string>
+    <string name="launcher_change_widget">Cambiar widget</string>
+    <string name="calendar_includes_home">Incluye trabajo desde casa</string>
+</resources>

@@ -6,7 +6,7 @@ name: iOS build
 #
 # Two stages, to keep the expensive macOS minutes to a minimum:
 #   1. check (Linux): unit tests + compiles the Kotlin code for iOS.
-#   2. ipa (macOS):   links the framework, runs xcodebuild, uploads the .ipa.
+#   2. ipa (macOS):   xcodebuild (which links the Kotlin framework), uploads the .ipa.
 
 on:
   push:
@@ -48,9 +48,9 @@ jobs:
         app:
           - { name: WorkHours, dir: WorkHours-iOS }
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "21"
@@ -64,7 +64,7 @@ jobs:
 
       - name: Unit tests (JVM)
         working-directory: ${{ matrix.app.dir }}
-        run: ./gradlew :composeApp:jvmTest --stacktrace
+        run: ./gradlew :composeApp:jvmTest --stacktrace -Dworkhours.dataDir="$RUNNER_TEMP/shifthours"
 
       - name: Compile Kotlin for iOS
         working-directory: ${{ matrix.app.dir }}
@@ -90,9 +90,9 @@ jobs:
         app:
           - { name: WorkHours, dir: WorkHours-iOS }
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "21"
@@ -109,16 +109,13 @@ jobs:
           xcodebuild -version
           java -version
 
-      - name: Link Kotlin framework
-        working-directory: ${{ matrix.app.dir }}
-        run: ./gradlew ":composeApp:link${CONFIGURATION}FrameworkIosArm64" --stacktrace
-
       - name: Generate Xcode project
         working-directory: ${{ matrix.app.dir }}/iosApp
         run: |
           which xcodegen || brew install xcodegen
           xcodegen generate
 
+      # The Xcode build runs Gradle itself (embedAndSignAppleFrameworkForXcode) to link the Kotlin framework.
       - name: Build app (unsigned)
         working-directory: ${{ matrix.app.dir }}
         run: |

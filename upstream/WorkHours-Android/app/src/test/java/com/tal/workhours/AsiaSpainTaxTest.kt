@@ -1,0 +1,108 @@
+package com.tal.workhours
+
+import org.junit.Assert.*
+import org.junit.Test
+import org.json.JSONObject
+
+class AsiaSpainTaxTest {
+    private fun profile(country: String) = AppSettings(taxCountry = country, foreignProfileCountry = country,
+        foreignMonthlyDeductions = 0.0, taxRegion = when (country) { "ES" -> "ES-MD"; "CN" -> "CN-MAINLAND"; else -> "" })
+    private fun net(gross: Double, s: AppSettings) = estimateNet(gross, gross, s, 2026)!!
+
+    @Test fun madridHasNationalAndRegionalLiabilityWithSeparatePersonalMinima() {
+        val s = profile("ES").copy(annualTaxableBase = 40000.0, foreignMonthlyDeductions = 250.0)
+        val n = net(4000.0, s)
+        assertEquals(4723.5 / 12, n.incomeTax, .00001)
+        assertEquals(4131.03643 / 12, n.regionalTax, .00001)
+        assertEquals(1033.56525 / 12, n.personalCredit, .00001)
+        assertEquals(3012.1219641667, n.net, .00001)
+        // Personal minima already reduce the two tax components; relief is informational.
+        assertEquals(4000.0 - n.incomeTax - n.regionalTax - 250, n.net, .00001)
+    }
+    @Test fun madridPublishedStartingQuotasAndUpperRateAreUsed() {
+        assertEquals(1135.79, madridAnnualTax(13362.22), .01)
+        assertEquals(1739.53, madridAnnualTax(19004.63), .01)
+        assertEquals(3841.42, madridAnnualTax(35425.68), .01)
+        assertEquals(7651.10, madridAnnualTax(57320.40), .01)
+        assertEquals(16400.418, madridAnnualTax(100000.0), .00001)
+    }
+    @Test fun spainIncludesHighestNationalBracketAndBothStandardMinima() {
+        val n = net(40000.0, profile("ES").copy(annualTaxableBase = 400000.0))
+        assertEquals((62950.75 + 100000.0 * .245 - 527.25) / 12, n.incomeTax, .00001)
+        assertEquals((7651.10 + (400000.0 - 57320.4) * .205 - 5956.65 * .085) / 12, n.regionalTax, .00001)
+    }
+    @Test fun unsupportedSpainRegionsAndLowIncomeProfilesAreNotFederalOnlyNet() {
+        for (region in listOf("", "OTHER", "CATALONIA", "ES-CT"))
+            assertNull(estimateNet(4000.0, 4000.0, profile("ES").copy(taxRegion = region, annualTaxableBase = 40000.0), 2026))
+        assertNull(estimateNet(3000.0, 3000.0, profile("ES").copy(annualTaxableBase = 30000.0), 2026))
+        assertNull(estimateNet(4000.0, 4000.0, profile("ES").copy(annualTaxableBase = 29999.0), 2026))
+    }
+    @Test fun verifiedBasesAreRequiredAndChinaCannotOmitTheAnnualStandardDeduction() {
+        for (country in listOf("ES", "CN")) {
+            for (base in listOf(null, -1.0, Double.NaN, Double.POSITIVE_INFINITY, 250000.0))
+                assertNull(estimateNet(20000.0, 20000.0, profile(country).copy(annualTaxableBase = base), 2026))
+        }
+        assertNull(estimateNet(20000.0, 20000.0, profile("CN").copy(annualTaxableBase = 180001.0), 2026))
+        assertNull(estimateNet(4000.0, 4000.0, profile("CN").copy(annualTaxableBase = 1.0), 2026))
+        assertEquals(0.0, net(4000.0, profile("CN").copy(annualTaxableBase = 0.0)).incomeTax, .00001)
+    }
+    @Test fun chinaTaxesVerifiedFinalBaseWithoutSubtractingRmb60000Twice() {
+        val n = net(20000.0, profile("CN").copy(annualTaxableBase = 144000.0, foreignMonthlyDeductions = 2000.0))
+        assertEquals(990.0, n.incomeTax, .00001)
+        assertEquals(17010.0, n.net, .00001)
+        assertEquals(0.0, n.nationalInsurance, .00001)
+        assertEquals(2000.0, n.otherDeductions, .00001)
+    }
+    @Test fun chineseResidentComprehensiveBandsMatchQuickDeductionTable() {
+        val examples = listOf(36000.0 to 1080.0, 144000.0 to 11880.0, 300000.0 to 43080.0,
+            420000.0 to 73080.0, 660000.0 to 145080.0, 960000.0 to 250080.0, 1000000.0 to 268080.0)
+        for ((base, tax) in examples) {
+            val gross = (base + 60000.0) / 12
+            assertEquals(tax, net(gross, profile("CN").copy(annualTaxableBase = base)).incomeTax * 12, .00001)
+        }
+    }
+    @Test fun chinaSpecialJurisdictionsNeverUseMainlandTaxByDefault() {
+        for (region in listOf("", "OTHER", "HK", "MO", "TW"))
+            assertNull(estimateNet(20000.0, 20000.0, profile("CN").copy(taxRegion = region, annualTaxableBase = 144000.0), 2026))
+    }
+    @Test fun saudiExpatIncomeTaxIsZeroButCashDeductionsStillReduceTakeHomePay() {
+        val n = net(10000.0, profile("SA").copy(foreignMonthlyDeductions = 150.0))
+        assertEquals(0.0, n.incomeTax, .00001)
+        assertEquals(0.0, n.nationalInsurance, .00001)
+        assertEquals(9850.0, n.net, .00001)
+        assertEquals(10000.0, net(10000.0, profile("SA")).net, .00001)
+        assertNull(estimateNet(10000.0, 10000.0, profile("SA").copy(foreignProfileCountry = ""), 2026))
+    }
+    @Test fun missingConfirmationActualDeductionsOrMatchingYearBlocksAllNewProfiles() {
+        for (country in asiaSpainTaxCountries) {
+            val s = profile(country).copy(annualTaxableBase = if (country == "ES") 40000.0 else 144000.0)
+            for (deductions in listOf(null, -1.0, Double.NaN, 20001.0))
+                assertNull(estimateNet(20000.0, 20000.0, s.copy(foreignMonthlyDeductions = deductions), 2026))
+            assertNull(estimateNet(20000.0, 20000.0, s.copy(foreignProfileCountry = "DE"), 2026))
+            assertNull(estimateNet(20000.0, 20000.0, s.copy(taxYear = 2025), 2026))
+            assertNull(estimateNet(20000.0, 20000.0, s.copy(taxYear = 2027), 2027))
+            assertNull(estimateNet(Double.MAX_VALUE, Double.MAX_VALUE, s, 2026))
+        }
+    }
+    @Test fun cashDeductionsDoNotChangeVerifiedBasesOrDuplicateComputedTaxReliefs() {
+        for (s in listOf(profile("ES").copy(annualTaxableBase = 40000.0), profile("CN").copy(annualTaxableBase = 144000.0), profile("SA"))) {
+            val before = net(20000.0, s)
+            val after = net(20000.0, s.copy(foreignMonthlyDeductions = 300.0))
+            assertEquals(before.incomeTax, after.incomeTax, .00001)
+            assertEquals(before.regionalTax, after.regionalTax, .00001)
+            assertEquals(before.net - 300, after.net, .00001)
+        }
+    }
+    @Test fun newProfilesRoundTripThroughBackupAndLegacyV5StaysReadable() {
+        for (country in asiaSpainTaxCountries) {
+            val s = profile(country).copy(annualTaxableBase = 40000.0)
+            val original = AppData(settings = s)
+            assertEquals(original, readBackup(backupText(original)))
+        }
+        val legacy = JSONObject(encodeData(AppData(settings = profile("DE").copy(annualTaxableBase = 40000.0)))).put("version", 5)
+        assertEquals("DE", decodeData(legacy.toString()).settings.taxCountry)
+        assertEquals(DATA_VERSION, JSONObject(encodeData(AppData())).getInt("version"))
+        legacy.put("version", DATA_VERSION + 1)
+        assertThrows(IllegalArgumentException::class.java) { decodeData(legacy.toString()) }
+    }
+}

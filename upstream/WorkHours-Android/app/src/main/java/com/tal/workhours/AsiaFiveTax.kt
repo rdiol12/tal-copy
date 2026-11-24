@@ -1,0 +1,44 @@
+package com.tal.workhours
+
+import java.math.BigDecimal
+import java.math.RoundingMode
+import kotlin.math.max
+
+val asiaFiveTaxCountries = setOf("TH", "ID", "VN", "TW", "LK")
+const val MAX_VERIFIED_ANNUAL_AMOUNT = 1_000_000_000_000.0
+
+/** Verified final annual taxable base; country reliefs are already in that base, never deducted twice. */
+internal fun asiaFiveAnnualTax(country: String, base: Double): Double = when (country) {
+    "TH" -> bandTax(base, listOf(150000.0, 300000.0, 500000.0, 750000.0, 1000000.0, 2000000.0, 5000000.0, Double.POSITIVE_INFINITY),
+        listOf(0.0, .05, .10, .15, .20, .25, .30, .35))
+    "ID" -> bandTax(BigDecimal.valueOf(base).setScale(-3, RoundingMode.FLOOR).toDouble(),
+        listOf(60000000.0, 250000000.0, 500000000.0, 5000000000.0, Double.POSITIVE_INFINITY),
+        listOf(.05, .15, .25, .30, .35))
+    "VN" -> bandTax(base, listOf(120000000.0, 360000000.0, 720000000.0, 1200000000.0, Double.POSITIVE_INFINITY),
+        listOf(.05, .10, .20, .30, .35))
+    "TW" -> bandTax(base, listOf(610000.0, 1380000.0, 2770000.0, 5190000.0, Double.POSITIVE_INFINITY),
+        listOf(.05, .12, .20, .30, .40))
+    "LK" -> bandTax(base, listOf(1000000.0, 1500000.0, 2000000.0, 2500000.0, Double.POSITIVE_INFINITY),
+        listOf(.06, .18, .24, .30, .36))
+    else -> error("Unsupported verified-base tax country")
+}
+
+/** Annual reserve/12 against this period's cash pay, not statutory monthly withholding or full annual payout. */
+fun estimateAsiaFiveNet(gross: Double, settings: AppSettings, year: Int): NetEstimate? {
+    val country = settings.taxCountry
+    if (country !in asiaFiveTaxCountries || !supportsTaxYear(country, year) || settings.taxYear != year ||
+        settings.foreignProfileCountry != country || !gross.isFinite() || gross < 0) return null
+    val annualGross = settings.annualEmploymentGross ?: return null
+    val base = settings.annualTaxableBase ?: return null
+    val cash = settings.foreignMonthlyDeductions ?: return null
+    if (!annualGross.isFinite() || annualGross !in 0.0..MAX_VERIFIED_ANNUAL_AMOUNT || annualGross < gross ||
+        !base.isFinite() || base !in 0.0..annualGross || !cash.isFinite() || cash < 0 || cash > gross) return null
+    // Explicit single, no-dependent full-year profiles: a verified base must already reflect self relief.
+    val selfRelief = when (country) { "ID" -> 54000000.0; "VN" -> 186000000.0; "LK" -> 1800000.0; else -> 0.0 }
+    if (base > max(0.0, annualGross - selfRelief) + .01) return null
+    // Conservative no-AMT scope: salary only, no foreign/other income or AMT additions; not a legal gross threshold.
+    if (country == "TW" && annualGross > 7500000.0) return null
+    val tax = asiaFiveAnnualTax(country, base) / 12
+    if (tax + cash > gross + .01) return null
+    return NetEstimate(tax, 0.0, 0.0, 0.0, 0.0, 0.0, max(0.0, gross - tax - cash), otherDeductions = cash)
+}

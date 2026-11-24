@@ -1,0 +1,9 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calendar_widget_cell" android:layout_width="0dp" android:layout_height="match_parent"
+    android:layout_weight="1" android:layout_margin="1dp" android:orientation="horizontal" android:gravity="center">
+    <TextView android:id="@+id/calendar_widget_day" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:singleLine="true" android:textSize="11sp" />
+    <ImageView android:id="@+id/calendar_widget_home" android:layout_width="11dp" android:layout_height="11dp"
+        android:layout_marginStart="2dp" android:src="@drawable/ic_calendar_home" android:tint="#00766F"
+        android:importantForAccessibility="no" android:visibility="gone" />
+</LinearLayout>

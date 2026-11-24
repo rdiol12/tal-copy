@@ -1,0 +1,10 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calendar_widget_root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="10dp" android:background="@drawable/widget_background">
+    <TextView android:id="@+id/calendar_widget_title" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/calendar_title" android:textSize="15sp" android:textStyle="bold" android:gravity="start" />
+    <TextView android:id="@+id/calendar_widget_period" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textSize="11sp" android:gravity="start" />
+    <LinearLayout android:id="@+id/calendar_widget_grid" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="vertical" />
+</LinearLayout>

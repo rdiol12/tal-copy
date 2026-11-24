@@ -1,0 +1,274 @@
+package com.tal.workhours
+
+import java.time.LocalDate
+import org.json.JSONObject
+import org.junit.Assert.*
+import org.junit.Test
+
+class AdditionalFifteenTaxTest {
+    // Independently entered examples, not automatic statutory insurance calculations.
+    private data class Scenario(val c:String,val gross:Double,val cash:Double,
+        val annual:Double?=null,val base:Double?=null,val monthly:Double?=null,
+        val receipts:Double?=null,val expenses:Double?=null)
+    private val cases=listOf(
+        Scenario("PA",2000.0,200.0,28000.0,25000.0),
+        Scenario("NI",30000.0,2100.0,420000.0,330000.0),
+        Scenario("SV",1500.0,150.0,monthly=1350.0),
+        Scenario("HN",30000.0,1500.0,420000.0,350000.0),
+        Scenario("PY",10000000.0,900000.0,140000000.0,70000000.0,receipts=120000000.0),
+        Scenario("EC",3000.0,300.0,42000.0,37000.0,expenses=3000.0),
+        Scenario("NA",30000.0,2000.0,420000.0,360000.0),
+        Scenario("KH",5000000.0,100000.0,monthly=4900000.0),
+        Scenario("AZ",2000.0,250.0),Scenario("BH",1000.0,10.0),
+        Scenario("KW",1000.0,5.0),Scenario("OM",1000.0,20.0),
+        Scenario("QA",10000.0,100.0),Scenario("BN",3000.0,250.0),Scenario("BS",3000.0,150.0))
+    private fun profile(s:Scenario)=AppSettings(taxCountry=s.c,foreignProfileCountry=s.c,
+        taxRegion=if(s.c=="EC")"EC-MAINLAND" else "",foreignMonthlyDeductions=s.cash,
+        annualEmploymentGross=s.annual,annualTaxableBase=s.base,monthlyTaxableBase=s.monthly,
+        pyAnnualTaxableReceipts=s.receipts,ecAnnualPersonalExpenses=s.expenses)
+    private fun net(s:Scenario,p:AppSettings=profile(s))=estimateNet(s.gross,s.gross,p,2026)
+    private fun payout(i:Int,tax:Double,expected:Double) {
+        val n=net(cases[i])!!
+        assertEquals(tax,n.incomeTax,.0001);assertEquals(expected,n.net,.0001)
+        assertEquals(cases[i].cash,n.otherDeductions,.0001)
+        assertEquals(0.0,n.pensionCredit+n.pension+n.nationalInsurance+n.healthInsurance,.0001)
+    }
+    private fun quotas(c:String,points:List<Pair<Double,Double>>) = points.forEach{(b,t)->
+        assertEquals("$c base=$b",t,additionalAnnualBeforeRelief(c,b),.0001)
+    }
+    @Test fun panamaOrdinaryAnnualTariffQuotas()=quotas("PA",listOf(0.0 to 0.0,11000.0 to 0.0,50000.0 to 5850.0,60000.0 to 8350.0))
+    @Test fun nicaraguaCurrentEmploymentTariffQuotas()=quotas("NI",listOf(100000.0 to 0.0,200000.0 to 15000.0,
+        350000.0 to 45000.0,500000.0 to 82500.0,600000.0 to 112500.0))
+    @Test fun honduras2026IndexedThresholdsAreNotThe2025Amounts()=quotas("HN",listOf(228324.32 to 0.0,
+        348154.10 to 17974.467,809660.75 to 110275.797,1000000.0 to 157860.6095))
+    @Test fun paraguayProgressiveMarginalRatesAreNotAFlatRateOnAllNetIncome()=quotas("PY",listOf(
+        50000000.0 to 4000000.0,150000000.0 to 13000000.0,200000000.0 to 18000000.0))
+    @Test fun ecuador2026PublishedStartingQuotasArePreserved() {
+        for((b,t) in listOf(12208.0 to 0.0,15549.0 to 167.0,20188.0 to 631.0,
+            26700.0 to 1412.0,35136.0 to 2678.0,46575.0 to 4965.0,62005.0 to 8823.0,
+            82679.0 to 15025.0,109956.0 to 24572.0,119956.0 to 28272.0))
+            assertEquals(t,ecuador2026AnnualTax(b),.0001)
+    }
+    @Test fun namibiaCurrentAnnualQuotasUseOneHundredThousandZeroBand()=quotas("NA",listOf(
+        100000.0 to 0.0,150000.0 to 9000.0,350000.0 to 59000.0,550000.0 to 115000.0,
+        850000.0 to 205000.0,1550000.0 to 429000.0,1650000.0 to 466000.0))
+    @Test fun elSalvadorPublishedMonthlyFixedQuotasAreNotSmoothed() {
+        for((b,t) in listOf(550.0 to 0.0,550.01 to 17.671,895.24 to 52.194,
+            895.25 to 60.002,2038.10 to 288.572,2038.11 to 288.573,3000.0 to 577.14))
+            assertEquals(t,elSalvadorMonthlyWithholding(b),.0001)
+    }
+    @Test fun cambodiaMonthlyResidentBracketsAreNotTheAnnualBusinessTable() {
+        val p=profile(cases[7]).copy(foreignMonthlyDeductions=0.0)
+        for((b,t) in listOf(1500000.0 to 0.0,2000000.0 to 25000.0,8500000.0 to 675000.0,
+            12500000.0 to 1275000.0,20000000.0 to 2775000.0))
+            assertEquals(t,estimateNet(b,b,p.copy(monthlyTaxableBase=b),2026)!!.incomeTax,.0001)
+    }
+    @Test fun azerbaijan2026PrivateSectorIncludesExemptionOnlyThroughTwentyFiveHundred() {
+        for((g,t) in listOf(100.0 to 0.0,200.0 to 0.0,2000.0 to 54.0,2500.0 to 69.0,
+            2500.01 to 75.001,8000.0 to 625.0,10000.0 to 905.0))
+            assertEquals(t,azerbaijan2026Monthly(g).first,.0001)
+        assertEquals(6.0,azerbaijan2026Monthly(2500.0).second,.0001)
+        assertEquals(0.0,azerbaijan2026Monthly(2500.01).second,.0001)
+    }
+    @Test fun panamaAnnualPayout()=payout(0,175.0,1625.0)
+    @Test fun nicaraguaFinalBasePayout()=payout(1,41000.0/12,24483.333333)
+    @Test fun elSalvadorOrdinaryMonthlyPayout()=payout(2,150.952,1199.048)
+    @Test fun hondurasAnnualPayoutAfterVerifiedEducationMedicalDeduction()=payout(3,1528.63725,26971.36275)
+    @Test fun paraguayNetBasePayoutAboveVerifiedLiableReceiptsThreshold()=payout(4,5800000.0/12,8616666.666667)
+    @Test fun ecuadorAnnualPayoutSubtractsExpenseRebateFromTaxOnly() {
+        payout(5,2510.80/12,2490.766667)
+        assertEquals(45.0,net(cases[5])!!.personalCredit,.0001)
+    }
+    @Test fun namibiaFiscalYearSalaryPayout()=payout(6,5150.0,22850.0)
+    @Test fun cambodiaVerifiedMonthlySalaryPayout()=payout(7,315000.0,4585000.0)
+    @Test fun azerbaijanMonthlyPayoutDoesNotDeductInsuranceFromPitBase() {
+        payout(8,54.0,1696.0)
+        assertEquals(6.0,net(cases[8])!!.personalCredit,.0001)
+    }
+    @Test fun bahrainActualCashIsNotAssumedExempt()=payout(9,0.0,990.0)
+    @Test fun kuwaitActualCashIsNotAssumedZero()=payout(10,0.0,995.0)
+    @Test fun oman2026DoesNotChargeTheFuture2028FivePercent()=payout(11,0.0,980.0)
+    @Test fun qatarLocalWageScopeStillSubtractsActualCash()=payout(12,0.0,9900.0)
+    @Test fun bruneiActualSpkAndOtherEmployeeCashIsSeparate()=payout(13,0.0,2750.0)
+    @Test fun bahamasActualNibAndOtherEmployeeCashIsSeparate()=payout(14,0.0,2850.0)
+    @Test fun allFifteenCashChangesOnlyPayoutNotTaxOrIncludedRelief() {
+        for(s in cases) {
+            val a=net(s)!!;val b=net(s,profile(s).copy(foreignMonthlyDeductions=s.cash+1))!!
+            assertEquals(a.incomeTax,b.incomeTax,.0001);assertEquals(a.personalCredit,b.personalCredit,.0001)
+            assertEquals(a.net-1,b.net,.0001)
+            assertEquals(s.gross-b.incomeTax-b.otherDeductions,b.net,.0001)
+        }
+    }
+    @Test fun ecuadorSevenBasketCapUsesVerified2026JanuaryValueAndRoundsOnlyCredit() {
+        assertEquals(0.0,ecuador2026ExpenseRebate(0.0),0.0)
+        assertEquals(540.0,ecuador2026ExpenseRebate(3000.0),.0001)
+        assertEquals(1035.47,ecuador2026ExpenseRebate(5752.60),.0001)
+        assertEquals(1035.47,ecuador2026ExpenseRebate(1000000.0),.0001)
+        assertEquals(.18,ecuador2026ExpenseRebate(1.0),.0001)
+    }
+    @Test fun ecuadorCreditCannotRefundBeyondTaxOrRepeatTheBaseDeduction() {
+        val s=cases[5];val p=profile(s)
+        val without=net(s,p.copy(ecAnnualPersonalExpenses=0.0))!!
+        val with=net(s)!!
+        assertEquals(45.0,without.incomeTax-with.incomeTax,.0001)
+        assertEquals(45.0,with.net-without.net,.0001)
+        val low=estimateNet(1500.0,1500.0,p.copy(annualEmploymentGross=18000.0,
+            annualTaxableBase=15000.0,ecAnnualPersonalExpenses=5752.60,foreignMonthlyDeductions=100.0),2026)!!
+        assertEquals(0.0,low.incomeTax,.0001)
+        assertEquals(139.60/12,low.personalCredit,.0001)
+        assertEquals(1400.0,low.net,.0001)
+    }
+    @Test fun ecuadorRequiresMainlandRegionAndExplicitValidExpensesIncludingZero() {
+        val s=cases[5]
+        for(region in listOf("","OTHER","GALAPAGOS","PT-MAINLAND"))
+            assertNull(net(s,profile(s).copy(taxRegion=region)))
+        for(v in listOf(null,-1.0,Double.NaN,Double.POSITIVE_INFINITY,MAX_VERIFIED_ANNUAL_AMOUNT+1))
+            assertNull(net(s,profile(s).copy(ecAnnualPersonalExpenses=v)))
+        assertNotNull(net(s,profile(s).copy(ecAnnualPersonalExpenses=0.0)))
+    }
+    @Test fun paraguayUsesLiableReceiptsNotFullIncomeOrFinalBaseForEightyMillionGate() {
+        val s=cases[4]
+        val p=profile(s).copy(annualEmploymentGross=86000000.0,pyAnnualTaxableReceipts=80000000.0)
+        val exempt=net(s,p)!!
+        assertEquals(0.0,exempt.incomeTax,.0001)
+        assertEquals(9100000.0,exempt.net,.0001)
+        val above=net(s,p.copy(pyAnnualTaxableReceipts=80000001.0))!!
+        assertEquals(5800000.0/12,above.incomeTax,.0001)
+        // Final base70m alone would have incorrectly suggested no payment, total86m alone the opposite.
+    }
+    @Test fun paraguayMissingOrContradictoryReceiptsNeverBecomeTaxFreeNet() {
+        val s=cases[4]
+        for(v in listOf(null,-1.0,Double.NaN,Double.POSITIVE_INFINITY,s.annual!!+1,s.base!!-1))
+            assertNull(net(s,profile(s).copy(pyAnnualTaxableReceipts=v)))
+        assertNull(net(s,profile(s).copy(pyAnnualTaxableReceipts=0.0))) // base is still70m
+        assertNotNull(net(s,profile(s).copy(pyAnnualTaxableReceipts=0.0,annualTaxableBase=0.0)))
+    }
+    @Test fun monthlySalaryBasesAreRequiredAndAnnualBaseCannotSubstitute() {
+        for(s in cases.filter{it.c in additionalMonthlyBaseCountries}) {
+            for(b in listOf(null,-1.0,Double.NaN,Double.POSITIVE_INFINITY,s.gross+1))
+                assertNull(net(s,profile(s).copy(monthlyTaxableBase=b)))
+            assertNull(net(s,profile(s).copy(monthlyTaxableBase=null,
+                annualEmploymentGross=s.gross*12,annualTaxableBase=s.gross*12)))
+        }
+    }
+    @Test fun annualIncomeAndFinalBaseAreRequiredForAllSixAnnualProfiles() {
+        for(s in cases.filter{it.c in additionalAnnualTaxCountries}) {
+            for(a in listOf(null,-1.0,Double.NaN,Double.POSITIVE_INFINITY,s.gross-1,MAX_VERIFIED_ANNUAL_AMOUNT+1))
+                assertNull(net(s,profile(s).copy(annualEmploymentGross=a)))
+            for(b in listOf(null,-1.0,Double.NaN,Double.POSITIVE_INFINITY,s.annual!!+1))
+                assertNull(net(s,profile(s).copy(annualTaxableBase=b)))
+        }
+    }
+    @Test fun hondurasFullEligibleFortyThousandMustAlreadyBeInVerifiedBase() {
+        val s=cases[3]
+        assertNull(net(s,profile(s).copy(annualTaxableBase=s.annual)))
+        assertNull(net(s,profile(s).copy(annualTaxableBase=s.annual!!-39999.0)))
+        assertNotNull(net(s,profile(s).copy(annualTaxableBase=s.annual!!-40000.0)))
+    }
+    @Test fun zeroSalaryTaxProfilesRequireExplicitCashAndDoNotUseUnrelatedAnnualBases() {
+        for(s in cases.filter{it.c in additionalZeroSalaryTaxCountries}) {
+            val p=profile(s)
+            assertNull(net(s,p.copy(foreignMonthlyDeductions=null)))
+            val zeroCash=net(s,p.copy(foreignMonthlyDeductions=0.0))!!
+            assertEquals(s.gross,zeroCash.net,.0001)
+            assertEquals(0.0,zeroCash.incomeTax+zeroCash.personalCredit,.0001)
+            assertEquals(0.0,net(s,p.copy(foreignMonthlyDeductions=s.gross))!!.net,.0001)
+            assertEquals(net(s),net(s,p.copy(annualEmploymentGross=1000000.0,annualTaxableBase=1000000.0,monthlyTaxableBase=500.0)))
+        }
+        assertNull(estimateAdditionalFifteenNet(1000.0,profile(cases[9]).copy(taxCountry="ZZ",foreignProfileCountry="ZZ"),2026))
+    }
+    @Test fun invalidGrossCashWrongYearOrUnconfirmedProfileNeverProducesNet() {
+        for(s in cases) {
+            for(c in listOf(null,-1.0,Double.NaN,Double.POSITIVE_INFINITY,s.gross+1))
+                assertNull(net(s,profile(s).copy(foreignMonthlyDeductions=c)))
+            if(s.c !in additionalZeroSalaryTaxCountries)
+                assertNull(net(s,profile(s).copy(foreignMonthlyDeductions=s.gross)))
+            for(g in listOf(-1.0,Double.NaN,Double.POSITIVE_INFINITY,Double.MAX_VALUE,1000000001.0))
+                assertNull(estimateNet(g,g,profile(s),2026))
+            for(c in listOf("","IL","GB")) assertNull(net(s,profile(s).copy(foreignProfileCountry=c)))
+            for(y in listOf(2025,2027,2028)) {
+                assertFalse(supportsTaxYear(s.c,y))
+                assertNull(estimateNet(s.gross,s.gross,profile(s).copy(taxYear=y),y))
+            }
+            assertNull(net(s,profile(s).copy(taxYear=2025)))
+        }
+    }
+    @Test fun annualBonusChangesReserveButDoesNotAddAllBonusCashToOrdinaryPayment() {
+        val s=cases[0]
+        val before=net(s,profile(s).copy(annualEmploymentGross=24000.0,annualTaxableBase=21000.0))!!
+        val after=net(s)!!
+        assertEquals(50.0,after.incomeTax-before.incomeTax,.0001)
+        assertEquals(before.net-50.0,after.net,.0001)
+    }
+    @Test fun lowIncomeAndZeroProfilesCannotInventRefundsOrDeductionExemptions() {
+        for(s in cases) {
+            val p=profile(s).copy(annualEmploymentGross=1200.0,annualTaxableBase=if(s.c=="HN")0.0 else 1200.0,
+                monthlyTaxableBase=100.0,pyAnnualTaxableReceipts=1200.0,ecAnnualPersonalExpenses=0.0,foreignMonthlyDeductions=10.0)
+            val n=estimateNet(100.0,100.0,p,2026)!!
+            assertEquals(90.0,n.net,.0001);assertEquals(0.0,n.incomeTax,.0001)
+            assertEquals(10.0,n.otherDeductions,.0001)
+            val z=p.copy(annualEmploymentGross=0.0,annualTaxableBase=0.0,monthlyTaxableBase=0.0,
+                pyAnnualTaxableReceipts=0.0,foreignMonthlyDeductions=0.0)
+            assertEquals(0.0,estimateNet(0.0,0.0,z,2026)!!.net,.0001)
+        }
+    }
+    @Test fun namibiaFiscalYearStartsMarchOthersInThisBatchUseCalendarYear() {
+        assertEquals(2025,taxYearFor("NA",LocalDate.of(2026,2,28)))
+        assertEquals(2026,taxYearFor("NA",LocalDate.of(2026,3,1)))
+        assertEquals(2026,taxYearFor("NA",LocalDate.of(2027,2,28)))
+        assertEquals(2027,taxYearFor("NA",LocalDate.of(2027,3,1)))
+        for(c in additionalFifteenTaxCountries-"NA") {
+            assertEquals(2026,taxYearFor(c,LocalDate.of(2026,1,1)))
+            assertEquals(2027,taxYearFor(c,LocalDate.of(2027,1,1)))
+        }
+    }
+    @Test fun allSeventyCountrySelectorsHaveDistinctCodesAndCorrectCurrencies() {
+        assertEquals(supportedTaxCountries.size,taxCountries.size);assertEquals(supportedTaxCountries,taxCountries.map{it.code}.toSet())
+        for((c,m) in listOf("PA" to "PAB","NI" to "NIO","SV" to "USD","HN" to "HNL","PY" to "PYG","EC" to "USD",
+            "NA" to "NAD","KH" to "KHR","AZ" to "AZN","BH" to "BHD","KW" to "KWD","OM" to "OMR","QA" to "QAR","BN" to "BND","BS" to "BSD")) {
+            assertEquals(m,taxCurrency(c));assertTrue(c in foreignTaxCountries)
+            assertEquals(c in additionalAnnualTaxCountries,c in verifiedBaseTaxCountries)
+        }
+    }
+    @Test fun currencyFormattingPreservesThreeDigitGulfUnitsAndWholeGuarani() {
+        for(c in listOf("BHD","KWD","OMR")) assertTrue(money(1.234,c).contains("1.234"))
+        assertTrue(money(1.234,"USD").contains("1.23"));assertFalse(money(1.234,"USD").contains("1.234"))
+        assertTrue(money(1234.56,"PYG").contains("1,235"))
+        assertFalse(money(1234.56,"PYG").contains(".56"))
+    }
+    @Test fun fullSettingsAndBothNewAmountsRoundTripThroughLocalAndDriveBackups() {
+        for(s in cases) {
+            val data=AppData(settings=profile(s).copy(reasons=listOf("Remote work")))
+            data.settings.validate(allowUnconfigured=true)
+            assertEquals(data,decodeData(encodeData(data)))
+            assertEquals(data,readBackup(backupText(data)))
+        }
+        val both=AppData(settings=profile(cases[5]).copy(pyAnnualTaxableReceipts=40000.0))
+        assertEquals(both,readBackup(backupText(both)))
+        assertTrue(DATA_VERSION >= 15)
+    }
+    @Test fun legacyV14KeepsMonthlyBrazilProfileWithoutInventingNewAmounts() {
+        val p=AppSettings(taxCountry="BR",foreignProfileCountry="BR",annualEmploymentGross=84000.0,
+            monthlyTaxableBase=5392.80,foreignMonthlyDeductions=650.0)
+        val data=AppData(settings=p)
+        val old=JSONObject(encodeData(data)).put("version",14)
+        old.getJSONObject("settings").remove("ecAnnualPersonalExpenses")
+        old.getJSONObject("settings").remove("pyAnnualTaxableReceipts")
+        val restored=decodeData(old.toString())
+        assertEquals(data,restored);assertNull(restored.settings.ecAnnualPersonalExpenses)
+        assertNull(restored.settings.pyAnnualTaxableReceipts)
+        assertEquals(4955.46,estimateNet(6000.0,6000.0,restored.settings,2026)!!.net,.0001)
+        old.put("version",DATA_VERSION+1)
+        assertThrows(IllegalArgumentException::class.java){decodeData(old.toString())}
+    }
+    @Test fun freshInstallAndValidationNeverSupplyTaxEligibilityOrNewAmounts() {
+        val d=AppData();d.validate()
+        assertNull(d.settings.ecAnnualPersonalExpenses);assertNull(d.settings.pyAnnualTaxableReceipts)
+        assertNull(d.settings.monthlyTaxableBase);assertNull(d.settings.annualEmploymentGross)
+        assertEquals("",d.settings.foreignProfileCountry);assertEquals(d,readBackup(backupText(d)))
+        for(v in listOf(-1.0,Double.NaN,Double.POSITIVE_INFINITY,MAX_VERIFIED_ANNUAL_AMOUNT+1)) {
+            assertThrows(IllegalArgumentException::class.java){profile(cases[5]).copy(ecAnnualPersonalExpenses=v).validate(true)}
+            assertThrows(IllegalArgumentException::class.java){profile(cases[4]).copy(pyAnnualTaxableReceipts=v).validate(true)}
+        }
+    }
+}

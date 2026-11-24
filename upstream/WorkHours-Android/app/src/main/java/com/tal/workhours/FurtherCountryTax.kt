@@ -1,0 +1,98 @@
+package com.tal.workhours
+
+import kotlin.math.*
+import java.math.BigDecimal
+import java.math.RoundingMode
+
+val furtherTaxCountries = setOf("DE", "FR", "PT", "AU", "NZ")
+
+internal fun germanAnnualIncomeTax(taxable: Double): Double {
+    val x = BigDecimal.valueOf(floor(taxable))
+    val y = (x - BigDecimal("12348")).movePointLeft(4)
+    val z = (x - BigDecimal("17799")).movePointLeft(4)
+    val value = when {
+        taxable < 12349 -> BigDecimal.ZERO
+        taxable < 17800 -> (BigDecimal("914.51") * y + BigDecimal("1400")) * y
+        taxable < 69879 -> (BigDecimal("173.10") * z + BigDecimal("2397")) * z + BigDecimal("1034.87")
+        taxable < 277826 -> BigDecimal("0.42") * x - BigDecimal("11135.63")
+        else -> BigDecimal("0.45") * x - BigDecimal("19470.38")
+    }
+    return value.setScale(0, RoundingMode.FLOOR).toDouble()
+}
+internal fun germanSolidarity(tax: Double): Double {
+    val full = BigDecimal.valueOf(tax) * BigDecimal("0.055")
+    val phase = BigDecimal.valueOf(max(0.0, tax - 20350.0)) * BigDecimal("0.119")
+    return full.min(phase).setScale(2, RoundingMode.DOWN).toDouble()
+}
+
+/** Annual-liability scenarios. DE/FR require an independently verified taxable base, never guessed from gross. */
+fun estimateFurtherCountryNet(gross: Double, settings: AppSettings, year: Int): NetEstimate? {
+    val country = settings.taxCountry
+    if (country !in furtherTaxCountries || !supportsTaxYear(country, year) || settings.taxYear != year ||
+        settings.foreignProfileCountry != country || !gross.isFinite() || gross < 0) return null
+    val cash = settings.foreignMonthlyDeductions ?: return null
+    if (!cash.isFinite() || cash < 0 || cash > gross) return null
+    val annual = gross * 12
+    if (!annual.isFinite()) return null
+    var insurance = 0.0
+    var health = 0.0
+    var additionalTax = 0.0
+    var credit = 0.0
+    val tax = when (country) {
+        "DE", "FR" -> {
+            val base = settings.annualTaxableBase ?: return null
+            if (!base.isFinite() || base < 0 || base > annual) return null
+            if (country == "DE") {
+                val incomeTax = germanAnnualIncomeTax(base)
+                additionalTax = germanSolidarity(incomeTax)
+                incomeTax
+            } else {
+                // Excludes CEHR/CDHR and other income: full annual cash salary is capped at EUR 200,000.
+                if (annual > 200000.0) return null
+                val roundedBase = floor(base + .5)
+                val before = floor(bandTax(roundedBase, listOf(11600.0, 29579.0, 84577.0, 181917.0, Double.POSITIVE_INFINITY),
+                    listOf(0.0, .11, .30, .41, .45)) + .5 + 0.00000001)
+                val decote = if (before < 1982) floor(max(0.0, 897.0 - before * .4525) + .5 + 0.00000001) else 0.0
+                val after = max(0.0, before - decote)
+                val finalTax = if (after < 61.0) 0.0 else after
+                credit = max(0.0, before - finalTax)
+                finalTax
+            }
+        }
+        "PT" -> {
+            // Mainland, ordinary category A, twelve equal payments including holiday/Christmas pro-rata.
+            // Above EUR 20k annual gross, the single-person minimum-existence exclusion applies.
+            if (settings.taxRegion != "PT-MAINLAND" || annual < 20000.0) return null
+            insurance = annual * .11
+            val taxable = max(0.0, annual - max(4587.09, insurance))
+            additionalTax = max(0.0, min(taxable, 250000.0) - 80000.0) * .025 + max(0.0, taxable - 250000.0) * .05
+            bandTax(taxable, listOf(8342.0, 12587.0, 17838.0, 23089.0, 29397.0, 43090.0, 46566.0, 86634.0, Double.POSITIVE_INFINITY),
+                listOf(.125, .157, .212, .241, .311, .349, .431, .446, .48))
+        }
+        "AU" -> {
+            // Initial profile avoids low-income Medicare parameters not yet final for the entire future tax year.
+            if (annual < 50000.0 || settings.auHospitalCover !in setOf("FULL", "NONE")) return null
+            val before = bandTax(annual, listOf(18200.0, 45000.0, 135000.0, 190000.0, Double.POSITIVE_INFINITY),
+                listOf(0.0, if (year == 2026) .15 else .16, .30, .37, .45))
+            credit = max(0.0, 325.0 - max(0.0, annual - 45000.0) * .015)
+            health = annual * .02
+            if (settings.auHospitalCover == "NONE") {
+                val limits = if (year == 2026) listOf(105000.0, 123000.0, 164000.0) else listOf(101000.0, 118000.0, 158000.0)
+                val rate = when { annual <= limits[0] -> 0.0; annual <= limits[1] -> .01; annual <= limits[2] -> .0125; else -> .015 }
+                additionalTax = annual * rate
+            }
+            max(0.0, before - credit)
+        }
+        else -> { // New Zealand salary-only resident, one main job, no other credits/benefit income.
+            val before = bandTax(annual, listOf(15600.0, 53500.0, 78100.0, 180000.0, Double.POSITIVE_INFINITY), listOf(.105, .175, .30, .33, .39))
+            val limit = if (year == 2026) 156641.0 else 152790.0
+            val rate = if (year == 2026) .0175 else .0167
+            insurance = floor(min(annual, limit) * rate * 100 + .5) / 100
+            if (settings.nzIetcEligible && annual in 24000.0..70000.0) credit = max(0.0, 520.0 - max(0.0, annual - 66000.0) * .13)
+            max(0.0, before - credit)
+        }
+    }
+    return NetEstimate(tax / 12, insurance / 12, health / 12, 0.0, 0.0, 0.0,
+        gross - (tax + insurance + health + additionalTax) / 12 - cash,
+        otherTax = additionalTax / 12, otherDeductions = cash, personalCredit = credit / 12)
+}

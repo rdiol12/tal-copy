@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="text_93d815fab2" formatted="false">"Ежедневные стандартные часы должны быть больше 0 и не более 24."</string>
+    <string name="text_9fdb0c0357" formatted="false">"Платеж должен быть нулевым или положительным числом."</string>
+    <string name="text_1020d02bcc" formatted="false">"Месячная цель часов должна быть больше 0 и не более 744."</string>
+    <string name="text_a3016d567d" formatted="false">"Время начала дня должно быть между 1 и 31."</string>
+    <string name="text_a3b71b8576" formatted="false">"Окончательное время должно покрывать все оставшиеся часы."</string>
+    <string name="text_11798e6af6" formatted="false">"Проверьте сроки и проценты оплаты."</string>
+    <string name="text_142ed94880" formatted="false">"Разрывные настройки недействительны."</string>
+    <string name="text_617d62c8d5" formatted="false">"Налоговые кредиты являются недействительными."</string>
+    <string name="text_d64e9be198" formatted="false">"Процент взносов должен составлять от 0 до 100."</string>
+    <string name="text_e9ded22849" formatted="false">"Основа оплаты взносов недействительна."</string>
+    <string name="text_5340862757" formatted="false">"Выберите хотя бы один рабочий день."</string>
+    <string name="text_58ee2bc711" formatted="false">"Список причин слишком длинный."</string>
+    <string name="text_54904132d0" formatted="false">"Количество записей или их идентификаторы недействительны."</string>
+    <string name="text_bccb639eb1" formatted="false">"Инвалидный трудовой вход."</string>
+    <string name="text_14afe878db" formatted="false">"Первоначальная продолжительность недействительна."</string>
+    <string name="text_285af230e1" formatted="false">"Входный текст слишком длинный."</string>
+    <string name="text_927652b634" formatted="false">"Вход на работу перекрыт."</string>
+    <string name="text_478ac0cba4" formatted="false">"Активный переход превышает существующий вход."</string>
+    <string name="text_1ce0351978" formatted="false">"Никакой конкретной причины"</string>
+    <string name="text_0206a8d338" formatted="false">"Вы не можете подключить свой аккаунт Google прямо сейчас. вы можете вернуть файл и попробовать снова позже."</string>
+    <string name="text_630af90bc5" formatted="true">"Google разрешение не было предоставлено (код %1$s). воссоедините или используйте копирование файла."</string>
+    <string name="text_daf10c2ee5" formatted="false">"Операция провалилась. ваши местные данные сохранились."</string>
+    <string name="text_25b395415b" formatted="false">"Защита копий удачно сохранилась в Google Drive."</string>
+    <string name="text_fc021a3be3" formatted="false">"В этом аккаунте не было найдено никаких копий резервной копии ShiftHours."</string>
+    <string name="text_439ed2ca59" formatted="false">"Подключение к Google Drive."</string>
+    <string name="text_7480a74f74" formatted="false">"Подключение отменено. никакой резервной копии или восстановления не было выполнено."</string>
+    <string name="text_514e675d10" formatted="false">"Двигательский доступ не был предоставлен."</string>
+    <string name="text_325ca3ec59" formatted="false">"Водительское удостоверение не было предоставлено."</string>
+    <string name="text_5862cd4663" formatted="false">"Невозможно открыть целевой файл."</string>
+    <string name="text_a8df08ecdf" formatted="false">"Защита копирования файла."</string>
+    <string name="text_04bb2141d5" formatted="false">"Не умею читать файл."</string>
+    <string name="text_5e9b8b7914" formatted="false">"Копия резервной копии слишком велика."</string>
+    <string name="text_221ac78111" formatted="false">"копирование и восстановление"</string>
+    <string name="text_806ac63619" formatted="false">"Сохраняйте рабочие часы при переходе на новый телефон."</string>
+    <string name="text_55d63892ad" formatted="false">"Google Drive"</string>
+    <string name="text_e5444dccaf" formatted="false">"Нет выбранного аккаунта"</string>
+    <string name="text_0a2305a775" formatted="false">"Успешная резервная копия показывается только после завершения загрузки."</string>
+    <string name="text_2fc9030263" formatted="false">"Подключите учетную запись и дайте доступ."</string>
+    <string name="text_cd0e41e136" formatted="false">"Выберите аккаунт / повторно подключитесь"</string>
+    <string name="text_6f3a7bda3a" formatted="false">"Подключение к Google Drive"</string>
+    <string name="text_15109258b9" formatted="false">"Вернуться к вождению сейчас"</string>
+    <string name="text_c75c1e3a33" formatted="false">"Выберите резервную копию Drive для восстановления"</string>
+    <string name="text_90b7df067a" formatted="false">"Никакой резервной копии Drive не завершен для этого аккаунта пока."</string>
+    <string name="text_1c2b595825" formatted="true">"Последнее успешное копирование: %1$s %2$s"</string>
+    <string name="text_32640ad12e" formatted="false">"резервные копии хранятся в скринной папке данных приложений Drive, а не как обычные файлы. Для восстановления на новом телефоне, установите ту же приложение и подключите тот же аккаунт Google."</string>
+    <string name="text_ea1a07b6ef" formatted="false">"Автоматическая копия"</string>
+    <string name="text_8edcd28553" formatted="false">"Выключено"</string>
+    <string name="text_ef4037576b" formatted="false">"Ежедневно"</string>
+    <string name="text_50296d4c2d" formatted="false">"Еженедельно"</string>
+    <string name="text_790f24eb34" formatted="false">"Схема копирования резервной копии обновлена."</string>
+    <string name="text_e75e2661b7" formatted="false">"Только в беспрецедентной сети, например, Wi-Fi"</string>
+    <string name="text_cf3d313652" formatted="false">"Планирование доступно после подключения Drive. Android может откладывать резервные копии для сохранения аккумулятора или, когда они отсутствуют. Используйте кнопку выше, чтобы создать первую резервную копию сразу."</string>
+    <string name="text_1e579b05be" formatted="false">"Отключен локально и отменил график. существующие резервные копии не были удалены."</string>
+    <string name="text_83eccb0dd3" formatted="false">"Отключить и отменить график"</string>
+    <string name="text_b35a854e22" formatted="false">"копирование файла и восстановление"</string>
+    <string name="text_1da6e0d4aa" formatted="false">"Сохраните копию файла резервной копии на вашем компьютере, в Драйве или где-то другое, даже до установки подключения к Google приложения."</string>
+    <string name="text_52cca61a5d" formatted="false">"Защита копирования файла"</string>
+    <string name="text_4d2b863edd" formatted="false">"восстановление от копирования файла резервной копии"</string>
+    <string name="text_f4ab9db1a0" formatted="false">"резервные копии включают в себя входы, активный переход, настройки и спасенные причины. Перед восстановлением отображается предварительный просмотр и локальная копия ваших предыдущих данных сохраняется."</string>
+    <string name="text_86472e4d43" formatted="false">"Откройте копию, сохранившуюся до последнего восстановления"</string>
+    <string name="text_bf72e99186" formatted="true">"Это устройство содержит %1$s входов. воссоедините Google и настроите график резервного копирования на каждом телефоне."</string>
+    <string name="text_b5af650c8c" formatted="false">"Реставрационный режим: локальные данные не могут быть прочтены. восстановление из файла или диска; создание новых резервных копий отключено."</string>
+    <string name="text_f738c4c045" formatted="false">"Доступные резервные копии"</string>
+    <string name="text_c775e7dcf6" formatted="false">"Никаких резервных копий в выбранном аккаунте нет."</string>
+    <string name="text_b728721fc0" formatted="false">"Близость"</string>
+    <string name="text_835ba611ee" formatted="false">"подтверждает восстановление"</string>
+    <string name="text_bfe0764274" formatted="true">"Защитная копия содержит %1$s входы."</string>
+    <string name="text_19a88cf185" formatted="true">"Объем: %1$s до %2$s"</string>
+    <string name="text_ea12a4ba2b" formatted="false">"Никакого"</string>
+    <string name="text_1f70207bab" formatted="false">"Да"</string>
+    <string name="text_3cbbf0077a" formatted="true">"Текущая смена: %1$s"</string>
+    <string name="text_2388ed2d80" formatted="true">"Восстановление заменит %1$s записей и настройки на этом устройстве. Сначала будет сохранена локальная копия."</string>
+    <string name="text_f35658ed7c" formatted="false">"Реставрация завершена"</string>
+    <string name="text_a87c9f4c06" formatted="false">"Замена данных и восстановление"</string>
+    <string name="text_a7c55a8d06" formatted="false">"Отменить"</string>
+    <string name="text_7b80593224" formatted="false">"Файл слишком большой."</string>
+    <string name="text_b36a3090e4" formatted="false">"Эта резервная копия несовместима с этой версией приложения."</string>
+    <string name="text_1d25b4e13f" formatted="false">"Это не поддерживаемая резервная копия ShiftHours."</string>
+    <string name="text_c84389ddd1" formatted="false">"Защитная копия была повреждена: проверка целостности провалилась."</string>
+    <string name="text_2159b4a358" formatted="false">"Неидентифицированная предыдущая версия данных."</string>
+    <string name="text_4ae6ec8fa0" formatted="false">"Данные пока не загружены."</string>
+    <string name="text_cf903e3463" formatted="false">"Введите действующий номер."</string>
+    <string name="text_039bb0fc27" formatted="false">"Введите время как час: минуты или десятки часов."</string>
+    <string name="text_a7fcad5418" formatted="false">"Невыполненное количество часов."</string>
+    <string name="text_37e2eed494" formatted="false">"Невыполненное количество минут."</string>
+    <string name="text_77c0279c02" formatted="false">"Инвалидный период начинается в день."</string>
+    <string name="text_3f800b0cce" formatted="false">"Невыполненный срок в конце дня."</string>
+    <string name="text_14611081ea" formatted="false">"Последний день должен предшествовать началу следующего периода."</string>
+    <string name="text_b9e104411d" formatted="false">"Введите время перерыва в целые минуты."</string>
+    <string name="text_2189089fc9" formatted="false">"Посмотрите на настройки."</string>
+    <string name="text_81de798264" formatted="false">"Добро пожаловать"</string>
+    <string name="text_47cfdefbce" formatted="false">"Настройки"</string>
+    <string name="text_8d74344d70" formatted="false">"Настроить условия работы и сэкономить, чтобы начать."</string>
+    <string name="text_9a90a562d2" formatted="false">"Сохранить изменения"</string>
+    <string name="text_ab4dfe20aa" formatted="false">"Применяется для всех записей, в том числе и предыдущих."</string>
+    <string name="text_0bf5310554" formatted="false">"Сэкономить..."</string>
+    <string name="text_54d36ad080" formatted="false">"Сохранить настройки"</string>
+    <string name="text_465e8134a4" formatted="false">"Оплата и сверхурочные"</string>
+    <string name="text_45a3198e62" formatted="false">"Период и перерывы"</string>
+    <string name="text_bfc0c0e7f1" formatted="false">"Налоги и взносы"</string>
+    <string name="text_a2ceeb919c" formatted="false">"Спасенные причины"</string>
+    <string name="text_3d0ffbb6b9" formatted="false">"Тип оплаты"</string>
+    <string name="text_9852666700" formatted="false">"Фиксированная ежемесячная заработная плата"</string>
+    <string name="text_c17956962e" formatted="false">"Общая ежемесячная заработная плата (₪)"</string>
+    <string name="text_55bc5d12cc" formatted="false">"Часовая оплата ( ₪ )"</string>
+    <string name="text_635f53e8e3" formatted="false">"Месячные часы, требуемые Вашим работодателем"</string>
+    <string name="text_8b4c4a643c" formatted="false">"Часовая ставка = ежемесячная заработная плата ÷ ежемесячная целенаправленная рабочая ставка. Брутовая заработная плата включает полную ежемесячную заработную плату плюс переплаты на конфигурированные ставки."</string>
+    <string name="text_7414d91b15" formatted="false">"Общая зарплата рассчитывается с зафиксированных часов и конфигурируемых третей."</string>
+    <string name="text_8a239ab302" formatted="false">"Ступени сверхурочных"</string>
+    <string name="text_0fea91c3a0" formatted="false">"Регулярные часы в день"</string>
+    <string name="text_996add3cb0" formatted="false">"Введите десяточасы или часы: минуты, например 2,5 или 2:30."</string>
+    <string name="text_b779c7c572" formatted="true">"Ступень %1$s"</string>
+    <string name="text_25606d5652" formatted="false">"Все оставшиеся часы"</string>
+    <string name="text_92102dc8df" formatted="false">"Часы на этом этаже"</string>
+    <string name="text_b5fe6f82a9" formatted="false">"Процент часовой ставки"</string>
+    <string name="text_bd38859717" formatted="false">"Этот уровень применяется после регулярных часов и всех третей выше него."</string>
+    <string name="text_5192d415d8" formatted="false">"перемещаться вверх"</string>
+    <string name="text_6179185b49" formatted="false">"Переместите вниз"</string>
+    <string name="text_7c8173fafa" formatted="false">"Удалить"</string>
+    <string name="text_f428ab9623" formatted="false">"Добавить ступень"</string>
+    <string name="text_f1f14874a4" formatted="false">"Точно один уровень «все оставшиеся часы» требуется, в последней строке.Добавление уровня ограничивает предыдущий уровень; проверьте его часы."</string>
+    <string name="text_89fef4fd58" formatted="false">"отчетный период"</string>
+    <string name="text_6c22041108" formatted="false">"Первый день периода (1–31)"</string>
+    <string name="text_796e34b83e" formatted="false">"Последний день (31 = конец месяца)"</string>
+    <string name="text_b241433b46" formatted="false">"Дни связаны, чтобы избежать пропусков или перегрузок, например, 25–24.В течение короткого месяца дата начала корректируется на последний доступный день."</string>
+    <string name="text_a222187697" formatted="true">"Настоящий период: %1$s – %2$s"</string>
+    <string name="text_01f30eb896" formatted="false">"Перерыв дедукции"</string>
+    <string name="text_c9beca5709" formatted="false">"Дедукт перерывает время"</string>
+    <string name="text_a123134aa5" formatted="false">"один раз в день"</string>
+    <string name="text_26dcd5cc53" formatted="false">"по сегменту"</string>
+    <string name="text_fa4922c12a" formatted="false">"Минуты для отвода"</string>
+    <string name="text_ff7f573a4d" formatted="false">"Также отводить перерывы при работе из дома"</string>
+    <string name="text_143dd7316a" formatted="false">"Ежедневный перерыв дедуцируется один раз по допустимым сегментам в распоряжении времени. домашние работы исключаются, когда его вариант закрыт."</string>
+    <string name="text_40494acb7f" formatted="false">"Все записанное время считается оплачиваемым временем."</string>
+    <string name="text_8a53041f32" formatted="false">"Рабочие дни для ежедневных недостатков"</string>
+    <string name="text_b6c4c767eb" formatted="false">"Вс"</string>
+    <string name="text_c0505c1097" formatted="false">"Пн"</string>
+    <string name="text_7b5b7d0c90" formatted="false">"Вт"</string>
+    <string name="text_88aa0681e1" formatted="false">"Ср"</string>
+    <string name="text_c2742c4cba" formatted="false">"Чт"</string>
+    <string name="text_08e0ffcda5" formatted="false">"Пт"</string>
+    <string name="text_0645b32caf" formatted="false">"Сб"</string>
+    <string name="text_92d73e83f6" formatted="false">"Те же третий перерыв времени распространяется на все дни; не существует отдельных выходных или праздничных правил."</string>
+    <string name="text_69e69a7518" formatted="false">"Налоговые кредитные точки и расчетная чистая зарплата"</string>
+    <string name="text_70d7cd14f1" formatted="false">"Налоговые кредитные точки (с вашего paylip)"</string>
+    <string name="text_9987c69efd" formatted="false">"По израильской налоговой таблице на 2026 год каждый балл даёт вычет 242 ₪ в месяц."</string>
+    <string name="text_8cee38323a" formatted="false">"Пенсионный и учебный фонд"</string>
+    <string name="text_9982697de0" formatted="false">"Пенсионный вклад работников (%)"</string>
+    <string name="text_3638d5596d" formatted="false">"Взнос в фонд обучения работников (%; 0 если нет)"</string>
+    <string name="text_90b68945c0" formatted="false">"Введите только долю работника, исключая взносы работодателя."</string>
+    <string name="text_e2e16aa700" formatted="false">"Платежная база для взносов"</string>
+    <string name="text_dc959b16aa" formatted="false">"Базовая зарплата, исключая перерыв"</string>
+    <string name="text_682c0e2622" formatted="false">"Общая большая зарплата"</string>
+    <string name="text_3f55564e26" formatted="false">"Ручно определенная сумма"</string>
+    <string name="text_0d4b9a288d" formatted="false">"База оплаты взносов (₪)"</string>
+    <string name="text_3284189b89" formatted="false">"Включает стандартный пенсионный взнос налоговый кредит"</string>
+    <string name="text_0b5e7d7238" formatted="false">"Оценка пенсионного налога кредита составляет 35% допустимых взносов, охватываемых в ₪679 взносов в месяц и 7% оплаты труда."</string>
+    <string name="text_102196cdf2" formatted="false">"Что включает в себя расчет"</string>
+    <string name="text_c02d9dbae9" formatted="false">"Налог на доходы, налоговые кредиты, национальное и медицинское страхование Израиля, а также взносы работников. Используйте таблицы 2026 для израильских жителей в возрасте 18 лет для выхода на пенсию."</string>
+    <string name="text_a09a8853d1" formatted="false">"Исключает налоговую координацию, другие доходы, налогооблагаемые льготы по автомобилям, налоги на взносы работодателя и специальные кредиты. Сравнить с вашим платежом и усовершенствовать, как это необходимо."</string>
+    <string name="text_49148d6451" formatted="false">"Спасенные причины для работы из дома"</string>
+    <string name="text_62d649ad15" formatted="false">"Новая причина"</string>
+    <string name="text_45bd96d34b" formatted="false">"Добавить в список"</string>
+    <string name="text_a99e68e9f4" formatted="false">"Удаление"</string>
+    <string name="text_1b581c283a" formatted="false">"Удаление спасенной причины не меняет существующие входы. Вы всегда можете ввести бесплатный текст."</string>
+    <string name="text_d44063b451" formatted="false">"Загрузка данных провалилась."</string>
+    <string name="text_31e02fbfa7" formatted="false">"Изменения не спасены, попробуйте еще раз."</string>
+    <string name="text_71f28ff8fa" formatted="false">"Неспособность загружать данные"</string>
+    <string name="text_b238f1a394" formatted="false">"Файлы были сохранены.Не удаляйте данные приложения."</string>
+    <string name="text_fc2297f319" formatted="false">"Попробуйте снова"</string>
+    <string name="text_6e56c6a002" formatted="false">"восстановление резервной копии"</string>
+    <string name="text_e4f2184a47" formatted="false">"Проверьте часы устройства: вступление заканчивается в будущем."</string>
+    <string name="text_6f6a3321b0" formatted="false">"Время окончания должно быть после времени начала."</string>
+    <string name="text_e0aad7a0c2" formatted="false">"Настройки спасены"</string>
+    <string name="text_8dfb4f3f58" formatted="false">"Вход спасен"</string>
+    <string name="text_7a6915a25c" formatted="false">"Вы не можете записывать часы, которые еще не произошли."</string>
+    <string name="text_2aca9c2968" formatted="false">"Часы-в течение времени не могут быть в будущем."</string>
+    <string name="text_f9dc75319d" formatted="false">"Удаление входа"</string>
+    <string name="text_f026fe8829" formatted="true">"Удалить вход за %1$s? это не может быть отменено."</string>
+    <string name="text_b0e3328ac0" formatted="false">"Причины для работы из дома"</string>
+    <string name="text_f1af79973d" formatted="false">"Выберите спасенную причину"</string>
+    <string name="text_05d94bc43f" formatted="false">"Мои рабочие часы"</string>
+    <string name="text_c83e648a74" formatted="false">"Первоначальная установка"</string>
+    <string name="text_89c15910b6" formatted="false">"Настроить свою зарплату, месячные и рабочие сроки, чтобы позволить расчеты заработной платы. Вы можете записывать часы до завершения настройки."</string>
+    <string name="text_7c1126f30f" formatted="false">"Открытые настройки"</string>
+    <string name="text_01ebd1a71f" formatted="false">"Готовы начать?"</string>
+    <string name="text_6d81f53fb4" formatted="true">"Смена идёт · %1$s"</string>
+    <string name="text_8b6488028e" formatted="false">"Проведите, чтобы начать смену сейчас."</string>
+    <string name="text_c386f7af9f" formatted="true">"Начало: %1$s %2$s"</string>
+    <string name="text_bc84ae26be" formatted="false">"Проведите, чтобы завершить смену сейчас."</string>
+    <string name="text_73a90395c7" formatted="false">"Начать смену"</string>
+    <string name="text_867983500d" formatted="false">"Завершить смену"</string>
+    <string name="text_a5d8698fba" formatted="false">"Правильный час-ин / установить другое время окончания"</string>
+    <string name="text_1efd4660f9" formatted="false">"Добавить смену вручную"</string>
+    <string name="text_79a7f1d677" formatted="false">"Ваш час-в-время сохраняется даже при закрытии приложения."</string>
+    <string name="text_95d86d7f5f" formatted="false">"Сегодня"</string>
+    <string name="text_6834f9db87" formatted="false">"Чистые часы"</string>
+    <string name="text_b076df1539" formatted="false">"Сегменты в один и тот же день сочетаются. переход на ночь относится к его дате начала."</string>
+    <string name="text_7991cbb6a8" formatted="false">"Текущий период"</string>
+    <string name="text_3084f001bd" formatted="false">"Записанные часы"</string>
+    <string name="text_7447d177b1" formatted="false">"Сверхурочные"</string>
+    <string name="text_e2cbeabb69" formatted="false">"Полная зарплата + зафиксированный перерыв"</string>
+    <string name="text_4c0803b36f" formatted="false">"Взносы от входов"</string>
+    <string name="text_389abd9ee8" formatted="false">"Совокупность платежей появится после сохранения первоначальных вложений."</string>
+    <string name="text_1960680292" formatted="false">"Статус копирования резервного копирования"</string>
+    <string name="text_dd6ddc4c4f" formatted="false">"Никакой резервной копии Drive еще не завершен на этом устройстве."</string>
+    <string name="text_1c3f9e273d" formatted="true">"Успешная резервная копия Drive: %1$s %2$s"</string>
+    <string name="text_6e55aef91f" formatted="false">"Ежедневная резервная копия планируется"</string>
+    <string name="text_17ee444b2e" formatted="false">"еженедельная резервная копия запланирована"</string>
+    <string name="text_d7da1ab695" formatted="false">"Автоматическая резервная копия выключена"</string>
+    <string name="text_bba88dd845" formatted="false">"Настройки и действия доступны в таблице копирования резервной копии ниже."</string>
+    <string name="text_d61f7f639f" formatted="false">"Предыдущий"</string>
+    <string name="text_28890b291d" formatted="false">"Следующий"</string>
+    <string name="text_023f8a1a0c" formatted="false">"Сводка"</string>
+    <string name="text_0cdf398747" formatted="false">"Часы, оплата и отслеживание за период"</string>
+    <string name="text_5b40d10b38" formatted="false">"Месячная зарплата + перерыв"</string>
+    <string name="text_b7cebc21b4" formatted="false">"Часы оплаты"</string>
+    <string name="text_24c64cee7b" formatted="false">"Полная ежемесячная заработная плата"</string>
+    <string name="text_1558a05606" formatted="false">"Регулярная оплата"</string>
+    <string name="text_5407314942" formatted="false">"Обычный срок оплаты"</string>
+    <string name="text_ebff026858" formatted="false">"Часовая ставка"</string>
+    <string name="text_f072356bdc" formatted="false">"Полная ежемесячная зарплата отображается. утраченные часы отображаются отдельно и не дедуцируются автоматически."</string>
+    <string name="text_d7fec4855e" formatted="false">"Включает часы активного перехода в течение этого периода; количество обновлений в живых."</string>
+    <string name="text_087fd2cd6d" formatted="false">"Часы разрыва"</string>
+    <string name="text_3eb92e199a" formatted="false">"Всего чистого времени"</string>
+    <string name="text_07b643f83a" formatted="false">"Обычные часы"</string>
+    <string name="text_dda62e1cc9" formatted="false">"Всего сверхурочных"</string>
+    <string name="text_27fa002b22" formatted="true">"Часы по ставке %1$s%%"</string>
+    <string name="text_0d562e6527" formatted="true">"Оплата по ставке %1$s%%"</string>
+    <string name="text_b93940ad5b" formatted="false">"Повышенные часовые весы"</string>
+    <string name="text_aa79d639a1" formatted="false">"Офис и дом"</string>
+    <string name="text_b895b63363" formatted="false">"Офисные часы"</string>
+    <string name="text_bf004c7509" formatted="false">"Домой Часы"</string>
+    <string name="text_a839ec02b2" formatted="true">"%1$s%% в офисе"</string>
+    <string name="text_b8ded3389c" formatted="false">"Официальная стоимость по базовой ставке"</string>
+    <string name="text_ec791b21f9" formatted="false">"Домашняя стоимость по базовой ставке"</string>
+    <string name="text_2d3fd3bb5b" formatted="false">"Базовые процентные значения исключают премии за перерыв времени; не добавляйте их к грубому плате."</string>
+    <string name="text_6689630948" formatted="false">"Пропущенные часы и входные проверки"</string>
+    <string name="text_23b17c77be" formatted="false">"Цель часов на этот период"</string>
+    <string name="text_9e0655ff1b" formatted="false">"Недостаток в сравнении с ежемесячными целями"</string>
+    <string name="text_468b69c83d" formatted="false">"Сумма ежедневных недостатков"</string>
+    <string name="text_d75f4dd709" formatted="false">"Ежедневные недостатки рассчитывают только выбранные рабочие дни с входами.Дни без входа автоматически не отмечаются как отсутствия."</string>
+    <string name="text_e9f9673a47" formatted="false">"Официальный недостаток"</string>
+    <string name="text_8e87e45498" formatted="false">"Официальные часы выше ежедневного стандарта"</string>
+    <string name="text_43af7314c4" formatted="false">"Дни с отсутствием часов-в/от ноты"</string>
+    <string name="text_d41113bbd2" formatted="false">"Дни с входами"</string>
+    <string name="text_3ee5d8b89f" formatted="false">"Домашняя работа по причине"</string>
+    <string name="text_e220a05303" formatted="false">"В этот период нет домов."</string>
+    <string name="text_4b0ccb42af" formatted="false">"Часы"</string>
+    <string name="text_387c48c332" formatted="false">"Цены по базовой ставке"</string>
+    <string name="text_a347b2c73c" formatted="false">"Оценка чистой оплаты"</string>
+    <string name="text_b8e45d7b9e" formatted="true">"Таблицы налога для %1$s не конфигурируются. нет нетты оценки."</string>
+    <string name="text_90128d6911" formatted="false">"Введите свои налоговые кредитные точки и процент пенсии работников в расчетах, чтобы показать оценку. Введите 0 если нет взносов."</string>
+    <string name="text_3d880292e0" formatted="false">"Налог на доходы"</string>
+    <string name="text_89e2b25fb1" formatted="false">"Национальное страхование"</string>
+    <string name="text_c694983c02" formatted="false">"Страхование здоровья"</string>
+    <string name="text_901acdd444" formatted="false">"Пенсия - доля работников"</string>
+    <string name="text_852a1bee2a" formatted="false">"Фонд обучения — доля работников"</string>
+    <string name="text_f8ee9f9027" formatted="false">"Пенсионный взнос налоговый кредит"</string>
+    <string name="text_192617126a" formatted="false">"Месячная оценка с использованием 2026 израильских таблиц. исключает кумулятивный налог, другие доходы, налогооблагаемые льготы и налоговой координации. взносы используют выбранную базу оплаты труда."</string>
+    <string name="text_fe04db5f37" formatted="false">"Время отображается как час: минуты; расчеты сохраняют источники секунды."</string>
+    <string name="text_3141c61e9e" formatted="false">"Учёт времени"</string>
+    <string name="text_723a7db2af" formatted="false">"Смены и рабочие отрезки"</string>
+    <string name="text_57b4cda969" formatted="false">"+ Добавить смену вручную"</string>
+    <string name="text_7149f2ed6a" formatted="false">"Третьи используют весь день, даже при фильтрации в одно рабочее место."</string>
+    <string name="text_3579e0306b" formatted="false">"Поправьте его начало или введите время конца на домашнем экране."</string>
+    <string name="text_643cae9ae3" formatted="false">"Никаких завершенных записей в этот период."</string>
+    <string name="text_d3fcfb1a78" formatted="true">"Окончание: %1$s %2$s"</string>
+    <string name="text_39fe25939b" formatted="false">"ЭДИТ"</string>
+    <string name="text_0826149cf1" formatted="false">"Итоги дня"</string>
+    <string name="text_d783472020" formatted="false">"Чистое время за день"</string>
+    <string name="text_a3756d29d2" formatted="false">"Оплачиваемое время"</string>
+    <string name="text_c24fae5be3" formatted="false">"Время в текущем фильтре"</string>
+    <string name="text_b70622d71d" formatted="false">"Правильный активный переход"</string>
+    <string name="text_59cb6e8e9a" formatted="false">"Изменить смену"</string>
+    <string name="text_10045253c1" formatted="false">"Смена вручную"</string>
+    <string name="text_2f6783cd3b" formatted="false">"Начало работы"</string>
+    <string name="text_b939061e41" formatted="false">"Окончание работы"</string>
+    <string name="text_8f9bc2d880" formatted="false">"Примечание / отсутствие часов-в или часов-от"</string>
+    <string name="text_d958ea3cd8" formatted="true">"Продолжительность до перерыва: %1$s"</string>
+    <string name="text_1be17082dd" formatted="false">"Сегменты в один и тот же день разделяют третий перерыв времени. Не входите в перерывные сегменты."</string>
+    <string name="text_d42c0813fc" formatted="false">"Часы в будущем не могут быть."</string>
+    <string name="text_510b00fcc4" formatted="false">"Сохраните исправленный старт и держите переход открытым"</string>
+    <string name="text_647a733fb8" formatted="false">"Невыполненный час в дату."</string>
+    <string name="text_4c82f98655" formatted="false">"Часовой выезд должен быть после часового въезда. для перехода ночью, также выберите правильную дату окончания."</string>
+    <string name="text_c2fb808976" formatted="false">"В будущем часы не могут быть."</string>
+    <string name="text_6eb37ad66f" formatted="false">"Окончить и сохранить переход"</string>
+    <string name="text_e69323393b" formatted="false">"Сохранить"</string>
+    <string name="text_b89e7bee64" formatted="false">"Первоначальные настройки"</string>
+    <string name="text_2eaf74bbd8" formatted="false">"Начните с рабочих условий"</string>
+    <string name="text_f9fb70ce3b" formatted="false">"Введите оплату и месячные часы, затем корректируйте перерывы, перерывы и отчетный период."</string>
+    <string name="text_925bb7a659" formatted="false">"Google разрешение истекло. переключаться."</string>
+    <string name="text_86de69005f" formatted="false">"Движение доступа отказано. воссоедините свой аккаунт в Google."</string>
+    <string name="text_0885c5a6fa" formatted="false">"Защитная копия не была найдена в выбранном аккаунте."</string>
+    <string name="text_09780711f6" formatted="false">"Google ограничивает запросы. попробуйте снова позже."</string>
+    <string name="text_2a152ef564" formatted="true">"Коммуникация Google Drive провалилась (код %1$s)."</string>
+    <string name="text_07d8d8fb15" formatted="false">"Выберите учетную запись Google."</string>
+    <string name="text_44707e2acd" formatted="false">"Google не подтвердил создание резервной копии."</string>
+    <string name="text_eee5e9d37e" formatted="false">"резервная копия не была создана: разрешение требуется снова. Откройте резервную копию и снова подключитесь."</string>
+    <string name="text_fb5e219eb1" formatted="false">"Защитная копия провалилась:"</string>
+    <string name="text_82a2bfa2fe" formatted="false">"Сетевая ошибка"</string>
+    <string name="nav_home" formatted="false">"Главная"</string>
+    <string name="nav_dashboard" formatted="false">"Сводка"</string>
+    <string name="nav_records" formatted="false">"Записи"</string>
+    <string name="nav_settings" formatted="false">"Настройки"</string>
+    <string name="nav_backup" formatted="false">"Резервная копия"</string>
+    <string name="location_home" formatted="false">"Дома"</string>
+    <string name="location_office" formatted="false">"Офис"</string>
+    <string name="filter_all" formatted="false">"Все"</string>
+    <string name="app_name" formatted="false">"ShiftHours"</string>
+    <string name="language_title" formatted="false">"Язык"</string>
+    <string name="language_system" formatted="false">"Язык устройства"</string>
+    <string name="language_hint" formatted="false">"Язык хранится на этом устройстве.Спасите изменения перед переключением языков.Монетарные и налоговые правила сохраняют свои текущие настройки."</string>
+    <string name="tax_profile" formatted="false">"Налоговый профиль"</string>
+    <string name="tax_country" formatted="false">"Страна или налоговая юрисдикция"</string>
+    <string name="tax_year" formatted="false">"Налоговый год"</string>
+    <string name="tax_region" formatted="false">"Налоговый регион"</string>
+    <string name="tax_choose" formatted="false">"Выбрать"</string>
+    <string name="tax_england" formatted="false">"Англия"</string>
+    <string name="tax_wales" formatted="false">"Уэльс"</string>
+    <string name="tax_northern_ireland" formatted="false">"Северная Ирландия"</string>
+    <string name="tax_scotland" formatted="false">"Шотландия"</string>
+    <string name="tax_unavailable" formatted="false">"Расчёт нетто для этой страны пока недоступен. Часы и начисленная зарплата доступны."</string>
+    <string name="tax_year_unavailable" formatted="false">"Для этого года нет проверенной налоговой таблицы."</string>
+    <string name="tax_uk_required" formatted="false">"Выберите регион Великобритании и подтвердите профиль."</string>
+    <string name="tax_foreign_fields" formatted="false">"Израильские баллы и правила взносов здесь не применяются."</string>
+    <string name="tax_uk_profile" formatted="false">"Подтверждаю соответствие указанному британскому профилю."</string>
+    <string name="tax_country_hint" formatted="false">"Страна выбирается независимо от языка. Право на личные льготы определяется отдельно."</string>
+    <string name="tax_currency_warning" formatted="false">"Меняется обозначение валюты, без пересчёта сумм и правил сверхурочных. Проверьте настройки."</string>
+    <string name="tax_uk_scope" formatted="false">"Великобритания 2026/27: постоянная месячная зарплата пересчитывается в годовую; месячный National Insurance категории A. Стандартный личный необлагаемый минимум с уменьшением при высоком доходе. Одна работа; без иных доходов, пенсионных вычетов, salary sacrifice, студенческих займов, облагаемых льгот и особых вычетов. Не накопительный PAYE."</string>
+    <string name="tax_scope_in" formatted="false">"Индия, 2025/26–2026/27: наёмный работник — налоговый резидент, только новый режим и постоянная зарплата в годовом пересчёте; без иных доходов и особых льгот. Включены стандартный вычет, налоговая скидка, пограничное облегчение и сбор 4%. Налоговая база за год — до 5 000 000 INR."</string>
+    <string name="tax_scope_ru" formatted="false">"Россия 2026: налоговый резидент с обычной постоянной зарплатой; без иных доходов, личных вычетов, северных надбавок и особых военных правил. Среднемесячный налог в годовом пересчёте, не накопительное удержание. Взносы работодателя не вычитаются из зарплаты работника."</string>
+    <string name="tax_scope_ae" formatted="false">"ОАЭ 2026: иностранный наёмный работник, не гражданин стран ССАГПЗ; только трудовой доход. Подоходного налога нет. Введите фактические удержания работника, включая страховку при наличии. Выплаты при увольнении и взносы работодателя исключены."</string>
+    <string name="tax_actual_deductions" formatted="false">"Фактические месячные удержания работника"</string>
+    <string name="tax_deductions_hint" formatted="false">"Введите 0, если их нет. Включите пенсионные, страховые и местные удержания работника. Исключите рассчитанные здесь налоги и взносы работодателя. Сумма уменьшает выплату, а не налоговую базу."</string>
+    <string name="tax_confirm_profile" formatted="false">"Подтверждаю соответствие профилю работника этой страны."</string>
+    <string name="tax_foreign_required" formatted="false">"Проверьте профиль, сумму удержаний и поддерживаемые пределы дохода."</string>
+    <string name="tax_other_tax" formatted="false">"Сбор на здравоохранение и образование"</string>
+    <string name="tax_other_deductions" formatted="false">"Другие удержания работника"</string>
+    <string name="tax_scope_us" formatted="false">"Только 2026: резидент весь год, 18–64, один местный W-2-работодатель; SINGLE или совместная декларация с ОДНИМ кормильцем. Без иждивенцев, других доходов, федеральных/возмещаемых кредитов, специальных вычетов чаевых/сверхурочных, льгот до налога или межштатной работы. Проверьте право. Все 50 штатов: 47 ограниченных автоматических тарифов, включая нулевой налог на зарплату; CO/ID/VT требуют ввода проверенного годового налога штата. Налог/12 — резерв, не W-4/накопленное удержание."</string>
+    <string name="tax_scope_ca" formatted="false">"Канада 2026: только Онтарио/Альберта. Одинокий резидент весь год, 18–64 года, живёт и работает в одной провинции, один работодатель. Только базовые личные/трудовые льготы; без иждивенцев, RRSP, льгот до налогообложения и иных доходов. Включены федеральный/провинциальный налог, CPP/CPP2 и EI. Годовой среднемесячный расчёт, не фактический расчётный лист."</string>
+    <string name="tax_na_deductions_hint" formatted="false">"Только другие удержания после налогов; введите 0, если их нет. Не повторяйте рассчитанные налоги, Social Security, Medicare, CPP/CPP2, EI и медицинский сбор Онтарио. Доналоговые удержания не поддерживаются."</string>
+    <string name="tax_other_region" formatted="false">"Другой регион — пока не поддерживается"</string>
+    <string name="tax_region_unavailable" formatted="false">"Расчёт нетто этого региона пока не поддерживается."</string>
+    <string name="tax_florida" formatted="false">"Флорида"</string>
+    <string name="tax_texas" formatted="false">"Техас"</string>
+    <string name="tax_ontario" formatted="false">"Онтарио"</string>
+    <string name="tax_alberta" formatted="false">"Альберта"</string>
+    <string name="tax_filing" formatted="false">"Федеральный статус декларации"</string>
+    <string name="tax_single" formatted="false">"Одиночная декларация"</string>
+    <string name="tax_joint" formatted="false">"Совместная декларация супругов — один доход"</string>
+    <string name="tax_federal" formatted="false">"Федеральный подоходный налог"</string>
+    <string name="tax_provincial" formatted="false">"Провинциальный подоходный налог"</string>
+    <string name="tax_ontario_health" formatted="false">"Медицинский сбор Онтарио"</string>
+    <string name="tax_social_security" formatted="false">"Social Security США"</string>
+    <string name="tax_cpp" formatted="false">CPP</string>
+    <string name="tax_cpp2" formatted="false">CPP2</string>
+    <string name="tax_ei" formatted="false">EI</string>
+    <string name="tax_medicare" formatted="false">Medicare</string>
+    <string name="tax_pt_mainland" formatted="false">"Португалия — материк"</string>
+    <string name="tax_annual_verified_base" formatted="false">"Проверенная годовая налоговая база"</string>
+    <string name="tax_verified_base_hint" formatted="false">"Введите окончательную базу после всех вычетов из проверенного расчёта или расчёта специалиста. Это не зарплата до вычетов; приложение не определяет базу автоматически."</string>
+    <string name="tax_au_hospital" formatted="false">"Одобренная частная страховка стационара"</string>
+    <string name="tax_au_full_cover" formatted="false">"Весь налоговый год"</string>
+    <string name="tax_au_no_cover" formatted="false">"Без покрытия весь налоговый год"</string>
+    <string name="tax_nz_ietc_hint" formatted="false">"IETC требует права за весь год: без Working for Families, основного пособия, NZ Super, Veterans Pension и аналогичных зарубежных выплат. Неполный год не поддерживается."</string>
+    <string name="tax_nz_ietc" formatted="false">"Подтверждаю право на IETC за весь год"</string>
+    <string name="tax_further_deductions_hint" formatted="false">"Укажите фактические удержания работника, не рассчитанные здесь, или 0. Исключите взносы работодателя и уже показанные налоги/страхование. Сумма уменьшает выплату, а не налоговую базу."</string>
+    <string name="tax_solidarity" formatted="false">"Налог солидарности"</string>
+    <string name="tax_pt_social" formatted="false">"Социальные взносы работника"</string>
+    <string name="tax_au_levy" formatted="false">"Сбор Medicare"</string>
+    <string name="tax_au_surcharge" formatted="false">"Дополнительный сбор Medicare"</string>
+    <string name="tax_acc" formatted="false">"Взнос работника ACC"</string>
+    <string name="tax_included_relief" formatted="false">"Льгота уже учтена в налоге"</string>
+    <string name="tax_scope_de" formatted="false">"Германия 2026: одинокий резидент, без детей и церковного налога. Годовая оценка по проверенной конечной налоговой базе, не рассчитанной из брутто. Фактические социальные удержания вводятся отдельно. Не расчёт удержания Lohnsteuer."</string>
+    <string name="tax_scope_fr" formatted="false">"Франция: только доходы 2025 года, облагаемые в 2026. Одинокий резидент, одна налоговая доля, только зарплата, годовое брутто до EUR 200 000. Конечная база после расходов; социальные удержания отдельно. Включает décote; нет таблицы доходов 2026 или текущего PAS."</string>
+    <string name="tax_scope_pt" formatted="false">"Португалия 2026: материк, одинокий резидент, обычная категория A. 12 равных выплат с распределёнными отпускными/рождественскими; брутто от EUR 20 000 в год. Включены социальные взносы 11%, стандартный вычет, IRS и солидарность. Без иждивенцев, особых режимов и льгот по счетам; не удержание с 14 выплат."</string>
+    <string name="tax_scope_au" formatted="false">"Австралия 2025/26–2026/27: одинокий резидент 18–64 лет, зарплата от AUD 50 000 в год без Super работодателя. Без иных доходов, льгот до налога и освобождений. Учтены налог, LITO, Medicare 2% и надбавка. Укажите одобренную страховку стационара за весь год или её отсутствие; семьи и частичное покрытие исключены."</string>
+    <string name="tax_scope_nz" formatted="false">"Новая Зеландия 2025/26–2026/27: резидент весь год, одна работа, только зарплата, без иных доходов и пособий. Включены налог и ACC; IETC только при подтверждённом праве. KiwiSaver, займы и другие фактические удержания вводятся отдельно. Годовая оценка постоянного дохода."</string>
+    <string name="tax_scope_es" formatted="false">"Испания 2026: только Мадрид. Одинокий резидент весь год, 18–64 лет, только зарплата, без детей, инвалидности и налоговых льгот. Годовое брутто от EUR 40 000, проверенная общая база от EUR 30 000. Государственный и мадридский налоги учитывают базовые личные минимумы. Фактические социальные удержания отдельно. 12 равных общих выплат; не удержание в расчётном листке."</string>
+    <string name="tax_scope_cn" formatted="false">"Китай 2026: налоговый резидент материкового Китая весь год, одна работа, только зарплата, без иных/зарубежных доходов и налоговых скидок. Проверенная конечная годовая база после RMB 60 000 и законных вычетов. Фактические местные социальные/жилищные удержания отдельно; ставки и право не предполагаются. Без отдельного налогообложения годовой премии, особых режимов/соглашений и месячного/накопительного удержания."</string>
+    <string name="tax_scope_sa" formatted="false">"Саудовская Аравия 2026: иностранный работник не из стран ССАГПЗ, только обычная работа в стране. Личного подоходного налога нет. Введите фактические удержания работника, включая страхование при необходимости, или 0. Взносы работодателя за профриски исключены. Пенсии саудовцев/ССАГПЗ, бизнес, зарубежные налоги и выходное пособие не входят в профиль."</string>
+    <string name="tax_madrid" formatted="false">"Мадрид"</string>
+    <string name="tax_cn_mainland" formatted="false">"Материковый Китай"</string>
+    <string name="tax_es_base_hint" formatted="false">"Введите проверенную конечную общую годовую базу ДО личного/семейного минимума, после законных вычетов из зарплаты. Брутто от EUR 40 000; база от EUR 30 000. Базовые минимумы применяет приложение. Социальные взносы и база из брутто автоматически не рассчитываются."</string>
+    <string name="tax_cn_base_hint" formatted="false">"Введите проверенную конечную годовую базу ПОСЛЕ RMB 60 000 и законных вычетов. Повторно не вычитайте RMB 60 000. Фактические социальные/жилищные удержания также укажите в месячном поле; их налоговый эффект уже должен быть учтён в этой базе."</string>
+    <string name="tax_state_income" formatted="false">"Государственный подоходный налог"</string>
+    <string name="tax_regional_income" formatted="false">"Региональный подоходный налог"</string>
+    <string name="tax_scope_ie" formatted="false">"Ирландия 2026: одинокий резидент весь год,18–64 лет, одна работа с правом на PAYE-кредит, только зарплата. Учтены базовые личный/трудовой кредиты и обычный USC. Без директора-владельца, льготы медкарты, иных доходов, пенсии/льгот до налога и иных кредитов. Фактические PRSI и посленалоговые удержания отдельно; MyFutureFund не предполагается. Годовая оценка постоянного дохода, не накопительное удержание."</string>
+    <string name="tax_scope_hk" formatted="false">"Гонконг 2025/26–2026/27: одинокий работник весь год,18–64 лет, один работодатель, только зарплата, обычный MPF с ежемесячной выплатой. Включает почасовой труд с месячной выплатой, базовую льготу, MPF работника и меньший прогрессивный/стандартный налог. Начальные каникулы взносов завершены до начала года. Без временных/подённых/освобождённых работников, иждивенцев, иных доходов и льгот. Скидка налога только 2025/26; не счёт авансов."</string>
+    <string name="tax_ie_deductions_hint" formatted="false">"Введите фактический PRSI работника и пенсионные/иные удержания после налога либо 0. Включите удержанный MyFutureFund; участие не предполагается. Исключите расходы работодателя, уже рассчитанные налог и USC. Пенсия с льготой по подоходному налогу вне профиля. Обновляйте удержания при изменении оплаты."</string>
+    <string name="tax_hk_deductions_hint" formatted="false">"Только дополнительные удержания работника после налога либо 0. Не повторяйте рассчитанные MPF и Salaries Tax. Взносы работодателя и дополнительные вычеты с налоговой льготой исключены."</string>
+    <string name="tax_usc" formatted="false">"Социальный сбор USC"</string>
+    <string name="tax_mpf" formatted="false">"MPF работника"</string>
+    <string name="tax_scope_no" formatted="false">"Норвегия 2026: одинокий резидент весь год, 18–64 лет, одна работа, только зарплата, обычный регион 22% и участие в национальном страховании. Учтены стандартный/личный вычеты, ступенчатый налог и подтверждённая молодёжная льгота. Без пенсионных/профсоюзных/процентных и иных вычетов, других доходов, PAYE для иностранцев и особых региональных правил. Годовая оценка до авансов и правил взыскания малых остатков."</string>
+    <string name="tax_scope_za" formatted="false">"ЮАР 2025/26–2026/27: резидент весь год, 18–64 лет, одна обычная работа в частном секторе. Учтены базовая льгота и выбранный UIF. Без иных доходов, комиссий, облагаемых льгот, пенсионных вычетов, медицинских/иных кредитов и особых освобождений. Подтвердите обычный UIF либо освобождение только за работу менее 24 часов в месяц у работодателя. Годовая оценка, не удержание PAYE."</string>
+    <string name="tax_no_region" formatted="false">"Обычный регион с налогом 22%"</string>
+    <string name="tax_no_region_hint" formatted="false">"Исключены Шпицберген, Финнмарк и муниципалитеты Тромса: Karlsøy, Kvænangen, Kåfjord, Lyngen, Nordreisa, Skjervøy, Storfjord."</string>
+    <string name="tax_no_youth" formatted="false">"Молодёжная трудовая льгота — проверенный статус"</string>
+    <string name="tax_no_selected" formatted="false">"Выбран — подтверждено налоговой службой"</string>
+    <string name="tax_no_not_selected" formatted="false">"Не выбран / вне группы права"</string>
+    <string name="tax_no_youth_hint" formatted="false">"В пилоте 2026 часть родившихся в 1991–2006 выбрана случайно. Возраста или резидентства недостаточно. Проверьте официальный статус, не угадывайте. Без выбора расчёт недоступен."</string>
+    <string name="tax_za_uif" formatted="false">"Статус UIF работника"</string>
+    <string name="tax_za_covered" formatted="false">"Обычный плательщик UIF"</string>
+    <string name="tax_za_lt24" formatted="false">"Освобождение — менее 24 часов в месяц"</string>
+    <string name="tax_za_year_hint" formatted="false">"Годы обозначают начало: 2026/27 — март 2026–февраль 2027, в SARS это налоговый год 2027. Другие освобождения UIF вне профиля."</string>
+    <string name="tax_noza_deductions_hint" formatted="false">"Только дополнительные удержания работника после налога либо 0. Не повторяйте рассчитанные налоги/национальное страхование/UIF; исключите взносы работодателя. Пенсионные и иные налоговые вычеты требуют другого профиля."</string>
+    <string name="tax_no_ordinary" formatted="false">"Обычный подоходный налог"</string>
+    <string name="tax_no_step" formatted="false">"Ступенчатый налог на личный доход"</string>
+    <string name="tax_no_ni" formatted="false">"Национальное страхование работника"</string>
+    <string name="tax_uif" formatted="false">"UIF работника"</string>
+    <string name="tax_scope_sg" formatted="false">"Сингапур, доходы 2026: налоговый резидент весь год, 18–54 лет на конец года, одна работа с обычной зарплатой, без премий/доплат, иных доходов, инвалидности, льгот и дополнительных вычетов. Гражданин/PR с третьего года с полным CPF весь год либо иностранный резидент не гражданин/PR без CPF. Учтены CPF работника и базовый Earned Income Relief. Годовой резерв налога, не месячное удержание."</string>
+    <string name="tax_scope_dk" formatted="false">"Дания 2026: только Копенгаген, одинокий резидент весь год, 18–59 лет, только зарплата, без церковного налога, капитальных/зарубежных доходов и особого режима. Нужны проверенные личная и муниципальная годовые базы до личной льготы и фактические AM, ATP, пенсия и иные удержания. Учтены государственный/муниципальный налоги и базовая льгота; не расчёт базы из брутто или удержания по налоговой карте."</string>
+    <string name="tax_copenhagen" formatted="false">"Копенгаген"</string>
+    <string name="tax_dk_personal_base" formatted="false">"Проверенный годовой личный доход после AM"</string>
+    <string name="tax_dk_municipal_base" formatted="false">"Проверенная годовая муниципальная база"</string>
+    <string name="tax_dk_base_hint" formatted="false">"Введите обе конечные проверенные базы ДО личной льготы. Личный доход после AM/ATP/пенсионных корректировок; муниципальная база также после всех законных трудовых и иных вычетов. Не брутто. Приложение не выводит базы и повторно не вычитает эти суммы. Если личный доход выше DKK 54 100, а муниципальная база ниже, такой случай распределения льготы пока не поддерживается."</string>
+    <string name="tax_dk_actual_deductions" formatted="false">"Фактические AM, ATP, пенсия и прочие удержания за месяц"</string>
+    <string name="tax_dk_deductions_hint" formatted="false">"Включите фактические AM, ATP/пенсию работника и иные денежные удержания, кроме подоходного налога, либо 0. Налоговый эффект уже должен быть в базах. Исключите затраты работодателя и рассчитанные налоги. Обновляйте все три суммы при смене оплаты."</string>
+    <string name="tax_sg_cpf_profile" formatted="false">"Профиль CPF работника"</string>
+    <string name="tax_sg_full" formatted="false">"Гражданин / PR с 3-го года — полный CPF"</string>
+    <string name="tax_sg_foreign" formatted="false">"Иностранный резидент — не гражданин/PR, без CPF"</string>
+    <string name="tax_sg_year_hint" formatted="false">"2026 — доходы января–декабря 2026, облагаемые в YA 2027. Разовые скидки YA 2024/2025 не переносятся. Первые два года PR и другие профили CPF/возраста не поддерживаются."</string>
+    <string name="tax_sg_deductions_hint" formatted="false">"Только дополнительные удержания после налога либо 0, включая фактические общественные фонды при необходимости. Не повторяйте рассчитанные CPF/налог и взносы работодателя. Дополнительные налоговые вычеты вне профиля."</string>
+    <string name="tax_cpf" formatted="false">"CPF работника"</string>
+    <string name="tax_dk_bottom" formatted="false">"Государственный базовый налог"</string>
+    <string name="tax_dk_municipal" formatted="false">"Муниципальный налог Копенгагена"</string>
+    <string name="tax_dk_higher" formatted="false">"Средний / верхний / дополнительный верхний налоги"</string>
+    <string name="tax_scope_my" formatted="false">"Малайзия 2026: не состоящий в браке налоговый резидент весь год, 18–59 лет, одна работа с обычной денежной зарплатой; без иных доходов, облагаемых льгот, спецрежима, закята и других налоговых скидок. Нужны проверенная итоговая годовая облагаемая база после всех законных вычетов, включая личный, и фактические удержания работника. Включает невозмещаемую личную скидку до RM400 при наличии права. Годовая оценка, не удержание PCB."</string>
+    <string name="tax_scope_ph" formatted="false">"Филиппины 2026: не состоящий в браке гражданин-резидент весь год, 18–59 лет, одна частная работа, 12 равных обычных денежных зарплат; без иных облагаемых доходов, спецрежима и налоговых кредитов. Нужны проверенная годовая облагаемая обычная зарплата и фактические удержания. Льготы получателям минимальной зарплаты не поддерживаются. Необлагаемые 13-я зарплата и другие выплаты в пределах общего лимита PHP90 000 не входят в показанный нетто; облагаемое превышение и иные бонусы не поддерживаются. Годовая оценка, не расчет удержаний."</string>
+    <string name="tax_my_base_hint" formatted="false">"Введите проверенную итоговую годовую облагаемую базу ПОСЛЕ всех законных вычетов, включая личный RM9 000. Не зарплату брутто. Приложение отдельно применяет положенную скидку до RM400; вычеты не выводит и взносы повторно не отнимает. Обновляйте базу при изменении зарплаты."</string>
+    <string name="tax_ph_base_hint" formatted="false">"Введите проверенную годовую облагаемую ОБЫЧНУЮ денежную зарплату после законных взносов/сборов работника, не брутто. Не вычитайте из базы подоходный налог или личные кредиты. Приложение не определяет освобождения и не отнимает взносы снова. Обновляйте базу при изменении зарплаты."</string>
+    <string name="tax_myph_deductions_hint" formatted="false">"Введите фактические месячные удержания работника: EPF/SOCSO/EIS или SSS/PhilHealth/Pag-IBIG, законные сборы и прочие денежные удержания, либо 0. Их налоговый эффект уже должен входить в проверенную базу. Исключите взносы работодателя и рассчитанный здесь налог. Обновляйте обе суммы при изменении зарплаты."</string>
+    <string name="tax_scope_pl" formatted="false">"Польша 2026: не состоящий в браке резидент весь год, 26–59 лет, один обычный трудовой договор, 12 равных денежных зарплат; годовой брутто до PLN1 000 000. Без иных доходов, облагаемых льгот, совместного расчета, PIT-0, дополнительных вычетов/кредитов. Только стандартные расходы до PLN3600/год, без фактических билетов и творческих 50%. Нужны проверенная годовая база и реальные удержания. Включает базовое снижение налога PLN3600. Годовая оценка, не удержание в расчетном листке. Участники PPK вне этого профиля."</string>
+    <string name="tax_scope_cz" formatted="false">"Чехия 2026: не состоящий в браке резидент весь год, 18–64 года, одна обычная работа, 12 равных обычных денежных зарплат; без иных доходов, облагаемых льгот, вычетов из базы и дополнительных кредитов. DPP/DPČ и особое удержание исключены. Включает базовый годовой невозмещаемый кредит CZK30 840. Социальные/медицинские взносы и доплата до медицинского минимума вводятся фактически. Оценка годового налога, не месячного аванса."</string>
+    <string name="tax_pl_base_hint" formatted="false">"Введите проверенную итоговую годовую базу после разрешенных социальных взносов работника и стандартных трудовых расходов, ДО снижения налога PLN3600. Не вычитайте PLN30 000 отдельно. Медицинские взносы, PPK и личные кредиты базу в этом профиле не снижают. Денежные удержания повторно не вычитаются; обновляйте суммы при изменении зарплаты."</string>
+    <string name="tax_plcz_deductions_hint" formatted="false">"Введите реальные месячные удержания работника: социальное/медицинское страхование, пенсия после налога и прочие, либо 0. Включите чешскую доплату до медицинского минимума, если применима. Исключите расходы работодателя и рассчитанный налог. Чешские удержания базу не снижают; законные польские вычеты уже должны быть в проверенной базе. Обновляйте при изменении зарплаты."</string>
+    <string name="tax_scope_th" formatted="false">"Таиланд 2026: не состоящий в браке резидент весь год, 18–59 лет, одна обычная работа; без иждивенцев, иных доходов, спецрежима и налоговых кредитов. Нужны проверенные годовой трудовой доход и итоговая база после законных расходов, вычетов и освобождений. Только зарплата, без альтернативного минимального налога на другие доходы. Нынешняя ставка30% заканчивается на THB5 млн, не на старых THB4 млн."</string>
+    <string name="tax_scope_id" formatted="false">"Индонезия 2026: не состоящий в браке резидент весь год, 18–59 лет, постоянный работник, действующий NPWP/интегрированный NIK, TK/0 без иждивенцев/иных доходов. Годовой расчет ст.17 после проверенных вычетов/PTKP. Без DTP/налога за счет государства, уплаты/гросс-апа работодателем, спецрежимов и кредитов. THR/бонусы и облагаемые льготы включаются в годовые данные. Не месячное удержание TER."</string>
+    <string name="tax_scope_vn" formatted="false">"Вьетнам 2026: не состоящий в браке резидент весь год, 18–59 лет, одна работа; без иждивенцев, иных доходов, спецрежима и кредитов. Нужны проверенные годовой доход и итоговая база после страховки, личного вычета и законных освобождений, включая сверхурочные при праве на льготу. Для зарплаты резидента с2026 действуют пять годовых ступеней, не прежние семь."</string>
+    <string name="tax_scope_tw" formatted="false">"Тайвань, доход2026 с подачей в2027: не состоящий в браке резидент весь год, 18–59 лет, только зарплата; без иждивенцев, иных/иностранных доходов, добавлений AMT, спецрежима и кредитов. Нужны проверенные годовой доход и итоговая база после законных вычетов/освобождений и применимой корректировки базовых расходов. Консервативный предел дохода TWD7,5 млн — не юридический порог брутто AMT."</string>
+    <string name="tax_scope_lk" formatted="false">"Шри-Ланка 2026/27: 1 апреля2026–31 марта2027. Не состоящий в браке резидент весь год, 18–59 лет, одна обычная местная работа; без иных/иностранных доходов, спецрежима, особого налога на задолженность/выходные выплаты и кредитов. Нужны проверенные годовой доход и итоговая база после личного вычета LKR1,8 млн и других законных вычетов. Годовой резерв, не APIT/YTD."</string>
+    <string name="tax_annual_employment_gross" formatted="false">"Проверенный общий годовой трудовой доход"</string>
+    <string name="tax_asia_five_income_hint" formatted="false">"Введите доход за весь выбранный налоговый год до вычетов, включая бонусы, THR/доплату и правильно оцененные облагаемые льготы работодателя. Не ограничивайтесь месячной зарплатой ×12 при доплатах. Проверяйте общий доход и итоговую базу отдельно. Показанный нетто: деньги периода минус годовой налог/12 и реальные удержания; годовые бонусы/неденежные льготы к выплате не прибавляются."</string>
+    <string name="tax_asia_five_base_hint" formatted="false">"Введите проверенную итоговую годовую базу после всех законных расходов, страховых/личных вычетов и освобождений выбранного года. Приложение не определяет право и не выводит вычеты; не вычитайте их снова. Индонезийский PKP округляется вниз до полных IDR1000. Обновляйте обе годовые суммы при изменении дохода/условий."</string>
+    <string name="tax_asia_five_cash_hint" formatted="false">"Фактические социальные/медицинские/пенсионные и иные денежные удержания работника за период либо0. Их законный налоговый эффект уже должен быть в проверенной годовой базе. Не включайте затраты работодателя и зарезервированный здесь налог, не повторяйте удержание налога. Это годовой резерв, не расчетный листок и не полный годовой нетто."</string>
+    <string name="tax_scope_pe" formatted="false">"Перу2026: не состоящий в браке домицилированный резидент весь год,18–59 лет, одна зарплата пятой категории; без иждивенцев, иных/иностранных доходов, спецрежима и кредитов. UIT=PEN5500. Итоговая проверенная база уже включает вычет7 UIT и проверенные дополнительные расходы. Пенсия работника не является автоматически налоговым вычетом."</string>
+    <string name="tax_scope_co" formatted="false">"Колумбия2026: не состоящий в браке резидент весь год,18–59 лет, только обычная зарплата; без иждивенцев, иных/иностранных доходов, спецрежима и кредитов. UVT=COP52374. Проверенная годовая база после законных социальных исключений, льгот и лимитов вычетов. Годовая ст.241, не месячная383. Налог на богатство и другие налоги вне оценки зарплаты."</string>
+    <string name="tax_scope_ee" formatted="false">"Эстония2026: не состоящий в браке резидент весь год,18–59 лет, только обычная зарплата; без иждивенцев, иных доходов, спецрежима и кредитов.22% проверенной итоговой базы после законных вычетов и базового освобождения EUR8400. Без старого сокращения льготы по доходу или пенсионной льготы. Реальные страховые/пенсионные удержания отдельно."</string>
+    <string name="tax_scope_lv" formatted="false">"Латвия2026: не состоящий в браке резидент весь год,18–59 лет, только зарплата; без иждивенцев, иных доходов и кредитов. Общий годовой трудовой доход до EUR105300; высокие ставки, солидарность и дополнительные3% не поддерживаются.25,5% проверенной базы после взносов/вычетов и освобождения EUR6600. Не полный расчет высоких доходов."</string>
+    <string name="tax_scope_lt" formatted="false">"Литва2026: не состоящий в браке резидент весь год,18–59 лет, только обычная полностью облагаемая зарплата; без иждивенцев, иных доходов, больничных, инвалидности/особого NPD и дополнительных вычетов/кредитов. Годовые20%/25%/32%. База после обычного NPD, без автоматического вычета страховки. При годовом доходе выше EUR83237,40 база в этом профиле равна доходу."</string>
+    <string name="tax_scope_bg" formatted="false">"Болгария2026: не состоящий в браке резидент весь год,18–59 лет, только зарплата; без иждивенцев, иных доходов, спецрежима, кредитов и скидки за декларацию. С2026 валюта EUR; старые BGN вводите только после проверенной конвертации.10% проверенной годовой базы после законных взносов/вычетов. Нет автоматического обмена валют/округления зарплаты."</string>
+    <string name="tax_scope_ro" formatted="false">"Румыния2026: не состоящий в браке резидент весь год,18–59 лет, одна обычная местная работа; без иждивенцев, иных доходов, спецрежима и кредитов.10% проверенной суммы месячных зарплатных баз после законных взносов, личных вычетов и минимальных освобождений. Условия проверяются по месяцам; годовой резерв их не определяет."</string>
+    <string name="tax_scope_hu" formatted="false">"Венгрия2026: не состоящий в браке резидент весь год,25–59 лет, обычная полностью облагаемая зарплата; без детей, иных доходов, освобождений, льгот по базе и кредитов. Льготы младше25, матерям/семьям, инвалидам/молодоженам и упрощенная/сезонная работа исключены.15% годовой зарплаты; проверенная база равна годовому доходу. Страховка ее не уменьшает."</string>
+    <string name="tax_scope_ge" formatted="false">"Грузия2026: не состоящий в браке резидент весь год,18–59 лет, только обычная полностью облагаемая грузинская зарплата; без иждивенцев, иных/иностранных доходов, освобождений, особого бизнес-режима и кредитов.20% годовой зарплаты, проверенная база равна доходу. Реальная пенсия/прочие удержания уменьшают выплату, не базу повторно."</string>
+    <string name="tax_scope_am" formatted="false">"Армения2026: не состоящий в браке резидент весь год,18–59 лет, обычная полностью облагаемая местная зарплата; без иждивенцев, иных/иностранных доходов, отраслевых ставок, освобождений, ипотечных/социальных возвратов и кредитов.20% годовой зарплаты; проверенная база равна доходу. Реальные пенсия, гербовый сбор и медицинские взносы работника отдельно."</string>
+    <string name="tax_ten_income_hint" formatted="false">"Введите проверенный доход за весь2026 с бонусами, доплатами и правильно оцененными облагаемыми льготами, а также итоговую годовую базу. В Румынии это сумма проверенных месячных баз. Из денег периода резервируется годовой налог/12; годовые бонусы/неденежные льготы не добавляются к показанной выплате."</string>
+    <string name="tax_ten_base_hint" formatted="false">"Проверьте все законные вычеты/освобождения перед вводом итоговой годовой базы; приложение не определяет право. Грузия/Армения/Венгрия: база равна годовой зарплате, страховка ее не уменьшает. Литва: только обычный NPD без уменьшения выше указанного порога. Обновляйте обе годовые суммы при изменении условий."</string>
+    <string name="tax_ten_cash_hint" formatted="false">"Реальные социальные/медицинские/пенсионные и прочие денежные удержания работника без подоходного налога, либо0. В Армении включите реальные гербовый сбор/медицинские премии при необходимости. Не включайте расходы работодателя и налог, зарезервированный здесь. Законный налоговый эффект уже в базе; повторные вычеты запрещены. Годовая оценка, не расчетный лист/декларация."</string>
+    <string name="tax_fifteen_common_scope" formatted="false">"Профиль: налоговый резидент весь год, одинокий18–59 лет, одна обычная местная работа, без иждивенцев, иных/иностранных доходов, специальных режимов и неуказанных вычетов из налога. Страна/язык не определяют права. Подтвердите все условия. Данные общие для всех периодов; обновляйте при изменениях."</string>
+    <string name="tax_scope_mx" formatted="false">"Мексика2026: годовой ISR, не месячное удержание. Нет права на субсидию занятости НИ В ОДНОМ месяце, освобождения минимальной зарплаты, особых выплат/зачётов. Ограничение:годовая база/12 выше MXN11.492,66; оно само не доказывает соответствие. Проверьте всю базу и вычеты."</string>
+    <string name="tax_scope_br" formatted="false">"Бразилия2026: ОДНА обычная полностью облагаемая месячная денежная выплата, проверенная месячная база после законных вычетов ИЛИ упрощённого вычета, не обоих. Новое месячное уменьшение налога включено. Исключены натуральные/освобождённые выплаты,13-я зарплата, отпуск/отдельные события, годовой перерасчёт и прочие зачёты. Полный годовой доход максимум BRL600.000 — ограничение приложения."</string>
+    <string name="tax_scope_cr" formatted="false">"Коста-Рика2026: обычная полностью облагаемая месячная денежная зарплата. Налог ДО социальных удержаний работника по шкале2026. Без зачётов супругу/детям, освобождённых премий,13-й зарплаты и отдельных/неполных месяцев. Реальные денежные удержания отдельно."</string>
+    <string name="tax_scope_gt" formatted="false">"Гватемала2026: проверенная конечная годовая база после законных вычетов/освобождений, включая Q48.000 И чрезвычайные Q3.024 за2026. Не индексируемое освобождение2027.5% до базы Q300.000,7% выше. Проверьте освобождённые aguinaldo/Bono14 и подтверждённые вычеты в базе."</string>
+    <string name="tax_scope_do" formatted="false">"Доминиканская Республика2026: годовая зарплатная шкала с опубликованными фиксированными суммами. База ДО нулевой ступени RD$416.220; повторно её не вычитать. Без шкалы2027/образовательных и других зачётов. Реальные социальные удержания отдельно."</string>
+    <string name="tax_scope_ke" formatted="false">"Кения2026: конечная годовая база после законных вычетов SHIF, жилищного сбора/пенсии при применимости. Личное уменьшение резидента до KES28.800/год включено один раз, без возврата сверх налога. Нет льгот частного страхования/других зачётов/особых освобождений. Удержания отдельно, без повторного вычета из базы."</string>
+    <string name="tax_scope_rw" formatted="false">"Руанда2026: обычная работа у первого работодателя, проверенная годовая база. Исключены случайная работа15%, второй работодатель, выплаты директорам и специальные режимы. Годовой налог/12 — резерв, не переменный месячный PAYE. Реальные взносы отдельно."</string>
+    <string name="tax_scope_ug" formatted="false">"Уганда2026/27:1 июля2026–30 июня2027, НОВЫЕ ставки резидента. Резерв предполагает12 равных месячных налоговых баз; не переменный/накопительный расчёт. Не старый порог235.000/нерезидентская шкала. Дополнительные10% сверх UGX10млн месячной базы включены."</string>
+    <string name="tax_scope_zm" formatted="false">"Замбия2026: годовой эквивалент зарплатных ступеней, включая месячную нулевую ZMW5.100. Проверенная годовая база/реальные удержания. Без зачётов инвалидности/особой работы/прочих. Расходы работодателя исключены."</string>
+    <string name="tax_scope_pk" formatted="false">"Пакистан2026/27, налоговый год2027: зарплатная шкала принятого Закона о финансах2026. Резидент только с зарплатой, полный годовой доход до PKR10млн. Исключены надбавка, суперналог, пенсии, бизнес/спецзачёты. Не таблица2025/26/проект закона."</string>
+    <string name="tax_scope_uz" formatted="false">"Узбекистан2026: обычная полностью облагаемая зарплата резидента12%; годовая база=годовая зарплата. Без особых освобождений/льгот добровольной пенсии. Накопительная пенсия ВНУТРИ12% уже включена: НЕ удерживайте её повторно. Социальный налог работодателя исключён."</string>
+    <string name="tax_scope_kz" formatted="false">"Казахстан2026: новая годовая шкала10/15% при8.500МРП; МРП=4.325KZT. База уже включает обычный годовой вычет360МРП и законные социальные вычеты, не старые14МРП. Без частной практики, бизнеса, дивидендов и специальных социальных вычетов."</string>
+    <string name="tax_scope_ma" formatted="false">"Марокко2026: обычная зарплата, проверенная годовая чистая налоговая база после профессиональных расходов, взносов/законных освобождений. Шесть текущих ступеней, максимум37%. Без семейных зачётов, бизнеса/сельского хозяйства, особых зон/ставок/других зачётов. Денежные удержания отдельно."</string>
+    <string name="tax_scope_md" formatted="false">"Молдова2026: обычный режим, полный годовой трудовой доход строго ниже MDL360.000 как ограничение приложения. База уже включает обычное освобождение MDL29.700/законные вычеты. Без IT-парка, такси, повышенного личного/семейного освобождения и других зачётов."</string>
+    <string name="tax_scope_mk" formatted="false">"Северная Македония2026: обычная зарплата,10% конечной годовой базы после законных взносов и личного годового уменьшения MKD131.184. Без иных доходов/особых освобождений/зачётов. Удержания отдельно; не вычитать льготу дважды."</string>
+    <string name="tax_monthly_verified_base" formatted="false">"Проверенная налоговая база месячной выплаты"</string>
+    <string name="tax_br_annual_hint" formatted="false">"Полный проверенный трудовой доход2026, включая13-ю зарплату, отпуск/премии, для проверки предела BRL600.000. Месячный расчёт не включает их отдельный налог/годовой перерасчёт. Не включайте эти события в брутто/базу обычного месяца."</string>
+    <string name="tax_br_monthly_base_hint" formatted="false">"Для той же обычной месячной выплаты: проверенная база после законных вычетов. Приложение сравнит с брутто минус BRL607,20 и выберет меньшую базу, не суммируя вычеты. Нет автоматической ставки INSS. Обновляйте для выплаты; исторических профилей нет."</string>
+    <string name="tax_fifteen_income_hint" formatted="false">"Проверенный трудовой доход ВСЕГО налогового года с премиями/верно оценёнными облагаемыми благами и конечная годовая база. UG/PK начинаются в июле2026; PK налоговый год2027. Годовой тариф/12 — резерв, не расчётный листок/накопительный/годовой нетто. UG:12 равных месячных баз."</string>
+    <string name="tax_fifteen_base_hint" formatted="false">"КОНЕЧНАЯ проверенная годовая база после законных вычетов. Не вычитайте нулевую ступень снова. GT:дополнительные Q3.024 за2026; KZ360МРП; MK131.184MKD. UZ:база=годовая зарплата. MD:итого ниже360.000. Права автоматически не определяются."</string>
+    <string name="tax_fifteen_cash_hint" formatted="false">"Реальные денежные удержания работника кроме подоходного налога для этой выплаты или явный0: социальные, медицинские, пенсионные/иные сборы. Без расходов работодателя/налога, вычисленного здесь. UZ:пенсию внутри12% не повторять. Законные эффекты уже в проверенной базе; без двойного вычета."</string>
+    <string name="tax_wave_common_scope" formatted="false">"Профиль: одинокий обычный работник18–59 лет, живёт и работает в стране весь год, одна местная работа, без иждивенцев, иных/иностранных доходов и неуказанных спецрежимов/зачётов. Резидентство/условия проверяйте отдельно; страна/язык не определяют права. Только местная зарплата, без иностранного/домашнего налога. Данные общие для периодов; обновляйте."</string>
+    <string name="tax_scope_pa" formatted="false">"Панама2026: обычная зарплата резидента, конечная проверенная годовая база.0% до PAB11.000;15% до50.000;25% выше. Без представительских/особых выплат, иных доходов/зачётов. Реальные социальные удержания отдельно; нулевую ступень не вычитать дважды."</string>
+    <string name="tax_scope_ni" formatted="false">"Никарагуа2026: обычная зарплата резидента, годовая база после законных INSS/сберегательных вычетов/освобождений.0/15/20/25/30%. Проверьте освобождённую13-ю зарплату в базе; не вычитать C$100.000 нулевой ступени снова. Без увольнения/особых выплат/зачётов. Годовой резерв, не накопительное удержание."</string>
+    <string name="tax_scope_sv" formatted="false">"Сальвадор2026: ОДНА обычная месячная выплата, проверенная база после законных вычетов. Опубликованная месячная таблица с фиксированными суммами; не накопительный перерасчёт июня/декабря, годовой итог, половина/часть месяца. Без особых/освобождённых выплат и иных зачётов."</string>
+    <string name="tax_scope_hn" formatted="false">"Гондурас2026: обычная зарплата резидента, конечная годовая база уже с полным допустимым вычетом HNL40.000 на образование/медицину и иными законными вычетами/освобождениями. Новые ступени2026. Без льгот старше65, бизнеса/спецзачётов. Нулевую ступень не вычитать снова."</string>
+    <string name="tax_scope_py" formatted="false">"Парагвай2026: работник-резидент УЖЕ зарегистрирован IRP-RSP до2026. Первый год регистрации/превышения порога исключён. Проверьте весь годовой доход, облагаемые поступления ДО расходов без освобождённой13-й и конечную нетто-базу. До PYG80млн облагаемых поступлений платежа нет, выше8/9/10% прогрессивно с нетто-базы. Без капитала/бизнеса/прочих доходов/зачётов."</string>
+    <string name="tax_scope_ec" formatted="false">"Эквадор2026: материковый резидент без иждивенцев, инвалидности/особой болезни и спецльгот. Годовые фиксированные суммы2026. Проверенные личные расходы дают18% уменьшения до7корзин, не выше налога. Галапагосы/семейные/особые лимиты исключены. Уменьшается НАЛОГ, не база повторно."</string>
+    <string name="tax_scope_na" formatted="false">"Намибия2026/27:1марта2026–28февраля2027, обычная местная зарплата резидента. Конечная годовая база после законных вычетов/оценённых благ. Нулевая ступень NAD100.000, далее18/25/28/30/32/37%. Без снятия пенсий, сельхоз/бизнеса/прочих доходов/особых зачётов. Годовой резерв, не накопительный PAYE."</string>
+    <string name="tax_scope_kh" formatted="false">"Камбоджа2026: обычная месячная денежная зарплата резидента, без вычета иждивенцев/супруга, нерезидентского режима/особого налога на блага. Проверенная месячная база после законных вычетов;0/5/10/15/20%. Не вычитать снова KHR1,5млн нулевой ступени. Реальные взносы отдельно."</string>
+    <string name="tax_scope_az" formatted="false">"Азербайджан2026: обычная полностью облагаемая месячная ДЕНЕЖНАЯ зарплата на основном месте в ЧАСТНОМ ненефтегазовом секторе.3/10/14%, освобождение AZN200 один раз при брутто&lt;=2.500. Без государственного/нефтегазового сектора/спецльгот. Страховые удержания не уменьшают базу PIT. Не ставки2027/2028."</string>
+    <string name="tax_scope_bh" formatted="false">"Бахрейн2026: обычная местная зарплата иностранца не гражданина GCC. Местного зарплатного PIT в профиле нет; реальные SIO/безработица/пенсия/прочие удержания явно или0. Без работодателя, бизнеса/прочих доходов, налога страны происхождения."</string>
+    <string name="tax_scope_kw" formatted="false">"Кувейт2026: обычная местная зарплата иностранца не GCC. Местного личного зарплатного PIT нет. Страхование/пенсия/прочие реальные удержания явно или0. Без корпоративного/предпринимательского, работодательского или иностранного/домашнего налога."</string>
+    <string name="tax_scope_om" formatted="false">"Оман2026: обычная местная зарплата иностранца не GCC. PIT2026 нет; новый закон с2028,5% здесь НЕ взимается, будущие годы не включены. Реальные социальные/медицинские/пенсионные удержания или0; без работодателя/иностранных налогов."</string>
+    <string name="tax_scope_qa" formatted="false">"Катар2026: обычная местная зарплата иностранца не GCC, исключена из местного PIT. Реальное страхование/пенсия/прочие удержания или0; страна не доказывает освобождение от взносов. Без бизнеса/корпораций, работодателя или иностранного/домашнего налога."</string>
+    <string name="tax_scope_bn" formatted="false">"Бруней2026: обычная местная зарплата работника, личного PIT нет. Реальные проверенные SPK/пенсия/социальные/иные удержания или0. Нет автоматической ставки/права. Без бизнеса/иных доходов, работодателя и иностранного/домашнего налога."</string>
+    <string name="tax_scope_bs" formatted="false">"Багамы2026: обычная местная зарплата, внутреннего личного PIT нет. Реальные проверенные NIB/пенсия/прочие удержания или0. Нет автоматического освобождения от взносов, бизнеса/иных доходов, работодателя или иностранного/домашнего налога."</string>
+    <string name="tax_ec_mainland" formatted="false">"Материковый Эквадор"</string>
+    <string name="tax_ec_expenses" formatted="false">"Проверенные допустимые личные годовые расходы"</string>
+    <string name="tax_ec_expenses_hint" formatted="false">"Материк без иждивенцев/особого статуса: проверенные допустимые расходы2026 или явный0. Уменьшение18% с суммы до USD5.752,60 (7×821,80), округлённое до центов и ограниченное налогом; максимум USD1.035,47. НЕ вычитать те же расходы из годовой базы. Нет автоматических прав/Галапагосов/особых лимитов."</string>
+    <string name="tax_py_receipts" formatted="false">"Проверенные годовые IRP-поступления до расходов"</string>
+    <string name="tax_py_receipts_hint" formatted="false">"Парагвай: облагаемые IRP-RSP зарплатные поступления брутто ДО расходов, без законно освобождённых13-й/поступлений. Не обязательно весь трудовой доход или нетто-база. Поступления&lt;=годовой итог, конечная база&lt;=поступления. Порог PYG80млн использует это поле, не всё брутто. Нужна регистрация до2026."</string>
+    <string name="tax_wave_annual_hint" formatted="false">"Проверенный ПОЛНЫЙ трудовой доход налогового года, премии/верно оценённые блага и конечная годовая база после законных вычетов/освобождений. Намибия2026/27 с1марта2026; остальные календарь2026. Годовой налог/12 — резерв из денег, не листок/накопительное/годовой нетто. Годовые доплаты целиком к деньгам не прибавляются."</string>
+    <string name="tax_wave_monthly_hint" formatted="false">"Конечная проверенная база ТОЙ ЖЕ обычной месячной выплаты, что брутто, после законных вычетов. Не вычитать нулевую ступень/удержания дважды. База общая для периодов: обновляйте по выплате. Нет накопительной/годовой поправки SV или налога на блага KH."</string>
+    <string name="tax_wave_base_hint" formatted="false">"Конечная проверенная ГОДОВАЯ база после законных вычетов/освобождений, ДО нулевой ступени. HN:полный допустимый40.000 уже учтён. PY:база&lt;=облагаемые поступления без освобождённой13-й. EC:личные расходы уменьшают налог, не базу снова. Проверяйте права."</string>
+    <string name="tax_wave_cash_hint" formatted="false">"Реальные денежные удержания работника кроме PIT для выплаты или явный0: социальные, медицина, пенсия, безработица/NIB/SPK/прочие. Без работодателя/PIT уже рассчитанного здесь. Законные эффекты уже в проверенной базе. Отсутствие местного PIT НЕ означает отсутствия удержаний. Без иностранного/домашнего налога."</string>
+    <string name="tax_twenty_common_scope" formatted="false">"Профиль: одинокий резидент31–59лет, живёт/работает в стране ВЕСЬ налоговый год, одна обычная работа, без иждивенцев, иных/зарубежных доходов и специальных льгот, кроме указанных. Страна/язык не подтверждают права. Проверьте конечную базу и фактические удержания работника. Не включает расходы работодателя/иностранный налог. Данные обновляются для каждой выплаты."</string>
+    <string name="tax_scope_at" formatted="false">"2026: обычная годовая зарплата. Включены транспортный зачёт496 и зависящая от дохода доплата до804, не выше налога. Без повышенной льготы проезда, commuter euro, отдельно облагаемой13/14зарплаты и возврата соцвзносов. Законные вычеты уже в базе; не вычитать нулевую ступень повторно."</string>
+    <string name="tax_scope_cy" formatted="false">"Реформа2026: проверенная конечная годовая зарплатная база после законных вычетов/освобождений. Жилищные, экологические, семейные льготы/первое трудоустройство не назначаются автоматически. Без иных доходов/специальных зачётов."</string>
+    <string name="tax_scope_mt" formatted="false">"2026: только SINGLE; без семейных/родительских тарифов, особого15%режима неполной занятости и других зачётов. Конечная годовая база проверяется."</string>
+    <string name="tax_scope_gr" formatted="false">"2026: БЕЗ детей,31–59лет. Новая шкала; зачёт777 уменьшается выше12000, применяется один раз до суммы налога. Требования электронных расходов выполнены. Без штрафа за дефицит расходов/особых освобождений/иных зачётов."</string>
+    <string name="tax_scope_si" formatted="false">"2026: опубликованная годовая шкала на конечную чистую базу после законных взносов и личных/общих вычетов. Не вычитать их снова. Без молодёжных/студенческих/инвалидных/волонтёрских режимов, иностранных доходов и особых зачётов."</string>
+    <string name="tax_scope_sk" formatted="false">"2026: НОВЫЕ годовые ставки19/25/30/35%. Конечная база после взносов и допустимых вычетов с учётом уменьшения по доходу. Без двойного вычета/детских/ипотечных/особых зачётов."</string>
+    <string name="tax_scope_hr" formatted="false">"2026: только ЗАГРЕБ,31–59лет, без молодёжного/возвратного освобождения. База уже включает допустимый личный вычет7200 и законные пенсионные взносы.23/33% при базе60000. Другие муниципалитеты недоступны."</string>
+    <string name="tax_scope_rs" formatted="false">"2026: обычное МЕСЯЧНОЕ удержание10% конечной проверенной базы ПОСЛЕ законного зарплатного вычета по дате/рабочему времени. Страхование не вычитать снова. Дополнительный годовой налог высоких доходов, накопительный перерасчёт/особые освобождения НЕ включены."</string>
+    <string name="tax_scope_me" formatted="false">"2026: полностью облагаемая обычная МЕСЯЧНАЯ денежная зарплата; база=брутто ДО взносов работника.0/9/15%. Муниципальная надбавка к зарплатному налогу — расход РАБОТОДАТЕЛЯ, не дополнительное удержание работника. Без особых выплат/годового перерасчёта."</string>
+    <string name="tax_scope_al" formatted="false">"2026: годовая шкала13/23%, конечная база после личного вычета по доходу/законных расходов.600000/420000/360000 уже учтены, не вычитать повторно. Без детских/образовательных зачётов и иных доходов."</string>
+    <string name="tax_scope_ba" formatted="false">"2026: только ФЕДЕРАЦИЯ Боснии и Герцеговины, не Республика Сербская/Брчко. Конечная годовая база после взносов и допустимого личного вычета3600.10%, без дополнительных зачётов."</string>
+    <string name="tax_scope_ng" formatted="false">"NTA/JRB2026:12 РАВНЫХ полностью облагаемых денежных месячных зарплат; годовой итог=12×текущий брутто. Без премий, льгот, переменной оплаты и военных/освобождённых должностей. Включено освобождение минимальной зарплаты до70000/месяц. База после законных льгот; без старого CRA/повторного800000нулевого диапазона."</string>
+    <string name="tax_scope_gh" formatted="false">"2026: обычная МЕСЯЧНАЯ зарплата резидента, таблица с1СЕНТЯБРЯ. Нужны проверенная дата фактической выплаты и месячная база после вычетов; конец периода в ТОМ ЖЕ месяце. Предыдущие месяцы, особые премии/сверхурочные, случайная занятость, нерезиденты/годовой накопительный расчёт недоступны."</string>
+    <string name="tax_scope_tz" formatted="false">"2026: МАТЕРИК, резидент, основная работа, МЕСЯЧНЫЙ PAYE. База после законных вычетов/признанной пенсии до нулевой ступени. Без Занзибара, второй работы/нерезидентов30%, особых выплат и годового перерасчёта."</string>
+    <string name="tax_scope_bw" formatted="false">"2026/27 с1июля2026: принятая годовая шкала резидента с НОВОЙ27,5%выше400000, не старым максимумом25%. Проверенная конечная база. Без нерезидентов, выходных/пенсионных единовременных выплат, бизнеса и особых зачётов."</string>
+    <string name="tax_scope_mu" formatted="false">"Год ДОХОДА2026/27 с1июля2026, не год оценки. ОБЩИЙ годовой трудовой доход&lt;=12млн MUR, без иных доходов.0/10/20% в этом диапазоне. Высокие доходы35%/Fair Share и специальные режимы/зачёты исключены; вычеты проверяются."</string>
+    <string name="tax_scope_eg" formatted="false">"2026: обычный резидент, ОБЩИЙ годовой доход&lt;=600000EGP. Конечная база уже содержит допустимое личное освобождение20000/законные вычеты, до нулевого диапазона40000. База округляется ВНИЗ до10EGP. Высокие доходы с утратой ступеней/особые зачёты недоступны. Реальные соцвзносы/гербовый сбор/прочие удержания отдельно."</string>
+    <string name="tax_scope_sz" formatted="false">"2026/27 с1июля2026: обычная зарплата,20/25/30/33% и базовый невозвратный зачёт8200 один раз. Эффективная нулевая точка41000 — НЕ второй вычет. Без возраста60+, льгот увольнения/пенсии и иных зачётов. Конечная база проверяется."</string>
+    <string name="tax_scope_ls" formatted="false">"2026/27 с1апреля2026: новая годовая граница77760 под20%, выше30%, невозвратный годовой зачёт12240. Заменяет старые суммы страниц RSL. Проверенная конечная трудовая база; без налога работодателя на льготы, нерезидентов/увольнения/особых зачётов."</string>
+    <string name="tax_scope_jo" formatted="false">"2026: обычная годовая зарплата резидента. Конечная база с допустимым личным освобождением9000/документированными вычетами.5/10/15/20/25/30% плюс национальный взнос1%свыше200000. Доли динара базы/годового налога отбрасываются по закону. Без особых режимов/зачётов."</string>
+    <string name="tax_payment_date" formatted="false">"Фактическая дата выплаты · YYYY-MM-DD"</string>
+    <string name="tax_payment_date_hint" formatted="false">"Гана: проверенная дата2026-09-01…2026-12-31 в ТОМ ЖЕ месяце, что конец периода, иначе нетто недоступно. Латинские цифры, например2026-10-31. Для другой выплаты обновите дату/базу. Старые таблицы/годовой накопительный расчёт выключены. Дата входит в резервную копию."</string>
+    <string name="tax_payment_date_invalid" formatted="false">"Введите действительную дату YYYY-MM-DD латинскими цифрами или оставьте пустым."</string>
+    <string name="tax_zagreb" formatted="false">"Загреб"</string>
+    <string name="tax_fbih" formatted="false">"Федерация Боснии и Герцеговины"</string>
+    <string name="tax_tz_mainland" formatted="false">"Материковая Танзания"</string>
+    <string name="tax_twenty_annual_hint" formatted="false">"Проверьте ОБЩИЙ трудовой доход и конечную базу ПОЛНОГО налогового года. BW/MU/SZ2026/27 с1июля; LS с1апреля; остальные календарный2026. Годовой налог/12 — резерв против денег периода, не фактическое накопительное удержание/годовое нетто. Нигерия:12равных зарплат. Годовые премии/льготы целиком к этой выплате не прибавляются."</string>
+    <string name="tax_twenty_base_hint" formatted="false">"КОНЕЧНАЯ проверенная годовая база ПОСЛЕ законных вычетов/личных льгот, ДО нулевых диапазонов/зачётов. AL/BA/HR/EG/JO: основной вычет уже внутри. AT/GR/SZ/LS: зачёты отдельно из НАЛОГА. Не вычитать деньги/нулевую ступень дважды; права проверяются лично."</string>
+    <string name="tax_twenty_monthly_hint" formatted="false">"Конечная проверенная база ТОЙ ЖЕ месячной выплаты после законных льгот до нулевых ступеней. RS: вычет по дате/доле работы. ME: база=брутто до взносов. GH: дата/месяц; TZ: основная работа материка. Без годового/накопительного перерасчёта; обновляйте для другой выплаты."</string>
+    <string name="tax_us_ak" formatted="false">"Аляска"</string>
+    <string name="tax_us_nv" formatted="false">"Невада"</string>
+    <string name="tax_us_sd" formatted="false">"Южная Дакота"</string>
+    <string name="tax_us_tn" formatted="false">"Теннесси"</string>
+    <string name="tax_us_wa" formatted="false">"Вашингтон"</string>
+    <string name="tax_us_wy" formatted="false">"Вайоминг"</string>
+    <string name="tax_us_nh" formatted="false">"Нью-Гэмпшир"</string>
+    <string name="tax_us_az" formatted="false">"Аризона"</string>
+    <string name="tax_us_ia" formatted="false">"Айова"</string>
+    <string name="tax_us_il" formatted="false">"Иллинойс"</string>
+    <string name="tax_us_mi" formatted="false">"Мичиган"</string>
+    <string name="tax_us_nc" formatted="false">"Северная Каролина"</string>
+    <string name="tax_us_ut" formatted="false">"Юта"</string>
+    <string name="tax_us_ky" formatted="false">"Кентукки"</string>
+    <string name="tax_us_pa" formatted="false">"Пенсильвания"</string>
+    <string name="tax_us_in" formatted="false">"Индиана"</string>
+    <string name="tax_us_ma" formatted="false">"Массачусетс"</string>
+    <string name="tax_us_ga" formatted="false">"Джорджия"</string>
+    <string name="tax_us_la" formatted="false">"Луизиана"</string>
+    <string name="tax_us_ms" formatted="false">"Миссисипи"</string>
+    <string name="tax_us_state_base" formatted="false">"Проверенная годовая база налога штата"</string>
+    <string name="tax_us_base_hint" formatted="false">"Итоговая база ПОСЛЕ законных вычетов и освобождений штата, ДО нулевых ступеней и налоговых кредитов. Не копируйте федеральную базу. Личное право на льготы проверяется отдельно."</string>
+    <string name="tax_us_state_relief" formatted="false">"Проверенное годовое уменьшение налога штата"</string>
+    <string name="tax_us_relief_hint" formatted="false">"Общая положенная НЕВОЗМЕЩАЕМАЯ скидка, включая личные льготы и льготы при низком доходе. Проверенная сумма за 2026 год или явный 0. Не больше налога; возврат и автоматическое право не рассчитываются."</string>
+    <string name="tax_us_local_tax" formatted="false">"Местный налог работника за период"</string>
+    <string name="tax_us_local_hint" formatted="false">"Фактический проверенный городской, окружной, школьный или профессиональный налог с этой выплаты, иначе явный 0. Местные ставки и льготы не рассчитываются. Не дублируйте в прочих удержаниях."</string>
+    <string name="tax_us_zero_hint" formatted="false">"В этом профиле 2026 года нет налога штата на обычную зарплату. Федеральный налог, Social Security, Medicare и фактические местные/прочие удержания остаются. Изменения Вашингтона на 2028 год не применяются к 2026 году."</string>
+    <string name="tax_us_pa_ut_hint" formatted="false">"PA/UT: только полностью облагаемая зарплата без корректировок; база = 12 × текущий месячный брутто. В PA нет стандартного вычета. В UT федеральные вычеты влияют на отдельный кредит, а не на эту базу; кредит 2026 года проверяется отдельно."</string>
+    <string name="tax_us_ms_hint" formatted="false">"Миссисипи: 4% итоговой базы свыше 10 000 USD. Нулевая ступень применяется здесь один раз; не вычитайте её из введённой базы. Совместная декларация с одним кормильцем: одна ступень."</string>
+    <string name="tax_us_ma_hint" formatted="false">"Массачусетс: обычная зарплата по ставке 5%, годовой брутто семьи ограничен 1 000 000 USD для исключения надбавки. No Tax Status и Limited Income Credit проверяются отдельно."</string>
+    <string name="tax_us_cash_hint" formatted="false">"Прочие ФАКТИЧЕСКИЕ удержания работника за период или 0: оплачиваемый отпуск, WA Cares, безработица, PFML и применимые взносы. Без затрат работодателя. Исключите уже рассчитанные федеральный/штатный/местный налоги, Social Security и Medicare. Льготы до налогообложения вне профиля."</string>
+    <string name="tax_us_current_inputs" formatted="false">"База и уменьшение налога штата вводятся вручную после ПРОВЕРКИ. Годовой брутто = 12 × текущий месячный; налог/12 — средний резерв, не удержание W-4/с начала года. Обновляйте для каждой выплаты/периода. Нет автоматических местных налогов, возмещаемых кредитов или межштатных случаев."</string>
+    <string name="tax_us_state_tax" formatted="false">"Подоходный налог штата"</string>
+    <string name="tax_us_al" formatted="false">"Алабама"</string>
+    <string name="tax_us_ar" formatted="false">"Арканзас"</string>
+    <string name="tax_us_ca" formatted="false">"Калифорния"</string>
+    <string name="tax_us_co" formatted="false">"Колорадо"</string>
+    <string name="tax_us_ct" formatted="false">"Коннектикут"</string>
+    <string name="tax_us_de" formatted="false">"Делавэр"</string>
+    <string name="tax_us_hi" formatted="false">"Гавайи"</string>
+    <string name="tax_us_id" formatted="false">"Айдахо"</string>
+    <string name="tax_us_ks" formatted="false">"Канзас"</string>
+    <string name="tax_us_md" formatted="false">"Мэриленд"</string>
+    <string name="tax_us_me" formatted="false">"Мэн"</string>
+    <string name="tax_us_mn" formatted="false">"Миннесота"</string>
+    <string name="tax_us_mo" formatted="false">"Миссури"</string>
+    <string name="tax_us_mt" formatted="false">"Монтана"</string>
+    <string name="tax_us_nd" formatted="false">"Северная Дакота"</string>
+    <string name="tax_us_ne" formatted="false">"Небраска"</string>
+    <string name="tax_us_nj" formatted="false">"Нью-Джерси"</string>
+    <string name="tax_us_nm" formatted="false">"Нью-Мексико"</string>
+    <string name="tax_us_ny" formatted="false">"Нью-Йорк"</string>
+    <string name="tax_us_oh" formatted="false">"Огайо"</string>
+    <string name="tax_us_ok" formatted="false">"Оклахома"</string>
+    <string name="tax_us_or" formatted="false">"Орегон"</string>
+    <string name="tax_us_ri" formatted="false">"Род-Айленд"</string>
+    <string name="tax_us_sc" formatted="false">"Южная Каролина"</string>
+    <string name="tax_us_va" formatted="false">"Виргиния"</string>
+    <string name="tax_us_vt" formatted="false">"Вермонт"</string>
+    <string name="tax_us_wi" formatted="false">"Висконсин"</string>
+    <string name="tax_us_wv" formatted="false">"Западная Виргиния"</string>
+    <string name="tax_us_final_scope" formatted="false">"28 новых профилей: обычная зарплата резидентов, без альтернативного минимального налога/особых режимов. Предел годового брутто семьи для автоматического тарифа — 1 000 000 USD, ниже указаны меньшие ограничения. База, льготы и удержания проверяются отдельно. Покрытие ограничено."</string>
+    <string name="tax_us_manual_scope" formatted="false">"CO / ID / VT: ТОЛЬКО ВВОД ПРОВЕРЕННОЙ НАЛОГОВОЙ ОБЯЗАННОСТИ. Автоматический тариф декларации за 2026 год здесь не подтверждён. Введите независимо проверенную окончательную годовую сумму налога штата за 2026; приложение не рассчитывает её или право на льготы."</string>
+    <string name="tax_us_verified_state_tax" formatted="false">"Проверенная итоговая годовая сумма налога штата"</string>
+    <string name="tax_us_verified_tax_hint" formatted="false">"Итоговый налог за 2026 после невозмещаемых льгот, ДО удержаний и авансов. Не остаток к доплате, удержанный налог, прошлогодний налог или возврат. Ноль только после проверки. Делится на 12 один раз; база/льготы в этом режиме игнорируются. Местные и другие удержания отдельно. Обновляйте для каждой выплаты."</string>
+    <string name="tax_us_final_limits" formatted="false">"Автоматические пределы годового брутто семьи: CT 50 000 USD SINGLE / 100 000 MFJ; NY 107 650; AR 94 700. Не рассчитываются возврат налоговых преимуществ, надбавки для высоких доходов и альтернативные таблицы AR. Вне условий нетто недоступно."</string>
+    <string name="tax_us_sc_hint" formatted="false">"Южная Каролина: НОВЫЙ закон 2026 с двумя ступенями и SCIAD. Итоговая база уже включает проверенную положенную SCIAD с уменьшением по доходу. Не подставляйте автоматически федеральный вычет или старые ставки 0/3/6%."</string>
+    <string name="tax_us_or_hint" formatted="false">"Орегон: официальные ОЦЕНОЧНЫЕ таблицы 2026 с опубликованными округлёнными базовыми суммами налога. Итоговые данные могут измениться. Проверьте базу, законный вычет федерального налога и кредиты. Транспорт, оплачиваемый отпуск и местные налоги вводятся как фактические удержания."</string>
+    <string name="tax_us_oh_hint" formatted="false">"Огайо 2026: ноль до итоговой базы 26 050 USD; выше добавляются 332 USD и 2,75% превышения. Личные/малоимущие кредиты проверяются в поле уменьшения налога. Местный/школьный налог отдельно."</string>
+    <string name="tax_us_manual_result" formatted="false">"Налог штата · введённый годовой налог / 12"</string>
+    <string name="tax_next_common_scope" formatted="false">"Только2026: одинокий резидент31–59, весь год, одна обычная местная работа; без иждивенцев/иных доходов/особых режимов. Базы, кредиты и удержания проверяются. Без затрат работодателя, обмена валют и истории профилей; обновляйте каждый платёж."</string>
+    <string name="tax_next_annual_hint" formatted="false">"Проверенный ПОЛНЫЙ годовой брутто2026. Налог/12—резерв, не накопленное удержание с меняющейся зарплаты, декларация или возврат. Годовые доплаты не прибавляются целиком к этому платежу."</string>
+    <string name="tax_next_monthly_hint" formatted="false">"Проверенная конечная база ЭТОЙ месячной выплаты. IS/CL/UY/BO—не годовые декларации. UYможет включать надбавку6%; взносы уменьшают налог кредитом, а не базу повторно. BOуже включает законный вычет2SMN."</string>
+    <string name="tax_next_base_hint" formatted="false">"Итоговая годовая национальная база после законных вычетов, до нулевых ступеней/кредитов. NLвключает страхованиеBox1. ПорогиJM/FJ/LUприменяются здесь один раз. BB25000и личная льготаBZуже вычтены."</string>
+    <string name="tax_next_annual_relief" formatted="false">"Проверенное годовое невозмещаемое уменьшение"</string>
+    <string name="tax_next_monthly_relief" formatted="false">"Проверенное уменьшение этой месячной выплаты"</string>
+    <string name="tax_next_relief_hint" formatted="false">"Проверенное положенное уменьшение или явный0. Уменьшает НАЛОГ до нуля, без возврата/автоправа. Годовое, кроме месячногоIS/CL/UY/BO. NLвключает кредитыBox1; LUэффект фонда. Не дублируйте кредиты иных налогов."</string>
+    <string name="tax_next_extra_tax" formatted="false">"Дополнительные налоги работника за период"</string>
+    <string name="tax_next_extra_hint" formatted="false">"Проверенные ФАКТИЧЕСКИЕ нерассчитанные местные/кантональные/региональные/церковные/прочие налоги или0. СборJP, фондLU7%и страхованиеNLуже учтены; ISвключает стандартную муниципальную часть. Без повторов."</string>
+    <string name="tax_next_cash_hint" formatted="false">"Прочие ФАКТИЧЕСКИЕ удержания или0: пенсия, социальное/медицинское страхование работника, без затрат работодателя. Исключите рассчитанные/отдельно введённые налоги. Национальное страхованиеNLвключено. Не вычитайте из базы дважды."</string>
+    <string name="tax_next_verified_tax" formatted="false">"Проверенный итоговый годовой национальный/региональный налог"</string>
+    <string name="tax_next_verified_hint" formatted="false">"Вручную: проверенная обязанность за год дохода2026 после невозмещаемых кредитов, ДО удержаний/авансов. Не удержанный налог, остаток к уплате, возврат или прежний год. Один раз /12; муниципальный отдельно, база/уменьшение игнорируются."</string>
+    <string name="tax_next_cl_date_hint" formatted="false">"Чили: фактическая дата YYYY-MM-DD2026латинскими цифрами; только январь–ноябрь. Должен совпадать месяц конца периода. Иначе нетто недоступно. Нет подмены годовой таблицей/52bis."</string>
+    <string name="tax_next_nl_charge" formatted="false">"НалогBox1и национальное страхование"</string>
+    <string name="tax_next_manual_result" formatted="false">"Национальный/региональный налог · годовой ввод /12"</string>
+    <string name="tax_next_nl" formatted="false">"Нидерланды: Box1доAOW, годовой брутто≤78426EUR.2026включает страхование27,65%в первой ступени. Комбинированные кредиты проверены; не вычитайте страхование вновь. БезBox2/3и режима30%."</string>
+    <string name="tax_next_be" formatted="false">"Бельгия: ТОЛЬКО ручной ввод проверенной годовой национальной/региональной обязанности. Доход2026соответствует оценке2027, не2026. Муниципальный отдельно; нет авторасчёта региона/кредитов/flexi-job."</string>
+    <string name="tax_next_lu" formatted="false">"Люксембург: класс1, брутто≤150000EUR. Тариф с2025; база вниз до50EUR, фонд7%включён до проверенного совокупного уменьшения. Без иных классов/пограничной работы/расчёта ухода."</string>
+    <string name="tax_next_ch" formatted="false">"Швейцария: обычная федеральная оценкаSINGLE, брутто≤100000CHF. Таблица2026, база вниз до100CHF, налог до0,05CHF; менее25CHFне взимается. Кантон/город/церковь фактически отдельно; не налог у источника."</string>
+    <string name="tax_next_se" formatted="false">"Швеция: только национальный2026налог, порог643000SEKПОСЛЕ базового вычета, не брутто660400. База вниз до100SEK, минимум превышения200. Местные налоги/распределение кредитов проверяются отдельно."</string>
+    <string name="tax_next_fi" formatted="false">"Финляндия: только национальная шкала2026. Государственная доля кредитов проверена; город/церковь/Yle/прочие сборы отдельно. Фактические пенсия/безработица/медстрахование; без автораспределения."</string>
+    <string name="tax_next_is" formatted="false">"Исландия: опубликованная МЕСЯЧНАЯ таблица2026со стандартной муниципальной частью. Проверенный месячный кредит, не годовой/12. Без иной годовой муниципальной оценки, переносов/передачи супругу/годового перерасчёта."</string>
+    <string name="tax_next_it" formatted="false">"Италия: обычныйIRPEF2026с23/33/43%, брутто≤200000EUR. Проверенные трудовые льготы; региональные/городские фактические налоги отдельно. Без замещающих режимов сверхурочных/ночных/смен/премий."</string>
+    <string name="tax_next_jp" formatted="false">"Япония: обычный годовой доход резидента, брутто≤100млнJPY. Законная конечная база вниз до1000JPY. Восстановительный сбор2026в2,1%после национальных кредитов рассчитан отдельно. Местный налог фактически отдельно; без правил2027."</string>
+    <string name="tax_next_kr" formatted="false">"Южная Корея: обычный прогрессивный национальный налог; конечная база/национальные кредиты проверены. Местный налог/реальные страховые взносы отдельно. Без фиксированного режима иностранцев/особых режимов."</string>
+    <string name="tax_next_ar" formatted="false">"Аргентина: официальная ГОДОВАЯ/окончательная таблица2026статьи94, опубликованные начальные суммы. Конечная годовая база проверена. Налог/12—резерв, не полугодовое накопленное удержание/распределениеSAC/возврат."</string>
+    <string name="tax_next_cl" formatted="false">"Чили: обычный месячныйIUSCпо дате платежа; только январь–ноябрь2026, не52bis. База/кредит проверены, фактические пенсия/здоровье отдельно. Без годового перерасчёта."</string>
+    <string name="tax_next_uy" formatted="false">"Уругвай: обычный МЕСЯЧНЫЙIRPF2026. Проверенная база включает положенные6%, максимум106%брутто. Взносы уменьшают НАЛОГ проверенным кредитом14/8%, не базу повторно. Без особогоaguinaldo/отпуска/годового расчёта."</string>
+    <string name="tax_next_bo" formatted="false">"Боливия: месячныйRC-IVA13%после законных2SMN/вычитаемых взносов. Проверенный месячный кредит включает положенные13%от1SMN, счета и индексированный прошлый остаток. Нет автоматического минимума/права/переноса."</string>
+    <string name="tax_next_jm" formatted="false">"Ямайка: ГОДОВОЙ резерв2026, взвешенный порог1876614JMD, не апрельский1902360.25/30%, верхняя граница6млнстатутного дохода. База после законных взносов, до нулевой ступени. Без накопленногоPAYE/льготы65+."</string>
+    <string name="tax_next_tt" formatted="false">"Тринидад и Тобаго: годовые25/30%с1млнTTDконечной базы. Личный вычет90000уже в базе. ФактическиеNIS/здоровье отдельно; без предпринимательских сборов работодателя."</string>
+    <string name="tax_next_bz" formatted="false">"Белиз:25%конечной проверенной годовой базы. Личная льгота25600/24600/22600/19600по брутто уже вычтена. Без автоправа на пожертвования/возврата; социальные взносы фактически отдельно."</string>
+    <string name="tax_next_gy" formatted="false">"Гайана: ставки2026в25/35%, налогооблагаемая граница3360000GYD. Конечная база после положенного вычета≥1680000или трети,NISи законных сверхурочных вычетов. Нет особого автоправа/страховых ставок."</string>
+    <string name="tax_next_bb" formatted="false">"Барбадос: НОВЫЕ2026ставки11,5/27,5%. Личный вычет25000BBDуже в конечной базе; первые50000по11,5%. Не вычитайте25000повторно. ФактическиеNIS/сборы отдельно."</string>
+    <string name="tax_next_fj" formatted="false">"Фиджи: тариф резидента с2024действует2026; нулевая ступень30000FJDодин раз. Без прежних отдельныхSRT/ECAL, нерезидентов/особых выплат. База/кредиты/реальные взносы проверены."</string>
+    <string name="menu_open" formatted="false">"Открыть меню"</string>
+    <string name="shift_global_hint" formatted="false">"Ползунок смены находится внизу каждого экрана. До начала смены выберите здесь офис или дом."</string>
+    <string name="shift_active" formatted="false">"Смена идёт"</string>
+    <string name="shift_ready" formatted="false">"Готово к началу"</string>
+    <string name="shift_options" formatted="false">"Параметры смены"</string>
+    <string name="shift_done" formatted="false">"Готово"</string>
+    <string name="period_current" formatted="false">"Текущий период"</string>
+    <string name="period_choose" formatted="false">"Выбор месяца и года"</string>
+    <string name="period_end_hint" formatted="false">"Выберите месяц, в котором ЗАКАНЧИВАЕТСЯ расчётный период. Точные даты указаны ниже."</string>
+    <string name="period_year" formatted="false">"Год"</string>
+    <string name="period_year_hint" formatted="false">"Введите год от 1900 до 2100."</string>
+    <string name="period_apply" formatted="false">"Показать период"</string>
+    <string name="widget_name" formatted="false">"ShiftHours · Смена"</string>
+    <string name="widget_description" formatted="false">"Начните смену в офисе или дома, завершите её и следите за её длительностью."</string>
+    <string name="widget_open" formatted="false">"Открыть приложение"</string>
+    <string name="widget_error" formatted="false">"Откройте приложение для проверки данных или восстановления резервной копии."</string>
+    <string name="widget_setup" formatted="false">"Сначала завершите первоначальную настройку в приложении."</string>
+    <string name="widget_inactive" formatted="false">"Нет активной смены"</string>
+    <string name="widget_start_office" formatted="false">"Начать · Офис"</string>
+    <string name="widget_start_home" formatted="false">"Начать · Дом"</string>
+    <string name="widget_stop" formatted="false">"Завершить смену"</string>
+    <string name="shift_changed" formatted="false">"Активная смена изменилась. Закройте редактор и откройте его снова."</string>
+    <string name="overtime_by_location" formatted="false">"Сверхурочные по месту работы"</string>
+    <string name="overtime_by_location_hint" formatted="false">"Дневные ступени сверхурочных общие для офиса и дома и относятся к месту выполнения работы. Оплата включает полный процент ступени, до налогов."</string>
+    <string name="ui_more_info" formatted="false">"Подробнее"</string>
+    <string name="ui_collapse" formatted="false">"Скрыть подробности"</string>
+    <string name="ui_expand" formatted="false">"Показать подробности"</string>
+    <string name="ui_details" formatted="false">"Подробности"</string>
+    <string name="ui_appearance" formatted="false">"Оформление"</string>
+    <string name="ui_theme_system" formatted="false">"Как на телефоне"</string>
+    <string name="ui_theme_light" formatted="false">"Светлое"</string>
+    <string name="ui_theme_dark" formatted="false">"Тёмное"</string>
+    <string name="ui_theme_hint" formatted="false">"Сохраняется вместе с настройками и включается в резервную копию. Автоматический режим следует теме телефона."</string>
+    <string name="ui_gross_estimate" formatted="false">"Расчётная зарплата до налогов"</string>
+    <string name="ui_record_actions" formatted="false">"Действия с записью"</string>
+    <string name="ui_net_estimate" formatted="false">"Расчётный доход после налогов в рамках выбранного профиля."</string>
+    <string name="ui_tax_scope_notice" formatted="false">"Расчёт ограничен налоговым профилем. Выбор страны не подтверждает право на льготы. Недостающие данные указаны выше."</string>
+    <string name="ui_tax_scope" formatted="false">"Налоговый профиль и условия"</string>
+    <string name="ui_pay_details" formatted="false">"Расчёт зарплаты"</string>
+    <string name="ui_settings_hours" formatted="false">"Часы и перерывы"</string>
+    <string name="ui_settings_pay" formatted="false">"Зарплата и сверхурочные"</string>
+    <string name="ui_settings_tax" formatted="false">"Налоги и взносы"</string>
+    <string name="ui_settings_display" formatted="false">"Язык и оформление"</string>
+    <string name="ui_country_search" formatted="false">"Поиск страны, кода или валюты"</string>
+    <string name="ui_no_results" formatted="false">"Подходящие страны не найдены"</string>
+    <string name="export_excel" formatted="false">"Экспорт в Excel"</string>
+    <string name="export_sheet" formatted="false">"Смены"</string>
+    <string name="export_period_start" formatted="false">"Начало периода"</string>
+    <string name="export_period_end" formatted="false">"Конец периода"</string>
+    <string name="export_date" formatted="false">"Дата"</string>
+    <string name="export_start" formatted="false">"Начало"</string>
+    <string name="export_end" formatted="false">"Окончание"</string>
+    <string name="export_duration" formatted="false">"Всего времени"</string>
+    <string name="export_total" formatted="false">"Итого"</string>
+    <string name="export_note" formatted="false">"Оплачиваемая длительность после настроенных перерывов. У ночной смены окончание может быть на следующий день."</string>
+    <string name="export_saved" formatted="false">"Файл Excel сохранён."</string>
+    <string name="export_error" formatted="false">"Не удалось экспортировать Excel."</string>
+    <string name="export_filter_hint" formatted="false">"Экспорт завершённых смен выбранного периода по фильтру Офис, Дом или Все, выбранному выше."</string>
+    <string name="back_press_again_exit" formatted="false">"Нажмите «Назад» ещё раз для выхода"</string>
+    <string name="leave_title" formatted="false">"Отпуска, больничные и праздники"</string>
+    <string name="leave_sick" formatted="false">"Больничный"</string>
+    <string name="leave_vacation" formatted="false">"Оплачиваемый отпуск"</string>
+    <string name="leave_days" formatted="false">"дней"</string>
+    <string name="leave_setup_hint" formatted="false">"Перед вводом отсутствий задайте начальные остатки и ежемесячное начисление."</string>
+    <string name="leave_asof" formatted="false">"Остаток на дату"</string>
+    <string name="leave_period_used" formatted="false">"Дни, списанные за выбранный период"</string>
+    <string name="leave_pay" formatted="false">"Сумма оплаты отсутствий"</string>
+    <string name="leave_pay_hint" formatted="false">"При почасовой оплате сумма добавляется к зарплате. При месячном окладе оплачиваемое отсутствие уже включено; удерживается только неоплачиваемая часть. Отсутствия не создают сверхурочные часы."</string>
+    <string name="leave_manage" formatted="false">"Управление отпусками и больничными"</string>
+    <string name="leave_config" formatted="false">"Остатки и правила отсутствий"</string>
+    <string name="leave_add" formatted="false">"Добавить отпуск, больничный или праздник"</string>
+    <string name="leave_record_hint" formatted="false">"Доля дня применяется к каждой выбранной дате. Оплачиваемое отсутствие учитывается отдельно от фактической работы. Будущие записи входят в свой расчётный период, но текущий остаток учитывает даты только по сегодняшний день."</string>
+    <string name="leave_empty" formatted="false">"За этот период отсутствия не зарегистрированы."</string>
+    <string name="leave_fraction" formatted="false">"Доля дня (1 = полный день, 0,5 = половина)"</string>
+    <string name="leave_hours" formatted="false">"Часы отсутствия"</string>
+    <string name="leave_pay_percent" formatted="false">"Процент оплаты"</string>
+    <string name="leave_debited" formatted="false">"Дни, списанные с остатка"</string>
+    <string name="leave_event_start" formatted="false">"Начало случая болезни"</string>
+    <string name="leave_day_number" formatted="false">"День болезни"</string>
+    <string name="leave_ledger" formatted="false">"История начислений и использования"</string>
+    <string name="leave_ledger_hint" formatted="false">"Операции выбранного расчётного периода. Начальный остаток + начисления + корректировки − использование. Будущие операции являются плановыми."</string>
+    <string name="leave_opening" formatted="false">"Начальный остаток (дни)"</string>
+    <string name="leave_accrual" formatted="false">"Ежемесячное начисление"</string>
+    <string name="leave_used" formatted="false">"Использование"</string>
+    <string name="leave_adjustment" formatted="false">"Корректировка остатка"</string>
+    <string name="leave_changed" formatted="false">"Данные изменились. Закройте и снова откройте эту форму."</string>
+    <string name="leave_delete_hint" formatted="false">"Удалить запись? Её влияние на остаток и оплату будет пересчитано. Отменить действие нельзя."</string>
+    <string name="leave_config_hint" formatted="false">"Это условия вашего работодателя, а не проверенные законодательные нормы. Они действуют с начальной даты. Изменение остатков или начислений пересчитывает историю; для разового изменения используйте корректировку с датой. Сохранённые правила оплаты отсутствия остаются в каждой записи."</string>
+    <string name="leave_opening_date" formatted="false">"Дата начального остатка"</string>
+    <string name="leave_monthly" formatted="false">"Дни, начисляемые за месяц"</string>
+    <string name="leave_accrual_day" formatted="false">"День ежемесячного начисления (1–31)"</string>
+    <string name="leave_accrual_hint" formatted="false">"Первое полное начисление выполняется в выбранный день строго после начальной даты. В коротких месяцах используется последний день. Без пропорционального расчёта. Не зависит от расчётного периода."</string>
+    <string name="leave_day_hours" formatted="false">"Часы в полном дне отсутствия"</string>
+    <string name="leave_vacation_percent" formatted="false">"Процент оплаты отпуска"</string>
+    <string name="leave_allow_negative" formatted="false">"Разрешить отрицательные остатки"</string>
+    <string name="leave_calendar_days" formatted="false">"Считать календарные дни случая болезни"</string>
+    <string name="leave_calendar_hint" formatted="false">"Включено: выходные и незарегистрированные дни продвигают ступень оплаты. Выключено: учитываются только разные зарегистрированные даты этого случая болезни. Остаток расходуют только зарегистрированные отсутствия."</string>
+    <string name="leave_sick_tiers" formatted="false">"Ступени оплаты больничного"</string>
+    <string name="leave_tier_hint" formatted="false">"Строки применяются по порядку. Проценты оплаты и списания остатка независимы. День с оплатой 50% может списывать полный день при списании 100%."</string>
+    <string name="leave_tier" formatted="false">"Ступень"</string>
+    <string name="leave_number_days" formatted="false">"Количество дней"</string>
+    <string name="leave_remaining" formatted="false">"Все последующие дни (последняя строка)"</string>
+    <string name="leave_debit_percent" formatted="false">"Процент списания остатка"</string>
+    <string name="leave_add_tier" formatted="false">"Добавить ступень перед последней строкой"</string>
+    <string name="leave_from" formatted="false">"С даты"</string>
+    <string name="leave_until" formatted="false">"По дату (включительно)"</string>
+    <string name="leave_workdays_only" formatted="false">"Только заданные рабочие дни"</string>
+    <string name="leave_continue" formatted="false">"Продолжить случай болезни"</string>
+    <string name="leave_new_event" formatted="false">"Новый случай болезни"</string>
+    <string name="leave_override_pay" formatted="false">"Заменить % оплаты (пусто = правило)"</string>
+    <string name="leave_override_debit" formatted="false">"Заменить % списания (пусто = правило)"</string>
+    <string name="leave_override_hint" formatted="false">"Необязательные изменения для записи. Оставьте поля пустыми для сохранённых правил работодателя. В диапазоне одинаковые изменения применяются к каждому выбранному дню."</string>
+    <string name="leave_note" formatted="false">"Примечание / причина корректировки"</string>
+    <string name="leave_preview" formatted="false">"Проверить даты и оплату"</string>
+    <string name="leave_work_warning" formatted="false">"На одну из этих дат также записана работа или открыта смена. Перед сохранением проверьте сочетание фактической работы и отсутствия."</string>
+    <string name="leave_date" formatted="false">"Дата"</string>
+    <string name="leave_adjust_days" formatted="false">"Корректировка дней (+ добавить / − списать)"</string>
+    <string name="leave_duplicate" formatted="false">"Суммарное отсутствие на одну дату не может превышать один день."</string>
+    <string name="leave_insufficient" formatted="false">"Недостаточный остаток дней. Исправьте начальный остаток или явно разрешите отрицательный."</string>
+    <string name="leave_invalid" formatted="false">"Проверьте даты и числа. Проценты: 0–100; доля дня: больше 0 и не больше 1."</string>
+    <string name="leave_date_error" formatted="false">"Выберите последовательный диапазон не более 367 календарных дней."</string>
+    <string name="leave_no_dates" formatted="false">"Нет дат, соответствующих заданным рабочим дням."</string>
+    <string name="leave_salary_adjustment" formatted="false">"Удержание неоплачиваемого отсутствия из оклада"</string>
+    <string name="leave_export_hint" formatted="false">"Экспорт «Всё» включает отдельный лист отсутствий. Экспорт «Офис»/«Дом» содержит только рабочие смены."</string>
+    <string name="leave_holiday" formatted="false">"Праздник / нерабочий день"</string>
+    <string name="leave_salary_choice" formatted="false">"Удержать из зарплаты (без использования отпуска)"</string>
+    <string name="leave_settlement" formatted="false">"Покрыть недостающие часы за месяц"</string>
+    <string name="leave_missing_hours" formatted="false">"Оставшиеся недостающие часы периода"</string>
+    <string name="leave_fill_hours" formatted="false">"Часы для покрытия"</string>
+    <string name="leave_use_percent" formatted="false">"Ввести процент полного дня отсутствия"</string>
+    <string name="leave_day_percent" formatted="false">"Процент одного полного дня"</string>
+    <string name="leave_target_needed" formatted="false">"Укажите обязательные месячные часы в настройках оплаты для расчёта недостающих часов."</string>
+    <string name="leave_too_many_hours" formatted="false">"Введите положительные часы, не превышающие оставшийся дефицит (максимум 744)."</string>
+    <string name="leave_settlement_hint" formatted="false">"Это корректировка периода, а не рабочая смена. Расход отпуска = часы ÷ часы в дне отсутствия. Например: 3,2 часа ÷ 8 = 0,4 дня (40%). Выберите оплату отпуском или неоплачиваемое удержание из зарплаты. Последующие изменения работы или отсутствий могут потребовать исправить корректировку."</string>
+    <string name="leave_incomplete_period" formatted="false">"Этот расчётный период ещё не завершён. Недостающие часы предварительные; проверьте их перед сохранением."</string>
+    <string name="leave_holiday_hint" formatted="false">"Праздник задаётся вручную и не подтверждает законное право. Остатки отпуска и больничного не расходуются. Оплата по умолчанию — 100%; замените процент по условиям работодателя. Диапазоны только рабочих дней пропускают уже записанные праздники. Работа в праздник не получает автоматическую надбавку."</string>
+    <string name="leave_settlement_review" formatted="false">"Записанное покрытие может теперь превышать оставшийся дефицит. Проверьте часы после изменений работы или отсутствий."</string>
+    <string name="ot_method" formatted="false">"Расчёт сверхурочных"</string>
+    <string name="ot_daily" formatted="false">"За день"</string>
+    <string name="ot_weekly" formatted="false">"За неделю"</string>
+    <string name="ot_monthly" formatted="false">"За месяц"</string>
+    <string name="ot_hours" formatted="false">"обычные часы"</string>
+    <string name="ot_week_start" formatted="false">"Первый день рабочей недели"</string>
+    <string name="ot_weekly_threshold" formatted="false">"Обычные часы за неделю до сверхурочных"</string>
+    <string name="ot_monthly_threshold" formatted="false">"Обычные часы за месяц до сверхурочных"</string>
+    <string name="ot_calendar" formatted="false">"Календарный месяц (с 1-го по последний день)"</string>
+    <string name="ot_pay_period" formatted="false">"Заданный расчётный период"</string>
+    <string name="ot_nominal_day" formatted="false">"Дневные часы для дефицита и настройки отсутствий"</string>
+    <string name="ot_settings_hint" formatted="false">"Выберите ОДИН метод. Ступени оплаты начинаются заново каждый выбранный день, неделю или месяц. Недельный и месячный пороги независимы от дневных номинальных часов и месячной нормы присутствия. Перерывы по-прежнему следуют заданному правилу на день или отрезок работы. В порог входит только фактическая работа за вычетом перерывов; отсутствия, праздники и покрытия дефицита не входят."</string>
+    <string name="ot_context_hint" formatted="false">"Недельные расчёты и расчёты по календарному месяцу используют также сохранённую работу до отображаемого периода. Введите полную неделю или месяц для точного распределения. Вся смена относится к назначенной рабочей дате, даже если проходит через полночь. Смена метода пересчитывает историю; она не объединяет дневные и недельные правила и не означает автоматического законного права."</string>
+    <string name="ot_location_hint" formatted="false">"Офис и дом используют общий счётчик за выбранный день, неделю или месяц. Часы и полная оплата каждой ступени распределяются по времени и месту работы после вычета перерывов."</string>
+    <string name="ot_office_only" formatted="false">"Часы только в офисе сверх выбранного порога"</string>
+    <string name="ot_invalid" formatted="false">"Проверьте метод, период и пороги: за неделю 0–168, за месяц 0–744 часа; начало недели должно быть допустимым днём недели."</string>
+    <string name="ot_threshold_required" formatted="false">"Введите положительный порог обычных часов для выбранного метода."</string>
+    <string name="widget_compact_name" formatted="false">"ShiftHours · Смена 2×2"</string>
+    <string name="analytics_title" formatted="false">"Сводки"</string>
+    <string name="analytics_hint" formatted="false">"Только закрытые смены. Все показатели рассчитаны по текущим правилам оплаты и перерывов. Активные смены не включены."</string>
+    <string name="analytics_partial" formatted="false">"Период ещё не завершён. Сравнение проводится со всем предыдущим периодом, а не с тем же числом прошедших дней."</string>
+    <string name="analytics_empty" formatted="false">"В этом периоде нет записей"</string>
+    <string name="analytics_empty_hint" formatted="false">"Отсутствие записей не означает отсутствие работы. Периоды без записей не считаются месяцами с нулевой зарплатой."</string>
+    <string name="analytics_overview" formatted="false">"Показатели периода"</string>
+    <string name="analytics_workdays" formatted="false">"Зарегистрированные рабочие дни"</string>
+    <string name="analytics_shifts" formatted="false">"Закрытые смены"</string>
+    <string name="analytics_avg_day" formatted="false">"Средние чистые часы за рабочий день"</string>
+    <string name="analytics_avg_shift" formatted="false">"Средние чистые часы за смену"</string>
+    <string name="analytics_home_share" formatted="false">"Доля работы из дома"</string>
+    <string name="analytics_ot_share" formatted="false">"Доля сверхурочных в чистом рабочем времени"</string>
+    <string name="analytics_gross" formatted="false">"Зарплата до удержаний"</string>
+    <string name="analytics_comparison" formatted="false">"Изменение к предыдущему периоду"</string>
+    <string name="analytics_hours_change" formatted="false">"Изменение чистых часов"</string>
+    <string name="analytics_ot_change" formatted="false">"Изменение сверхурочных часов"</string>
+    <string name="analytics_gross_change" formatted="false">"Изменение зарплаты до удержаний"</string>
+    <string name="analytics_no_comparison" formatted="false">"Для сравнения нужны записи в обоих периодах."</string>
+    <string name="analytics_tiers" formatted="false">"Ступени сверхурочных и их оплата"</string>
+    <string name="analytics_weighted" formatted="false">"Сверхурочные часы с весом оплаты"</string>
+    <string name="analytics_weighted_hint" formatted="false">"Взвешенные часы = сверхурочные часы × коэффициент оплаты. Это эквивалент оплаты, а не дополнительное рабочее время."</string>
+    <string name="analytics_location" formatted="false">"Офис и дом"</string>
+    <string name="analytics_equivalent_hint" formatted="false">"Стоимость работы рассчитана по почасовому эквиваленту со сверхурочными. Оклад и оплата отсутствий не распределяются по месту или причине."</string>
+    <string name="analytics_office_short" formatted="false">"Дневной дефицит только офисных часов"</string>
+    <string name="analytics_office_ot" formatted="false">"Сравнение сверхурочных только в офисе"</string>
+    <string name="analytics_reasons" formatted="false">"Причины работы из дома"</string>
+    <string name="analytics_no_reasons" formatted="false">"За этот период нет закрытых домашних смен."</string>
+    <string name="analytics_shortfalls" formatted="false">"Недостающие часы и отметки"</string>
+    <string name="analytics_daily_short" formatted="false">"Дневной дефицит после зачёта отсутствий"</string>
+    <string name="analytics_monthly_short" formatted="false">"Месячный дефицит относительно заданной нормы"</string>
+    <string name="analytics_missing_clock" formatted="false">"Дни с отметкой о пропущенной регистрации"</string>
+    <string name="analytics_missing_hint" formatted="false">"Проблемы определяются по сохранённым заметкам о пропущенных отметках; незарегистрированные рабочие дни определить нельзя."</string>
+    <string name="analytics_weekdays" formatted="false">"Средние чистые часы по дням недели"</string>
+    <string name="analytics_weekdays_hint" formatted="false">"Учитываются только даты с положительным зарегистрированным чистым временем. Показано число дней; даты без записей исключены."</string>
+    <string name="analytics_records" formatted="false">"Примечательные дни"</string>
+    <string name="analytics_longest" formatted="false">"Самый длинный зарегистрированный рабочий день"</string>
+    <string name="analytics_most_ot" formatted="false">"День с наибольшим числом отнесённых сверхурочных"</string>
+    <string name="analytics_trend" formatted="false">"Динамика за 12 расчётных периодов"</string>
+    <string name="analytics_trend_hint" formatted="false">"В строке: чистые часы, сверхурочные часы, зарплата до удержаний. Прочерк означает отсутствие записей. Прошлые показатели используют текущие настройки, а не архивные договоры."</string>
+    <string name="home_sync_title">Личный сервер</string>
+    <string name="home_sync_hint">Необязательная синхронизация с вашим компьютером. Работа доступна без сети.</string>
+    <string name="home_sync_address">HTTPS-адрес сервера</string>
+    <string name="home_sync_key">Ключ подключения телефона</string>
+    <string name="home_sync_https">Введите корректный HTTPS-адрес.</string>
+    <string name="home_sync_other_server">Устройство связано с другим сервером. Сохраните резервную копию перед переносом.</string>
+    <string name="home_sync_working">Синхронизация…</string>
+    <string name="home_sync_ok">Синхронизировано</string>
+    <string name="home_sync_conflict">Конфликт изменений. Данные не перезаписаны. Согласуйте записи в браузере и телефоне и повторите.</string>
+    <string name="home_sync_auth">Ключ истёк или отозван. Отключитесь и введите новый ключ.</string>
+    <string name="home_sync_identity">Идентификатор сервера изменился. Синхронизация остановлена для защиты данных.</string>
+    <string name="home_sync_error">Сервер недоступен или данные отклонены. Локальные данные сохранены; повторите позже.</string>
+    <string name="home_sync_pending">Локальные изменения ожидают отправки.</string>
+    <string name="home_sync_off">Синхронизация отключена</string>
+    <string name="home_sync_now">Синхронизировать</string>
+    <string name="home_sync_connect">Подключить</string>
+    <string name="home_sync_disconnect">Отключить</string>
+    <string name="home_sync_backup_hint">Включает настройки, отпуска и смены. Не заменяет локальные копии и Drive. Фоновая синхронизация запланирована примерно каждые 15 минут; Android может её задержать. Ключи не входят в резервные копии.</string>
+    <string name="home_sync_back">Назад</string>
+    <string name="manual_entry" formatted="false">"Ручной ввод"</string>
+    <string name="manual_kind" formatted="false">"Тип записи"</string>
+    <string name="manual_work_shift" formatted="false">"Рабочая смена"</string>
+    <string name="manual_continue" formatted="false">"Продолжить"</string>
+    <string name="calendar_title" formatted="false">"Календарь работы"</string>
+    <string name="calendar_missing_hint" formatted="false">"Светло-оранжевый: прошедшие дни с воскресенья по четверг без смены или отсутствия. Нажмите день для подробностей."</string>
+    <string name="calendar_missing_count">"Дней без записей: %1$s"</string>
+    <string name="calendar_missing" formatted="false">"Нет записи"</string>
+    <string name="calendar_paid_time" formatted="false">"Оплачиваемое время"</string>
+    <string name="calendar_no_report" formatted="false">"Нет записи о смене или отсутствии."</string>
+    <string name="snapshot_arrange" formatted="false">"Порядок карточек"</string>
+    <string name="snapshot_move_up" formatted="false">"Вверх"</string>
+    <string name="snapshot_move_down" formatted="false">"Вниз"</string>
+    <string name="snapshot_reset_order" formatted="false">"Восстановить исходный порядок"</string>
+    <string name="snapshot_save_order" formatted="false">"Сохранить"</string>
+    <string name="snapshot_cancel_order" formatted="false">"Отмена"</string>
+    <string name="hours_by_location" formatted="false">"Часы по месту работы"</string>
+    <string name="location_all_hours" formatted="false">"Всего часов (со сверхурочными)"</string>
+    <string name="location_all_pay" formatted="false">"Оплата (со сверхурочными)"</string>
+    <string name="location_hourly_value_hint" formatted="false">"Стоимость работы по часовой ставке, не распределение месячной зарплаты."</string>
+    <string name="launcher_widgets">Виджеты</string>
+    <string name="launcher_change_widget">Заменить виджет</string>
+    <string name="calendar_includes_home">Включает работу из дома</string>
+</resources>

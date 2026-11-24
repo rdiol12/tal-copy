@@ -1,0 +1,883 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="text_93d815fab2" formatted="false">"שעות התקן חייבות להיות בין 0 ל־24"</string>
+    <string name="text_9fdb0c0357" formatted="false">"השכר חייב להיות מספר חיובי או אפס"</string>
+    <string name="text_1020d02bcc" formatted="false">"מכסת השעות החודשית חייבת להיות גדולה מאפס ועד 744"</string>
+    <string name="text_a3016d567d" formatted="false">"יום תחילת התקופה חייב להיות בין 1 ל־31"</string>
+    <string name="text_a3b71b8576" formatted="false">"המדרגה האחרונה צריכה לחול על כל השעות שנותרו"</string>
+    <string name="text_11798e6af6" formatted="false">"בדוק את שעות המדרגות ואחוזי השכר"</string>
+    <string name="text_142ed94880" formatted="false">"הגדרת הפסקה אינה תקינה"</string>
+    <string name="text_617d62c8d5" formatted="false">"נקודות הזיכוי אינן תקינות"</string>
+    <string name="text_d64e9be198" formatted="false">"אחוזי ההפרשות חייבים להיות בין 0 ל־100"</string>
+    <string name="text_e9ded22849" formatted="false">"בסיס ההפרשות אינו תקין"</string>
+    <string name="text_5340862757" formatted="false">"יש לבחור לפחות יום עבודה אחד"</string>
+    <string name="text_58ee2bc711" formatted="false">"רשימת הסיבות ארוכה מדי"</string>
+    <string name="text_54904132d0" formatted="false">"מספר דיווחים או מזהים לא תקין"</string>
+    <string name="text_bccb639eb1" formatted="false">"דיווח לא תקין"</string>
+    <string name="text_14afe878db" formatted="false">"משך מקורי אינו תקין"</string>
+    <string name="text_285af230e1" formatted="false">"טקסט הדיווח ארוך מדי"</string>
+    <string name="text_927652b634" formatted="false">"יש חפיפה בין דיווחי עבודה"</string>
+    <string name="text_478ac0cba4" formatted="false">"המשמרת הפעילה חופפת לדיווח קיים"</string>
+    <string name="text_1ce0351978" formatted="false">"ללא סיבה"</string>
+    <string name="text_0206a8d338" formatted="false">"לא ניתן לחבר כרגע את חשבון גוגל. אפשר להשתמש בגיבוי לקובץ ולנסות שוב מאוחר יותר."</string>
+    <string name="text_630af90bc5" formatted="true">"לא התקבלה הרשאה מגוגל (קוד %1$s). אפשר להתחבר מחדש או להשתמש בגיבוי לקובץ."</string>
+    <string name="text_daf10c2ee5" formatted="false">"הפעולה נכשלה. הנתונים המקומיים נשמרו."</string>
+    <string name="text_25b395415b" formatted="false">"הגיבוי נשמר בהצלחה בגוגל דרייב"</string>
+    <string name="text_fc021a3be3" formatted="false">"לא נמצאו גיבויי ShiftHours בחשבון הזה"</string>
+    <string name="text_439ed2ca59" formatted="false">"החיבור לגוגל דרייב הושלם."</string>
+    <string name="text_7480a74f74" formatted="false">"החיבור בוטל. לא בוצע גיבוי או שחזור."</string>
+    <string name="text_514e675d10" formatted="false">"לא התקבלה הרשאת גישה לדרייב"</string>
+    <string name="text_325ca3ec59" formatted="false">"לא התקבלה הרשאה לדרייב"</string>
+    <string name="text_5862cd4663" formatted="false">"לא ניתן לפתוח את קובץ היעד"</string>
+    <string name="text_a8df08ecdf" formatted="false">"קובץ הגיבוי נשמר"</string>
+    <string name="text_04bb2141d5" formatted="false">"לא ניתן לקרוא את הקובץ"</string>
+    <string name="text_5e9b8b7914" formatted="false">"הגיבוי גדול מדי"</string>
+    <string name="text_221ac78111" formatted="false">"גיבוי ושחזור"</string>
+    <string name="text_806ac63619" formatted="false">"לשמור את שעות העבודה גם במעבר לטלפון חדש"</string>
+    <string name="text_55d63892ad" formatted="false">"גוגל דרייב"</string>
+    <string name="text_e5444dccaf" formatted="false">"טרם נבחר חשבון"</string>
+    <string name="text_0a2305a775" formatted="false">"הרשאה התקבלה. גיבוי מוצלח יוצג רק לאחר העלאה שהושלמה."</string>
+    <string name="text_2fc9030263" formatted="false">"יש לחבר חשבון ולהעניק הרשאת גישה."</string>
+    <string name="text_cd0e41e136" formatted="false">"בחירת חשבון / חיבור מחדש"</string>
+    <string name="text_6f3a7bda3a" formatted="false">"חיבור לגוגל דרייב"</string>
+    <string name="text_15109258b9" formatted="false">"גיבוי עכשיו לדרייב"</string>
+    <string name="text_c75c1e3a33" formatted="false">"בחירת גיבוי לשחזור מדרייב"</string>
+    <string name="text_90b7df067a" formatted="false">"עדיין לא הושלם גיבוי לדרייב בחשבון הזה."</string>
+    <string name="text_1c2b595825" formatted="true">"גיבוי מוצלח אחרון: %1$s  %2$s"</string>
+    <string name="text_32640ad12e" formatted="false">"הגיבויים נשמרים בתיקיית נתוני האפליקציה בדרייב ואינם מוצגים כקבצים רגילים. כדי לשחזר בטלפון חדש יש להתקין את אותה אפליקציה ולהתחבר לאותו חשבון."</string>
+    <string name="text_ea1a07b6ef" formatted="false">"גיבוי אוטומטי"</string>
+    <string name="text_8edcd28553" formatted="false">"כבוי"</string>
+    <string name="text_ef4037576b" formatted="false">"יומי"</string>
+    <string name="text_50296d4c2d" formatted="false">"שבועי"</string>
+    <string name="text_790f24eb34" formatted="false">"תזמון הגיבוי עודכן"</string>
+    <string name="text_e75e2661b7" formatted="false">"רק ברשת ללא חיוב לפי נפח (כגון Wi-Fi)"</string>
+    <string name="text_cf3d313652" formatted="false">"התזמון מופעל רק לאחר חיבור דרייב. אנדרואיד עשוי לדחות גיבוי בגלל חיסכון בסוללה או היעדר רשת. גיבוי ראשון ניתן לבצע מיד בכפתור שלמעלה."</string>
+    <string name="text_1e579b05be" formatted="false">"החיבור המקומי נותק והתזמון בוטל. הגיבויים הקיימים לא נמחקו."</string>
+    <string name="text_83eccb0dd3" formatted="false">"ניתוק וביטול תזמון"</string>
+    <string name="text_b35a854e22" formatted="false">"גיבוי לקובץ ושחזור מקובץ"</string>
+    <string name="text_1da6e0d4aa" formatted="false">"אפשר לשמור קובץ במחשב, בדרייב או במקום אחר, גם לפני הגדרת חיבור גוגל לאפליקציה."</string>
+    <string name="text_52cca61a5d" formatted="false">"שמירת קובץ גיבוי"</string>
+    <string name="text_4d2b863edd" formatted="false">"שחזור מקובץ גיבוי"</string>
+    <string name="text_f4ab9db1a0" formatted="false">"הגיבוי כולל דיווחים, משמרת פתוחה, הגדרות וסיבות קבועות. לפני שחזור מוצגת תצוגה מקדימה ונשמר עותק מקומי של הנתונים הקודמים."</string>
+    <string name="text_86472e4d43" formatted="false">"פתיחת העותק שנשמר לפני השחזור האחרון"</string>
+    <string name="text_bf72e99186" formatted="true">"במכשיר הזה נשמרים %1$s דיווחים. חיבור גוגל ותזמון הגיבוי מוגדרים מחדש בכל טלפון."</string>
+    <string name="text_b5af650c8c" formatted="false">"מצב שחזור: הנתונים המקומיים לא נקראו. אפשר לשחזר מקובץ או מדרייב; יצירת גיבוי חדש כבויה."</string>
+    <string name="text_f738c4c045" formatted="false">"גיבויים זמינים"</string>
+    <string name="text_c775e7dcf6" formatted="false">"לא נמצאו גיבויים בחשבון הנבחר."</string>
+    <string name="text_b728721fc0" formatted="false">"סגירה"</string>
+    <string name="text_835ba611ee" formatted="false">"אישור שחזור"</string>
+    <string name="text_bfe0764274" formatted="true">"בגיבוי: %1$s דיווחים."</string>
+    <string name="text_19a88cf185" formatted="true">"טווח: %1$s עד %2$s"</string>
+    <string name="text_ea12a4ba2b" formatted="false">"אין"</string>
+    <string name="text_1f70207bab" formatted="false">"יש"</string>
+    <string name="text_3cbbf0077a" formatted="true">"משמרת פתוחה: %1$s"</string>
+    <string name="text_2388ed2d80" formatted="true">"השחזור יחליף את %1$s הדיווחים וההגדרות שבמכשיר. יישמר עותק מקומי לפני ההחלפה."</string>
+    <string name="text_f35658ed7c" formatted="false">"השחזור הושלם"</string>
+    <string name="text_a87c9f4c06" formatted="false">"החלפת הנתונים ושחזור"</string>
+    <string name="text_a7c55a8d06" formatted="false">"ביטול"</string>
+    <string name="text_7b80593224" formatted="false">"קובץ גדול מדי"</string>
+    <string name="text_b36a3090e4" formatted="false">"קובץ הגיבוי אינו מתאים לגרסה זו"</string>
+    <string name="text_1d25b4e13f" formatted="false">"זה אינו גיבוי ShiftHours נתמך"</string>
+    <string name="text_c84389ddd1" formatted="false">"הגיבוי פגום: בדיקת שלמות נכשלה"</string>
+    <string name="text_2159b4a358" formatted="false">"גרסת נתונים קודמת לא מוכרת"</string>
+    <string name="text_4ae6ec8fa0" formatted="false">"הנתונים טרם נטענו"</string>
+    <string name="text_cf903e3463" formatted="false">"יש להזין מספר תקין"</string>
+    <string name="text_039bb0fc27" formatted="false">"זמן יש להזין כשעות:דקות או מספר עשרוני"</string>
+    <string name="text_a7fcad5418" formatted="false">"מספר שעות לא תקין"</string>
+    <string name="text_37e2eed494" formatted="false">"מספר דקות לא תקין"</string>
+    <string name="text_77c0279c02" formatted="false">"יום תחילת התקופה אינו תקין"</string>
+    <string name="text_3f800b0cce" formatted="false">"יום סיום התקופה אינו תקין"</string>
+    <string name="text_14611081ea" formatted="false">"יום הסיום צריך להיות היום שלפני תחילת התקופה הבאה"</string>
+    <string name="text_b9e104411d" formatted="false">"זמן הפסקה יש להזין בדקות שלמות"</string>
+    <string name="text_2189089fc9" formatted="false">"בדוק את ההגדרות"</string>
+    <string name="text_81de798264" formatted="false">"ברוכים הבאים"</string>
+    <string name="text_47cfdefbce" formatted="false">"הגדרות"</string>
+    <string name="text_8d74344d70" formatted="false">"התאם את תנאי העבודה שלך ושמור כדי להתחיל"</string>
+    <string name="text_9a90a562d2" formatted="false">"השינויים נשמרים בלחיצה על שמירה"</string>
+    <string name="text_ab4dfe20aa" formatted="false">"חל על כל הדיווחים, גם בעבר"</string>
+    <string name="text_0bf5310554" formatted="false">"שומר…"</string>
+    <string name="text_54d36ad080" formatted="false">"שמירת הגדרות"</string>
+    <string name="text_465e8134a4" formatted="false">"שכר ומדרגות"</string>
+    <string name="text_45a3198e62" formatted="false">"תקופה והפסקות"</string>
+    <string name="text_bfc0c0e7f1" formatted="false">"מס והפרשות"</string>
+    <string name="text_a2ceeb919c" formatted="false">"סיבות קבועות"</string>
+    <string name="text_3d0ffbb6b9" formatted="false">"סוג שכר וערך שעה"</string>
+    <string name="text_9852666700" formatted="false">"שכר גלובלי"</string>
+    <string name="text_c17956962e" formatted="false">"שכר גלובלי חודשי ברוטו (₪)"</string>
+    <string name="text_55bc5d12cc" formatted="false">"שכר שעתי (₪)"</string>
+    <string name="text_635f53e8e3" formatted="false">"מספר שעות חודשיות לפי המעסיק"</string>
+    <string name="text_8b4c4a643c" formatted="false">"ערך שעה = שכר גלובלי ÷ מכסת שעות חודשית. הברוטו כולל שכר גלובלי מלא ובנוסף שעות נוספות לפי המדרגות."</string>
+    <string name="text_7414d91b15" formatted="false">"הברוטו מחושב לפי השעות שנרשמו והמדרגות שהוגדרו."</string>
+    <string name="text_8a239ab302" formatted="false">"מדרגות שעות נוספות"</string>
+    <string name="text_0fea91c3a0" formatted="false">"שעות רגילות ביום"</string>
+    <string name="text_996add3cb0" formatted="false">"אפשר להזין שעות עשרוניות או שעות:דקות, למשל 2.5 או 2:30."</string>
+    <string name="text_b779c7c572" formatted="true">"מדרגה %1$s"</string>
+    <string name="text_25606d5652" formatted="false">"כל השעות שנותרו"</string>
+    <string name="text_92102dc8df" formatted="false">"מספר שעות במדרגה"</string>
+    <string name="text_b5fe6f82a9" formatted="false">"אחוז מהשכר השעתי"</string>
+    <string name="text_bd38859717" formatted="false">"המדרגה חלה אחרי השעות הרגילות וכל המדרגות שמעליה."</string>
+    <string name="text_5192d415d8" formatted="false">"למעלה"</string>
+    <string name="text_6179185b49" formatted="false">"למטה"</string>
+    <string name="text_7c8173fafa" formatted="false">"מחיקה"</string>
+    <string name="text_f428ab9623" formatted="false">"+ הוספת מדרגה"</string>
+    <string name="text_f1f14874a4" formatted="false">"חייבת להיות מדרגת ׳כל השעות שנותרו׳ אחת, בשורה האחרונה. בהוספת מדרגה, השורה הקודמת הופכת למוגבלת — בדוק את מספר השעות שלה."</string>
+    <string name="text_89fef4fd58" formatted="false">"תקופת דיווח"</string>
+    <string name="text_6c22041108" formatted="false">"יום ראשון בתקופה (1–31)"</string>
+    <string name="text_796e34b83e" formatted="false">"יום אחרון (31 = סוף חודש)"</string>
+    <string name="text_b241433b46" formatted="false">"הימים מקושרים כדי שלא יהיו פערים או חפיפות. לדוגמה 25–24. בחודש קצר תאריך תחילת התקופה מותאם ליום האחרון שקיים בחודש."</string>
+    <string name="text_a222187697" formatted="true">"התקופה הנוכחית: %1$s – %2$s"</string>
+    <string name="text_01f30eb896" formatted="false">"ניכוי הפסקות"</string>
+    <string name="text_c9beca5709" formatted="false">"לנכות זמן הפסקה"</string>
+    <string name="text_a123134aa5" formatted="false">"פעם ביום"</string>
+    <string name="text_26dcd5cc53" formatted="false">"מכל מקטע"</string>
+    <string name="text_fa4922c12a" formatted="false">"מספר דקות לניכוי"</string>
+    <string name="text_ff7f573a4d" formatted="false">"להחיל ניכוי גם על עבודה מהבית"</string>
+    <string name="text_143dd7316a" formatted="false">"בניכוי יומי, ההפסקה מנוכה פעם אחת מהמקטעים הזכאים לפי סדרם. עבודה מהבית לא תנוכה אם האפשרות כבויה. הניכוי מוגבל לאורך העבודה בפועל."</string>
+    <string name="text_40494acb7f" formatted="false">"אין ניכוי הפסקה. כל זמן הדיווח נספר לתשלום."</string>
+    <string name="text_8a53041f32" formatted="false">"ימי עבודה לחישוב חוסר יומי"</string>
+    <string name="text_b6c4c767eb" formatted="false">"א׳"</string>
+    <string name="text_c0505c1097" formatted="false">"ב׳"</string>
+    <string name="text_7b5b7d0c90" formatted="false">"ג׳"</string>
+    <string name="text_88aa0681e1" formatted="false">"ד׳"</string>
+    <string name="text_c2742c4cba" formatted="false">"ה׳"</string>
+    <string name="text_08e0ffcda5" formatted="false">"ו׳"</string>
+    <string name="text_0645b32caf" formatted="false">"ש׳"</string>
+    <string name="text_92d73e83f6" formatted="false">"משפיע על חוסר יומי בלבד. מדרגות השכר זהות בכל הימים, ללא כללי שבת/חג נפרדים."</string>
+    <string name="text_69e69a7518" formatted="false">"נקודות זיכוי ואומדן נטו"</string>
+    <string name="text_70d7cd14f1" formatted="false">"מספר נקודות זיכוי (לפי התלוש)"</string>
+    <string name="text_9987c69efd" formatted="false">"השאר ריק כדי לא להציג אומדן נטו. שווי נקודה לפי טבלת 2026: 242 ₪ לחודש."</string>
+    <string name="text_8cee38323a" formatted="false">"פנסיה וקרן השתלמות"</string>
+    <string name="text_9982697de0" formatted="false">"אחוז הפרשת העובד לפנסיה"</string>
+    <string name="text_3638d5596d" formatted="false">"אחוז הפרשת העובד לקרן השתלמות (0 אם אין)"</string>
+    <string name="text_90b68945c0" formatted="false">"יש להזין את חלק העובד בלבד, ללא אחוזי המעסיק."</string>
+    <string name="text_e2e16aa700" formatted="false">"בסיס השכר להפרשות"</string>
+    <string name="text_dc959b16aa" formatted="false">"שכר בסיס ללא שעות נוספות"</string>
+    <string name="text_682c0e2622" formatted="false">"כל הברוטו"</string>
+    <string name="text_3f55564e26" formatted="false">"סכום מוגדר ידנית"</string>
+    <string name="text_0d4b9a288d" formatted="false">"שכר מבוטח להפרשות (₪)"</string>
+    <string name="text_3284189b89" formatted="false">"להכליל זיכוי מס רגיל על הפרשת העובד לפנסיה"</string>
+    <string name="text_0b5e7d7238" formatted="false">"אומדן הזיכוי לפנסיה הוא 35% מהפרשה מזכה, עד תקרת הפרשה חודשית 679 ₪ ובכפוף ל־7% מהשכר. החישוב חודשי ואינו מצטבר."</string>
+    <string name="text_102196cdf2" formatted="false">"מה כלול באומדן"</string>
+    <string name="text_c02d9dbae9" formatted="false">"מס הכנסה, נקודות זיכוי, ביטוח לאומי ובריאות וחלק העובד בהפרשות. טבלאות 2026 בלבד, לתושב ישראל מגיל 18 עד גיל הפרישה."</string>
+    <string name="text_a09a8853d1" formatted="false">"לא כולל תיאום מס, הכנסות אחרות, שווי רכב והטבות, מס על הפקדות מעסיק או זיכויים מיוחדים. ניתן להשוות לתלוש ולחדד בהמשך."</string>
+    <string name="text_49148d6451" formatted="false">"סיבות קבועות לעבודה מהבית"</string>
+    <string name="text_62d649ad15" formatted="false">"סיבה חדשה"</string>
+    <string name="text_45bd96d34b" formatted="false">"הוספה לרשימה"</string>
+    <string name="text_a99e68e9f4" formatted="false">"הסרה"</string>
+    <string name="text_1b581c283a" formatted="false">"הסרת סיבה מהרשימה אינה משנה דיווחים שכבר נשמרו. תמיד אפשר להזין טקסט חופשי."</string>
+    <string name="text_d44063b451" formatted="false">"טעינת הנתונים נכשלה"</string>
+    <string name="text_31e02fbfa7" formatted="false">"השינוי לא נשמר. נסה שוב."</string>
+    <string name="text_71f28ff8fa" formatted="false">"לא ניתן לטעון את הנתונים"</string>
+    <string name="text_b238f1a394" formatted="false">"הקבצים נשמרו ללא שינוי. אין למחוק את נתוני האפליקציה."</string>
+    <string name="text_fc2297f319" formatted="false">"ניסיון נוסף"</string>
+    <string name="text_6e56c6a002" formatted="false">"שחזור מגיבוי"</string>
+    <string name="text_e4f2184a47" formatted="false">"בדוק את שעון המכשיר: יש דיווח שמסתיים בעתיד"</string>
+    <string name="text_6f6a3321b0" formatted="false">"שעת הסיום חייבת להיות אחרי ההתחלה"</string>
+    <string name="text_e0aad7a0c2" formatted="false">"ההגדרות נשמרו"</string>
+    <string name="text_8dfb4f3f58" formatted="false">"הדיווח נשמר"</string>
+    <string name="text_7a6915a25c" formatted="false">"לא ניתן לדווח שעות שטרם התרחשו"</string>
+    <string name="text_2aca9c2968" formatted="false">"שעת הכניסה אינה יכולה להיות בעתיד"</string>
+    <string name="text_f9dc75319d" formatted="false">"מחיקת דיווח"</string>
+    <string name="text_f026fe8829" formatted="true">"למחוק את הדיווח מ־%1$s? לא ניתן לבטל את המחיקה."</string>
+    <string name="text_b0e3328ac0" formatted="false">"סיבת העבודה מהבית"</string>
+    <string name="text_f1af79973d" formatted="false">"בחירה מהסיבות הקבועות ▾"</string>
+    <string name="text_05d94bc43f" formatted="false">"שעות העבודה שלי"</string>
+    <string name="text_c83e648a74" formatted="false">"הגדרה ראשונית"</string>
+    <string name="text_89c15910b6" formatted="false">"הגדר שכר, מכסת שעות ותנאי עבודה כדי להפעיל את חישובי השכר. אפשר לרשום שעות גם לפני השלמת ההגדרה."</string>
+    <string name="text_7c1126f30f" formatted="false">"פתיחת ההגדרות"</string>
+    <string name="text_01ebd1a71f" formatted="false">"מוכנים להתחיל?"</string>
+    <string name="text_6d81f53fb4" formatted="true">"המשמרת פתוחה · %1$s"</string>
+    <string name="text_8b6488028e" formatted="false">"החלק לפתיחת משמרת בשעה הנוכחית."</string>
+    <string name="text_c386f7af9f" formatted="true">"כניסה: %1$s  %2$s"</string>
+    <string name="text_bc84ae26be" formatted="false">"החלק לסיום ושמירה בשעה הנוכחית."</string>
+    <string name="text_73a90395c7" formatted="false">"החלק לפתיחת משמרת"</string>
+    <string name="text_867983500d" formatted="false">"החלק לסיום משמרת"</string>
+    <string name="text_a5d8698fba" formatted="false">"תיקון כניסה / סיום בשעה אחרת"</string>
+    <string name="text_1efd4660f9" formatted="false">"+ הזנת משמרת ידנית"</string>
+    <string name="text_79a7f1d677" formatted="false">"גם כשהאפליקציה סגורה, שעת הכניסה נשמרת."</string>
+    <string name="text_95d86d7f5f" formatted="false">"היום"</string>
+    <string name="text_6834f9db87" formatted="false">"שעות נטו"</string>
+    <string name="text_b076df1539" formatted="false">"מקטעים באותו יום מחושבים יחד. משמרת שחוצה חצות משויכת ליום תחילתה."</string>
+    <string name="text_7991cbb6a8" formatted="false">"התקופה הנוכחית"</string>
+    <string name="text_3084f001bd" formatted="false">"שעות שנרשמו"</string>
+    <string name="text_7447d177b1" formatted="false">"שעות נוספות"</string>
+    <string name="text_e2cbeabb69" formatted="false">"גלובלי מלא + נוספות שנרשמו"</string>
+    <string name="text_4c0803b36f" formatted="false">"ברוטו לפי הדיווחים"</string>
+    <string name="text_389abd9ee8" formatted="false">"סיכומי השכר יוצגו אחרי שמירת ההגדרות הראשוניות."</string>
+    <string name="text_1960680292" formatted="false">"מצב הגיבוי"</string>
+    <string name="text_dd6ddc4c4f" formatted="false">"טרם הושלם גיבוי לדרייב במכשיר הזה."</string>
+    <string name="text_1c3f9e273d" formatted="true">"גיבוי דרייב מוצלח: %1$s  %2$s"</string>
+    <string name="text_6e55aef91f" formatted="false">"תזמון יומי פעיל"</string>
+    <string name="text_17ee444b2e" formatted="false">"תזמון שבועי פעיל"</string>
+    <string name="text_d7da1ab695" formatted="false">"גיבוי אוטומטי לדרייב כבוי"</string>
+    <string name="text_bba88dd845" formatted="false">"הגדרות ופעולות זמינות בלשונית גיבוי למטה."</string>
+    <string name="text_d61f7f639f" formatted="false">"הקודמת"</string>
+    <string name="text_28890b291d" formatted="false">"הבאה"</string>
+    <string name="text_023f8a1a0c" formatted="false">"תמונת מצב"</string>
+    <string name="text_0cdf398747" formatted="false">"שעות, שכר ומעקב לתקופה"</string>
+    <string name="text_5b40d10b38" formatted="false">"גלובלי + שעות נוספות"</string>
+    <string name="text_b7cebc21b4" formatted="false">"שכר שעתי"</string>
+    <string name="text_24c64cee7b" formatted="false">"שכר גלובלי מלא"</string>
+    <string name="text_1558a05606" formatted="false">"שכר שעות רגילות"</string>
+    <string name="text_5407314942" formatted="false">"תשלום שעות נוספות"</string>
+    <string name="text_ebff026858" formatted="false">"ערך שעה"</string>
+    <string name="text_f072356bdc" formatted="false">"השכר הגלובלי מוצג במלואו. חוסר שעות מוצג בנפרד ואינו מנוכה אוטומטית."</string>
+    <string name="text_d7fec4855e" formatted="false">"כולל שעות משמרת פתוחה שנמצאות בתקופה; הסכומים מתעדכנים."</string>
+    <string name="text_087fd2cd6d" formatted="false">"התפלגות שעות"</string>
+    <string name="text_3eb92e199a" formatted="false">"סה״כ שעות נטו"</string>
+    <string name="text_07b643f83a" formatted="false">"שעות רגילות"</string>
+    <string name="text_dda62e1cc9" formatted="false">"סה״כ שעות נוספות"</string>
+    <string name="text_27fa002b22" formatted="true">"שעות %1$s%%"</string>
+    <string name="text_0d562e6527" formatted="true">"תשלום %1$s%%"</string>
+    <string name="text_b93940ad5b" formatted="false">"שעות נוספות משוקללות"</string>
+    <string name="text_aa79d639a1" formatted="false">"משרד ובית"</string>
+    <string name="text_b895b63363" formatted="false">"שעות משרד"</string>
+    <string name="text_bf004c7509" formatted="false">"שעות בית"</string>
+    <string name="text_a839ec02b2" formatted="true">"%1$s%% משרד"</string>
+    <string name="text_b8ded3389c" formatted="false">"שווי משרד בתעריף בסיס"</string>
+    <string name="text_ec791b21f9" formatted="false">"שווי בית בתעריף בסיס"</string>
+    <string name="text_2d3fd3bb5b" formatted="false">"שווי בסיס מוצג לפני מדרגות נוספות; אין להוסיף אותו לברוטו."</string>
+    <string name="text_6689630948" formatted="false">"חוסר שעות ובקרת דיווח"</string>
+    <string name="text_23b17c77be" formatted="false">"מכסת שעות לתקופה"</string>
+    <string name="text_9e0655ff1b" formatted="false">"חוסר מול המכסה החודשית"</string>
+    <string name="text_468b69c83d" formatted="false">"סכום חוסרים יומיים"</string>
+    <string name="text_d75f4dd709" formatted="false">"חוסר יומי נספר רק בימי העבודה שנבחרו ושיש בהם דיווח. ימים ללא דיווח אינם מסומנים כהיעדרות."</string>
+    <string name="text_e9f9673a47" formatted="false">"חוסר שעות מהמשרד בלבד"</string>
+    <string name="text_8e87e45498" formatted="false">"שעות מעבר לתקן מהמשרד בלבד"</string>
+    <string name="text_43af7314c4" formatted="false">"ימים עם הערת החתמה חסרה"</string>
+    <string name="text_d41113bbd2" formatted="false">"ימי דיווח"</string>
+    <string name="text_3ee5d8b89f" formatted="false">"עבודה מהבית לפי סיבה"</string>
+    <string name="text_e220a05303" formatted="false">"אין דיווחי בית בתקופה הזו."</string>
+    <string name="text_4b0ccb42af" formatted="false">"שעות"</string>
+    <string name="text_387c48c332" formatted="false">"שווי בתעריף בסיס"</string>
+    <string name="text_a347b2c73c" formatted="false">"אומדן נטו"</string>
+    <string name="text_b8e45d7b9e" formatted="true">"טרם הוגדרו טבלאות מס לשנת %1$s. לא מוצג אומדן נטו."</string>
+    <string name="text_90128d6911" formatted="false">"להצגת אומדן, הזן בהגדרות את נקודות הזיכוי ואת אחוז הפרשת העובד לפנסיה. אפשר להזין 0 אם אין הפרשה."</string>
+    <string name="text_3d880292e0" formatted="false">"מס הכנסה"</string>
+    <string name="text_89e2b25fb1" formatted="false">"ביטוח לאומי"</string>
+    <string name="text_c694983c02" formatted="false">"ביטוח בריאות"</string>
+    <string name="text_901acdd444" formatted="false">"פנסיה — חלק העובד"</string>
+    <string name="text_852a1bee2a" formatted="false">"קרן השתלמות — חלק העובד"</string>
+    <string name="text_f8ee9f9027" formatted="false">"זיכוי מס בגין פנסיה"</string>
+    <string name="text_192617126a" formatted="false">"אומדן חודשי לפי טבלאות 2026 לתושב ישראל בגיל עבודה, ללא חישוב מס מצטבר, הכנסות אחרות, שווי הטבות או תיאום מס. ההפרשות לפי הבסיס שנבחר. אינו תחליף לתלוש."</string>
+    <string name="text_fe04db5f37" formatted="false">"זמן מוצג בשעות:דקות; החישוב משתמש גם בשניות המקוריות. בכל ימי השבוע חלות מדרגות השכר שהגדרת."</string>
+    <string name="text_3141c61e9e" formatted="false">"פירוט שעות"</string>
+    <string name="text_723a7db2af" formatted="false">"משמרות ומקטעי עבודה"</string>
+    <string name="text_57b4cda969" formatted="false">"+ הוספת משמרת ידנית"</string>
+    <string name="text_7149f2ed6a" formatted="false">"המדרגות מחושבות על כל היום, גם כשהסינון מציג מקום אחד בלבד."</string>
+    <string name="text_3579e0306b" formatted="false">"יש משמרת פתוחה. ניתן לתקן כניסה או להזין שעת סיום במסך הבית."</string>
+    <string name="text_643cae9ae3" formatted="false">"אין דיווחים שהסתיימו בתקופה הזו."</string>
+    <string name="text_d3fcfb1a78" formatted="true">"יציאה: %1$s  %2$s"</string>
+    <string name="text_39fe25939b" formatted="false">"עריכה"</string>
+    <string name="text_0826149cf1" formatted="false">"סיכום היום"</string>
+    <string name="text_d783472020" formatted="false">"סה״כ יום נטו"</string>
+    <string name="text_a3756d29d2" formatted="false">"זמן לתשלום"</string>
+    <string name="text_c24fae5be3" formatted="false">"זמן בסינון הנוכחי"</string>
+    <string name="text_b70622d71d" formatted="false">"תיקון משמרת פתוחה"</string>
+    <string name="text_59cb6e8e9a" formatted="false">"עריכת משמרת"</string>
+    <string name="text_10045253c1" formatted="false">"הזנת משמרת ידנית"</string>
+    <string name="text_2f6783cd3b" formatted="false">"כניסה"</string>
+    <string name="text_b939061e41" formatted="false">"יציאה"</string>
+    <string name="text_8f9bc2d880" formatted="false">"הערה / החתמה חסרה"</string>
+    <string name="text_d958ea3cd8" formatted="true">"משך לפני הפסקה: %1$s"</string>
+    <string name="text_1be17082dd" formatted="false">"משמרות באותו יום מתחברות לצורך מדרגות השכר. אין להזין מקטעים חופפים."</string>
+    <string name="text_d42c0813fc" formatted="false">"הכניסה אינה יכולה להיות בעתיד"</string>
+    <string name="text_510b00fcc4" formatted="false">"שמירת תיקון כניסה והשארת המשמרת פתוחה"</string>
+    <string name="text_647a733fb8" formatted="false">"תאריך הכניסה אינו תקין"</string>
+    <string name="text_4c82f98655" formatted="false">"היציאה חייבת להיות לאחר הכניסה. למשמרת לילה בחר גם תאריך סיום מתאים."</string>
+    <string name="text_c2fb808976" formatted="false">"לא ניתן להזין יציאה בעתיד"</string>
+    <string name="text_6eb37ad66f" formatted="false">"סיום ושמירת משמרת"</string>
+    <string name="text_e69323393b" formatted="false">"שמירה"</string>
+    <string name="text_b89e7bee64" formatted="false">"הגדרות ראשוניות"</string>
+    <string name="text_2eaf74bbd8" formatted="false">"מתחילים מהתנאים שלך"</string>
+    <string name="text_f9fb70ce3b" formatted="false">"יש להזין שכר ומכסת שעות ולהתאים את מדרגות השכר, ההפסקות ותקופת הדיווח. לאחר השמירה יופיע הדאשבורד."</string>
+    <string name="text_925bb7a659" formatted="false">"הרשאת גוגל פגה. התחבר מחדש."</string>
+    <string name="text_86de69005f" formatted="false">"הגישה לדרייב נדחתה. נסה להתחבר מחדש לחשבון הגוגל."</string>
+    <string name="text_0885c5a6fa" formatted="false">"הגיבוי לא נמצא בחשבון הנבחר."</string>
+    <string name="text_09780711f6" formatted="false">"גוגל מגבילה כרגע את הבקשות. נסה שוב מאוחר יותר."</string>
+    <string name="text_2a152ef564" formatted="true">"התקשורת עם גוגל דרייב נכשלה (קוד %1$s)."</string>
+    <string name="text_07d8d8fb15" formatted="false">"יש לבחור חשבון גוגל"</string>
+    <string name="text_44707e2acd" formatted="false">"גוגל לא אישרה יצירת גיבוי"</string>
+    <string name="text_eee5e9d37e" formatted="false">"הגיבוי לא בוצע: נדרשת הרשאה מחדש. פתח את מסך הגיבוי והתחבר שוב."</string>
+    <string name="text_fb5e219eb1" formatted="false">"הגיבוי לא בוצע: "</string>
+    <string name="text_82a2bfa2fe" formatted="false">"שגיאת תקשורת"</string>
+    <string name="nav_home" formatted="false">"בית"</string>
+    <string name="nav_dashboard" formatted="false">"תמונת מצב"</string>
+    <string name="nav_records" formatted="false">"דיווחים"</string>
+    <string name="nav_settings" formatted="false">"הגדרות"</string>
+    <string name="nav_backup" formatted="false">"גיבוי"</string>
+    <string name="location_home" formatted="false">"בית"</string>
+    <string name="location_office" formatted="false">"משרד"</string>
+    <string name="filter_all" formatted="false">"הכול"</string>
+    <string name="app_name" formatted="false">"ShiftHours"</string>
+    <string name="language_title" formatted="false">"שפה"</string>
+    <string name="language_system" formatted="false">"לפי שפת המכשיר"</string>
+    <string name="language_hint" formatted="false">"השפה נשמרת במכשיר. יש לשמור שינויים לפני החלפת שפה. המטבע וכללי המס נשארים לפי ההגדרות הקיימות."</string>
+    <string name="tax_profile" formatted="false">"פרופיל מס"</string>
+    <string name="tax_country" formatted="false">"מדינה או תחום מיסוי"</string>
+    <string name="tax_year" formatted="false">"שנת מס"</string>
+    <string name="tax_region" formatted="false">"אזור מיסוי"</string>
+    <string name="tax_choose" formatted="false">"בחירה"</string>
+    <string name="tax_england" formatted="false">"אנגליה"</string>
+    <string name="tax_wales" formatted="false">"ויילס"</string>
+    <string name="tax_northern_ireland" formatted="false">"צפון אירלנד"</string>
+    <string name="tax_scotland" formatted="false">"סקוטלנד"</string>
+    <string name="tax_unavailable" formatted="false">"אומדן נטו למדינה זו עדיין אינו זמין. שעות וברוטו ממשיכים להופיע."</string>
+    <string name="tax_year_unavailable" formatted="false">"אין טבלת מס מאומתת לשנה זו. לא יוצג אומדן נטו."</string>
+    <string name="tax_uk_required" formatted="false">"יש לבחור אזור בבריטניה ולאשר שפרופיל העובד הנתמך מתאים לך."</string>
+    <string name="tax_foreign_fields" formatted="false">"נקודות הזיכוי וכללי ההפרשות הישראליים אינם חלים על מדינה זו."</string>
+    <string name="tax_uk_profile" formatted="false">"אני מאשר שפרופיל העובד הבריטי שלהלן מתאים לי."</string>
+    <string name="tax_country_hint" formatted="false">"המדינה נבחרת בנפרד מהשפה. המדינה לבדה אינה קובעת זכאות להטבות אישיות."</string>
+    <string name="tax_currency_warning" formatted="false">"שינוי מדינה מחליף את סימון המטבע, ללא המרת סכומי השכר או כללי השעות הנוספות. יש לבדוק את ההגדרות לפני שמירה."</string>
+    <string name="tax_uk_scope" formatted="false">"בריטניה 2026/27: אומדן מס הכנסה על שכר חודשי קבוע בחישוב שנתי וביטוח לאומי חודשי בקטגוריה A. פטור אישי רגיל עם הפחתה להכנסה גבוהה. עבודה יחידה; ללא הכנסה נוספת, ניכויי פנסיה, ויתור שכר, הלוואות סטודנטים, הטבות חייבות או הקלות מיוחדות. אינו חישוב PAYE מצטבר."</string>
+    <string name="tax_scope_in" formatted="false">"הודו בשנות המס 2025/26–2026/27: עובד שכיר תושב מס, במסלול החדש בלבד, שכר כספי קבוע בחישוב שנתי, ללא הכנסה נוספת או הטבות מס מיוחדות. כולל ניכוי רגיל, זיכוי, הקלה בסף הזיכוי ותוספת מס 4%. הכנסה שנתית חייבת עד 5,000,000 רופי."</string>
+    <string name="tax_scope_ru" formatted="false">"רוסיה 2026: עובד תושב מס עם שכר רגיל וקבוע בלבד. ללא הכנסה נוספת, ניכויי מס אישיים, תוספות צפון או כללים צבאיים מיוחדים. המס הוא ממוצע חודשי בחישוב שנתי, ולא ניכוי מצטבר בתלוש. הפרשות המעסיק אינן מנוכות משכר העובד."</string>
+    <string name="tax_scope_ae" formatted="false">"איחוד האמירויות 2026: עובד זר שאינו אזרח מדינות המפרץ, עם הכנסה מעבודה בלבד. ללא מס הכנסה אישי. יש להזין ניכויי עובד בפועל, לרבות ביטוח כשחל. פיצויי סיום עבודה והפרשות מעסיק אינם כלולים."</string>
+    <string name="tax_actual_deductions" formatted="false">"ניכויי עובד חודשיים בפועל"</string>
+    <string name="tax_deductions_hint" formatted="false">"יש להזין 0 אם אין ניכויים. כלול פנסיה, ביטוח וניכויים מקומיים של העובד. אל תכלול מס הכנסה ותוספת מס המחושבים כאן, או הפרשות מעסיק. הסכום מופחת מהנטו ולא מבסיס המס."</string>
+    <string name="tax_confirm_profile" formatted="false">"אני מאשר שפרופיל העובד של מדינה זו מתאים לי."</string>
+    <string name="tax_foreign_required" formatted="false">"יש לבדוק את פרופיל העובד, סכום הניכויים ומגבלות ההכנסה הנתמכות לפני חישוב נטו."</string>
+    <string name="tax_other_tax" formatted="false">"תוספת מס בריאות וחינוך בהודו"</string>
+    <string name="tax_other_deductions" formatted="false">"ניכויי עובד נוספים"</string>
+    <string name="tax_scope_us" formatted="false">"2026 בלבד: תושב כל השנה בגיל 18–64, מעסיק מקומי רגיל אחד W-2; יחיד או נשואים במשותף עם מפרנס אחד בלבד. ללא תלויים, הכנסה אחרת, זיכויים פדרליים או להחזר, ניכויי טיפים/שעות נוספות מיוחדים, הטבות לפני מס או עבודה בין מדינות. יש לאמת זכאות. כל 50 המדינות זמינות לבחירה: ב־47 יש תעריף מדינה אוטומטי בהיקף מוגבל, כולל מס אפס על שכר; בקולורדו, איידהו וורמונט נדרשת הזנת חבות מס שנתית מאומתת. מס חלקי 12 הוא אומדן הפרשה, לא ניכוי W-4 או מצטבר בפועל."</string>
+    <string name="tax_scope_ca" formatted="false">"קנדה 2026: אונטריו ואלברטה בלבד. יחיד תושב כל השנה בגיל 18–64, גר ועובד באותה פרובינציה, מעסיק יחיד. זיכויים בסיסיים אישיים ולעבודה בלבד; ללא תלויים, RRSP, הטבות לפני מס או הכנסה נוספת. כולל מס פדרלי ואזורי, CPP/CPP2 ו-EI. ממוצע שנתי לשכר קבוע, לא תלוש בפועל."</string>
+    <string name="tax_na_deductions_hint" formatted="false">"ניכויי עובד נוספים אחרי מס בלבד; הזן 0 אם אין. אין להזין שוב מסים, Social Security, Medicare, CPP/CPP2, EI או פרמיית הבריאות באונטריו המחושבים כאן. ניכויים לפני מס אינם נתמכים."</string>
+    <string name="tax_other_region" formatted="false">"אזור אחר — עדיין לא נתמך"</string>
+    <string name="tax_region_unavailable" formatted="false">"חישוב הנטו לאזור זה עדיין אינו נתמך."</string>
+    <string name="tax_florida" formatted="false">"פלורידה"</string>
+    <string name="tax_texas" formatted="false">"טקסס"</string>
+    <string name="tax_ontario" formatted="false">"אונטריו"</string>
+    <string name="tax_alberta" formatted="false">"אלברטה"</string>
+    <string name="tax_filing" formatted="false">"סטטוס הגשת דוח פדרלי"</string>
+    <string name="tax_single" formatted="false">"יחיד"</string>
+    <string name="tax_joint" formatted="false">"נשואים בהגשה משותפת — מפרנס יחיד"</string>
+    <string name="tax_federal" formatted="false">"מס הכנסה פדרלי"</string>
+    <string name="tax_provincial" formatted="false">"מס הכנסה בפרובינציה"</string>
+    <string name="tax_ontario_health" formatted="false">"פרמיית בריאות באונטריו"</string>
+    <string name="tax_social_security" formatted="false">"ביטוח סוציאלי בארה״ב"</string>
+    <string name="tax_cpp" formatted="false">CPP</string>
+    <string name="tax_cpp2" formatted="false">CPP2</string>
+    <string name="tax_ei" formatted="false">EI</string>
+    <string name="tax_medicare" formatted="false">Medicare</string>
+    <string name="tax_pt_mainland" formatted="false">"פורטוגל — היבשת"</string>
+    <string name="tax_annual_verified_base" formatted="false">"הכנסה שנתית חייבת סופית ומאומתת"</string>
+    <string name="tax_verified_base_hint" formatted="false">"יש להזין בסיס מס סופי לאחר כל ההקלות, משומה מאומתת או מחישוב מקצועי. זה אינו שכר ברוטו; האפליקציה אינה גוזרת אותו אוטומטית."</string>
+    <string name="tax_au_hospital" formatted="false">"כיסוי פרטי מאושר לאשפוז"</string>
+    <string name="tax_au_full_cover" formatted="false">"כל שנת המס"</string>
+    <string name="tax_au_no_cover" formatted="false">"ללא כיסוי במשך כל שנת המס"</string>
+    <string name="tax_nz_ietc_hint" formatted="false">"IETC מחייב זכאות לכל השנה: ללא זכאות ל־Working for Families, קצבה עיקרית, NZ Super, קצבת ותיקים או תשלום מקביל מחו״ל. זכאות לחלק מהשנה אינה נתמכת."</string>
+    <string name="tax_nz_ietc" formatted="false">"אני מאשר זכאות ל־IETC לכל שנת המס"</string>
+    <string name="tax_further_deductions_hint" formatted="false">"יש להזין ניכויי עובד בפועל שאינם מחושבים כאן, או 0. אין לכלול הפרשות מעסיק ומסים או ביטוח שכבר מוצגים בפירוט. הסכום מפחית את הנטו ולא את בסיס המס."</string>
+    <string name="tax_solidarity" formatted="false">"מס סולידריות"</string>
+    <string name="tax_pt_social" formatted="false">"ביטוח סוציאלי — חלק העובד"</string>
+    <string name="tax_au_levy" formatted="false">"היטל Medicare"</string>
+    <string name="tax_au_surcharge" formatted="false">"תוספת היטל Medicare"</string>
+    <string name="tax_acc" formatted="false">"היטל עובד ACC"</string>
+    <string name="tax_included_relief" formatted="false">"הקלה שכבר נכללה במס ההכנסה"</string>
+    <string name="tax_scope_de" formatted="false">"גרמניה 2026: תושב יחיד, ללא ילדים או מס כנסייה. אומדן שומה שנתית לפי בסיס מס סופי מאומת, שאינו נגזר מהברוטו. יש להזין בנפרד הפרשות עובד סוציאליות בפועל. אינו חישוב ניכוי מס בתלוש Lohnsteuer."</string>
+    <string name="tax_scope_fr" formatted="false">"צרפת: הכנסות 2025 הנישומות ב־2026 בלבד. תושב יחיד, חלק מס אחד, שכר בלבד וברוטו שנתי עד EUR 200,000. יש להזין הכנסה חייבת סופית לאחר ניכוי הוצאות; ניכויים סוציאליים בפועל בנפרד. כולל décote; ללא טבלת הכנסות 2026 או ניכוי PAS שוטף."</string>
+    <string name="tax_scope_pt" formatted="false">"פורטוגל 2026: היבשת, תושב יחיד ושכר רגיל בקטגוריה A. 12 תשלומים שווים הכוללים חלק יחסי של דמי חופשה וחג המולד; ברוטו שנתי לפחות EUR 20,000. כולל 11% ביטוח סוציאלי לעובד, ניכוי רגיל, מדרגות IRS ומס סולידריות. ללא תלויים, מסלולים מיוחדים וזיכויי חשבוניות; אינו חישוב ניכוי ל־14 משכורות."</string>
+    <string name="tax_scope_au" formatted="false">"אוסטרליה 2025/26–2026/27: תושב יחיד בגיל 18–64, שכר כספי שנתי לפחות AUD 50,000 ללא Super של המעסיק. ללא הכנסות אחרות, הטבות לפני מס או פטורים. כולל מס הכנסה, LITO, היטל Medicare של 2% ותוספת. יש להצהיר על כיסוי אשפוז מאושר לכל השנה או ללא כיסוי; משפחות וכיסוי חלקי אינם נתמכים."</string>
+    <string name="tax_scope_nz" formatted="false">"ניו זילנד 2025/26–2026/27: תושב כל השנה, שכר בלבד ומקום עבודה אחד, ללא הכנסות אחרות או קצבאות. כולל מס הכנסה ו־ACC; זיכוי IETC רק לאחר אישור זכאות מפורש. יש להזין בנפרד ניכויי עובד בפועל ל־KiwiSaver, הלוואות ואחרים. אומדן שנתי להכנסה קבועה."</string>
+    <string name="tax_scope_es" formatted="false">"ספרד 2026: מדריד בלבד. תושב יחיד כל השנה בגיל 18–64, שכר בלבד, ללא ילדים, נכות או זיכויי מס. ברוטו כספי שנתי לפחות EUR 40,000 ובסיס מס כללי מאומת לפחות EUR 30,000. מס ארצי ומס מדריד כוללים את המינימום האישי הבסיסי שלהם. ניכויים סוציאליים בפועל מוזנים בנפרד. 12 תשלומים כוללים שווים; אינו ניכוי בתלוש."</string>
+    <string name="tax_scope_cn" formatted="false">"סין 2026: תושב מס בסין היבשתית כל השנה, שכר ממקום עבודה אחד בלבד, ללא הכנסה אחרת או מחו״ל והפחתות מס. יש להזין בסיס מס שנתי סופי מאומת לאחר RMB 60,000 וכל הניכויים המותרים. ניכויי ביטוח סוציאלי וקרן דיור מקומיים בפועל מוזנים בנפרד; אין הסקה אוטומטית של שיעורים או זכאות. ללא בונוס שנתי במיסוי נפרד, אמנות/מסלולי זרים מיוחדים או ניכוי חודשי/מצטבר."</string>
+    <string name="tax_scope_sa" formatted="false">"ערב הסעודית 2026: עובד זר שאינו אזרח מדינות המפרץ, הכנסה מעבודה רגילה בערב הסעודית בלבד. אין מס הכנסה אישי. יש להזין ניכויי עובד בפועל, כולל ביטוח במידת הצורך, או 0. הפרשות מעסיק לסיכוני עבודה אינן ניכוי עובד. כללי פנסיה לסעודים/אזרחי המפרץ, עסק, חבות מס זרה ופיצויי סיום עבודה מחוץ לפרופיל."</string>
+    <string name="tax_madrid" formatted="false">"מדריד"</string>
+    <string name="tax_cn_mainland" formatted="false">"סין היבשתית"</string>
+    <string name="tax_es_base_hint" formatted="false">"יש להזין בסיס מס כללי שנתי סופי מאומת לפני המינימום האישי/המשפחתי, לאחר ניכויי שכר מותרים. ברוטו לפחות EUR 40,000 ובסיס לפחות EUR 30,000. האפליקציה מחילה בעצמה את המינימום הבסיסי. אין חישוב אוטומטי של ביטוח סוציאלי או גזירת בסיס מהברוטו."</string>
+    <string name="tax_cn_base_hint" formatted="false">"יש להזין בסיס מס שנתי סופי מאומת לשכר לאחר RMB 60,000 וכל הניכויים המותרים. אין להפחית RMB 60,000 שוב. יש להזין גם את ניכויי העובד בפועל לביטוח/דיור בשדה החודשי; השפעתם לצורכי מס צריכה כבר להיכלל בבסיס הזה."</string>
+    <string name="tax_state_income" formatted="false">"מס הכנסה ארצי"</string>
+    <string name="tax_regional_income" formatted="false">"מס הכנסה אזורי"</string>
+    <string name="tax_scope_ie" formatted="false">"אירלנד 2026: תושב יחיד כל השנה בגיל 18–64, עבודה אחת המזכה בזיכוי PAYE ושכר בלבד. כולל זיכויים אישיים/לעובד בסיסיים ו־USC רגיל. ללא בעל שליטה, הקלת כרטיס רפואי, הכנסה אחרת, פנסיה/הטבות לפני מס או זיכויים נוספים. יש להזין בנפרד PRSI לעובד ופנסיה/ניכויים אחרי מס בפועל; אין הנחת זכאות ל־MyFutureFund. אומדן שנתי להכנסה קבועה, לא תלוש מצטבר."</string>
+    <string name="tax_scope_hk" formatted="false">"הונג קונג 2025/26–2026/27: עובד יחיד כל השנה בגיל 18–64, שכר בלבד, מעסיק אחד וחברות MPF רגילה בתשלום חודשי. כולל עובד שעתי המקבל תשלום חודשי, הקלה אישית בסיסית, MPF לעובד והמס הנמוך מבין מדורג/סטנדרטי. תקופת הפטור הראשונית מהפקדות צריכה להסתיים לפני תחילת השנה. ללא עובד מזדמן/יומי/פטור, תלויים, הכנסה אחרת או הקלות נוספות. החזר מס סופי ל־2025/26 בלבד; אינו חיוב מקדמות מס."</string>
+    <string name="tax_ie_deductions_hint" formatted="false">"יש להזין PRSI לעובד ופנסיה/ניכויים כספיים אחרי מס בפועל, או 0. יש לכלול MyFutureFund אם נוכה; אין הנחת הצטרפות אוטומטית. אין לכלול עלויות מעסיק, מס הכנסה ו־USC שכבר מחושבים. פנסיה המזכה בהפחתת מס הכנסה מחוץ לפרופיל. יש לעדכן את הניכויים כשהשכר משתנה."</string>
+    <string name="tax_hk_deductions_hint" formatted="false">"רק ניכויי עובד כספיים נוספים אחרי מס, או 0. אין להזין שוב MPF לעובד או מס שכר שכבר מחושבים כאן. הפרשות מעסיק וניכויים נוספים עם הטבת מס מחוץ לפרופיל."</string>
+    <string name="tax_usc" formatted="false">"היטל סוציאלי USC"</string>
+    <string name="tax_mpf" formatted="false">"MPF — חלק העובד"</string>
+    <string name="tax_scope_no" formatted="false">"נורווגיה 2026: תושב יחיד כל השנה בגיל 18–64, שכר מעבודה אחת בלבד, אזור מס רגיל של 22% וחברות בביטוח הלאומי. כולל ניכויים רגילים/אישיים, מס מדרגות והקלת עבודה לצעירים כאשר הזכאות מאומתת. ללא ניכויי פנסיה/איגוד/ריבית או ניכויים אחרים, הכנסות אחרות, PAYE לזרים או הטבות אזוריות. אומדן שנתי להכנסה קבועה לפני מקדמות כרטיס מס וכללי גביית יתרות קטנות."</string>
+    <string name="tax_scope_za" formatted="false">"דרום אפריקה 2025/26–2026/27: תושב כל השנה בגיל 18–64, שכר רגיל ממעסיק פרטי אחד. כולל זיכוי בסיסי ו־UIF לפי הבחירה. ללא הכנסה אחרת, עמלות, הטבות חייבות, ניכוי פנסיה לצורכי מס, זיכויי בריאות/אחרים או פטורים מיוחדים. יש לאשר חבות UIF רגילה, או פטור רק בגלל פחות מ־24 שעות בחודש אצל המעסיק. אומדן שנתי להכנסה קבועה, לא ניכוי PAYE בפועל."</string>
+    <string name="tax_no_region" formatted="false">"אזור מס רגיל של 22%"</string>
+    <string name="tax_no_region_hint" formatted="false">"לא כולל סבאלברד, פינמרק והרשויות האלה בטרומס: Karlsøy, Kvænangen, Kåfjord, Lyngen, Nordreisa, Skjervøy, Storfjord."</string>
+    <string name="tax_no_youth" formatted="false">"הקלת עבודה לצעירים — מצב מאומת"</string>
+    <string name="tax_no_selected" formatted="false">"נבחרתי — מאומת ברשות המסים"</string>
+    <string name="tax_no_not_selected" formatted="false">"לא נבחרתי / מחוץ לקבוצת הזכאות"</string>
+    <string name="tax_no_youth_hint" formatted="false">"בניסוי 2026 נבחרו אקראית חלק מילידי 1991–2006. גיל צעיר או תושבות אינם מספיקים. יש לבדוק את המצב הרשמי ולא לנחש. בחירה ריקה מונעת אומדן."</string>
+    <string name="tax_za_uif" formatted="false">"מצב UIF של העובד"</string>
+    <string name="tax_za_covered" formatted="false">"חייב ב־UIF רגיל"</string>
+    <string name="tax_za_lt24" formatted="false">"פטור — פחות מ־24 שעות בחודש"</string>
+    <string name="tax_za_year_hint" formatted="false">"השנים מוצגות לפי שנת ההתחלה: 2026/27 היא מרץ 2026–פברואר 2027, המכונה ב־SARS שנת המס 2027. פטורי UIF אחרים אינם כלולים בפרופיל."</string>
+    <string name="tax_noza_deductions_hint" formatted="false">"יש להזין רק ניכויי עובד כספיים נוספים אחרי מס, או 0. אין להזין שוב מסים או ביטוח לאומי/UIF שכבר מחושבים, ואין לכלול הפרשות מעסיק. פנסיה עם הטבת מס והוצאות נוספות המותרות בניכוי דורשות פרופיל אחר."</string>
+    <string name="tax_no_ordinary" formatted="false">"מס הכנסה רגיל"</string>
+    <string name="tax_no_step" formatted="false">"מס מדרגות על הכנסה אישית"</string>
+    <string name="tax_no_ni" formatted="false">"ביטוח לאומי — חלק העובד"</string>
+    <string name="tax_uif" formatted="false">"UIF — חלק העובד"</string>
+    <string name="tax_scope_sg" formatted="false">"סינגפור — הכנסות 2026: תושב מס כל השנה בגיל 18–54 בסוף השנה, עבודה אחת עם שכר רגיל בלבד, ללא בונוס/שכר נוסף, הכנסות אחרות, נכות, הטבות או הקלות נוספות. אזרח/תושב קבע מהשנה השלישית בשיעורי CPF מלאים כל השנה, או תושב מס זר שאינו אזרח/תושב קבע וללא CPF. כולל CPF לעובד והקלה בסיסית על הכנסה מעבודה. אומדן להפרשת מס שנתית, לא ניכוי מס חודשי."</string>
+    <string name="tax_scope_dk" formatted="false">"דנמרק 2026: קופנהגן בלבד, תושב יחיד כל השנה בגיל 18–59, שכר בלבד, ללא מס כנסייה, הכנסות הון/חו״ל או מסלול מיוחד. נדרשים בסיסי מס אישיים ועירוניים שנתיים מאומתים לפני ההקלה האישית, וניכויי AM, ‏ATP, פנסיית עובד וניכויים כספיים בפועל. כולל מס ארצי/עירוני והקלה אישית בסיסית; ללא גזירת בסיס מהברוטו או ניכוי לפי כרטיס מס."</string>
+    <string name="tax_copenhagen" formatted="false">"קופנהגן"</string>
+    <string name="tax_dk_personal_base" formatted="false">"הכנסה אישית שנתית מאומתת אחרי AM"</string>
+    <string name="tax_dk_municipal_base" formatted="false">"הכנסה עירונית חייבת שנתית מאומתת"</string>
+    <string name="tax_dk_base_hint" formatted="false">"יש להזין שני בסיסים סופיים מאומתים לפני ההקלה האישית. ההכנסה האישית היא אחרי התאמות AM/ATP/פנסיה; ההכנסה החייבת העירונית כוללת גם את כל ניכויי העבודה והניכויים המותרים בבסיס. אין להזין ברוטו. האפליקציה אינה גוזרת את הבסיסים או מפחיתה את הניכויים שוב. אם ההכנסה האישית מעל 54,100 DKK אך הבסיס העירוני נמוך מ־54,100 DKK, מקרה חלוקת ההקלה הזה עדיין אינו נתמך."</string>
+    <string name="tax_dk_actual_deductions" formatted="false">"ניכויי AM, ‏ATP, פנסיה ואחרים בפועל לחודש"</string>
+    <string name="tax_dk_deductions_hint" formatted="false">"יש לכלול בפועל מס שוק עבודה AM, חלק העובד ב־ATP/פנסיה וניכויים כספיים שאינם מס הכנסה, או 0. השפעתם לצורכי מס צריכה כבר להיכלל בבסיסים המאומתים. אין לכלול עלויות מעסיק או מס הכנסה ארצי/עירוני שמחושבים כאן. יש לעדכן את שלושת הנתונים כשהשכר משתנה."</string>
+    <string name="tax_sg_cpf_profile" formatted="false">"פרופיל CPF של העובד"</string>
+    <string name="tax_sg_full" formatted="false">"אזרח / תושב קבע משנה שלישית — CPF מלא"</string>
+    <string name="tax_sg_foreign" formatted="false">"תושב מס זר — לא אזרח/תושב קבע, ללא CPF"</string>
+    <string name="tax_sg_year_hint" formatted="false">"2026 מתייחסת להכנסות ינואר–דצמבר 2026, הנישומות ב־YA 2027. הקלות חד־פעמיות מ־YA 2024/2025 אינן מועתקות קדימה. תושבי קבע בשנה הראשונה/השנייה ופרופילי CPF/גיל אחרים אינם נתמכים."</string>
+    <string name="tax_sg_deductions_hint" formatted="false">"רק ניכויי עובד נוספים אחרי מס, או 0, כולל ניכויי קרן קהילתית בפועל אם חלים. אין להזין שוב CPF לעובד או מס הכנסה שמחושבים, ואין לכלול הפרשות מעסיק. ניכויים נוספים עם הטבת מס מחוץ לפרופיל."</string>
+    <string name="tax_cpf" formatted="false">"CPF — חלק העובד"</string>
+    <string name="tax_dk_bottom" formatted="false">"מס ארצי במדרגה הבסיסית"</string>
+    <string name="tax_dk_municipal" formatted="false">"מס הכנסה עירוני — קופנהגן"</string>
+    <string name="tax_dk_higher" formatted="false">"מסי מדרגות ביניים / עליונה / עליונה נוספת"</string>
+    <string name="tax_scope_my" formatted="false">"מלזיה 2026: תושב מס יחיד כל השנה בגיל 18–59, עבודה אחת בשכר כספי רגיל בלבד; ללא הכנסות אחרות, הטבות חייבות, מסלול מיוחד, זקאת או זיכויי מס נוספים. נדרשים הכנסה שנתית חייבת סופית מאומתת לאחר כל ההקלות המותרות, לרבות ההקלה האישית, וניכויי עובד כספיים בפועל. כולל זיכוי אישי לא ניתן להחזר עד 400 רינגיט לזכאים. אומדן מס שנתי, לא ניכוי PCB בתלוש."</string>
+    <string name="tax_scope_ph" formatted="false">"הפיליפינים 2026: אזרח תושב יחיד כל השנה בגיל 18–59, עבודה פרטית אחת, 12 תשלומי שכר כספי רגיל שווים, ללא הכנסה חייבת אחרת, מסלול מיוחד או זיכויי מס. נדרשים שכר רגיל חייב שנתי מאומת וניכויי עובד בפועל. פטורים לעובדי שכר מינימום מחוץ לפרופיל. משכורת 13 והטבות אחרות הפטורות עד תקרה משותפת של 90,000 פסו אינן נכללות בנטו הכספי המוצג; יתרה חייבת או בונוסים אחרים אינם נתמכים. אומדן שנתי, לא ניכוי בתלוש."</string>
+    <string name="tax_my_base_hint" formatted="false">"יש להזין הכנסה שנתית חייבת סופית מאומתת לאחר כל ההקלות המותרות, כולל הקלה אישית של 9,000 רינגיט. אין להזין ברוטו. האפליקציה מחילה בנפרד זיכוי של עד 400 רינגיט לזכאים; היא אינה גוזרת הקלות או מפחיתה שוב הפרשות כספיות. יש לעדכן את הבסיס כשהשכר משתנה."</string>
+    <string name="tax_ph_base_hint" formatted="false">"יש להזין שכר כספי רגיל חייב שנתי מאומת לאחר הפרשות ודמי עובד המותרים בניכוי, ולא ברוטו. אין להפחית מס הכנסה או החזרי הלוואה אישית מהבסיס. האפליקציה אינה גוזרת פטורים או מפחיתה הפרשות שוב. יש לעדכן את הבסיס כשהשכר משתנה."</string>
+    <string name="tax_myph_deductions_hint" formatted="false">"יש להזין ניכויי עובד חודשיים בפועל: EPF/SOCSO/EIS או SSS/PhilHealth/Pag-IBIG, דמי חבר מותרים וניכויים כספיים נוספים, או 0. השפעתם על המס צריכה להיכלל כבר בבסיס המאומת. אין לכלול הפרשות מעסיק או מס הכנסה שמחושב כאן. יש לעדכן את שני הסכומים כשהשכר משתנה."</string>
+    <string name="tax_scope_pl" formatted="false">"פולין 2026: תושב יחיד כל השנה בגיל 26–59, חוזה העסקה רגיל אחד ו־12 משכורות כספיות שוות; ברוטו שנתי עד מיליון זלוטי. ללא הכנסה אחרת, הטבות חייבות, חישוב זוגי, PIT-0, ניכויים או זיכויים נוספים. הוצאות עבודה סטנדרטיות בלבד עד 3,600 זלוטי לשנה; ללא הוצאות כרטיסי נסיעה בפועל או הוצאות יצירה בשיעור 50%. נדרשים בסיס מס שנתי מאומת וניכויים בפועל. כולל הפחתת מס בסיסית של 3,600 זלוטי. אומדן שנתי, לא ניכוי בתלוש. משתתפי PPK אינם נכללים בפרופיל זה."</string>
+    <string name="tax_scope_cz" formatted="false">"צ׳כיה 2026: תושב יחיד כל השנה בגיל 18–64, עבודה רגילה אחת ו־12 משכורות כספיות רגילות שוות; ללא הכנסה אחרת, הטבות חייבות, ניכויים מבסיס המס או זיכויים נוספים. חוזי DPP/DPČ ומקרי מס מיוחד במקור אינם כלולים. כולל זיכוי בסיסי שנתי לא ניתן להחזר של 30,840 קרונות. ביטוח סוציאלי, בריאות והשלמה לביטוח בריאות מינימלי, אם חלה, מוזנים כניכויי עובד בפועל. אומדן שומה שנתית, לא מקדמת מס חודשית."</string>
+    <string name="tax_pl_base_hint" formatted="false">"יש להזין הכנסה שנתית חייבת סופית מאומתת אחרי הפרשות סוציאליות של העובד המותרות בניכוי והוצאות עבודה סטנדרטיות, ולפני הפחתת המס של 3,600 זלוטי. אין להפחית בנפרד 30,000 זלוטי. הפרשות בריאות, PPK והלוואות אישיות אינן מקטינות את הבסיס בפרופיל זה. ניכויים כספיים לא מופחתים שוב. יש לעדכן את הסכומים כשהשכר משתנה."</string>
+    <string name="tax_plcz_deductions_hint" formatted="false">"יש להזין ניכויי עובד חודשיים בפועל: ביטוח סוציאלי ובריאות, פנסיה אחרי מס וניכויים כספיים נוספים, או 0 אם אין. יש לכלול השלמה לבריאות מינימלית בצ׳כיה אם חלה. אין לכלול עלויות מעסיק או מס הכנסה שמחושב כאן. בצ׳כיה ניכויים אלה אינם מפחיתים את בסיס המס; בפולין הניכויים המותרים למס צריכים להיכלל כבר בבסיס המאומת. יש לעדכן כשהשכר משתנה."</string>
+    <string name="tax_scope_th" formatted="false">"תאילנד 2026: תושב יחיד כל השנה בגיל 18–59, עבודה רגילה אחת בשכר, ללא תלויים, הכנסה אחרת, מסלול מיוחד או זיכויי מס. נדרשים הכנסה שנתית מעבודה ובסיס מס סופי מאומתים אחרי הוצאות, הקלות ופטורים מותרים. שכר בלבד; מס מינימום חלופי על הכנסה אחרת אינו כלול. מדרגת 30% הנוכחית מסתיימת ב־5 מיליון באט, ולא בסף הישן של 4 מיליון."</string>
+    <string name="tax_scope_id" formatted="false">"אינדונזיה 2026: תושב יחיד כל השנה בגיל 18–59, עובד קבוע, NPWP או NIK משולב תקין, TK/0 ללא תלויים או הכנסה אחרת. חישוב שנתי לפי סעיף 17 לאחר ניכויים ו־PTKP מאומתים. ללא DTP/מס במימון ממשלתי, מס במימון או גילום המעסיק, מסלולים מיוחדים וזיכויי מס. יש לכלול THR, בונוסים והטבות חייבות בנתונים השנתיים. לא ניכוי TER חודשי."</string>
+    <string name="tax_scope_vn" formatted="false">"וייטנאם 2026: תושב יחיד כל השנה בגיל 18–59, עבודה אחת בשכר, ללא תלויים, הכנסה אחרת, מסלול מיוחד או זיכויי מס. נדרשים הכנסה שנתית מעבודה ובסיס מס סופי מאומתים לאחר ביטוחים, הקלה אישית ופטורים מותרים, כולל פטור לשעות נוספות אם קיימת זכאות. חמש מדרגות שנתיות חלות על שכר תושב משנת המס 2026; אין להשתמש בטבלה הישנה של שבע מדרגות."</string>
+    <string name="tax_scope_tw" formatted="false">"טאיוואן — הכנסות 2026, דיווח ב־2027: תושב יחיד כל השנה בגיל 18–59, שכר בלבד, ללא תלויים, הכנסה אחרת/זרה, תוספות AMT, מסלול מיוחד או זיכויי מס. נדרשים הכנסה שנתית מעבודה ובסיס מס סופי מאומתים אחרי כל הפטורים והניכויים המותרים והתאמת הוצאות מחיה בסיסיות אם חלה. מוגבל להכנסה שנתית מעבודה עד 7.5 מיליון TWD כגבול שמרני של הפרופיל, ולא כסף ברוטו חוקי ל־AMT."</string>
+    <string name="tax_scope_lk" formatted="false">"סרי לנקה 2026/27: מ־1 באפריל 2026 עד 31 במרץ 2027. תושב יחיד כל השנה בגיל 18–59, עבודה מקומית רגילה אחת בשכר, ללא הכנסה אחרת/זרה, מסלול מיוחד, טיפול בהפרשי שכר/סיום עבודה או זיכויי מס. נדרשים הכנסה שנתית ובסיס מס סופי מאומתים אחרי הקלה אישית של 1.8 מיליון LKR וניכויים מותרים נוספים. אומדן הפרשת מס שנתית רגילה, לא ניכוי APIT מצטבר."</string>
+    <string name="tax_annual_employment_gross" formatted="false">"הכנסה שנתית כוללת מאומתת מעבודה"</string>
+    <string name="tax_asia_five_income_hint" formatted="false">"יש להזין הכנסה מעבודה לכל שנת המס שנבחרה לפני הקלות, כולל בונוסים, THR/משכורת נוספת ושווי נכון של הטבות מעסיק חייבות. אין להזין רק שכר חודשי כפול 12 כשקיימת הכנסה נוספת. יש לאמת בנפרד את הסכום הכולל ואת בסיס המס הסופי. הנטו המוצג הוא שכר התקופה הכספי פחות מס שנתי חלקי 12 וניכויי עובד בפועל; בונוסים שנתיים והטבות שאינן כסף אינם מתווספים לתשלום המוצג."</string>
+    <string name="tax_asia_five_base_hint" formatted="false">"יש להזין בסיס מס שנתי סופי מאומת אחרי כל ההוצאות, ניכויי הביטוח, ההקלות האישיות והפטורים המותרים לשנה שנבחרה. האפליקציה אינה קובעת זכאות או גוזרת הקלות, ואין להפחיתן שוב. באינדונזיה PKP מעוגל מטה לאלפי רופיה שלמים. יש לעדכן את שני הסכומים השנתיים כשההכנסה או הנסיבות משתנות."</string>
+    <string name="tax_asia_five_cash_hint" formatted="false">"ניכויי עובד סוציאליים, בריאות, פנסיה וניכויים כספיים נוספים בפועל לתקופה זו, או 0. השפעתם המותרת על המס צריכה להיכלל כבר בבסיס השנתי המאומת. אין לכלול עלויות מעסיק או מס הכנסה שמופרש באומדן כאן, ואין להזין ניכוי מס פעם נוספת. זהו אומדן להפרשת מס שנתית, לא תלוש או סך נטו שנתי מלא."</string>
+    <string name="tax_scope_pe" formatted="false">"פרו 2026: תושב יחיד בעל מעמד מס מקומי כל השנה בגיל 18–59, עבודה אחת בשכר בקטגוריה חמישית בלבד, ללא תלויים, הכנסה אחרת/זרה, מסלול מיוחד או זיכויי מס. UIT שווה 5,500 PEN. הבסיס הסופי המאומת כבר כולל ניכוי של 7 UIT והוצאות נוספות מותרות שאומתו בנפרד. הפרשות הפנסיה של העובד אינן מוכרות אוטומטית כניכוי למס."</string>
+    <string name="tax_scope_co" formatted="false">"קולומביה 2026: תושב יחיד כל השנה בגיל 18–59, שכר רגיל בלבד, ללא תלויים, הכנסה אחרת/זרה, מסלול מיוחד או זיכויי מס. UVT שווה 52,374 COP. נדרש בסיס מס שנתי סופי מאומת אחרי החרגות סוציאליות, פטורים ומגבלות הניכויים המותרים. לפי סעיף 241 השנתי, ולא ניכוי חודשי לפי סעיף 383. מסים אחרים כגון מס עושר מחוץ לאומדן השכר."</string>
+    <string name="tax_scope_ee" formatted="false">"אסטוניה 2026: תושב יחיד כל השנה בגיל 18–59, שכר רגיל בלבד, ללא תלויים, הכנסה אחרת, מסלול מיוחד או זיכויי מס. מס 22% מהבסיס הסופי המאומת אחרי ניכויים מותרים ופטור בסיסי של 8,400 אירו. ללא הפחתת הפטור לפי הכנסה מהשיטה הישנה או הקלה לגיל פנסיה. ניכויי ביטוח ופנסיה של העובד מוזנים בנפרד."</string>
+    <string name="tax_scope_lv" formatted="false">"לטביה 2026: תושב יחיד כל השנה בגיל 18–59, שכר רגיל בלבד, ללא תלויים, הכנסה אחרת או זיכויי מס. הכנסה שנתית כוללת מעבודה עד 105,300 אירו; מדרגה גבוהה, סולידריות ותוספת 3% אינם נתמכים. מס 25.5% מהבסיס הסופי המאומת אחרי הפרשות וניכויים מותרים ופטור בסיסי של 6,600 אירו. אין כאן חישוב שכר מלא להכנסה גבוהה."</string>
+    <string name="tax_scope_lt" formatted="false">"ליטא 2026: תושב יחיד כל השנה בגיל 18–59, שכר רגיל חייב במלואו בלבד, ללא תלויים, הכנסה אחרת, דמי מחלה, נכות/NPD מיוחד, ניכויים נוספים או זיכויים. מדרגות שנתיות 20%/25%/32%. בסיס מאומת אחרי NPD רגיל בלבד; ביטוח עובד אינו מופחת אוטומטית. מעל הכנסה שנתית של 83,237.40 אירו, בפרופיל מוגבל זה בסיס המס חייב להיות שווה להכנסה השנתית."</string>
+    <string name="tax_scope_bg" formatted="false">"בולגריה 2026: תושב יחיד כל השנה בגיל 18–59, שכר רגיל בלבד, ללא תלויים, הכנסה אחרת, מסלול מיוחד, זיכויים או הנחה על הגשת דוח. המטבע הוא EUR מ־2026; אין להזין סכומי BGN ישנים ללא המרה מאומתת בנפרד. מס 10% מהבסיס השנתי הסופי המאומת לאחר הפרשות וניכויים מותרים. ללא המרת מטבע או עיגולי תלוש חוקיים אוטומטיים."</string>
+    <string name="tax_scope_ro" formatted="false">"רומניה 2026: תושב יחיד כל השנה בגיל 18–59, עבודה מקומית רגילה אחת בשכר, ללא תלויים, הכנסה אחרת, מסלול מיוחד או זיכויי מס. מס 10% מהסכום המאומת של בסיסי השכר החייבים החודשיים אחרי הפרשות, ניכויים אישיים ופטורי שכר מינימום מותרים. יש לבדוק את התנאים החוקיים לכל חודש; האומדן השנתי אינו קובע אותם."</string>
+    <string name="tax_scope_hu" formatted="false">"הונגריה 2026: תושב יחיד כל השנה בגיל 25–59, שכר רגיל חייב במלואו בלבד; ללא ילדים, הכנסה אחרת, פטורים, הקלות בבסיס או זיכויי מס. ללא הקלות עד גיל 25, אימהות/משפחה, נכות/נישואים טריים או עבודה עונתית/במסלול מקל. מס 15% מהשכר השנתי; בפרופיל זה בסיס המס המאומת שווה להכנסה השנתית מעבודה. ביטוח העובד אינו מפחית אותו."</string>
+    <string name="tax_scope_ge" formatted="false">"גאורגיה 2026: תושב יחיד כל השנה בגיל 18–59, שכר גאורגי רגיל חייב במלואו בלבד, ללא תלויים, הכנסה אחרת/זרה, פטורים, מסלול עסקי מיוחד או זיכויי מס. מס 20% מהשכר השנתי. בסיס המס המאומת שווה להכנסה השנתית מעבודה. פנסיית עובד וניכויים כספיים בפועל מפחיתים את התשלום, ולא מופחתים שוב מבסיס המס."</string>
+    <string name="tax_scope_am" formatted="false">"ארמניה 2026: תושב יחיד כל השנה בגיל 18–59, שכר מקומי רגיל חייב במלואו בלבד; ללא תלויים, הכנסה אחרת/זרה, מס ענפי מיוחד, פטורים, החזרי משכנתה/הוצאות חברתיות או זיכויי מס. מס 20% מהשכר השנתי; בסיס המס המאומת שווה להכנסה השנתית. פנסיה, מס בולים וביטוח בריאות לעובד, אם חלים, מוזנים כסכומים כספיים בפועל בנפרד."</string>
+    <string name="tax_ten_income_hint" formatted="false">"יש להזין הכנסה מאומתת מעבודה לכל שנת 2026 הקלנדרית, כולל בונוסים, משכורת נוספת ושווי נכון של הטבות חייבות, וגם בסיס מס שנתי סופי מאומת. ברומניה הבסיס הוא סכום הבסיסים החודשיים המאומתים. מס שנתי חלקי 12 מופרש מהשכר הכספי של התקופה; בונוסים שנתיים והטבות לא כספיות אינם מתווספים לתשלום המוצג."</string>
+    <string name="tax_ten_base_hint" formatted="false">"יש לאמת את כל הניכויים והפטורים החוקיים לפני הזנת הסכום השנתי הסופי; האפליקציה אינה קובעת זכאות. בגאורגיה, ארמניה והונגריה הבסיס שווה לשכר השנתי בפרופילים אלה; ביטוח עובד אינו מקטין אותו. בליטא NPD רגיל בלבד, ללא הפחתה מעל סף הפרופיל שצוין. יש לעדכן את שני הנתונים השנתיים כשהנסיבות משתנות."</string>
+    <string name="tax_ten_cash_hint" formatted="false">"יש להזין ניכויי עובד סוציאליים, בריאות, פנסיה וניכויים כספיים אחרים שאינם מס הכנסה לתקופה, או 0. בארמניה יש לכלול מס בולים ופרמיות בריאות בפועל אם חלים. אין לכלול עלויות מעסיק או מס הכנסה שמופרש כאן. השפעות מותרות למס צריכות להיכלל כבר בבסיס המאומת; אין להפחית ניכויים או הקלות פעמיים. אומדן שנתי, לא תלוש או דוח מס."</string>
+    <string name="tax_fifteen_common_scope" formatted="false">"תנאי הפרופיל: תושב מס יחיד כל השנה בגיל 18–59, עבודה מקומית רגילה אחת, ללא תלויים, הכנסה אחרת/זרה, מסלול מיוחד או זיכויים מעבר למצוין. מדינה ושפה אינן קובעות זכאות. יש לאשר את מלוא התנאים. הנתונים חלים על כל התקופות המוצגות; יש לעדכנם כשהשכר או הנסיבות משתנים."</string>
+    <string name="tax_scope_mx" formatted="false">"מקסיקו 2026: מדרגות ISR שנתיות, לא ניכוי חודשי. ללא זכאות לסבסוד תעסוקה באף חודש, פטור שכר מינימום, תשלומים מיוחדים או זיכויים. כתנאי שמרני, בסיס שנתי סופי חלקי 12 חייב להיות מעל 11,492.66 MXN. התנאי לבדו אינו מוכיח התאמה. יש לאמת בסיס שנתי מלא וכל פטור וניכוי."</string>
+    <string name="tax_scope_br" formatted="false">"ברזיל 2026: אומדן לתשלום חודשי רגיל אחד בשכר כספי חייב במלואו, על בסיס חודשי מאומת אחרי ניכויים חוקיים או ניכוי מפושט, ולא שניהם. כולל הפחתת המס החודשית החדשה. אינו כולל הטבות לא כספיות/פטורות, משכורת 13, חופשה/אירוע מס נפרד, התחשבנות שנתית או זיכויים אחרים. סך ההכנסה השנתית המאומתת עד 600,000 BRL כגבול שמרני של האפליקציה."</string>
+    <string name="tax_scope_cr" formatted="false">"קוסטה ריקה 2026: שכר כספי חודשי רגיל חייב במלואו. מס שכר לפי מדרגות 2026 לפני ניכויי הביטוח של העובד. ללא זיכויי בן זוג/ילדים, בונוסים פטורים, משכורת 13 או חישובי תשלום נפרד/חודש חלקי. ניכויי העובד הכספיים מוזנים בנפרד."</string>
+    <string name="tax_scope_gt" formatted="false">"גואטמלה 2026: בסיס שנתי סופי מאומת אחרי ניכויים ופטורים מותרים, כולל ניכוי רגיל של 48,000 GTQ וגם הניכוי החריג של 3,024 GTQ לשנת 2026. אין החלת הפטור המוצמד של 2027. מס 5% עד בסיס 300,000 GTQ ו־7% על העודף. יש לאמת בבסיס פטורי אגינלדו/Bono14 וניכויים מתועדים."</string>
+    <string name="tax_scope_do" formatted="false">"הרפובליקה הדומיניקנית 2026: מדרגות שכר שנתיות עם סכומי המס הקבועים שפורסמו. יש להזין בסיס מאומת לפני מדרגת האפס של 416,220 DOP ולא להפחית את הסף שוב. ללא מדרגות 2027, זיכויי לימודים או זיכויים אחרים. ניכויי העובד הכספיים בנפרד."</string>
+    <string name="tax_scope_ke" formatted="false">"קניה 2026: בסיס שנתי סופי מאומת אחרי הניכויים המותרים, כולל SHIF, היטל דיור ופנסיה ככל שחלים. כלולה פעם אחת הקלה אישית לתושב עד 28,800 KES בשנה, ללא החזר מעבר למס. ללא הקלת ביטוח פרטי, זיכויים אחרים או פטורים מיוחדים. ניכויי עובד כספיים בנפרד, ללא הפחתה נוספת מהבסיס."</string>
+    <string name="tax_scope_rw" formatted="false">"רואנדה 2026: עבודה רגילה אצל המעסיק הראשון בלבד ובסיס שנתי מאומת. ללא מסלול עבודה מזדמנת בשיעור 15%, מעסיק נוסף, שכר דירקטורים או מסלול מיוחד. מס שנתי חלקי 12 הוא הפרשת מס, ולא PAYE חודשי משתנה בפועל. יש להזין ניכויי עובד כספיים בנפרד."</string>
+    <string name="tax_scope_ug" formatted="false">"אוגנדה 2026/27: 1 ביולי 2026 עד 30 ביוני 2027. מדרגות התושב החדשות מיולי 2026. האומדן מניח 12 בסיסי שכר חודשיים שווים; אינו חישוב משתנה או מצטבר. אין שימוש בסף הישן 235,000 או במדרגות תושב חוץ. כלול מס נוסף של 10% על בסיס מעל 10 מיליון UGX לחודש."</string>
+    <string name="tax_scope_zm" formatted="false">"זמביה 2026: מדרגות שכר בחישוב שנתי, כולל מדרגת אפס חודשית של 5,100 ZMW. יש להזין בסיס שנתי מאומת וניכויי עובד כספיים בפועל. ללא זיכויי נכות, עבודה מיוחדת או זיכויים נוספים. אין לכלול עלויות מעסיק."</string>
+    <string name="tax_scope_pk" formatted="false">"פקיסטן 2026/27, שנת מס 2027: מדרגות השכר שאושרו בחוק התקציב 2026. תושב עם שכר בלבד וסך הכנסה שנתית מאומתת מעבודה עד 10 מיליון PKR. ללא תרחישי מס נוסף/מס־על, פנסיה, עסק או זיכויים מיוחדים. אין שימוש בטבלת 2025/26 או בשיעורי הצעת החוק."</string>
+    <string name="tax_scope_uz" formatted="false">"אוזבקיסטן 2026: שכר תושב רגיל חייב במלואו, מס 12%; הבסיס השנתי המאומת שווה לשכר השנתי. ללא פטורים מיוחדים או הקלה לפנסיה מרצון. סכום פנסיה צוברת המוקצה מתוך ה־12% כבר כלול בהפרשת המס: אין להזינו שוב כניכוי כספי נוסף. מס סוציאלי של המעסיק אינו ניכוי עובד."</string>
+    <string name="tax_scope_kz" formatted="false">"קזחסטן 2026: מדרגות שנתיות חדשות 10% ו־15%, בסף 8,500 MCI; יחידת MCI שווה 4,325 KZT. הבסיס המאומת כבר כולל ניכוי רגיל לשנה מלאה של 360 MCI וניכויים סוציאליים מותרים, ולא את כלל 14 MCI הישן. ללא עיסוק פרטי, עסק, דיבידנדים או הקלות סוציאליות מיוחדות."</string>
+    <string name="tax_scope_ma" formatted="false">"מרוקו 2026: שכר רגיל בלבד ובסיס שנתי חייב נטו מאומת אחרי הוצאות מקצועיות, הפרשות ופטורים מותרים. שש המדרגות העדכניות, עד 37%. ללא זיכויי משפחה, עסק/חקלאות, אזור/שיעור מיוחד או זיכויים אחרים. ניכויי עובד כספיים בנפרד."</string>
+    <string name="tax_scope_md" formatted="false">"מולדובה 2026: מסלול רגיל בלבד וסך הכנסה שנתית מעבודה נמוך מ־360,000 MDL כגבול שמרני של האפליקציה. הבסיס המאומת כבר כולל הקלה רגילה של 29,700 MDL וניכויים מותרים. ללא פארק טכנולוגי, מוניות, הקלה אישית מוגדלת/משפחתית או זיכויים אחרים."</string>
+    <string name="tax_scope_mk" formatted="false">"צפון מקדוניה 2026: שכר רגיל, מס 10% מבסיס שנתי סופי מאומת אחרי הפרשות מותרות והפחתה אישית שנתית של 131,184 MKD. ללא הכנסה אחרת, פטורים מיוחדים או זיכויים. ניכויי עובד כספיים בנפרד; אין להפחית את ההקלה פעמיים."</string>
+    <string name="tax_monthly_verified_base" formatted="false">"בסיס מס מאומת לתשלום החודשי הזה"</string>
+    <string name="tax_br_annual_hint" formatted="false">"יש להזין סך הכנסה מאומתת מעבודה לכל 2026, כולל משכורת 13, חופשה ובונוסים, לצורך בדיקת גבול הפרופיל 600,000 BRL. האומדן החודשי אינו מחשב את המס הנפרד שלהם או התחשבנות שנתית. אין לכלול תשלום משכורת 13 או אירוע נפרד בברוטו ובבסיס של החודש הרגיל."</string>
+    <string name="tax_br_monthly_base_hint" formatted="false">"לאותו תשלום חודשי רגיל: יש להזין בסיס מאומת אחרי ניכויים חוקיים. האפליקציה משווה אותו לברוטו פחות 607.20 BRL ומשתמשת בבסיס הנמוך, ללא צירוף שני הניכויים. אין חישוב שיעור INSS אוטומטי. יש לעדכן לתשלום הנצפה; אין גרסאות פרופיל היסטוריות."</string>
+    <string name="tax_fifteen_income_hint" formatted="false">"יש להזין הכנסה מאומתת מעבודה לכל שנת המס שנבחרה, כולל בונוסים ושווי נכון של הטבות חייבות, לצד בסיס מס שנתי סופי מאומת. שנת אוגנדה/פקיסטן מתחילה ביולי 2026; בפקיסטן זו שנת מס 2027. מס שנתי חלקי 12 מופרש מהשכר הכספי לתקופה; אינו תלוש, חישוב מצטבר או נטו שנתי מלא. באוגנדה מניחים 12 חודשים חייבים שווים."</string>
+    <string name="tax_fifteen_base_hint" formatted="false">"יש להזין בסיס שנתי סופי מאומת אחרי ניכויים והקלות חוקיים. אין להפחית שוב סף של מדרגת אפס. בגואטמלה נכלל הניכוי הנוסף של 3,024 GTQ ב־2026, בקזחסטן ההקלה החדשה של 360 MCI ובצפון מקדוניה 131,184 MKD. באוזבקיסטן הבסיס שווה לשכר השנתי. במולדובה סך ההכנסה מתחת ל־360,000. אין הסקת זכאות אוטומטית."</string>
+    <string name="tax_fifteen_cash_hint" formatted="false">"ניכויי עובד כספיים בפועל שאינם מס הכנסה לתשלום זה, או 0 מפורש. יש לכלול סוציאלי, בריאות, פנסיה והיטלים ככל שחלים, ללא חלק מעסיק או מס הכנסה שמחושב כאן. באוזבקיסטן אין לכלול שוב פנסיה המוקצית מתוך ה־12%. השפעה חוקית על בסיס המס צריכה כבר להיכלל בבסיס המאומת, ללא הפחתה כפולה."</string>
+    <string name="tax_wave_common_scope" formatted="false">"תנאי הפרופיל: עובד יחיד בגיל18–59 שמתגורר ועובד מקומית כל השנה, עבודה מקומית רגילה אחת, ללא תלויים, הכנסה אחרת/זרה או מסלול/זיכוי מיוחד מעבר למצוין. יש לאמת עצמאית תושבות מס וכל תנאי אישי; המדינה והשפה אינן קובעות זכאות. זהו שכר מקומי בלבד, ללא מס במדינת מוצא/חו״ל. הנתונים משותפים לכל התקופות; יש לעדכנם כשהשכר או הנסיבות משתנים."</string>
+    <string name="tax_scope_pa" formatted="false">"פנמה2026: שכר תושב רגיל ובסיס מס שנתי סופי מאומת.0% עד11,000PAB,15% עד50,000 ו־25% על העודף. ללא דמי ייצוג/תשלומים בשיעור נפרד, הכנסה אחרת או זיכויים מיוחדים. ניכויי ביטוח עובד בנפרד; אין להפחית שוב את מדרגת האפס."</string>
+    <string name="tax_scope_ni" formatted="false">"ניקרגואה2026: שכר תושב רגיל ובסיס שנתי מאומת אחרי ניכויי INSS/חיסכון ופטורים מותרים. מדרגות שנתיות0/15/20/25/30%. יש לאמת בבסיס פטור משכורת13, ולא להפחית שוב את מדרגת האפס100,000NIO. ללא תשלומי סיום/מס נפרד או זיכויים מיוחדים; האומדן אינו מס מצטבר."</string>
+    <string name="tax_scope_sv" formatted="false">"אל סלוודור2026: תשלום חודשי חייב רגיל אחד על בסיס חודשי מאומת אחרי ניכויים מותרים. טבלת הניכוי החודשית שפורסמה, כולל סכומי מס קבועים; אינה חישוב מצטבר ביוני/דצמבר, התחשבנות שנתית או שכר לחודש חלקי/חצי חודש. ללא תשלומים מיוחדים/פטורים או זיכויים אחרים."</string>
+    <string name="tax_scope_hn" formatted="false">"הונדורס2026: שכר תושב רגיל ובסיס שנתי סופי מאומת שכבר כולל ניכוי זכאי מלא40,000HNL לחינוך/רפואה וניכויים ופטורים מותרים נוספים. מדרגות2026 החדשות. ללא הקלות מעל גיל65, הכנסה מעסק, פטורים או זיכויים מיוחדים. אין להפחית שוב את מדרגת האפס."</string>
+    <string name="tax_scope_py" formatted="false">"פרגוואי2026: עובד תושב רגיל שכבר היה רשום ב־IRP-RSP לפני2026. שנת רישום ראשונה/חציית סף אינה מכוסה. יש לאמת הכנסה שנתית כוללת, תקבולים חייבי IRP לפני הוצאות וללא אגינלדו פטור, ובסיס חייב נטו. עד80מיליוןPYG תקבולים חייבים אין חובת תשלום; מעל הסף מדרגות8/9/10% על הבסיס נטו. ללא הכנסות הון/עסק/אחרות או זיכויים."</string>
+    <string name="tax_scope_ec" formatted="false">"אקוודור2026: עובד תושב באזור היבשתי, ללא תלויים, נכות/מחלה מיוחדת או הקלות מיוחדות. סכומי המס הקבועים של2026. הוצאות אישיות זכאיות מאומתות יוצרות הפחתה של18% עד תקרת7סלים הרגילה ולכל היותר גובה המס. גלאפגוס ותקרות משפחתיות/מיוחדות אינם מכוסים. ההוצאות מפחיתות מס, ולא שוב את בסיס המס."</string>
+    <string name="tax_scope_na" formatted="false">"נמיביה2026/27:1במרץ2026–28בפברואר2027, שכר מקומי רגיל של תושב בלבד. בסיס שנתי סופי מאומת אחרי ניכויים מותרים ושווי הטבות. מדרגת אפס100,000NAD ומדרגות18/25/28/30/32/37%. ללא משיכות פנסיה, חקלאות/עסק, הכנסה אחרת או זיכויים מיוחדים. הפרשת מס שנתית, לא PAYE מצטבר."</string>
+    <string name="tax_scope_kh" formatted="false">"קמבודיה2026: שכר כספי חודשי רגיל של תושב בלבד, ללא הקלת תלויים/בן זוג, מסלול תושב חוץ או מס נפרד על הטבות נלוות. בסיס שכר חודשי חייב מאומת אחרי ניכויים מותרים. מדרגות0/5/10/15/20%. אין להפחית שוב את מדרגת האפס1.5מיליוןKHR; ניכויי עובד כספיים בנפרד."</string>
+    <string name="tax_scope_az" formatted="false">"אזרבייג׳ן2026: שכר כספי חודשי רגיל חייב במלואו בעבודה הראשית, במגזר פרטי שאינו נפט/גז בלבד. מדרגות3/10/14%, כולל פטור200AZN פעם אחת כשהברוטו עד2,500. ללא מגזר ציבורי/נפט וגז, פטורים או זיכויים מיוחדים. ניכויי ביטוח עובד אינם מקטינים את בסיס מס ההכנסה. שיעורי2027/2028 אינם מוחלים."</string>
+    <string name="tax_scope_bh" formatted="false">"בחריין2026: שכר מקומי רגיל של עובד זר שאינו אזרח GCC בלבד. אין מס הכנסה מקומי על השכר בפרופיל; יש להזין בפירוש ניכויי SIO/אבטלה/פנסיה וניכויי עובד אחרים בפועל, או0אם אין. ללא עלויות מעסיק, עסק/הכנסה אחרת או מס במדינת המוצא."</string>
+    <string name="tax_scope_kw" formatted="false">"כווית2026: שכר מקומי רגיל של עובד זר שאינו אזרח GCC בלבד. אין מס הכנסה אישי מקומי על השכר; ניכויי ביטוח/פנסיה וניכויי שכר אחרים של העובד בפועל מוזנים במפורש או0. ללא מס חברות/עסק, עלויות מעסיק או חישוב מס בחו״ל/במדינת מוצא."</string>
+    <string name="tax_scope_om" formatted="false">"עומאן2026: שכר מקומי רגיל של עובד זר שאינו אזרח GCC בלבד. אין מס הכנסה אישי מקומי ב־2026. החוק החדש מתחיל ב־2028; שיעור5% שלו אינו נגבה כאן ושנים עתידיות אינן מופעלות. יש להזין ניכויי סוציאלי/בריאות/פנסיה בפועל או0, ללא חלק מעסיק ומסי חו״ל."</string>
+    <string name="tax_scope_qa" formatted="false">"קטר2026: שכר מקומי רגיל של עובד זר שאינו אזרח GCC בלבד, שאינו חייב במס הכנסה מקומי. יש להזין ניכויי ביטוח/פנסיה/שכר אחרים בפועל או0; אין להסיק פטור מהפרשות לפי המדינה. ללא מס עסק/חברות, עלויות מעסיק או מס חו״ל/מדינת מוצא."</string>
+    <string name="tax_scope_bn" formatted="false">"ברוניי2026: שכר עובד מקומי רגיל בלבד, ללא מס הכנסה אישי. יש לאמת ולהזין ניכויי SPK/פנסיה/סוציאלי ואחרים של העובד בפועל או0; אין שיעור אוטומטי או קביעת זכאות להפרשה. ללא עסק/הכנסה אחרת, חלק מעסיק או מס חו״ל/מדינת מוצא."</string>
+    <string name="tax_scope_bs" formatted="false">"בהאמה2026: שכר מקומי רגיל בלבד, ללא מס הכנסה אישי מקומי. יש לאמת ולהזין ניכויי NIB/פנסיה/שכר אחרים של העובד בפועל או0. אין הסקת פטור מהפרשות, חישוב עסק/הכנסה אחרת, עלויות מעסיק או מס חו״ל/מדינת מוצא."</string>
+    <string name="tax_ec_mainland" formatted="false">"אקוודור היבשתית"</string>
+    <string name="tax_ec_expenses" formatted="false">"הוצאות אישיות שנתיות זכאיות מאומתות"</string>
+    <string name="tax_ec_expenses_hint" formatted="false">"אקוודור היבשתית, ללא תלויים או מעמד מיוחד: יש להזין הוצאות אישיות זכאיות מאומתות עצמאית לשנת2026 או0מפורש. ההפחתה היא18% מעד5,752.60USD (7×821.80), בעיגול לסנטים ולכל היותר גובה המס; מקסימום1,035.47USD. אין להפחית אותן הוצאות שוב מבסיס המס השנתי. ללא קביעת זכאות אוטומטית, תוספת גלאפגוס או תקרות מיוחדות."</string>
+    <string name="tax_py_receipts" formatted="false">"תקבולים שנתיים חייבי IRP לפני הוצאות — מאומת"</string>
+    <string name="tax_py_receipts_hint" formatted="false">"פרגוואי: יש לאמת תקבולי שכר ברוטו חייבי IRP-RSP לפני הוצאות מותרות וללא אגינלדו/תקבולים פטורים בחוק. הסכום אינו בהכרח כלל ההכנסה מעבודה או הבסיס נטו. עליו להיות עד ההכנסה השנתית הכוללת, והבסיס הסופי עד סכום זה. סף80מיליוןPYG נבדק בשדה הזה ולא בכל הברוטו. נדרש רישום לפני2026."</string>
+    <string name="tax_wave_annual_hint" formatted="false">"יש להזין הכנסה כוללת מאומתת מעבודה לכל שנת המס, כולל בונוסים ושווי נכון של הטבות, ובסיס מס שנתי סופי אחרי ניכויים ופטורים מותרים. שנת נמיביה2026/27 מתחילה ב־1במרץ2026; האחרות לפי2026קלנדרית. מס שנתי חלקי12 מופרש מהשכר הכספי לתקופה, ואינו תלוש/מס מצטבר או נטו שנתי מלא; אין הוספת כל התוספות השנתיות למזומן."</string>
+    <string name="tax_wave_monthly_hint" formatted="false">"יש להזין בסיס מס סופי מאומת של אותו תשלום חודשי רגיל שמוצג בברוטו, אחרי ניכויים חוקיים בלבד. אין להפחית שוב מדרגת אפס או ניכויי עובד פעמיים. הבסיס משותף לתקופות המוצגות: יש לעדכנו לכל תשלום. אין חישוב התאמות מצטברות/שנתיות באל סלוודור או מס הטבות נפרד בקמבודיה."</string>
+    <string name="tax_wave_base_hint" formatted="false">"בסיס מס שנתי סופי מאומת אחרי ניכויים/פטורים מותרים ולפני מדרגת אפס. בהונדורס ניכוי זכאי מלא40,000כבר כלול. בפרגוואי הבסיס עד התקבולים החייבים המאומתים ואגינלדו פטור אינו בהם. באקוודור הוצאות אישיות הן הפחתה נפרדת מהמס ולא ניכוי נוסף מהבסיס. יש לבדוק זכאות עצמאית."</string>
+    <string name="tax_wave_cash_hint" formatted="false">"ניכויי עובד כספיים בפועל שאינם מס הכנסה לתשלום זה, או0מפורש. יש לכלול סוציאלי, בריאות, פנסיה, אבטלה/NIB/SPK וניכויי שכר אחרים ככל שחלים; ללא חלק מעסיק או מס הכנסה שמחושב כאן. השפעות מותרות על המס כבר צריכות להשתקף בבסיס המאומת. אין מס הכנסה מקומי אינו אומר שאין ניכויי עובד; אין חישוב מס חו״ל/מדינת מוצא."</string>
+    <string name="tax_twenty_common_scope" formatted="false">"תנאים: עובד יחיד תושב בגיל31–59 שמתגורר ועובד מקומית כל שנת המס, עבודה מקומית רגילה אחת, ללא תלויים, הכנסה אחרת/זרה או מעמד/זיכוי מיוחד מעבר למצוין. המדינה והשפה אינן קובעות זכאות. יש לאמת בנפרד בסיס מס סופי וניכויי עובד בפועל. ללא עלויות מעסיק או מס במדינת מוצא. הנתונים משותפים לכל התקופות; יש לעדכנם לכל תשלום."</string>
+    <string name="tax_scope_at" formatted="false">"2026: שכר שנתי רגיל בלבד. כלול זיכוי נסיעות בסיסי496 ותוספת תלוית הכנסה עד804, עד גובה המס. ללא זיכוי נסיעות מוגדל, commuter euro, משכורת13/14 במס נפרד או התחשבנות ביטוח סוציאלי להחזר. ניכויי שכר חוקיים כבר בבסיס; אין להפחית שוב מדרגת אפס."</string>
+    <string name="tax_scope_cy" formatted="false">"מדרגות רפורמת2026 ובסיס שכר שנתי סופי מאומת לאחר ניכויים/פטורים זכאים. אין זכאות אוטומטית להטבות דיור, רכב ירוק, משפחה או עבודה ראשונה. ללא הכנסה אחרת, מסלול מיוחד או זיכויי מס."</string>
+    <string name="tax_scope_mt" formatted="false">"2026: מדרגות ליחיד SINGLE בלבד. ללא מדרגות נשואים/הורים/ילדים, מסלול עבודה חלקית מיוחד15% או זיכויי מס אחרים. בסיס הכנסה שנתי סופי מאומת לאחר ניכויים חוקיים."</string>
+    <string name="tax_scope_gr" formatted="false">"2026: עובד ללא ילדים בגיל31–59 בלבד. מדרגות חדשות לפי גיל/ילדים; כלול זיכוי777 הפוחת מעל12000, פעם אחת ועד המס. תנאי ההוצאות האלקטרוניות מתקיימים; ללא מס נוסף על חוסר הוצאות, פטור מיוחד או זיכויים אחרים."</string>
+    <string name="tax_scope_si" formatted="false">"2026: תעריף שנתי רשמי על בסיס נטו שנתי סופי מאומת, לאחר ניכויי ביטוח והקלות אישיות/כלליות חוקיות. אין להפחית אותן שוב. ללא מסלולי צעירים/סטודנטים/נכות/התנדבות, הכנסה זרה או זיכויים מיוחדים."</string>
+    <string name="tax_scope_sk" formatted="false">"2026: מדרגות שכר שנתיות חדשות19/25/30/35%. בסיס סופי מאומת לאחר הפרשות והקלות בסיס זכאיות, כולל הפחתת ההקלה לפי הכנסה. אין לנכות פעמיים. ללא זיכויי ילדים/משכנתה/אחרים או מעמד מיוחד."</string>
+    <string name="tax_scope_hr" formatted="false">"2026: זאגרב בלבד, שכר שנתי רגיל בגיל31–59, ללא פטור צעירים/תושבים חוזרים. הבסיס הסופי כבר כולל ניכוי אישי זכאי7200 וניכויי פנסיה חוקיים.23/33% בסף בסיס60000. רשויות אחרות אינן נתמכות."</string>
+    <string name="tax_scope_rs" formatted="false">"2026: ניכוי משכר חודשי רגיל בשיעור10% מהבסיס החודשי הסופי המאומת, לאחר ההקלה החוקית המתאימה לתאריך ולהיקף העבודה. אין להפחית שוב ביטוח עובד מהבסיס. מס הכנסה נוסף שנתי לבעלי הכנסה גבוהה, התחשבנות מצטברת ופטורים מיוחדים אינם כלולים."</string>
+    <string name="tax_scope_me" formatted="false">"2026: שכר כספי חודשי רגיל החייב במלואו; הבסיס חייב להיות הברוטו לפני הפרשות עובד. מדרגות0/9/15%. ההיטל העירוני על השכר הוא עלות מעסיק ואינו ניכוי עובד נוסף כאן. ללא תשלום מיוחד/פטור או התחשבנות שנתית."</string>
+    <string name="tax_scope_al" formatted="false">"2026: מדרגות שנתיות13/23% על בסיס סופי מאומת לאחר ההקלה האישית לפי ההכנסה ושאר ניכויים חוקיים. הקלה600000/420000/360000 לפי כלל ההכנסה כבר בבסיס, ללא כפל ניכוי. ללא זיכויי ילדים/חינוך או הכנסה אחרת."</string>
+    <string name="tax_scope_ba" formatted="false">"2026: הפדרציה של בוסניה והרצגובינה בלבד, ללא רפובליקה סרפסקה או ברצ׳קו. שכר שנתי רגיל ובסיס סופי מאומת לאחר הפרשות עובד חוקיות והקלה אישית זכאית3600. מס10%, ללא זיכויים נוספים."</string>
+    <string name="tax_scope_ng" formatted="false">"כללי NTA/JRB2026. בשלב זה12 משכורות מזומן חודשיות שוות החייבות במלואן: הכנסה שנתית=12×הברוטו הנוכחי. ללא בונוסים, הטבות, שכר משתנה או תפקיד צבאי/פטור אחר. כלול פטור עבודה בשכר מינימום עד70000 לחודש. בסיס שנתי לאחר הקלות חוקיות; ללא CRA ישן או ניכוי כפול של מדרגת אפס800000."</string>
+    <string name="tax_scope_gh" formatted="false">"2026: שכר תושב חודשי רגיל בלבד בטבלה שבתוקף מ־1בספטמבר. יש להזין תאריך תשלום בפועל ובסיס חודשי מאומת לאחר ניכויים. סוף התקופה חייב להיות באותו חודש קלנדרי. חודשים קודמים, בונוסים/שעות נוספות בתעריף מיוחד, עבודה מזדמנת, תושב חוץ והתחשבנות שנתית/מצטברת אינם נתמכים."</string>
+    <string name="tax_scope_tz" formatted="false">"2026: טנזניה היבשתית, שכר תושב חודשי רגיל בעבודה ראשית בלבד. בסיס שכר מאומת לאחר ניכויים/פנסיה מוכרת ולפני מדרגת האפס. ללא זנזיבר, מס30% לעבודה שנייה/תושב חוץ, תשלומים מיוחדים או התחשבנות שנתית."</string>
+    <string name="tax_scope_bw" formatted="false">"2026/27 מתחילה ב־1ביולי2026. תעריף תושב שנתי שנחקק כולל מדרגה חדשה27.5% מעל400000, ולא שיעור מרבי ישן25%. בסיס שכר סופי מאומת; ללא תושב חוץ, מענק פיצויים/פנסיה, עסק או זיכויים מיוחדים."</string>
+    <string name="tax_scope_mu" formatted="false">"שנת הכנסה2026/27 מתחילה ב־1ביולי2026, ולא שנת שומה. תחום מוגבל: כלל ההכנסה השנתית מעבודה עד12מיליון MUR וללא הכנסה אחרת. מדרגות0/10/20% בתחום זה. מקרים של35%/Fair Share בהכנסה גבוהה, מסלולים וזיכויים מיוחדים אינם מכוסים; יש לאמת את ניכויי הבסיס."</string>
+    <string name="tax_scope_eg" formatted="false">"2026: שכר תושב רגיל, כלל הכנסה שנתית עד600000EGP. בסיס סופי מאומת כבר כולל פטור אישי זכאי20000 ושאר ניכויים, לפני מדרגת אפס40000. הבסיס מעוגל למטה לכפולת10EGP. הכנסות גבוהות המאבדות מדרגות וזיכויים מיוחדים אינן נתמכות. ביטוח עובד, מס בולים ושאר ניכויי שכר בפועל מוזנים בנפרד."</string>
+    <string name="tax_scope_sz" formatted="false">"2026/27 מתחילה ב־1ביולי2026. שכר רגיל, מדרגות שנתיות20/25/30/33% והפחתת מס בסיסית8200 ללא החזר, פעם אחת. סף האפס האפקטיבי41000 אינו ניכוי נוסף. ללא גיל60+, פיטורים/פרישה בתנאים מיוחדים או זיכויים נוספים. בסיס מס סופי מאומת."</string>
+    <string name="tax_scope_ls" formatted="false">"2026/27 מתחילה ב־1באפריל2026. מדרגה שנתית מעודכנת77760 ב־20%,30% מעליה וזיכוי שנתי12240 ללא החזר. אלה מחליפים סכומים ישנים בעמודי RSL. בסיס שכר חייב סופי מאומת; ללא מס מעסיק על הטבות, תושב חוץ, סיום עבודה או זיכויים מיוחדים."</string>
+    <string name="tax_scope_jo" formatted="false">"2026: שכר תושב שנתי רגיל. בסיס סופי מאומת הכולל פטור אישי זכאי9000 וניכויים חוקיים מתועדים. מדרגות5/10/15/20/25/30% ותוספת לאומית1% על הבסיס שמעל200000. שברי דינר בבסיס ובמס השנתי מושמטים לפי החוק. ללא מסלולים/זיכויים מיוחדים."</string>
+    <string name="tax_payment_date" formatted="false">"תאריך תשלום בפועל · YYYY-MM-DD"</string>
+    <string name="tax_payment_date_hint" formatted="false">"לגאנה בלבד: תאריך מאומת בין2026-09-01 ל־2026-12-31, באותו חודש קלנדרי של סוף התקופה המוצגת; אחרת הנטו אינו זמין. יש להשתמש בספרות לטיניות, למשל2026-10-31. בתשלום אחר יש לעדכן תאריך ובסיס. טבלאות מוקדמות והתחשבנות שנתית/מצטברת אינן מופעלות. התאריך נכלל בגיבוי."</string>
+    <string name="tax_payment_date_invalid" formatted="false">"יש להזין תאריך תקין בספרות לטיניות בפורמט YYYY-MM-DD, או להשאיר ריק."</string>
+    <string name="tax_zagreb" formatted="false">"זאגרב"</string>
+    <string name="tax_fbih" formatted="false">"הפדרציה של בוסניה והרצגובינה"</string>
+    <string name="tax_tz_mainland" formatted="false">"טנזניה היבשתית"</string>
+    <string name="tax_twenty_annual_hint" formatted="false">"יש להזין כלל הכנסה מעבודה ובסיס מס סופי מאומתים לכל שנת המס. BW/MU/SZ2026/27 מתחילות ב־1ביולי; LS2026/27 ב־1באפריל; האחרות2026 קלנדרית. מס שנתי חלקי12 הוא אומדן הפרשה כנגד מזומן התקופה, ללא ניכוי מצטבר בפועל או נטו שנתי. בניגריה נדרשות12 משכורות מזומן שוות. בונוסים/הטבות אינם מתווספים במלואם למזומן הנוכחי."</string>
+    <string name="tax_twenty_base_hint" formatted="false">"בסיס מס שנתי סופי מאומת לאחר ניכויים והקלות בסיס אישיות זכאיות, לפני מדרגות אפס וזיכויים לאחר המס. ב־AL/BA/HR/EG/JO ההקלה הבסיסית כבר בבסיס. זיכויי AT/GR/SZ/LS מחושבים בנפרד על המס. אין לנכות פעמיים סכום מזומן או מדרגת אפס. יש לבדוק זכאות אישית."</string>
+    <string name="tax_twenty_monthly_hint" formatted="false">"בסיס חייב סופי מאומת של אותו תשלום חודשי רגיל, לאחר ניכויים/הקלות חוקיים ולפני מדרגות אפס. ההקלה בסרביה לפי התאריך והיקף העבודה; במונטנגרו בסיס=ברוטו לפני הפרשות. בגאנה נדרש תאריך וחודש מתאים; בטנזניה רק עבודה ראשית ביבשת. ללא התחשבנות שנתית/מצטברת. יש לעדכן בסיס/תאריך לכל תשלום אחר."</string>
+    <string name="tax_us_ak" formatted="false">"אלסקה"</string>
+    <string name="tax_us_nv" formatted="false">"נבדה"</string>
+    <string name="tax_us_sd" formatted="false">"דקוטה הדרומית"</string>
+    <string name="tax_us_tn" formatted="false">"טנסי"</string>
+    <string name="tax_us_wa" formatted="false">"וושינגטון"</string>
+    <string name="tax_us_wy" formatted="false">"ויומינג"</string>
+    <string name="tax_us_nh" formatted="false">"ניו המפשייר"</string>
+    <string name="tax_us_az" formatted="false">"אריזונה"</string>
+    <string name="tax_us_ia" formatted="false">"איווה"</string>
+    <string name="tax_us_il" formatted="false">"אילינוי"</string>
+    <string name="tax_us_mi" formatted="false">"מישיגן"</string>
+    <string name="tax_us_nc" formatted="false">"קרוליינה הצפונית"</string>
+    <string name="tax_us_ut" formatted="false">"יוטה"</string>
+    <string name="tax_us_ky" formatted="false">"קנטקי"</string>
+    <string name="tax_us_pa" formatted="false">"פנסילבניה"</string>
+    <string name="tax_us_in" formatted="false">"אינדיאנה"</string>
+    <string name="tax_us_ma" formatted="false">"מסצ׳וסטס"</string>
+    <string name="tax_us_ga" formatted="false">"ג׳ורג׳יה"</string>
+    <string name="tax_us_la" formatted="false">"לואיזיאנה"</string>
+    <string name="tax_us_ms" formatted="false">"מיסיסיפי"</string>
+    <string name="tax_us_state_base" formatted="false">"בסיס מס מדינה שנתי מאומת"</string>
+    <string name="tax_us_base_hint" formatted="false">"בסיס סופי לאחר ניכויים ופטורים חוקיים של המדינה, לפני מדרגת אפס וזיכויי מס. אין להעתיק את בסיס המס הפדרלי. יש לאמת זכאות אישית בנפרד."</string>
+    <string name="tax_us_state_relief" formatted="false">"הפחתת מס מדינה שנתית מאומתת"</string>
+    <string name="tax_us_relief_hint" formatted="false">"סך הפחתות המס ללא החזר שלהן זכאים, כולל זיכוי אישי או הקלה להכנסה נמוכה לפי העניין. יש להזין סכום מאומת ל־2026, או 0 מפורש אם אין. ההפחתה מוגבלת למס; אין החזר או זכאות אוטומטית."</string>
+    <string name="tax_us_local_tax" formatted="false">"מס עובד מקומי לתקופה זו"</string>
+    <string name="tax_us_local_hint" formatted="false">"מס עיר, מחוז, בתי ספר או עיסוק של העובד בפועל לתשלום זה, מאומת, או 0 מפורש אם אין. שיעורים ופטורים מקומיים אינם מחושבים. אין לכלול אותו שוב בניכויים האחרים."</string>
+    <string name="tax_us_zero_hint" formatted="false">"אין מס מדינה על שכר רגיל בפרופיל 2026 זה. מס פדרלי, Social Security, Medicare וניכויי עובד מקומיים ואחרים עדיין חלים לפי המקרה. שינוי מס ההכנסה בוושינגטון ל־2028 אינו מוחל על 2026."</string>
+    <string name="tax_us_pa_ut_hint" formatted="false">"פנסילבניה ויוטה: בשלב זה שכר החייב במלואו וללא התאמות; בסיס המדינה חייב להיות 12 כפול הברוטו החודשי הנוכחי. בפנסילבניה אין ניכוי סטנדרטי. ביוטה הניכויים הפדרליים משפיעים על זיכוי מס נפרד, לא על בסיס זה; יש לאמת את זיכוי 2026."</string>
+    <string name="tax_us_ms_hint" formatted="false">"מיסיסיפי: 4% על בסיס המדינה הסופי שמעל 10,000 דולר. מדרגת האפס מופחתת כאן פעם אחת; אין לנכות אותה מהבסיס המוזן. במסלול נשואים עם מפרנס יחיד יש מדרגה אחת."</string>
+    <string name="tax_us_ma_hint" formatted="false">"מסצ׳וסטס: 5% על שכר רגיל, עם הגבלת ברוטו שנתי משפחתי למיליון דולר כדי להוציא מקרי מס נוסף להכנסה גבוהה. יש לאמת בנפרד הפחתת No Tax Status או Limited Income Credit, אם זכאים."</string>
+    <string name="tax_us_cash_hint" formatted="false">"ניכויי עובד כספיים אחרים בפועל לתקופה, או 0 מפורש: כולל חלק עובד בחופשה בתשלום, WA Cares, אבטלה, PFML והפרשות אחרות לפי המקרה. ללא עלויות מעסיק. אין לכלול מס פדרלי, מדינה, מקומי, Social Security או Medicare שכבר מוצגים. הטבות לפני מס מחוץ לפרופיל."</string>
+    <string name="tax_us_current_inputs" formatted="false">"בסיס המדינה והפחתות המס מוזנים ידנית לאחר אימות. ברוטו שנתי הוא 12 כפול הברוטו החודשי; מס שנתי חלקי 12 הוא אומדן הפרשה, לא ניכוי W-4 או מצטבר בפועל. יש לעדכן לכל תשלום ותקופה. אין מס מקומי אוטומטי, זיכויים להחזר או עבודה בין מדינות."</string>
+    <string name="tax_us_state_tax" formatted="false">"מס הכנסה של המדינה"</string>
+    <string name="tax_us_al" formatted="false">"אלבמה"</string>
+    <string name="tax_us_ar" formatted="false">"ארקנסו"</string>
+    <string name="tax_us_ca" formatted="false">"קליפורניה"</string>
+    <string name="tax_us_co" formatted="false">"קולורדו"</string>
+    <string name="tax_us_ct" formatted="false">"קונטיקט"</string>
+    <string name="tax_us_de" formatted="false">"דלאוור"</string>
+    <string name="tax_us_hi" formatted="false">"הוואי"</string>
+    <string name="tax_us_id" formatted="false">"איידהו"</string>
+    <string name="tax_us_ks" formatted="false">"קנזס"</string>
+    <string name="tax_us_md" formatted="false">"מרילנד"</string>
+    <string name="tax_us_me" formatted="false">"מיין"</string>
+    <string name="tax_us_mn" formatted="false">"מינסוטה"</string>
+    <string name="tax_us_mo" formatted="false">"מיזורי"</string>
+    <string name="tax_us_mt" formatted="false">"מונטנה"</string>
+    <string name="tax_us_nd" formatted="false">"דקוטה הצפונית"</string>
+    <string name="tax_us_ne" formatted="false">"נברסקה"</string>
+    <string name="tax_us_nj" formatted="false">"ניו ג׳רזי"</string>
+    <string name="tax_us_nm" formatted="false">"ניו מקסיקו"</string>
+    <string name="tax_us_ny" formatted="false">"ניו יורק"</string>
+    <string name="tax_us_oh" formatted="false">"אוהיו"</string>
+    <string name="tax_us_ok" formatted="false">"אוקלהומה"</string>
+    <string name="tax_us_or" formatted="false">"אורגון"</string>
+    <string name="tax_us_ri" formatted="false">"רוד איילנד"</string>
+    <string name="tax_us_sc" formatted="false">"קרוליינה הדרומית"</string>
+    <string name="tax_us_va" formatted="false">"וירג׳יניה"</string>
+    <string name="tax_us_vt" formatted="false">"ורמונט"</string>
+    <string name="tax_us_wi" formatted="false">"ויסקונסין"</string>
+    <string name="tax_us_wv" formatted="false">"מערב וירג׳יניה"</string>
+    <string name="tax_us_final_scope" formatted="false">"28 המסלולים החדשים: שכר תושב רגיל בלבד, ללא מס מינימום חלופי או מסלול מיוחד. תקרת ברוטו משפחתי שנתי לאומדן המדרגות היא מיליון דולר, ובחלק מהמדינות פחות כמפורט. יש לאמת בנפרד בסיס, הקלות וניכויי עובד. אין כיסוי מלא לכל חישוב שכר."</string>
+    <string name="tax_us_manual_scope" formatted="false">"קולורדו, איידהו וורמונט: הזנת חבות מס מאומתת בלבד. לא אומת כאן תעריף אוטומטי לדוח 2026. יש להזין חבות מס הכנסה מדינתי שנתית סופית מאומתת ל־2026; האפליקציה אינה מחשבת את החבות או את הזכאות להקלות במסלול זה."</string>
+    <string name="tax_us_verified_state_tax" formatted="false">"חבות מס מדינה שנתית סופית מאומתת"</string>
+    <string name="tax_us_verified_tax_hint" formatted="false">"חבות מס הכנסה מדינתי סופית ל־2026 לאחר הקלות ללא החזר, לפני ניכוי מס במקור ומקדמות. לא יתרה לתשלום, מס שנוכה, מס משנה קודמת או החזר. 0 מפורש רק לאחר אימות. הסכום מחולק ל־12 פעם אחת; שדות הבסיס וההקלות אינם משמשים במסלול זה. מס מקומי וניכויי עובד אחרים בנפרד. יש לעדכן לכל תשלום."</string>
+    <string name="tax_us_final_limits" formatted="false">"תקרות למסלול האוטומטי: בקונטיקט ברוטו משפחתי שנתי עד 50,000 דולר ליחיד או 100,000 לנשואים במשותף; בניו יורק עד 107,650; בארקנסו עד 94,700. אין חישוב ביטול הטבות ותוספות בהכנסה גבוהה או טבלאות חלופיות בארקנסו. מחוץ לתנאים לא מוצג נטו."</string>
+    <string name="tax_us_sc_hint" formatted="false">"דרום קרוליינה: חוק 2026 החדש עם שתי מדרגות ו־SCIAD. הבסיס הסופי צריך כבר לכלול SCIAD זכאי והפחתתו לפי הכנסה, לאחר אימות. אין להשתמש אוטומטית בניכוי הפדרלי או במדרגות הישנות 0/3/6%."</string>
+    <string name="tax_us_or_hint" formatted="false">"אורגון: טבלאות האומדן הרשמיות ל־2026, כולל סכומי מס בסיס מעוגלים שפורסמו. נתוני הדוח הסופי עשויים להשתנות. יש לאמת בסיס, ניכוי מס פדרלי חוקי וזיכויים בנפרד. מס תחבורה, חופשה בתשלום ומסים מקומיים מוזנים כניכויי עובד בפועל."</string>
+    <string name="tax_us_oh_hint" formatted="false">"אוהיו 2026: אין מס עד בסיס מדינה סופי של 26,050 דולר; מעליו נוספת חבות של 332 דולר ועוד 2.75% מהיתרה. יש לאמת זיכוי אישי והקלה להכנסה נמוכה בשדה הפחתת המס. מס עיר ובתי ספר בנפרד."</string>
+    <string name="tax_us_manual_result" formatted="false">"מס מדינה · חבות שנתית שהוזנה חלקי 12"</string>
+    <string name="tax_next_common_scope" formatted="false">"2026 בלבד: עובד יחיד תושב בגיל31–59, כל השנה, עבודה מקומית רגילה אחת, ללא תלויים, הכנסה אחרת/זרה או מסלול מיוחד. המדינה והשפה אינן מוכיחות זכאות. יש לאמת בסיס סופי, זיכויים וניכויי עובד בפועל. ללא עלויות מעסיק, המרת מטבע או פרופילים היסטוריים; יש לעדכן לכל תשלום."</string>
+    <string name="tax_next_annual_hint" formatted="false">"כלל ברוטו העבודה השנתי המאומת ל־2026. מס שנתי חלקי12 הוא אומדן הפרשה כנגד הכסף בתקופה, לא ניכוי מצטבר משכר משתנה, דוח שנתי או החזר. תוספות שנתיות חוקיות נכללות לפי התנאים, לא במלואן בתשלום זה."</string>
+    <string name="tax_next_monthly_hint" formatted="false">"בסיס מס חודשי סופי מאומת של אותו תשלום. IS/CL/UY/BO הם מסלולים חודשיים, ללא דוח שנתי. באורוגוואי עשויה להיכלל תוספת6%; הפרשות מזכות בהפחתת מס ולא בניכוי נוסף מהבסיס. בבוליביה כבר נכלל ניכוי2SMN חוקי."</string>
+    <string name="tax_next_base_hint" formatted="false">"בסיס מס ארצי שנתי סופי מאומת לאחר ניכויים והקלות חוקיות, לפני מדרגות אפס וזיכויי מס. בהולנד נכלל ביטוח Box1. סף ג׳מייקה ומדרגות האפס של פיג׳י ולוקסמבורג מופחתים כאן פעם אחת. בברבדוס25,000 וההקלה הזכאית בבליז כבר צריכים להיות מנוכים מהבסיס."</string>
+    <string name="tax_next_annual_relief" formatted="false">"הפחתת מס שנתית מאומתת ללא החזר"</string>
+    <string name="tax_next_monthly_relief" formatted="false">"הפחתת מס מאומתת לתשלום החודשי הזה"</string>
+    <string name="tax_next_relief_hint" formatted="false">"יש להזין הפחתה זכאית שאומתה בנפרד, או0 מפורש אם אין. מופחתת מהמס עד גובהו, ללא החזר או זכאות אוטומטית. שנתית במסלולים השנתיים, חודשית ב־IS/CL/UY/BO. בהולנד כולל זיכוי Box1 משולב; בלוקסמבורג כולל השפעת הקרן. אין להזין שוב זיכויים שכבר כלולים במסים הנוספים."</string>
+    <string name="tax_next_extra_tax" formatted="false">"מסי עובד נוספים לתקופה זו"</string>
+    <string name="tax_next_extra_hint" formatted="false">"מסים בפועל שאומתו ואינם מחושבים כבר, או0 מפורש: קנטון, מחוז, עיר, כנסייה, שידור והיטלים לפי המקרה. היטל השיקום ביפן, קרן7% בלוקסמבורג וביטוח Box1 בהולנד מחושבים כבר; באיסלנד כלול רכיב עירוני רגיל. אין לכפול אותם או את שאר הניכויים."</string>
+    <string name="tax_next_cash_hint" formatted="false">"ניכויי עובד אחרים בפועל לתשלום, או0 מפורש: פנסיה, ביטוח לאומי, בריאות וביטוחים לפי המקרה, ללא עלויות מעסיק. אין לכלול מס ארצי שחושב או מסים נוספים שהוזנו בנפרד. ביטוח Box1 בהולנד כבר כלול. הפרשה חוקית יכולה להשפיע בנפרד על הבסיס ועל המזומן, ללא כפל ניכוי מהבסיס."</string>
+    <string name="tax_next_verified_tax" formatted="false">"מס הכנסה ארצי ואזורי שנתי סופי מאומת"</string>
+    <string name="tax_next_verified_hint" formatted="false">"מסלול ידני: חבות לשנת הכנסה2026 שאומתה בנפרד, אחרי זיכויים ללא החזר ולפני ניכוי במקור ומקדמות. לא מס שנוכה, יתרה לתשלום, החזר או שנת הכנסה קודמת. מחולק ל־12 פעם אחת; מס עירוני בנפרד. שדות בסיס והפחתת מס אינם משמשים כאן."</string>
+    <string name="tax_next_cl_date_hint" formatted="false">"צ׳ילה: תאריך תשלום בפועל YYYY-MM-DD בספרות לטיניות ובשנת2026. טבלאות רשמיות לינואר–נובמבר בלבד; התאריך חייב להיות באותו חודש כמו סוף התקופה המוצגת. ללא התאמה לא מוצג נטו. אין החלפה שקטה בטבלה שנתית או במסלול52bis."</string>
+    <string name="tax_next_nl_charge" formatted="false">"מס וביטוח לאומי משולב Box1"</string>
+    <string name="tax_next_manual_result" formatted="false">"מס ארצי ואזורי · סכום שנתי שהוזן חלקי12"</string>
+    <string name="tax_next_nl" formatted="false">"הולנד: Box1 רגיל לפני גיל AOW, ברוטו שנתי עד78,426EUR. שיעורי2026 כוללים27.65% ביטוח לאומי במדרגה הראשונה. זיכויים משולבים מאומתים; אין לנכות ביטוח זה שוב. ללא Box2/3, הטבת30% או הגבלת הטבת ניכויים בהכנסה גבוהה."</string>
+    <string name="tax_next_be" formatted="false">"בלגיה: הזנת חבות מס ארצי ואזורי שנתית מאומתת בלבד. הכנסה2026 מתאימה לשומה2027; אין להציג מחשבון שומה2026 כאילו הוא להכנסה2026. מס עירוני בנפרד. ללא חישוב זכאות אזורית, זיכויים או flexi-job."</string>
+    <string name="tax_next_lu" formatted="false">"לוקסמבורג: מסלול class1 בלבד, ברוטו שנתי עד150,000EUR. תעריף מתמשך מ־2025; בסיס מעוגל מטה לכפולת50EUR, קרן תעסוקה7% כלולה לפני ההפחתה המשולבת המאומתת. ללא class1a/2, עובד חוצה גבול או חישוב הפרשת סיעוד."</string>
+    <string name="tax_next_ch" formatted="false">"שווייץ: שומה פדרלית רגילה ליחיד בלבד, ברוטו שנתי עד100,000CHF. טבלת2026, בסיס מעוגל מטה לכפולת100CHF ומס לכפולת0.05CHF; מס מתחת25CHF אינו נגבה. מסי קנטון, עיר וכנסייה בפועל בנפרד; ללא טבלת ניכוי במקור."</string>
+    <string name="tax_next_se" formatted="false">"שוודיה: מס הכנסה ארצי בלבד. סף2026 הוא643,000SEK אחרי ההקלה הבסיסית המאומתת, לא סף ברוטו660,400. בסיס מעוגל מטה לכפולת100SEK, יתרה מינימלית200 למס ארצי. מסי עיר, כנסייה, קבורה ושידור וחלוקת הזיכויים מאומתים בנפרד."</string>
+    <string name="tax_next_fi" formatted="false">"פינלנד: מדרגות מס הכנסה ארצי מעבודה2026 בלבד. חלק הזיכויים הארצי מאומת; מסי עיר, כנסייה, Yle והיטלים בנפרד. ניכויי עובד לפנסיה, אבטלה ובריאות בפועל; אין חישוב רשות מקומית או חלוקת זיכויים אוטומטית."</string>
+    <string name="tax_next_is" formatted="false">"איסלנד: טבלת ניכוי חודשית רגילה2026 שפורסמה, כולל הרכיב העירוני. זיכוי חודשי מאומת, לא זיכוי שנתי חלקי12. ללא שומה עירונית שנתית שונה, העברת זיכוי בין חודשים או בני זוג והתחשבנות שנתית."</string>
+    <string name="tax_next_it" formatted="false">"איטליה: IRPEF רגיל2026 בשיעורי23/33/43%, ברוטו שנתי עד200,000EUR. זיכויי עבודה מאומתים; מסי מחוז ועיר בפועל בנפרד. ללא מס חלופי לשעות נוספות, לילה, משמרות ובונוסים או זכאות אוטומטית."</string>
+    <string name="tax_next_jp" formatted="false">"יפן: שכר תושב רגיל שנתי, ברוטו עד100מיליוןJPY. בסיס סופי אחרי ניכויי שכר והקלה בסיסית חוקית, מעוגל מטה לכפולת1000JPY. היטל שיקום2026 של2.1% אחרי זיכוי מס ארצי מאומת מחושב בנפרד. מס תושב מקומי בפועל בנפרד, ללא כללי ביטחון2027."</string>
+    <string name="tax_next_kr" formatted="false">"קוריאה הדרומית: מס ארצי מדורג לשכר תושב רגיל. בסיס סופי אחרי ניכויים חוקיים וזיכויי מס ארציים מאומתים. מס הכנסה מקומי וביטוח עובד בפועל בנפרד. ללא בחירת מס שטוח לעובד זר או מסלול מיוחד."</string>
+    <string name="tax_next_ar" formatted="false">"ארגנטינה: טבלת סעיף94 הרשמית לשנה מלאה ולסיום העסקה2026, עם סכומי פתיחה שפורסמו. בסיס וניכויים שנתיים סופיים מאומתים. מס חלקי12 הוא הפרשה, לא ניכוי מצטבר משתנה לפי חצי שנה, הקצאת SAC או החזר שנתי."</string>
+    <string name="tax_next_cl" formatted="false">"צ׳ילה: IUSC חודשי רגיל לפי חודש התשלום בפועל. טבלאות ינואר–נובמבר2026 שפורסמו בלבד, ללא52bis. בסיס חודשי וזיכוי מאומתים; ניכויי פנסיה ובריאות בפועל בנפרד. אין התחשבנות שנתית."</string>
+    <string name="tax_next_uy" formatted="false">"אורוגוואי: IRPF תושב חודשי רגיל2026. בסיס מאומת כולל תוספת6% אם חלה, עד106% מהברוטו המזומן. הפרשות מפחיתות מס בשיעור זכאי14/8% דרך זיכוי חודשי מאומת, ולא שוב את הבסיס. ללא מס מיוחד על aguinaldo/חופשה או סיכום שנתי."</string>
+    <string name="tax_next_bo" formatted="false">"בוליביה: RC-IVA חודשי רגיל13% מבסיס מאומת לאחר ניכוי2SMN חוקי והפרשות מותרות. זיכוי חודשי מאומת כולל13% של1SMN, חשבוניות ויתרה קודמת מוצמדת לפי הזכאות. אין חישוב שכר מינימום, זכאות או יתרה מועברת אוטומטית."</string>
+    <string name="tax_next_jm" formatted="false">"ג׳מייקה: אומדן שנתי רגיל2026, סף משוקלל לכל השנה1,876,614JMD ולא סף אפריל השנתי1,902,360. שיעורי25/30% וסף עליון6מיליון הכנסה סטטוטורית. בסיס אחרי הפרשות חוקיות ולפני מדרגת האפס. ללא PAYE מצטבר או הקלת גיל65."</string>
+    <string name="tax_next_tt" formatted="false">"טרינידד וטובגו: מס תושב שנתי רגיל25/30% בסף בסיס חייב של מיליוןTTD. הקלה אישית90,000 וניכויים חוקיים כבר בבסיס המאומת. NIS והיטל בריאות בפועל בנפרד; ללא היטלי עסק וקרן ירוקה של המעסיק."</string>
+    <string name="tax_next_bz" formatted="false">"בליז:25% מבסיס שכר שנתי חייב סופי מאומת. הקלה אישית25,600/24,600/22,600/19,600 לפי הברוטו הכולל כבר בבסיס. אין זכאות תרומות או החזר אוטומטי; ביטוח לאומי בפועל בנפרד."</string>
+    <string name="tax_next_gy" formatted="false">"גיאנה: שיעורי2026 של25/35% בסף בסיס חייב3,360,000GYD. בסיס סופי מאומת אחרי הקלה זכאית של לפחות1,680,000 או שליש, NIS וניכויי שעות נוספות ואחרים כחוק. אין קביעה אוטומטית של זכאות מיוחדת או שיעורי ביטוח."</string>
+    <string name="tax_next_bb" formatted="false">"ברבדוס: שיעורי2026 החדשים11.5/27.5%. הקלה אישית זכאית25,000BBD כבר בבסיס הסופי;50,000 הראשונים של בסיס זה בשיעור11.5%. אין ניכוי נוסף של מדרגת אפס25,000. NIS והיטלים אחרים בפועל בנפרד; ללא מסלולים מיוחדים."</string>
+    <string name="tax_next_fj" formatted="false">"פיג׳י: תעריף תושב מ־2024 ואילך שעדיין חל ב־2026; מדרגת אפס30,000FJD מופחתת פעם אחת. אין SRT/ECAL נפרדים שבוטלו, תושב חוץ או מענק מיוחד. בסיס, זיכויים והפרשות עובד בפועל מאומתים."</string>
+    <string name="menu_open" formatted="false">"פתיחת תפריט"</string>
+    <string name="shift_global_hint" formatted="false">"הסלייד לפתיחה וסגירה נמצא בתחתית כל מסך. בחר כאן משרד או בית לפני תחילת המשמרת."</string>
+    <string name="shift_active" formatted="false">"משמרת פעילה"</string>
+    <string name="shift_ready" formatted="false">"מוכנים להתחיל"</string>
+    <string name="shift_options" formatted="false">"אפשרויות משמרת"</string>
+    <string name="shift_done" formatted="false">"סיום"</string>
+    <string name="period_current" formatted="false">"התקופה הנוכחית"</string>
+    <string name="period_choose" formatted="false">"בחירת חודש ושנה"</string>
+    <string name="period_end_hint" formatted="false">"בחר את החודש שבו תקופת השכר מסתיימת. התאריכים המדויקים מופיעים למטה."</string>
+    <string name="period_year" formatted="false">"שנה"</string>
+    <string name="period_year_hint" formatted="false">"יש להזין שנה בין 1900 ל־2100."</string>
+    <string name="period_apply" formatted="false">"הצגת התקופה"</string>
+    <string name="widget_name" formatted="false">"ShiftHours · משמרת"</string>
+    <string name="widget_description" formatted="false">"פתיחת משמרת במשרד או בבית, סגירתה והצגת הזמן שעבר מתחילתה."</string>
+    <string name="widget_open" formatted="false">"פתיחת האפליקציה"</string>
+    <string name="widget_error" formatted="false">"פתח את האפליקציה לבדיקת הנתונים או לשחזור גיבוי."</string>
+    <string name="widget_setup" formatted="false">"יש להשלים תחילה את ההגדרות הראשוניות באפליקציה."</string>
+    <string name="widget_inactive" formatted="false">"אין משמרת פעילה"</string>
+    <string name="widget_start_office" formatted="false">"פתיחה · משרד"</string>
+    <string name="widget_start_home" formatted="false">"פתיחה · בית"</string>
+    <string name="widget_stop" formatted="false">"סגירת משמרת"</string>
+    <string name="shift_changed" formatted="false">"המשמרת הפעילה השתנתה. סגור את חלון העריכה ופתח אותו מחדש."</string>
+    <string name="overtime_by_location" formatted="false">"שעות נוספות לפי מיקום"</string>
+    <string name="overtime_by_location_hint" formatted="false">"מדרגות השעות הנוספות משותפות למשרד ולבית בכל יום, ומיוחסות למקום שבו בוצעה העבודה. השכר כולל את מלוא אחוז המדרגה, לפני מס."</string>
+    <string name="ui_more_info" formatted="false">"מידע נוסף"</string>
+    <string name="ui_collapse" formatted="false">"הסתרת פירוט"</string>
+    <string name="ui_expand" formatted="false">"הצגת פירוט"</string>
+    <string name="ui_details" formatted="false">"פירוט"</string>
+    <string name="ui_appearance" formatted="false">"מראה האפליקציה"</string>
+    <string name="ui_theme_system" formatted="false">"לפי הגדרת הטלפון"</string>
+    <string name="ui_theme_light" formatted="false">"בהיר"</string>
+    <string name="ui_theme_dark" formatted="false">"כהה"</string>
+    <string name="ui_theme_hint" formatted="false">"נשמר עם ההגדרות ונכלל בגיבוי. מצב אוטומטי משתנה בהתאם למראה המערכת בטלפון."</string>
+    <string name="ui_gross_estimate" formatted="false">"ברוטו משוער"</string>
+    <string name="ui_record_actions" formatted="false">"פעולות דיווח"</string>
+    <string name="ui_net_estimate" formatted="false">"נטו משוער, במסגרת פרופיל המס שנבחר."</string>
+    <string name="ui_tax_scope_notice" formatted="false">"החישוב מתאים לפרופיל מס מוגדר. בחירת מדינה לבדה אינה קובעת זכאות. דרישות חסרות מוצגות למעלה."</string>
+    <string name="ui_tax_scope" formatted="false">"פרופיל המס והתנאים"</string>
+    <string name="ui_pay_details" formatted="false">"פירוט השכר"</string>
+    <string name="ui_settings_hours" formatted="false">"שעות והפסקות"</string>
+    <string name="ui_settings_pay" formatted="false">"שכר ושעות נוספות"</string>
+    <string name="ui_settings_tax" formatted="false">"מיסוי והפרשות"</string>
+    <string name="ui_settings_display" formatted="false">"שפה ותצוגה"</string>
+    <string name="ui_country_search" formatted="false">"חיפוש מדינה, קוד או מטבע"</string>
+    <string name="ui_no_results" formatted="false">"לא נמצאו מדינות מתאימות"</string>
+    <string name="export_excel" formatted="false">"ייצוא לאקסל"</string>
+    <string name="export_sheet" formatted="false">"משמרות"</string>
+    <string name="export_period_start" formatted="false">"ת.התחלה"</string>
+    <string name="export_period_end" formatted="false">"ת.סיום"</string>
+    <string name="export_date" formatted="false">"תאריך"</string>
+    <string name="export_start" formatted="false">"שעת התחלה"</string>
+    <string name="export_end" formatted="false">"שעת סיום"</string>
+    <string name="export_duration" formatted="false">"סה״כ זמן"</string>
+    <string name="export_total" formatted="false">"סה״כ"</string>
+    <string name="export_note" formatted="false">"זמן לתשלום לאחר ניכוי הפסקות לפי ההגדרות. במשמרת לילה שעת הסיום עשויה לחול ביום הבא."</string>
+    <string name="export_saved" formatted="false">"קובץ האקסל נשמר."</string>
+    <string name="export_error" formatted="false">"ייצוא האקסל נכשל."</string>
+    <string name="export_filter_hint" formatted="false">"יוצאו משמרות סגורות בתקופה שנבחרה, לפי הסינון משרד, בית או הכול שלמעלה."</string>
+
+    <string name="leave_title" formatted="false">"חופשה, מחלה וחגים"</string>
+    <string name="leave_sick" formatted="false">"מחלה"</string>
+    <string name="leave_vacation" formatted="false">"חופשה בתשלום"</string>
+    <string name="leave_days" formatted="false">"ימים"</string>
+    <string name="leave_setup_hint" formatted="false">"יש להגדיר יתרות פתיחה וצבירה חודשית לפני דיווח היעדרות."</string>
+    <string name="leave_asof" formatted="false">"יתרה נכון ל־"</string>
+    <string name="leave_period_used" formatted="false">"ימים שנוכו בתקופה הנבחרת"</string>
+    <string name="leave_pay" formatted="false">"שווי תשלום ההיעדרות"</string>
+    <string name="leave_pay_hint" formatted="false">"שעתי: מתווסף לשכר. גלובלי: ההיעדרות בתשלום כבר כלולה בשכר; מנוכה רק החלק שאינו משולם. היעדרות אינה יוצרת שעות נוספות."</string>
+    <string name="leave_manage" formatted="false">"ניהול חופשה ומחלה"</string>
+    <string name="leave_config" formatted="false">"יתרות וכללי היעדרות"</string>
+    <string name="leave_add" formatted="false">"הוספת חופשה, מחלה או חג"</string>
+    <string name="leave_record_hint" formatted="false">"חלק היום חל על כל תאריך שנבחר. היעדרות מוצגת בנפרד מעבודה בפועל. דיווח עתידי נכלל בתקופת השכר שלו, אך היתרה הנוכחית כוללת רק תאריכים עד היום."</string>
+    <string name="leave_empty" formatted="false">"אין דיווחי היעדרות בתקופה זו."</string>
+    <string name="leave_fraction" formatted="false">"חלק יום (1 = יום מלא, 0.5 = חצי יום)"</string>
+    <string name="leave_hours" formatted="false">"שעות היעדרות"</string>
+    <string name="leave_pay_percent" formatted="false">"אחוז תשלום"</string>
+    <string name="leave_debited" formatted="false">"ימים שנוכו מהיתרה"</string>
+    <string name="leave_event_start" formatted="false">"תחילת רצף המחלה"</string>
+    <string name="leave_day_number" formatted="false">"יום ברצף"</string>
+    <string name="leave_ledger" formatted="false">"היסטוריית צבירה וניצול"</string>
+    <string name="leave_ledger_hint" formatted="false">"תנועות בתקופת השכר הנבחרת. פתיחה + צבירה + תיקונים פחות ניצול. תנועות עתידיות הן מתוכננות."</string>
+    <string name="leave_opening" formatted="false">"יתרת פתיחה (ימים)"</string>
+    <string name="leave_accrual" formatted="false">"צבירה חודשית"</string>
+    <string name="leave_used" formatted="false">"ניצול"</string>
+    <string name="leave_adjustment" formatted="false">"תיקון יתרה"</string>
+    <string name="leave_changed" formatted="false">"הנתונים השתנו. יש לסגור ולפתוח מחדש את הטופס."</string>
+    <string name="leave_delete_hint" formatted="false">"למחוק את הדיווח? השפעתו על היתרה והשכר תחושב מחדש. לא ניתן לבטל את המחיקה."</string>
+    <string name="leave_config_hint" formatted="false">"אלה הגדרות המעסיק שלך, ולא ברירות מחדל משפטיות מאומתות. הצבירה חלה מתאריך הפתיחה. שינוי יתרות או צבירה מחשב את ההיסטוריה מחדש; לתיקון נקודתי יש להשתמש בתיקון יתרה מתוארך. כללי תשלום של היעדרויות שנשמרו נשמרים עם הדיווח."</string>
+    <string name="leave_opening_date" formatted="false">"תאריך יתרת הפתיחה"</string>
+    <string name="leave_monthly" formatted="false">"ימים נצברים בכל חודש"</string>
+    <string name="leave_accrual_day" formatted="false">"יום הצבירה בחודש (1–31)"</string>
+    <string name="leave_accrual_hint" formatted="false">"הצבירה המלאה הראשונה היא ביום שנבחר לאחר תאריך הפתיחה. בחודש קצר משתמשים ביום האחרון. אין צבירה יחסית. הצבירה נפרדת מתקופת השכר."</string>
+    <string name="leave_day_hours" formatted="false">"שעות ליום היעדרות מלא"</string>
+    <string name="leave_vacation_percent" formatted="false">"אחוז תשלום חופשה"</string>
+    <string name="leave_allow_negative" formatted="false">"לאפשר יתרה שלילית"</string>
+    <string name="leave_calendar_days" formatted="false">"ספירת ימים קלנדריים ברצף מחלה"</string>
+    <string name="leave_calendar_hint" formatted="false">"מופעל: גם סופי שבוע וימים שלא דווחו מקדמים את מדרגת התשלום. כבוי: רק תאריכים שדווחו ברצף מקדמים אותה. רק היעדרות מדווחת מנוכה מהיתרה."</string>
+    <string name="leave_sick_tiers" formatted="false">"מדרגות תשלום מחלה"</string>
+    <string name="leave_tier_hint" formatted="false">"השורות חלות לפי הסדר. אחוז התשלום ואחוז הניכוי מהיתרה נפרדים. יום בתשלום 50% יכול לנכות יום מלא כשהניכוי הוא 100%."</string>
+    <string name="leave_tier" formatted="false">"מדרגה"</string>
+    <string name="leave_number_days" formatted="false">"מספר ימים"</string>
+    <string name="leave_remaining" formatted="false">"כל הימים הבאים (שורה אחרונה)"</string>
+    <string name="leave_debit_percent" formatted="false">"אחוז ניכוי מהיתרה"</string>
+    <string name="leave_add_tier" formatted="false">"הוספת מדרגה לפני השורה האחרונה"</string>
+    <string name="leave_from" formatted="false">"מתאריך"</string>
+    <string name="leave_until" formatted="false">"עד תאריך (כולל)"</string>
+    <string name="leave_workdays_only" formatted="false">"רק ימי העבודה המוגדרים"</string>
+    <string name="leave_continue" formatted="false">"המשך רצף מחלה"</string>
+    <string name="leave_new_event" formatted="false">"רצף מחלה חדש"</string>
+    <string name="leave_override_pay" formatted="false">"תשלום חלופי באחוזים (ריק = לפי הכלל)"</string>
+    <string name="leave_override_debit" formatted="false">"ניכוי חלופי באחוזים (ריק = לפי הכלל)"</string>
+    <string name="leave_override_hint" formatted="false">"התאמה נקודתית לדיווח. שדה ריק משתמש בכללי המעסיק שנשמרו. בטווח תאריכים ההתאמה חלה על כל יום שנבחר."</string>
+    <string name="leave_note" formatted="false">"הערה / סיבת התיקון"</string>
+    <string name="leave_preview" formatted="false">"אישור התאריכים והתשלום"</string>
+    <string name="leave_work_warning" formatted="false">"קיימת עבודה מדווחת או משמרת פתוחה באחד התאריכים. יש לבדוק ששילוב העבודה וההיעדרות נכון לפני השמירה."</string>
+    <string name="leave_date" formatted="false">"תאריך"</string>
+    <string name="leave_adjust_days" formatted="false">"תיקון ימים (+ הוספה / − הפחתה)"</string>
+    <string name="leave_duplicate" formatted="false">"סך ההיעדרויות בתאריך אחד לא יכול לעלות על יום מלא."</string>
+    <string name="leave_insufficient" formatted="false">"אין יתרה מספקת. יש לתקן את יתרת הפתיחה או לאפשר במפורש יתרה שלילית."</string>
+    <string name="leave_invalid" formatted="false">"יש לבדוק תאריכים וערכים מספריים. אחוזים: 0–100; חלק יום: גדול מ־0 ועד 1."</string>
+    <string name="leave_date_error" formatted="false">"יש לבחור טווח תאריכים מסודר של עד 367 ימים קלנדריים."</string>
+    <string name="leave_no_dates" formatted="false">"אין בטווח תאריכים התואמים לימי העבודה המוגדרים."</string>
+    <string name="leave_salary_adjustment" formatted="false">"ניכוי היעדרות שאינה משולמת מהשכר הגלובלי"</string>
+    <string name="leave_export_hint" formatted="false">"ייצוא הכול כולל גיליון היעדרויות נפרד. ייצוא משרד או בית כולל משמרות עבודה בלבד."</string>
+
+    <string name="leave_holiday" formatted="false">"חג / יום שאינו יום עבודה"</string>
+    <string name="leave_salary_choice" formatted="false">"ניכוי מהשכר (ללא ניצול חופשה)"</string>
+    <string name="leave_settlement" formatted="false">"השלמת שעות חסרות בתקופה"</string>
+    <string name="leave_missing_hours" formatted="false">"יתרת שעות חסרות בתקופה"</string>
+    <string name="leave_fill_hours" formatted="false">"שעות להשלמה"</string>
+    <string name="leave_use_percent" formatted="false">"הזנת אחוז מיום היעדרות מלא"</string>
+    <string name="leave_day_percent" formatted="false">"אחוז מיום מלא"</string>
+    <string name="leave_target_needed" formatted="false">"יש להגדיר שעות חודשיות נדרשות בהגדרות השכר כדי לחשב חוסר חודשי."</string>
+    <string name="leave_too_many_hours" formatted="false">"יש להזין שעות חיוביות שאינן עולות על יתרת החוסר (עד 744)."</string>
+    <string name="leave_settlement_hint" formatted="false">"זו התאמה לתקופה, ולא משמרת עבודה. ניצול חופשה = שעות חלקי שעות ליום היעדרות. לדוגמה: 3.2 שעות חלקי 8 = 0.4 יום (40%). ניתן לבחור בתשלום מחופשה או בניכוי מהשכר. שינוי מאוחר בדיווחי עבודה או היעדרות עשוי לחייב תיקון של ההתאמה."</string>
+    <string name="leave_incomplete_period" formatted="false">"תקופת השכר טרם הסתיימה. החוסר הוא זמני; יש לבדוק לפני השמירה."</string>
+    <string name="leave_holiday_hint" formatted="false">"חג שהוגדר ידנית, ולא קביעה של זכאות חוקית. אין ניכוי מיתרת חופשה או מחלה. תשלום התבנית הוא 100%; לתנאי מעסיק אחרים יש לשנות את אחוז התשלום בדיווח. טווחי היעדרות המוגבלים לימי עבודה מדלגים על חגים שכבר דווחו. עבודה בחג אינה מקבלת תעריף מוגדל אוטומטית."</string>
+    <string name="leave_settlement_review" formatted="false">"ייתכן שהשלמה שנשמרה גדולה כעת מהחוסר שנותר. יש לבדוק את שעותיה לאחר שינוי בדיווחי עבודה או היעדרות."</string>
+
+    <string name="ot_method" formatted="false">"שיטת חישוב שעות נוספות"</string>
+    <string name="ot_daily" formatted="false">"יומית"</string>
+    <string name="ot_weekly" formatted="false">"שבועית"</string>
+    <string name="ot_monthly" formatted="false">"חודשית"</string>
+    <string name="ot_hours" formatted="false">"שעות רגילות"</string>
+    <string name="ot_week_start" formatted="false">"היום הראשון בשבוע העבודה"</string>
+    <string name="ot_weekly_threshold" formatted="false">"שעות רגילות בשבוע לפני שעות נוספות"</string>
+    <string name="ot_monthly_threshold" formatted="false">"שעות רגילות בחודש לפני שעות נוספות"</string>
+    <string name="ot_calendar" formatted="false">"חודש קלנדרי (מה־1 ועד סוף החודש)"</string>
+    <string name="ot_pay_period" formatted="false">"תקופת השכר שהוגדרה"</string>
+    <string name="ot_nominal_day" formatted="false">"שעות ליום לצורך חוסרים והגדרת היעדרות"</string>
+    <string name="ot_settings_hint" formatted="false">"יש לבחור שיטה אחת. מדרגות התשלום הקיימות מתחילות מחדש בכל יום, שבוע או חודש שנבחרו. הסף השבועי או החודשי נפרד מהשעות הנומינליות ליום ומיעד הנוכחות החודשי. הפסקות ממשיכות לפי ההגדרה היומית או לפי מקטע. רק עבודה בפועל לאחר הפסקות נספרת לסף השעות הנוספות; חופשה, מחלה, חגים והשלמת חוסר אינם נספרים אליו."</string>
+    <string name="ot_context_hint" formatted="false">"בחישוב שבועי או לפי חודש קלנדרי נלקחים גם דיווחים שמורים שלפני תקופת השכר המוצגת. לחישוב נכון יש להזין את השבוע או החודש המלא. כל המשמרת מיוחסת לתאריך העבודה שהוגדר לה, גם כשחצתה חצות. שינוי השיטה מחשב מחדש את ההיסטוריה; אין שילוב יומי ושבועי או קביעה אוטומטית של זכאות חוקית."</string>
+    <string name="ot_location_hint" formatted="false">"המשרד והבית חולקים מונה שעות נוספות אחד לפי היום, השבוע או החודש שנבחרו. השעות והתשלום המלא לפי המדרגה מוקצים לפי סדר העבודה למקום שבו בוצעה, לאחר הפסקות."</string>
+    <string name="ot_office_only" formatted="false">"שעות משרד בלבד מעל סף השעות הנוספות שנבחר"</string>
+    <string name="ot_invalid" formatted="false">"יש לבדוק שיטה, תקופה וספי שעות נוספות: שבועי 0–168, חודשי 0–744 שעות; תחילת שבוע חייבת להיות יום תקין."</string>
+    <string name="ot_threshold_required" formatted="false">"יש להזין סף שעות רגילות גדול מאפס לשיטת השעות הנוספות שנבחרה."</string>
+    <string name="back_press_again_exit" formatted="false">"לחץ שוב ליציאה"</string>
+    <string name="widget_compact_name" formatted="false">"ShiftHours · משמרת 2×2"</string>
+    <string name="analytics_title" formatted="false">"סיכומים"</string>
+    <string name="analytics_hint" formatted="false">"משמרות סגורות בלבד. כל הנתונים מחושבים לפי הגדרות השכר וההפסקות הנוכחיות. משמרת פעילה אינה נכללת."</string>
+    <string name="analytics_partial" formatted="false">"התקופה עדיין לא הסתיימה. ההשוואה היא לתקופה הקודמת במלואה, ולא למספר ימים זהה שחלף."</string>
+    <string name="analytics_empty" formatted="false">"אין דיווחים בתקופה הזו"</string>
+    <string name="analytics_empty_hint" formatted="false">"היעדר דיווחים אינו מעיד שלא עבדת. תקופה ללא דיווחים אינה נחשבת לחודש עם שכר אפס."</string>
+    <string name="analytics_overview" formatted="false">"התקופה במספרים"</string>
+    <string name="analytics_workdays" formatted="false">"ימי עבודה שדווחו"</string>
+    <string name="analytics_shifts" formatted="false">"משמרות סגורות"</string>
+    <string name="analytics_avg_day" formatted="false">"ממוצע שעות נטו ליום עבודה"</string>
+    <string name="analytics_avg_shift" formatted="false">"ממוצע שעות נטו למשמרת"</string>
+    <string name="analytics_home_share" formatted="false">"שיעור העבודה מהבית"</string>
+    <string name="analytics_ot_share" formatted="false">"שיעור שעות נוספות מהעבודה נטו"</string>
+    <string name="analytics_gross" formatted="false">"שכר ברוטו"</string>
+    <string name="analytics_comparison" formatted="false">"שינוי מהתקופה הקודמת"</string>
+    <string name="analytics_hours_change" formatted="false">"שינוי בשעות נטו"</string>
+    <string name="analytics_ot_change" formatted="false">"שינוי בשעות נוספות"</string>
+    <string name="analytics_gross_change" formatted="false">"שינוי בשכר ברוטו"</string>
+    <string name="analytics_no_comparison" formatted="false">"נדרשים דיווחים בשתי התקופות לצורך השוואה."</string>
+    <string name="analytics_tiers" formatted="false">"מדרגות שעות נוספות והשכר שלהן"</string>
+    <string name="analytics_weighted" formatted="false">"שעות נוספות משוקללות לשכר"</string>
+    <string name="analytics_weighted_hint" formatted="false">"שעות משוקללות = שעות נוספות כפול מקדם השכר. זהו שווי לצורכי שכר, ולא זמן עבודה נוסף."</string>
+    <string name="analytics_location" formatted="false">"משרד ובית"</string>
+    <string name="analytics_equivalent_hint" formatted="false">"שווי העבודה מחושב לפי ערך שעה וכולל שעות נוספות. הוא אינו חלוקה של שכר גלובלי או דמי חופשה לפי מיקום או סיבה."</string>
+    <string name="analytics_office_short" formatted="false">"חוסר יומי של שעות משרד בלבד"</string>
+    <string name="analytics_office_ot" formatted="false">"השוואת שעות נוספות של משרד בלבד"</string>
+    <string name="analytics_reasons" formatted="false">"סיבות לעבודה מהבית"</string>
+    <string name="analytics_no_reasons" formatted="false">"אין משמרות סגורות מהבית בתקופה הזו."</string>
+    <string name="analytics_shortfalls" formatted="false">"חוסרי שעות והחתמות"</string>
+    <string name="analytics_daily_short" formatted="false">"חוסר יומי לאחר זיכוי היעדרויות"</string>
+    <string name="analytics_monthly_short" formatted="false">"חוסר חודשי מול היעד שהוגדר"</string>
+    <string name="analytics_missing_clock" formatted="false">"ימים שסומנו עם החתמה חסרה"</string>
+    <string name="analytics_missing_hint" formatted="false">"בעיות החתמה מזוהות לפי ההערות השמורות. אי אפשר להסיק ימי עבודה שלא דווחו כלל."</string>
+    <string name="analytics_weekdays" formatted="false">"ממוצע שעות נטו לפי יום בשבוע"</string>
+    <string name="analytics_weekdays_hint" formatted="false">"הממוצע כולל רק תאריכים שדווחו ובהם שעות נטו חיוביות. מוצג גם מספר הימים; ימים ללא דיווח אינם נכללים."</string>
+    <string name="analytics_records" formatted="false">"ימים בולטים"</string>
+    <string name="analytics_longest" formatted="false">"יום העבודה המדווח הארוך ביותר"</string>
+    <string name="analytics_most_ot" formatted="false">"היום עם הכי הרבה שעות נוספות שיוחסו לו"</string>
+    <string name="analytics_trend" formatted="false">"12 תקופות שכר לאורך זמן"</string>
+    <string name="analytics_trend_hint" formatted="false">"בכל שורה: שעות נטו, שעות נוספות ושכר ברוטו. מקף מציין שאין דיווחים. נתוני העבר מחושבים לפי ההגדרות הנוכחיות, ולא לפי חוזים היסטוריים."</string>
+    <string name="home_sync_title">שרת אישי</string>
+    <string name="home_sync_hint">סנכרון לבחירה עם המחשב שלך. העבודה המקומית ממשיכה גם ללא אינטרנט.</string>
+    <string name="home_sync_address">כתובת HTTPS של השרת</string>
+    <string name="home_sync_key">מפתח חיבור לטלפון</string>
+    <string name="home_sync_https">יש להזין כתובת שרת תקינה שמתחילה ב־HTTPS.</string>
+    <string name="home_sync_other_server">המכשיר משויך לשרת אחר. יש לשמור גיבוי לפני מעבר.</string>
+    <string name="home_sync_working">מסנכרן…</string>
+    <string name="home_sync_ok">הנתונים מסונכרנים</string>
+    <string name="home_sync_conflict">יש עריכות סותרות. לא נדרסו נתונים. יש להתאים את הרשומות הסותרות בדפדפן ובטלפון ולנסות שוב.</string>
+    <string name="home_sync_auth">המפתח פג תוקף או בוטל. יש להתנתק ולהזין מפתח חדש.</string>
+    <string name="home_sync_identity">זהות השרת השתנתה. הסנכרון נעצר לשמירה על הנתונים.</string>
+    <string name="home_sync_error">השרת אינו זמין או שהנתונים נדחו. הנתונים המקומיים נשמרו; נסה שוב מאוחר יותר.</string>
+    <string name="home_sync_pending">שינויים מקומיים ממתינים לסנכרון.</string>
+    <string name="home_sync_off">הסנכרון כבוי</string>
+    <string name="home_sync_now">סנכרון עכשיו</string>
+    <string name="home_sync_connect">חיבור</string>
+    <string name="home_sync_disconnect">ניתוק</string>
+    <string name="home_sync_backup_hint">הסנכרון כולל הגדרות, חופשות ומשמרות ואינו מחליף גיבוי מקומי או לדרייב. סנכרון ברקע מתוזמן בערך כל 15 דקות; אנדרואיד עשוי לדחות אותו. מפתחות חיבור אינם נכללים בגיבוי.</string>
+    <string name="home_sync_back">חזרה</string>
+    <string name="manual_entry" formatted="false">"הוספה ידנית"</string>
+    <string name="manual_kind" formatted="false">"סוג דיווח"</string>
+    <string name="manual_work_shift" formatted="false">"משמרת עבודה"</string>
+    <string name="manual_continue" formatted="false">"המשך"</string>
+    <string name="calendar_title" formatted="false">"לוח עבודה"</string>
+    <string name="calendar_missing_hint" formatted="false">"כתום בהיר: יום שחלף בא׳–ה׳ ללא משמרת או היעדרות. לחץ על יום לפירוט."</string>
+    <string name="calendar_missing_count">"%1$s ימים ללא דיווח"</string>
+    <string name="calendar_missing" formatted="false">"חסר דיווח"</string>
+    <string name="calendar_paid_time" formatted="false">"זמן לתשלום"</string>
+    <string name="calendar_no_report" formatted="false">"אין דיווח משמרת או היעדרות."</string>
+    <string name="snapshot_arrange" formatted="false">"סידור כרטיסיות"</string>
+    <string name="snapshot_move_up" formatted="false">"הזזה למעלה"</string>
+    <string name="snapshot_move_down" formatted="false">"הזזה למטה"</string>
+    <string name="snapshot_reset_order" formatted="false">"שחזור סדר ברירת מחדל"</string>
+    <string name="snapshot_save_order" formatted="false">"שמירה"</string>
+    <string name="snapshot_cancel_order" formatted="false">"ביטול"</string>
+    <string name="hours_by_location" formatted="false">"שעות לפי מיקום"</string>
+    <string name="location_all_hours" formatted="false">"סה״כ שעות (כולל נוספות)"</string>
+    <string name="location_all_pay" formatted="false">"תשלום שעות (כולל נוספות)"</string>
+    <string name="location_hourly_value_hint" formatted="false">"שווי העבודה לפי שעה; אינו חלוקה של המשכורת החודשית."</string>
+    <string name="launcher_widgets">ווידג׳טים</string>
+    <string name="launcher_change_widget">החלפת ווידג׳ט</string>
+    <string name="calendar_includes_home">כולל עבודה מהבית</string>
+</resources>

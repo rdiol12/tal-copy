@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="text_93d815fab2" formatted="false">"दैनिक मानक घंटे 0 से अधिक होना चाहिए और 24 से अधिक नहीं होना चाहिए।"</string>
+    <string name="text_9fdb0c0357" formatted="false">"भुगतान शून्य या एक सकारात्मक संख्या होनी चाहिए।"</string>
+    <string name="text_1020d02bcc" formatted="false">"मासिक घंटे का लक्ष्य 0 से अधिक होना चाहिए और 744 से अधिक नहीं होना चाहिए।"</string>
+    <string name="text_a3016d567d" formatted="false">"शुरुआती दिन की अवधि 1 से 31 के बीच होनी चाहिए।"</string>
+    <string name="text_a3b71b8576" formatted="false">"अंतिम अतिरिक्त समय स्तर सभी शेष घंटों को कवर करना चाहिए।"</string>
+    <string name="text_11798e6af6" formatted="false">"दरों की जांच करें और प्रतिशत का भुगतान करें।"</string>
+    <string name="text_142ed94880" formatted="false">"ब्रेक सेटिंग्स अक्षम हैं।"</string>
+    <string name="text_617d62c8d5" formatted="false">"वित्तीय क्रेडिट बिंदु अमान्य हैं।"</string>
+    <string name="text_d64e9be198" formatted="false">"योगदान प्रतिशत 0 से 100 के बीच होना चाहिए।"</string>
+    <string name="text_e9ded22849" formatted="false">"भुगतान आधार अमान्य है।"</string>
+    <string name="text_5340862757" formatted="false">"कम से कम एक कार्य दिवस चुनें।"</string>
+    <string name="text_58ee2bc711" formatted="false">"कारणों की सूची बहुत लंबी है।"</string>
+    <string name="text_54904132d0" formatted="false">"सदस्यों की संख्या या उनके आईडी अमान्य हैं।"</string>
+    <string name="text_bccb639eb1" formatted="false">"अयोग्य कार्य प्रवेश"</string>
+    <string name="text_14afe878db" formatted="false">"प्रारंभिक अवधि वैध है।"</string>
+    <string name="text_285af230e1" formatted="false">"प्रवेश पाठ बहुत लंबा है।"</string>
+    <string name="text_927652b634" formatted="false">"काम में प्रवेश द्वार है।"</string>
+    <string name="text_478ac0cba4" formatted="false">"सक्रिय परिवर्तन एक मौजूदा प्रवेश को पार करता है।"</string>
+    <string name="text_1ce0351978" formatted="false">"कोई स्पष्ट कारण नहीं"</string>
+    <string name="text_0206a8d338" formatted="false">"आप अभी अपने Google खाते से कनेक्ट नहीं कर सकते. आप एक फ़ाइल पर वापस जा सकते हैं और बाद में फिर से कोशिश कर सकते हैं."</string>
+    <string name="text_630af90bc5" formatted="true">"Google अनुमति नहीं दी गई थी (कोड %1$s). पुन: कनेक्ट करें या एक बैकअप कॉपी फ़ाइल का उपयोग करें."</string>
+    <string name="text_daf10c2ee5" formatted="false">"ऑपरेशन विफल रहा. आपके स्थानीय डेटा को संरक्षित किया गया था."</string>
+    <string name="text_25b395415b" formatted="false">"बैकअप कॉपी सफलतापूर्वक Google ड्राइव में बचाया गया है।"</string>
+    <string name="text_fc021a3be3" formatted="false">"इस खाते में कोई ShiftHours बैकअप प्रतियां नहीं मिलीं।"</string>
+    <string name="text_439ed2ca59" formatted="false">"Google ड्राइव से जुड़ा हुआ है।"</string>
+    <string name="text_7480a74f74" formatted="false">"कनेक्शन रद्द कर दिया गया. कोई बैकअप कॉपी या पुनर्स्थापना नहीं की गई."</string>
+    <string name="text_514e675d10" formatted="false">"ड्राइव एक्सेस की अनुमति नहीं दी गई।"</string>
+    <string name="text_325ca3ec59" formatted="false">"ड्राइविंग लाइसेंस नहीं दिया गया है।"</string>
+    <string name="text_5862cd4663" formatted="false">"लक्ष्य फ़ाइल खोलने में असमर्थ है।"</string>
+    <string name="text_a8df08ecdf" formatted="false">"बैकअप फ़ाइल को बचाया गया है।"</string>
+    <string name="text_04bb2141d5" formatted="false">"फ़ाइल पढ़ने में असमर्थ है।"</string>
+    <string name="text_5e9b8b7914" formatted="false">"बैकअप कॉपी बहुत बड़ी है।"</string>
+    <string name="text_221ac78111" formatted="false">"बैकअप कॉपी और पुनर्स्थापना"</string>
+    <string name="text_806ac63619" formatted="false">"एक नए फोन पर जाने के दौरान अपने काम के घंटों को बनाए रखें।"</string>
+    <string name="text_55d63892ad" formatted="false">"Google ड्राइव"</string>
+    <string name="text_e5444dccaf" formatted="false">"कोई खाता नहीं चुना गया"</string>
+    <string name="text_0a2305a775" formatted="false">"एक सफल बैकअप कॉपी केवल अपलोड समाप्त होने के बाद दिखाई देती है।"</string>
+    <string name="text_2fc9030263" formatted="false">"एक खाता कनेक्ट करें और पहुंच प्रदान करें।"</string>
+    <string name="text_cd0e41e136" formatted="false">"खाता चुनें / पुनः कनेक्ट करें"</string>
+    <string name="text_6f3a7bda3a" formatted="false">"Google Drive से जुड़ें"</string>
+    <string name="text_15109258b9" formatted="false">"अब ड्राइव करने के लिए वापस"</string>
+    <string name="text_c75c1e3a33" formatted="false">"पुनर्स्थापित करने के लिए एक ड्राइव बैकअप कॉपी चुनें"</string>
+    <string name="text_90b7df067a" formatted="false">"अभी तक इस खाते के लिए कोई ड्राइव बैकअप कॉपी पूरा नहीं हुआ है।"</string>
+    <string name="text_1c2b595825" formatted="true">"अंतिम सफल बैकअप प्रतिलिपि: %1$s %2$s"</string>
+    <string name="text_32640ad12e" formatted="false">"बैकअप प्रतियां ड्राइव के छिपे हुए ऐप डेटा फ़ोल्डर में संग्रहीत की जाती हैं, सामान्य फ़ाइलों के रूप में नहीं. एक नए फोन पर पुनर्स्थापित करने के लिए, उसी ऐप को स्थापित करें और उसी Google खाते से कनेक्ट करें."</string>
+    <string name="text_ea1a07b6ef" formatted="false">"स्वचालित बैकअप"</string>
+    <string name="text_8edcd28553" formatted="false">"बंद"</string>
+    <string name="text_ef4037576b" formatted="false">"दैनिक"</string>
+    <string name="text_50296d4c2d" formatted="false">"साप्ताहिक"</string>
+    <string name="text_790f24eb34" formatted="false">"बैकअप कॉपी कार्यक्रम अद्यतन किया गया है।"</string>
+    <string name="text_e75e2661b7" formatted="false">"केवल एक अनमोल नेटवर्क पर, जैसे कि वाई-फाई"</string>
+    <string name="text_cf3d313652" formatted="false">"डिवाइस को कनेक्ट करने के बाद अनुसूची उपलब्ध है. Android बैटरी को बचाने के लिए बैकअप प्रतियां देरी कर सकता है या जब ऑफ़लाइन हो. पहले बैकअप प्रतियां तुरंत बनाने के लिए ऊपर दिए गए बटन का उपयोग करें."</string>
+    <string name="text_1e579b05be" formatted="false">"स्थानीय रूप से कनेक्ट किया और कार्यक्रम रद्द कर दिया. मौजूदा बैकअप प्रतियां नहीं हटाई गईं."</string>
+    <string name="text_83eccb0dd3" formatted="false">"डिस्कनेक्ट करें और कार्यक्रम रद्द करें"</string>
+    <string name="text_b35a854e22" formatted="false">"फ़ाइल बैकअप कॉपी और पुनर्स्थापना"</string>
+    <string name="text_1da6e0d4aa" formatted="false">"अपने कंप्यूटर पर, ड्राइव में या कहीं और एक बैकअप कॉपी फ़ाइल सहेजें, यहां तक कि ऐप के Google कनेक्शन को स्थापित करने से पहले भी।"</string>
+    <string name="text_52cca61a5d" formatted="false">"Backup Copy फ़ाइल को बचाएं"</string>
+    <string name="text_4d2b863edd" formatted="false">"Backup Copy फ़ाइल से पुनर्स्थापित करें"</string>
+    <string name="text_f4ab9db1a0" formatted="false">"बैकअप कॉपी में इनपुट, एक सक्रिय स्विच, सेटिंग्स और बचाए गए कारण शामिल हैं. पुनर्प्राप्ति से पहले, एक पूर्वावलोकन दिखाई देता है और आपके पिछले डेटा का एक स्थानीय कॉपी बचाया जाता है."</string>
+    <string name="text_86472e4d43" formatted="false">"अंतिम पुनर्प्राप्ति से पहले सहेजे गए प्रति खोलें"</string>
+    <string name="text_bf72e99186" formatted="true">"यह डिवाइस %1$s इनपुट रखता है. Google को फिर से कनेक्ट करें और प्रत्येक फोन पर बैकअप कॉपी कार्यक्रम सेट करें."</string>
+    <string name="text_b5af650c8c" formatted="false">"पुनर्प्राप्ति मोड: स्थानीय डेटा नहीं पढ़ा जा सकता है. फ़ाइल या ड्राइव से पुनर्प्राप्ति; नए बैकअप कॉपी बनाना अक्षम है."</string>
+    <string name="text_f738c4c045" formatted="false">"उपलब्ध बैकअप कॉपी"</string>
+    <string name="text_c775e7dcf6" formatted="false">"कोई बैकअप कॉपी चुने हुए खाते में नहीं पाया गया है।"</string>
+    <string name="text_b728721fc0" formatted="false">"करीब"</string>
+    <string name="text_835ba611ee" formatted="false">"पुनर्स्थापना की पुष्टि"</string>
+    <string name="text_bfe0764274" formatted="true">"बैकअप कॉपी में %1$s इनपुट शामिल हैं।"</string>
+    <string name="text_19a88cf185" formatted="true">"रेंज: %1$s से %2$s तक"</string>
+    <string name="text_ea12a4ba2b" formatted="false">"कोई नहीं"</string>
+    <string name="text_1f70207bab" formatted="false">"हाँ"</string>
+    <string name="text_3cbbf0077a" formatted="true">"सक्रिय शिफ्ट: %1$s"</string>
+    <string name="text_2388ed2d80" formatted="true">"पुनर्स्थापना से इस डिवाइस के %1$s रिकॉर्ड और सेटिंग्स बदल जाएंगे। पहले एक स्थानीय प्रति सहेजी जाएगी।"</string>
+    <string name="text_f35658ed7c" formatted="false">"पुनर्निर्माण पूरा हो गया है।"</string>
+    <string name="text_a87c9f4c06" formatted="false">"डेटा बदलें और पुनर्स्थापित करें"</string>
+    <string name="text_a7c55a8d06" formatted="false">"रद्द करें"</string>
+    <string name="text_7b80593224" formatted="false">"फ़ाइल बहुत बड़ी है।"</string>
+    <string name="text_b36a3090e4" formatted="false">"यह बैकअप कॉपी इस एप्लिकेशन संस्करण के साथ असंगत है।"</string>
+    <string name="text_1d25b4e13f" formatted="false">"यह एक समर्थित ShiftHours बैकअप कॉपी नहीं है।"</string>
+    <string name="text_c84389ddd1" formatted="false">"बैकअप कॉपी क्षतिग्रस्त है: अखंडता जांच विफल हो गई है।"</string>
+    <string name="text_2159b4a358" formatted="false">"अज्ञात पिछले डेटा संस्करण।"</string>
+    <string name="text_4ae6ec8fa0" formatted="false">"अभी तक डेटा लोड नहीं किया गया है।"</string>
+    <string name="text_cf903e3463" formatted="false">"एक वैध संख्या दर्ज करें।"</string>
+    <string name="text_039bb0fc27" formatted="false">"समय को घंटे के रूप में दर्ज करें: मिनट या दस घंटे।"</string>
+    <string name="text_a7fcad5418" formatted="false">"अक्षम घंटे की संख्या"</string>
+    <string name="text_37e2eed494" formatted="false">"अक्षम मिनटों की संख्या"</string>
+    <string name="text_77c0279c02" formatted="false">"अवधि की शुरुआत दिन से होती है।"</string>
+    <string name="text_3f800b0cce" formatted="false">"अवधि के अंत दिन।"</string>
+    <string name="text_14611081ea" formatted="false">"अंतिम दिन अगले अवधि की शुरुआत से पहले होना चाहिए।"</string>
+    <string name="text_b9e104411d" formatted="false">"पूरे मिनट में ब्रेक समय में प्रवेश करें।"</string>
+    <string name="text_2189089fc9" formatted="false">"सेटिंग्स की जांच करें।"</string>
+    <string name="text_81de798264" formatted="false">"स्वागत है"</string>
+    <string name="text_47cfdefbce" formatted="false">"सेटिंग्स"</string>
+    <string name="text_8d74344d70" formatted="false">"अपने काम की शर्तों को निर्धारित करें और शुरू करने के लिए बचत करें।"</string>
+    <string name="text_9a90a562d2" formatted="false">"परिवर्तन सहेजें"</string>
+    <string name="text_ab4dfe20aa" formatted="false">"यह सभी प्रविष्टियों के लिए लागू होता है, जिसमें पिछले प्रविष्टियां भी शामिल हैं।"</string>
+    <string name="text_0bf5310554" formatted="false">"बचत..."</string>
+    <string name="text_54d36ad080" formatted="false">"सेटिंग्स सहेजें"</string>
+    <string name="text_465e8134a4" formatted="false">"वेतन और ओवरटाइम"</string>
+    <string name="text_45a3198e62" formatted="false">"अवधि और ब्रेक"</string>
+    <string name="text_bfc0c0e7f1" formatted="false">"कर और योगदान"</string>
+    <string name="text_a2ceeb919c" formatted="false">"बचाए गए कारण"</string>
+    <string name="text_3d0ffbb6b9" formatted="false">"वेतन का प्रकार"</string>
+    <string name="text_9852666700" formatted="false">"निश्चित मासिक वेतन"</string>
+    <string name="text_c17956962e" formatted="false">"कुल मासिक वेतन (₪)"</string>
+    <string name="text_55bc5d12cc" formatted="false">"घंटे का भुगतान (₪)"</string>
+    <string name="text_635f53e8e3" formatted="false">"आपके नियोक्ता द्वारा आवश्यक मासिक घंटे"</string>
+    <string name="text_8b4c4a643c" formatted="false">"घंटे की दर = मासिक वेतन ÷ मासिक घंटे लक्ष्य. बड़े पैमाने पर भुगतान में पूर्ण मासिक वेतन के साथ-साथ अतिरिक्त समय के भुगतान को समायोजित दरों पर शामिल किया गया है।"</string>
+    <string name="text_7414d91b15" formatted="false">"कुल भुगतान रिकॉर्ड किए गए घंटों और कॉन्फ़िगर किए गए तीसरे हिस्से से गणना की जाती है।"</string>
+    <string name="text_8a239ab302" formatted="false">"ओवरटाइम के चरण"</string>
+    <string name="text_0fea91c3a0" formatted="false">"दिन में नियमित घंटे"</string>
+    <string name="text_996add3cb0" formatted="false">"दस घंटे या घंटे दर्ज करें: मिनट, उदाहरण के लिए 2.5 या 2:30।"</string>
+    <string name="text_b779c7c572" formatted="true">"चरण %1$s"</string>
+    <string name="text_25606d5652" formatted="false">"सभी शेष घंटे"</string>
+    <string name="text_92102dc8df" formatted="false">"इस स्तर पर घंटे"</string>
+    <string name="text_b5fe6f82a9" formatted="false">"घंटे की दर का प्रतिशत"</string>
+    <string name="text_bd38859717" formatted="false">"यह स्तर नियमित घंटों के बाद और इसके ऊपर सभी तिहाई पर लागू होता है।"</string>
+    <string name="text_5192d415d8" formatted="false">"ऊपर चलना"</string>
+    <string name="text_6179185b49" formatted="false">"नीचे उतरना"</string>
+    <string name="text_7c8173fafa" formatted="false">"हटाएँ"</string>
+    <string name="text_f428ab9623" formatted="false">"चरण जोड़ें"</string>
+    <string name="text_f1f14874a4" formatted="false">"अंतिम पंक्ति में, एक \"सभी शेष घंटे\" स्तर की आवश्यकता होती है. एक स्तर जोड़ने से पिछले स्तर को सीमित किया जाता है; उसके घंटे की जांच करें."</string>
+    <string name="text_89fef4fd58" formatted="false">"रिपोर्टिंग अवधि"</string>
+    <string name="text_6c22041108" formatted="false">"अवधि का पहला दिन (1–31)"</string>
+    <string name="text_796e34b83e" formatted="false">"अंतिम दिन (31 = महीने के अंत)"</string>
+    <string name="text_b241433b46" formatted="false">"उदाहरण के लिए, 25-24. दिन अंतराल या अवरोध से बचने के लिए जुड़े हुए हैं. एक छोटे से महीने में, शुरुआती तारीख उपलब्ध अंतिम दिन के लिए समायोजित होती है."</string>
+    <string name="text_a222187697" formatted="true">"वर्तमान अवधि: %1$s – %2$s"</string>
+    <string name="text_01f30eb896" formatted="false">"छूट को तोड़ना"</string>
+    <string name="text_c9beca5709" formatted="false">"समय को तोड़ने के फायदे"</string>
+    <string name="text_a123134aa5" formatted="false">"दिन में एक बार"</string>
+    <string name="text_26dcd5cc53" formatted="false">"सेगमेंट के लिए"</string>
+    <string name="text_fa4922c12a" formatted="false">"मिनटों को हटाने के लिए"</string>
+    <string name="text_ff7f573a4d" formatted="false">"घर से काम करते समय भी ब्रेक लेना"</string>
+    <string name="text_143dd7316a" formatted="false">"एक दैनिक ब्रेक को समय-समय पर योग्य खंडों के माध्यम से एक बार छूट दी जाती है. घर का काम तब छोड़ दिया जाता है जब इसके विकल्प बंद हो जाते हैं. छूट कभी भी वास्तविक काम करने वाले समय से अधिक नहीं होती है."</string>
+    <string name="text_40494acb7f" formatted="false">"कोई टूटने की छूट नहीं. सभी रिकॉर्ड किए गए समय को भुगतान योग्य समय के रूप में गिना जाता है."</string>
+    <string name="text_8a53041f32" formatted="false">"दैनिक कमी के लिए कार्य दिवस"</string>
+    <string name="text_b6c4c767eb" formatted="false">"रवि"</string>
+    <string name="text_c0505c1097" formatted="false">"सोम"</string>
+    <string name="text_7b5b7d0c90" formatted="false">"मंगल"</string>
+    <string name="text_88aa0681e1" formatted="false">"बुध"</string>
+    <string name="text_c2742c4cba" formatted="false">"गुरु"</string>
+    <string name="text_08e0ffcda5" formatted="false">"शुक्र"</string>
+    <string name="text_0645b32caf" formatted="false">"शनि"</string>
+    <string name="text_92d73e83f6" formatted="false">"केवल दैनिक कमी को प्रभावित करता है. समान अतिरिक्त समय तिहाई सभी दिनों पर लागू होते हैं; कोई अलग सप्ताहांत या छुट्टियों के नियम नहीं होते हैं."</string>
+    <string name="text_69e69a7518" formatted="false">"कर क्रेडिट बिंदु और अनुमानित शुद्ध भुगतान"</string>
+    <string name="text_70d7cd14f1" formatted="false">"कर क्रेडिट बिंदु (आपके भुगतान से)"</string>
+    <string name="text_9987c69efd" formatted="false">"प्रत्येक बिंदु 2026 इजरायली कर तालिका के तहत प्रति माह 242 ₪ का मूल्य है।"</string>
+    <string name="text_8cee38323a" formatted="false">"सेवानिवृत्ति और प्रशिक्षण फंड"</string>
+    <string name="text_9982697de0" formatted="false">"कर्मचारियों की सेवानिवृत्ति में योगदान (%)"</string>
+    <string name="text_3638d5596d" formatted="false">"कर्मचारियों के प्रशिक्षण फंड योगदान (%; 0 यदि कोई नहीं)"</string>
+    <string name="text_90b68945c0" formatted="false">"केवल कर्मचारियों का हिस्सा दर्ज करें, नियोक्ता योगदान को छोड़कर।"</string>
+    <string name="text_e2e16aa700" formatted="false">"योगदान के लिए भुगतान आधार"</string>
+    <string name="text_dc959b16aa" formatted="false">"बेस भुगतान अतिरिक्त समय को छोड़कर"</string>
+    <string name="text_682c0e2622" formatted="false">"कुल भुगतान"</string>
+    <string name="text_3f55564e26" formatted="false">"मैन्युअल रूप से निर्धारित राशि"</string>
+    <string name="text_0d4b9a288d" formatted="false">"भुगतान आधार (₪)"</string>
+    <string name="text_3284189b89" formatted="false">"मानक सेवानिवृत्ति योगदान कर क्रेडिट शामिल करें"</string>
+    <string name="text_0b5e7d7238" formatted="false">"सेवानिवृत्ति कर क्रेडिट अनुमान योग्य योगदानों का 35% है, जो प्रति माह योगदानों के 679 ₪ और वेतन का 7% है. यह एक मासिक, अनगिनत गणना है."</string>
+    <string name="text_102196cdf2" formatted="false">"अनुमान में क्या शामिल है"</string>
+    <string name="text_c02d9dbae9" formatted="false">"आयकर, कर क्रेडिट अंक, इजरायली राष्ट्रीय और स्वास्थ्य बीमा, और कर्मचारियों के योगदान. सेवानिवृत्ति के लिए 18 साल के इजरायली निवासियों के लिए 2026 तालिकाओं का उपयोग करें।"</string>
+    <string name="text_a09a8853d1" formatted="false">"कर समन्वय, अन्य आय, कर योग्य कार लाभ, नियोक्ता योगदान कर और विशेष क्रेडिट को छोड़ दें. अपने भुगतान के साथ तुलना करें और जरूरत के अनुसार सुधार करें."</string>
+    <string name="text_49148d6451" formatted="false">"घर से काम करने के लिए बचाए गए कारण"</string>
+    <string name="text_62d649ad15" formatted="false">"नए कारण"</string>
+    <string name="text_45bd96d34b" formatted="false">"सूची में जोड़ें"</string>
+    <string name="text_a99e68e9f4" formatted="false">"हटाएँ"</string>
+    <string name="text_1b581c283a" formatted="false">"एक बचाए गए कारण को हटाने से मौजूदा इनपुट नहीं बदलते. आप हमेशा मुफ्त पाठ दर्ज कर सकते हैं."</string>
+    <string name="text_d44063b451" formatted="false">"डेटा लोड असफल रहा।"</string>
+    <string name="text_31e02fbfa7" formatted="false">"बदलाव नहीं किया गया है. फिर से कोशिश करें."</string>
+    <string name="text_71f28ff8fa" formatted="false">"डेटा लोड करने में असमर्थ"</string>
+    <string name="text_b238f1a394" formatted="false">"फ़ाइलों को संरक्षित किया गया है. ऐप के डेटा को साफ न करें."</string>
+    <string name="text_fc2297f319" formatted="false">"फिर से कोशिश करें"</string>
+    <string name="text_6e56c6a002" formatted="false">"एक बैकअप कॉपी पुनर्स्थापित करें"</string>
+    <string name="text_e4f2184a47" formatted="false">"डिवाइस घड़ी की जांच करें: भविष्य में एक प्रवेश समाप्त हो जाता है।"</string>
+    <string name="text_6f6a3321b0" formatted="false">"शुरुआती समय के बाद अंत का समय होना चाहिए।"</string>
+    <string name="text_e0aad7a0c2" formatted="false">"सेटिंग्स बचाए गए हैं।"</string>
+    <string name="text_8dfb4f3f58" formatted="false">"प्रवेश बचाया गया है।"</string>
+    <string name="text_7a6915a25c" formatted="false">"आप उन घंटों को रिकॉर्ड नहीं कर सकते जो अभी तक नहीं हुए हैं।"</string>
+    <string name="text_2aca9c2968" formatted="false">"समय-समय भविष्य में नहीं हो सकता है।"</string>
+    <string name="text_f9dc75319d" formatted="false">"आउटपुट हटाएं"</string>
+    <string name="text_f026fe8829" formatted="true">"आउटपुट को हटाने के लिए %1$s? यह अस्वीकार नहीं किया जा सकता है."</string>
+    <string name="text_b0e3328ac0" formatted="false">"घर से काम करने का कारण"</string>
+    <string name="text_f1af79973d" formatted="false">"एक बचाए गए कारण का चयन करें"</string>
+    <string name="text_05d94bc43f" formatted="false">"मेरे काम के घंटे"</string>
+    <string name="text_c83e648a74" formatted="false">"प्रारंभिक स्थापना"</string>
+    <string name="text_89c15910b6" formatted="false">"भुगतान की गणना करने के लिए अपने भुगतान, मासिक घंटे और कार्य समय सेट करें. आप स्थापना पूरा करने से पहले घंटे रिकॉर्ड कर सकते हैं."</string>
+    <string name="text_7c1126f30f" formatted="false">"खुले सेटिंग्स"</string>
+    <string name="text_01ebd1a71f" formatted="false">"शुरू करने के लिए तैयार हैं?"</string>
+    <string name="text_6d81f53fb4" formatted="true">"शिफ्ट जारी है · %1$s"</string>
+    <string name="text_8b6488028e" formatted="false">"वर्तमान समय पर शिफ्ट शुरू करने के लिए स्वाइप करें।"</string>
+    <string name="text_c386f7af9f" formatted="true">"कार्य आरंभ: %1$s %2$s"</string>
+    <string name="text_bc84ae26be" formatted="false">"वर्तमान समय पर शिफ्ट समाप्त करने के लिए स्वाइप करें।"</string>
+    <string name="text_73a90395c7" formatted="false">"शुरू करने के लिए स्वाइप करें"</string>
+    <string name="text_867983500d" formatted="false">"समाप्त करने के लिए स्वाइप करें"</string>
+    <string name="text_a5d8698fba" formatted="false">"सही घड़ी-इन / एक और अंत समय सेट करें"</string>
+    <string name="text_1efd4660f9" formatted="false">"शिफ्ट मैन्युअल रूप से जोड़ें"</string>
+    <string name="text_79a7f1d677" formatted="false">"आपके घड़ी-इन समय को तब भी बचाया जाता है जब ऐप बंद हो जाता है।"</string>
+    <string name="text_95d86d7f5f" formatted="false">"आज"</string>
+    <string name="text_6834f9db87" formatted="false">"शुद्ध घंटे"</string>
+    <string name="text_b076df1539" formatted="false">"एक ही दिन में सेगमेंट्स संयुक्त होते हैं. एक रात के माध्यम से स्विच इसकी शुरुआती तारीख से संबंधित है."</string>
+    <string name="text_7991cbb6a8" formatted="false">"वर्तमान अवधि"</string>
+    <string name="text_3084f001bd" formatted="false">"दर्ज घंटे"</string>
+    <string name="text_7447d177b1" formatted="false">"ओवरटाइम"</string>
+    <string name="text_e2cbeabb69" formatted="false">"पूर्ण वेतन + रिकॉर्ड अतिरिक्त समय"</string>
+    <string name="text_4c0803b36f" formatted="false">"इनपुट से भुगतान"</string>
+    <string name="text_389abd9ee8" formatted="false">"भुगतान सारांश प्रारंभिक सेटिंग्स को बचाने के बाद दिखाई देगा।"</string>
+    <string name="text_1960680292" formatted="false">"बैकअप कॉपी स्थिति"</string>
+    <string name="text_dd6ddc4c4f" formatted="false">"कोई ड्राइव बैकअप कॉपी इस डिवाइस पर अभी तक पूरा नहीं किया गया है।"</string>
+    <string name="text_1c3f9e273d" formatted="true">"सफल ड्राइव बैकअप कॉपी: %1$s %2$s"</string>
+    <string name="text_6e55aef91f" formatted="false">"दैनिक बैकअप कॉपी अनुसूचित"</string>
+    <string name="text_17ee444b2e" formatted="false">"साप्ताहिक बैकअप प्रतिलिपि अनुसूची"</string>
+    <string name="text_d7da1ab695" formatted="false">"स्वचालित ड्राइव बैकअप कॉपी बंद हो गया है"</string>
+    <string name="text_bba88dd845" formatted="false">"सेटिंग्स और कार्य नीचे बैकअप कॉपी टैब में उपलब्ध हैं।"</string>
+    <string name="text_d61f7f639f" formatted="false">"पिछला"</string>
+    <string name="text_28890b291d" formatted="false">"अगला"</string>
+    <string name="text_023f8a1a0c" formatted="false">"स्थिति का सार"</string>
+    <string name="text_0cdf398747" formatted="false">"घंटे, भुगतान और अवधि के लिए ट्रैकिंग"</string>
+    <string name="text_5b40d10b38" formatted="false">"मासिक वेतन + अतिरिक्त समय"</string>
+    <string name="text_b7cebc21b4" formatted="false">"घंटे का भुगतान"</string>
+    <string name="text_24c64cee7b" formatted="false">"पूर्ण मासिक वेतन"</string>
+    <string name="text_1558a05606" formatted="false">"नियमित घंटे का भुगतान"</string>
+    <string name="text_5407314942" formatted="false">"अतिरिक्त भुगतान"</string>
+    <string name="text_ebff026858" formatted="false">"घंटे की दर"</string>
+    <string name="text_f072356bdc" formatted="false">"पूर्ण मासिक वेतन दिखाया जाता है. खोए हुए घंटे अलग-अलग प्रदर्शित होते हैं और स्वचालित रूप से छूट नहीं मिलती हैं."</string>
+    <string name="text_d7fec4855e" formatted="false">"इस अवधि के भीतर सक्रिय परिवर्तन के घंटों को शामिल करता है; लाइव अपडेट की मात्रा।"</string>
+    <string name="text_087fd2cd6d" formatted="false">"घंटे का ब्रेकअप"</string>
+    <string name="text_3eb92e199a" formatted="false">"कुल शुद्ध समय"</string>
+    <string name="text_07b643f83a" formatted="false">"सामान्य घंटे"</string>
+    <string name="text_dda62e1cc9" formatted="false">"कुल ओवरटाइम"</string>
+    <string name="text_27fa002b22" formatted="true">"%1$s%% दर पर घंटे"</string>
+    <string name="text_0d562e6527" formatted="true">"%1$s%% दर पर भुगतान"</string>
+    <string name="text_b93940ad5b" formatted="false">"अतिरिक्त घंटे का वजन"</string>
+    <string name="text_aa79d639a1" formatted="false">"कार्यालय और घर"</string>
+    <string name="text_b895b63363" formatted="false">"कार्यालय घंटे"</string>
+    <string name="text_bf004c7509" formatted="false">"Home घंटे"</string>
+    <string name="text_a839ec02b2" formatted="true">"%1$s%% कार्यालय में"</string>
+    <string name="text_b8ded3389c" formatted="false">"आधार दर पर कार्यालय मूल्य"</string>
+    <string name="text_ec791b21f9" formatted="false">"Home मूल्य आधार दर पर"</string>
+    <string name="text_2d3fd3bb5b" formatted="false">"आधार दर मूल्य अतिरिक्त समय प्रीमियम को बाहर निकालते हैं; उन्हें कुल भुगतान में जोड़ने के लिए नहीं।"</string>
+    <string name="text_6689630948" formatted="false">"खोए हुए घंटे और प्रवेश चेक"</string>
+    <string name="text_23b17c77be" formatted="false">"इस अवधि के लिए लक्ष्य घंटे"</string>
+    <string name="text_9e0655ff1b" formatted="false">"मासिक लक्ष्य के मुकाबले कम"</string>
+    <string name="text_468b69c83d" formatted="false">"दैनिक कमी की संख्या"</string>
+    <string name="text_d75f4dd709" formatted="false">"दैनिक कमी केवल इनपुट के साथ चुने हुए कार्य दिवसों की गिनती करती है. इनपुट के बिना दिन स्वचालित रूप से अनुपस्थिति के रूप में चिह्नित नहीं होते हैं."</string>
+    <string name="text_e9f9673a47" formatted="false">"ऑफिस-केवल कमी"</string>
+    <string name="text_8e87e45498" formatted="false">"ऑफिस-केवल घंटे दैनिक मानक से ऊपर"</string>
+    <string name="text_43af7314c4" formatted="false">"घड़ी-इन/आउट नोट की कमी के साथ दिन"</string>
+    <string name="text_d41113bbd2" formatted="false">"इनपुट के साथ दिन"</string>
+    <string name="text_3ee5d8b89f" formatted="false">"कारण से घर का काम"</string>
+    <string name="text_e220a05303" formatted="false">"इस अवधि में कोई घरेलू प्रवेश नहीं है।"</string>
+    <string name="text_4b0ccb42af" formatted="false">"घंटे"</string>
+    <string name="text_387c48c332" formatted="false">"आधार दर पर मूल्य"</string>
+    <string name="text_a347b2c73c" formatted="false">"शुद्ध भुगतान का अनुमान"</string>
+    <string name="text_b8e45d7b9e" formatted="true">"%1$s के लिए टैक्स तालिकाओं को कॉन्फ़िगर नहीं किया गया है. कोई शुद्ध अनुमान नहीं दिखाया गया है."</string>
+    <string name="text_90128d6911" formatted="false">"एक अनुमान दिखाने के लिए अपने टैक्स क्रेडिट अंक और कर्मचारियों की सेवानिवृत्ति प्रतिशत में दर्ज करें. 0 दर्ज करें यदि कोई योगदान नहीं है."</string>
+    <string name="text_3d880292e0" formatted="false">"आय कर"</string>
+    <string name="text_89e2b25fb1" formatted="false">"राष्ट्रीय बीमा"</string>
+    <string name="text_c694983c02" formatted="false">"स्वास्थ्य बीमा"</string>
+    <string name="text_901acdd444" formatted="false">"सेवानिवृत्ति - कर्मचारियों का हिस्सा"</string>
+    <string name="text_852a1bee2a" formatted="false">"प्रशिक्षण फंड - कर्मचारियों का हिस्सा"</string>
+    <string name="text_f8ee9f9027" formatted="false">"पेंशन योगदान कर क्रेडिट"</string>
+    <string name="text_192617126a" formatted="false">"मासिक अनुमान 2026 इजरायली तालिकाओं का उपयोग करके. कुल कर, अन्य आय, कर योग्य लाभ और कर समन्वय को छोड़ देता है. योगदान चुने हुए भुगतान आधार का उपयोग करते हैं. भुगतान के लिए कोई प्रतिस्थापन नहीं."</string>
+    <string name="text_fe04db5f37" formatted="false">"समय घंटे के रूप में प्रदर्शित किया जाता है: मिनट; गणना स्रोत सेकंड बनाए रखती है. आपके कॉन्फ़िगर किए गए तिहाई सप्ताह के हर दिन लागू होते हैं."</string>
+    <string name="text_3141c61e9e" formatted="false">"घंटों का विवरण"</string>
+    <string name="text_723a7db2af" formatted="false">"शिफ्ट और कार्य खंड"</string>
+    <string name="text_57b4cda969" formatted="false">"+ मैन्युअल शिफ्ट जोड़ें"</string>
+    <string name="text_7149f2ed6a" formatted="false">"अन्य लोग पूरे दिन उपयोग करते हैं, यहां तक कि एक कार्यस्थल में फ़िल्टर करते समय भी।"</string>
+    <string name="text_3579e0306b" formatted="false">"एक परिवर्तन सक्रिय है. इसकी शुरुआत को ठीक करें या होम स्क्रीन पर एक अंत समय दर्ज करें."</string>
+    <string name="text_643cae9ae3" formatted="false">"इस अवधि के दौरान कोई प्रविष्टि नहीं हुई।"</string>
+    <string name="text_d3fcfb1a78" formatted="true">"कार्य समाप्ति: %1$s %2$s"</string>
+    <string name="text_39fe25939b" formatted="false">"संपादित करें"</string>
+    <string name="text_0826149cf1" formatted="false">"दिन का सारांश"</string>
+    <string name="text_d783472020" formatted="false">"दिन का कुल शुद्ध समय"</string>
+    <string name="text_a3756d29d2" formatted="false">"भुगतान योग्य समय"</string>
+    <string name="text_c24fae5be3" formatted="false">"वर्तमान फ़िल्टर में समय"</string>
+    <string name="text_b70622d71d" formatted="false">"सही सक्रिय परिवर्तन"</string>
+    <string name="text_59cb6e8e9a" formatted="false">"शिफ्ट संपादित करें"</string>
+    <string name="text_10045253c1" formatted="false">"मैन्युअल शिफ्ट"</string>
+    <string name="text_2f6783cd3b" formatted="false">"कार्य आरंभ"</string>
+    <string name="text_b939061e41" formatted="false">"कार्य समाप्ति"</string>
+    <string name="text_8f9bc2d880" formatted="false">"नोट / घड़ी-इन या घड़ी-आउट की कमी"</string>
+    <string name="text_d958ea3cd8" formatted="true">"ब्रेक से पहले की अवधि: %1$s"</string>
+    <string name="text_1be17082dd" formatted="false">"एक ही दिन में सेगमेंट अतिरिक्त समय के तीसरे हिस्से को साझा करते हैं. अतिरिक्त सेगमेंट में प्रवेश न करें."</string>
+    <string name="text_d42c0813fc" formatted="false">"समय-समय भविष्य में नहीं हो सकता है।"</string>
+    <string name="text_510b00fcc4" formatted="false">"ठीक से शुरू करें और स्विच खुला रखें"</string>
+    <string name="text_647a733fb8" formatted="false">"समय-समय में अयोग्य"</string>
+    <string name="text_4c82f98655" formatted="false">"घड़ी से बाहर निकलने के बाद घड़ी से बाहर निकलना चाहिए. एक रात के अंतराल के लिए, सही समाप्ति तिथि भी चुनें."</string>
+    <string name="text_c2fb808976" formatted="false">"भविष्य में घड़ी-आउट नहीं हो सकता है।"</string>
+    <string name="text_6eb37ad66f" formatted="false">"समाप्त करें और बदलाव बचाएं"</string>
+    <string name="text_e69323393b" formatted="false">"सहेजें"</string>
+    <string name="text_b89e7bee64" formatted="false">"प्रारंभिक व्यवस्था"</string>
+    <string name="text_2eaf74bbd8" formatted="false">"अपनी शर्तों से शुरू करें"</string>
+    <string name="text_f9fb70ce3b" formatted="false">"भुगतान और मासिक घंटे दर्ज करें, फिर अतिरिक्त समय तिहाई, ब्रेक और रिपोर्टिंग अवधि को समायोजित करें।"</string>
+    <string name="text_925bb7a659" formatted="false">"Google लाइसेंस समाप्त हो गया है. फिर से कनेक्ट करें."</string>
+    <string name="text_86de69005f" formatted="false">"ड्राइव एक्सेस को अस्वीकार कर दिया गया है. अपने Google खाते को फिर से कनेक्ट करें."</string>
+    <string name="text_0885c5a6fa" formatted="false">"बैकअप को चुने हुए खाते में नहीं पाया गया था।"</string>
+    <string name="text_09780711f6" formatted="false">"Google अनुरोधों को सीमित कर रहा है. बाद में फिर से कोशिश करें."</string>
+    <string name="text_2a152ef564" formatted="true">"Google ड्राइव संचार विफल रहा (कोड %1$s)।"</string>
+    <string name="text_07d8d8fb15" formatted="false">"एक Google खाता चुनें।"</string>
+    <string name="text_44707e2acd" formatted="false">"Google ने बैकअप कॉपी बनाने की पुष्टि नहीं की है।"</string>
+    <string name="text_eee5e9d37e" formatted="false">"बैकअप कॉपी नहीं बनाया गया था: अनुमति फिर से आवश्यक है. बैकअप कॉपी खोलें और फिर से कनेक्ट करें."</string>
+    <string name="text_fb5e219eb1" formatted="false">"बैकअप कॉपी विफल रहा:"</string>
+    <string name="text_82a2bfa2fe" formatted="false">"नेटवर्क त्रुटि"</string>
+    <string name="nav_home" formatted="false">"मुख्य पृष्ठ"</string>
+    <string name="nav_dashboard" formatted="false">"स्थिति का सार"</string>
+    <string name="nav_records" formatted="false">"रिकॉर्ड"</string>
+    <string name="nav_settings" formatted="false">"सेटिंग्स"</string>
+    <string name="nav_backup" formatted="false">"बैकअप"</string>
+    <string name="location_home" formatted="false">"घर"</string>
+    <string name="location_office" formatted="false">"कार्यालय"</string>
+    <string name="filter_all" formatted="false">"सभी"</string>
+    <string name="app_name" formatted="false">"ShiftHours"</string>
+    <string name="language_title" formatted="false">"भाषा"</string>
+    <string name="language_system" formatted="false">"डिवाइस की भाषा"</string>
+    <string name="language_hint" formatted="false">"भाषा इस डिवाइस पर संग्रहीत की जाती है. भाषाओं को स्विच करने से पहले परिवर्तनों को सहेजें. मुद्रा और कर नियम अपने वर्तमान सेटिंग्स को बनाए रखते हैं."</string>
+    <string name="tax_profile" formatted="false">"कर प्रोफ़ाइल"</string>
+    <string name="tax_country" formatted="false">"कर देश या क्षेत्राधिकार"</string>
+    <string name="tax_year" formatted="false">"कर वर्ष"</string>
+    <string name="tax_region" formatted="false">"कर क्षेत्र"</string>
+    <string name="tax_choose" formatted="false">"चुनें"</string>
+    <string name="tax_england" formatted="false">"इंग्लैंड"</string>
+    <string name="tax_wales" formatted="false">"वेल्स"</string>
+    <string name="tax_northern_ireland" formatted="false">"उत्तरी आयरलैंड"</string>
+    <string name="tax_scotland" formatted="false">"स्कॉटलैंड"</string>
+    <string name="tax_unavailable" formatted="false">"इस देश के लिए शुद्ध वेतन अनुमान अभी उपलब्ध नहीं है। घंटे और सकल वेतन उपलब्ध हैं।"</string>
+    <string name="tax_year_unavailable" formatted="false">"इस वर्ष के लिए सत्यापित कर तालिका उपलब्ध नहीं है।"</string>
+    <string name="tax_uk_required" formatted="false">"ब्रिटिश क्षेत्र चुनें और प्रोफ़ाइल की पुष्टि करें।"</string>
+    <string name="tax_foreign_fields" formatted="false">"इज़राइली कर अंक और योगदान नियम इस देश पर लागू नहीं होते।"</string>
+    <string name="tax_uk_profile" formatted="false">"मैं पुष्टि करता हूँ कि नीचे दी गई ब्रिटिश प्रोफ़ाइल मुझ पर लागू है।"</string>
+    <string name="tax_country_hint" formatted="false">"देश और भाषा स्वतंत्र हैं। देश चुनना व्यक्तिगत कर छूट की पात्रता तय नहीं करता।"</string>
+    <string name="tax_currency_warning" formatted="false">"देश बदलने से मुद्रा चिह्न बदलता है; वेतन राशि या ओवरटाइम नियम परिवर्तित नहीं होते। सेटिंग्स जाँचें।"</string>
+    <string name="tax_uk_scope" formatted="false">"ब्रिटेन 2026/27: आयकर के लिए स्थिर मासिक वेतन का वार्षिकीकरण और मासिक श्रेणी A राष्ट्रीय बीमा। उच्च आय पर घटने वाली सामान्य व्यक्तिगत छूट। केवल एक नौकरी; अन्य आय, पेंशन कटौती, वेतन त्याग, छात्र ऋण, कर योग्य लाभ या विशेष छूट नहीं। यह संचयी PAYE गणना नहीं है।"</string>
+    <string name="tax_scope_in" formatted="false">"भारत, वित्त वर्ष 2025/26–2026/27: कर निवासी वेतनभोगी, केवल नई व्यवस्था, स्थिर नकद वेतन का वार्षिकीकरण; अन्य आय या विशेष कर छूट नहीं। मानक कटौती, रिबेट, सीमांत राहत और 4% उपकर शामिल। वार्षिक कर योग्य आय अधिकतम ₹50,00,000।"</string>
+    <string name="tax_scope_ru" formatted="false">"रूस 2026: कर निवासी कर्मचारी का सामान्य स्थिर वेतन; अन्य आय, व्यक्तिगत कर कटौती, उत्तरी भत्ते या विशेष सैन्य नियम नहीं। वार्षिक आधार पर औसत मासिक कर, संचयी वेतन कटौती नहीं। नियोक्ता के अंशदान कर्मचारी के वेतन से नहीं काटे जाते।"</string>
+    <string name="tax_scope_ae" formatted="false">"यूएई 2026: गैर-जीसीसी नागरिक प्रवासी कर्मचारी, केवल नौकरी की आय। व्यक्तिगत आयकर नहीं। लागू बीमे सहित वास्तविक कर्मचारी कटौतियाँ दर्ज करें। सेवा समाप्ति लाभ और नियोक्ता अंशदान शामिल नहीं।"</string>
+    <string name="tax_actual_deductions" formatted="false">"वास्तविक मासिक कर्मचारी कटौतियाँ"</string>
+    <string name="tax_deductions_hint" formatted="false">"न होने पर 0 दर्ज करें। कर्मचारी पेंशन, बीमा और स्थानीय वेतन कटौतियाँ शामिल करें। यहाँ गणना किए गए कर और नियोक्ता अंशदान शामिल न करें। राशि शुद्ध वेतन घटाती है, कर योग्य आय नहीं।"</string>
+    <string name="tax_confirm_profile" formatted="false">"मैं पुष्टि करता हूँ कि इस देश की कर्मचारी प्रोफ़ाइल मुझ पर लागू है।"</string>
+    <string name="tax_foreign_required" formatted="false">"कर्मचारी प्रोफ़ाइल, कटौती राशि और समर्थित आय सीमा जाँचें।"</string>
+    <string name="tax_other_tax" formatted="false">"स्वास्थ्य और शिक्षा उपकर"</string>
+    <string name="tax_other_deductions" formatted="false">"अन्य कर्मचारी कटौतियाँ"</string>
+    <string name="tax_scope_us" formatted="false">"केवल 2026: पूरे वर्ष निवासी, 18–64, एक स्थानीय W-2 नियोक्ता; SINGLE या एक पारिवारिक कमाने वाले की संयुक्त फाइलिंग। आश्रित, अन्य आय, संघीय/वापसीयोग्य क्रेडिट, विशेष टिप/ओवरटाइम कटौती, कर-पूर्व लाभ या अंतरराज्यीय काम नहीं। पात्रता जाँचें। सभी 50 राज्य: 47 सीमित स्वचालित दरें, वेतन पर शून्य कर सहित; CO/ID/VT में सत्यापित वार्षिक राज्य देयता दें। कर/12 आरक्षित अनुमान है, W-4/संचयी withholding नहीं।"</string>
+    <string name="tax_scope_ca" formatted="false">"कनाडा 2026: केवल ओंटारियो/अल्बर्टा। पूरे वर्ष एकल निवासी, आयु 18–64, एक ही प्रांत में निवास और काम, एक नियोक्ता। केवल मूल व्यक्तिगत/रोजगार क्रेडिट; आश्रित, RRSP, कर-पूर्व लाभ या अन्य आय नहीं। संघीय/प्रांतीय कर, CPP/CPP2 और EI शामिल। स्थिर वेतन का वार्षिक मासिक औसत, वास्तविक वेतन पर्ची नहीं।"</string>
+    <string name="tax_na_deductions_hint" formatted="false">"केवल अन्य कर-पश्चात कर्मचारी कटौतियाँ; न होने पर 0 दर्ज करें। यहाँ गणना किए कर, Social Security, Medicare, CPP/CPP2, EI या ओंटारियो स्वास्थ्य प्रीमियम दोबारा न भरें। कर-पूर्व कटौतियाँ समर्थित नहीं हैं।"</string>
+    <string name="tax_other_region" formatted="false">"अन्य क्षेत्र — अभी समर्थित नहीं"</string>
+    <string name="tax_region_unavailable" formatted="false">"इस क्षेत्र का शुद्ध वेतन अनुमान अभी समर्थित नहीं है।"</string>
+    <string name="tax_florida" formatted="false">"फ्लोरिडा"</string>
+    <string name="tax_texas" formatted="false">"टेक्सास"</string>
+    <string name="tax_ontario" formatted="false">"ओंटारियो"</string>
+    <string name="tax_alberta" formatted="false">"अल्बर्टा"</string>
+    <string name="tax_filing" formatted="false">"संघीय कर रिटर्न स्थिति"</string>
+    <string name="tax_single" formatted="false">"एकल"</string>
+    <string name="tax_joint" formatted="false">"विवाहित संयुक्त रिटर्न — एक कमाने वाला"</string>
+    <string name="tax_federal" formatted="false">"संघीय आयकर"</string>
+    <string name="tax_provincial" formatted="false">"प्रांतीय आयकर"</string>
+    <string name="tax_ontario_health" formatted="false">"ओंटारियो स्वास्थ्य प्रीमियम"</string>
+    <string name="tax_social_security" formatted="false">"अमेरिकी सामाजिक सुरक्षा कर"</string>
+    <string name="tax_cpp" formatted="false">CPP</string>
+    <string name="tax_cpp2" formatted="false">CPP2</string>
+    <string name="tax_ei" formatted="false">EI</string>
+    <string name="tax_medicare" formatted="false">Medicare</string>
+    <string name="tax_pt_mainland" formatted="false">"पुर्तगाल — मुख्यभूमि"</string>
+    <string name="tax_annual_verified_base" formatted="false">"सत्यापित अंतिम वार्षिक कर योग्य आय"</string>
+    <string name="tax_verified_base_hint" formatted="false">"सत्यापित आकलन या विशेषज्ञ गणना से सभी कटौतियों के बाद का अंतिम कर आधार भरें। यह सकल वेतन नहीं है; ऐप इसे स्वतः नहीं निकालता।"</string>
+    <string name="tax_au_hospital" formatted="false">"स्वीकृत निजी अस्पताल बीमा"</string>
+    <string name="tax_au_full_cover" formatted="false">"पूरा कर वर्ष"</string>
+    <string name="tax_au_no_cover" formatted="false">"पूरे कर वर्ष कोई बीमा नहीं"</string>
+    <string name="tax_nz_ietc_hint" formatted="false">"IETC के लिए पूरे वर्ष पात्रता जरूरी है: Working for Families, मुख्य लाभ, NZ Super, Veterans Pension या समान विदेशी भुगतान का हक नहीं होना चाहिए। आंशिक वर्ष समर्थित नहीं है।"</string>
+    <string name="tax_nz_ietc" formatted="false">"मैं पूरे वर्ष IETC पात्रता की पुष्टि करता हूँ"</string>
+    <string name="tax_further_deductions_hint" formatted="false">"यहाँ न गिनी गई वास्तविक कर्मचारी कटौतियाँ भरें, या 0। नियोक्ता अंशदान और पहले से दिखाए कर/बीमा दोबारा न भरें। इससे शुद्ध वेतन घटता है, कर आधार नहीं।"</string>
+    <string name="tax_solidarity" formatted="false">"एकजुटता कर"</string>
+    <string name="tax_pt_social" formatted="false">"कर्मचारी सामाजिक सुरक्षा"</string>
+    <string name="tax_au_levy" formatted="false">"Medicare लेवी"</string>
+    <string name="tax_au_surcharge" formatted="false">"Medicare अतिरिक्त लेवी"</string>
+    <string name="tax_acc" formatted="false">"ACC कर्मचारी लेवी"</string>
+    <string name="tax_included_relief" formatted="false">"आयकर में पहले से शामिल राहत"</string>
+    <string name="tax_scope_de" formatted="false">"जर्मनी 2026: अविवाहित निवासी, बिना बच्चों या चर्च कर के। सत्यापित अंतिम कर आधार से वार्षिक आकलन; सकल वेतन से आधार नहीं निकाला जाता। वास्तविक कर्मचारी सामाजिक कटौतियाँ अलग भरें। यह Lohnsteuer वेतन कटौती नहीं है।"</string>
+    <string name="tax_scope_fr" formatted="false">"फ्रांस: केवल 2025 की आय जिसका आकलन 2026 में होता है। अविवाहित निवासी, एक कर हिस्सा, केवल वेतन और वार्षिक सकल अधिकतम EUR 200,000। खर्च छूट के बाद अंतिम आधार भरें; सामाजिक कटौतियाँ अलग। décote शामिल है; 2026 आय तालिका या वर्तमान PAS कटौती नहीं।"</string>
+    <string name="tax_scope_pt" formatted="false">"पुर्तगाल 2026: मुख्यभूमि, अविवाहित निवासी, सामान्य श्रेणी A। छुट्टी/क्रिसमस राशि सहित 12 समान भुगतान; वार्षिक सकल कम से कम EUR 20,000। कर्मचारी सामाजिक सुरक्षा 11%, मानक कटौती, IRS स्लैब और एकजुटता कर शामिल। आश्रित, विशेष व्यवस्थाएँ या बिल क्रेडिट नहीं; 14 भुगतानों की कर कटौती नहीं।"</string>
+    <string name="tax_scope_au" formatted="false">"ऑस्ट्रेलिया 2025/26–2026/27: 18–64 वर्ष का अविवाहित निवासी, वार्षिक नकद वेतन कम से कम AUD 50,000, नियोक्ता Super के बिना। अन्य आय, कर-पूर्व लाभ या छूट नहीं। आयकर, LITO, 2% Medicare और अधिभार शामिल। पूरे वर्ष स्वीकृत अस्पताल बीमा या बिल्कुल नहीं चुनें; परिवार और आंशिक बीमा समर्थित नहीं।"</string>
+    <string name="tax_scope_nz" formatted="false">"न्यूज़ीलैंड 2025/26–2026/27: पूरे वर्ष निवासी, एक नौकरी, केवल वेतन, अन्य आय या लाभ नहीं। आयकर और ACC शामिल; IETC स्पष्ट पात्रता पुष्टि पर ही। वास्तविक KiwiSaver, ऋण और अन्य कर्मचारी कटौतियाँ अलग भरें। स्थिर आय का वार्षिक अनुमान।"</string>
+    <string name="tax_scope_es" formatted="false">"स्पेन 2026: केवल मैड्रिड। पूरे वर्ष अविवाहित निवासी, 18–64 वर्ष, केवल वेतन, बच्चे/विकलांगता/कर क्रेडिट नहीं। वार्षिक नकद सकल कम से कम EUR 40,000 और सत्यापित सामान्य कर आधार कम से कम EUR 30,000। राष्ट्रीय और मैड्रिड कर में उनके मूल व्यक्तिगत न्यूनतम शामिल हैं। वास्तविक सामाजिक कटौतियाँ अलग भरें। 12 समान कुल भुगतान; वेतन पर कर कटौती नहीं।"</string>
+    <string name="tax_scope_cn" formatted="false">"चीन 2026: पूरे वर्ष मुख्यभूमि चीन का कर निवासी, एक नौकरी का वेतन, अन्य/विदेशी आय या कर छूट नहीं। RMB 60,000 और वैध कटौतियों के बाद सत्यापित अंतिम वार्षिक कर आधार भरें। वास्तविक स्थानीय सामाजिक बीमा/आवास निधि कटौतियाँ अलग; दर या पात्रता स्वतः नहीं मानी जाती। अलग कर वाला वार्षिक बोनस, संधि/विशेष विदेशी व्यवस्था या मासिक/संचयी कर कटौती नहीं।"</string>
+    <string name="tax_scope_sa" formatted="false">"सऊदी अरब 2026: गैर-GCC विदेशी कर्मचारी, केवल सऊदी अरब में सामान्य रोजगार आय। व्यक्तिगत आयकर नहीं। वास्तविक कर्मचारी कटौतियाँ, लागू बीमा सहित, या 0 भरें। नियोक्ता के व्यावसायिक जोखिम अंशदान शामिल नहीं हैं। सऊदी/GCC पेंशन, व्यवसाय, विदेशी कर देनदारी और सेवा समाप्ति लाभ इस प्रोफ़ाइल से बाहर हैं।"</string>
+    <string name="tax_madrid" formatted="false">"मैड्रिड"</string>
+    <string name="tax_cn_mainland" formatted="false">"मुख्यभूमि चीन"</string>
+    <string name="tax_es_base_hint" formatted="false">"वैध वेतन कटौतियों के बाद और व्यक्तिगत/पारिवारिक न्यूनतम से पहले सत्यापित अंतिम वार्षिक सामान्य कर आधार भरें। सकल कम से कम EUR 40,000; आधार कम से कम EUR 30,000। ऐप मूल न्यूनतम स्वयं लागू करता है। सामाजिक बीमा या सकल से आधार की स्वतः गणना नहीं होती।"</string>
+    <string name="tax_cn_base_hint" formatted="false">"RMB 60,000 और वैध कटौतियों के बाद सत्यापित अंतिम वार्षिक वेतन कर आधार भरें। RMB 60,000 फिर न घटाएँ। वास्तविक सामाजिक/आवास कटौतियाँ मासिक कर्मचारी कटौती में भी भरें; उनका कर प्रभाव इस आधार में पहले से शामिल होना चाहिए।"</string>
+    <string name="tax_state_income" formatted="false">"राष्ट्रीय आयकर"</string>
+    <string name="tax_regional_income" formatted="false">"क्षेत्रीय आयकर"</string>
+    <string name="tax_scope_ie" formatted="false">"आयरलैंड 2026: पूरे वर्ष अविवाहित निवासी,18–64 वर्ष, एक योग्य PAYE नौकरी, केवल वेतन। मूल व्यक्तिगत/कर्मचारी कर क्रेडिट और सामान्य USC शामिल। मालिक-निदेशक, मेडिकल कार्ड छूट, अन्य आय, कर-पूर्व पेंशन/लाभ या अतिरिक्त क्रेडिट नहीं। वास्तविक कर्मचारी PRSI और कर-पश्चात कटौतियाँ अलग भरें; MyFutureFund पात्रता नहीं मानी जाती। स्थिर आय का वार्षिक अनुमान, संचयी वेतन गणना नहीं।"</string>
+    <string name="tax_scope_hk" formatted="false">"हांगकांग 2025/26–2026/27: पूरे वर्ष अविवाहित कर्मचारी,18–64 वर्ष, एक नियोक्ता, केवल वेतन, मासिक भुगतान वाला सामान्य MPF सदस्य। मासिक भुगतान वाला प्रति घंटा काम, मूल भत्ता, कर्मचारी MPF और प्रगतिशील/मानक में कम कर शामिल। शुरुआती अंशदान अवकाश वर्ष शुरू होने से पहले समाप्त होना चाहिए। आकस्मिक/दैनिक/मुक्त कर्मचारी, आश्रित, अन्य आय या अतिरिक्त राहत नहीं। अंतिम कर छूट केवल 2025/26; अस्थायी कर बिल नहीं।"</string>
+    <string name="tax_ie_deductions_hint" formatted="false">"वास्तविक कर्मचारी PRSI और कर-पश्चात पेंशन/अन्य नकद कटौतियाँ भरें, या0। MyFutureFund कटे तो शामिल करें; जुड़ना स्वतः नहीं माना जाता। नियोक्ता लागत और पहले से गिने आयकर/USC न भरें। आयकर राहत वाली पेंशन इस प्रोफ़ाइल में नहीं है। वेतन बदलने पर कटौतियाँ अपडेट करें।"</string>
+    <string name="tax_hk_deductions_hint" formatted="false">"केवल अतिरिक्त कर-पश्चात कर्मचारी नकद कटौतियाँ, या0। पहले से गिने कर्मचारी MPF या वेतन कर दोबारा न भरें। नियोक्ता अंशदान और अतिरिक्त कर-राहत कटौतियाँ शामिल नहीं।"</string>
+    <string name="tax_usc" formatted="false">"सार्वभौमिक सामाजिक शुल्क (USC)"</string>
+    <string name="tax_mpf" formatted="false">"कर्मचारी MPF"</string>
+    <string name="tax_scope_no" formatted="false">"नॉर्वे 2026: पूरे वर्ष अविवाहित निवासी, 18–64 वर्ष, एक नौकरी का वेतन, सामान्य 22% क्षेत्र और राष्ट्रीय बीमा सदस्यता। मानक/व्यक्तिगत कटौतियाँ, चरण कर और सत्यापित युवा कार्य राहत शामिल। पेंशन/यूनियन/ब्याज या अन्य कटौतियाँ, अन्य आय, विदेशी PAYE या विशेष क्षेत्रीय नियम नहीं। अग्रिम कर और छोटे शेष की वसूली से पहले स्थिर आय का वार्षिक अनुमान।"</string>
+    <string name="tax_scope_za" formatted="false">"दक्षिण अफ्रीका 2025/26–2026/27: पूरे वर्ष निवासी, 18–64 वर्ष, निजी क्षेत्र की एक सामान्य नौकरी। मूल रिबेट और चुना गया UIF शामिल। अन्य आय, कमीशन, कर योग्य लाभ, पेंशन कर कटौती, चिकित्सा/अतिरिक्त क्रेडिट या विशेष छूट नहीं। सामान्य UIF या इसी नियोक्ता के लिए महीने में 24 घंटे से कम काम की छूट की पुष्टि करें। वार्षिक अनुमान, वास्तविक PAYE कटौती नहीं।"</string>
+    <string name="tax_no_region" formatted="false">"सामान्य 22% कर क्षेत्र"</string>
+    <string name="tax_no_region_hint" formatted="false">"स्वालबार्ड, फिनमार्क और ट्रोम्स की ये नगरपालिकाएँ शामिल नहीं: Karlsøy, Kvænangen, Kåfjord, Lyngen, Nordreisa, Skjervøy, Storfjord।"</string>
+    <string name="tax_no_youth" formatted="false">"युवा कार्य राहत — सत्यापित स्थिति"</string>
+    <string name="tax_no_selected" formatted="false">"चयनित — कर प्राधिकरण से पुष्टि"</string>
+    <string name="tax_no_not_selected" formatted="false">"चयनित नहीं / पात्र समूह से बाहर"</string>
+    <string name="tax_no_youth_hint" formatted="false">"2026 परीक्षण में 1991–2006 में जन्मे कुछ लोग यादृच्छिक रूप से चुने गए। उम्र या निवास पर्याप्त नहीं। आधिकारिक स्थिति जाँचें, अनुमान न लगाएँ। खाली स्थिति पर गणना नहीं होगी।"</string>
+    <string name="tax_za_uif" formatted="false">"कर्मचारी UIF स्थिति"</string>
+    <string name="tax_za_covered" formatted="false">"सामान्य UIF के अंतर्गत"</string>
+    <string name="tax_za_lt24" formatted="false">"छूट — महीने में 24 घंटे से कम"</string>
+    <string name="tax_za_year_hint" formatted="false">"वर्ष शुरुआत के अनुसार हैं: 2026/27 मार्च 2026–फरवरी 2027 है, जिसे SARS कर वर्ष 2027 कहता है। अन्य UIF छूट शामिल नहीं।"</string>
+    <string name="tax_noza_deductions_hint" formatted="false">"केवल अतिरिक्त कर-पश्चात कर्मचारी नकद कटौतियाँ भरें, या 0। गिने गए कर/राष्ट्रीय बीमा/UIF दोबारा न भरें और नियोक्ता अंशदान न जोड़ें। कर राहत वाली पेंशन या अन्य कटौती योग्य खर्चों के लिए अलग प्रोफ़ाइल चाहिए।"</string>
+    <string name="tax_no_ordinary" formatted="false">"सामान्य आयकर"</string>
+    <string name="tax_no_step" formatted="false">"व्यक्तिगत आय पर चरण कर"</string>
+    <string name="tax_no_ni" formatted="false">"कर्मचारी राष्ट्रीय बीमा"</string>
+    <string name="tax_uif" formatted="false">"कर्मचारी UIF"</string>
+    <string name="tax_scope_sg" formatted="false">"सिंगापुर, आय वर्ष 2026: पूरे वर्ष कर निवासी, वर्षांत आयु 18–54, एक सामान्य वेतन नौकरी, बोनस/अतिरिक्त वेतन, अन्य आय, विकलांगता, लाभ या अतिरिक्त छूट नहीं। पूरे वर्ष पूर्ण CPF दर वाला नागरिक/तीसरे वर्ष से PR या बिना CPF का विदेशी गैर-नागरिक/गैर-PR निवासी। कर्मचारी CPF और मूल Earned Income Relief शामिल। वार्षिक कर बचत-राशि का अनुमान, मासिक कर कटौती नहीं।"</string>
+    <string name="tax_scope_dk" formatted="false">"डेनमार्क 2026: केवल कोपेनहेगन, पूरे वर्ष अविवाहित निवासी, 18–59 वर्ष, केवल वेतन, चर्च कर, पूंजी/विदेशी आय या विशेष व्यवस्था नहीं। व्यक्तिगत छूट से पहले सत्यापित व्यक्तिगत और नगरपालिका वार्षिक आधार तथा वास्तविक AM, ATP, कर्मचारी पेंशन/अन्य नकद कटौतियाँ जरूरी। राष्ट्रीय/स्थानीय कर और मूल छूट शामिल; सकल से आधार या कर कार्ड कटौती की गणना नहीं।"</string>
+    <string name="tax_copenhagen" formatted="false">"कोपेनहेगन"</string>
+    <string name="tax_dk_personal_base" formatted="false">"AM के बाद सत्यापित वार्षिक व्यक्तिगत आय"</string>
+    <string name="tax_dk_municipal_base" formatted="false">"सत्यापित वार्षिक नगरपालिका कर आधार"</string>
+    <string name="tax_dk_base_hint" formatted="false">"व्यक्तिगत छूट से पहले दोनों सत्यापित अंतिम आधार भरें। व्यक्तिगत आय में AM/ATP/पेंशन समायोजन हो; नगरपालिका आधार में सभी वैध रोजगार/अन्य आधार कटौतियाँ भी हों। सकल न भरें। ऐप आधार नहीं निकालता और कटौतियाँ फिर नहीं घटाता। व्यक्तिगत आय DKK 54,100 से अधिक और नगरपालिका आधार उससे कम हो तो छूट-वितरण का यह मामला अभी समर्थित नहीं है।"</string>
+    <string name="tax_dk_actual_deductions" formatted="false">"वास्तविक मासिक AM, ATP, पेंशन और अन्य कटौतियाँ"</string>
+    <string name="tax_dk_deductions_hint" formatted="false">"वास्तविक AM, कर्मचारी ATP/पेंशन और आयकर के अलावा अन्य नकद कटौतियाँ भरें, या 0। उनका कर प्रभाव आधारों में पहले से हो। नियोक्ता लागत और गिने गए राष्ट्रीय/स्थानीय कर न जोड़ें। वेतन बदले तो तीनों राशियाँ अपडेट करें।"</string>
+    <string name="tax_sg_cpf_profile" formatted="false">"कर्मचारी CPF प्रोफ़ाइल"</string>
+    <string name="tax_sg_full" formatted="false">"नागरिक / तीसरे वर्ष से PR — पूर्ण CPF"</string>
+    <string name="tax_sg_foreign" formatted="false">"विदेशी कर निवासी — नागरिक/PR नहीं, CPF नहीं"</string>
+    <string name="tax_sg_year_hint" formatted="false">"2026 का अर्थ जनवरी–दिसंबर 2026 की आय, YA 2027 में आकलित। YA 2024/2025 की एकमुश्त छूट आगे नहीं लगती। PR के पहले दो वर्ष और अन्य CPF/आयु प्रोफ़ाइल समर्थित नहीं।"</string>
+    <string name="tax_sg_deductions_hint" formatted="false">"केवल अतिरिक्त कर-पश्चात नकद कटौतियाँ, या 0; लागू वास्तविक समुदाय-फंड कटौती शामिल करें। गिने गए कर्मचारी CPF या आयकर फिर न भरें, नियोक्ता अंशदान न जोड़ें। अतिरिक्त कर-राहत कटौतियाँ शामिल नहीं।"</string>
+    <string name="tax_cpf" formatted="false">"कर्मचारी CPF"</string>
+    <string name="tax_dk_bottom" formatted="false">"राष्ट्रीय मूल कर"</string>
+    <string name="tax_dk_municipal" formatted="false">"कोपेनहेगन नगरपालिका आयकर"</string>
+    <string name="tax_dk_higher" formatted="false">"मध्य / उच्च / अतिरिक्त उच्च कर"</string>
+    <string name="tax_scope_my" formatted="false">"मलेशिया 2026: पूरे वर्ष अविवाहित कर निवासी, आयु 18–59, एक नौकरी में केवल नियमित नकद वेतन; अन्य आय, करयोग्य लाभ, विशेष व्यवस्था, ज़कात या अन्य कर रिबेट नहीं। व्यक्तिगत छूट समेत सभी वैध राहतों के बाद सत्यापित अंतिम वार्षिक करयोग्य आय और कर्मचारी की वास्तविक कटौतियाँ आवश्यक। पात्र होने पर अधिकतम RM400 गैर-वापसीयोग्य व्यक्तिगत रिबेट शामिल। वार्षिक अनुमान, PCB कटौती नहीं।"</string>
+    <string name="tax_scope_ph" formatted="false">"फ़िलीपींस 2026: पूरे वर्ष अविवाहित निवासी नागरिक, आयु 18–59, एक निजी नौकरी, 12 समान नियमित नकद वेतन; अन्य करयोग्य आय, विशेष व्यवस्था या कर क्रेडिट नहीं। सत्यापित वार्षिक नियमित करयोग्य वेतन और वास्तविक कटौतियाँ आवश्यक। न्यूनतम-वेतन कर्मचारी की छूट शामिल नहीं। कुल PHP90,000 सीमा तक करमुक्त 13वाँ वेतन/अन्य लाभ दिखाए नकद नेट से बाहर हैं; करयोग्य अतिरिक्त राशि या अन्य बोनस समर्थित नहीं। वार्षिक अनुमान, पेरोल कटौती नहीं।"</string>
+    <string name="tax_my_base_hint" formatted="false">"RM9,000 व्यक्तिगत राहत समेत सभी वैध राहतों के बाद सत्यापित अंतिम वार्षिक करयोग्य आय भरें, सकल वेतन नहीं। ऐप पात्र अधिकतम RM400 रिबेट अलग लगाता है; राहत नहीं निकालता या नकद अंशदान फिर नहीं घटाता। वेतन बदले तो आधार अपडेट करें।"</string>
+    <string name="tax_ph_base_hint" formatted="false">"वैध कर्मचारी अंशदान/शुल्क के बाद सत्यापित वार्षिक नियमित करयोग्य नकद वेतन भरें, सकल नहीं। आधार से आयकर या निजी ऋण भुगतान न घटाएँ। ऐप छूट नहीं निकालता या अंशदान फिर नहीं घटाता। वेतन बदले तो आधार अपडेट करें।"</string>
+    <string name="tax_myph_deductions_hint" formatted="false">"वास्तविक मासिक कर्मचारी EPF/SOCSO/EIS या SSS/PhilHealth/Pag-IBIG, वैध शुल्क और अन्य नकद कटौतियाँ भरें, या 0। उनका कर प्रभाव सत्यापित आधार में पहले से होना चाहिए। नियोक्ता अंशदान और यहाँ गिना आयकर न जोड़ें। वेतन बदले तो दोनों राशियाँ अपडेट करें।"</string>
+    <string name="tax_scope_pl" formatted="false">"पोलैंड 2026: पूरे वर्ष अविवाहित निवासी, आयु 26–59, एक सामान्य रोजगार अनुबंध, 12 समान नकद वेतन; वार्षिक सकल PLN1,000,000 तक। अन्य आय, करयोग्य लाभ, संयुक्त रिटर्न, PIT-0 या अतिरिक्त कटौती/क्रेडिट नहीं। केवल मानक रोजगार खर्च अधिकतम PLN3,600/वर्ष; वास्तविक टिकट या 50% रचनात्मक खर्च नहीं। सत्यापित वार्षिक आधार और वास्तविक कटौतियाँ जरूरी। मूल PLN3,600 कर कमी शामिल। वार्षिक अनुमान, पेरोल कटौती नहीं। PPK प्रतिभागी इस प्रोफ़ाइल से बाहर हैं।"</string>
+    <string name="tax_scope_cz" formatted="false">"चेकिया 2026: पूरे वर्ष अविवाहित निवासी, आयु 18–64, एक सामान्य नौकरी में 12 समान नियमित नकद वेतन; अन्य आय, करयोग्य लाभ, आधार कटौती या अतिरिक्त क्रेडिट नहीं। DPP/DPČ और विशेष रोकड़-कर मामले शामिल नहीं। मूल वार्षिक CZK30,840 गैर-वापसीयोग्य क्रेडिट शामिल। सामाजिक/स्वास्थ्य बीमा और लागू न्यूनतम स्वास्थ्य पूर्ति वास्तविक कर्मचारी कटौती के रूप में भरें। वार्षिक कर अनुमान, मासिक अग्रिम नहीं।"</string>
+    <string name="tax_pl_base_hint" formatted="false">"वैध कर्मचारी सामाजिक अंशदान और मानक रोजगार खर्च के बाद सत्यापित अंतिम वार्षिक कर आधार भरें, PLN3,600 कर कमी से पहले। PLN30,000 अलग न घटाएँ। स्वास्थ्य, PPK और निजी ऋण इस प्रोफ़ाइल का आधार नहीं घटाते। नकद कटौतियाँ फिर नहीं घटतीं; वेतन बदले तो राशियाँ अपडेट करें।"</string>
+    <string name="tax_plcz_deductions_hint" formatted="false">"वास्तविक मासिक कर्मचारी सामाजिक/स्वास्थ्य बीमा, कर-पश्चात पेंशन और अन्य नकद कटौतियाँ भरें, या 0। लागू चेक न्यूनतम स्वास्थ्य पूर्ति जोड़ें। नियोक्ता लागत और यहाँ गिना आयकर न जोड़ें। चेक नकद कटौतियाँ आधार नहीं घटातीं; पोलिश वैध कर कटौतियाँ सत्यापित आधार में पहले से हों। वेतन बदले तो अपडेट करें।"</string>
+    <string name="tax_scope_th" formatted="false">"थाईलैंड2026: पूरे वर्ष अविवाहित निवासी, आयु18–59, एक सामान्य वेतन नौकरी; आश्रित, अन्य आय, विशेष व्यवस्था या कर क्रेडिट नहीं। वैध खर्च, राहत और छूट के बाद सत्यापित वार्षिक रोजगार आय और अंतिम कर आधार जरूरी। केवल वेतन; अन्य आय का वैकल्पिक न्यूनतम कर बाहर। मौजूदा30% स्लैब THB50 लाख पर समाप्त होता है, पुराने40 लाख पर नहीं।"</string>
+    <string name="tax_scope_id" formatted="false">"इंडोनेशिया2026: पूरे वर्ष अविवाहित निवासी, आयु18–59, स्थायी कर्मचारी, वैध NPWP/एकीकृत NIK, TK/0, आश्रित/अन्य आय नहीं। सत्यापित कटौती और PTKP के बाद अनुच्छेद17 का वार्षिक हिसाब। DTP/सरकार द्वारा चुकाया कर, नियोक्ता-भुगतान/ग्रॉस-अप, विशेष व्यवस्था और क्रेडिट बाहर। वार्षिक आँकड़ों में THR/बोनस और करयोग्य लाभ जोड़ें। मासिक TER कटौती नहीं।"</string>
+    <string name="tax_scope_vn" formatted="false">"वियतनाम2026: पूरे वर्ष अविवाहित निवासी, आयु18–59, एक वेतन नौकरी; आश्रित, अन्य आय, विशेष व्यवस्था या कर क्रेडिट नहीं। वैध बीमा, व्यक्तिगत राहत और पात्र ओवरटाइम छूट समेत छूट के बाद सत्यापित वार्षिक आय और अंतिम आधार जरूरी। निवासी वेतन पर2026 कर वर्ष से पाँच वार्षिक स्लैब; पुराने सात नहीं।"</string>
+    <string name="tax_scope_tw" formatted="false">"ताइवान2026 आय,2027 में रिटर्न: पूरे वर्ष अविवाहित निवासी, आयु18–59, केवल वेतन; आश्रित, अन्य/विदेशी आय, AMT जोड़, विशेष व्यवस्था या कर क्रेडिट नहीं। सभी वैध छूट/कटौती और लागू मूल जीवन-खर्च समायोजन के बाद सत्यापित वार्षिक रोजगार आय/अंतिम आधार जरूरी। वार्षिक आय सीमा TWD75 लाख सावधानीपूर्ण प्रोफ़ाइल सीमा है, वैधानिक सकल AMT सीमा नहीं।"</string>
+    <string name="tax_scope_lk" formatted="false">"श्रीलंका2026/27: 1 अप्रैल2026–31 मार्च2027। पूरे वर्ष अविवाहित निवासी, आयु18–59, एक सामान्य घरेलू वेतन नौकरी; अन्य/विदेशी आय, विशेष व्यवस्था, बकाया/सेवा-समाप्ति विशेष नियम या क्रेडिट नहीं। LKR18 लाख व्यक्तिगत राहत और अन्य वैध कटौतियों के बाद सत्यापित वार्षिक आय/अंतिम आधार जरूरी। सामान्य वार्षिक कर आरक्षित अनुमान, APIT/YTD कटौती नहीं।"</string>
+    <string name="tax_annual_employment_gross" formatted="false">"सत्यापित कुल वार्षिक रोजगार आय"</string>
+    <string name="tax_asia_five_income_hint" formatted="false">"चुने पूरे कर वर्ष की राहत-पूर्व रोजगार आय भरें, बोनस, THR/अतिरिक्त वेतन और सही मूल्य वाले करयोग्य नियोक्ता लाभ समेत। अतिरिक्त आय हो तो केवल मासिक वेतन×12 न भरें। कुल और अंतिम आधार अलग सत्यापित करें। दिखाया नेट इस अवधि का नकद वेतन घटा वार्षिक कर/12 और वास्तविक कटौतियाँ है; वार्षिक बोनस या गैर-नकद लाभ इसमें नहीं जोड़े जाते।"</string>
+    <string name="tax_asia_five_base_hint" formatted="false">"चुने वर्ष के सभी वैध खर्च, बीमा कटौती, व्यक्तिगत राहत और छूट के बाद सत्यापित अंतिम वार्षिक आधार भरें। ऐप पात्रता या राहत नहीं निकालता; उन्हें फिर न घटाएँ। इंडोनेशिया में PKP पूरे IDR1,000 तक नीचे पूर्णांकित होता है। आय/परिस्थिति बदले तो दोनों वार्षिक राशियाँ अपडेट करें।"</string>
+    <string name="tax_asia_five_cash_hint" formatted="false">"इस अवधि की वास्तविक कर्मचारी सामाजिक/स्वास्थ्य/पेंशन और अन्य नकद कटौतियाँ, या0। उनका वैध कर प्रभाव सत्यापित वार्षिक आधार में पहले से हो। नियोक्ता लागत या यहाँ आरक्षित आयकर न जोड़ें और कर कटौती फिर न भरें। यह वार्षिक कर आरक्षित अनुमान है, वेतन पर्ची या पूरा वार्षिक नेट नहीं।"</string>
+    <string name="tax_scope_pe" formatted="false">"पेरू2026: पूरे वर्ष अविवाहित अधिवासी निवासी,18–59 वर्ष, केवल एक पाँचवीं-श्रेणी वेतन नौकरी; आश्रित, अन्य/विदेशी आय, विशेष व्यवस्था या क्रेडिट नहीं। UIT=PEN5,500। अंतिम सत्यापित आधार में7 UIT और सत्यापित पात्र अतिरिक्त खर्च पहले से हों। कर्मचारी पेंशन स्वतः कर कटौती नहीं है।"</string>
+    <string name="tax_scope_co" formatted="false">"कोलंबिया2026: पूरे वर्ष अविवाहित निवासी,18–59 वर्ष, सामान्य वेतन ही; आश्रित, अन्य/विदेशी आय, विशेष व्यवस्था या क्रेडिट नहीं। UVT=COP52,374। वैध सामाजिक अपवर्जन, छूट और कटौती सीमा के बाद सत्यापित वार्षिक आधार जरूरी। वार्षिक अनुच्छेद241, मासिक383 कटौती नहीं। संपत्ति कर आदि इस वेतन अनुमान से बाहर हैं।"</string>
+    <string name="tax_scope_ee" formatted="false">"एस्टोनिया2026: पूरे वर्ष अविवाहित निवासी,18–59 वर्ष, सामान्य वेतन; आश्रित, अन्य आय, विशेष व्यवस्था या क्रेडिट नहीं। वैध कटौतियों और EUR8,400 मूल छूट के बाद अंतिम सत्यापित आधार पर22%। पुरानी आय-आधारित छूट घटौती या सेवानिवृत्ति छूट नहीं। वास्तविक कर्मचारी बीमा/पेंशन अलग भरें।"</string>
+    <string name="tax_scope_lv" formatted="false">"लातविया2026: पूरे वर्ष अविवाहित निवासी,18–59 वर्ष, वेतन ही; आश्रित, अन्य आय या क्रेडिट नहीं। कुल वार्षिक रोजगार आय EUR105,300 तक; ऊँची दर, एकजुटता और अतिरिक्त3% मामले बाहर। वैध अंशदान/कटौती और EUR6,600 मूल छूट के बाद आधार पर25.5%। उच्च आय का पूरा पेरोल नहीं।"</string>
+    <string name="tax_scope_lt" formatted="false">"लिथुआनिया2026: पूरे वर्ष अविवाहित निवासी,18–59 वर्ष, सामान्य पूर्ण करयोग्य वेतन; आश्रित, अन्य आय, बीमारी लाभ, विकलांगता/विशेष NPD या अतिरिक्त कटौती/क्रेडिट नहीं। वार्षिक20%/25%/32%। केवल सामान्य NPD के बाद सत्यापित आधार; कर्मचारी बीमा स्वतः न घटाएँ। EUR83,237.40 वार्षिक आय से ऊपर इस प्रोफ़ाइल में आधार आय के बराबर जरूरी।"</string>
+    <string name="tax_scope_bg" formatted="false">"बुल्गारिया2026: पूरे वर्ष अविवाहित निवासी,18–59 वर्ष, वेतन ही; आश्रित, अन्य आय, विशेष व्यवस्था, क्रेडिट या रिटर्न छूट नहीं।2026 से मुद्रा EUR; पुरानी BGN राशियाँ सत्यापित रूपांतरण बिना न भरें। वैध अंशदान/कटौती के बाद सत्यापित वार्षिक आधार पर10%। स्वतः मुद्रा परिवर्तन या वैधानिक पेरोल पूर्णांकन नहीं।"</string>
+    <string name="tax_scope_ro" formatted="false">"रोमानिया2026: पूरे वर्ष अविवाहित निवासी,18–59 वर्ष, एक सामान्य घरेलू वेतन नौकरी; आश्रित, अन्य आय, विशेष व्यवस्था या क्रेडिट नहीं। वैध अंशदान, व्यक्तिगत कटौती और लागू न्यूनतम-वेतन छूट के बाद मासिक आधारों के सत्यापित योग पर10%। हर माह की पात्रता जाँचें; वार्षिक आरक्षित अनुमान यह तय नहीं करता।"</string>
+    <string name="tax_scope_hu" formatted="false">"हंगरी2026: पूरे वर्ष अविवाहित निवासी,25–59 वर्ष, सामान्य पूर्ण करयोग्य वेतन; बच्चे, अन्य आय, छूट, आधार राहत या क्रेडिट नहीं।25 से कम, माँ/परिवार, विकलांग/नवविवाहित राहत और सरल/मौसमी रोजगार बाहर। वार्षिक वेतन पर15%; इस प्रोफ़ाइल में सत्यापित आधार वार्षिक रोजगार आय बराबर। कर्मचारी बीमा इसे नहीं घटाता।"</string>
+    <string name="tax_scope_ge" formatted="false">"जॉर्जिया2026: पूरे वर्ष अविवाहित निवासी,18–59 वर्ष, सामान्य पूर्ण करयोग्य जॉर्जियाई वेतन; आश्रित, अन्य/विदेशी आय, छूट, विशेष कारोबारी व्यवस्था या क्रेडिट नहीं। वार्षिक वेतन पर20%; सत्यापित आधार वार्षिक आय बराबर। वास्तविक कर्मचारी पेंशन/नकद कटौतियाँ भुगतान घटाती हैं, आधार फिर नहीं।"</string>
+    <string name="tax_scope_am" formatted="false">"आर्मेनिया2026: पूरे वर्ष अविवाहित निवासी,18–59 वर्ष, सामान्य पूर्ण करयोग्य घरेलू वेतन; आश्रित, अन्य/विदेशी आय, विशेष क्षेत्रीय दर, छूट, गृहऋण/सामाजिक खर्च रिफंड या क्रेडिट नहीं। वार्षिक वेतन पर20%; सत्यापित आधार आय बराबर। वास्तविक कर्मचारी पेंशन, स्टाम्प शुल्क और लागू स्वास्थ्य बीमा अलग भरें।"</string>
+    <string name="tax_ten_income_hint" formatted="false">"पूरे2026 की सत्यापित रोजगार आय, बोनस, अतिरिक्त वेतन और सही मूल्य वाले करयोग्य लाभ समेत, तथा अंतिम वार्षिक आधार भरें। रोमानिया में आधार सत्यापित मासिक आधारों का योग है। अवधि के नकद वेतन से वार्षिक कर/12 आरक्षित होता है; वार्षिक बोनस/गैर-नकद लाभ भुगतान में नहीं जुड़ते।"</string>
+    <string name="tax_ten_base_hint" formatted="false">"अंतिम वार्षिक आधार भरने से पहले सभी वैध कटौती/छूट सत्यापित करें; ऐप पात्रता तय नहीं करता। जॉर्जिया/आर्मेनिया/हंगरी: इन प्रोफ़ाइल में आधार वार्षिक वेतन बराबर; बीमा इसे नहीं घटाता। लिथुआनिया: सामान्य NPD ही, बताई सीमा से ऊपर कमी नहीं। परिस्थिति बदले तो दोनों वार्षिक राशियाँ अपडेट करें।"</string>
+    <string name="tax_ten_cash_hint" formatted="false">"अवधि की वास्तविक कर्मचारी सामाजिक/स्वास्थ्य/पेंशन और आयकर के अलावा नकद कटौतियाँ, या0। आर्मेनिया में लागू वास्तविक स्टाम्प शुल्क/स्वास्थ्य प्रीमियम जोड़ें। नियोक्ता लागत और यहाँ आरक्षित आयकर न जोड़ें। वैध कर प्रभाव आधार में पहले से हो; दोहरी कटौती न करें। वार्षिक अनुमान, वेतन पर्ची/कर रिटर्न नहीं।"</string>
+    <string name="tax_fifteen_common_scope" formatted="false">"प्रोफ़ाइल: पूरे वर्ष कर निवासी, अविवाहित18–59 वर्ष, एक सामान्य घरेलू नौकरी, कोई आश्रित, अन्य/विदेशी आय, विशेष व्यवस्था या बताए गए से अतिरिक्त कर क्रेडिट नहीं। देश/भाषा पात्रता नहीं तय करते। सभी शर्तें स्वीकारें। मान सभी अवधियों पर लागू हैं; परिस्थिति/वेतन बदलने पर अपडेट करें।"</string>
+    <string name="tax_scope_mx" formatted="false">"मेक्सिको2026: वार्षिक ISR तालिका, मासिक रोक नहीं। किसी भी महीने रोजगार सब्सिडी, न्यूनतम वेतन छूट, विशेष भुगतान/क्रेडिट की पात्रता नहीं। सावधानी सीमा:वार्षिक अंतिम आधार/12, MXN11,492.66 से अधिक; इससे अकेले पात्रता सिद्ध नहीं। पूरी वार्षिक आधार/कटौतियाँ सत्यापित करें।"</string>
+    <string name="tax_scope_br" formatted="false">"ब्राज़ील2026: एक सामान्य पूर्ण करयोग्य मासिक नकद भुगतान; वैधानिक कटौतियों या सरल कटौती के बाद सत्यापित मासिक आधार, दोनों नहीं। नई मासिक कर कमी शामिल। गैरनकद/मुक्त लाभ,13वाँ वेतन, अवकाश/अलग घटनाएँ, वार्षिक समायोजन व अन्य क्रेडिट बाहर। सत्यापित वार्षिक कुल अधिकतम BRL600,000, ऐप की सावधानी सीमा।"</string>
+    <string name="tax_scope_cr" formatted="false">"कोस्टा रिका2026: सामान्य पूर्ण करयोग्य मासिक नकद वेतन।2026 वेतन स्लैब पर कर्मचारी सामाजिक कटौती से पहले कर। जीवनसाथी/बच्चों के क्रेडिट, मुक्त बोनस,13वाँ वेतन या अलग/आंशिक माह भुगतान नहीं। वास्तविक कर्मचारी कटौती अलग।"</string>
+    <string name="tax_scope_gt" formatted="false">"ग्वाटेमाला2026: वैधानिक छूट/कटौतियों के बाद सत्यापित अंतिम वार्षिक आधार, Q48,000 और2026 की अतिरिक्त Q3,024 दोनों सहित।2027 अनुक्रमित छूट नहीं। Q300,000 आधार तक5%, ऊपर7%। मुक्त aguinaldo/Bono14 और दस्तावेजी कटौतियाँ आधार में सत्यापित करें।"</string>
+    <string name="tax_scope_do" formatted="false">"डोमिनिकन गणराज्य2026: प्रकाशित निश्चित राशियों वाली वार्षिक वेतन तालिका। RD$416,220 शून्य दर स्लैब से पहले आधार; सीमा दोबारा न घटाएँ।2027 तालिका/शिक्षा या अन्य क्रेडिट नहीं। कर्मचारी सामाजिक नकद अलग।"</string>
+    <string name="tax_scope_ke" formatted="false">"केन्या2026: वैधानिक SHIF, आवास लेवी और पेंशन कटौतियों के बाद सत्यापित अंतिम वार्षिक आधार। निवासी व्यक्तिगत राहत अधिकतम KES28,800/वर्ष एक बार शामिल, कर से अधिक वापसी नहीं। निजी बीमा राहत/अन्य क्रेडिट/विशेष छूट नहीं। वास्तविक नकद अलग, आधार से फिर न घटाएँ।"</string>
+    <string name="tax_scope_rw" formatted="false">"रवांडा2026: केवल पहले नियोक्ता की सामान्य नौकरी, सत्यापित वार्षिक आधार। आकस्मिक15% श्रम, दूसरे नियोक्ता, निदेशक शुल्क और विशेष व्यवस्था बाहर। वार्षिक कर/12 आरक्षित राशि है, बदलती मासिक PAYE नहीं। वास्तविक कर्मचारी योगदान अलग।"</string>
+    <string name="tax_scope_ug" formatted="false">"युगांडा2026/27:1 जुलाई2026–30 जून2027, नई निवासी दरें। अनुमान12 समान करयोग्य मासिक आधार मानता है; बदलता/संचयी हिसाब नहीं। पुरानी235,000 सीमा या अनिवासी तालिका नहीं। UGX10मिलियन मासिक आधार से ऊपर अतिरिक्त10% शामिल।"</string>
+    <string name="tax_scope_zm" formatted="false">"ज़ाम्बिया2026: वार्षिकीकृत वेतन स्लैब, ZMW5,100 मासिक शून्य स्लैब सहित। सत्यापित वार्षिक आधार/वास्तविक कर्मचारी कटौतियाँ। विकलांगता/विशेष रोजगार/अन्य क्रेडिट नहीं। नियोक्ता लागत बाहर।"</string>
+    <string name="tax_scope_pk" formatted="false">"पाकिस्तान2026/27, कर वर्ष2027: पारित वित्त अधिनियम2026 वेतन दरें। केवल वेतन वाला निवासी; सत्यापित वार्षिक रोजगार कुल अधिकतम PKR10मिलियन। अधिभार, सुपर टैक्स, पेंशन, कारोबार/विशेष क्रेडिट बाहर।2025/26 तालिका या प्रस्तावित दरें नहीं।"</string>
+    <string name="tax_scope_uz" formatted="false">"उज़्बेकिस्तान2026: सामान्य पूर्ण करयोग्य निवासी वेतन12%; सत्यापित वार्षिक आधार=वार्षिक वेतन। विशेष छूट/स्वैच्छिक पेंशन राहत नहीं।12% के अंदर आवंटित पेंशन पहले से शामिल: अतिरिक्त नकद कटौती में दोबारा न डालें। नियोक्ता सामाजिक कर बाहर।"</string>
+    <string name="tax_scope_kz" formatted="false">"कज़ाखस्तान2026:8,500MCI पर नई वार्षिक10/15% दर; MCI=KZT4,325। आधार में सामान्य वार्षिक360MCI कटौती और कानूनी सामाजिक कटौती पहले से, पुराना14MCI नियम नहीं। निजी प्रैक्टिस/कारोबार/लाभांश/विशेष सामाजिक राहत नहीं।"</string>
+    <string name="tax_scope_ma" formatted="false">"मोरक्को2026: सामान्य वेतन, पेशेवर खर्च/योगदान/वैधानिक छूट बाद सत्यापित वार्षिक शुद्ध करयोग्य आधार। छह वर्तमान स्लैब, अधिकतम37%। परिवार क्रेडिट, कारोबार/कृषि, विशेष क्षेत्र/दर/अन्य क्रेडिट नहीं। कर्मचारी नकद कटौती अलग।"</string>
+    <string name="tax_scope_md" formatted="false">"मोल्दोवा2026: सामान्य व्यवस्था, वार्षिक रोजगार कुल MDL360,000 से सख्ती से कम, ऐप की सावधानी सीमा। आधार में सामान्य MDL29,700 राहत और कानूनी कटौतियाँ पहले से। आईटी पार्क/टैक्सी/बढ़ी व्यक्तिगत या परिवार राहत/अन्य क्रेडिट नहीं।"</string>
+    <string name="tax_scope_mk" formatted="false">"उत्तर मैसेडोनिया2026: सामान्य वेतन, वैधानिक योगदान और MKD131,184 वार्षिक व्यक्तिगत कमी बाद अंतिम सत्यापित आधार पर10%। अन्य आय/विशेष छूट/क्रेडिट नहीं। वास्तविक नकद कटौती अलग; राहत दोबारा न घटाएँ।"</string>
+    <string name="tax_monthly_verified_base" formatted="false">"इस मासिक भुगतान का सत्यापित कर आधार"</string>
+    <string name="tax_br_annual_hint" formatted="false">"BRL600,000 सीमा जाँचने के लिए पूरे2026 का सत्यापित कुल रोजगार,13वाँ वेतन/अवकाश/बोनस सहित। मासिक अनुमान उनका अलग कर/वार्षिक समायोजन नहीं निकालता। इन्हें सामान्य महीने के सकल/आधार में न जोड़ें।"</string>
+    <string name="tax_br_monthly_base_hint" formatted="false">"उसी सामान्य मासिक भुगतान का कानूनी कटौतियों बाद सत्यापित आधार। ऐप इसे सकल घटा BRL607.20 से तुलना कर कम आधार लेता है, दोनों कटौतियाँ नहीं जोड़ता। INSS दर स्वचालित नहीं। देखे भुगतान के लिए बदलें; ऐतिहासिक प्रोफ़ाइल नहीं।"</string>
+    <string name="tax_fifteen_income_hint" formatted="false">"पूरे चयनित कर वर्ष की सत्यापित रोजगार आय, बोनस/सही मूल्यांकित करयोग्य लाभ और अंतिम वार्षिक आधार। UG/PK जुलाई2026 से; PK कर वर्ष2027। वार्षिक तालिका/12 नकद पर कर आरक्षित राशि है, वेतनपर्ची/संचयी/पूरा वार्षिक नेट नहीं। UG:12 समान मासिक आधार।"</string>
+    <string name="tax_fifteen_base_hint" formatted="false">"कानूनी कटौती/राहत बाद अंतिम सत्यापित वार्षिक आधार। शून्य दर स्लैब दोबारा न घटाएँ। GT:2026 अतिरिक्त Q3,024; KZ360MCI; MK131,184MKD। UZ:आधार=वार्षिक वेतन। MD:कुल360,000 से कम। स्वचालित पात्रता नहीं।"</string>
+    <string name="tax_fifteen_cash_hint" formatted="false">"इस भुगतान के वास्तविक गैर-आयकर कर्मचारी नकद कटौती या स्पष्ट0: सामाजिक/स्वास्थ्य/पेंशन/लागू लेवी। नियोक्ता लागत/यहाँ निकला आयकर नहीं। UZ:12% में शामिल पेंशन दोबारा नहीं। कानूनी प्रभाव सत्यापित आधार में पहले से; दोहरी कटौती नहीं।"</string>
+    <string name="tax_wave_common_scope" formatted="false">"प्रोफ़ाइल: अविवाहित18–59 सामान्य कर्मचारी, पूरे वर्ष स्थानीय निवास/काम, एक घरेलू नौकरी, कोई आश्रित, अन्य/विदेशी आय, विशेष व्यवस्था/क्रेडिट नहीं जब तक बताए न जाएँ। कर निवास/शर्तें स्वतंत्र जाँचें; देश/भाषा पात्रता नहीं बताते। केवल स्थानीय पेरोल, मूल देश/विदेशी कर नहीं। मान सभी अवधियों में समान हैं; अपडेट करें।"</string>
+    <string name="tax_scope_pa" formatted="false">"पनामा2026: सामान्य निवासी वेतन, सत्यापित अंतिम वार्षिक आधार। PAB11,000 तक0%,50,000 तक15%, ऊपर25%। प्रतिनिधित्व/अलग दर भुगतान, अन्य आय/विशेष क्रेडिट नहीं। वास्तविक सामाजिक नकद अलग; शून्य स्लैब दोबारा न घटाएँ।"</string>
+    <string name="tax_scope_ni" formatted="false">"निकारागुआ2026: सामान्य निवासी वेतन, कानूनी INSS/बचत/छूट बाद सत्यापित वार्षिक आधार।0/15/20/25/30%। मुक्त13वाँ वेतन आधार में जाँचें; C$100,000 शून्य स्लैब फिर न घटाएँ। समाप्ति/अलग दर/विशेष क्रेडिट नहीं। वार्षिक आरक्षित कर, संचयी नहीं।"</string>
+    <string name="tax_scope_sv" formatted="false">"एल साल्वाडोर2026: एक सामान्य मासिक करयोग्य भुगतान, कानूनी कटौती बाद सत्यापित आधार। प्रकाशित मासिक तालिका/निश्चित कर राशियाँ; जून/दिसंबर संचयी पुनर्गणना, वार्षिक निपटान, पखवाड़ा/आंशिक माह नहीं। विशेष/मुक्त भुगतान या अन्य क्रेडिट नहीं।"</string>
+    <string name="tax_scope_hn" formatted="false">"होंडुरास2026: सामान्य निवासी वेतन, अंतिम वार्षिक आधार में पूर्ण पात्र HNL40,000 शिक्षा/चिकित्सा और अन्य कानूनी कटौतियाँ/छूट पहले से। नई2026 दरें।65से अधिक राहत, कारोबार/विशेष क्रेडिट नहीं। शून्य स्लैब फिर न घटाएँ।"</string>
+    <string name="tax_scope_py" formatted="false">"पराग्वे2026: निवासी कर्मचारी2026 से पहले ही IRP-RSP पंजीकृत। पहला पंजीकरण/सीमा पार वर्ष बाहर। कुल वार्षिक आय, खर्च से पहले IRP करयोग्य प्राप्तियाँ बिना मुक्त13वें वेतन, और अंतिम शुद्ध आधार सत्यापित करें। PYG80मिलियन प्राप्तियों तक कर भुगतान नहीं; ऊपर शुद्ध आधार पर8/9/10%। पूँजी/कारोबार/अन्य आय/क्रेडिट नहीं।"</string>
+    <string name="tax_scope_ec" formatted="false">"इक्वाडोर2026: मुख्यभूमि निवासी, बिना आश्रित, विकलांगता/विशेष रोग/विशेष राहत। प्रकाशित2026 वार्षिक निश्चित कर राशियाँ। सत्यापित पात्र निजी खर्च पर18% छूट,7बास्केट सीमा/अधिकतम कर। गैलापागोस/परिवार/विशेष सीमा बाहर। खर्च कर घटाते हैं, आधार दोबारा नहीं।"</string>
+    <string name="tax_scope_na" formatted="false">"नामीबिया2026/27:1मार्च2026–28फरवरी2027, सामान्य स्थानीय निवासी वेतन। कानूनी कटौतियों/सही मूल्यांकित लाभ बाद अंतिम वार्षिक आधार। NAD100,000 शून्य स्लैब, फिर18/25/28/30/32/37%। पेंशन निकासी, कृषि/कारोबार/अन्य आय/विशेष क्रेडिट नहीं। वार्षिक आरक्षित कर, संचयी PAYE नहीं।"</string>
+    <string name="tax_scope_kh" formatted="false">"कंबोडिया2026: सामान्य निवासी मासिक नकद वेतन, आश्रित/जीवनसाथी राहत, अनिवासी या अलग लाभ कर नहीं। कानूनी कटौती बाद सत्यापित मासिक आधार;0/5/10/15/20%। KHR1.5मिलियन शून्य स्लैब फिर न घटाएँ। वास्तविक कर्मचारी योगदान अलग।"</string>
+    <string name="tax_scope_az" formatted="false">"अज़रबैजान2026: मुख्य निजी गैर-तेल/गैस नौकरी का सामान्य पूर्ण करयोग्य मासिक नकद वेतन।3/10/14%, सकल&lt;=2,500 पर AZN200 छूट एक बार। सार्वजनिक/तेल/गैस/विशेष राहत नहीं। कर्मचारी बीमा PIT आधार नहीं घटाता।2027/2028 दरें नहीं।"</string>
+    <string name="tax_scope_bh" formatted="false">"बहरीन2026: गैर-GCC प्रवासी कर्मचारी का सामान्य स्थानीय वेतन। इस प्रोफ़ाइल में स्थानीय वेतन आयकर नहीं; वास्तविक SIO/बेरोज़गारी/पेंशन/अन्य नकद या स्पष्ट0 डालें। नियोक्ता लागत, कारोबार/अन्य आय या मूल देश कर नहीं।"</string>
+    <string name="tax_scope_kw" formatted="false">"कुवैत2026: गैर-GCC प्रवासी का सामान्य स्थानीय वेतन, स्थानीय व्यक्तिगत वेतन आयकर नहीं। वास्तविक बीमा/पेंशन/अन्य कटौती या स्पष्ट0। कंपनी/कारोबार कर, नियोक्ता लागत या विदेशी/मूल देश कर नहीं।"</string>
+    <string name="tax_scope_om" formatted="false">"ओमान2026: गैर-GCC प्रवासी का सामान्य स्थानीय वेतन।2026 में स्थानीय PIT नहीं; नया कानून2028 से, यहाँ5% नहीं लगाया जाता, भविष्य वर्ष सक्षम नहीं। वास्तविक सामाजिक/स्वास्थ्य/पेंशन नकद या0; नियोक्ता लागत/विदेशी कर नहीं।"</string>
+    <string name="tax_scope_qa" formatted="false">"कतर2026: गैर-GCC प्रवासी का सामान्य स्थानीय वेतन स्थानीय आयकर से बाहर। वास्तविक बीमा/पेंशन/अन्य नकद या0; देश से योगदान छूट न मानें। कारोबार/कंपनी, नियोक्ता लागत या विदेशी/मूल देश कर नहीं।"</string>
+    <string name="tax_scope_bn" formatted="false">"ब्रुनेई2026: सामान्य स्थानीय कर्मचारी वेतन, व्यक्तिगत आयकर नहीं। वास्तविक सत्यापित SPK/पेंशन/सामाजिक/अन्य नकद या0। स्वचालित दर/पात्रता नहीं। कारोबार/अन्य आय, नियोक्ता लागत या विदेशी/मूल देश कर नहीं।"</string>
+    <string name="tax_scope_bs" formatted="false">"बहामास2026: सामान्य स्थानीय वेतन, घरेलू व्यक्तिगत आयकर नहीं। वास्तविक सत्यापित NIB/पेंशन/अन्य नकद या0। स्वचालित योगदान छूट, कारोबार/अन्य आय, नियोक्ता लागत या विदेशी/मूल देश कर नहीं।"</string>
+    <string name="tax_ec_mainland" formatted="false">"मुख्यभूमि इक्वाडोर"</string>
+    <string name="tax_ec_expenses" formatted="false">"सत्यापित पात्र वार्षिक निजी खर्च"</string>
+    <string name="tax_ec_expenses_hint" formatted="false">"मुख्यभूमि, आश्रित/विशेष स्थिति नहीं: सत्यापित पात्र2026 खर्च या स्पष्ट0। USD5,752.60 (7×821.80) तक18% छूट, सेंट तक गोल और कर तक सीमित; अधिकतम USD1,035.47। वही खर्च वार्षिक आधार से न घटाएँ। स्वचालित पात्रता/गैलापागोस/विशेष सीमाएँ नहीं।"</string>
+    <string name="tax_py_receipts" formatted="false">"खर्च पूर्व सत्यापित वार्षिक IRP करयोग्य प्राप्तियाँ"</string>
+    <string name="tax_py_receipts_hint" formatted="false">"पराग्वे: खर्च से पहले सकल IRP-RSP करयोग्य वेतन प्राप्तियाँ, मुक्त13वाँ वेतन/कानूनी मुक्त प्राप्तियाँ छोड़ें। ये कुल रोजगार आय/अंतिम शुद्ध आधार के बराबर जरूरी नहीं। प्राप्तियाँ&lt;=कुल वार्षिक आय, अंतिम आधार&lt;=प्राप्तियाँ। PYG80मिलियन सीमा इसी फ़ील्ड पर, पूरे सकल पर नहीं।2026पूर्व पंजीकरण आवश्यक।"</string>
+    <string name="tax_wave_annual_hint" formatted="false">"पूरे कर वर्ष का सत्यापित कुल रोजगार, बोनस/सही मूल्यांकित लाभ और कानूनी कटौती/छूट बाद अंतिम वार्षिक आधार। नामीबिया2026/27,1मार्च2026 से; अन्य कैलेंडर2026। वार्षिक कर/12 नकद पर आरक्षित कर है, वेतनपर्ची/संचयी/पूर्ण वार्षिक नेट नहीं। साल की सभी अतिरिक्त राशि नकद में नहीं जोड़ते।"</string>
+    <string name="tax_wave_monthly_hint" formatted="false">"दिखे सकल वाले उसी सामान्य मासिक भुगतान का अंतिम सत्यापित आधार, केवल कानूनी कटौती बाद। शून्य स्लैब/नकद कटौती दोबारा नहीं। आधार सभी अवधियों में साझा: हर भुगतान पर अपडेट करें। SV संचयी/वार्षिक समायोजन या KH लाभ कर नहीं।"</string>
+    <string name="tax_wave_base_hint" formatted="false">"कानूनी कटौती/छूट बाद अंतिम सत्यापित वार्षिक आधार, शून्य स्लैब से पहले। HN:पूर्ण पात्र40,000 पहले से शामिल। PY:आधार&lt;=करयोग्य प्राप्तियाँ, मुक्त13वाँ शामिल नहीं। EC:निजी खर्च कर घटाते हैं, आधार फिर नहीं। पात्रता स्वतंत्र जाँचें।"</string>
+    <string name="tax_wave_cash_hint" formatted="false">"इस भुगतान की वास्तविक गैर-आयकर कर्मचारी नकद कटौती या स्पष्ट0: सामाजिक, स्वास्थ्य, पेंशन, बेरोज़गारी/NIB/SPK/अन्य। नियोक्ता लागत/यहाँ गणित आयकर नहीं। कानूनी कर प्रभाव सत्यापित आधार में पहले से। स्थानीय आयकर नहीं का अर्थ कटौती नहीं नहीं है; विदेशी/मूल देश कर नहीं।"</string>
+    <string name="tax_twenty_common_scope" formatted="false">"प्रोफ़ाइल:31–59वर्ष का अविवाहित कर-निवासी, पूरे कर वर्ष स्थानीय निवास/कार्य, एक सामान्य नौकरी; आश्रित, अन्य/विदेशी आय या विशेष स्थिति/क्रेडिट नहीं, जब तक बताया न जाए। देश/भाषा पात्रता नहीं हैं। अंतिम कर आधार और वास्तविक कर्मचारी कटौती अलग सत्यापित करें। नियोक्ता लागत/विदेशी कर नहीं। हर भुगतान के लिए आँकड़े बदलें।"</string>
+    <string name="tax_scope_at" formatted="false">"2026: केवल सामान्य वार्षिक वेतन। परिवहन क्रेडिट496 और आय-आधारित अधिकतम804 अतिरिक्त क्रेडिट, कर तक सीमित। बढ़ा हुआ आवागमन क्रेडिट, commuter euro, अलग कर वाला13वाँ/14वाँ वेतन या सामाजिक बीमा वापसी नहीं। कानूनी कटौती आधार में है; शून्य स्लैब दोबारा न घटाएँ।"</string>
+    <string name="tax_scope_cy" formatted="false">"2026सुधार: कानूनी कटौती/छूट के बाद सत्यापित अंतिम वार्षिक वेतन आधार। आवास/हरित/परिवार/पहली नौकरी लाभ स्वतः नहीं। अन्य आय या विशेष क्रेडिट नहीं।"</string>
+    <string name="tax_scope_mt" formatted="false">"2026: केवल SINGLEदर; विवाहित/अभिभावक/बच्चों की दर, विशेष15%अंशकालिक प्रणाली या अन्य क्रेडिट नहीं। अंतिम वार्षिक आधार सत्यापित करें।"</string>
+    <string name="tax_scope_gr" formatted="false">"2026: बिना बच्चों के31–59वर्ष के कर्मचारी। नई दरें;777क्रेडिट12000से ऊपर घटता है, केवल एक बार और कर तक। आवश्यक इलेक्ट्रॉनिक व्यय शर्तें पूरी हों; कमी पर अतिरिक्त कर, विशेष छूट/अन्य क्रेडिट नहीं।"</string>
+    <string name="tax_scope_si" formatted="false">"2026: कानूनी सामाजिक योगदान और व्यक्तिगत/सामान्य छूट के बाद अंतिम शुद्ध वार्षिक आधार पर आधिकारिक दरें। कटौती दोबारा नहीं। युवा/छात्र/विकलांगता/स्वयंसेवक विशेष व्यवस्था, विदेशी आय या विशेष क्रेडिट नहीं।"</string>
+    <string name="tax_scope_sk" formatted="false">"2026: नई वार्षिक दरें19/25/30/35%। कानूनी योगदान और पात्र गैर-कर राशि के बाद अंतिम सत्यापित आधार, आय-आधारित कमी सहित। दोहरी कटौती या बच्चे/बंधक/विशेष क्रेडिट नहीं।"</string>
+    <string name="tax_scope_hr" formatted="false">"2026: केवल ज़ाग्रेब, आयु31–59, युवा/वापसी प्रवासी छूट नहीं। अंतिम आधार में पात्र7200मूल छूट और कानूनी पेंशन कटौती शामिल।60000आधार पर23/33%। अन्य नगर उपलब्ध नहीं।"</string>
+    <string name="tax_scope_rs" formatted="false">"2026: सामान्य मासिक वेतन का10% withholding, भुगतान तिथि/कार्य अनुपात के कानूनी वेतन भत्ते के बाद अंतिम सत्यापित मासिक आधार पर। बीमा फिर न घटाएँ। उच्च आय का अतिरिक्त वार्षिक कर, संचयी समायोजन/विशेष छूट शामिल नहीं।"</string>
+    <string name="tax_scope_me" formatted="false">"2026: सामान्य पूरी तरह करयोग्य मासिक नकद वेतन; आधार=कर्मचारी योगदान से पहले सकल।0/9/15%। नगरपालिका वेतन अधिभार नियोक्ता लागत है, यहाँ अतिरिक्त कर्मचारी कटौती नहीं। विशेष भुगतान/वार्षिक समायोजन नहीं।"</string>
+    <string name="tax_scope_al" formatted="false">"2026: वार्षिक13/23%दर; आय-आधारित निजी भत्ता और कानूनी कटौती के बाद अंतिम आधार।600000/420000/360000भत्ता पहले से शामिल, दोबारा नहीं। बच्चे/शिक्षा क्रेडिट या अन्य आय नहीं।"</string>
+    <string name="tax_scope_ba" formatted="false">"2026: केवल बोस्निया और हर्ज़ेगोविना महासंघ, Republika Srpska/Brčko नहीं। कानूनी योगदान और पात्र3600निजी भत्ते के बाद अंतिम वार्षिक वेतन आधार।10%, अतिरिक्त क्रेडिट नहीं।"</string>
+    <string name="tax_scope_ng" formatted="false">"NTA/JRB2026:12बराबर पूरी तरह करयोग्य मासिक नकद वेतन; वार्षिक कुल=12×वर्तमान सकल। बोनस, लाभ, बदलता वेतन या सैन्य/अन्य छूट वाली नौकरी नहीं।70000/माह तक न्यूनतम वेतन रोजगार छूट शामिल। कानूनी राहत के बाद सत्यापित आधार; पुराना CRAया800000शून्य स्लैब दोबारा नहीं।"</string>
+    <string name="tax_scope_gh" formatted="false">"2026: सामान्य निवासी मासिक वेतन, केवल1सितंबर से लागू तालिका। वास्तविक सत्यापित भुगतान तिथि और कटौती के बाद मासिक आधार दें; अवधि का अंत उसी कैलेंडर महीने में हो। पुराने महीने, विशेष बोनस/ओवरटाइम, आकस्मिक कर्मचारी, अनिवासी और वार्षिक/संचयी समायोजन उपलब्ध नहीं।"</string>
+    <string name="tax_scope_tz" formatted="false">"2026: मुख्यभूमि निवासी की मुख्य नौकरी का मासिक PAYE। कानूनी कटौती/मान्य पेंशन के बाद आधार, शून्य स्लैब से पहले। ज़ांज़ीबार, दूसरी नौकरी/अनिवासी30%फ्लैट कर, विशेष भुगतान या वार्षिक समायोजन नहीं।"</string>
+    <string name="tax_scope_bw" formatted="false">"2026/27की शुरुआत1जुलाई2026: पारित निवासी वार्षिक तालिका में400000से ऊपर नया27.5%, पुराना25%अधिकतम नहीं। अंतिम आधार सत्यापित; अनिवासी, सेवा-समाप्ति/पेंशन एकमुश्त, व्यवसाय या विशेष क्रेडिट नहीं।"</string>
+    <string name="tax_scope_mu" formatted="false">"आय वर्ष2026/27की शुरुआत1जुलाई2026, आकलन-वर्ष नहीं। सीमित प्रोफ़ाइल: रोजगार की कुल वार्षिक आय&lt;=12मिलियन MUR, अन्य आय नहीं। इस दायरे में0/10/20%। ऊँची आय35%/Fair Share, विशेष व्यवस्था/क्रेडिट नहीं। सभी आधार कटौतियाँ सत्यापित करें।"</string>
+    <string name="tax_scope_eg" formatted="false">"2026: सामान्य निवासी वेतन, कुल वार्षिक आय&lt;=600000EGP। अंतिम सत्यापित आधार में पात्र20000निजी छूट/कानूनी कटौती है,40000शून्य स्लैब से पहले। आधार10EGPके गुणज तक नीचे गोल। ऊँची आय पर स्लैब हटने के नियम/विशेष क्रेडिट उपलब्ध नहीं। वास्तविक सामाजिक/स्टाम्प/अन्य वेतन कटौती अलग दें।"</string>
+    <string name="tax_scope_sz" formatted="false">"2026/27से1जुलाई2026: सामान्य वेतन,20/25/30/33%और8200गैर-वापसी मूल क्रेडिट एक बार।41000प्रभावी शून्य बिंदु अलग कटौती नहीं।60+आयु, सेवा-समाप्ति/सेवानिवृत्ति विशेष दर या अन्य क्रेडिट नहीं। अंतिम आधार सत्यापित करें।"</string>
+    <string name="tax_scope_ls" formatted="false">"2026/27से1अप्रैल2026: अद्यतन77760वार्षिक स्लैब20%, अतिरिक्त30%,12240गैर-वापसी वार्षिक क्रेडिट। पुरानी RSLराशियाँ लागू नहीं। अंतिम वेतन आधार सत्यापित; नियोक्ता लाभ कर, अनिवासी, सेवा-समाप्ति या विशेष क्रेडिट नहीं।"</string>
+    <string name="tax_scope_jo" formatted="false">"2026: सामान्य निवासी वार्षिक वेतन। अंतिम आधार में पात्र9000निजी छूट और दस्तावेज़ित कानूनी कटौती।5/10/15/20/25/30%और200000से ऊपर1%राष्ट्रीय योगदान। आधार/वार्षिक कर से दीनार का अंश कानून अनुसार हटता है। विशेष व्यवस्था/क्रेडिट नहीं।"</string>
+    <string name="tax_payment_date" formatted="false">"वास्तविक भुगतान तिथि · YYYY-MM-DD"</string>
+    <string name="tax_payment_date_hint" formatted="false">"केवल घाना: सत्यापित तिथि2026-09-01से2026-12-31के बीच, अवधि-अंत के उसी महीने में; नहीं तो नेट उपलब्ध नहीं। लैटिन अंक, जैसे2026-10-31। दूसरे भुगतान पर तिथि/आधार बदलें। पुराने स्लैब/वार्षिक-संचयी समायोजन सक्षम नहीं। तिथि बैकअप में शामिल है।"</string>
+    <string name="tax_payment_date_invalid" formatted="false">"लैटिन अंकों में वैध YYYY-MM-DDतिथि दें या खाली छोड़ें।"</string>
+    <string name="tax_zagreb" formatted="false">"ज़ाग्रेब"</string>
+    <string name="tax_fbih" formatted="false">"बोस्निया और हर्ज़ेगोविना महासंघ"</string>
+    <string name="tax_tz_mainland" formatted="false">"मुख्यभूमि तंज़ानिया"</string>
+    <string name="tax_twenty_annual_hint" formatted="false">"पूरे कर वर्ष की कुल रोजगार आय और अंतिम आधार स्वतंत्र सत्यापित करें। BW/MU/SZ2026/27से1जुलाई; LSसे1अप्रैल; बाकी2026कैलेंडर। वार्षिक कर/12अवधि नकद से कर आरक्षित अनुमान है, वास्तविक संचयी withholding/वार्षिक नेट नहीं। नाइजीरिया में12बराबर वेतन चाहिए। वार्षिक बोनस/लाभ पूरा इस भुगतान में न जोड़ें।"</string>
+    <string name="tax_twenty_base_hint" formatted="false">"कानूनी कटौती/पात्र निजी भत्ते के बाद अंतिम सत्यापित वार्षिक कर आधार, शून्य स्लैब/कर क्रेडिट से पहले। AL/BA/HR/EG/JOका मूल भत्ता पहले से शामिल। AT/GR/SZ/LSके क्रेडिट कर पर अलग हैं। नकद/शून्य स्लैब दोबारा न घटाएँ; व्यक्तिगत पात्रता जाँचें।"</string>
+    <string name="tax_twenty_monthly_hint" formatted="false">"उसी सामान्य मासिक भुगतान का अंतिम सत्यापित आधार, कानूनी कटौती/भत्ते के बाद और शून्य स्लैब से पहले। RSभत्ता वास्तविक तिथि/कार्य के अनुसार; MEआधार=योगदान से पहले सकल; GHतिथि/महीना; TZकेवल मुख्यभूमि मुख्य नौकरी। वार्षिक/संचयी समायोजन नहीं। अन्य भुगतान पर आधार/तिथि बदलें।"</string>
+    <string name="tax_us_ak" formatted="false">"अलास्का"</string>
+    <string name="tax_us_nv" formatted="false">"नेवाडा"</string>
+    <string name="tax_us_sd" formatted="false">"साउथ डकोटा"</string>
+    <string name="tax_us_tn" formatted="false">"टेनेसी"</string>
+    <string name="tax_us_wa" formatted="false">"वॉशिंगटन"</string>
+    <string name="tax_us_wy" formatted="false">"वायोमिंग"</string>
+    <string name="tax_us_nh" formatted="false">"न्यू हैम्पशायर"</string>
+    <string name="tax_us_az" formatted="false">"एरिज़ोना"</string>
+    <string name="tax_us_ia" formatted="false">"आयोवा"</string>
+    <string name="tax_us_il" formatted="false">"इलिनॉय"</string>
+    <string name="tax_us_mi" formatted="false">"मिशिगन"</string>
+    <string name="tax_us_nc" formatted="false">"नॉर्थ कैरोलाइना"</string>
+    <string name="tax_us_ut" formatted="false">"यूटा"</string>
+    <string name="tax_us_ky" formatted="false">"केंटकी"</string>
+    <string name="tax_us_pa" formatted="false">"पेन्सिलवेनिया"</string>
+    <string name="tax_us_in" formatted="false">"इंडियाना"</string>
+    <string name="tax_us_ma" formatted="false">"मैसाचुसेट्स"</string>
+    <string name="tax_us_ga" formatted="false">"जॉर्जिया"</string>
+    <string name="tax_us_la" formatted="false">"लुइज़ियाना"</string>
+    <string name="tax_us_ms" formatted="false">"मिसिसिपी"</string>
+    <string name="tax_us_state_base" formatted="false">"सत्यापित वार्षिक राज्य कर आधार"</string>
+    <string name="tax_us_base_hint" formatted="false">"कानूनी राज्य कटौती/छूट के बाद अंतिम आधार, शून्य स्लैब और कर क्रेडिट से पहले। संघीय आधार की नकल न करें। व्यक्तिगत पात्रता अलग सत्यापित करें।"</string>
+    <string name="tax_us_state_relief" formatted="false">"सत्यापित वार्षिक राज्य कर राहत"</string>
+    <string name="tax_us_relief_hint" formatted="false">"कुल पात्र गैर-वापसीयोग्य कर कटौती, जिसमें व्यक्तिगत/कम आय राहत भी शामिल हो। सत्यापित 2026 राशि या स्पष्ट 0 दें। राज्य कर तक सीमित; धनवापसी या स्वचालित पात्रता नहीं।"</string>
+    <string name="tax_us_local_tax" formatted="false">"इस अवधि का स्थानीय कर्मचारी कर"</string>
+    <string name="tax_us_local_hint" formatted="false">"इस भुगतान का वास्तविक सत्यापित शहर/काउंटी/स्कूल/व्यवसाय कर्मचारी कर, या स्पष्ट 0। स्थानीय दरें और छूट नहीं गिनी जातीं। अन्य कटौतियों में दोबारा शामिल न करें।"</string>
+    <string name="tax_us_zero_hint" formatted="false">"इस 2026 प्रोफ़ाइल में सामान्य वेतन पर राज्य आयकर नहीं। संघीय कर, Social Security, Medicare और वास्तविक स्थानीय/अन्य कर्मचारी कटौतियाँ फिर भी लागू हैं। वॉशिंगटन के 2028 बदलाव 2026 पर लागू नहीं हैं।"</string>
+    <string name="tax_us_pa_ut_hint" formatted="false">"PA/UT: केवल पूर्ण करयोग्य बिना समायोजन वेतन; राज्य आधार = 12 × वर्तमान मासिक सकल। PA में मानक कटौती नहीं। UT में संघीय कटौती अलग कर क्रेडिट को प्रभावित करती है, इस आधार को नहीं; 2026 क्रेडिट सत्यापित करें।"</string>
+    <string name="tax_us_ms_hint" formatted="false">"मिसिसिपी: अंतिम राज्य आधार में $10,000 से अधिक पर 4%। शून्य स्लैब यहाँ एक बार लागू है; दर्ज आधार से न घटाएँ। एक कमाने वाले की संयुक्त फाइलिंग में एक स्लैब।"</string>
+    <string name="tax_us_ma_hint" formatted="false">"मैसाचुसेट्स: सामान्य वेतन पर 5%, अतिरिक्त उच्च-आय कर को बाहर रखने हेतु परिवार का वार्षिक सकल अधिकतम $1,000,000। No Tax Status या Limited Income Credit राहत अलग सत्यापित करें।"</string>
+    <string name="tax_us_cash_hint" formatted="false">"अवधि की अन्य वास्तविक कर्मचारी कटौतियाँ या 0: सवेतन अवकाश, WA Cares, बेरोज़गारी, PFML और लागू योगदान। नियोक्ता लागत नहीं। पहले गिने संघीय/राज्य/स्थानीय कर, Social Security और Medicare बाहर रखें। कर-पूर्व लाभ प्रोफ़ाइल से बाहर हैं।"</string>
+    <string name="tax_us_current_inputs" formatted="false">"राज्य आधार/राहत मैन्युअल सत्यापित इनपुट हैं। वार्षिक सकल = 12 × वर्तमान मासिक सकल; कर/12 औसत आरक्षित अनुमान है, W-4/संचयी withholding नहीं। हर भुगतान/अवधि पर अपडेट करें। स्वचालित स्थानीय कर, वापसीयोग्य क्रेडिट या अंतरराज्यीय मामले नहीं।"</string>
+    <string name="tax_us_state_tax" formatted="false">"राज्य आयकर"</string>
+    <string name="tax_us_al" formatted="false">"अलाबामा"</string>
+    <string name="tax_us_ar" formatted="false">"आर्कन्सॉ"</string>
+    <string name="tax_us_ca" formatted="false">"कैलिफ़ोर्निया"</string>
+    <string name="tax_us_co" formatted="false">"कोलोराडो"</string>
+    <string name="tax_us_ct" formatted="false">"कनेक्टिकट"</string>
+    <string name="tax_us_de" formatted="false">"डेलावेयर"</string>
+    <string name="tax_us_hi" formatted="false">"हवाई"</string>
+    <string name="tax_us_id" formatted="false">"आइडाहो"</string>
+    <string name="tax_us_ks" formatted="false">"कैंसस"</string>
+    <string name="tax_us_md" formatted="false">"मैरीलैंड"</string>
+    <string name="tax_us_me" formatted="false">"मेन"</string>
+    <string name="tax_us_mn" formatted="false">"मिनेसोटा"</string>
+    <string name="tax_us_mo" formatted="false">"मिज़ूरी"</string>
+    <string name="tax_us_mt" formatted="false">"मोंटाना"</string>
+    <string name="tax_us_nd" formatted="false">"नॉर्थ डकोटा"</string>
+    <string name="tax_us_ne" formatted="false">"नेब्रास्का"</string>
+    <string name="tax_us_nj" formatted="false">"न्यू जर्सी"</string>
+    <string name="tax_us_nm" formatted="false">"न्यू मेक्सिको"</string>
+    <string name="tax_us_ny" formatted="false">"न्यूयॉर्क"</string>
+    <string name="tax_us_oh" formatted="false">"ओहायो"</string>
+    <string name="tax_us_ok" formatted="false">"ओक्लाहोमा"</string>
+    <string name="tax_us_or" formatted="false">"ओरेगन"</string>
+    <string name="tax_us_ri" formatted="false">"रोड आइलैंड"</string>
+    <string name="tax_us_sc" formatted="false">"साउथ कैरोलाइना"</string>
+    <string name="tax_us_va" formatted="false">"वर्जीनिया"</string>
+    <string name="tax_us_vt" formatted="false">"वर्मॉन्ट"</string>
+    <string name="tax_us_wi" formatted="false">"विस्कॉन्सिन"</string>
+    <string name="tax_us_wv" formatted="false">"वेस्ट वर्जीनिया"</string>
+    <string name="tax_us_final_scope" formatted="false">"28 नए प्रोफ़ाइल: सामान्य निवासी वेतन; वैकल्पिक न्यूनतम कर/विशेष व्यवस्थाएँ नहीं। स्वचालित स्लैब हेतु परिवार का वार्षिक सकल अधिकतम $1,000,000, नीचे कुछ कम सीमाएँ हैं। आधार, राहत और कर्मचारी कटौती स्वतंत्र सत्यापित हों। पूर्ण पेरोल नहीं।"</string>
+    <string name="tax_us_manual_scope" formatted="false">"CO / ID / VT: केवल सत्यापित कर देयता दर्ज करें। यहाँ स्वचालित 2026 रिटर्न स्लैब सत्यापित नहीं हुआ है। स्वतंत्र सत्यापित अंतिम वार्षिक 2026 राज्य आयकर देयता दें; ऐप यह देयता या पात्रता नहीं गिनता।"</string>
+    <string name="tax_us_verified_state_tax" formatted="false">"सत्यापित अंतिम वार्षिक राज्य आयकर देयता"</string>
+    <string name="tax_us_verified_tax_hint" formatted="false">"गैर-वापसीयोग्य राहत के बाद अंतिम 2026 देयता, withholding/अग्रिम भुगतान से पहले। शेष देय राशि, काटा कर, पिछले वर्ष का कर या रिफंड नहीं। सत्यापित होने पर ही 0। केवल एक बार 12 से भाग; इस मार्ग में आधार/राहत अनदेखे हैं। स्थानीय/अन्य कटौतियाँ अलग। हर भुगतान पर अपडेट करें।"</string>
+    <string name="tax_us_final_limits" formatted="false">"स्वचालित वार्षिक पारिवारिक सकल सीमाएँ: CT $50,000 SINGLE / $100,000 MFJ; NY $107,650; AR $94,700। उच्च आय add-back/recapture और AR वैकल्पिक तालिकाएँ नहीं गिनी जातीं। सीमा से बाहर नेट अनुपलब्ध।"</string>
+    <string name="tax_us_sc_hint" formatted="false">"साउथ कैरोलाइना: नया 2026 दो-स्लैब कानून और SCIAD। अंतिम आधार में सत्यापित पात्र SCIAD और आय के अनुसार उसकी कमी पहले से हो। संघीय मानक कटौती या पुराने 0/3/6% स्लैब अपने आप न लें।"</string>
+    <string name="tax_us_or_hint" formatted="false">"ओरेगन: आधिकारिक अनुमानित 2026 स्लैब और प्रकाशित गोल आधार-कर रकम। अंतिम रिटर्न आँकड़े बदल सकते हैं। आधार, कानूनी संघीय कर कटौती और क्रेडिट सत्यापित करें। ट्रांज़िट, सवेतन अवकाश और स्थानीय कर वास्तविक कर्मचारी कटौती इनपुट हैं।"</string>
+    <string name="tax_us_oh_hint" formatted="false">"ओहायो 2026: अंतिम राज्य आधार $26,050 तक शून्य; ऊपर $332 और अधिक राशि पर 2.75%। निजी/कम आय क्रेडिट राज्य राहत में सत्यापित करें। स्थानीय/स्कूल कर अलग।"</string>
+    <string name="tax_us_manual_result" formatted="false">"राज्य कर · दर्ज वार्षिक देयता / 12"</string>
+    <string name="tax_next_common_scope" formatted="false">"केवल2026: पूरे वर्ष निवासी अविवाहित कर्मचारी31–59, एक सामान्य स्थानीय नौकरी; आश्रित, अन्य आय या विशेष व्यवस्था नहीं। आधार, क्रेडिट और वास्तविक कटौती सत्यापित करें। नियोक्ता लागत/मुद्रा विनिमय/पुराना प्रोफ़ाइल नहीं; हर भुगतान अपडेट करें।"</string>
+    <string name="tax_next_annual_hint" formatted="false">"पूरे2026का सत्यापित कुल वार्षिक रोजगार सकल। वार्षिक कर/12आरक्षित अनुमान है, बदलते वेतन की संचयी withholding/रिटर्न/रिफंड नहीं। सालाना अतिरिक्त राशि पूरी इस भुगतान में न जोड़ें।"</string>
+    <string name="tax_next_monthly_hint" formatted="false">"इसी मासिक भुगतान का अंतिम सत्यापित आधार। IS/CL/UY/BOवार्षिक रिटर्न नहीं। UYमें वैध6%वृद्धि हो सकती है; योगदान क्रेडिट से कर घटाते हैं, आधार दोबारा नहीं। BOमें कानूनी2SMNकटौती पहले से है।"</string>
+    <string name="tax_next_base_hint" formatted="false">"वैध कटौतियों के बाद अंतिम राष्ट्रीय वार्षिक आधार, शून्य स्लैब/क्रेडिट से पहले। NLमेंBox1बीमा। JM/FJ/LUके शून्य स्लैब यहाँ एक बार। BB25000और पात्रBZनिजी राहत पहले ही घटे हों।"</string>
+    <string name="tax_next_annual_relief" formatted="false">"सत्यापित वार्षिक गैर-वापसीयोग्य कर राहत"</string>
+    <string name="tax_next_monthly_relief" formatted="false">"इसी मासिक भुगतान की सत्यापित कर राहत"</string>
+    <string name="tax_next_relief_hint" formatted="false">"स्वतंत्र सत्यापित पात्र राहत या स्पष्ट0दें। कर तक सीमित, रिफंड/स्वचालित पात्रता नहीं। वार्षिक, लेकिनIS/CL/UY/BOमें मासिक। NLमेंBox1क्रेडिट औरLUमें फंड प्रभाव शामिल। अन्य करों के क्रेडिट दोबारा न गिनें।"</string>
+    <string name="tax_next_extra_tax" formatted="false">"इस अवधि के अतिरिक्त कर्मचारी कर"</string>
+    <string name="tax_next_extra_hint" formatted="false">"वास्तविक सत्यापित, पहले न गिने स्थानीय/कैंटन/क्षेत्रीय/धार्मिक/अन्य कर या0। JPपुनर्निर्माण, LU7%फंड, NLबीमा पहले गिने हैं; ISमें सामान्य नगरपालिका भाग है। दोबारा न घटाएँ।"</string>
+    <string name="tax_next_cash_hint" formatted="false">"अन्य वास्तविक कर्मचारी कटौतियाँ या0: पेंशन/सामाजिक/स्वास्थ्य/बीमा, नियोक्ता लागत नहीं। गिने राष्ट्रीय/अलग अतिरिक्त कर बाहर रखें। NLराष्ट्रीय बीमा शामिल है। आधार से दोबारा कटौती नहीं।"</string>
+    <string name="tax_next_verified_tax" formatted="false">"सत्यापित अंतिम राष्ट्रीय/क्षेत्रीय वार्षिक आयकर"</string>
+    <string name="tax_next_verified_hint" formatted="false">"मैन्युअल: आय-वर्ष2026की सत्यापित देयता, गैर-वापसीयोग्य क्रेडिट के बाद और withholding/अग्रिम से पहले। काटा कर, शेष, रिफंड या पिछला वर्ष नहीं। एक बार /12; नगरपालिका अलग, आधार/राहत अनदेखे।"</string>
+    <string name="tax_next_cl_date_hint" formatted="false">"चिली:2026की वास्तविक YYYY-MM-DDतिथि लैटिन अंकों में; केवल जनवरी–नवंबर तालिकाएँ। अवधि-अंत का महीना समान हो। अन्यथा नेट उपलब्ध नहीं। वार्षिक/52bisतालिका स्वतः नहीं।"</string>
+    <string name="tax_next_nl_charge" formatted="false">"Box1कर और राष्ट्रीय बीमा"</string>
+    <string name="tax_next_manual_result" formatted="false">"राष्ट्रीय/क्षेत्रीय कर · दर्ज वार्षिक राशि /12"</string>
+    <string name="tax_next_nl" formatted="false">"नीदरलैंड: AOWसे पहलेBox1, वार्षिक सकल≤78426EUR।2026पहले स्लैब में27.65%राष्ट्रीय बीमा। संयुक्त क्रेडिट सत्यापित; बीमा दोबारा न घटाएँ। Box2/3या30%व्यवस्था नहीं।"</string>
+    <string name="tax_next_be" formatted="false">"बेल्जियम: केवल सत्यापित राष्ट्रीय/क्षेत्रीय वार्षिक देयता मैन्युअल।2026आय का आकलन2027है,2026नहीं। नगरपालिका अलग; क्षेत्र/क्रेडिट/flexi-jobस्वचालित नहीं।"</string>
+    <string name="tax_next_lu" formatted="false">"लक्ज़मबर्ग: केवलclass1, सकल≤150000EUR।2025से जारी स्लैब; आधार50EURतक नीचे गोल,7%रोजगार फंड संयुक्त सत्यापित राहत से पहले शामिल। अन्य वर्ग/सीमापार/देखभाल योगदान गणना नहीं।"</string>
+    <string name="tax_next_ch" formatted="false">"स्विट्ज़रलैंड: सामान्य संघीयSINGLEआकलन, सकल≤100000CHF।2026तालिका, आधार100CHFऔर कर0.05CHFतक नीचे गोल;25CHFसे कम नहीं वसूला जाता। कैंटन/नगरपालिका/चर्च वास्तविक अलग; स्रोत कर तालिका नहीं।"</string>
+    <string name="tax_next_se" formatted="false">"स्वीडन: केवल राष्ट्रीय2026कर, मूल कटौती के बाद सीमा643000SEK, सकल660400नहीं। आधार100SEKतक नीचे गोल, न्यूनतम अधिकता200। स्थानीय कर/क्रेडिट आवंटन अलग सत्यापित।"</string>
+    <string name="tax_next_fi" formatted="false">"फ़िनलैंड: केवल राष्ट्रीय2026स्लैब। राष्ट्रीय क्रेडिट सत्यापित; नगरपालिका/चर्च/Yle/अन्य शुल्क अलग। वास्तविक पेंशन/बेरोज़गारी/स्वास्थ्य योगदान; स्वचालित आवंटन नहीं।"</string>
+    <string name="tax_next_is" formatted="false">"आइसलैंड: प्रकाशित मासिक2026withholdingतालिका में सामान्य नगरपालिका भाग है। सत्यापित मासिक क्रेडिट, वार्षिक/12नहीं। अलग नगरपालिका वार्षिक आकलन, carryover, जीवनसाथी हस्तांतरण या सालाना समायोजन नहीं।"</string>
+    <string name="tax_next_it" formatted="false">"इटली: सामान्यIRPEF2026दर23/33/43%, सकल≤200000EUR। रोजगार राहत सत्यापित; वास्तविक क्षेत्रीय/नगरपालिका कर अलग। विशेष ओवरटाइम/रात/शिफ्ट/बोनस प्रतिस्थापन व्यवस्था नहीं।"</string>
+    <string name="tax_next_jp" formatted="false">"जापान: सामान्य निवासी वार्षिक आय, सकल≤100मिलियनJPY। कानूनी अंतिम आधार1000JPYतक नीचे गोल। राष्ट्रीय क्रेडिट के बाद2026पुनर्निर्माण2.1%अलग गिना। वास्तविक स्थानीय कर अलग;2027नियम नहीं।"</string>
+    <string name="tax_next_kr" formatted="false">"दक्षिण कोरिया: सामान्य प्रगतिशील राष्ट्रीय वेतन कर; अंतिम आधार/राष्ट्रीय क्रेडिट सत्यापित। स्थानीय कर/वास्तविक कर्मचारी बीमा अलग। विदेशी कर्मचारी की सपाट दर या विशेष व्यवस्था नहीं।"</string>
+    <string name="tax_next_ar" formatted="false">"अर्जेंटीना: आधिकारिक वार्षिक/अंतिम2026अनुच्छेद94तालिका, प्रकाशित प्रारंभिक कर। अंतिम वार्षिक आधार सत्यापित। कर/12आरक्षित है, छमाही संचयी withholding/SACवितरण/रिफंड नहीं।"</string>
+    <string name="tax_next_cl" formatted="false">"चिली: वास्तविक भुगतान महीने का सामान्य मासिकIUSC; जनवरी–नवंबर2026मात्र,52bisनहीं। आधार/क्रेडिट सत्यापित; वास्तविक पेंशन/स्वास्थ्य अलग। वार्षिक समायोजन नहीं।"</string>
+    <string name="tax_next_uy" formatted="false">"उरुग्वे: सामान्य मासिकIRPF2026। सत्यापित आधार में लागू6%वृद्धि, अधिकतम106%सकल। योगदान सत्यापित14/8%क्रेडिट से कर घटाते हैं, आधार दोबारा नहीं। विशेषaguinaldo/अवकाश/वार्षिक समायोजन नहीं।"</string>
+    <string name="tax_next_bo" formatted="false">"बोलीविया: कानूनी2SMNऔर मान्य योगदान के बाद मासिकRC-IVA13%। सत्यापित मासिक क्रेडिट में पात्र13%का1SMN, बिल और सूचकांकित पिछला शेष। न्यूनतम वेतन/पात्रता/carryoverस्वचालित नहीं।"</string>
+    <string name="tax_next_jm" formatted="false">"जमैका: वार्षिक2026आरक्षित अनुमान, भारित सीमा1876614JMD, अप्रैल वार्षिक1902360नहीं।25/30%, ऊपरी सीमा6मिलियनवैधानिक आय। आधार वैध योगदान के बाद, शून्य स्लैब से पहले। संचयीPAYE/65+राहत नहीं।"</string>
+    <string name="tax_next_tt" formatted="false">"त्रिनिदाद और टोबैगो: अंतिम आधार1मिलियनTTDपर वार्षिक25/30%। निजी छूट90000पहले से आधार में। वास्तविकNIS/स्वास्थ्य अलग; नियोक्ता व्यापार शुल्क नहीं।"</string>
+    <string name="tax_next_bz" formatted="false">"बेलीज़: अंतिम सत्यापित वार्षिक आधार पर25%। सकल अनुसार25600/24600/22600/19600निजी राहत पहले घटी हो। दान पात्रता/रिफंड स्वचालित नहीं; वास्तविक सामाजिक बीमा अलग।"</string>
+    <string name="tax_next_gy" formatted="false">"गुयाना:2026दर25/35%, करयोग्य सीमा3360000GYD। अंतिम आधार में पात्र छूट≥1680000या एक-तिहाई,NISऔर वैध ओवरटाइम कटौती। विशेष पात्रता/बीमा दर स्वचालित नहीं।"</string>
+    <string name="tax_next_bb" formatted="false">"बारबाडोस: नई2026दर11.5/27.5%। पात्र निजी छूट25000BBDपहले से अंतिम आधार में; उसके पहले50000पर11.5%।25000शून्य स्लैब दोबारा नहीं। वास्तविकNIS/अन्य शुल्क अलग।"</string>
+    <string name="tax_next_fj" formatted="false">"फ़िजी:2024से जारी निवासी दर2026में लागू;30000FJDशून्य स्लैब एक बार। हटाए अलगSRT/ECAL, अनिवासी या विशेष भुगतान नहीं। आधार/क्रेडिट/वास्तविक योगदान सत्यापित।"</string>
+    <string name="menu_open" formatted="false">"मेन्यू खोलें"</string>
+    <string name="shift_global_hint" formatted="false">"हर स्क्रीन के नीचे शिफ्ट स्लाइडर का उपयोग करें। शुरू करने से पहले यहाँ कार्यालय या घर चुनें।"</string>
+    <string name="shift_active" formatted="false">"शिफ्ट चालू है"</string>
+    <string name="shift_ready" formatted="false">"शुरू करने के लिए तैयार"</string>
+    <string name="shift_options" formatted="false">"शिफ्ट के विकल्प"</string>
+    <string name="shift_done" formatted="false">"हो गया"</string>
+    <string name="period_current" formatted="false">"वर्तमान अवधि"</string>
+    <string name="period_choose" formatted="false">"महीना और वर्ष चुनें"</string>
+    <string name="period_end_hint" formatted="false">"वह महीना चुनें जिसमें वेतन अवधि समाप्त होती है। नीचे सटीक तारीखें दिखाई गई हैं।"</string>
+    <string name="period_year" formatted="false">"वर्ष"</string>
+    <string name="period_year_hint" formatted="false">"1900 से 2100 के बीच का वर्ष दर्ज करें।"</string>
+    <string name="period_apply" formatted="false">"अवधि दिखाएँ"</string>
+    <string name="widget_name" formatted="false">"ShiftHours · शिफ्ट"</string>
+    <string name="widget_description" formatted="false">"कार्यालय या घर की शिफ्ट शुरू और समाप्त करें तथा उसकी चलती अवधि देखें।"</string>
+    <string name="widget_open" formatted="false">"ऐप खोलें"</string>
+    <string name="widget_error" formatted="false">"डेटा जाँचने या बैकअप बहाल करने के लिए ऐप खोलें।"</string>
+    <string name="widget_setup" formatted="false">"पहले ऐप में शुरुआती सेटअप पूरा करें।"</string>
+    <string name="widget_inactive" formatted="false">"कोई शिफ्ट चालू नहीं"</string>
+    <string name="widget_start_office" formatted="false">"शुरू · कार्यालय"</string>
+    <string name="widget_start_home" formatted="false">"शुरू · घर"</string>
+    <string name="widget_stop" formatted="false">"शिफ्ट समाप्त करें"</string>
+    <string name="shift_changed" formatted="false">"चालू शिफ्ट बदल गई है। यह संपादन विंडो बंद करके फिर खोलें।"</string>
+    <string name="overtime_by_location" formatted="false">"स्थान के अनुसार ओवरटाइम"</string>
+    <string name="overtime_by_location_hint" formatted="false">"दैनिक ओवरटाइम दर-श्रेणियाँ कार्यालय और घर के लिए साझा हैं और काम किए गए स्थान को आवंटित होती हैं। भुगतान में श्रेणी का पूरा प्रतिशत शामिल है, कर से पहले।"</string>
+    <string name="ui_more_info" formatted="false">"अधिक जानकारी"</string>
+    <string name="ui_collapse" formatted="false">"विवरण छिपाएँ"</string>
+    <string name="ui_expand" formatted="false">"विवरण दिखाएँ"</string>
+    <string name="ui_details" formatted="false">"विवरण"</string>
+    <string name="ui_appearance" formatted="false">"दिखावट"</string>
+    <string name="ui_theme_system" formatted="false">"फोन के अनुसार"</string>
+    <string name="ui_theme_light" formatted="false">"हल्का"</string>
+    <string name="ui_theme_dark" formatted="false">"गहरा"</string>
+    <string name="ui_theme_hint" formatted="false">"सेटिंग्स के साथ सहेजा जाता है और बैकअप में शामिल होता है। स्वचालित मोड फोन की सिस्टम थीम का अनुसरण करता है।"</string>
+    <string name="ui_gross_estimate" formatted="false">"अनुमानित सकल वेतन"</string>
+    <string name="ui_record_actions" formatted="false">"रिकॉर्ड के विकल्प"</string>
+    <string name="ui_net_estimate" formatted="false">"चुनी गई कर प्रोफ़ाइल के दायरे में अनुमानित शुद्ध वेतन।"</string>
+    <string name="ui_tax_scope_notice" formatted="false">"गणना सीमित कर प्रोफ़ाइल पर लागू है। केवल देश चुनने से पात्रता तय नहीं होती। अधूरी आवश्यकताएँ ऊपर दिखाई गई हैं।"</string>
+    <string name="ui_tax_scope" formatted="false">"कर प्रोफ़ाइल और शर्तें"</string>
+    <string name="ui_pay_details" formatted="false">"वेतन का विवरण"</string>
+    <string name="ui_settings_hours" formatted="false">"घंटे और विराम"</string>
+    <string name="ui_settings_pay" formatted="false">"वेतन और ओवरटाइम"</string>
+    <string name="ui_settings_tax" formatted="false">"कर और अंशदान"</string>
+    <string name="ui_settings_display" formatted="false">"भाषा और दिखावट"</string>
+    <string name="ui_country_search" formatted="false">"देश, कोड या मुद्रा खोजें"</string>
+    <string name="ui_no_results" formatted="false">"कोई देश नहीं मिला"</string>
+    <string name="export_excel" formatted="false">"Excel निर्यात"</string>
+    <string name="export_sheet" formatted="false">"शिफ्ट"</string>
+    <string name="export_period_start" formatted="false">"आरंभ तिथि"</string>
+    <string name="export_period_end" formatted="false">"समाप्ति तिथि"</string>
+    <string name="export_date" formatted="false">"तारीख"</string>
+    <string name="export_start" formatted="false">"आरंभ समय"</string>
+    <string name="export_end" formatted="false">"समाप्ति समय"</string>
+    <string name="export_duration" formatted="false">"कुल समय"</string>
+    <string name="export_total" formatted="false">"कुल"</string>
+    <string name="export_note" formatted="false">"निर्धारित विराम काटने के बाद भुगतान योग्य अवधि। रात की शिफ्ट का समाप्ति समय अगले दिन हो सकता है।"</string>
+    <string name="export_saved" formatted="false">"Excel फ़ाइल सहेजी गई।"</string>
+    <string name="export_error" formatted="false">"Excel निर्यात विफल हुआ।"</string>
+    <string name="export_filter_hint" formatted="false">"चुनी अवधि की समाप्त शिफ्ट ऊपर चुने गए कार्यालय, घर या सभी फ़िल्टर के अनुसार निर्यात होती हैं।"</string>
+    <string name="back_press_again_exit" formatted="false">"बाहर निकलने के लिए वापस बटन फिर दबाएँ"</string>
+    <string name="leave_title" formatted="false">"छुट्टियाँ, बीमारी और अवकाश"</string>
+    <string name="leave_sick" formatted="false">"बीमारी की छुट्टी"</string>
+    <string name="leave_vacation" formatted="false">"सवेतन छुट्टी"</string>
+    <string name="leave_days" formatted="false">"दिन"</string>
+    <string name="leave_setup_hint" formatted="false">"छुट्टी दर्ज करने से पहले शुरुआती शेष और मासिक संचय तय करें।"</string>
+    <string name="leave_asof" formatted="false">"इस तारीख तक शेष"</string>
+    <string name="leave_period_used" formatted="false">"चुनी गई अवधि में शेष से उपयोग किए गए दिन"</string>
+    <string name="leave_pay" formatted="false">"छुट्टी के वेतन का मूल्य"</string>
+    <string name="leave_pay_hint" formatted="false">"प्रति घंटे वेतन: भुगतान जोड़ा जाता है। मासिक वेतन: सवेतन छुट्टी पहले से शामिल है; केवल अवैतनिक हिस्सा काटा जाता है। छुट्टी से ओवरटाइम नहीं बनता।"</string>
+    <string name="leave_manage" formatted="false">"छुट्टी और बीमारी प्रबंधित करें"</string>
+    <string name="leave_config" formatted="false">"शेष और छुट्टी के नियम"</string>
+    <string name="leave_add" formatted="false">"छुट्टी, बीमारी या अवकाश जोड़ें"</string>
+    <string name="leave_record_hint" formatted="false">"दिन का अंश हर चुनी हुई तारीख पर लागू होता है। सवेतन छुट्टी वास्तविक काम से अलग है। भविष्य की प्रविष्टियाँ अपनी वेतन अवधि में शामिल हैं, लेकिन वर्तमान शेष में केवल आज तक की तारीखें शामिल हैं।"</string>
+    <string name="leave_empty" formatted="false">"इस अवधि में कोई छुट्टी दर्ज नहीं है।"</string>
+    <string name="leave_fraction" formatted="false">"दिन का अंश (1 = पूरा दिन, 0.5 = आधा)"</string>
+    <string name="leave_hours" formatted="false">"अनुपस्थिति के घंटे"</string>
+    <string name="leave_pay_percent" formatted="false">"वेतन का प्रतिशत"</string>
+    <string name="leave_debited" formatted="false">"शेष से काटे गए दिन"</string>
+    <string name="leave_event_start" formatted="false">"बीमारी के प्रकरण की शुरुआत"</string>
+    <string name="leave_day_number" formatted="false">"प्रकरण का दिन"</string>
+    <string name="leave_ledger" formatted="false">"संचय और उपयोग का इतिहास"</string>
+    <string name="leave_ledger_hint" formatted="false">"चुनी गई वेतन अवधि के लेनदेन। शुरुआती शेष + संचय + सुधार − उपयोग। भविष्य के लेनदेन नियोजित हैं।"</string>
+    <string name="leave_opening" formatted="false">"शुरुआती शेष (दिन)"</string>
+    <string name="leave_accrual" formatted="false">"मासिक संचय"</string>
+    <string name="leave_used" formatted="false">"उपयोग"</string>
+    <string name="leave_adjustment" formatted="false">"शेष में सुधार"</string>
+    <string name="leave_changed" formatted="false">"डेटा बदल गया है। यह फ़ॉर्म बंद करके दोबारा खोलें।"</string>
+    <string name="leave_delete_hint" formatted="false">"यह प्रविष्टि हटाएँ? शेष और वेतन पर इसके प्रभाव की दोबारा गणना होगी। इसे पूर्ववत नहीं किया जा सकता।"</string>
+    <string name="leave_config_hint" formatted="false">"ये आपके नियोक्ता की सेटिंग हैं, सत्यापित कानूनी मानक नहीं। दरें शुरुआती तारीख से लागू होती हैं। शेष या संचय बदलने पर इतिहास की दोबारा गणना होती है; एक बार के बदलाव के लिए तारीख सहित शेष सुधार करें। सहेजे गए अनुपस्थिति वेतन नियम हर प्रविष्टि में बने रहते हैं।"</string>
+    <string name="leave_opening_date" formatted="false">"शुरुआती शेष की तारीख"</string>
+    <string name="leave_monthly" formatted="false">"हर महीने संचित दिन"</string>
+    <string name="leave_accrual_day" formatted="false">"मासिक संचय का दिन (1–31)"</string>
+    <string name="leave_accrual_hint" formatted="false">"पहला पूरा संचय शुरुआती तारीख के बाद आने वाले चुने हुए दिन पर होगा। छोटे महीनों में अंतिम दिन लिया जाएगा। आनुपातिक गणना नहीं होगी। यह वेतन अवधि से स्वतंत्र है।"</string>
+    <string name="leave_day_hours" formatted="false">"पूरी छुट्टी के एक दिन में घंटे"</string>
+    <string name="leave_vacation_percent" formatted="false">"छुट्टी के वेतन का प्रतिशत"</string>
+    <string name="leave_allow_negative" formatted="false">"ऋणात्मक शेष की अनुमति दें"</string>
+    <string name="leave_calendar_days" formatted="false">"बीमारी के प्रकरण में कैलेंडर दिन गिनें"</string>
+    <string name="leave_calendar_hint" formatted="false">"चालू: सप्ताहांत और दर्ज न किए गए दिन भी भुगतान स्तर आगे बढ़ाते हैं। बंद: केवल प्रकरण की अलग-अलग दर्ज तारीखें स्तर आगे बढ़ाती हैं। केवल दर्ज छुट्टी शेष का उपयोग करती है।"</string>
+    <string name="leave_sick_tiers" formatted="false">"बीमारी के भुगतान स्तर"</string>
+    <string name="leave_tier_hint" formatted="false">"पंक्तियाँ क्रम से लागू होती हैं। भुगतान प्रतिशत और शेष कटौती प्रतिशत अलग हैं। 50% भुगतान वाला दिन भी 100% कटौती पर पूरा एक दिन घटा सकता है।"</string>
+    <string name="leave_tier" formatted="false">"स्तर"</string>
+    <string name="leave_number_days" formatted="false">"दिनों की संख्या"</string>
+    <string name="leave_remaining" formatted="false">"इसके बाद के सभी दिन (अंतिम पंक्ति)"</string>
+    <string name="leave_debit_percent" formatted="false">"शेष कटौती का प्रतिशत"</string>
+    <string name="leave_add_tier" formatted="false">"अंतिम पंक्ति से पहले स्तर जोड़ें"</string>
+    <string name="leave_from" formatted="false">"इस तारीख से"</string>
+    <string name="leave_until" formatted="false">"इस तारीख तक (शामिल)"</string>
+    <string name="leave_workdays_only" formatted="false">"केवल निर्धारित कार्यदिवस"</string>
+    <string name="leave_continue" formatted="false">"बीमारी का प्रकरण जारी रखें"</string>
+    <string name="leave_new_event" formatted="false">"बीमारी का नया प्रकरण"</string>
+    <string name="leave_override_pay" formatted="false">"भुगतान % बदलें (खाली = नियम)"</string>
+    <string name="leave_override_debit" formatted="false">"कटौती % बदलें (खाली = नियम)"</string>
+    <string name="leave_override_hint" formatted="false">"हर प्रविष्टि के लिए वैकल्पिक बदलाव। नियोक्ता की सहेजी नीति के लिए खाली छोड़ें। तारीखों की सीमा में हर चुने हुए दिन पर वही बदलाव लागू होंगे।"</string>
+    <string name="leave_note" formatted="false">"नोट / सुधार का कारण"</string>
+    <string name="leave_preview" formatted="false">"तारीखों और भुगतान की समीक्षा करें"</string>
+    <string name="leave_work_warning" formatted="false">"इनमें से किसी तारीख पर काम दर्ज है या शिफ्ट चालू है। सहेजने से पहले वास्तविक काम और छुट्टी का कुल सही होने की जाँच करें।"</string>
+    <string name="leave_date" formatted="false">"तारीख"</string>
+    <string name="leave_adjust_days" formatted="false">"दिनों में सुधार (+ जोड़ें / − घटाएँ)"</string>
+    <string name="leave_duplicate" formatted="false">"एक तारीख पर कुल छुट्टी एक दिन से अधिक नहीं हो सकती।"</string>
+    <string name="leave_insufficient" formatted="false">"छुट्टी का शेष अपर्याप्त है। शुरुआती शेष सुधारें या स्पष्ट रूप से ऋणात्मक शेष की अनुमति दें।"</string>
+    <string name="leave_invalid" formatted="false">"तारीखों और संख्याओं की जाँच करें। प्रतिशत: 0–100; दिन का अंश: 0 से अधिक और 1 तक।"</string>
+    <string name="leave_date_error" formatted="false">"अधिकतम 367 कैलेंडर दिनों की क्रमबद्ध तारीख सीमा चुनें।"</string>
+    <string name="leave_no_dates" formatted="false">"निर्धारित कार्यदिवसों से कोई तारीख मेल नहीं खाती।"</string>
+    <string name="leave_salary_adjustment" formatted="false">"मासिक वेतन से अवैतनिक अनुपस्थिति की कटौती"</string>
+    <string name="leave_export_hint" formatted="false">"सभी का निर्यात करने पर छुट्टी की अलग शीट शामिल होती है। कार्यालय/घर के निर्यात में केवल काम की शिफ्टें होती हैं।"</string>
+    <string name="leave_holiday" formatted="false">"अवकाश / गैर-कार्यदिवस"</string>
+    <string name="leave_salary_choice" formatted="false">"वेतन से काटें (छुट्टी उपयोग किए बिना)"</string>
+    <string name="leave_settlement" formatted="false">"महीने के कम घंटों का समायोजन"</string>
+    <string name="leave_missing_hours" formatted="false">"इस अवधि में बाकी कम घंटे"</string>
+    <string name="leave_fill_hours" formatted="false">"समायोजित किए जाने वाले घंटे"</string>
+    <string name="leave_use_percent" formatted="false">"पूरी छुट्टी के एक दिन का प्रतिशत दर्ज करें"</string>
+    <string name="leave_day_percent" formatted="false">"एक पूरे दिन का प्रतिशत"</string>
+    <string name="leave_target_needed" formatted="false">"मासिक कम घंटे निकालने के लिए वेतन सेटिंग में आवश्यक मासिक घंटे तय करें।"</string>
+    <string name="leave_too_many_hours" formatted="false">"धनात्मक घंटे दर्ज करें जो बाकी कमी से अधिक न हों (अधिकतम 744)।"</string>
+    <string name="leave_settlement_hint" formatted="false">"यह अवधि का समायोजन है, काम की शिफ्ट नहीं। छुट्टी का उपयोग = घंटे ÷ छुट्टी के एक दिन में घंटे। उदाहरण: 3.2 घंटे ÷ 8 = 0.4 दिन (40%)। सवेतन छुट्टी या अवैतनिक वेतन कटौती चुनें। बाद में काम या छुट्टी बदलने पर यह समायोजन सुधारना पड़ सकता है।"</string>
+    <string name="leave_incomplete_period" formatted="false">"यह वेतन अवधि अभी खत्म नहीं हुई है। कम घंटों का आँकड़ा अस्थायी है; सहेजने से पहले समीक्षा करें।"</string>
+    <string name="leave_holiday_hint" formatted="false">"अवकाश हाथ से तय किया जाता है, यह कानूनी पात्रता नहीं है। छुट्टी या बीमारी के शेष का उपयोग नहीं होता। डिफ़ॉल्ट भुगतान 100% है; नियोक्ता की अलग शर्तों के लिए भुगतान प्रतिशत बदलें। केवल कार्यदिवस वाली तारीख सीमाएँ पहले दर्ज अवकाश छोड़ देती हैं। अवकाश पर काम करने से अपने-आप अतिरिक्त भुगतान नहीं मिलता।"</string>
+    <string name="leave_settlement_review" formatted="false">"दर्ज समायोजन अब बाकी कमी से अधिक हो सकता है। काम या छुट्टी में बदलाव के बाद उसके घंटों की समीक्षा करें।"</string>
+    <string name="ot_method" formatted="false">"ओवरटाइम की गणना"</string>
+    <string name="ot_daily" formatted="false">"दैनिक"</string>
+    <string name="ot_weekly" formatted="false">"साप्ताहिक"</string>
+    <string name="ot_monthly" formatted="false">"मासिक"</string>
+    <string name="ot_hours" formatted="false">"सामान्य घंटे"</string>
+    <string name="ot_week_start" formatted="false">"कार्य सप्ताह का पहला दिन"</string>
+    <string name="ot_weekly_threshold" formatted="false">"ओवरटाइम से पहले साप्ताहिक सामान्य घंटे"</string>
+    <string name="ot_monthly_threshold" formatted="false">"ओवरटाइम से पहले मासिक सामान्य घंटे"</string>
+    <string name="ot_calendar" formatted="false">"कैलेंडर महीना (पहली तारीख से महीने के अंत तक)"</string>
+    <string name="ot_pay_period" formatted="false">"निर्धारित वेतन अवधि"</string>
+    <string name="ot_nominal_day" formatted="false">"कम घंटों और छुट्टी की सेटिंग के लिए दैनिक घंटे"</string>
+    <string name="ot_settings_hint" formatted="false">"एक तरीका चुनें। मौजूदा भुगतान स्तर हर चुने हुए दिन, सप्ताह या महीने में नए सिरे से शुरू होते हैं। साप्ताहिक और मासिक सीमाएँ दैनिक मानक घंटों और मासिक उपस्थिति लक्ष्य से अलग हैं। ब्रेक पहले की तरह निर्धारित दैनिक या हर खंड के नियम का पालन करते हैं। केवल ब्रेक घटाने के बाद का वास्तविक काम ओवरटाइम सीमा में गिना जाता है; छुट्टी, अवकाश और कम घंटों के समायोजन नहीं।"</string>
+    <string name="ot_context_hint" formatted="false">"साप्ताहिक और कैलेंडर महीने की गणना में दिखाई गई वेतन अवधि से पहले का सहेजा काम भी लिया जाता है। सही बँटवारे के लिए पूरा कार्य सप्ताह या महीना दर्ज करें। पूरी शिफ्ट उसकी निर्धारित कार्य तारीख में गिनी जाती है, भले वह आधी रात के बाद तक चले। तरीका बदलने पर सहेजे इतिहास की दोबारा गणना होती है; इसमें दैनिक और साप्ताहिक नियमों का संयोजन या अपने-आप कानूनी पात्रता शामिल नहीं है।"</string>
+    <string name="ot_location_hint" formatted="false">"कार्यालय और घर के लिए चुने गए दिन, सप्ताह या महीने का एक साझा ओवरटाइम काउंटर होता है। ब्रेक के बाद घंटे और हर स्तर का पूरा भुगतान समय के क्रम में काम के स्थान को आवंटित होते हैं।"</string>
+    <string name="ot_office_only" formatted="false">"चुनी ओवरटाइम सीमा से ऊपर केवल कार्यालय के घंटे"</string>
+    <string name="ot_invalid" formatted="false">"तरीका, अवधि और सीमाएँ जाँचें: साप्ताहिक 0–168, मासिक 0–744 घंटे; सप्ताह की शुरुआत मान्य वार से होनी चाहिए।"</string>
+    <string name="ot_threshold_required" formatted="false">"चुने ओवरटाइम तरीके के लिए सामान्य घंटों की धनात्मक सीमा दर्ज करें।"</string>
+    <string name="widget_compact_name" formatted="false">"ShiftHours · शिफ्ट 2×2"</string>
+    <string name="analytics_title" formatted="false">"सारांश"</string>
+    <string name="analytics_hint" formatted="false">"केवल बंद शिफ्टें। सभी आँकड़े मौजूदा वेतन और ब्रेक नियमों पर आधारित हैं। चालू शिफ्ट शामिल नहीं है।"</string>
+    <string name="analytics_partial" formatted="false">"यह अवधि अभी पूरी नहीं हुई। तुलना पूरी पिछली अवधि से है, उतने ही बीते दिनों से नहीं।"</string>
+    <string name="analytics_empty" formatted="false">"इस अवधि में कोई रिकॉर्ड नहीं"</string>
+    <string name="analytics_empty_hint" formatted="false">"रिकॉर्ड न होने का मतलब काम न करना नहीं है। बिना रिकॉर्ड की अवधि को शून्य वेतन का महीना नहीं माना जाता।"</string>
+    <string name="analytics_overview" formatted="false">"अवधि के आँकड़े"</string>
+    <string name="analytics_workdays" formatted="false">"दर्ज कार्यदिवस"</string>
+    <string name="analytics_shifts" formatted="false">"बंद शिफ्टें"</string>
+    <string name="analytics_avg_day" formatted="false">"हर कार्यदिवस में औसत शुद्ध घंटे"</string>
+    <string name="analytics_avg_shift" formatted="false">"हर शिफ्ट में औसत शुद्ध घंटे"</string>
+    <string name="analytics_home_share" formatted="false">"घर से काम का हिस्सा"</string>
+    <string name="analytics_ot_share" formatted="false">"शुद्ध काम में ओवरटाइम का हिस्सा"</string>
+    <string name="analytics_gross" formatted="false">"सकल वेतन"</string>
+    <string name="analytics_comparison" formatted="false">"पिछली अवधि से बदलाव"</string>
+    <string name="analytics_hours_change" formatted="false">"शुद्ध घंटों में बदलाव"</string>
+    <string name="analytics_ot_change" formatted="false">"ओवरटाइम घंटों में बदलाव"</string>
+    <string name="analytics_gross_change" formatted="false">"सकल वेतन में बदलाव"</string>
+    <string name="analytics_no_comparison" formatted="false">"तुलना के लिए दोनों अवधियों में रिकॉर्ड चाहिए।"</string>
+    <string name="analytics_tiers" formatted="false">"ओवरटाइम स्तर और उनका भुगतान"</string>
+    <string name="analytics_weighted" formatted="false">"वेतन के अनुसार भारित ओवरटाइम घंटे"</string>
+    <string name="analytics_weighted_hint" formatted="false">"भारित घंटे = ओवरटाइम घंटे × वेतन गुणक। यह भुगतान का समतुल्य है, अतिरिक्त किया गया काम नहीं।"</string>
+    <string name="analytics_location" formatted="false">"कार्यालय और घर"</string>
+    <string name="analytics_equivalent_hint" formatted="false">"काम का मूल्य प्रति घंटे के समतुल्य पर आधारित है और ओवरटाइम शामिल करता है। मासिक वेतन या छुट्टी का भुगतान स्थान या कारण के हिसाब से नहीं बाँटा जाता।"</string>
+    <string name="analytics_office_short" formatted="false">"केवल कार्यालय घंटों की दैनिक कमी"</string>
+    <string name="analytics_office_ot" formatted="false">"केवल कार्यालय के ओवरटाइम की तुलना"</string>
+    <string name="analytics_reasons" formatted="false">"घर से काम के कारण"</string>
+    <string name="analytics_no_reasons" formatted="false">"इस अवधि में घर से काम की कोई बंद शिफ्ट नहीं है।"</string>
+    <string name="analytics_shortfalls" formatted="false">"कम घंटे और उपस्थिति दर्ज करने की समस्याएँ"</string>
+    <string name="analytics_daily_short" formatted="false">"अनुपस्थिति का श्रेय देने के बाद दैनिक कमी"</string>
+    <string name="analytics_monthly_short" formatted="false">"निर्धारित लक्ष्य के मुकाबले मासिक कमी"</string>
+    <string name="analytics_missing_clock" formatted="false">"छूटी उपस्थिति के लिए चिह्नित दिन"</string>
+    <string name="analytics_missing_hint" formatted="false">"समस्याएँ छूटी उपस्थिति के सहेजे नोट से पहचानी जाती हैं; पूरी तरह बिना रिकॉर्ड के कार्यदिवस नहीं निकाले जा सकते।"</string>
+    <string name="analytics_weekdays" formatted="false">"सप्ताह के दिन के अनुसार औसत शुद्ध घंटे"</string>
+    <string name="analytics_weekdays_hint" formatted="false">"औसत में केवल दर्ज सकारात्मक शुद्ध काम वाली तारीखें गिनी जाती हैं। दिनों की संख्या दिखाई जाती है; बिना रिकॉर्ड के दिन शामिल नहीं हैं।"</string>
+    <string name="analytics_records" formatted="false">"उल्लेखनीय दिन"</string>
+    <string name="analytics_longest" formatted="false">"सबसे लंबा दर्ज कार्यदिवस"</string>
+    <string name="analytics_most_ot" formatted="false">"सबसे अधिक आवंटित ओवरटाइम वाला दिन"</string>
+    <string name="analytics_trend" formatted="false">"12 वेतन अवधियों का रुझान"</string>
+    <string name="analytics_trend_hint" formatted="false">"हर पंक्ति: शुद्ध घंटे, ओवरटाइम घंटे और सकल वेतन। डैश का मतलब कोई रिकॉर्ड नहीं। पुराने आँकड़े मौजूदा सेटिंग पर आधारित हैं, पुराने अनुबंधों पर नहीं।"</string>
+    <string name="home_sync_title">निजी सर्वर</string>
+    <string name="home_sync_hint">अपने कंप्यूटर से वैकल्पिक सिंक। ऑफलाइन भी स्थानीय काम जारी रहता है।</string>
+    <string name="home_sync_address">सर्वर का HTTPS पता</string>
+    <string name="home_sync_key">फ़ोन कनेक्शन कुंजी</string>
+    <string name="home_sync_https">मान्य HTTPS पता दर्ज करें।</string>
+    <string name="home_sync_other_server">यह डिवाइस दूसरे सर्वर से जुड़ा है। स्थानांतरण से पहले बैकअप लें।</string>
+    <string name="home_sync_working">सिंक हो रहा है…</string>
+    <string name="home_sync_ok">सिंक पूरा हुआ</string>
+    <string name="home_sync_conflict">बदलावों में टकराव है। डेटा नहीं बदला गया। ब्राउज़र और फ़ोन के रिकॉर्ड मिलाकर दोबारा प्रयास करें।</string>
+    <string name="home_sync_auth">कुंजी समाप्त या रद्द हो गई है। डिस्कनेक्ट करके नई कुंजी डालें।</string>
+    <string name="home_sync_identity">सर्वर की पहचान बदल गई है। डेटा की सुरक्षा के लिए सिंक रोका गया।</string>
+    <string name="home_sync_error">सर्वर उपलब्ध नहीं या डेटा अस्वीकार हुआ। स्थानीय डेटा सुरक्षित है; बाद में प्रयास करें।</string>
+    <string name="home_sync_pending">स्थानीय बदलाव सिंक की प्रतीक्षा में हैं।</string>
+    <string name="home_sync_off">सिंक बंद है</string>
+    <string name="home_sync_now">अभी सिंक करें</string>
+    <string name="home_sync_connect">कनेक्ट करें</string>
+    <string name="home_sync_disconnect">डिस्कनेक्ट करें</string>
+    <string name="home_sync_backup_hint">सेटिंग, छुट्टियाँ और शिफ्ट शामिल हैं। यह स्थानीय या Drive बैकअप का विकल्प नहीं है। बैकग्राउंड सिंक लगभग हर 15 मिनट तय है; Android देरी कर सकता है। कुंजियाँ बैकअप में नहीं हैं।</string>
+    <string name="home_sync_back">वापस</string>
+    <string name="manual_entry" formatted="false">"मैन्युअल प्रविष्टि"</string>
+    <string name="manual_kind" formatted="false">"रिकॉर्ड का प्रकार"</string>
+    <string name="manual_work_shift" formatted="false">"कार्य शिफ्ट"</string>
+    <string name="manual_continue" formatted="false">"जारी रखें"</string>
+    <string name="calendar_title" formatted="false">"कार्य कैलेंडर"</string>
+    <string name="calendar_missing_hint" formatted="false">"हल्का नारंगी: बीते रविवार से गुरुवार तक के दिन जिनमें शिफ्ट या अनुपस्थिति दर्ज नहीं है। विवरण के लिए दिन दबाएँ।"</string>
+    <string name="calendar_missing_count">"%1$s दिन बिना रिकॉर्ड"</string>
+    <string name="calendar_missing" formatted="false">"रिकॉर्ड नहीं"</string>
+    <string name="calendar_paid_time" formatted="false">"भुगतान का समय"</string>
+    <string name="calendar_no_report" formatted="false">"शिफ्ट या अनुपस्थिति दर्ज नहीं है।"</string>
+    <string name="snapshot_arrange" formatted="false">"कार्ड क्रम बदलें"</string>
+    <string name="snapshot_move_up" formatted="false">"ऊपर ले जाएँ"</string>
+    <string name="snapshot_move_down" formatted="false">"नीचे ले जाएँ"</string>
+    <string name="snapshot_reset_order" formatted="false">"डिफ़ॉल्ट क्रम बहाल करें"</string>
+    <string name="snapshot_save_order" formatted="false">"सहेजें"</string>
+    <string name="snapshot_cancel_order" formatted="false">"रद्द करें"</string>
+    <string name="hours_by_location" formatted="false">"स्थान के अनुसार घंटे"</string>
+    <string name="location_all_hours" formatted="false">"कुल घंटे (ओवरटाइम सहित)"</string>
+    <string name="location_all_pay" formatted="false">"भुगतान (ओवरटाइम सहित)"</string>
+    <string name="location_hourly_value_hint" formatted="false">"प्रति घंटे काम का मूल्य, मासिक वेतन का विभाजन नहीं।"</string>
+    <string name="launcher_widgets">विजेट</string>
+    <string name="launcher_change_widget">विजेट बदलें</string>
+    <string name="calendar_includes_home">घर से किया गया काम शामिल है</string>
+</resources>

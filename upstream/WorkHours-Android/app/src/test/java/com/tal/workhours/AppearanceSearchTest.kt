@@ -1,0 +1,58 @@
+package com.tal.workhours
+
+import org.junit.Assert.*
+import org.junit.Test
+import org.json.JSONObject
+import java.util.Locale
+
+class AppearanceSearchTest {
+    @Test fun fullBackupRetainsSelectedAppearanceAndFinancialSettingsRecordsAndActive() {
+        for(mode in listOf("SYSTEM","LIGHT","DARK")) {
+            val s=AppSettings(appearance=mode,monthlyHours=182.0,hourlyWage=50.0,creditPoints=2.25,pensionPercent=6.0,studyPercent=2.5,periodStartDay=25)
+            val d=AppData(settings=s,setupComplete=true,shifts=listOf(Shift(start=1000000L,end=4600000L,location=HOME)),active=ActiveShift(8000000L,OFFICE))
+            assertEquals(d,decodeData(encodeData(d)));assertEquals(d,readBackup(backupText(d)))
+        }
+        assertTrue(DATA_VERSION >= 20)
+    }
+    @Test fun everyLegacySchemaDefaultsMissingAppearanceToSystemWithoutChangingData() {
+        for(v in 2..19) {
+            val d=AppData(settings=AppSettings(hourlyWage=50.0,monthlyHours=182.0))
+            val o=JSONObject(encodeData(d)).put("version",v);o.getJSONObject("settings").remove("appearance")
+            assertEquals(d,decodeData(o.toString()))
+        }
+    }
+    @Test fun unknownAppearanceCannotEnterPersistedSettings() {
+        for(mode in listOf("AUTO","dark","","UNKNOWN")) {
+            val o=JSONObject(encodeData(AppData()));o.getJSONObject("settings").put("appearance",mode)
+            assertTrue(runCatching{decodeData(o.toString())}.isFailure)
+        }
+    }
+    @Test fun futureSchemaIsRejectedWithoutSilentlyDroppingAppearance() {
+        val o=JSONObject(encodeData(AppData())).put("version",DATA_VERSION+1)
+        assertTrue(runCatching{decodeData(o.toString())}.isFailure)
+    }
+    @Test fun countrySearchFindsIsoCodeRegardlessOfCaseAndOuterWhitespace() {
+        assertTrue(searchTaxCountries("  iL ",Locale.ENGLISH).any{it.code=="IL"})
+        assertTrue(searchTaxCountries("gb",Locale.ENGLISH).any{it.code=="GB"})
+        assertEquals("IL",searchTaxCountries("il",Locale.ENGLISH).first().code)
+        assertEquals("US",searchTaxCountries("us",Locale.ENGLISH).first().code)
+    }
+    @Test fun countrySearchFindsEnglishNameInHebrewUi() {
+        assertTrue(searchTaxCountries("Canada",Locale.forLanguageTag("he")).any{it.code=="CA"})
+    }
+    @Test fun countrySearchFindsLocalizedHebrewName() {
+        assertTrue(searchTaxCountries("ישראל",Locale.forLanguageTag("he")).any{it.code=="IL"})
+    }
+    @Test fun countrySearchIgnoresFrenchAccents() {
+        assertTrue(searchTaxCountries("suede",Locale.FRENCH).any{it.code=="SE"})
+    }
+    @Test fun countrySearchByCurrencyShowsOnlyMatchingCountries() {
+        val results=searchTaxCountries("eur",Locale.ENGLISH)
+        assertTrue(results.isNotEmpty());assertTrue(results.all{it.currency=="EUR"})
+    }
+    @Test fun emptyCountrySearchHasAllUniqueCountryChoicesAndNoMatchIsEmpty() {
+        val all=searchTaxCountries(" ",Locale.ENGLISH)
+        assertEquals(110,all.size);assertEquals(110,all.map{it.code}.toSet().size)
+        assertTrue(searchTaxCountries("zzzz-nothing-matches",Locale.ENGLISH).isEmpty())
+    }
+}

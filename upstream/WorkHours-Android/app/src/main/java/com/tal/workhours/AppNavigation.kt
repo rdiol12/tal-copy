@@ -1,0 +1,26 @@
+package com.tal.workhours
+
+const val EXIT_CONFIRM_WINDOW_MS = 3_000L
+private const val MAX_ROUTE_HISTORY = 50
+
+/** The launcher is the root. Adjacent duplicate destinations never create back steps. */
+fun normalizedAppRoutes(routes: List<Int>): List<Int> {
+    var result=listOf(1)
+    routes.forEach { route ->
+        when {
+            route==0 || route==1 -> result=listOf(1)
+            route in 2..7 && result.last()!=route -> result=result+route
+        }
+    }
+    return listOf(1)+result.drop(1).takeLast(MAX_ROUTE_HISTORY-1)
+}
+fun navigateAppRoutes(routes: List<Int>,destination: Int): List<Int> {
+    require(destination in 1..7)
+    if(destination==1)return listOf(1)
+    val current=normalizedAppRoutes(routes)
+    return if(current.last()==destination)current else normalizedAppRoutes(current+destination)
+}
+fun previousAppRoutes(routes: List<Int>): List<Int> = normalizedAppRoutes(routes).let { if(it.size>1)it.dropLast(1)else it }
+
+/** Android elapsedRealtime, not the wall clock; a null previous press never confirms exit. */
+fun confirmsAppExit(previous: Long?,now: Long): Boolean = previous!=null && now>=previous && now-previous<=EXIT_CONFIRM_WINDOW_MS

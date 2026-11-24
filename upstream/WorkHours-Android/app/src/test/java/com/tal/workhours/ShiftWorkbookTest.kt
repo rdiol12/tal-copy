@@ -1,0 +1,126 @@
+package com.tal.workhours
+
+import org.junit.Assert.*
+import org.junit.Test
+import java.time.*
+import java.util.zip.ZipInputStream
+import javax.xml.parsers.DocumentBuilderFactory
+import org.w3c.dom.Document
+
+class ShiftWorkbookTest {
+    private val zone=ZoneId.of("Asia/Jerusalem")
+    private val period=periodFromMonth(YearMonth.of(2026,10),1)
+    private val labels=ShiftExportLabels("Shifts","Start date","End date","Date","Start","End","Total time","Total","Paid duration after breaks")
+    private fun at(day: String,hour: Int)=LocalDate.parse(day).atStartOfDay(zone).plusHours(hour.toLong()).toInstant().toEpochMilli()
+    private fun shift(from: Int,to: Int,location: String,day: String="2026-10-20")=Shift(start=at(day,from),end=at(day,to),location=location,workDate=day)
+    private fun data()=AppData(shifts=listOf(shift(6,16,OFFICE),shift(18,20,HOME),shift(8,18,OFFICE,"2026-10-21")),settings=AppSettings(hourlyWage=50.0))
+    private fun unzip(bytes: ByteArray): Map<String,String> {
+        val result=linkedMapOf<String,String>()
+        ZipInputStream(bytes.inputStream()).use { z ->
+            var entry=z.nextEntry
+            while(entry!=null) { result[entry.name]=z.readBytes().toString(Charsets.UTF_8);entry=z.nextEntry }
+        }
+        return result
+    }
+    private fun doc(xml: String): Document=DocumentBuilderFactory.newInstance().apply { isNamespaceAware=true }.newDocumentBuilder().parse(xml.byteInputStream())
+    private fun cell(xml: String,ref: String)=doc(xml).getElementsByTagName("c").let { list -> (0 until list.length).map {list.item(it)as org.w3c.dom.Element}.first {it.getAttribute("r")==ref} }
+    private fun value(xml: String,ref: String)=cell(xml,ref).getElementsByTagName("v").item(0).textContent.toDouble()
+    private fun sheet(d: AppData=data(),loc: String?=null,rtl: Boolean=false)=unzip(shiftWorkbook(d,period,loc,labels,rtl)).getValue("xl/worksheets/sheet1.xml")
+    @Test fun officeHomeAndAllHaveExactlyTheRequestedClosedRecords() {
+        assertEquals(3,shiftExportParts(data(),period,null).size)
+        assertEquals(2,shiftExportParts(data(),period,OFFICE).size)
+        assertEquals(1,shiftExportParts(data(),period,HOME).size)
+    }
+    @Test fun officeHomeAndAllTotalsReconcile() {
+        val all=shiftExportParts(data(),period,null).sumOf{it.netMs}
+        assertEquals(all,shiftExportParts(data(),period,OFFICE).sumOf{it.netMs}+shiftExportParts(data(),period,HOME).sumOf{it.netMs},.000001)
+    }
+    @Test fun activeShiftIsExcludedFromWorkbook() {
+        val d=data().copy(active=ActiveShift(at("2026-10-22",8),HOME))
+        assertEquals(3,shiftExportParts(d,period,null).size)
+        assertEquals(22.0/24,value(sheet(d),"D6"),.000001)
+    }
+    @Test fun filteringHomeDoesNotDeductTheOfficeDailyBreakAgain() {
+        val d=AppData(shifts=listOf(shift(8,9,OFFICE),shift(10,11,HOME)),settings=AppSettings(breakMode="DAILY",breakMinutes=30,deductHomeBreak=true))
+        assertEquals(HOUR_MS,shiftExportParts(d,period,HOME).single().netMs,0.0)
+        assertEquals(1.0/24,value(sheet(d,HOME),"D3"),.000001)
+    }
+    @Test fun homeExemptionAndSegmentBreaksUseTheSamePaidPartRules() {
+        val d=AppData(shifts=listOf(shift(8,10,OFFICE),shift(12,14,HOME)),settings=AppSettings(breakMode="SEGMENT",breakMinutes=30,deductHomeBreak=false))
+        assertEquals(1.5*HOUR_MS,shiftExportParts(d,period,OFFICE).single().netMs,0.0)
+        assertEquals(2*HOUR_MS,shiftExportParts(d,period,HOME).single().netMs,0.0)
+    }
+    @Test fun selectedPeriodExcludesAdjacentRecordDates() {
+        val d=data().copy(shifts=data().shifts+shift(8,10,HOME,"2026-11-01"))
+        assertEquals(3,shiftExportParts(d,period,null).size)
+    }
+    @Test fun excelSerialUsesReal1900DateSystemIncludingLeapCompatibility() {
+        assertEquals(1.0,excelDateSerial(LocalDate.of(1900,1,1).atStartOfDay()),0.0)
+        assertEquals(59.0,excelDateSerial(LocalDate.of(1900,2,28).atStartOfDay()),0.0)
+        assertEquals(61.0,excelDateSerial(LocalDate.of(1900,3,1).atStartOfDay()),0.0)
+        assertEquals(25569.5,excelDateSerial(LocalDate.of(1970,1,1).atTime(12,0)),0.0)
+    }
+    @Test fun allZipPartsArePresentAndWellFormedXml() {
+        val parts=unzip(shiftWorkbook(data(),period,null,labels,true))
+        assertEquals(setOf("[Content_Types].xml","_rels/.rels","xl/workbook.xml","xl/_rels/workbook.xml.rels","xl/styles.xml","xl/worksheets/sheet1.xml"),parts.keys)
+        parts.values.forEach { doc(it) }
+    }
+    @Test fun datesTimesAndDurationsAreNumericCells() {
+        val xml=sheet()
+        for(ref in listOf("B1","D1","A3","B3","C3","D3")) {
+            assertEquals("n",cell(xml,ref).getAttribute("t"));assertTrue(value(xml,ref)>0)
+        }
+    }
+    @Test fun totalIsAnEditableSumWithCorrectCachedValueAndFullRange() {
+        val xml=sheet();assertEquals("SUM(D3:D5)",cell(xml,"D6").getElementsByTagName("f").item(0).textContent)
+        assertEquals(22.0/24,value(xml,"D6"),.000001)
+        assertEquals("A2:D5",doc(xml).getElementsByTagName("autoFilter").item(0).attributes.getNamedItem("ref").nodeValue)
+    }
+    @Test fun selectedLocationTotalFormulaDoesNotIncludeOtherRows() {
+        val xml=sheet(loc=HOME)
+        assertEquals("SUM(D3:D3)",cell(xml,"D4").getElementsByTagName("f").item(0).textContent)
+        assertEquals(2.0/24,value(xml,"D4"),.000001)
+    }
+    @Test fun durationFormatAndCachedTotalDoNotWrapAfterTwentyFourHours() {
+        val d=AppData(shifts=(20..22).map { shift(6,19,HOME,"2026-10-$it") })
+        val parts=unzip(shiftWorkbook(d,period,HOME,labels,false))
+        assertTrue(parts.getValue("xl/styles.xml").contains("[h]:mm:ss"))
+        assertEquals(39.0/24,value(parts.getValue("xl/worksheets/sheet1.xml"),"D6"),.000001)
+    }
+    @Test fun overnightTimesKeepUnderlyingNextDateAndCorrectPaidDuration() {
+        val d=AppData(shifts=listOf(shift(23,26,HOME,"2026-10-22")))
+        val xml=sheet(d)
+        assertTrue(value(xml,"C3")>value(xml,"B3"))
+        assertEquals(3.0/24,value(xml,"D3"),.000001)
+    }
+    @Test fun exportedRowsAreChronologicalAndRetainDuplicateDaySegments() {
+        val original=data();val parts=shiftExportParts(original.copy(shifts=original.shifts.reversed()),period,null)
+        assertEquals(original.shifts.map{it.id},parts.map{it.shift.id})
+        assertEquals(parts[0].shift.workDate,parts[1].shift.workDate)
+    }
+    @Test fun importedRecordedDurationIsNotReplacedWithRawClockDifference() {
+        val d=AppData(shifts=listOf(shift(8,11,HOME).copy(source="excel",recordedDurationMs=(2*HOUR_MS).toLong())))
+        assertEquals(2.0/24,value(sheet(d),"D3"),.000001)
+    }
+    @Test fun emptyWorkbookHasZeroTotalWithoutAnInvertedSumOrFilter() {
+        val xml=sheet(AppData())
+        assertEquals(0.0,value(xml,"D3"),0.0)
+        assertEquals("0",cell(xml,"D3").getElementsByTagName("f").item(0).textContent)
+        assertEquals(0,doc(xml).getElementsByTagName("autoFilter").length)
+    }
+    @Test fun rightToLeftAndFrozenHeadersAreExplicit() {
+        val xml=sheet(rtl=true);val d=doc(xml)
+        assertEquals("1",d.getElementsByTagName("sheetView").item(0).attributes.getNamedItem("rightToLeft").nodeValue)
+        assertEquals("2",d.getElementsByTagName("pane").item(0).attributes.getNamedItem("ySplit").nodeValue)
+    }
+    @Test fun labelsAreEscapedAndCannotBecomeExecutableFormulas() {
+        val malicious=labels.copy(sheet="A&B/Name",date="=HYPERLINK(\"bad\") <&>")
+        val parts=unzip(shiftWorkbook(data(),period,null,malicious,false));parts.values.forEach{doc(it)}
+        val xml=parts.getValue("xl/worksheets/sheet1.xml")
+        assertEquals("inlineStr",cell(xml,"A2").getAttribute("t"))
+        assertEquals(1,doc(xml).getElementsByTagName("f").length)
+    }
+    @Test fun invalidLocationCannotExportAnUnintendedSelection() {
+        assertTrue(runCatching{shiftExportParts(data(),period,"OTHER")}.isFailure)
+    }
+}

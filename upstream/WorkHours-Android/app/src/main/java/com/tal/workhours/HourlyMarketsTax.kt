@@ -1,0 +1,46 @@
+package com.tal.workhours
+
+import kotlin.math.max
+import kotlin.math.min
+
+val hourlyMarketTaxCountries = setOf("IE", "HK")
+
+/** Steady-income estimates; eligibility is explicitly confirmed, never inferred from UI language. */
+fun estimateHourlyMarketNet(gross: Double, settings: AppSettings, year: Int): NetEstimate? {
+    val country = settings.taxCountry
+    if (country !in hourlyMarketTaxCountries || !supportsTaxYear(country, year) || settings.taxYear != year ||
+        settings.foreignProfileCountry != country || !gross.isFinite() || gross < 0) return null
+    val cash = settings.foreignMonthlyDeductions ?: return null
+    if (!cash.isFinite() || cash < 0 || cash > gross) return null
+    val annual = gross * 12
+    if (!annual.isFinite()) return null
+    if (country == "IE") {
+        // Full-year single PAYE employee, ordinary USC, no income-tax-relieved pension or other claims.
+        // Actual PRSI and post-tax pension (including MyFutureFund where applicable) are in cash deductions.
+        val before = bandTax(annual, listOf(44000.0, Double.POSITIVE_INFINITY), listOf(.20, .40))
+        val credits = min(before, 2000.0 + min(2000.0, annual * .20))
+        val incomeTax = max(0.0, before - credits)
+        val usc = if (annual <= 13000.0) 0.0 else bandTax(annual,
+            listOf(12012.0, 28700.0, 70044.0, Double.POSITIVE_INFINITY), listOf(.005, .02, .03, .08))
+        return NetEstimate(incomeTax / 12, 0.0, 0.0, 0.0, 0.0, 0.0,
+            gross - (incomeTax + usc) / 12 - cash, otherTax = usc / 12,
+            otherDeductions = cash, personalCredit = credits / 12)
+    }
+    // Hong Kong ordinary MPF employee aged18–64, monthly paid, all contribution holidays expired before year start.
+    // Includes hourly-rated work paid monthly; daily-paid/casual and exempt workers require different calculations.
+    val mpf = if (gross < 7100.0) 0.0 else min(gross, 30000.0) * .05
+    if (cash + mpf > gross) return null
+    val income = max(0.0, annual - min(mpf * 12, 18000.0))
+    val allowance = if (year == 2026) 145000.0 else 132000.0
+    val caps = listOf(50000.0, 100000.0, 150000.0, 200000.0, Double.POSITIVE_INFINITY)
+    val rates = listOf(.02, .06, .10, .14, .17)
+    val progressive = bandTax(max(0.0, income - allowance), caps, rates)
+    val standard = min(income, 5000000.0) * .15 + max(0.0, income - 5000000.0) * .16
+    val assessed = min(progressive, standard)
+    // Enacted2025/26 final tax reduction; never carried over to2026/27 without a verified new law.
+    val rebate = if (year == 2025) min(assessed, 3000.0) else 0.0
+    val tax = max(0.0, assessed - rebate)
+    val includedRelief = max(0.0, min(bandTax(income, caps, rates), standard) - tax)
+    return NetEstimate(tax / 12, 0.0, 0.0, mpf, 0.0, 0.0,
+        gross - mpf - tax / 12 - cash, otherDeductions = cash, personalCredit = includedRelief / 12)
+}

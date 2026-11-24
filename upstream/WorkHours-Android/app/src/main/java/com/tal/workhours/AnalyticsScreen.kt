@@ -1,0 +1,95 @@
+package com.tal.workhours
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import java.time.DayOfWeek
+import java.time.LocalDate
+import java.time.YearMonth
+import java.time.format.TextStyle
+
+@Composable
+private fun AnalyticsBar(label: String,value: String,ratio: Double) {
+    Column(Modifier.fillMaxWidth().padding(vertical=5.dp),verticalArrangement=Arrangement.spacedBy(5.dp)) {
+        Metric(label,value)
+        Box(Modifier.fillMaxWidth().height(7.dp).background(MaterialTheme.colorScheme.surfaceVariant,MaterialTheme.shapes.small)) {
+            if(ratio>0)Box(Modifier.fillMaxWidth(ratio.coerceIn(0.001,1.0).toFloat()).height(7.dp).background(MaterialTheme.colorScheme.primary,MaterialTheme.shapes.small))
+        }
+    }
+}
+
+@Composable
+fun AnalyticsScreen(data: AppData) {
+    val today=LocalDate.now(israelZone)
+    var monthString by rememberSaveable { mutableStateOf(YearMonth.from(periodFor(today,data.settings.periodStartDay).from).toString()) }
+    val period=periodFromMonth(YearMonth.parse(monthString),data.settings.periodStartDay)
+    val a=remember(data,period){workAnalytics(data,period)};val s=a.summary
+    fun cash(v:Double)=money(v,taxCurrency(data.settings.taxCountry))
+    fun percent(v:Double?)=v?.let {number(it*100)+"%"}?:"—"
+    val empty=s.days.isEmpty()&&s.leave.isEmpty()
+    LazyColumn(contentPadding=PaddingValues(16.dp),verticalArrangement=Arrangement.spacedBy(14.dp)) {
+        item { PeriodChooser(period,data.settings.periodStartDay,periodFor(today,data.settings.periodStartDay)){monthString=YearMonth.from(it.from).toString()} }
+        item { Text(tr(R.string.analytics_hint),style=MaterialTheme.typography.bodySmall) }
+        if(period.until>today) item { Text(tr(R.string.analytics_partial),color=MaterialTheme.colorScheme.primary,style=MaterialTheme.typography.bodySmall) }
+        if(empty)item {InfoCard(tr(R.string.analytics_empty)){Text(tr(R.string.analytics_empty_hint))}}
+        item { InfoCard(tr(R.string.analytics_overview)) {
+            Metric(tr(R.string.text_6834f9db87),hoursText(s.totalMs));Metric(tr(R.string.text_dda62e1cc9),hoursText(s.overtimeMs));Metric(tr(R.string.text_5407314942),cash(s.overtimePay))
+            Metric(tr(R.string.analytics_workdays),a.recordedDays.toString());Metric(tr(R.string.analytics_shifts),a.shifts.toString())
+            Metric(tr(R.string.analytics_avg_day),if(a.recordedDays>0)hoursText(a.averageDayMs)else"—")
+            Metric(tr(R.string.analytics_avg_shift),if(a.shifts>0)hoursText(a.averageShiftMs)else"—")
+            Metric(tr(R.string.analytics_home_share),percent(a.homeShare));Metric(tr(R.string.analytics_ot_share),percent(a.overtimeShare))
+            Metric(tr(R.string.analytics_gross),if(empty)"—"else cash(s.gross))
+        } }
+        item { InfoCard(tr(R.string.analytics_comparison)) {
+            if(a.previousHasRecords&&!empty){
+                Metric(tr(R.string.analytics_hours_change),signedHours(s.totalMs-a.previous.totalMs))
+                Metric(tr(R.string.analytics_ot_change),signedHours(s.overtimeMs-a.previous.overtimeMs))
+                Metric(tr(R.string.analytics_gross_change),cash(s.gross-a.previous.gross))
+            } else Text(tr(R.string.analytics_no_comparison))
+        } }
+        item {InfoCard(tr(R.string.analytics_tiers)) {
+            data.settings.tiers.indices.forEach { i ->
+                Metric(number(data.settings.tiers[i].percent)+"%",hoursText(s.tierMs[i])+" · "+cash(s.tierMs[i]/HOUR_MS*data.settings.wage*data.settings.tiers[i].percent/100))
+            }
+            HorizontalDivider();Metric(tr(R.string.analytics_weighted),hoursText(a.weightedOvertimeMs));Text(tr(R.string.analytics_weighted_hint),style=MaterialTheme.typography.bodySmall)
+        }}
+        item {InfoCard(tr(R.string.analytics_location)) {
+            a.locations.forEach {g->
+                AnalyticsBar(locationLabel(g.key),hoursText(g.netMs)+" · "+cash(g.pay),if(s.totalMs>0)g.netMs/s.totalMs else 0.0)
+                g.tierMs.forEachIndexed {i,ms->Metric(number(data.settings.tiers[i].percent)+"%",hoursText(ms)+" · "+cash(ms/HOUR_MS*data.settings.wage*data.settings.tiers[i].percent/100))}
+            }
+            Text(tr(R.string.analytics_equivalent_hint),style=MaterialTheme.typography.bodySmall)
+            Metric(tr(R.string.analytics_office_short),hoursText(s.officeShortageMs));Metric(tr(R.string.analytics_office_ot),hoursText(s.officeOvertimeMs))
+        }}
+        item {InfoCard(tr(R.string.analytics_reasons)) {
+            if(a.reasons.isEmpty())Text(tr(R.string.analytics_no_reasons))
+            a.reasons.forEach {g->AnalyticsBar(g.key.ifBlank {tr(R.string.text_1ce0351978)},hoursText(g.netMs)+" · "+cash(g.pay),if(s.homeMs>0)g.netMs/s.homeMs else 0.0)}
+            Text(tr(R.string.analytics_equivalent_hint),style=MaterialTheme.typography.bodySmall)
+        }}
+        item {InfoCard(tr(R.string.analytics_shortfalls)) {
+            Metric(tr(R.string.analytics_daily_short),hoursText(s.dailyShortageMs))
+            Metric(tr(R.string.analytics_monthly_short),if(data.settings.monthlyHours>0)hoursText(s.monthlyShortageMs)else"—")
+            Metric(tr(R.string.analytics_missing_clock),s.missingDays.toString());Text(tr(R.string.analytics_missing_hint),style=MaterialTheme.typography.bodySmall)
+        }}
+        item {InfoCard(tr(R.string.analytics_weekdays)) {
+            val max=a.weekdays.maxOfOrNull {if(it.days>0)it.netMs/it.days else 0.0}?:0.0
+            a.weekdays.forEach {g->val avg=if(g.days>0)g.netMs/g.days else 0.0;AnalyticsBar(DayOfWeek.of(g.key.toInt()).getDisplayName(TextStyle.FULL,appLocale),if(g.days>0)hoursText(avg)+" · "+g.days+" "+tr(R.string.leave_days)else"—",if(max>0)avg/max else 0.0)}
+            Text(tr(R.string.analytics_weekdays_hint),style=MaterialTheme.typography.bodySmall)
+        }}
+        item {InfoCard(tr(R.string.analytics_records)) {
+            Metric(tr(R.string.analytics_longest),a.longestDate?.let {it.format(dateFormat)+" · "+hoursText(a.longestMs)}?:"—")
+            Metric(tr(R.string.analytics_most_ot),a.mostOvertimeDate?.let {it.format(dateFormat)+" · "+hoursText(a.mostOvertimeMs)}?:"—")
+        }}
+        item {InfoCard(tr(R.string.analytics_trend)) {
+            val max=a.trend.filter {it.hasRecords}.maxOfOrNull {it.totalMs}?:0.0
+            a.trend.forEach {t->AnalyticsBar(t.period.end.format(java.time.format.DateTimeFormatter.ofPattern("MMM yyyy",appLocale)),if(t.hasRecords)hoursText(t.totalMs)+" · "+hoursText(t.overtimeMs)+" · "+cash(t.gross)else"—",if(max>0&&t.hasRecords)t.totalMs/max else 0.0)}
+            Text(tr(R.string.analytics_trend_hint),style=MaterialTheme.typography.bodySmall)
+        }}
+    }
+}
+private fun signedHours(value: Double)= (if(value>0)"+"else if(value<0)"−"else"")+hoursText(kotlin.math.abs(value))

@@ -1,0 +1,303 @@
+package com.tal.workhours
+
+import android.content.Context
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.PagerState
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawWithCache
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInRoot
+import androidx.compose.ui.zIndex
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.LayoutDirection
+import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.launch
+
+internal val launcherWallpaperTop = Color(0xFF132241)
+internal val launcherWallpaperBottom = Color(0xFF292345)
+internal val launcherWallpaperText = Color(0xFFF1F4FF)
+
+internal fun Modifier.launcherWallpaper(): Modifier = drawWithCache {
+    val base = Brush.verticalGradient(listOf(launcherWallpaperTop, Color(0xFF263D69), launcherWallpaperBottom))
+    val violet = Brush.radialGradient(
+        colors = listOf(Color(0x805F56AC), Color.Transparent),
+        center = Offset(size.width * 0.88f, size.height * 0.37f),
+        radius = size.maxDimension.coerceAtLeast(1f) * 0.64f,
+    )
+    val teal = Brush.radialGradient(
+        colors = listOf(Color(0x704094AA), Color.Transparent),
+        center = Offset(size.width * 0.08f, size.height * 0.80f),
+        radius = size.maxDimension.coerceAtLeast(1f) * 0.54f,
+    )
+    onDrawBehind {
+        drawRect(base)
+        drawRect(violet)
+        drawRect(teal)
+    }
+}
+
+private const val WIDGET_SLOTS_KEY = "widgets_v1"
+private val defaultWidgets = listOf(1, 6)
+
+private fun widgetSelection(saved: String?): List<Int> {
+    val known = normalizeSnapshotCardOrder(null)
+    val savedCards = saved.orEmpty().split(',').mapNotNull(String::toIntOrNull)
+    return (savedCards.filter { it in known } + defaultWidgets).distinct().take(2)
+}
+
+@Composable
+internal fun LauncherHome(
+    data: AppData,
+    now: Long,
+    pager: PagerState,
+    onNavigate: (Int) -> Unit,
+    snapshot: @Composable (List<Int>?, (Int) -> Unit) -> Unit,
+) {
+    val context = LocalContext.current
+    val preferences = remember(context) { context.getSharedPreferences("snapshot_layout", Context.MODE_PRIVATE) }
+    var widgets by remember { mutableStateOf(widgetSelection(preferences.getString(WIDGET_SLOTS_KEY, null))) }
+    var editingSlot by rememberSaveable { mutableStateOf<Int?>(null) }
+    val scope = rememberCoroutineScope()
+    Column(Modifier.fillMaxSize()) {
+        HorizontalPager(
+            state = pager,
+            beyondViewportPageCount = 1,
+            modifier = Modifier.fillMaxWidth().weight(1f),
+            verticalAlignment = Alignment.Top,
+            reverseLayout = LocalLayoutDirection.current == LayoutDirection.Ltr,
+        ) { page ->
+            if (page == 0) LauncherShortcuts(data, now, onNavigate)
+            else snapshot(widgets) { slot ->
+                if (!pager.isScrollInProgress && pager.settledPage == 1) editingSlot = slot
+            }
+        }
+        Row(Modifier.align(Alignment.CenterHorizontally), verticalAlignment = Alignment.CenterVertically) {
+            listOf(R.string.nav_home, R.string.launcher_widgets).forEachIndexed { page, label ->
+                val selectedPage = pager.currentPage == page
+                TextButton(
+                    onClick = { scope.launch { pager.animateScrollToPage(page) } },
+                    modifier = Modifier.semantics { selected = selectedPage },
+                ) {
+                    Box(Modifier.size(7.dp).background(
+                        if (selectedPage) launcherWallpaperText else Color(0xFFA8B6DC), CircleShape
+                    ))
+                    Spacer(Modifier.width(6.dp))
+                    Text(tr(label), color = if (selectedPage) launcherWallpaperText else Color(0xFFCBD4EF))
+                }
+            }
+        }
+        Text("Created by Tal Azulay", Modifier.align(Alignment.CenterHorizontally).padding(bottom = 8.dp),
+            style = MaterialTheme.typography.labelSmall, color = launcherWallpaperText)
+    }
+
+    editingSlot?.let { slot ->
+        if (slot in widgets.indices) {
+            val titles = snapshotCardTitles()
+            val otherCard = widgets[1 - slot]
+            AlertDialog(
+                onDismissRequest = { editingSlot = null },
+                title = { Text(tr(R.string.launcher_change_widget)) },
+                text = {
+                    LazyColumn(Modifier.heightIn(max = 360.dp)) {
+                        normalizeSnapshotCardOrder(null).filter { it != otherCard }.forEach { card ->
+                            item(key = card) {
+                                val choose = {
+                                    widgets = widgets.toMutableList().also { it[slot] = card }
+                                    preferences.edit().putString(WIDGET_SLOTS_KEY, widgets.joinToString(",")).apply()
+                                    editingSlot = null
+                                }
+                                Row(
+                                    Modifier.fillMaxWidth().clickable(role = Role.RadioButton, onClick = choose)
+                                        .padding(vertical = 12.dp),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                ) {
+                                    RadioButton(selected = widgets[slot] == card, onClick = null)
+                                    Text(titles[card], Modifier.padding(start = 12.dp))
+                                }
+                            }
+                        }
+                    }
+                },
+                confirmButton = {
+                    TextButton(onClick = { editingSlot = null }) { Text(tr(R.string.snapshot_cancel_order)) }
+                },
+            )
+        }
+    }
+}
+
+@Composable
+internal fun WidgetSlotHeader(title: String, onChoose: () -> Unit) {
+    Row(
+        Modifier.fillMaxWidth().padding(start = 12.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(title, Modifier.weight(1f), style = MaterialTheme.typography.titleSmall, color = launcherWallpaperText)
+        IconButton(onClick = onChoose, colors = IconButtonDefaults.iconButtonColors(contentColor = launcherWallpaperText)) {
+            AppIcon(R.drawable.ic_edit, tr(R.string.launcher_change_widget))
+        }
+    }
+}
+
+private data class LauncherShortcut(val destination: Int, val label: Int, val icon: Int)
+
+private val launcherShortcuts = listOf(
+    LauncherShortcut(7, R.string.nav_dashboard, R.drawable.ic_snapshot),
+    LauncherShortcut(6, R.string.analytics_title, R.drawable.ic_analytics),
+    LauncherShortcut(2, R.string.nav_records, R.drawable.ic_records),
+    LauncherShortcut(5, R.string.leave_title, R.drawable.ic_calendar),
+    LauncherShortcut(3, R.string.nav_settings, R.drawable.ic_settings),
+    LauncherShortcut(4, R.string.nav_backup, R.drawable.ic_backup),
+)
+
+@Composable
+private fun LauncherShortcuts(data: AppData, now: Long, onNavigate: (Int) -> Unit) {
+    val period = periodFor(localTime(now).toLocalDate(), data.settings.periodStartDay)
+    val activeTime = if (data.active != null) now else null
+    val summary = remember(data, period, activeTime) { summarize(data, period, now) }
+    val includesActiveShift = data.active?.let { period.contains(localTime(it.start).toLocalDate()) } == true
+
+    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
+        Column(
+            Modifier.widthIn(max = 580.dp).fillMaxWidth().verticalScroll(rememberScrollState()).padding(20.dp),
+            verticalArrangement = Arrangement.spacedBy(20.dp),
+        ) {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                SnapshotHero(
+                    summary = summary,
+                    active = includesActiveShift,
+                    modifier = Modifier.clip(RoundedCornerShape(24.dp))
+                        .clickable(role = Role.Button, onClickLabel = tr(R.string.nav_dashboard)) { onNavigate(7) },
+                )
+                CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
+                    Text("${period.from.format(dateFormat)} – ${period.end.format(dateFormat)}",
+                        modifier = Modifier.align(Alignment.CenterHorizontally),
+                        color = launcherWallpaperText, style = MaterialTheme.typography.bodySmall)
+                }
+            }
+            LauncherShortcutGrid(onNavigate)
+        }
+    }
+}
+
+@Composable
+private fun LauncherShortcutGrid(onNavigate: (Int) -> Unit) {
+    val context = LocalContext.current
+    val preferences = remember(context) { context.getSharedPreferences("snapshot_layout", Context.MODE_PRIVATE) }
+    val defaults = launcherShortcuts.map { it.destination }
+    var order by remember(preferences) {
+        val saved = preferences.getString("shortcut_order_v1", null).orEmpty()
+            .split(',').mapNotNull { it.toIntOrNull() }.filter { it in defaults }
+        mutableStateOf((saved + defaults).distinct())
+    }
+    val tileBounds = remember { mutableMapOf<Int, Rect>() }
+    var gridOrigin by remember { mutableStateOf(Offset.Zero) }
+    var dragging by remember { mutableStateOf<Int?>(null) }
+    var dragOffset by remember { mutableStateOf(Offset.Zero) }
+    val haptics = androidx.compose.ui.platform.LocalHapticFeedback.current
+    val colors = MaterialTheme.colorScheme
+    val palette = listOf(
+        colors.primaryContainer to colors.onPrimaryContainer,
+        colors.secondaryContainer to colors.onSecondaryContainer,
+        colors.tertiaryContainer to colors.onTertiaryContainer,
+    )
+
+
+    Column(
+        Modifier.fillMaxWidth().onGloballyPositioned { gridOrigin = it.positionInRoot() }.pointerInput(preferences, haptics) {
+            detectDragGesturesAfterLongPress(
+                onDragStart = { point ->
+                    dragging = tileBounds.entries.firstOrNull { (_, bounds) -> bounds.contains(gridOrigin + point) }?.key
+                    dragOffset = Offset.Zero
+                    if (dragging != null) haptics.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress)
+                },
+                onDrag = { change, delta ->
+                    change.consume()
+                    dragOffset += delta
+                },
+                onDragCancel = { dragging = null; dragOffset = Offset.Zero },
+                onDragEnd = {
+                    val source = dragging
+                    val center = source?.let { tileBounds[it]?.center }
+                    val target = center?.let { point ->
+                        tileBounds.entries.firstOrNull { (_, bounds) -> bounds.contains(point + dragOffset) }?.key
+                    }
+                    if (source != null && target != null && source != target) {
+                        val from = order.indexOf(source)
+                        val to = order.indexOf(target)
+                        order = order.toMutableList().also { it[from] = target; it[to] = source }
+                        preferences.edit().putString("shortcut_order_v1", order.joinToString(",")).apply()
+                    }
+                    dragging = null
+                    dragOffset = Offset.Zero
+                },
+            )
+        },
+        verticalArrangement = Arrangement.spacedBy(20.dp),
+    ) {
+        order.chunked(3).forEach { row ->
+            Row(Modifier.fillMaxWidth().zIndex(if (row.any { it == dragging }) 1f else 0f),
+                horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                row.forEach { destination ->
+                    val index = defaults.indexOf(destination)
+                    val shortcut = launcherShortcuts[index]
+                    val (container, foreground) = palette[(index % 3 + index / 3) % palette.size]
+                    val lifted = dragging == destination
+                    Column(
+                        Modifier.weight(1f).zIndex(if (lifted) 1f else 0f)
+                            .onGloballyPositioned {
+                                tileBounds[destination] = Rect(it.positionInRoot(), Size(it.size.width.toFloat(), it.size.height.toFloat()))
+                            }
+                            .graphicsLayer {
+                                if (lifted) {
+                                    translationX = dragOffset.x
+                                    translationY = dragOffset.y
+                                    scaleX = 1.10f
+                                    scaleY = 1.10f
+                                }
+                            }
+                            .clip(RoundedCornerShape(20.dp))
+                            .clickable(role = Role.Button) { onNavigate(destination) }
+                            .padding(vertical = 8.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(7.dp),
+                    ) {
+                        Surface(shape = RoundedCornerShape(20.dp), color = container, contentColor = foreground) {
+                            Box(Modifier.size(56.dp), contentAlignment = Alignment.Center) {
+                                AppIcon(shortcut.icon, modifier = Modifier.size(28.dp))
+                            }
+                        }
+                        Text(tr(shortcut.label), textAlign = TextAlign.Center,
+                            style = MaterialTheme.typography.labelMedium, color = launcherWallpaperText)
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+package com.tal.workhours
+
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.time.LocalDate
+
+@Composable
+fun ShiftExportButton(data: AppData, period: PayPeriod, location: String?, enabled: Boolean, onMessage: (String)->Unit) {
+    val context=LocalContext.current
+    val scope=rememberCoroutineScope()
+    val current by rememberUpdatedState(data)
+    var busy by remember { mutableStateOf(false) }
+    var pendingFrom by rememberSaveable { mutableStateOf("") }
+    var pendingUntil by rememberSaveable { mutableStateOf("") }
+    var pendingLocation by rememberSaveable { mutableStateOf("") }
+    val labels=ShiftExportLabels(tr(R.string.export_sheet),tr(R.string.export_period_start),tr(R.string.export_period_end),
+        tr(R.string.export_date),tr(R.string.export_start),tr(R.string.export_end),tr(R.string.export_duration),tr(R.string.export_total),tr(R.string.export_note),
+        LeaveExportLabels(tr(R.string.leave_title),listOf(tr(R.string.leave_date),tr(R.string.leave_title),tr(R.string.leave_number_days),tr(R.string.leave_hours),tr(R.string.leave_pay_percent),tr(R.string.leave_debited),tr(R.string.leave_pay)+" ("+taxCurrency(data.settings.taxCountry)+")",tr(R.string.leave_event_start),tr(R.string.leave_note)),tr(R.string.leave_vacation),tr(R.string.leave_sick),tr(R.string.export_total),tr(R.string.leave_holiday),tr(R.string.leave_salary_choice)))
+    val rtl=android.text.TextUtils.getLayoutDirectionFromLocale(appLocale)==android.view.View.LAYOUT_DIRECTION_RTL
+    val save=rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument(XLSX_MIME)) { uri ->
+        if(uri!=null) scope.launch {
+            busy=true
+            try {
+                val selected=PayPeriod(LocalDate.parse(pendingFrom),LocalDate.parse(pendingUntil))
+                val where=pendingLocation.takeIf { it.isNotBlank() }
+                val snapshot=current
+                val scopeLabel=when(where) { OFFICE -> tr(R.string.location_office);HOME -> tr(R.string.location_home);else -> tr(R.string.filter_all) }
+                val chosenLabels=labels.copy(sheet=labels.sheet+" · "+scopeLabel,note=labels.note+" · "+scopeLabel+" · "+overtimeRuleDescription(snapshot.settings))
+                withContext(Dispatchers.IO) {
+                    val bytes=shiftWorkbook(snapshot,selected,where,chosenLabels,rtl)
+                    (context.contentResolver.openOutputStream(uri,"wt") ?: error(tr(R.string.text_5862cd4663))).use { it.write(bytes) }
+                }
+                onMessage(tr(R.string.export_saved))
+            } catch(e:kotlinx.coroutines.CancellationException) { throw e }
+            catch(e:Exception) { onMessage(tr(R.string.export_error)+" "+(e.message ?: "")) }
+            finally { busy=false;pendingFrom="";pendingUntil="";pendingLocation="" }
+        } else { busy=false;pendingFrom="";pendingUntil="";pendingLocation="" }
+    }
+    OutlinedButton(enabled=enabled && !busy,onClick={
+        pendingFrom=period.from.toString();pendingUntil=period.until.toString();pendingLocation=location.orEmpty()
+        val suffix=when(location) { OFFICE -> "Office";HOME -> "Home";else -> "All" }
+        busy=true
+        try { save.launch(context.getString(R.string.app_name)+"_"+period.from+"_"+period.end+"_"+suffix+".xlsx") }
+        catch(e:Exception) { busy=false;pendingFrom="";pendingUntil="";pendingLocation="";onMessage(tr(R.string.export_error)+" "+(e.message ?: "")) }
+    },modifier=Modifier.fillMaxWidth().heightIn(min=48.dp)) {
+        AppIcon(R.drawable.ic_export);Spacer(Modifier.width(8.dp));Text(tr(if(busy)R.string.text_0bf5310554 else R.string.export_excel))
+    }
+}

@@ -18,7 +18,6 @@ kotlin {
     sourceSets {
         all {
             languageSettings.optIn("kotlin.uuid.ExperimentalUuidApi")
-            languageSettings.optIn("kotlin.time.ExperimentalTime")
             languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
             languageSettings.optIn("kotlinx.cinterop.BetaInteropApi")
             languageSettings.optIn("androidx.compose.material3.ExperimentalMaterial3Api")
@@ -31,12 +30,16 @@ kotlin {
             implementation(compose.material3)
             implementation(compose.ui)
             implementation(compose.components.resources)
+            implementation(libs.compose.ui.backhandler)
             implementation(libs.kotlinx.coroutines.core)
-            implementation(libs.kotlinx.datetime)
         }
         commonTest.dependencies {
             implementation(kotlin("test"))
             implementation(libs.kotlinx.coroutines.test)
+        }
+        jvmTest.dependencies {
+            // The unit tests are the Android project's JUnit 4 tests, ported as-is.
+            implementation(libs.junit)
         }
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)

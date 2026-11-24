@@ -1,0 +1,104 @@
+package com.tal.workhours
+
+import kotlin.math.*
+
+/** 2026 ordinary resident wage profiles. Verified base/relief are required, not inferred.
+ * This is annual liability / 12, NOT a W-4 withholding or municipal tax engine.
+ * See TAX-SOURCES.md for primary sources, exclusions and payment-input requirements. */
+val additionalUsStates = listOf("AK", "NV", "SD", "TN", "WA", "WY", "NH",
+    "AZ", "IA", "IL", "MI", "NC", "UT", "KY", "PA", "IN", "MA", "GA", "LA", "MS")
+val extendedUsStates = additionalUsStates + remainingUsStates
+val supportedUsStates = listOf("FL", "TX") + extendedUsStates
+val zeroSalaryTaxUsStates = setOf("AK", "NV", "SD", "TN", "WA", "WY", "NH")
+private val usStateRates2026 = mapOf("AZ" to .025, "IA" to .038, "IL" to .0495,
+    "MI" to .0425, "NC" to .0399, "UT" to .0445, "KY" to .035, "PA" to .0307,
+    "IN" to .0295, "MA" to .05, "GA" to .0499, "LA" to .03, "MS" to .04)
+
+fun usStateName(code: String): String = tr(when (code) {
+    "FL" -> R.string.tax_florida; "TX" -> R.string.tax_texas
+    "AK" -> R.string.tax_us_ak
+    "NV" -> R.string.tax_us_nv
+    "SD" -> R.string.tax_us_sd
+    "TN" -> R.string.tax_us_tn
+    "WA" -> R.string.tax_us_wa
+    "WY" -> R.string.tax_us_wy
+    "NH" -> R.string.tax_us_nh
+    "AZ" -> R.string.tax_us_az
+    "IA" -> R.string.tax_us_ia
+    "IL" -> R.string.tax_us_il
+    "MI" -> R.string.tax_us_mi
+    "NC" -> R.string.tax_us_nc
+    "UT" -> R.string.tax_us_ut
+    "KY" -> R.string.tax_us_ky
+    "PA" -> R.string.tax_us_pa
+    "IN" -> R.string.tax_us_in
+    "MA" -> R.string.tax_us_ma
+    "GA" -> R.string.tax_us_ga
+    "LA" -> R.string.tax_us_la
+    "MS" -> R.string.tax_us_ms
+    "AL" -> R.string.tax_us_al
+    "AR" -> R.string.tax_us_ar
+    "CA" -> R.string.tax_us_ca
+    "CO" -> R.string.tax_us_co
+    "CT" -> R.string.tax_us_ct
+    "DE" -> R.string.tax_us_de
+    "HI" -> R.string.tax_us_hi
+    "ID" -> R.string.tax_us_id
+    "KS" -> R.string.tax_us_ks
+    "MD" -> R.string.tax_us_md
+    "ME" -> R.string.tax_us_me
+    "MN" -> R.string.tax_us_mn
+    "MO" -> R.string.tax_us_mo
+    "MT" -> R.string.tax_us_mt
+    "ND" -> R.string.tax_us_nd
+    "NE" -> R.string.tax_us_ne
+    "NJ" -> R.string.tax_us_nj
+    "NM" -> R.string.tax_us_nm
+    "NY" -> R.string.tax_us_ny
+    "OH" -> R.string.tax_us_oh
+    "OK" -> R.string.tax_us_ok
+    "OR" -> R.string.tax_us_or
+    "RI" -> R.string.tax_us_ri
+    "SC" -> R.string.tax_us_sc
+    "VA" -> R.string.tax_us_va
+    "VT" -> R.string.tax_us_vt
+    "WI" -> R.string.tax_us_wi
+    "WV" -> R.string.tax_us_wv
+    else -> R.string.tax_other_region
+})
+
+internal data class UsStateResult(val annualTax: Double, val appliedRelief: Double, val localTax: Double)
+
+internal fun estimateUsStateTax(annual: Double, s: AppSettings): UsStateResult? {
+    if (s.taxCountry != "US" || s.taxYear != 2026 || s.foreignProfileCountry != "US" ||
+        s.usFilingStatus !in setOf("SINGLE", "MFJ") || s.taxRegion !in supportedUsStates ||
+        !annual.isFinite() || annual !in 0.0..12_000_000_000.0) return null
+    // Existing FL/TX profiles retain their narrow no-local-wage-tax scope and old backups.
+    if (s.taxRegion in setOf("FL", "TX")) return UsStateResult(0.0, 0.0, 0.0)
+    val local = s.usMonthlyLocalTax ?: return null
+    if (!local.isFinite() || local !in 0.0..annual / 12) return null
+    if (s.taxRegion in zeroSalaryTaxUsStates) return UsStateResult(0.0, 0.0, local)
+    if (s.taxRegion in verifiedLiabilityUsStates) {
+        val verifiedTax = s.usAnnualVerifiedStateTax ?: return null
+        if (!verifiedTax.isFinite() || verifiedTax !in 0.0..annual) return null
+        // FINAL annual liability AFTER nonrefundable relief, never withholding/balance due/refund.
+        // Ignore stale base/relief; they must not be deducted twice in this explicit manual route.
+        return UsStateResult(verifiedTax, 0.0, local)
+    }
+    val base = s.usAnnualStateTaxableBase ?: return null
+    val relief = s.usAnnualStateRelief ?: return null
+    if (!base.isFinite() || base !in 0.0..annual || !relief.isFinite() ||
+        relief !in 0.0..1_000_000_000_000.0) return null
+    // PA has no standard deduction; UT federal deductions operate through a tax credit.
+    // Initial profiles exclude adjusted/partially exempt wages in these two states.
+    if (s.taxRegion in setOf("PA", "UT") && abs(base - annual) > .005) return null
+    // Conservative salary-only ceiling excludes MA's 4% high-income surtax cases.
+    if (s.taxRegion == "MA" && annual > 1_000_000.0) return null
+    // MS's single $10k zero band applies AFTER base deductions, including sole-earner MFJ.
+    val tariffBase = if (s.taxRegion == "MS") max(0.0, base - 10000.0) else base
+    val beforeRelief = if (s.taxRegion in remainingUsStates)
+        remainingUsStateBeforeRelief(annual, base, s.taxRegion, s.usFilingStatus == "MFJ") ?: return null
+        else tariffBase * (usStateRates2026[s.taxRegion] ?: return null)
+    val applied = min(relief, beforeRelief) // Nonrefundable; no invented eligibility or cash refund.
+    return UsStateResult(max(0.0, beforeRelief - applied), applied, local)
+}

@@ -1,0 +1,309 @@
+package com.tal.workhours
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.KeyboardType
+
+fun countryTaxScope(country: String): String {
+    val scope = tr(when (country) {
+    "NL" -> R.string.tax_next_nl
+    "BE" -> R.string.tax_next_be
+    "LU" -> R.string.tax_next_lu
+    "CH" -> R.string.tax_next_ch
+    "SE" -> R.string.tax_next_se
+    "FI" -> R.string.tax_next_fi
+    "IS" -> R.string.tax_next_is
+    "IT" -> R.string.tax_next_it
+    "JP" -> R.string.tax_next_jp
+    "KR" -> R.string.tax_next_kr
+    "AR" -> R.string.tax_next_ar
+    "CL" -> R.string.tax_next_cl
+    "UY" -> R.string.tax_next_uy
+    "BO" -> R.string.tax_next_bo
+    "JM" -> R.string.tax_next_jm
+    "TT" -> R.string.tax_next_tt
+    "BZ" -> R.string.tax_next_bz
+    "GY" -> R.string.tax_next_gy
+    "BB" -> R.string.tax_next_bb
+    "FJ" -> R.string.tax_next_fj
+    "AT" -> R.string.tax_scope_at
+    "CY" -> R.string.tax_scope_cy
+    "MT" -> R.string.tax_scope_mt
+    "GR" -> R.string.tax_scope_gr
+    "SI" -> R.string.tax_scope_si
+    "SK" -> R.string.tax_scope_sk
+    "HR" -> R.string.tax_scope_hr
+    "RS" -> R.string.tax_scope_rs
+    "ME" -> R.string.tax_scope_me
+    "AL" -> R.string.tax_scope_al
+    "BA" -> R.string.tax_scope_ba
+    "NG" -> R.string.tax_scope_ng
+    "GH" -> R.string.tax_scope_gh
+    "TZ" -> R.string.tax_scope_tz
+    "BW" -> R.string.tax_scope_bw
+    "MU" -> R.string.tax_scope_mu
+    "EG" -> R.string.tax_scope_eg
+    "SZ" -> R.string.tax_scope_sz
+    "LS" -> R.string.tax_scope_ls
+    "JO" -> R.string.tax_scope_jo
+
+    "PA" -> R.string.tax_scope_pa
+    "NI" -> R.string.tax_scope_ni
+    "SV" -> R.string.tax_scope_sv
+    "HN" -> R.string.tax_scope_hn
+    "PY" -> R.string.tax_scope_py
+    "EC" -> R.string.tax_scope_ec
+    "NA" -> R.string.tax_scope_na
+    "KH" -> R.string.tax_scope_kh
+    "AZ" -> R.string.tax_scope_az
+    "BH" -> R.string.tax_scope_bh
+    "KW" -> R.string.tax_scope_kw
+    "OM" -> R.string.tax_scope_om
+    "QA" -> R.string.tax_scope_qa
+    "BN" -> R.string.tax_scope_bn
+    "BS" -> R.string.tax_scope_bs
+    "MX" -> R.string.tax_scope_mx
+    "BR" -> R.string.tax_scope_br
+    "CR" -> R.string.tax_scope_cr
+    "GT" -> R.string.tax_scope_gt
+    "DO" -> R.string.tax_scope_do
+    "KE" -> R.string.tax_scope_ke
+    "RW" -> R.string.tax_scope_rw
+    "UG" -> R.string.tax_scope_ug
+    "ZM" -> R.string.tax_scope_zm
+    "PK" -> R.string.tax_scope_pk
+    "UZ" -> R.string.tax_scope_uz
+    "KZ" -> R.string.tax_scope_kz
+    "MA" -> R.string.tax_scope_ma
+    "MD" -> R.string.tax_scope_md
+    "MK" -> R.string.tax_scope_mk
+    "PE" -> R.string.tax_scope_pe; "CO" -> R.string.tax_scope_co; "EE" -> R.string.tax_scope_ee
+    "LV" -> R.string.tax_scope_lv; "LT" -> R.string.tax_scope_lt; "BG" -> R.string.tax_scope_bg
+    "RO" -> R.string.tax_scope_ro; "HU" -> R.string.tax_scope_hu; "GE" -> R.string.tax_scope_ge; "AM" -> R.string.tax_scope_am
+    "TH" -> R.string.tax_scope_th; "ID" -> R.string.tax_scope_id; "VN" -> R.string.tax_scope_vn
+    "TW" -> R.string.tax_scope_tw; "LK" -> R.string.tax_scope_lk
+    "PL" -> R.string.tax_scope_pl; "CZ" -> R.string.tax_scope_cz
+    "MY" -> R.string.tax_scope_my; "PH" -> R.string.tax_scope_ph
+    "SG" -> R.string.tax_scope_sg; "DK" -> R.string.tax_scope_dk
+    "NO" -> R.string.tax_scope_no; "ZA" -> R.string.tax_scope_za
+    "IE" -> R.string.tax_scope_ie; "HK" -> R.string.tax_scope_hk
+    "ES" -> R.string.tax_scope_es; "CN" -> R.string.tax_scope_cn; "SA" -> R.string.tax_scope_sa
+    "US" -> R.string.tax_scope_us; "CA" -> R.string.tax_scope_ca
+    "IN" -> R.string.tax_scope_in; "RU" -> R.string.tax_scope_ru; "AE" -> R.string.tax_scope_ae
+    "DE" -> R.string.tax_scope_de; "FR" -> R.string.tax_scope_fr; "PT" -> R.string.tax_scope_pt
+    "AU" -> R.string.tax_scope_au; "NZ" -> R.string.tax_scope_nz
+    else -> R.string.tax_unavailable
+    })
+    return when {
+        country in nextTwentyTaxCountries -> tr(R.string.tax_next_common_scope) + "\n" + scope
+        country in expansionTwentyTaxCountries -> tr(R.string.tax_twenty_common_scope) + "\n" + scope
+        country in additionalFifteenTaxCountries -> tr(R.string.tax_wave_common_scope) + "\n" + scope
+        country in expansionFifteenTaxCountries -> tr(R.string.tax_fifteen_common_scope) + "\n" + scope
+        else -> scope
+    }
+}
+
+@Composable
+private fun TaxDropDown(title: String, value: String, choices: List<Pair<String, String>>, enabled: Boolean, onSelect: (String) -> Unit) {
+    var expanded by remember { mutableStateOf(false) }
+    Text(title, style = MaterialTheme.typography.titleSmall)
+    Box {
+        OutlinedButton(enabled = enabled, onClick = { expanded = true }, modifier = Modifier.fillMaxWidth()) {
+            Text(choices.firstOrNull { it.first == value }?.second ?: tr(R.string.tax_choose))
+        }
+        DropdownMenu(expanded, onDismissRequest = { expanded = false }) {
+            choices.forEach { (key, label) -> DropdownMenuItem(text = { Text(label) }, onClick = { expanded = false; onSelect(key) }) }
+        }
+    }
+}
+
+@Composable
+private fun TaxAmountField(label: String, value: String, enabled: Boolean, onChange: (String) -> Unit) {
+    OutlinedTextField(value, onValueChange = { onChange(it.take(30)) }, enabled = enabled,
+        label = { Text(label) }, keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
+        singleLine = true, modifier = Modifier.fillMaxWidth())
+}
+
+@Composable
+fun TaxProfile(country: String, year: Int, region: String, ukProfile: Boolean, usFiling: String,
+    foreignProfile: String, deductions: String, annualBase: String, auCover: String, nzIetc: Boolean, noYouth: String, zaUif: String, sgCpf: String, dkMunicipal: String, annualGross: String, monthlyBase: String, ecExpenses: String, pyReceipts: String, paymentDate: String, usStateBase: String, usStateRelief: String, usLocalTax: String, usVerifiedStateTax: String, nextRelief: String, nextOtherTax: String, nextVerifiedTax: String, enabled: Boolean,
+    onCountry: (String) -> Unit, onYear: (Int) -> Unit, onRegion: (String) -> Unit, onUkProfile: (Boolean) -> Unit,
+    onUsFiling: (String) -> Unit, onForeignProfile: (Boolean) -> Unit, onDeductions: (String) -> Unit,
+    onAnnualBase: (String) -> Unit, onAuCover: (String) -> Unit, onNzIetc: (Boolean) -> Unit, onNoYouth: (String) -> Unit, onZaUif: (String) -> Unit, onSgCpf: (String) -> Unit, onDkMunicipal: (String) -> Unit, onAnnualGross: (String) -> Unit, onMonthlyBase: (String) -> Unit, onEcExpenses: (String) -> Unit, onPyReceipts: (String) -> Unit, onPaymentDate: (String) -> Unit, onUsStateBase: (String) -> Unit, onUsStateRelief: (String) -> Unit, onUsLocalTax: (String) -> Unit, onUsVerifiedStateTax: (String) -> Unit, onNextRelief: (String) -> Unit, onNextOtherTax: (String) -> Unit, onNextVerifiedTax: (String) -> Unit) {
+    InfoCard(tr(R.string.tax_profile)) {
+        SearchCountryChooser(country,enabled,onCountry)
+        Text(tr(R.string.tax_country_hint), style = MaterialTheme.typography.bodySmall)
+        Text(tr(R.string.tax_currency_warning), style = MaterialTheme.typography.bodySmall)
+        TaxDropDown(tr(R.string.tax_year), year.toString(), (2025..2027).map { it.toString() to
+            if (country in setOf("GB", "IN", "AU", "NZ", "HK", "ZA", "LK", "UG", "PK", "NA", "BW", "MU", "SZ", "LS")) "$it/${(it + 1).toString().takeLast(2)}" else it.toString() }, enabled) { onYear(it.toInt()) }
+        if (country == "GB") {
+            TaxDropDown(tr(R.string.tax_region), region, listOf("ENG" to tr(R.string.tax_england), "WLS" to tr(R.string.tax_wales),
+                "NIR" to tr(R.string.tax_northern_ireland), "SCT" to tr(R.string.tax_scotland)), enabled, onRegion)
+            SettingSwitch(tr(R.string.tax_uk_profile), ukProfile, enabled, onUkProfile)
+            Text(tr(R.string.tax_uk_scope), style = MaterialTheme.typography.bodySmall)
+        } else if (country in foreignTaxCountries) {
+            if (country in setOf("US", "CA", "PT", "ES", "CN", "NO", "DK", "EC", "HR", "BA", "TZ")) {
+                val choices = when (country) {
+                    "US" -> supportedUsStates.map { it to usStateName(it) }
+                    "CA" -> listOf("ON" to tr(R.string.tax_ontario), "AB" to tr(R.string.tax_alberta))
+                    "ES" -> listOf("ES-MD" to tr(R.string.tax_madrid))
+                    "DK" -> listOf("DK-CPH" to tr(R.string.tax_copenhagen))
+                    "NO" -> listOf("NO-ORDINARY" to tr(R.string.tax_no_region))
+                    "EC" -> listOf("EC-MAINLAND" to tr(R.string.tax_ec_mainland))
+                    "HR" -> listOf("HR-ZAGREB" to tr(R.string.tax_zagreb))
+                    "BA" -> listOf("BA-FBIH" to tr(R.string.tax_fbih))
+                    "TZ" -> listOf("TZ-MAINLAND" to tr(R.string.tax_tz_mainland))
+                    "CN" -> listOf("CN-MAINLAND" to tr(R.string.tax_cn_mainland))
+                    else -> listOf("PT-MAINLAND" to tr(R.string.tax_pt_mainland))
+                } + listOf("OTHER" to tr(R.string.tax_other_region))
+                TaxDropDown(tr(R.string.tax_region), region, choices, enabled, onRegion)
+                if (region == "OTHER") Text(tr(R.string.tax_region_unavailable), color = MaterialTheme.colorScheme.error)
+            }
+            if (country == "US") TaxDropDown(tr(R.string.tax_filing), usFiling,
+                listOf("SINGLE" to tr(R.string.tax_single), "MFJ" to tr(R.string.tax_joint)), enabled, onUsFiling)
+            Text(tr(R.string.ui_tax_scope_notice),style=MaterialTheme.typography.bodySmall)
+            if(foreignProfile!=country) Text(countryTaxScope(country),style=MaterialTheme.typography.bodySmall)
+            else DetailDisclosure(tr(R.string.ui_tax_scope)) { Text(countryTaxScope(country),style=MaterialTheme.typography.bodySmall) }
+            if (country == "US" && region in extendedUsStates) {
+                if (region in remainingUsStates) Text(tr(R.string.tax_us_final_scope), style = MaterialTheme.typography.bodySmall)
+                if (region in verifiedLiabilityUsStates) {
+                    Text(tr(R.string.tax_us_manual_scope), style = MaterialTheme.typography.bodySmall)
+                    TaxAmountField(tr(R.string.tax_us_verified_state_tax) + " · USD", usVerifiedStateTax, enabled, onUsVerifiedStateTax)
+                    Text(tr(R.string.tax_us_verified_tax_hint), style = MaterialTheme.typography.bodySmall)
+                } else if (region !in zeroSalaryTaxUsStates) {
+                    TaxAmountField(tr(R.string.tax_us_state_base) + " · USD", usStateBase, enabled, onUsStateBase)
+                    Text(tr(R.string.tax_us_base_hint), style = MaterialTheme.typography.bodySmall)
+                    if (region in setOf("PA", "UT")) Text(tr(R.string.tax_us_pa_ut_hint), style = MaterialTheme.typography.bodySmall)
+                    if (region == "MS") Text(tr(R.string.tax_us_ms_hint), style = MaterialTheme.typography.bodySmall)
+                    if (region == "MA") Text(tr(R.string.tax_us_ma_hint), style = MaterialTheme.typography.bodySmall)
+                    if (region in setOf("CT", "NY", "AR")) Text(tr(R.string.tax_us_final_limits), style = MaterialTheme.typography.bodySmall)
+                    if (region == "SC") Text(tr(R.string.tax_us_sc_hint), style = MaterialTheme.typography.bodySmall)
+                    if (region == "OR") Text(tr(R.string.tax_us_or_hint), style = MaterialTheme.typography.bodySmall)
+                    if (region == "OH") Text(tr(R.string.tax_us_oh_hint), style = MaterialTheme.typography.bodySmall)
+                    TaxAmountField(tr(R.string.tax_us_state_relief) + " · USD", usStateRelief, enabled, onUsStateRelief)
+                    Text(tr(R.string.tax_us_relief_hint), style = MaterialTheme.typography.bodySmall)
+                } else Text(tr(R.string.tax_us_zero_hint), style = MaterialTheme.typography.bodySmall)
+                TaxAmountField(tr(R.string.tax_us_local_tax) + " · USD", usLocalTax, enabled, onUsLocalTax)
+                Text(tr(R.string.tax_us_local_hint), style = MaterialTheme.typography.bodySmall)
+                if (region !in verifiedLiabilityUsStates) Text(tr(R.string.tax_us_current_inputs), style = MaterialTheme.typography.bodySmall)
+            }
+            if (country in asiaFiveTaxCountries || country in expansionTenTaxCountries || country in expansionFifteenAnnualCountries || country in additionalAnnualTaxCountries || country in expansionTwentyAnnualCountries || country in nextTwentyAnnualCountries || country in nextTwentyManualCountries || country == "BR") {
+                TaxAmountField(tr(R.string.tax_annual_employment_gross) + " · " + taxCurrency(country), annualGross, enabled, onAnnualGross)
+                Text(tr(when { country in nextTwentyTaxCountries -> R.string.tax_next_annual_hint; country in expansionTwentyAnnualCountries -> R.string.tax_twenty_annual_hint; country in additionalAnnualTaxCountries -> R.string.tax_wave_annual_hint; country == "BR" -> R.string.tax_br_annual_hint; country in expansionFifteenAnnualCountries -> R.string.tax_fifteen_income_hint; country in expansionTenTaxCountries -> R.string.tax_ten_income_hint; else -> R.string.tax_asia_five_income_hint }), style = MaterialTheme.typography.bodySmall)
+            }
+            if (country in additionalMonthlyBaseCountries || country in expansionTwentyMonthlyCountries || country in nextTwentyMonthlyCountries) {
+                TaxAmountField(tr(R.string.tax_monthly_verified_base) + " · " + taxCurrency(country), monthlyBase, enabled, onMonthlyBase)
+                Text(tr(when { country in nextTwentyMonthlyCountries -> R.string.tax_next_monthly_hint; country in expansionTwentyMonthlyCountries -> R.string.tax_twenty_monthly_hint; else -> R.string.tax_wave_monthly_hint }), style = MaterialTheme.typography.bodySmall)
+            }
+            if (country in setOf("GH","CL")) {
+                OutlinedTextField(paymentDate, onValueChange = { onPaymentDate(it.take(10)) }, enabled = enabled,
+                    label = { Text(tr(R.string.tax_payment_date)) }, singleLine = true, modifier = Modifier.fillMaxWidth())
+                Text(tr(if(country=="CL") R.string.tax_next_cl_date_hint else R.string.tax_payment_date_hint), style = MaterialTheme.typography.bodySmall)
+            }
+            if (country == "EC") {
+                TaxAmountField(tr(R.string.tax_ec_expenses) + " · " + taxCurrency(country), ecExpenses, enabled, onEcExpenses)
+                Text(tr(R.string.tax_ec_expenses_hint), style = MaterialTheme.typography.bodySmall)
+            }
+            if (country == "PY") {
+                TaxAmountField(tr(R.string.tax_py_receipts) + " · " + taxCurrency(country), pyReceipts, enabled, onPyReceipts)
+                Text(tr(R.string.tax_py_receipts_hint), style = MaterialTheme.typography.bodySmall)
+            }
+            if (country == "BR") {
+                TaxAmountField(tr(R.string.tax_monthly_verified_base) + " · " + taxCurrency(country), monthlyBase, enabled, onMonthlyBase)
+                Text(tr(R.string.tax_br_monthly_base_hint), style = MaterialTheme.typography.bodySmall)
+            }
+            if (country == "NO") {
+                Text(tr(R.string.tax_no_region_hint), style = MaterialTheme.typography.bodySmall)
+                TaxDropDown(tr(R.string.tax_no_youth), noYouth, listOf("SELECTED" to tr(R.string.tax_no_selected),
+                    "NOT_SELECTED" to tr(R.string.tax_no_not_selected)), enabled, onNoYouth)
+                Text(tr(R.string.tax_no_youth_hint), style = MaterialTheme.typography.bodySmall)
+            }
+            if (country == "ZA") {
+                TaxDropDown(tr(R.string.tax_za_uif), zaUif, listOf("COVERED" to tr(R.string.tax_za_covered),
+                    "EXEMPT_LT24" to tr(R.string.tax_za_lt24)), enabled, onZaUif)
+                Text(tr(R.string.tax_za_year_hint), style = MaterialTheme.typography.bodySmall)
+            }
+            if (country in verifiedBaseTaxCountries || country in nextTwentyAnnualCountries) {
+                TaxAmountField(tr(if (country == "DK") R.string.tax_dk_personal_base else R.string.tax_annual_verified_base) + " · " + taxCurrency(country), annualBase, enabled, onAnnualBase)
+                Text(tr(when { country in nextTwentyAnnualCountries -> R.string.tax_next_base_hint; country in expansionTwentyAnnualCountries -> R.string.tax_twenty_base_hint; country in additionalAnnualTaxCountries -> R.string.tax_wave_base_hint; country in expansionFifteenAnnualCountries -> R.string.tax_fifteen_base_hint; country in expansionTenTaxCountries -> R.string.tax_ten_base_hint; country in asiaFiveTaxCountries -> R.string.tax_asia_five_base_hint; country == "PL" -> R.string.tax_pl_base_hint; country == "MY" -> R.string.tax_my_base_hint; country == "PH" -> R.string.tax_ph_base_hint; country == "ES" -> R.string.tax_es_base_hint; country == "CN" -> R.string.tax_cn_base_hint; country == "DK" -> R.string.tax_dk_base_hint; else -> R.string.tax_verified_base_hint }), style = MaterialTheme.typography.bodySmall)
+            }
+            if (country == "DK") TaxAmountField(tr(R.string.tax_dk_municipal_base) + " · " + taxCurrency(country), dkMunicipal, enabled, onDkMunicipal)
+            if (country == "SG") {
+                TaxDropDown(tr(R.string.tax_sg_cpf_profile), sgCpf, listOf("FULL" to tr(R.string.tax_sg_full),
+                    "FOREIGN" to tr(R.string.tax_sg_foreign)), enabled, onSgCpf)
+                Text(tr(R.string.tax_sg_year_hint), style = MaterialTheme.typography.bodySmall)
+            }
+            if (country == "AU") TaxDropDown(tr(R.string.tax_au_hospital), auCover,
+                listOf("FULL" to tr(R.string.tax_au_full_cover), "NONE" to tr(R.string.tax_au_no_cover)), enabled, onAuCover)
+            if (country == "NZ") {
+                Text(tr(R.string.tax_nz_ietc_hint), style = MaterialTheme.typography.bodySmall)
+                SettingSwitch(tr(R.string.tax_nz_ietc), nzIetc, enabled, onNzIetc)
+            }
+            if(country in nextTwentyTaxCountries) {
+                if(country in nextTwentyManualCountries) {
+                    TaxAmountField(tr(R.string.tax_next_verified_tax) + " · " + taxCurrency(country),nextVerifiedTax,enabled,onNextVerifiedTax)
+                    Text(tr(R.string.tax_next_verified_hint),style=MaterialTheme.typography.bodySmall)
+                } else {
+                    TaxAmountField(tr(if(country in nextTwentyMonthlyCountries) R.string.tax_next_monthly_relief else R.string.tax_next_annual_relief) + " · " + taxCurrency(country),nextRelief,enabled,onNextRelief)
+                    Text(tr(R.string.tax_next_relief_hint),style=MaterialTheme.typography.bodySmall)
+                }
+                TaxAmountField(tr(R.string.tax_next_extra_tax) + " · " + taxCurrency(country),nextOtherTax,enabled,onNextOtherTax)
+                Text(tr(R.string.tax_next_extra_hint),style=MaterialTheme.typography.bodySmall)
+            }
+            TaxAmountField(tr(if (country == "DK") R.string.tax_dk_actual_deductions else R.string.tax_actual_deductions) + " · " + taxCurrency(country), deductions, enabled, onDeductions)
+            Text(tr(when {
+                country in nextTwentyTaxCountries -> R.string.tax_next_cash_hint
+                country in additionalFifteenTaxCountries || country in expansionTwentyTaxCountries -> R.string.tax_wave_cash_hint
+                country in expansionFifteenTaxCountries -> R.string.tax_fifteen_cash_hint
+                country in expansionTenTaxCountries -> R.string.tax_ten_cash_hint
+                country in asiaFiveTaxCountries -> R.string.tax_asia_five_cash_hint
+                country in polandCzechTaxCountries -> R.string.tax_plcz_deductions_hint
+                country in malaysiaPhilippinesTaxCountries -> R.string.tax_myph_deductions_hint
+                country == "SG" -> R.string.tax_sg_deductions_hint
+                country == "DK" -> R.string.tax_dk_deductions_hint
+                country in nordicAfricaTaxCountries -> R.string.tax_noza_deductions_hint
+                country == "IE" -> R.string.tax_ie_deductions_hint
+                country == "HK" -> R.string.tax_hk_deductions_hint
+                country == "US" && region in extendedUsStates -> R.string.tax_us_cash_hint
+                country in setOf("US", "CA") -> R.string.tax_na_deductions_hint
+                country in furtherTaxCountries || country in asiaSpainTaxCountries -> R.string.tax_further_deductions_hint
+                else -> R.string.tax_deductions_hint
+            }), style = MaterialTheme.typography.bodySmall)
+            SettingSwitch(tr(R.string.tax_confirm_profile), foreignProfile == country, enabled, onForeignProfile)
+        } else if (country != "IL") Text(tr(R.string.tax_unavailable), color = MaterialTheme.colorScheme.error)
+        if (country in supportedTaxCountries && !supportsTaxYear(country, year)) Text(tr(R.string.tax_year_unavailable), color = MaterialTheme.colorScheme.error)
+    }
+}
+
+@Composable
+private fun SearchCountryChooser(country: String, enabled: Boolean, onSelect: (String)->Unit) {
+    var open by remember { mutableStateOf(false) }
+    var query by remember { mutableStateOf("") }
+    Text(tr(R.string.tax_country),style=MaterialTheme.typography.titleSmall)
+    OutlinedButton(enabled=enabled,onClick={query="";open=true},modifier=Modifier.fillMaxWidth().heightIn(min=48.dp)) {
+        AppIcon(R.drawable.ic_search);Spacer(Modifier.width(8.dp))
+        Text(countryName(country)+" · "+taxCurrency(country))
+    }
+    if(open) AlertDialog(onDismissRequest={open=false},title={Text(tr(R.string.tax_country))},text={
+        Column(verticalArrangement=Arrangement.spacedBy(12.dp)) {
+            OutlinedTextField(value=query,onValueChange={query=it.take(100)},singleLine=true,
+                label={Text(tr(R.string.ui_country_search))},modifier=Modifier.fillMaxWidth())
+            val filtered=searchTaxCountries(query,appLocale)
+            if(filtered.isEmpty())Text(tr(R.string.ui_no_results))
+            LazyColumn(Modifier.fillMaxWidth().heightIn(max=360.dp)) {
+                items(filtered,key={it.code}) { candidate ->
+                    TextButton(enabled=enabled,onClick={open=false;onSelect(candidate.code)},modifier=Modifier.fillMaxWidth().heightIn(min=48.dp)) {
+                        Text(countryName(candidate.code)+" · "+candidate.currency,modifier=Modifier.weight(1f))
+                        if(candidate.code==country)Text("✓")
+                    }
+                }
+            }
+        }
+    },confirmButton={TextButton(onClick={open=false}){Text(tr(R.string.shift_done))}})
+}
