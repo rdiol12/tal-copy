@@ -710,25 +710,25 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
                 (result!!.families)!!.put(family!!, compat.util.Math.addExact(((result!!.families)!!.javaGetOrDefault(family!!, 0L))!!, net))
             }
         }
-        var sorted: MutableList<MutableMap.MutableEntry<String, Long>>? = ArrayList<MutableMap.MutableEntry<String, Long>>(((result!!.categories)!!.entries)!!)
+        var sorted: MutableList<MutableMap.MutableEntry<String, Long>>? = ArrayList<MutableMap.MutableEntry<String, Long>>(((result!!.categories)!!.javaEntries())!!)
         sorted!!.javaSort((Comparator<MutableMap.MutableEntry<String, Long>> l3@{ a, b -> Long.compare((b!!.value)!!, (a!!.value)!!) })!!)
         (result!!.categories)!!.clear()
         for (entry in sorted!!) {
             (result!!.categories)!!.put((entry!!.key)!!, (entry!!.value)!!)
         }
-        var merchantEntries: MutableList<MutableMap.MutableEntry<String, Long>>? = ArrayList<MutableMap.MutableEntry<String, Long>>(((result!!.merchants)!!.entries)!!)
+        var merchantEntries: MutableList<MutableMap.MutableEntry<String, Long>>? = ArrayList<MutableMap.MutableEntry<String, Long>>(((result!!.merchants)!!.javaEntries())!!)
         merchantEntries!!.javaSort((Comparator<MutableMap.MutableEntry<String, Long>> l4@{ a, b -> Long.compare((b!!.value)!!, (a!!.value)!!) })!!)
         (result!!.merchants)!!.clear()
         for (entry in merchantEntries!!) {
             (result!!.merchants)!!.put((entry!!.key)!!, (entry!!.value)!!)
         }
-        var paymentEntries: MutableList<MutableMap.MutableEntry<String, Long>>? = ArrayList<MutableMap.MutableEntry<String, Long>>(((result!!.payments)!!.entries)!!)
+        var paymentEntries: MutableList<MutableMap.MutableEntry<String, Long>>? = ArrayList<MutableMap.MutableEntry<String, Long>>(((result!!.payments)!!.javaEntries())!!)
         paymentEntries!!.javaSort((Comparator<MutableMap.MutableEntry<String, Long>> l5@{ a, b -> Long.compare((b!!.value)!!, (a!!.value)!!) })!!)
         (result!!.payments)!!.clear()
         for (entry in paymentEntries!!) {
             (result!!.payments)!!.put((entry!!.key)!!, (entry!!.value)!!)
         }
-        var familyEntries: MutableList<MutableMap.MutableEntry<String, Long>>? = ArrayList<MutableMap.MutableEntry<String, Long>>(((result!!.families)!!.entries)!!)
+        var familyEntries: MutableList<MutableMap.MutableEntry<String, Long>>? = ArrayList<MutableMap.MutableEntry<String, Long>>(((result!!.families)!!.javaEntries())!!)
         familyEntries!!.javaSort((Comparator<MutableMap.MutableEntry<String, Long>> l6@{ a, b -> Long.compare((b!!.value)!!, (a!!.value)!!) })!!)
         (result!!.families)!!.clear()
         for (entry in familyEntries!!) {
@@ -818,7 +818,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
                 sums!!.put((t!!.category)!!, (sums!!.javaGetOrDefault((t!!.category)!!, 0L))!! + (netExpense(t)))
             }
         }
-        var sorted: MutableList<MutableMap.MutableEntry<String, Long>>? = ArrayList<MutableMap.MutableEntry<String, Long>>((sums!!.entries)!!)
+        var sorted: MutableList<MutableMap.MutableEntry<String, Long>>? = ArrayList<MutableMap.MutableEntry<String, Long>>((sums!!.javaEntries())!!)
         sorted!!.javaSort((Comparator<MutableMap.MutableEntry<String, Long>> l7@{ a, b -> Long.compare((b!!.value)!!, (a!!.value)!!) })!!)
         sums!!.clear()
         for (e in sorted!!) {
@@ -938,7 +938,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
                 }
             }
             var balance: Long = a!!.opening
-            for (event in (purchases!!.entries)!!) {
+            for (event in (purchases!!.javaEntries())!!) {
                 balance = compat.util.Math.addExact(balance, (event!!.value)!!)
                 if (((event!!.key)!!.equals((Finance.day(compat.time.YearMonth.from((event!!.key)!!), a!!.charge))!!))) {
                     balance = balance - (Finance.fixedPayment(balance, a!!.payment))
@@ -1008,7 +1008,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
             }
         }
         state!!.recorded = a!!.opening
-        for (event in (events!!.entries)!!) {
+        for (event in (events!!.javaEntries())!!) {
             var date: compat.time.LocalDate? = event!!.key
             state!!.recorded = compat.util.Math.addExact(state!!.recorded, (event!!.value)!!)
             if ((date!!.equals((Finance.day(compat.time.YearMonth.from(date!!), a!!.charge))!!))) {
@@ -1169,7 +1169,7 @@ class Store : android.database.sqlite.SQLiteOpenHelper {
                     events!!.put(date!!, compat.util.Math.addExact((events!!.javaGetOrDefault(date!!, 0L))!!, netExpense(t)))
                 }
             }
-            for (event in (events!!.entries)!!) {
+            for (event in (events!!.javaEntries())!!) {
                 var date: compat.time.LocalDate? = event!!.key
                 if ((date!!.equals(start!!) && start!!.isAfter(cutoff!!))) {
                     state!!.opening = a!!.opening

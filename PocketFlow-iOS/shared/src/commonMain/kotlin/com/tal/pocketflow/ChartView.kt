@@ -78,7 +78,7 @@ open class ChartView : android.view.View {
             var i: Int = 0
             var usable: Float = h - (dp(55f))
             var slot: Float = w / n
-            for (e in (values!!.entries)!!) {
+            for (e in (values!!.javaEntries())!!) {
                 var baseline: Float = ((dp(15f)) + ((usable * max) / (max - min.toDouble()))).toFloat()
                 var height: Float = ((usable * (e!!.value)!!) / (max - min.toDouble())).toFloat()
                 var left: Float = (slot * i) + (slot * 0.22f)
@@ -114,7 +114,7 @@ open class ChartView : android.view.View {
                 total = total + (compat.util.Math.max(0L, v))
             }
             var cursor: Double = 0.0
-            for (item in (values!!.entries)!!) {
+            for (item in (values!!.javaEntries())!!) {
                 cursor = cursor + ((360.0 * (compat.util.Math.max(0L, (item!!.value)!!))) / (compat.util.Math.max(1L, total)))
                 if (((item!!.value)!! > 0 && angle <= cursor)) {
                     pick!!.select(item!!.key)

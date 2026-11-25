@@ -323,3 +323,35 @@ open class Thread(private val task: Runnable?, val name: String) {
 @Retention(AnnotationRetention.BINARY)
 @Target(AnnotationTarget.FUNCTION)
 annotation class Fun
+
+/**
+ * Map.entrySet() with Java's guarantee that an entry stays readable after the map changes.
+ * Kotlin/Native's HashMap entries are live views that throw ConcurrentModificationException once
+ * the map is modified (Java code often copies entries, clears the map and re-inserts them).
+ * The entries here are copies; setValue still writes through to the map.
+ */
+fun <K, V> MutableMap<K, V>.javaEntries(): MutableSet<MutableMap.MutableEntry<K, V>> {
+    val result = LinkedHashSet<MutableMap.MutableEntry<K, V>>(size)
+    for ((key, value) in this) result.add(JavaMapEntry(this, key, value))
+    return result
+}
+
+@kotlin.jvm.JvmName("javaEntriesReadOnly")
+fun <K, V> Map<K, V>.javaEntries(): Set<Map.Entry<K, V>> {
+    val result = LinkedHashSet<Map.Entry<K, V>>(size)
+    for ((key, value) in this) result.add(JavaMapEntry(null, key, value))
+    return result
+}
+
+class JavaMapEntry<K, V>(private val map: MutableMap<K, V>?, override val key: K, private var current: V) : MutableMap.MutableEntry<K, V> {
+    override val value: V get() = current
+    override fun setValue(newValue: V): V {
+        val old = current
+        current = newValue
+        (map ?: throw UnsupportedOperationException("read-only map")).put(key, newValue)
+        return old
+    }
+    override fun equals(other: Any?): Boolean = other is Map.Entry<*, *> && other.key == key && other.value == current
+    override fun hashCode(): Int = (key?.hashCode() ?: 0) xor (current?.hashCode() ?: 0)
+    override fun toString(): String = "$key=$current"
+}

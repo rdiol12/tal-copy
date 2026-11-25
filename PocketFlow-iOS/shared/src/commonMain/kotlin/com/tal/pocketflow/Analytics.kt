@@ -72,7 +72,7 @@ internal class Analytics {
             comparison!!.purchases = true
             out!!.add(comparison!!)
         }
-        for (e in (sums!!.entries)!!) {
+        for (e in (sums!!.javaEntries())!!) {
             var prior: Long = (old!!.javaGetOrDefault((e!!.key)!!, 0L))!!
             if ((prior > 0 && (((compat.util.Math.abs((e!!.value)!! - prior)) * 100.0) / prior) >= 20)) {
                 var delta: Long = compat.util.Math.round((((e!!.value)!! - prior) * 100.0) / prior)
@@ -83,7 +83,7 @@ internal class Analytics {
             }
         }
         if ((total > 0 && !(merchants!!.isEmpty()))) {
-            var sorted: MutableList<MutableMap.MutableEntry<String, Long>>? = ArrayList<MutableMap.MutableEntry<String, Long>>((merchants!!.entries)!!)
+            var sorted: MutableList<MutableMap.MutableEntry<String, Long>>? = ArrayList<MutableMap.MutableEntry<String, Long>>((merchants!!.javaEntries())!!)
             sorted!!.javaSort((Comparator<MutableMap.MutableEntry<String, Long>> l1@{ a, b -> Long.compare((b!!.value)!!, (a!!.value)!!) })!!)
             var top: MutableMap.MutableEntry<String, Long>? = sorted!!.get(0)
             var i: Analytics.Insight? = Analytics.Insight("בית העסק המוביל: " + top!!.key, money((top!!.value)!!) + " · " + compat.util.Math.round(((top!!.value)!! * 100.0) / total) + "% מההוצאות שבוצעו בתקופה")

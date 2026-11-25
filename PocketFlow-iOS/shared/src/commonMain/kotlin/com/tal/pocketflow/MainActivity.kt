@@ -1495,7 +1495,7 @@ open class MainActivity : android.app.Activity {
     }
     private fun legend(host: android.widget.LinearLayout?, sums: MutableMap<String, Long>?, pick: ChartView.Pick?) {
         var i: Int = 0
-        for (e in (sums!!.entries)!!) {
+        for (e in (sums!!.javaEntries())!!) {
             var r: android.widget.LinearLayout? = row()
             run { r!!.layoutDirection = android.view.View.LAYOUT_DIRECTION_RTL }
             var color: Int = (ChartView.colors(this))!![(i++) % (ChartView.COLORS!!.size)]
@@ -1827,7 +1827,7 @@ open class MainActivity : android.app.Activity {
                 return@l53
             }
             var cutoff: Int = ((scroll!!.scrollY) + (scroll!!.height)) + (dp(180f))
-            var entries: MutableIterator<MutableMap.MutableEntry<android.widget.LinearLayout, Int>>? = (pending!!.entries)!!.iterator()
+            var entries: MutableIterator<MutableMap.MutableEntry<android.widget.LinearLayout, Int>>? = (pending!!.javaEntries())!!.iterator()
             while ((entries!!.hasNext())) {
                 var entry: MutableMap.MutableEntry<android.widget.LinearLayout, Int>? = entries!!.next()
                 var content: android.widget.LinearLayout? = entry!!.key
@@ -1972,7 +1972,7 @@ open class MainActivity : android.app.Activity {
             run { chart!!.tag = "home-chart" }
             host!!.addView(chart, android.widget.LinearLayout.LayoutParams(-1, dp(260f)))
             var i: Int = 0
-            for (entry in ((data!!.series)!!.entries)!!) {
+            for (entry in ((data!!.series)!!.javaEntries())!!) {
                 var amounts: LongArray? = entry!!.value
                 host!!.addView(bold("● " + entry!!.key + ": " + money((if ((amounts!!.size) == 0) 0L else amounts!![(amounts!!.size) - 1])), 15, (ChartView.colors(this))!![i++]))
             }
@@ -2014,7 +2014,7 @@ open class MainActivity : android.app.Activity {
                 run { chart!!.tag = "home-chart" }
                 content!!.addView(chart, android.widget.LinearLayout.LayoutParams(-1, dp(240f)))
                 hint(content, "חיובים שבוצעו וצפויים בקטגוריה, כולל הוראות קבע. לחיצה על חודש פותחת את הפירוט.")
-                for (entry in (values!!.entries)!!) {
+                for (entry in (values!!.javaEntries())!!) {
                     var detail: android.widget.TextView? = text(entry!!.key + " · " + money((entry!!.value)!!), 14, INK)
                     detail!!.setOnClickListener(android.view.View.OnClickListener l63@{ v -> openAnalyticsMonth(periods!!.get((entry!!.key)!!), selected) })
                     run { detail!!.isFocusable = true }
