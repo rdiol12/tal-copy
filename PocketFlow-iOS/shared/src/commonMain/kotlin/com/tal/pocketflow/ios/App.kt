@@ -4,6 +4,10 @@ package com.tal.pocketflow
 import android.app.AlertDialog
 import android.content.Context
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import com.tal.pocketflow.res.Res
 import com.tal.pocketflow.res.*
 import compat.android.compose.ActivityHost
@@ -38,6 +42,7 @@ fun initializeApp() {
     initialized = true
     Context.applicationId = "com.tal.pocketflow"
     CompatResources.drawable = ::drawableResource
+    CrashReport.install()
     installSqlite()
     ReminderJob.upcoming = ::upcomingReminders
     // Reminders are re-planned whenever the app is put away, so they reflect the latest data.
@@ -56,6 +61,8 @@ private fun applyTheme() {
 @Composable
 fun App() {
     initializeApp()
+    var crash by remember { mutableStateOf(CrashReport.pending()) }
+    crash?.let { report -> CrashScreen(report) { CrashReport.clear(); crash = null }; return }
     ActivityHost(ActivityHostOptions(confirmLabel = "אישור", dismissLabel = "ביטול", darkTheme = { AppTheme.dark(Context.app) })) {
         applyTheme()
         // A link that launched the app is handed over once the screen exists.

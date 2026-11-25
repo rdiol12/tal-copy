@@ -128,3 +128,9 @@ actual fun platformScheduleNotifications(prefix: String, notices: List<Scheduled
         }
     }
 }
+
+@OptIn(kotlin.experimental.ExperimentalNativeApi::class)
+actual fun platformInstallCrashHook(onCrash: (Throwable) -> Unit) {
+    val previous = setUnhandledExceptionHook { error -> runCatching { onCrash(error) } }
+    if (previous != null) setUnhandledExceptionHook { error -> runCatching { onCrash(error) }; previous(error) }
+}

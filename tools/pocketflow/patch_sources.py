@@ -30,7 +30,7 @@ LINK_METHODS = """
         if(!marker.isEmpty())for(Store.Tx old:store.transactions())if(old.kind.equals(kind)&&old.note.contains(marker)){draft.id=old.id;draft.account=old.account;draft.category=old.category;draft.tag=old.tag;draft.rule=old.rule;break;}
         draft.kind=kind;draft.amount=cents;draft.originalAmount=cents;draft.date=date;draft.merchant=merchant;draft.note=note;draft.count=1;draft.status=done?1:0;
         if(draft.tag==null)draft.tag="";
-        if(draft.category==null){draft.category=kind.equals("income")?"משכורת":"";if(!merchant.trim().isEmpty())for(Store.Tx old:store.transactions())if(old.merchant.equalsIgnoreCase(merchant)){draft.category=old.category;break;}}
+        if(draft.category==null){draft.category=kind.equals("income")?"משכורת":"Apple Pay";if(!merchant.trim().isEmpty())for(Store.Tx old:store.transactions())if(old.merchant.equalsIgnoreCase(merchant)){draft.category=old.category;break;}}
         if(draft.account==0){
             List<Store.Account> accounts=paymentAccounts();long chosen=0;String wanted=card.trim().toLowerCase(Locale.ROOT);
             for(Store.Account a:accounts){boolean credit=a.type.equals("credit")||a.type.equals("fixed");String name=a.name.trim().toLowerCase(Locale.ROOT);
@@ -61,6 +61,8 @@ WALLET_CARD = (
 EDITS += [
     ("MainActivity", r"\n    private void openWidgetAction\(\)\{", LINK_METHODS + "\n    private void openWidgetAction(){"),
     ("MainActivity", r"\n        openWidgetAction\(\);\n        if\(pendingRestore\)showRestorePreview\(\);", "\n        openWidgetAction();openLinkedDraft();\n        if(pendingRestore)showRestorePreview();"),
+    # A link that arrives while the app is in the background (the Apple Pay sheet is up) waits for the return.
+    ("MainActivity", r"\}else openWidgetAction\(\);\}", "}else{openWidgetAction();openLinkedDraft();}}"),
     ("MainActivity", r'if\(t\.status==0\)amount\.addView\(text\("צפוי · לאישור"', 'if(t.kind.equals("expense")&&!workHours(t.amount).isEmpty())amount.addView(text(workHours(t.amount),12,MUTED));if(t.status==0)amount.addView(text("צפוי · לאישור"'),
     ("MainActivity", r'hint\(summary,"סה״כ הוצאות שבוצעו"\);TextView total=bold\(money\(expense\),32,palette\.onContainer\);total\.setTag\("movements-total"\);summary\.addView\(total\);', 'hint(summary,"סה״כ הוצאות שבוצעו");TextView total=bold(money(expense),32,palette.onContainer);total.setTag("movements-total");summary.addView(total);if(!workHours(expense).isEmpty())hint(summary,workHours(expense));'),
     ("MainActivity", r'LinearLayout planning=card\(body\);title\(planning,"תזכורות ותכנון"\);', WALLET_CARD + 'LinearLayout planning=card(body);title(planning,"תזכורות ותכנון");'),

@@ -12,6 +12,8 @@ kotlin {
         target.binaries.framework {
             baseName = "ComposeApp"
             isStatic = true
+            // Function names in stack traces of release builds, for the crash report screen.
+            freeCompilerArgs += "-Xadd-light-debug=enable"
         }
     }
 

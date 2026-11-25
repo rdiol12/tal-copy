@@ -134,6 +134,7 @@ open class MainActivity : android.app.Activity {
             autoUnlockPending = !(appLock!!.busy()) && !unlockRetry
         } else {
             openWidgetAction()
+            openLinkedDraft()
         }
     }
     protected override fun onResume() {
@@ -191,7 +192,7 @@ open class MainActivity : android.app.Activity {
             draft!!.tag = ""
         }
         if ((draft!!.category == null)) {
-            draft!!.category = (if (kind!!.equals("income")) "משכורת" else "")
+            draft!!.category = (if (kind!!.equals("income")) "משכורת" else "Apple Pay")
             if ((!((merchant!!.javaTrim())!!.isEmpty()))) {
                 for (old in (store!!.transactions())!!) {
                     if (((old!!.merchant)!!.equals(merchant!!, ignoreCase = true))) {

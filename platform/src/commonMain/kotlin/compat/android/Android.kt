@@ -25,3 +25,5 @@ class ScheduledNotice(val id: String, val title: String, val body: String, val y
 expect fun platformRequestNotifications(onResult: (Boolean) -> Unit)
 /** Replaces every pending notification whose id starts with [prefix] by [notices]. */
 expect fun platformScheduleNotifications(prefix: String, notices: List<ScheduledNotice>)
+/** Calls [onCrash] with an exception nothing caught, just before the app is terminated. */
+expect fun platformInstallCrashHook(onCrash: (Throwable) -> Unit)

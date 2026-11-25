@@ -14,3 +14,7 @@ actual fun platformRequestNotifications(onResult: (Boolean) -> Unit) = onResult(
 /** Kept so tests can look at what would have been scheduled. */
 var scheduledNoticesForTests: List<ScheduledNotice> = emptyList()
 actual fun platformScheduleNotifications(prefix: String, notices: List<ScheduledNotice>) { scheduledNoticesForTests = notices }
+actual fun platformInstallCrashHook(onCrash: (Throwable) -> Unit) {
+    val previous = Thread.getDefaultUncaughtExceptionHandler()
+    Thread.setDefaultUncaughtExceptionHandler { thread, error -> runCatching { onCrash(error) }; previous?.uncaughtException(thread, error) }
+}

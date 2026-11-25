@@ -120,8 +120,50 @@ class ScreenshotTest {
             val notices = upcomingReminders(Context.app, LocalDate.now(), 0)
             assertTrue(notices.size <= 14)
             assertEquals(notices.size, notices.map { it.id }.toSet().size)
+
+            // Two Apple Pay payments saved one after the other; the second arrives while the app is in
+            // the background, as when the payment sheet is up. Its form must open on return.
+            fun save() {
+                val dialog = Screen.dialogs.last() as android.app.AlertDialog
+                assertTrue(dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE)!!.performClick())
+                settle(6)
+                assertEquals("the form did not close, so saving failed", 0, Screen.dialogs.size)
+            }
+            IncomingLinks.handle("pocketflow://expense?amount=%E2%82%AA45.90&merchant=%D7%A7%D7%A4%D7%94&card=Visa")
+            settle(6); assertEquals(1, Screen.dialogs.size)
+            save()
+            val activity = Screen.activity!!
+            activity.hostStop()
+            IncomingLinks.handle("pocketflow://expense?amount=12.50&merchant=Super-Pharm&card=Visa")
+            settle(6)
+            activity.hostStart()
+            settle(6)
+            assertEquals("the second payment did not open its form", 1, Screen.dialogs.size)
+            shot("19-second-apple-pay")
+            save()
         } finally {
             scene.close()
+        }
+
+        // Start the app again from scratch, on the data saved above, and open every screen.
+        Screen.activity?.hostDestroy()
+        val again = ImageComposeScene((width * scale).toInt(), (height * scale).toInt(), Density(scale)) { App() }
+        try {
+            var time = 0L
+            fun settle(frames: Int = 30) = repeat(frames) { again.render(time); time += 16_000_000L; Thread.sleep(8) }
+            settle()
+            val png = again.render(time).encodeToData(EncodedImageFormat.PNG) ?: error("PNG encoding failed")
+            File(output, "20-relaunch.png").writeBytes(png.bytes)
+            for (target in 1..11) {
+                val view = Screen.activity!!.contentView!!.findViewWithTag<View>("launcher-app-$target") ?: continue
+                view.performClick(); settle(10)
+                while (Screen.dialogs.isNotEmpty()) Screen.back()
+                Screen.back(); settle(6)
+            }
+            Screen.activity!!.contentView!!.findViewWithTag<View>("launcher-app-1")!!.performClick(); settle()
+            File(output, "21-movements-after-relaunch.png").writeBytes((again.render(time).encodeToData(EncodedImageFormat.PNG) ?: error("png")).bytes)
+        } finally {
+            again.close()
         }
     }
 }
